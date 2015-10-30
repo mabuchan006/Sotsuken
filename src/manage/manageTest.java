@@ -28,8 +28,7 @@ public class manageTest extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-		String test = "テスト";
+		response.getWriter().append("てすと ").append(request.getContextPath());
 
 	}
 
