@@ -31,7 +31,51 @@
 
 <form action="" method="get">
 <div class="container">
-	<div class="row">
+<div class="row">
+
+<h1>講師管理</h1>
+
+
+
+	<div class="table-responsive">
+	            <table class="table table-striped table-bordered">
+	                <tbody>
+	                    <tr>
+
+	                        <td>阿知波</td>
+	                        <td>伊藤吉</td>
+	                        <td>伊藤彰</td>
+	                        <td>稲垣</td>
+	                        <td>宇佐美</td>
+	                    </tr>
+	                    <tr>
+
+	                        <td>河合</td>
+	                        <td>外山</td>
+	                        <td>梶田</td>
+	                        <td>吉田</td>
+	                        <td>近藤</td>
+
+
+	                    </tr>
+	                    <tr>
+
+	                        <td>元木</td>
+	                        <td>古市</td>
+	                        <td>高木俊</td>
+	                        <td>高木哲</td>
+	                        <td>佐野</td>
+
+
+	                    </tr>
+
+	                </tbody>
+	            </table>
+	</div><!--tableresponsive-->
+
+
+
+
 	<div class="col-md-６ ">
 	<button type="button" class="btn btn-danger">削除</button>
 	</div>
@@ -40,9 +84,9 @@
 	</div>
   		<div class="col-md-9 col-md-offset-3">
 
-			<h1>講師管理</h1>
 
 
+
 			名前
 			<input type="text" class="form-control" />
 			名前
@@ -53,8 +97,7 @@
 			<input type="text" class="form-control" />
 			名前
 			<input type="text" class="form-control" />
-			名前
-			<input type="text" class="form-control" />
+
 
 			<button type="button" class="btn btn-primary">登録</button>
 		</div>
