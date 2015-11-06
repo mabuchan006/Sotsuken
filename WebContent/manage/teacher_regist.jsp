@@ -13,6 +13,8 @@
 
 <title>講師管理</title>
 
+<link href="../css/custom.css" rel="stylesheet">
+
 <!-- BootstrapのCSS読み込み -->
 
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -29,9 +31,11 @@
 </head>
 <body>
 
+<div class="center">
 <form action="" method="get">
 <div class="container">
 <div class="row">
+<div class="col-md-10 col-md-offset-3">
 
 <h1>講師管理</h1>
 
@@ -42,29 +46,29 @@
 	                <tbody>
 	                    <tr>
 
-	                        <td>阿知波</td>
-	                        <td>伊藤吉</td>
-	                        <td>伊藤彰</td>
-	                        <td>稲垣</td>
-	                        <td>宇佐美</td>
+	                        <td class="select">阿知波</td>
+	                        <td class="select">伊藤吉</td>
+	                        <td class="select">伊藤彰</td>
+	                        <td class="select">稲垣</td>
+	                        <td class="select">宇佐美</td>
 	                    </tr>
 	                    <tr>
 
-	                        <td>河合</td>
-	                        <td>外山</td>
-	                        <td>梶田</td>
-	                        <td>吉田</td>
-	                        <td>近藤</td>
+	                        <td class="select">河合</td>
+	                        <td class="select">外山</td>
+	                        <td class="select">梶田</td>
+	                        <td class="select">吉田</td>
+	                        <td class="select">近藤</td>
 
 
 	                    </tr>
 	                    <tr>
 
-	                        <td>元木</td>
-	                        <td>古市</td>
-	                        <td>高木俊</td>
-	                        <td>高木哲</td>
-	                        <td>佐野</td>
+	                        <td class="select">元木</td>
+	                        <td class="select">古市</td>
+	                        <td class="select">高木俊</td>
+	                        <td class="select">高木哲</td>
+	                        <td class="select">佐野</td>
 
 
 	                    </tr>
@@ -76,34 +80,39 @@
 
 
 
-	<div class="col-md-６ ">
+
 	<button type="button" class="btn btn-danger">削除</button>
-	</div>
-	<div class="col-md-６ ">
+
+
 	<button type="button" class="btn btn-success">編集</button>
-	</div>
-  		<div class="col-md-9 col-md-offset-3">
 
 
 
 
-			名前
-			<input type="text" class="form-control" />
-			名前
-			<input type="text" class="form-control" />
-			名前
-			<input type="text" class="form-control" />
-			名前
-			<input type="text" class="form-control" />
-			名前
-			<input type="text" class="form-control" />
+
+
+			<p>名前
+			<input type="text" class="form-control" /></p>
+			<p>名前
+			<input type="text" class="form-control" /></p>
+			<p>名前
+			<input type="text" class="form-control" /></p>
+			<p>名前
+			<input type="text" class="form-control" /></p>
+			<p>名前
+			<input type="text" class="form-control" /></p>
 
 
 			<button type="button" class="btn btn-primary">登録</button>
+
+
 		</div>
 	</div>
-</div>
+
 </form>
+</div>
+
+
 
 </body>
 </html>
