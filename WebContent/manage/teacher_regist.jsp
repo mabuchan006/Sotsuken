@@ -40,13 +40,12 @@
 <h1>講師管理</h1>
 
 
-
 	<div class="table-responsive">
 	            <table class="table table-striped table-bordered">
 	                <tbody>
 	                    <tr>
 
-	                        <td class="select">阿知波</td>
+	                        <td class="select" onclick="<c:set var="data" value="阿知波" />">阿知波</td>
 	                        <td class="select">伊藤吉</td>
 	                        <td class="select">伊藤彰</td>
 	                        <td class="select">稲垣</td>
@@ -92,7 +91,7 @@
 
 
 			<p>名前
-			<input type="text" class="form-control" /></p>
+			<input type="text" class="form-control" value="${data }" /></p>
 			<p>名前
 			<input type="text" class="form-control" /></p>
 			<p>名前
