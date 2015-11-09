@@ -1,5 +1,17 @@
 @CHARSET "UTF-8";
 
+
+body {
+  padding-top: 60px;
+  margin:auto;
+  padding:auto;
+  text-align: center;
+
+}
+.row{
+	text-align: center;
+}
+
 .center{
 	display: block;
 	text-align: center;
@@ -14,14 +26,7 @@
 	left:3px;
 }
 
-.select:active{
-	background-color:#808080;
-	color:#fff;
-	border:5px #0000ffsolid;
-	position:relative;
-	top:3px;
-	left:3px;
-}
+
 
 input{
   border: 1px solid #bbb;
@@ -40,9 +45,17 @@ button{
 	font-size: 1.1em;
   	line-height: 1.7em;
   	float:left;
+  	color:#000;
 }
 
 #labelName{
 	font-size: 1.1em;
   	line-height: 1.7em;
+  	margin-right: 20px;
+  	 border: 1px solid #bbb;
+
+  margin-bottom: 15px;
+	background-color:#408080;
+  	color:#fff;
+
 }
