@@ -32,7 +32,7 @@
 <body>
 <table>
 	<tr>
-		<td><input ></td>
+		<td>日付</td>
 	</tr>
 </table>
 <p>NCS</p>
