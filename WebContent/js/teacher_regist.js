@@ -4,12 +4,13 @@
  */
 
 $(function(){
-	$(document).ready(function(){
 		//tableの要素がクリックされたら
-		$(".select").click(function(){
+		$(".select").each(function(){
 
-			$("#teacherName").value( $("#select").html());
+			$(this).click(function(){
 
-		});
+				$("#teacherName").val( $(this).html());
+
+			});
 	});
 });

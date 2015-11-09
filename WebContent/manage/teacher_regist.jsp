@@ -44,7 +44,7 @@
 	                    <tr>
 
 
-	                        <td class="select" onclick="" id="test">阿知波</td>
+	                        <td class="select">阿知波</td>
 
 	                        <td class="select">伊藤吉</td>
 	                        <td class="select">伊藤彰</td>
@@ -76,38 +76,19 @@
 	            </table>
 	</div><!--tableresponsive-->
 
-
-
-
-
 	<button type="button" class="btn btn-danger">削除</button>
 
 
-	<button type="button" class="btn btn-success">編集</button>
-
-
-
-
-
 
 			<p>名前
-<<<<<<< HEAD
-			<input type="text" class="form-control" value="${data }" /></p>
-=======
+
 			<input type="text" class="form-control" id="teacherName"/></p>
->>>>>>> branch 'master' of https://github.com/mabuchan006/Sotsuken.git
-			<p>名前
-			<input type="text" class="form-control" /></p>
-			<p>名前
-			<input type="text" class="form-control" /></p>
-			<p>名前
-			<input type="text" class="form-control" /></p>
-			<p>名前
-			<input type="text" class="form-control" /></p>
 
+			<p>パスワード
+			<input type="password" class="form-control" /></p>
 
 			<button type="button" class="btn btn-primary">登録</button>
-
+			<button type="button" class="btn btn-success">更新</button>
 
 		</div>
 	</div>
