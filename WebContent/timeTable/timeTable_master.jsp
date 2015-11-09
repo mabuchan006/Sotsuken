@@ -63,7 +63,7 @@
 		<tbody>
 			<tr class="success">
 				<th colspan="2"></th>
-				<th colspan="13">10月</th>
+				<th colspan="28８">10月</th>
 			</tr>
 
 
@@ -83,11 +83,39 @@
 				<td>10/29(木)　</td>
 				<td>10/30(金)　</td>
 				<td>10/31(土)　</td>
+				<td>10/31(土)　</td>
+				<td>10/31(土)　</td>
+				<td>10/31(土)　</td>
+				<td>10/31(土)　</td>
+				<td>10/31(土)　</td>
+				<td>10/31(土)　</td>
+				<td>10/31(土)　</td>
+				<td>10/31(土)　</td>
+				<td>10/31(土)　</td>
+				<td>10/31(土)　</td>
+				<td>10/31(土)　</td>
+				<td>10/31(土)　</td>
+				<td>10/31(土)　</td>
+				<td>10/31(土)　</td>
+
 			</tr>
 
 			<tr class="info">
 				<th class="warning" rowspan=13>RXAXX</th>
 				<th class="info" rowspan=3>1</th>
+				<td>授業</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
 				<td>授業</td>
 				<td></td>
 				<td></td>
@@ -117,10 +145,36 @@
 				<td></td>
 				<td></td>
 				<td></td>
+				<td>授業</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
 			</tr>
 
 			<tr class="info">
 				<td>講師</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>授業</td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -150,6 +204,19 @@
 				<td></td>
 				<td></td>
 				<td></td>
+				<td>授業</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
 			</tr>
 
 			<tr class="success">
@@ -166,10 +233,36 @@
 				<td></td>
 				<td></td>
 				<td></td>
+				<td>授業</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
 			</tr>
 
 			<tr class="success">
 				<td>講師</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>授業</td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -199,6 +292,19 @@
 				<td></td>
 				<td></td>
 				<td></td>
+				<td>授業</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
 			</tr>
 
 			<tr class="danger">
@@ -215,10 +321,36 @@
 				<td></td>
 				<td></td>
 				<td></td>
+				<td>授業</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
 			</tr>
 
 			<tr class="danger">
 				<td>講師</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>授業</td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -248,6 +380,19 @@
 				<td></td>
 				<td></td>
 				<td></td>
+				<td>授業</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
 			</tr>
 
 			<tr class="active">
@@ -264,10 +409,36 @@
 				<td></td>
 				<td></td>
 				<td></td>
+				<td>授業</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
 			</tr>
 
 			<tr class="active">
 				<td>講師</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>授業</td>
 				<td></td>
 				<td></td>
 				<td></td>
