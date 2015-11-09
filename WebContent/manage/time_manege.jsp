@@ -43,7 +43,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="logo text-center">
-                            <h1>コマ割画面</h1>
+                            <h1>Create Schedule</h1>
 
                         </div>
                     </div>
@@ -61,7 +61,7 @@
 
       </thead>
 		<tbody>
-		<tr>
+		<tr class="danger">
     	<td >8F</td>
 
         <td >802</td>
@@ -97,7 +97,7 @@
             <input type="text" name="NCS702-4" size="10" maxlength="10"><br>
         </td>
     </tr>
-    <tr>
+    <tr class="danger">
     	<td >6F</td>
         <td >601</td>
         <td >
@@ -152,7 +152,7 @@
             <input type="text" name="NCS504-4" size="10" maxlength="10"><br>
         </td>
     </tr>
-    <tr>
+    <tr class="danger">
     	<td >4F</td>
         <td >401</td>
         <td >
@@ -214,7 +214,7 @@
             <input type="text" name="NCS304-4" size="10" maxlength="10"><br>
         </td>
     </tr>
-    <tr>
+    <tr class="danger">
     	<td >2F</td>
         <td >201</td>
         <td >
@@ -229,6 +229,8 @@
 
     </tr>
 </table>
+</div>
+</div>
 
 <h1>NMIC</h1>
 <div  class="container">
@@ -238,24 +240,24 @@
 
       </thead>
 		<tbody>
-	<tr>
-    	<td rowspan="4">5F</td>
-        <td colspan="2" rowspan="4">501</td>
-        <td colspan="2" rowspan="4">
+	<tr class="info">
+    	<td >5F</td>
+        <td >501</td>
+        <td >
         	<input type="text" name="NMIC501-1" size="10" maxlength="10"><br>
             <input type="text" name="NMIC501-2" size="10" maxlength="10"><br>
             <input type="text" name="NMIC501-3" size="10" maxlength="10"><br>
             <input type="text" name="NMIC501-4" size="10" maxlength="10"><br>
         </td>
-        <td rowspan="4">502</td>
-        <td rowspan="4">
+        <td >502</td>
+        <td >
         	<input type="text" name="NMIC502-1" size="10" maxlength="10"><br>
             <input type="text" name="NMIC502-2" size="10" maxlength="10"><br>
             <input type="text" name="NMIC502-3" size="10" maxlength="10"><br>
             <input type="text" name="NMIC502-4" size="10" maxlength="10"><br>
         </td>
-        <td rowspan="4">503</td>
-        <td rowspan="4">
+        <td >503</td>
+        <td >
         	<input type="text" name="NMIC503-1" size="10" maxlength="10"><br>
             <input type="text" name="NMIC503-2" size="10" maxlength="10"><br>
             <input type="text" name="NMIC503-3" size="10" maxlength="10"><br>
@@ -263,115 +265,108 @@
         </td>
     </tr>
     <tr>
-    	<td rowspan="4">4F</td>
-        <td rowspan="4">401</td>
-        <td rowspan="4">
+    	<td >4F</td>
+        <td >401</td>
+        <td >
         	<input type="text" name="NMIC401-1" size="10" maxlength="10"><br>
             <input type="text" name="NMIC401-2" size="10" maxlength="10"><br>
             <input type="text" name="NMIC401-3" size="10" maxlength="10"><br>
             <input type="text" name="NMIC401-4" size="10" maxlength="10"><br>
         </td>
-        <td rowspan="4">402</td>
-        <td rowspan="4">
+        <td >402</td>
+        <td >
         	<input type="text" name="NMIC402-1" size="10" maxlength="10"><br>
             <input type="text" name="NMIC402-2" size="10" maxlength="10"><br>
             <input type="text" name="NMIC402-3" size="10" maxlength="10"><br>
             <input type="text" name="NMIC402-4" size="10" maxlength="10"><br>
         </td>
-        <td rowspan="4">403</td>
-        <td rowspan="4">
+        <td >403</td>
+        <td >
         	<input type="text" name="NMIC403-1" size="10" maxlength="10"><br>
             <input type="text" name="NMIC403-2" size="10" maxlength="10"><br>
             <input type="text" name="NMIC403-3" size="10" maxlength="10"><br>
             <input type="text" name="NMIC403-4" size="10" maxlength="10"><br>
         </td>
-        <td rowspan="4">404</td>
-        <td rowspan="4">
+        <td >404</td>
+        <td >
         	<input type="text" name="NMIC404-1" size="10" maxlength="10"><br>
             <input type="text" name="NMIC404-2" size="10" maxlength="10"><br>
             <input type="text" name="NMIC404-3" size="10" maxlength="10"><br>
             <input type="text" name="NMIC404-4" size="10" maxlength="10"><br>
         </td>
     </tr>
-    <tr>
-    	<td rowspan="4">3F</td>
-        <td rowspan="4">301</td>
-        <td rowspan="4">
+    <tr class="info">
+    	<td >3F</td>
+        <td >301</td>
+        <td >
         	<input type="text" name="NMIC301-1" size="10" maxlength="10"><br>
             <input type="text" name="NMIC301-2" size="10" maxlength="10"><br>
             <input type="text" name="NMIC301-3" size="10" maxlength="10"><br>
             <input type="text" name="NMIC301-4" size="10" maxlength="10"><br>
         </td>
-        <td rowspan="4">302</td>
-        <td rowspan="4">
+        <td >302</td>
+        <td >
         	<input type="text" name="NMIC302-1" size="10" maxlength="10"><br>
             <input type="text" name="NMIC302-2" size="10" maxlength="10"><br>
             <input type="text" name="NMIC302-3" size="10" maxlength="10"><br>
             <input type="text" name="NMIC302-4" size="10" maxlength="10"><br>
         </td>
-        <td rowspan="4">303</td>
-        <td rowspan="4">
+        <td >303</td>
+        <td >
         	<input type="text" name="NMIC303-1" size="10" maxlength="10"><br>
             <input type="text" name="NMIC303-2" size="10" maxlength="10"><br>
             <input type="text" name="NMIC303-3" size="10" maxlength="10"><br>
             <input type="text" name="NMIC303-4" size="10" maxlength="10"><br>
         </td>
-        <td rowspan="4">304</td>
-        <td rowspan="4">
+        <td >304</td>
+        <td >
         	<input type="text" name="NMIC304-1" size="10" maxlength="10"><br>
             <input type="text" name="NMIC304-2" size="10" maxlength="10"><br>
             <input type="text" name="NMIC304-3" size="10" maxlength="10"><br>
             <input type="text" name="NMIC304-4" size="10" maxlength="10"><br>
         </td>
     </tr>
-    <tr>
-    	<td rowspan="4">2F</td>
-        <td rowspan="4">201</td>
-        <td rowspan="4">
+    <tr >
+    	<td >2F</td>
+        <td >201</td>
+        <td >
        		<input type="text" name="NMIC201-1" size="10" maxlength="10"><br>
             <input type="text" name="NMIC201-2" size="10" maxlength="10"><br>
             <input type="text" name="NMIC201-3" size="10" maxlength="10"><br>
             <input type="text" name="NMIC201-4" size="10" maxlength="10"><br>
         </td>
-        <td rowspan="4">202</td>
-        <td rowspan="4">
+        <td >202</td>
+        <td >
        		<input type="text" name="NMIC202-1" size="10" maxlength="10"><br>
             <input type="text" name="NMIC202-2" size="10" maxlength="10"><br>
             <input type="text" name="NMIC202-3" size="10" maxlength="10"><br>
             <input type="text" name="NMIC202-4" size="10" maxlength="10"><br>
         </td>
-        <td rowspan="4">203</td>
-        <td rowspan="4">
+        <td >203</td>
+        <td >
        		<input type="text" name="NMIC203-1" size="10" maxlength="10"><br>
             <input type="text" name="NMIC203-2" size="10" maxlength="10"><br>
             <input type="text" name="NMIC203-3" size="10" maxlength="10"><br>
             <input type="text" name="NMIC203-4" size="10" maxlength="10"><br>
         </td>
-        <td rowspan="4">204</td>
-        <td rowspan="4">
+        <td >204</td>
+        <td >
        		<input type="text" name="NMIC204-1" size="10" maxlength="10"><br>
             <input type="text" name="NMIC204-2" size="10" maxlength="10"><br>
             <input type="text" name="NMIC204-3" size="10" maxlength="10"><br>
             <input type="text" name="NMIC204-4" size="10" maxlength="10"><br>
         </td>
     </tr>
-    <tr>
-    	<td rowspan="4">1F</td>
-        <td rowspan="4">101</td>
-        <td rowspan="4">
+    <tr class="info">
+    	<td >1F</td>
+        <td >101</td>
+        <td >
         	<input type="text" name="NMIC101-1" size="10" maxlength="10"><br>
             <input type="text" name="NMIC101-2" size="10" maxlength="10"><br>
             <input type="text" name="NMIC101-3" size="10" maxlength="10"><br>
             <input type="text" name="NMIC101-4" size="10" maxlength="10"><br>
         </td>
-        <td rowspan="4">医療シュミレーションルーム</td>
-        <td rowspan="4">
-        	<input type="text" name="MSroom-1" size="10" maxlength="10"><br>
-            <input type="text" name="MSroom-2" size="10" maxlength="10"><br>
-            <input type="text" name="MSroom-3" size="10" maxlength="10"><br>
-            <input type="text" name="MSroom-4" size="10" maxlength="10"><br>
-        <td>
-        <td colspan="3" rowspan="4">事務受付・職員室</td>
+
     </tr>
 		</table>
   </div>
