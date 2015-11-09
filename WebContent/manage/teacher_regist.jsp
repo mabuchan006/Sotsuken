@@ -18,14 +18,12 @@
 <!-- BootstrapのCSS読み込み -->
 
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
-<!-- jQuery読み込み -->
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
-<!-- BootstrapのJS読み込み -->
-
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/jquery.appear.js"></script>
+<script src="../js/teacher_regist.js"></script>
+
 
 
 </head>
@@ -41,11 +39,13 @@
 
 
 	<div class="table-responsive">
-	            <table class="table table-striped table-bordered">
+	            <table class="table table-bordered">
 	                <tbody>
 	                    <tr>
 
-	                        <td class="select" onclick="<c:set var="data" value="阿知波" />">阿知波</td>
+
+	                        <td class="select" onclick="" id="test">阿知波</td>
+
 	                        <td class="select">伊藤吉</td>
 	                        <td class="select">伊藤彰</td>
 	                        <td class="select">稲垣</td>
@@ -91,7 +91,11 @@
 
 
 			<p>名前
+<<<<<<< HEAD
 			<input type="text" class="form-control" value="${data }" /></p>
+=======
+			<input type="text" class="form-control" id="teacherName"/></p>
+>>>>>>> branch 'master' of https://github.com/mabuchan006/Sotsuken.git
 			<p>名前
 			<input type="text" class="form-control" /></p>
 			<p>名前
@@ -107,10 +111,9 @@
 
 		</div>
 	</div>
-
+</div>
 </form>
 </div>
-
 
 
 </body>
