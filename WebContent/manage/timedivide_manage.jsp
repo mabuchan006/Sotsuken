@@ -25,16 +25,20 @@
 <script src="../js/jquery.appear.js"></script>
 <script src="../js/teacher_regist.js"></script>
 
+<!-- カレンダー -->
+<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-datepicker.min.css">
+<script type="text/javascript" src="../bootstrap/js/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript" src="../bootstrap/js/bootstrap-datepicker.js"></script>
 
 
 </head>
 
 <body>
-<table>
-	<tr>
-		<td>日付</td>
-	</tr>
-</table>
+<div class="form-group">
+	<label for="mydate">日付：</label>
+	<input type="text" class="form-control" id="mydate">
+</div>
+
 <p>NCS</p>
 <table border="1" id="ncs"><!-- NCS -->
 	<tr>
