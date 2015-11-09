@@ -92,9 +92,9 @@
                         </div>
 
                         <div class="col-md-3">
-                        <div class="menu-item light-red">
+                        <div class="menu-item yellow">
                             <a href="#about-modal" data-toggle="modal">
-                                <i class="fa fa-user"></i>
+                                <i class="fa fa-book"></i>
                                 <p>A</p>
                             </a>
                         </div>

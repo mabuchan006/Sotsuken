@@ -8,7 +8,8 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-position: 50% 50%;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Comic Sans MS' ;
+    font-color:#FFF;
 }
 
 a,
@@ -38,7 +39,7 @@ a:hover {
 }
 
 p {
-    font-family: 'Open Sans', sans-serif;
+    font-family:  'Comic Sans MS';
     font-size: 13px;
     line-height: 21px;
 }
@@ -96,7 +97,7 @@ fieldset[disabled] .btn-primary.active {
     color: #666 !important;
     //font-style: italic;
     font-size: 28px;
-    font-family: 'Oswald', sans-serif;
+    font-family:  'Comic Sans MS';
     text-transform: none;
 }
 
@@ -116,9 +117,10 @@ fieldset[disabled] .btn-primary.active {
 }
 
 .logo h1 {
-    font-family: 'arial black';
+    font-family: 'Comic Sans MS';
     color: #fff;
     font-size: 60px;
+    font-weight:700;
 }
 
 .logo span {
@@ -153,8 +155,8 @@ fieldset[disabled] .btn-primary.active {
     background: #0ECEAB;
 }
 
-.a {
-	background: #
+.yellow {
+	background: #ffd900;
 }
 
 
@@ -191,9 +193,9 @@ fieldset[disabled] .btn-primary.active {
 }
 
 .menu-item a p {
-    font-family:  'Impact';
-    font-weight: 300;
-    font-size: 40px;
+    font-family:  'Comic Sans MS';
+    font-weight: 700;
+    font-size: 45px;
 }
 
 .menu-item a i {
@@ -605,6 +607,15 @@ and (max-width : 991px) {
     .custom-tab {
 		margin-top: 30px;
 	}
+
+}
+
+.table-responsive{
+	font-size:30px;
+	padding-top:30px;
+
+
+
 
 }
 
