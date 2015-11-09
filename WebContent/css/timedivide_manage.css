@@ -1,0 +1,21 @@
+@CHARSET "UTF-8";
+
+#ncs {
+	float: left;
+}
+
+#ncs table{
+
+}
+
+#ncs td{
+
+}
+
+#nmic {
+	float: right;
+}
+
+footer{
+	clear: both;
+}
