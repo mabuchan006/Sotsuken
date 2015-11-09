@@ -18,7 +18,6 @@
 <!-- BootstrapのCSS読み込み -->
 
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="../js/jquery-2.1.1.min.js"></script>
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script src="../js/jquery.appear.js"></script>
@@ -45,7 +44,6 @@
 
 
 	                        <td class="select">阿知波</td>
-
 	                        <td class="select">伊藤吉</td>
 	                        <td class="select">伊藤彰</td>
 	                        <td class="select">稲垣</td>
@@ -75,17 +73,18 @@
 	                </tbody>
 	            </table>
 	</div><!--tableresponsive-->
-
+	<label for="teacherName" id="labelName"></label>
 	<button type="button" class="btn btn-danger">削除</button>
 
+			<div class="form-group">
+		    <label for="teacherName">名前</label>
+		    <input type="text" class="form-control" id="teacherName" name="teacherName" >
+		  </div>
 
-
-			<p>名前
-
-			<input type="text" class="form-control" id="teacherName"/></p>
-
-			<p>パスワード
-			<input type="password" class="form-control" /></p>
+		<div class="form-group">
+		    <label for="password">パスワード</label>
+		    <input type="password" class="form-control" name="password" >
+		  </div>
 
 			<button type="button" class="btn btn-primary">登録</button>
 			<button type="button" class="btn btn-success">更新</button>

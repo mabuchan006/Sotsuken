@@ -10,6 +10,8 @@ $(function(){
 			$(this).click(function(){
 
 				$("#teacherName").val( $(this).html());
+				$("#labelName").html(( $(this).html()));
+
 
 			});
 	});
