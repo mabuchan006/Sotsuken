@@ -77,12 +77,12 @@
 	<button type="button" class="btn btn-danger">削除</button>
 
 			<div class="form-group">
-		    <label for="teacherName">名前</label>
+		    <label for="teacherName" class="label">名前</label>
 		    <input type="text" class="form-control" id="teacherName" name="teacherName" >
 		  </div>
 
 		<div class="form-group">
-		    <label for="password">パスワード</label>
+		    <label for="password" class="label">パスワード</label>
 		    <input type="password" class="form-control" name="password" >
 		  </div>
 

@@ -36,8 +36,13 @@ button{
 
 }
 
-label{
+.label{
 	font-size: 1.1em;
   	line-height: 1.7em;
   	float:left;
+}
+
+#labelName{
+	font-size: 1.1em;
+  	line-height: 1.7em;
 }
