@@ -17,8 +17,6 @@
 		<!-- Custom CSS -->
         <link href="../css/animate.css" rel="stylesheet">
 
-        <!-- Custom CSS -->
-        <link href="../css/style.css" rel="stylesheet">
 
         <!-- Custom Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
@@ -26,6 +24,9 @@
         <script src="../js/jquery-2.1.1.min.js"></script>
         <script src="../bootstrap/js/bootstrap.min.js"></script>
         <script src="../js/jquery.appear.js"></script>
+
+		<!-- Custom CSS -->
+        <link href="../css/style.css" rel="stylesheet">
 
           <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -44,6 +45,7 @@
                     <div class="col-md-12">
                         <div class="logo text-center">
                             <h1>R4A1</h1>
+                            <p class="text-right"><i class="fa fa-star color-yellow fa-3x"></i></p>
 
                         </div>
                     </div>
@@ -51,10 +53,67 @@
             </div>
         </section>
         <!-- End Logo Section -->
+<!-- タブ -->
+<ul class="nav nav-tabs">
+<!-- R4 -->
+	<li role="presentation" class="dropdown">
+		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+			R4 <span class="caret"></span>
+		</a>
+		<ul class="dropdown-menu" role="menu">
+			<li role="presentation"><a href="#">R4A1</a></li>
+			<li role="presentation"><a href="#">R4A2</a></li>
+			<li role="presentation"><a href="#">R4A3</a></li>
+			<li role="presentation"><a href="#">R4A4</a></li>
+			<li role="presentation"><a href="#">R4A5</a></li>
+		</ul>
+	</li>
+<!-- R3 -->
+	<li role="presentation" class="dropdown">
+		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+			R3 <span class="caret"></span>
+		</a>
+		<ul class="dropdown-menu" role="menu">
+			<li role="presentation"><a href="#">R3A1</a></li>
+			<li role="presentation"><a href="#">R3A2</a></li>
+			<li role="presentation"><a href="#">R3A3</a></li>
+			<li role="presentation"><a href="#">R3A4</a></li>
+			<li role="presentation"><a href="#">R3A5</a></li>
+		</ul>
+	</li>
+<!-- R2 -->
+	<li role="presentation" class="dropdown">
+		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+			R2 <span class="caret"></span>
+		</a>
+		<ul class="dropdown-menu" role="menu">
+			<li role="presentation"><a href="#">R2A1</a></li>
+			<li role="presentation"><a href="#">R2A2</a></li>
+			<li role="presentation"><a href="#">R2A3</a></li>
+			<li role="presentation"><a href="#">R2A4</a></li>
+			<li role="presentation"><a href="#">R2A5</a></li>
+		</ul>
+	</li>
+<!-- R1 -->
+	<li role="presentation" class="dropdown">
+		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+			R1 <span class="caret"></span>
+		</a>
+		<ul class="dropdown-menu" role="menu">
+			<li role="presentation"><a href="#">R1A1</a></li>
+			<li role="presentation"><a href="#">R1A2</a></li>
+			<li role="presentation"><a href="#">R1A3</a></li>
+			<li role="presentation"><a href="#">R1A4</a></li>
+			<li role="presentation"><a href="#">R1A5</a></li>
+		</ul>
+	</li>
 
 
 
-    <div  class="container">
+</ul>
+
+
+  <div  class="container">
     <div class="table-responsive">
     <table class="table table-striped table-bordered text-center table-hover;">
     <thead>
@@ -63,7 +122,7 @@
 		<tbody>
 			<tr class="success">
 				<th colspan="2"></th>
-				<th colspan="28８">10月</th>
+				<th colspan="28">10月</th>
 			</tr>
 
 
@@ -462,6 +521,12 @@
 
 
 </div>
+
+
+
+
+
+
 
 
 
