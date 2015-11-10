@@ -27,6 +27,7 @@
 
 </head>
 <body>
+
 <div id="wrapper">
 <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
@@ -38,8 +39,9 @@
           <li><a href="#">コマ割り</a></li>
         </ul>
       </div>
+      <div class="row">
       <div id="page-content-wrapper">
-<div class="content-header">
+		<div class="content-header">
           <h1>
             <a id="menu-toggle" href="#" class="btn btn-default"><i class="icon-reorder"></i></a>
             講師管理
@@ -47,7 +49,7 @@
         </div>
 
 <form action="" method="get">
-<div class="row">
+
 
 
 
@@ -102,12 +104,12 @@
 		                </tbody>
 		            </table>
 		            </div>
-	</div>
+
 </form>
 
 </div>
 </div>
-
+</div>
 
 
 </body>
