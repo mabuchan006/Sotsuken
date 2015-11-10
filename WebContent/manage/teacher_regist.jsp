@@ -33,26 +33,30 @@
 <form action="" method="get">
 <div class="row">
 
-<div class="col-md-6 col-md-offset-3">
 	<h1>講師管理</h1>
 
+<table class="col-md-6 col-md-offset-3" id="first_table">
+<tr>
+<td class="col-md-4">
+		    <label for="teacherName" class="labels">名前</label>
+		    <input type="text" class="form-control" id="teacherName" name="teacherName" >
+</td>
+
+<td class="col-md-4">
+			<label for="password" class="labels">パスワード</label>
+			<input type="password" class="form-control" name="password" >
+</td>
+
+<td class="col-md-4">
+	<label for="password" class="empty">________</label>
+		<button type="button" class="btn btn-primary" id="regist_btn">登録</button>
+</td>
+</tr>
 
 
-<div class="header">
-<table class="table" id="first-table">
-<tr><td><label for="teacherName" class="labels">名前</label></td>
-<td><label for="password" class="labels">パスワード</label></td></tr>
 
-<tr><td><input type="text" class="form-control" id="teacherName" name="teacherName" ></td>
-<td><input type="password" class="form-control" name="password" ></td>
-<td><button type="button" class="btn btn-primary" id="regist_btn">登録</button></td></tr>
+	</table>
 
-</table>
-</div>
-</div>
-</div>
-
-<div class="row">
 
 <div class="col-md-6 col-md-offset-3">
 
