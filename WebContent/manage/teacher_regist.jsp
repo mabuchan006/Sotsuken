@@ -42,10 +42,10 @@
       </div>
       <div class="row">
       <ul class="nav nav-tabs">
-<li class="active"><a href="#tab1" data-toggle="tab">管理者メニュー</a></li>
+<li><a href="#tab1" data-toggle="tab">管理者メニュー</a></li>
 <li><a href="#tab2" data-toggle="tab">時間割管理</a></li>
 <li><a href="#tab2" data-toggle="tab">講師管理</a></li>
-<li><a href="#tab2" data-toggle="tab">科目管理</a></li>
+<li class="active"><a href="#tab2" data-toggle="tab">科目管理</a></li>
 <li><a href="#tab2" data-toggle="tab">クラス管理</a></li>
 <li><a href="#tab2" data-toggle="tab">コマ割管理</a></li>
 </ul>
