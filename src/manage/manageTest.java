@@ -29,7 +29,7 @@ public class manageTest extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String test = "テスト";
-		String content_page = "/timeTable/test.jsp"; //見せたい画面のパスを入れる
+		String content_page = "/timeTable/timeTable_master.jsp"; //見せたい画面のパスを入れる
 		String page_title = "テスト用"; //タブに表示される表示名を入力
 
 		//ディスパッチ準備
