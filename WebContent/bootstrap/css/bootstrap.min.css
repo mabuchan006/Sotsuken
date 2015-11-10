@@ -22,7 +22,7 @@
  .table>thead>tr.pink1>th,
  .table>tbody>tr.pink1>th,
  .table>tfoot>tr.pink1>th {
-    background-color: #ddd;
+    background-color: #9F615E;
 }
 
 
@@ -38,7 +38,7 @@
  .table>thead>tr.pink2>th,
  .table>tbody>tr.pink2>th,
  .table>tfoot>tr.pink2>th {
-    background-color: #ff84c1;
+    background-color: #4D558A;
 }
 
  .table>thead>tr>td.pink3,
@@ -53,7 +53,7 @@
  .table>thead>tr.pink3>th,
  .table>tbody>tr.pink3>th,
  .table>tfoot>tr.pink3>th {
-    background-color: #ff84ff;
+    background-color: #8590CA;
 }
 
  .table>thead>tr>td.purple1,

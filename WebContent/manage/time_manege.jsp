@@ -33,6 +33,11 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
+        <!-- カレンダー -->
+<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-datepicker.min.css">
+<script type="text/javascript" src="../bootstrap/js/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript" src="../bootstrap/js/bootstrap-datepicker.js"></script>
+
 <title>コマ割画面</title>
 </head>
 <body>
@@ -52,8 +57,12 @@
             </div>
         </section>
         <!-- End Logo Section -->
-
-
+        <!-- カレンダー部分 -->
+<div class="form-group">
+	<label for="mydate">日付：</label>
+	<input type="text" class="form-control" id="mydate">
+</div>
+<!-- カレンダーEND -->
 <h1>NCS</h1>
     <div  class="container">
     <div class="table">
@@ -238,7 +247,7 @@
 
       </thead>
 		<tbody>
-	<tr class="info">
+	<tr class="pink3">
     	<td >5F</td>
         <td >501</td>
         <td >
@@ -262,7 +271,7 @@
             <input type="text" name="NMIC503-4" size="10" maxlength="10"><br>
         </td>
     </tr>
-    <tr class="pink1">
+    <tr class="pink2">
     	<td >4F</td>
         <td >401</td>
         <td >
@@ -293,7 +302,7 @@
             <input type="text" name="NMIC404-4" size="10" maxlength="10"><br>
         </td>
     </tr>
-    <tr class="info">
+    <tr class="pink3">
     	<td >3F</td>
         <td >301</td>
         <td >
@@ -324,7 +333,7 @@
             <input type="text" name="NMIC304-4" size="10" maxlength="10"><br>
         </td>
     </tr>
-    <tr class="pink1">
+    <tr class="pink2">
     	<td >2F</td>
         <td >201</td>
         <td >
@@ -355,7 +364,7 @@
             <input type="text" name="NMIC204-4" size="10" maxlength="10"><br>
         </td>
     </tr>
-    <tr class="info">
+    <tr class="pink3">
     	<td >1F</td>
         <td >101</td>
         <td >
