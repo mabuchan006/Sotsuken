@@ -27,13 +27,29 @@
 
 </head>
 <body>
-
-
+<div id="wrapper">
+<div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <li class="sidebar-brand"><a href="#">管理者メニュー</a></li>
+          <li><a href="#">時間割管理</a></li>
+          <li><a href="#">講師管理</a></li>
+          <li><a href="#">科目管理</a></li>
+          <li><a href="#">クラス管理</a></li>
+          <li><a href="#">コマ割り</a></li>
+        </ul>
+      </div>
+      <div id="page-content-wrapper">
+<div class="content-header">
+          <h1>
+            <a id="menu-toggle" href="#" class="btn btn-default"><i class="icon-reorder"></i></a>
+            講師管理
+          </h1>
+        </div>
 
 <form action="" method="get">
 <div class="row">
 
-	<h1>講師管理</h1>
+
 
 <table class="col-md-6 col-md-offset-3" id="first_table">
 <tr>
@@ -58,9 +74,9 @@
 	</table>
 
 
-<div class="col-md-6 col-md-offset-3">
+<div class="col-md-9 col-md-offset-3">
 
-		            <table class="table table-striped">
+		            <table class="table">
 						<thead>
 						<tr><td colspan="2">lecturers</td></tr>
 						</thead>
@@ -89,8 +105,8 @@
 	</div>
 </form>
 
-
-
+</div>
+</div>
 
 
 
