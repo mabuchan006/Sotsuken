@@ -81,7 +81,7 @@
             <input type="text" name="NCS803-4" size="10" maxlength="10"><br>
         </td>
     </tr>
-    <tr>
+    <tr class="pink1">
     	<td >7F</td>
         <td >701</td>
         <td >
@@ -122,7 +122,7 @@
             <input type="text" name="NCS604-4" size="10" maxlength="10"><br>
         </td>
     </tr>
-    <tr>
+    <tr class="pink1">
     	<td >5F</td>
         <td >501</td>
         <td >
@@ -184,7 +184,7 @@
             <input type="text" name="NCS404-4" size="10" maxlength="10"><br>
         </td>
     </tr>
-    <tr>
+    <tr class="pink1">
     	<td >3F</td>
         <td >301</td>
         <td >
@@ -225,10 +225,7 @@
             <input type="text" name="NCS201-4" size="10" maxlength="10"><br>
         </td>
     </tr>
-    <tr>
-    	<td>1F</td>
 
-    </tr>
 </table>
 </div>
 </div>
@@ -265,7 +262,7 @@
             <input type="text" name="NMIC503-4" size="10" maxlength="10"><br>
         </td>
     </tr>
-    <tr>
+    <tr class="pink1">
     	<td >4F</td>
         <td >401</td>
         <td >
@@ -327,7 +324,7 @@
             <input type="text" name="NMIC304-4" size="10" maxlength="10"><br>
         </td>
     </tr>
-    <tr >
+    <tr class="pink1">
     	<td >2F</td>
         <td >201</td>
         <td >
