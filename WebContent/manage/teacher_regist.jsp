@@ -39,26 +39,15 @@
 
 
 <div class="header">
+<table class="table" id="first-table">
+<tr><td><label for="teacherName" class="labels">名前</label></td>
+<td><label for="password" class="labels">パスワード</label></td></tr>
 
-	<div class="col-md-4">
+<tr><td><input type="text" class="form-control" id="teacherName" name="teacherName" ></td>
+<td><input type="password" class="form-control" name="password" ></td>
+<td><button type="button" class="btn btn-primary" id="regist_btn">登録</button></td></tr>
 
-		    <label for="teacherName" class="labels">名前</label>
-		    <input type="text" class="form-control" id="teacherName" name="teacherName" >
-
-	</div>
-	<div class="col-md-4">
-
-			<label for="password" class="labels">パスワード</label>
-			<input type="password" class="form-control" name="password" >
-
-	</div>
-
-
-
-	<div class="col-md-4">
-	<label for="password" class="empty">________</label>
-		<button type="button" class="btn btn-primary" id="regist_btn">登録</button>
-	</div>
+</table>
 </div>
 </div>
 </div>
