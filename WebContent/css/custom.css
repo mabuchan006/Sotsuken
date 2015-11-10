@@ -26,18 +26,24 @@ body {
 	left:3px;
 }
 
-
+.header{
+	  margin-bottom: 40px;
+}
 
 input{
   border: 1px solid #bbb;
-  width: 100%;
-  margin-bottom: 15px;
+  width: 40%;
+
 
 }
 button{
-  border: 1px solid #bbb;
-  width: 20%;
-  margin-bottom: 15px;
+
+  width: 40%;
+
+}
+
+#regist_btn{
+	 width: 100%;
 
 }
 
@@ -46,6 +52,30 @@ button{
   	line-height: 1.7em;
   	float:left;
   	color:#000;
+}
+
+#table{
+	border-radius: 3px 3px 0 0;
+    border: 1px solid #d8d8d8;
+}
+
+#first_table{
+	border-style: none;
+}
+
+thead{
+	background-color: #f5f5f5;
+    margin: 0;
+
+    border-bottom: 0;
+    padding: 9px 10px 10px;
+    font-size: 14px;
+    text-align: left;
+
+}
+
+thead tr td{
+	padding-left:20px;
 }
 
 #labelName{

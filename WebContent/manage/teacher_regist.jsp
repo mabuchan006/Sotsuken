@@ -30,67 +30,69 @@
 
 
 
-<div class="col-md-6 col-md-offset-3">
+
 <div class="row">
 
-
+<div class="col-md-6 col-md-offset-3">
 	<h1>講師管理</h1>
+	<form action="" method="get">
 
-<form action="" method="get">
-		<div class="table-responsive">
-		            <table class="table table-bordered">
+	<div class="header">
+	<table class="table" id="first_table">
+	<tr>
+		<td>
+		    <label for="teacherName" class="labels">名前</label>
+		</td>
+		<td>
+			<label for="password" class="labels">パスワード</label>
+		</td>
+	</tr>
+	<tr>
+	<td>
+
+		    <input type="text" class="form-control" id="teacherName" name="teacherName" >
+	</td>
+	<td>
+
+			<input type="password" class="form-control" name="password" >
+	</td>
+	<td rowspan="2">
+
+		<button type="button" class="btn btn-primary" id="regist_btn">登録</button>
+	</td>
+</tr>
+	</table>
+	</div>
+
+		            <table class="table" id="table">
+						<thead>
+						<tr><td colspan="2">lecturers</td></tr>
+						</thead>
+
 		                <tbody>
-		                    <tr>
+		                    <tr class="select">
+		                        <td>阿知波</td>
+		                        <td><button type="button" class="btn btn-danger">削除</button></td>
 
-
-		                        <td class="select">阿知波</td>
-		                        <td class="select">伊藤吉</td>
-		                        <td class="select">伊藤彰</td>
-		                        <td class="select">稲垣</td>
-		                        <td class="select">宇佐美</td>
 		                    </tr>
-		                    <tr>
-
-		                        <td class="select">河合</td>
-		                        <td class="select">外山</td>
-		                        <td class="select">梶田</td>
-		                        <td class="select">吉田</td>
-		                        <td class="select">近藤</td>
+		                    <tr class="select">
+		                        <td>河合</td>
+								<td><button type="button" class="btn btn-danger">削除</button></td>
 
 
 		                    </tr>
-		                    <tr>
-
-		                        <td class="select">元木</td>
-		                        <td class="select">古市</td>
-		                        <td class="select">高木俊</td>
-		                        <td class="select">高木哲</td>
-		                        <td class="select">佐野</td>
-
+		                    <tr class="select">
+		                        <td>元木</td>
+								<td><button type="button" class="btn btn-danger">削除</button></td>
 
 		                    </tr>
 
 		                </tbody>
 		            </table>
-		</div><!--tableresponsive-->
-		<label for="teacherName" id="labelName"></label>
-		<button type="button" class="btn btn-danger">削除</button>
-
-				<div class="form-group">
-			    <label for="teacherName" class="labels">名前</label>
-			    <input type="text" class="form-control" id="teacherName" name="teacherName" >
-			  </div>
-
-			<div class="form-group">
-			    <label for="password" class="labels">パスワード</label>
-			    <input type="password" class="form-control" name="password" >
-			  </div>
-
-				<button type="button" class="btn btn-primary">登録</button>
-
-				</form>
-			</div>
+		    </form>
 	</div>
+</div>
+
 
 
 
