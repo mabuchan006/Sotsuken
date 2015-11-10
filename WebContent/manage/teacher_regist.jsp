@@ -27,19 +27,17 @@
 
 </head>
 <body>
-<div id="wrapper">
-<div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-          <li class="sidebar-brand"><a href="#">管理者メニュー</a></li>
-          <li><a href="#">時間割管理</a></li>
-          <li><a href="#">講師管理</a></li>
-          <li><a href="#">科目管理</a></li>
-          <li><a href="#">クラス管理</a></li>
-          <li><a href="#">コマ割り</a></li>
-        </ul>
-      </div>
-      <div id="page-content-wrapper">
-<div class="content-header">
+<ul class="nav nav-tabs">
+<li class="active"><a href="#tab1" data-toggle="tab">管理者メニュー</a></li>
+<li><a href="#tab2" data-toggle="tab">時間割管理</a></li>
+<li><a href="#tab2" data-toggle="tab">講師管理</a></li>
+<li><a href="#tab2" data-toggle="tab">科目管理</a></li>
+<li><a href="#tab2" data-toggle="tab">クラス管理</a></li>
+<li><a href="#tab2" data-toggle="tab">コマ割管理</a></li>
+</ul>
+
+
+
           <h1>
             <a id="menu-toggle" href="#" class="btn btn-default"><i class="icon-reorder"></i></a>
             講師管理
