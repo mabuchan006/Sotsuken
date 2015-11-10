@@ -41,10 +41,7 @@
         </ul>
       </div>
       <div class="row">
-      <div id="page-content-wrapper">
-		<div class="content-header">
-
-<ul class="nav nav-tabs">
+      <ul class="nav nav-tabs">
 <li class="active"><a href="#tab1" data-toggle="tab">管理者メニュー</a></li>
 <li><a href="#tab2" data-toggle="tab">時間割管理</a></li>
 <li><a href="#tab2" data-toggle="tab">講師管理</a></li>
@@ -52,12 +49,17 @@
 <li><a href="#tab2" data-toggle="tab">クラス管理</a></li>
 <li><a href="#tab2" data-toggle="tab">コマ割管理</a></li>
 </ul>
+      <div id="page-content-wrapper">
+		<div class="content-header">
 
 
+
+		<div id="logo">
           <h1>
-            <a id="menu-toggle" href="#" class="btn btn-default"><i class="icon-reorder"></i></a>
             講師管理
           </h1>
+          </div>
+
         </div>
 
 <form action="" method="get">
