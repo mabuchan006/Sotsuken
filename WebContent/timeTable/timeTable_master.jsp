@@ -127,7 +127,7 @@
 
 
 			<tr class="warning">
-				<th >クラス</th>
+
 				<th>限</th>
 				<td>10/19(月)　</td>
 				<td>10/20(火)　</td>
@@ -160,7 +160,6 @@
 			</tr>
 
 			<tr class="info">
-				<th class="warning" rowspan=13>RXAXX</th>
 				<th class="info" rowspan=3>1</th>
 				<td>授業</td>
 				<td></td>
