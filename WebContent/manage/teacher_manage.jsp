@@ -28,10 +28,6 @@
 </head>
 <body>
 
-
-
-
-
       <div class="row">
       <ul class="nav nav-tabs">
 <li><a href="#tab1" data-toggle="tab">管理者メニュー</a></li>
