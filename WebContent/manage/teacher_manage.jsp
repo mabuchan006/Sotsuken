@@ -29,8 +29,8 @@
 <body>
 
 
-<div id="wrapper">
-<div id="sidebar-wrapper">
+
+
 
       <div class="row">
       <ul class="nav nav-tabs">
@@ -41,7 +41,7 @@
 <li><a href="#tab2" data-toggle="tab">クラス管理</a></li>
 <li><a href="#tab2" data-toggle="tab">コマ割管理</a></li>
 </ul>
-      <div id="page-content-wrapper">
+
 		<div class="content-header">
 
 
@@ -114,8 +114,8 @@
 </form>
 
 </div>
-</div>
-</div>
+
+
 
 
 </body>
