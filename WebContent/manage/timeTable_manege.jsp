@@ -62,224 +62,94 @@
       </thead>
 		<tbody>
 			<tr class="success">
-				<th colspan="2"></th>
-				<th colspan="13">10月</th>
+
+				<th colspan="31">10月</th>
 			</tr>
 
 
 			<tr class="warning">
-				<th >クラス</th>
+
 				<th>限</th>
-				<td>10/19(月)　</td>
-				<td>10/20(火)　</td>
-				<td>10/21(水)　</td>
-				<td>10/22(木)　</td>
-				<td>10/23(金)　</td>
-				<td>10/24(土)　</td>
-				<td>10/25(日)　</td>
-				<td>10/26(月)　</td>
-				<td>10/27(火)　</td>
-				<td>10/28(水)　</td>
-				<td>10/29(木)　</td>
-				<td>10/30(金)　</td>
-				<td>10/31(土)　</td>
+				<script language="JavaScript">
+for (i=0; i<30; i++) document.write("<td nowrap>15日(水)</td>");
+				</script>
+
 			</tr>
 
 			<tr class="info">
-				<th class="warning" rowspan=13>RXAXX</th>
 				<th class="info" rowspan=3>1</th>
-				<td>授業</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+				<script language="JavaScript">
+for (i=0; i<30; i++) document.write("<td nowrap>教室</td>");
+				</script>
 			</tr>
 
 			<tr class="info">
-				<td>教室</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+			<script language="JavaScript">
+for (i=0; i<30; i++) document.write("<td nowrap>教室</td>");
+				</script>
 			</tr>
 
 			<tr class="info">
-				<td>講師</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+			<script language="JavaScript">
+for (i=0; i<30; i++) document.write("<td nowrap>教室</td>");
+				</script>
 			</tr>
 
 			<tr class="success">
 				<th rowspan=3>2</th>
-				<td>授業</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+				<script language="JavaScript">
+for (i=0; i<30; i++) document.write("<td nowrap>教室</td>");
+				</script>
 			</tr>
 
 			<tr class="success">
-				<td>教室</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+			<script language="JavaScript">
+for (i=0; i<30; i++) document.write("<td nowrap>教室</td>");
+				</script>
 			</tr>
 
 			<tr class="success">
-				<td>講師</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+			<script language="JavaScript">
+for (i=0; i<30; i++) document.write("<td nowrap>教室</td>");
+				</script>
 			</tr>
 
 			<tr class="danger">
 				<th rowspan=3>3</th>
-				<td>授業</td>
-				<td></td>
-				<td>OS基礎論</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+				<script language="JavaScript">
+for (i=0; i<30; i++) document.write("<td nowrap>教室</td>");
+				</script>
 			</tr>
 
 			<tr class="danger">
-				<td>教室</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+			<script language="JavaScript">
+for (i=0; i<30; i++) document.write("<td nowrap>教室</td>");
+				</script>
 			</tr>
 
 			<tr class="danger">
-				<td>講師</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+			<script language="JavaScript">
+for (i=0; i<30; i++) document.write("<td nowrap>教室</td>");
+				</script>
 			</tr>
 
 			<tr class="active">
 				<th rowspan=3>4</th>
-				<td>授業</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+				<script language="JavaScript">
+for (i=0; i<30; i++) document.write("<td nowrap>教室</td>");
+				</script>
 			</tr>
 
 			<tr class="active">
-				<td>教室</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+			<script language="JavaScript">
+for (i=0; i<30; i++) document.write("<td nowrap>教室</td>");
+				</script>
 			</tr>
 
 			<tr class="active">
-				<td>講師</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+			<script language="JavaScript">
+for (i=0; i<30; i++) document.write("<td nowrap>教室</td>");
+				</script>
 			</tr>
 			</tbody>
 
