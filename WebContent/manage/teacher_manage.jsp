@@ -79,25 +79,25 @@
 
 
 <div class="col-md-9 col-md-offset-3">
-
+	<div class="back">
 		            <table class="table ">
 						<thead>
 						<tr><td colspan="2">lecturers</td></tr>
 						</thead>
 
 		                <tbody>
-		                    <tr class="purple5 select">
+		                    <tr class="select">
 		                        <td>阿知波</td>
 		                        <td><button type="button" class="btn btn-danger">削除</button></td>
 
 		                    </tr>
-		                    <tr class="purple5 select">
+		                    <tr class="select">
 		                        <td>河合</td>
 								<td><button type="button" class="btn btn-danger">削除</button></td>
 
 
 		                    </tr>
-		                    <tr class="purple5 select">
+		                    <tr class="select">
 		                        <td>元木</td>
 								<td><button type="button" class="btn btn-danger">削除</button></td>
 
@@ -105,6 +105,7 @@
 
 		                </tbody>
 		            </table>
+		            </div>
 		            </div>
 
 </form>
