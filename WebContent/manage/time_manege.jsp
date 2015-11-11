@@ -33,7 +33,7 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <!-- カレンダー -->
+        <!-- カレンダーJS読み込み -->
 <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-datepicker.min.css">
 <script type="text/javascript" src="../bootstrap/js/bootstrap-datepicker.min.js"></script>
 <script type="text/javascript" src="../bootstrap/js/bootstrap-datepicker.js"></script>
@@ -42,6 +42,16 @@
 </head>
 <body>
 
+<!-- タグ -->
+<ul class="nav nav-tabs">
+<li><a href="#tab1" data-toggle="tab">管理者メニュー</a></li>
+<li><a href="#tab2" data-toggle="tab">時間割管理</a></li>
+<li><a href="#tab2" data-toggle="tab">講師管理</a></li>
+<li class="active"><a href="#tab2" data-toggle="tab">科目管理</a></li>
+<li><a href="#tab2" data-toggle="tab">クラス管理</a></li>
+<li><a href="#tab2" data-toggle="tab">コマ割管理</a></li>
+</ul>
+<!-- タグ終了 -->
 
         <!-- Start Logo Section --><!-- ヘッダー部分 -->
         <section id="logo-section" class="text-center">
@@ -57,13 +67,15 @@
             </div>
         </section>
         <!-- End Logo Section -->
+
+
         <!-- カレンダー部分 -->
 <div class="form-group">
 	<label for="mydate">日付：</label>
 	<input type="text" class="form-control" id="mydate">
 </div>
 <!-- カレンダーEND -->
-<h1>NCS</h1>
+<h1 class="text-center">NCS</h1>
     <div  class="container">
     <div class="table">
     <table class="table table-striped table-bordered text-center table-hover;">
@@ -239,7 +251,7 @@
 </div>
 </div>
 
-<h1>NMIC</h1>
+<h1 class="text-center">NMIC</h1>
 <div  class="container">
     <div class="table">
     <table class="table table-striped table-bordered text-center table-hover;">

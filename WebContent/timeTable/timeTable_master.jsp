@@ -33,7 +33,7 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-<title>R4A1</title>
+<title>タイムテーブルR4</title>
 </head>
 <body>
 
@@ -120,106 +120,78 @@
 
       </thead>
 		<tbody>
-			<tr class="success">
+			<tr class="purple2">
 				<th colspan="31">10月</th>
 			</tr>
 
 
-			<tr class="warning">
+			<tr class="purple1">
 
-				<th>限</th>
-				<script language="JavaScript">
-for (i=0; i<30; i++) document.write("<td nowrap>15日(水)</td>");
-				</script>
+				<th></th>
+				<%
+			for (int cnt0=0; cnt0<30; cnt0++) {%>
+				<th nowrap>10日(水)</th>
+			<%} %>
 
-			</tr>
+<%
+for (int cnt1=1; cnt1<=4; cnt1++) {%>
 
-			<tr class="info">
-				<th class="info" rowspan=3>1</th>
-				<script language="JavaScript">
-for (i=0; i<30; i++) document.write("<td nowrap>授業</td>");
-				</script>
-			</tr>
+	<% if (cnt1==1){ %>
+<tr class="info">
+				<th class="info" rowspan=3><%=cnt1 %></th>
+	<%} %>
 
-			<tr class="info">
-			<script language="JavaScript">
-for (i=0; i<30; i++) document.write("<td nowrap>教室</td>");
-				</script>
+	<% if (cnt1==2){ %>
+<tr class="danger">
+				<th class="info" rowspan=3><%=cnt1 %></th>
+	<%} %>
 
-			</tr>
+	<% if (cnt1==3){ %>
+<tr class="success">
+				<th class="success" rowspan=3><%=cnt1 %></th>
+	<%} %>
 
-			<tr class="info">
-			<script language="JavaScript">
-for (i=0; i<30; i++) document.write("<td nowrap>講師</td>");
-				</script>
+	<% if (cnt1==4){ %>
+<tr class="active">
+				<th class="warning" rowspan=3><%=cnt1 %></th>
+	<%} %>
 
-			</tr>
 
-			<tr class="success">
-				<th rowspan=3>2</th>
-				<script language="JavaScript">
-for (i=0; i<30; i++) document.write("<td nowrap>教室</td>");
-				</script>
+	<%
+	for (int cnt2=0; cnt2<3; cnt2++) {%>
+			<%
+		for (int cnt3=0; cnt3<30; cnt3++) {%>
+			<%
+			if (cnt1==1){ %>
+				<td class="info" nowrap>a</td>
+			<%} %>
 
-			</tr>
+			<%
+			if (cnt1==2){ %>
+				<td class="danger" nowrap>a</td>
+			<%} %>
 
-			<tr class="success">
-			<script language="JavaScript">
-for (i=0; i<30; i++) document.write("<td nowrap>教室</td>");
-				</script>
+			<%
+			if (cnt1==3){ %>
+				<td class="success" nowrap>a</td>
+			<%} %>
 
-			</tr>
+			<%
+			if (cnt1==4){ %>
+				<td class="warning" nowrap>a</td>
+			<%} %>
 
-			<tr class="success">
-			<script language="JavaScript">
-for (i=0; i<30; i++) document.write("<td nowrap>教室</td>");
-				</script>
+		<%} %>
+		</tr>
+	<%} %>
 
-			</tr>
+<%} %>
 
-			<tr class="danger">
-				<th rowspan=3>3</th>
-				<script language="JavaScript">
-for (i=0; i<30; i++) document.write("<td nowrap>教室</td>");
-				</script>
 
-			</tr>
 
-			<tr class="danger">
-			<script language="JavaScript">
-for (i=0; i<30; i++) document.write("<td nowrap>教室</td>");
-				</script>
 
-			</tr>
 
-			<tr class="danger">
-			<script language="JavaScript">
-for (i=0; i<30; i++) document.write("<td nowrap>教室</td>");
-				</script>
 
-			</tr>
-
-			<tr class="active">
-				<th rowspan=3>4</th>
-				<script language="JavaScript">
-for (i=0; i<30; i++) document.write("<td nowrap>教室</td>");
-				</script>
-
-			</tr>
-
-			<tr class="active">
-			<script language="JavaScript">
-for (i=0; i<30; i++) document.write("<td nowrap>教室</td>");
-				</script>
-
-			</tr>
-
-			<tr class="active">
-			<script language="JavaScript">
-for (i=0; i<30; i++) document.write("<td nowrap>教室</td>");
-				</script>
-
-			</tr>
 			</tbody>
 
 		</table>
