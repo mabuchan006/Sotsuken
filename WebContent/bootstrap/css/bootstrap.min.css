@@ -86,6 +86,21 @@
     background-color: #ffead6;
 }
 
+
+ .table>thead>tr>td.purple5,
+ .table>tbody>tr>td.purple5,
+ .table>tfoot>tr>td.purple5,
+ .table>thead>tr>th.purple5,
+ .table>tbody>tr>th.purple5,
+ .table>tfoot>tr>th.purple5
+ .table>thead>tr.purple5>td,
+ .table>tbody>tr.purple5>td,
+ .table>tfoot>tr.purple5>td,
+ .table>thead>tr.purple5>th,
+ .table>tbody>tr.purple5>th,
+ .table>tfoot>tr.purple5>th {
+    background-color: #fff;
+}
  .table>thead>tr>td.blue1,
  .table>tbody>tr>td.blue1,
  .table>tfoot>tr>td.blue1,

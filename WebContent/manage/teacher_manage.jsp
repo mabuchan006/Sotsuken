@@ -13,17 +13,17 @@
 
 <title>講師管理</title>
 
-<link href="../css/custom.css" rel="stylesheet">
+
 
 <!-- BootstrapのCSS読み込み -->
 
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="../js/jquery-2.1.1.min.js"></script>
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script src="../js/jquery.appear.js"></script>
 <script src="../js/teacher_regist.js"></script>
 
-
+<link href="../css/custom.css" rel="stylesheet">
 
 </head>
 <body>
@@ -80,24 +80,24 @@
 
 <div class="col-md-9 col-md-offset-3">
 
-		            <table class="table">
+		            <table class="table ">
 						<thead>
 						<tr><td colspan="2">lecturers</td></tr>
 						</thead>
 
 		                <tbody>
-		                    <tr class="select">
+		                    <tr class="purple5 select">
 		                        <td>阿知波</td>
 		                        <td><button type="button" class="btn btn-danger">削除</button></td>
 
 		                    </tr>
-		                    <tr class="select">
+		                    <tr class="purple5 select">
 		                        <td>河合</td>
 								<td><button type="button" class="btn btn-danger">削除</button></td>
 
 
 		                    </tr>
-		                    <tr class="select">
+		                    <tr class="purple5 select">
 		                        <td>元木</td>
 								<td><button type="button" class="btn btn-danger">削除</button></td>
 
