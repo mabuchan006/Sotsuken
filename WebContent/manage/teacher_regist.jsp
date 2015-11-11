@@ -31,15 +31,7 @@
 
 <div id="wrapper">
 <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-          <li class="sidebar-brand"><a href="#">管理者メニュー</a></li>
-          <li><a href="#">時間割管理</a></li>
-          <li><a href="#">講師管理</a></li>
-          <li><a href="#">科目管理</a></li>
-          <li><a href="#">クラス管理</a></li>
-          <li><a href="#">コマ割り</a></li>
-        </ul>
-      </div>
+
       <div class="row">
       <ul class="nav nav-tabs">
 <li><a href="#tab1" data-toggle="tab">管理者メニュー</a></li>
