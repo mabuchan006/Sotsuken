@@ -14,6 +14,7 @@ h1 { padding: .2em; margin: 0; font-size:14px; }
 #divide { width: 200px; float: left; margin-top: 1em; }
 /* style the list to maximize the droppable hitarea */
 #divide ul { margin: 0; padding: 1em 0 1em 3em; list-style-type: none; }
+#divide ul { border: 1px #000 solid; }
 </style>
 <script>
 $(function() {
@@ -40,6 +41,11 @@ $(function() {
 			$( this ).removeClass( "ui-state-default" );
 		}
 	});
+	/**
+	$(".placeholder").click(function(){
+		$( this ).slideUp();
+	});
+	**/
 });
 </script>
 </head>
@@ -47,24 +53,14 @@ $(function() {
 <div id="products">
 	<h1 class="ui-widget-header">クラス</h1>
 	<div id="catalog">
-		<h2><a href="#">R4</a></h2>
+		<h2><a href="#">R1</a></h2>
 		<div>
 			<ul>
-				<li>R4A1</li>
-				<li>R4A2</li>
-				<li>R4A3</li>
-				<li>R4A4</li>
-				<li>R4A5</li>
-			</ul>
-		</div>
-		<h2><a href="#">R3</a></h2>
-		<div>
-			<ul>
-				<li>R3A1</li>
-				<li>R3A2</li>
-				<li>R3A3</li>
-				<li>R3A4</li>
-				<li>R3A5</li>
+				<li>R1A1</li>
+				<li>R1A2</li>
+				<li>R1A3</li>
+				<li>R1A4</li>
+				<li>R1A5</li>
 			</ul>
 		</div>
 		<h2><a href="#">R2</a></h2>
@@ -77,29 +73,42 @@ $(function() {
 				<li>R2A5</li>
 			</ul>
 		</div>
-		<h2><a href="#">R1</a></h2>
+		<h2><a href="#">R3</a></h2>
 		<div>
 			<ul>
-				<li>R1A1</li>
-				<li>R1A2</li>
-				<li>R1A3</li>
-				<li>R1A4</li>
-				<li>R1A5</li>
+				<li>R3A1</li>
+				<li>R3A2</li>
+				<li>R3A3</li>
+				<li>R3A4</li>
+				<li>R3A5</li>
+			</ul>
+		</div>
+		<h2><a href="#">R4</a></h2>
+		<div>
+			<ul>
+				<li>R4A1</li>
+				<li>R4A2</li>
+				<li>R4A3</li>
+				<li>R4A4</li>
+				<li>R4A5</li>
 			</ul>
 		</div>
 	</div>
 </div>
 <div id="divide">
-	<h1 class="ui-widget-header">1時限目</h1>
-	<div class="ui-widget-content">
-		<ul>
-			<li class="placeholder"></li>
-		</ul>
-	</div>
 	<table border="1">
 			<tr>
 				<td>801</td>
 				<td width="100px" height="50px">
+					<ul>
+						<li class="placeholder"></li>
+					</ul>
+					<ul>
+						<li class="placeholder"></li>
+					</ul>
+					<ul>
+						<li class="placeholder"></li>
+					</ul>
 					<ul>
 						<li class="placeholder"></li>
 					</ul>
