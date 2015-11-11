@@ -8,7 +8,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>発動確認</title>
+<title>ログイン認証画面</title>
 
 <link href="../css/custom.css" rel="stylesheet">
 
@@ -24,11 +24,15 @@
 <body>
 
 	<form>
-		<!--
-		<input id="EnterPassWord" type="password" size="35" /><br>
-		<input id="EnterId" type="password" size="35" /><br>
-		 -->
-		<input id="login" type="button" value="発動確認" />
+		<input id="enterId" type="text" value="ID"> <br>
+		<input id="enterPw" type="text" value="パスワード"> <br><br>
+		<input id="login" type="button" value="ログイン" />
+
+		<!-- この機能は削除かも -->
+		<div id="link">
+			<a href="">ご登録がまだお済でない方はこちらから</a>
+		</div>
+
 	</form>
 
 </body>
