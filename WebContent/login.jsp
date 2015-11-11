@@ -24,9 +24,11 @@
 <body>
 
 	<form>
-		<input type="button"
-		value="発動確認"
-		id="login" />
+		<!--
+		<input id="EnterPassWord" type="password" size="35" /><br>
+		<input id="EnterId" type="password" size="35" /><br>
+		 -->
+		<input id="login" type="button" value="発動確認" />
 	</form>
 
 </body>
