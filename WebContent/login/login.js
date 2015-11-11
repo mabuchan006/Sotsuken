@@ -2,18 +2,20 @@
 
 $(function login() {
 
-	var pw = document.getElementById("EnterPw").value;
-	var id = document.getElementById("EnterId").value;
+	var pw = ("#EnterPw").value;
+	var id = ("#EnterId").value;
 
 	//EnterKeyを押した時
 	$("body").keypress( function( e ) {
 		if ( e.which === 13 ) {
 			//ckInfo_Events
+			ckInfo();
 		}
 	});
 
 	$("#login").click(function() {
 		//ckInfo_Events
+		ckInfo();
 	});//click_Events
 
 	$(function ckInfo() {

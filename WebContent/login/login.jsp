@@ -28,11 +28,6 @@
 		<input id="enterPw" type="text" value="パスワード"> <br><br>
 		<input id="login" type="button" value="ログイン" />
 
-		<!-- この機能は削除かも -->
-		<div id="link">
-			<a href="">ご登録がまだお済でない方はこちらから</a>
-		</div>
-
 	</form>
 
 </body>
