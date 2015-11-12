@@ -28,7 +28,7 @@
 </head>
 <body>
 
-      <div class="row">
+      <div class="row ">
       <ul class="nav nav-tabs">
 <li><a href="#tab1" data-toggle="tab">管理者メニュー</a></li>
 <li><a href="#tab2" data-toggle="tab">時間割管理</a></li>

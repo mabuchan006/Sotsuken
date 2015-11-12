@@ -183,11 +183,14 @@ button{
 
 }
 
+.white{
+	color:#fff;
+}
 .labels{
 	font-size: 1.1em;
   	line-height: 1.7em;
   	float:left;
-  	color:#000;
+  	color:#fff;
 }
 
 #table{
