@@ -13,24 +13,20 @@
 
 <title>講師管理</title>
 
-<link href="../css/custom.css" rel="stylesheet">
+
 
 <!-- BootstrapのCSS読み込み -->
 
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="../js/jquery-2.1.1.min.js"></script>
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script src="../js/jquery.appear.js"></script>
 <script src="../js/teacher_regist.js"></script>
 
-
+<link href="../css/custom.css" rel="stylesheet">
 
 </head>
 <body>
-
-
-
-
 
       <div class="row">
       <ul class="nav nav-tabs">
@@ -83,8 +79,8 @@
 
 
 <div class="col-md-9 col-md-offset-3">
-
-		            <table class="table">
+	<div class="back">
+		            <table class="table ">
 						<thead>
 						<tr><td colspan="2">lecturers</td></tr>
 						</thead>
@@ -109,6 +105,7 @@
 
 		                </tbody>
 		            </table>
+		            </div>
 		            </div>
 
 </form>

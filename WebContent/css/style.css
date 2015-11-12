@@ -117,7 +117,14 @@ fieldset[disabled] .btn-primary.active {
     //font-style: italic;
     font-weight: 300;
 }
+.size{
+	font-size:16px;
+}
 
+.size2{
+	font-size:20px;
+	font-weight:5px;
+}
 
 /**** Start Logo Section ****/
 
@@ -238,6 +245,15 @@ and (max-width : 991px) {
 
     }
 
+.btn-lg{
+	padding: 12px 15px;
+  font-size: 25px;
+  font-weight:20px;
+  line-height: 1.5;
+
+  border-radius: 8px;
+
+}
 
 
      .menu-item.l {

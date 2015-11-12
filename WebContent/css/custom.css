@@ -1,5 +1,14 @@
 @CHARSET "UTF-8";
 
+body {
+
+  margin:auto;
+  padding:auto;
+  background-color:#202020;
+
+}
+
+
 #wrapper {
   padding-left: 250px;
   transition: all 0.4s ease 0s;
@@ -119,19 +128,14 @@
 }
 
 }
-body {
 
-  margin:auto;
-  padding:auto;
-
-
-}
 .row{
 	text-align: center;
+
 }
 
 .empty{
-	color:#fff;
+	color:#202020;
 		font-size: 1.1em;
   	line-height: 1.7em;
   	float:left;
@@ -145,6 +149,11 @@ body {
 	position:relative;
 	top:3px;
 	left:3px;
+}
+
+
+.back{
+	background-color: #fff;
 }
 
 .header{
@@ -184,6 +193,7 @@ button{
 #table{
 	border-radius: 3px 3px 0 0;
     border: 1px solid #d8d8d8;
+    background-color:#;
 
 }
 

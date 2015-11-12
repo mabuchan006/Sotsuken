@@ -33,7 +33,7 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <!-- カレンダー -->
+        <!-- カレンダーJS読み込み -->
 <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-datepicker.min.css">
 <script type="text/javascript" src="../bootstrap/js/bootstrap-datepicker.min.js"></script>
 <script type="text/javascript" src="../bootstrap/js/bootstrap-datepicker.js"></script>
@@ -42,6 +42,16 @@
 </head>
 <body>
 
+<!-- タグ -->
+<ul class="nav nav-tabs">
+<li><a href="#tab1" data-toggle="tab">管理者メニュー</a></li>
+<li><a href="#tab2" data-toggle="tab">時間割管理</a></li>
+<li><a href="#tab2" data-toggle="tab">講師管理</a></li>
+<li class="active"><a href="#tab2" data-toggle="tab">科目管理</a></li>
+<li><a href="#tab2" data-toggle="tab">クラス管理</a></li>
+<li><a href="#tab2" data-toggle="tab">コマ割管理</a></li>
+</ul>
+<!-- タグ終了 -->
 
         <!-- Start Logo Section --><!-- ヘッダー部分 -->
         <section id="logo-section" class="text-center">
@@ -57,13 +67,23 @@
             </div>
         </section>
         <!-- End Logo Section -->
+
+<!-- button -->
+<button  class="btn-danger btn-lg">登録</button>
+<script>
+	$("button").click(function(){
+		alert("登録されました");
+	});
+</script>
+
+<!-- button end -->
         <!-- カレンダー部分 -->
 <div class="form-group">
 	<label for="mydate">日付：</label>
 	<input type="text" class="form-control" id="mydate">
 </div>
 <!-- カレンダーEND -->
-<h1>NCS</h1>
+<h1 class="text-center">NCS</h1>
     <div  class="container">
     <div class="table">
     <table class="table table-striped table-bordered text-center table-hover;">
@@ -72,166 +92,166 @@
       </thead>
 		<tbody>
 		<tr class="danger">
-    	<td >8F</td>
+    	<td class="size">8F</td>
 
-        <td >802</td>
-        <td >
-        	<input type="text" name="NCS802-1" size="10" maxlength="10"><br>
-            <input type="text" name="NCS802-2" size="10" maxlength="10"><br>
-            <input type="text" name="NCS802-3" size="10" maxlength="10"><br>
-			<input type="text" name="NCS802-4" size="10" maxlength="10"><br>
+        <td class="size">802</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NCS802-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NCS802-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NCS802-3" size="10" maxlength="10"></p>
+			<p class="size">4　　<input type="text" name="NCS802-4" size="10" maxlength="10"></p>
         </td>
 
-        <td >803</td>
-        <td >
-        	<input type="text" name="NCS803-1" size="10" maxlength="10"><br>
-            <input type="text" name="NCS803-2" size="10" maxlength="10"><br>
-        	<input type="text" name="NCS803-3" size="10" maxlength="10"><br>
-            <input type="text" name="NCS803-4" size="10" maxlength="10"><br>
+        <td class="size">803</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NCS803-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NCS803-2" size="10" maxlength="10"></p>
+        	<p class="size">3　　<input type="text" name="NCS803-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NCS803-4" size="10" maxlength="10"></p>
         </td>
     </tr>
     <tr class="pink1">
-    	<td >7F</td>
-        <td >701</td>
-        <td >
-        	<input type="text" name="NCS701-1" size="10" maxlength="10"><br>
-            <input type="text" name="NCS701-2" size="10" maxlength="10"><br>
-            <input type="text" name="NCS701-3" size="10" maxlength="10"><br>
-            <input type="text" name="NCS701-4" size="10" maxlength="10"><br>
+    	<td class="size">7F</td>
+        <td class="size">701</td>
+        <td class="size">
+        <p class="size">1　　<input type="text" name="NCS701-1" size="10" maxlength="10"></p>
+           <p class="size">2　　<input type="text" name="NCS701-2" size="10" maxlength="10"></p>
+           <p class="size">3　　<input type="text" name="NCS701-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NCS701-4" size="10" maxlength="10"></p>
         </td>
-        <td >702</td>
-        <td >
-        	<input type="text" name="NCS702-1" size="10" maxlength="10"><br>
-            <input type="text" name="NCS702-2" size="10" maxlength="10"><br>
-            <input type="text" name="NCS702-3" size="10" maxlength="10"><br>
-            <input type="text" name="NCS702-4" size="10" maxlength="10"><br>
+        <td class="size">702</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NCS702-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NCS702-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NCS702-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NCS702-4" size="10" maxlength="10"></p>
         </td>
     </tr>
     <tr class="danger">
-    	<td >6F</td>
-        <td >601</td>
-        <td >
-        	<input type="text" name="NCS601-1" size="10" maxlength="10"><br>
-            <input type="text" name="NCS601-2" size="10" maxlength="10"><br>
-            <input type="text" name="NCS601-3" size="10" maxlength="10"><br>
-            <input type="text" name="NCS601-4" size="10" maxlength="10"><br>
+    	<td class="size">6F</td>
+        <td class="size">601</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NCS601-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NCS601-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NCS601-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NCS601-4" size="10" maxlength="10"></p>
         </td>
-        <td >603</td>
-        <td >
-        	<input type="text" name="NCS603-1" size="10" maxlength="10"><br>
-            <input type="text" name="NCS603-2" size="10" maxlength="10"><br>
-            <input type="text" name="NCS603-3" size="10" maxlength="10"><br>
-            <input type="text" name="NCS603-4" size="10" maxlength="10"><br>
+        <td class="size">603</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NCS603-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NCS603-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NCS603-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NCS603-4" size="10" maxlength="10"></p>
         </td>
-        <td >604</td>
-        <td >
-        	<input type="text" name="NCS604-1" size="10" maxlength="10"><br>
-            <input type="text" name="NCS604-2" size="10" maxlength="10"><br>
-            <input type="text" name="NCS604-3" size="10" maxlength="10"><br>
-            <input type="text" name="NCS604-4" size="10" maxlength="10"><br>
+        <td class="size">604</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NCS604-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NCS604-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NCS604-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NCS604-4" size="10" maxlength="10"></p>
         </td>
     </tr>
     <tr class="pink1">
-    	<td >5F</td>
-        <td >501</td>
-        <td >
-        	<input type="text" name="NCS501-1" size="10" maxlength="10"><br>
-            <input type="text" name="NCS501-2" size="10" maxlength="10"><br>
-            <input type="text" name="NCS501-3" size="10" maxlength="10"><br>
-            <input type="text" name="NCS501-4" size="10" maxlength="10"><br>
+    	<td class="size">5F</td>
+        <td class="size">501</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NCS501-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NCS501-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NCS501-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NCS501-4" size="10" maxlength="10"></p>
         </td>
-        <td >502</td>
-        <td >
-        	<input type="text" name="NCS502-1" size="10" maxlength="10"><br>
-            <input type="text" name="NCS502-2" size="10" maxlength="10"><br>
-            <input type="text" name="NCS502-3" size="10" maxlength="10"><br>
-            <input type="text" name="NCS502-4" size="10" maxlength="10"><br>
+        <td class="size">502</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NCS502-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NCS502-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NCS502-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NCS502-4" size="10" maxlength="10"></p>
         </td>
-        <td >503</td>
-        <td >
-        	<input type="text" name="NCS503-1" size="10" maxlength="10"><br>
-            <input type="text" name="NCS503-2" size="10" maxlength="10"><br>
-            <input type="text" name="NCS503-3" size="10" maxlength="10"><br>
-            <input type="text" name="NCS503-4" size="10" maxlength="10"><br>
+        <td class="size">503</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NCS503-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NCS503-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NCS503-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NCS503-4" size="10" maxlength="10"></p>
         </td>
-        <td >504</td>
-        <td >
-        	<input type="text" name="NCS504-1" size="10" maxlength="10"><br>
-            <input type="text" name="NCS504-2" size="10" maxlength="10"><br>
-            <input type="text" name="NCS504-3" size="10" maxlength="10"><br>
-            <input type="text" name="NCS504-4" size="10" maxlength="10"><br>
+        <td class="size">504</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NCS504-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NCS504-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NCS504-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NCS504-4" size="10" maxlength="10"></p>
         </td>
     </tr>
     <tr class="danger">
-    	<td >4F</td>
-        <td >401</td>
-        <td >
-        	<input type="text" name="NCS401-1" size="10" maxlength="10"><br>
-            <input type="text" name="NCS401-2" size="10" maxlength="10"><br>
-            <input type="text" name="NCS401-3" size="10" maxlength="10"><br>
-            <input type="text" name="NCS401-4" size="10" maxlength="10"><br>
+    	<td class="size">4F</td>
+        <td class="size">401</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NCS401-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NCS401-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NCS401-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NCS401-4" size="10" maxlength="10"></p>
         </td>
-    	<td >402</td>
-        <td >
-        	<input type="text" name="NCS402-1" size="10" maxlength="10"><br>
-            <input type="text" name="NCS402-2" size="10" maxlength="10"><br>
-            <input type="text" name="NCS402-3" size="10" maxlength="10"><br>
-            <input type="text" name="NCS402-4" size="10" maxlength="10"><br>
+    	<td class="size">402</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NCS402-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NCS402-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NCS402-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NCS402-4" size="10" maxlength="10"></p>
         </td>
-        <td >403</td>
-        <td >
-        	<input type="text" name="NCS403-1" size="10" maxlength="10"><br>
-            <input type="text" name="NCS403-2" size="10" maxlength="10"><br>
-            <input type="text" name="NCS403-3" size="10" maxlength="10"><br>
-            <input type="text" name="NCS403-4" size="10" maxlength="10"><br>
+        <td class="size">403</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NCS403-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NCS403-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NCS403-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NCS403-4" size="10" maxlength="10"></p>
         </td>
-        <td >404</td>
-        <td >
-        	<input type="text" name="NCS404-1" size="10" maxlength="10"><br>
-            <input type="text" name="NCS404-2" size="10" maxlength="10"><br>
-            <input type="text" name="NCS404-3" size="10" maxlength="10"><br>
-            <input type="text" name="NCS404-4" size="10" maxlength="10"><br>
+        <td class="size">404</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NCS404-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NCS404-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NCS404-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NCS404-4" size="10" maxlength="10"></p>
         </td>
     </tr>
     <tr class="pink1">
-    	<td >3F</td>
-        <td >301</td>
-        <td >
-        	<input type="text" name="NCS301-1" size="10" maxlength="10"><br>
-            <input type="text" name="NCS301-2" size="10" maxlength="10"><br>
-            <input type="text" name="NCS301-3" size="10" maxlength="10"><br>
-            <input type="text" name="NCS301-4" size="10" maxlength="10"><br>
+    	<td class="size">3F</td>
+        <td class="size">301</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NCS301-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NCS301-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NCS301-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NCS301-4" size="10" maxlength="10"></p>
         </td>
-        <td >302</td>
-        <td >
-        	<input type="text" name="NCS302-1" size="10" maxlength="10"><br>
-            <input type="text" name="NCS302-2" size="10" maxlength="10"><br>
-            <input type="text" name="NCS302-3" size="10" maxlength="10"><br>
-            <input type="text" name="NCS302-4" size="10" maxlength="10"><br>
+        <td class="size">302</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NCS302-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NCS302-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NCS302-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NCS302-4" size="10" maxlength="10"></p>
         </td>
-        <td >303</td>
-        <td >
-        	<input type="text" name="NCS303-1" size="10" maxlength="10"><br>
-            <input type="text" name="NCS303-2" size="10" maxlength="10"><br>
-            <input type="text" name="NCS303-3" size="10" maxlength="10"><br>
-            <input type="text" name="NCS303-4" size="10" maxlength="10"><br>
+        <td class="size">303</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NCS303-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NCS303-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NCS303-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NCS303-4" size="10" maxlength="10"></p>
         </td>
-        <td >304</td>
-        <td >
-        	<input type="text" name="NCS304-1" size="10" maxlength="10"><br>
-            <input type="text" name="NCS304-2" size="10" maxlength="10"><br>
-            <input type="text" name="NCS304-3" size="10" maxlength="10"><br>
-            <input type="text" name="NCS304-4" size="10" maxlength="10"><br>
+        <td class="size">304</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NCS304-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NCS304-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NCS304-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NCS304-4" size="10" maxlength="10"></p>
         </td>
     </tr>
     <tr class="danger">
-    	<td >2F</td>
-        <td >201</td>
-        <td >
-        	<input type="text" name="NCS201-1" size="10" maxlength="10"><br>
-            <input type="text" name="NCS201-2" size="10" maxlength="10"><br>
-            <input type="text" name="NCS201-3" size="10" maxlength="10"><br>
-            <input type="text" name="NCS201-4" size="10" maxlength="10"><br>
+    	<td class="size">2F</td>
+        <td class="size">201</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NCS201-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NCS201-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NCS201-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NCS201-4" size="10" maxlength="10"></p>
         </td>
     </tr>
 
@@ -239,7 +259,7 @@
 </div>
 </div>
 
-<h1>NMIC</h1>
+<h1 class="text-center">NMIC</h1>
 <div  class="container">
     <div class="table">
     <table class="table table-striped table-bordered text-center table-hover;">
@@ -248,130 +268,130 @@
       </thead>
 		<tbody>
 	<tr class="pink3">
-    	<td >5F</td>
-        <td >501</td>
-        <td >
-        	<input type="text" name="NMIC501-1" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC501-2" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC501-3" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC501-4" size="10" maxlength="10"><br>
+    	<td class="size">5F</td>
+        <td class="size">501</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NMIC501-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NMIC501-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NMIC501-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NMIC501-4" size="10" maxlength="10"></p>
         </td>
-        <td >502</td>
-        <td >
-        	<input type="text" name="NMIC502-1" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC502-2" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC502-3" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC502-4" size="10" maxlength="10"><br>
+        <td class="size">502</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NMIC502-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NMIC502-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NMIC502-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NMIC502-4" size="10" maxlength="10"></p>
         </td>
-        <td >503</td>
-        <td >
-        	<input type="text" name="NMIC503-1" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC503-2" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC503-3" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC503-4" size="10" maxlength="10"><br>
-        </td>
-    </tr>
-    <tr class="pink2">
-    	<td >4F</td>
-        <td >401</td>
-        <td >
-        	<input type="text" name="NMIC401-1" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC401-2" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC401-3" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC401-4" size="10" maxlength="10"><br>
-        </td>
-        <td >402</td>
-        <td >
-        	<input type="text" name="NMIC402-1" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC402-2" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC402-3" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC402-4" size="10" maxlength="10"><br>
-        </td>
-        <td >403</td>
-        <td >
-        	<input type="text" name="NMIC403-1" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC403-2" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC403-3" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC403-4" size="10" maxlength="10"><br>
-        </td>
-        <td >404</td>
-        <td >
-        	<input type="text" name="NMIC404-1" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC404-2" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC404-3" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC404-4" size="10" maxlength="10"><br>
-        </td>
-    </tr>
-    <tr class="pink3">
-    	<td >3F</td>
-        <td >301</td>
-        <td >
-        	<input type="text" name="NMIC301-1" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC301-2" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC301-3" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC301-4" size="10" maxlength="10"><br>
-        </td>
-        <td >302</td>
-        <td >
-        	<input type="text" name="NMIC302-1" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC302-2" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC302-3" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC302-4" size="10" maxlength="10"><br>
-        </td>
-        <td >303</td>
-        <td >
-        	<input type="text" name="NMIC303-1" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC303-2" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC303-3" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC303-4" size="10" maxlength="10"><br>
-        </td>
-        <td >304</td>
-        <td >
-        	<input type="text" name="NMIC304-1" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC304-2" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC304-3" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC304-4" size="10" maxlength="10"><br>
+        <td class="size">503</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NMIC503-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NMIC503-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NMIC503-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NMIC503-4" size="10" maxlength="10"></p>
         </td>
     </tr>
     <tr class="pink2">
-    	<td >2F</td>
-        <td >201</td>
-        <td >
-       		<input type="text" name="NMIC201-1" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC201-2" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC201-3" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC201-4" size="10" maxlength="10"><br>
+    	<td class="size">4F</td>
+        <td class="size">401</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NMIC401-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NMIC401-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NMIC401-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NMIC401-4" size="10" maxlength="10"></p>
         </td>
-        <td >202</td>
-        <td >
-       		<input type="text" name="NMIC202-1" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC202-2" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC202-3" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC202-4" size="10" maxlength="10"><br>
+        <td class="size">402</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NMIC402-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NMIC402-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NMIC402-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NMIC402-4" size="10" maxlength="10"></p>
         </td>
-        <td >203</td>
-        <td >
-       		<input type="text" name="NMIC203-1" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC203-2" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC203-3" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC203-4" size="10" maxlength="10"><br>
+        <td class="size">403</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NMIC403-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NMIC403-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NMIC403-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NMIC403-4" size="10" maxlength="10"></p>
         </td>
-        <td >204</td>
-        <td >
-       		<input type="text" name="NMIC204-1" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC204-2" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC204-3" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC204-4" size="10" maxlength="10"><br>
+        <td class="size">404</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NMIC404-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NMIC404-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NMIC404-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NMIC404-4" size="10" maxlength="10"></p>
         </td>
     </tr>
     <tr class="pink3">
-    	<td >1F</td>
-        <td >101</td>
-        <td >
-        	<input type="text" name="NMIC101-1" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC101-2" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC101-3" size="10" maxlength="10"><br>
-            <input type="text" name="NMIC101-4" size="10" maxlength="10"><br>
+    	<td class="size">3F</td>
+        <td class="size">301</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NMIC301-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NMIC301-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NMIC301-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NMIC301-4" size="10" maxlength="10"></p>
+        </td>
+        <td class="size">302</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NMIC302-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NMIC302-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NMIC302-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NMIC302-4" size="10" maxlength="10"></p>
+        </td>
+        <td class="size">303</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NMIC303-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NMIC303-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NMIC303-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NMIC303-4" size="10" maxlength="10"></p>
+        </td>
+        <td class="size">304</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NMIC304-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NMIC304-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NMIC304-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NMIC304-4" size="10" maxlength="10"></p>
+        </td>
+    </tr>
+    <tr class="pink2">
+    	<td class="size">2F</td>
+        <td class="size">201</td>
+        <td class="size">
+       		<p class="size">1　　<input type="text" name="NMIC201-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NMIC201-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NMIC201-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NMIC201-4" size="10" maxlength="10"></p>
+        </td>
+        <td class="size">202</td>
+        <td class="size">
+       		<p class="size">1　　<input type="text" name="NMIC202-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NMIC202-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NMIC202-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NMIC202-4" size="10" maxlength="10"></p>
+        </td>
+        <td class="size">203</td>
+        <td class="size">
+       		<p class="size">1　　<input type="text" name="NMIC203-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NMIC203-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NMIC203-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NMIC203-4" size="10" maxlength="10"></p>
+        </td>
+        <td class="size">204</td>
+        <td class="size">
+       		<p class="size">1　　<input type="text" name="NMIC204-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NMIC204-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NMIC204-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NMIC204-4" size="10" maxlength="10"></p>
+        </td>
+    </tr>
+    <tr class="pink3">
+    	<td class="size">1F</td>
+        <td class="size">101</td>
+        <td class="size">
+        	<p class="size">1　　<input type="text" name="NMIC101-1" size="10" maxlength="10"></p>
+            <p class="size">2　　<input type="text" name="NMIC101-2" size="10" maxlength="10"></p>
+            <p class="size">3　　<input type="text" name="NMIC101-3" size="10" maxlength="10"></p>
+            <p class="size">4　　<input type="text" name="NMIC101-4" size="10" maxlength="10"></p>
         </td>
 
     </tr>
