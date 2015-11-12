@@ -1,34 +1,21 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!doctype html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8" />
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+<script src="login.js"></script>
 
-<title>ログイン認証画面</title>
-
-<link href="../css/custom.css" rel="stylesheet">
-
-<!-- BootstrapのCSS読み込み -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script src="js/jquery-2.1.1.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
-<script src="js/jquery.appear.js"></script>
-<script src="js/login.js"></script>
+<title>login</title>
 </head>
-
 <body>
 
-	<form>
-		<input id="enterId" type="text" value="ID"> <br>
-		<input id="enterPw" type="text" value="パスワード"> <br><br>
-		<input id="login" type="button" value="ログイン" />
-
-	</form>
+<form>
+<input type="text" value="ID" id="enterId">
+<input type="text" value="PASS" id="enterPw">
+<input type="button" value="ログイン" id="login">
+</form>
 
 </body>
 </html>

@@ -2,31 +2,23 @@
 
 $(function login() {
 
-	var pw = ("#EnterPw").value;
-	var id = ("#EnterId").value;
+	var pw = ("#enterPw").text;
+	var id = ("#enterId").text;
 
-	//EnterKeyを押した時
-	$("body").keypress( function( e ) {
-		if ( e.which === 13 ) {
-			//ckInfo_Events
-			ckInfo();
-		}
-	});
+	$("#login").click(function(){
 
-	$("#login").click(function() {
-		//ckInfo_Events
-		ckInfo();
-	});//click_Events
-
-	$(function ckInfo() {
-		if ( pw == null || id == null ) {
-			alert("ログインをキャンセルします。");
-		} else if ( pw != "pw" || id != "id" ) {
-			alert("ログイン情報が違います。半角英数字で入力し直してください。");
-		} else {
-			//ログイン処理
-			location.href = "";
-		}
-	});//ckInfo_Events
+		$(function ckInfo() {
+			if ( pw === null || id === null ) {
+				alert("ログインをキャンセルします。");
+			} else if ( pw != "syam" || id != "syam" ) {
+				alert("ログイン情報が違います。");
+			} else {
+				//ログイン処理
+				location.href = "http://yahoo.co.jp";
+			}
+		});//ckInfo_Events
+	});//click_Event
 
 });//login()
+
+
