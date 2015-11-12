@@ -16,7 +16,7 @@
 
 
 <!-- BootstrapのCSS読み込み -->
-
+<link href="../bootstrap/css/style.css" rel="stylesheet">
 <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="../js/jquery-2.1.1.min.js"></script>
 <script src="../bootstrap/js/bootstrap.min.js"></script>
@@ -32,10 +32,10 @@
       <ul class="nav nav-tabs">
 <li><a href="#tab1" data-toggle="tab">管理者メニュー</a></li>
 <li><a href="#tab2" data-toggle="tab">時間割管理</a></li>
-<li><a href="#tab2" data-toggle="tab">講師管理</a></li>
-<li class="active"><a href="#tab2" data-toggle="tab">科目管理</a></li>
+<li class="active"><a href="#tab2" data-toggle="tab">講師管理</a></li>
+<li><a href="#tab2" data-toggle="tab">科目管理</a></li>
 <li><a href="#tab2" data-toggle="tab">クラス管理</a></li>
-<li><a href="#tab2" data-toggle="tab">コマ割管理</a></li>
+<li><a href="time_manage.jsp" data-toggle="tab">コマ割管理</a></li>
 </ul>
 
 		<div class="content-header">
