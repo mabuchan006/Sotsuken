@@ -68,7 +68,15 @@
         </section>
         <!-- End Logo Section -->
 
+<!-- button -->
+<button  class="btn-danger btn-lg">登録</button>
+<script>
+	$("button").click(function(){
+		alert("登録されました");
+	});
+</script>
 
+<!-- button end -->
         <!-- カレンダー部分 -->
 <div class="form-group">
 	<label for="mydate">日付：</label>
