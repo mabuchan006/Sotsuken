@@ -10,49 +10,49 @@
 <link rel="stylesheet" href="/resources/demos/style.css" />
 <style>
 h1 { padding: .2em; margin: 0; font-size:14px; }
-#products { float:left; width: 20%; margin-right: 2em; }
+#class { float:left; width: 20%; margin-right: 2em; }
 #divide { width: 200px; float: left; margin-top: 1em; }
 /* style the list to maximize the droppable hitarea */
-#divide ul { margin: 0; padding: 1em 0 1em 3em; list-style-type: none; }
-#divide ul { border: 1px #000 solid; }
+#divide td { margin: 0; padding: 1em 0 1em 3em;}
+#divide td { border: 1px #000 solid; }
 </style>
 <script>
+var commaFlag = new boolean();
+if($("#hold").val()=="true"){
+	commaFlag=true;
+};
+</script>
+<script>
 $(function() {
-	$( "#catalog" ).accordion();
-	$( "#catalog li" ).draggable({
+	$( "#class-room" ).accordion();
+	$( "#class-room li" ).draggable({
 		appendTo: "body",
 		revert: "invalid",
 		//containment: "document",
 		helper: "clone"
 	});
-	$( "#divide ul" ).droppable({
+	$( "#divide td" ).droppable({
 		activeClass: "ui-state-default",
 		hoverClass: "ui-state-hover",
 		accept: ":not(.ui-sortable-helper)",
 		drop: function( event, ui ) {
-			$( this ).find( ".placeholder" ).remove();
-			$( "<li></li>" ).text( ui.draggable.text() ).appendTo( this );
-		}
-	}).sortable({
-		items: "li:not(.placeholder)",
-		sort: function() {
-			// gets added unintentionally by droppable interacting with sortable
-			// using connectWithSortable fixes this, but doesn't allow you to customize active/hoverClass options
-			$( this ).removeClass( "ui-state-default" );
+			if( commaFlag ) {
+				$( ".class-divide"  ).text( $( ".class-divide"  ).text() + "," + ui.draggable.text() ).appendTo( this );
+			} else {
+				$( ".class-divide" ).text( ui.draggable.text() ).appendTo( this );
+				commaFlag = true;
+				$("#hold").val(commaFlag);
+			}
 		}
 	});
-	/**
-	$(".placeholder").click(function(){
-		$( this ).slideUp();
-	});
-	**/
 });
 </script>
 </head>
 <body>
-<div id="products">
+<input type="hidden" id="hold" value="">
+<div id="class">
 	<h1 class="ui-widget-header">クラス</h1>
-	<div id="catalog">
+	<div id="class-room">
 		<h2><a href="#">R1</a></h2>
 		<div>
 			<ul>
@@ -98,21 +98,8 @@ $(function() {
 <div id="divide">
 	<table border="1">
 			<tr>
-				<td>801</td>
-				<td width="100px" height="50px">
-					<ul>
-						<li class="placeholder"></li>
-					</ul>
-					<ul>
-						<li class="placeholder"></li>
-					</ul>
-					<ul>
-						<li class="placeholder"></li>
-					</ul>
-					<ul>
-						<li class="placeholder"></li>
-					</ul>
-				</td>
+				<th>802</th>
+				<td><textarea cols="5" rows="2" style="overflow:auto;" class="class-divide"></textarea></td>
 			</tr>
 		</table>
 </div>
