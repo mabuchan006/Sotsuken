@@ -39,6 +39,8 @@
 <script type="text/javascript" src="../bootstrap/js/bootstrap-datepicker.js"></script>
 
 <title>コマ割画面</title>
+
+
 </head>
 <body>
 
