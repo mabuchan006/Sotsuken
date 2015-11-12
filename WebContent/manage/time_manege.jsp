@@ -294,10 +294,10 @@
         </td>
         <td >402</td>
         <td >
-        	<input type="text" name="NMIC402-1" size="10" maxlength="10"></p>
-            <input type="text" name="NMIC402-2" size="10" maxlength="10"></p>
-            <input type="text" name="NMIC402-3" size="10" maxlength="10"></p>
-            <input type="text" name="NMIC402-4" size="10" maxlength="10"></p>
+        	<p>1　　<input type="text" name="NMIC402-1" size="10" maxlength="10"></p>
+            <p>2　　<input type="text" name="NMIC402-2" size="10" maxlength="10"></p>
+            <p>3　　<input type="text" name="NMIC402-3" size="10" maxlength="10"></p>
+            <p>4　　<input type="text" name="NMIC402-4" size="10" maxlength="10"></p>
         </td>
         <td >403</td>
         <td >
