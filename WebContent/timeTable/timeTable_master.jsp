@@ -1,42 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
-<!-- Bootstrap Core CSS -->
-        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-        <!-- Font Awesome CSS -->
-        <link href="../css/font-awesome.min.css" rel="stylesheet">
-
-		<!-- Custom CSS -->
-        <link href="../css/animate.css" rel="stylesheet">
-
-
-        <!-- Custom Fonts -->
-        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-
-        <script src="../js/jquery-2.1.1.min.js"></script>
-        <script src="../bootstrap/js/bootstrap.min.js"></script>
-        <script src="../js/jquery.appear.js"></script>
-
-		<!-- Custom CSS -->
-        <link href="../css/style.css" rel="stylesheet">
-
-          <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-<title>タイムテーブルR4</title>
-</head>
-<body>
-
+<%@ page pageEncoding="UTF-8" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
         <!-- Start Logo Section --><!-- ヘッダー部分 -->
         <section id="logo-section" class="text-center">
@@ -128,10 +91,11 @@
 			<tr class="purple1">
 
 				<th></th>
-				<%
-			for (int cnt0=0; cnt0<30; cnt0++) {%>
-				<th nowrap>10日(水)</th>
-			<%} %>
+				<c:forEach var="dateitem" items="${mList }">
+				<th nowrap>	${dateitem.date}</th>
+				</c:forEach>
+
+
 
 <%
 for (int cnt1=1; cnt1<=4; cnt1++) {%>
@@ -186,31 +150,7 @@ for (int cnt1=1; cnt1<=4; cnt1++) {%>
 	<%} %>
 
 <%} %>
-
-
-
-
-
-
 			</tbody>
-
 		</table>
   </div>
-
-
-
-
-
 </div>
-
-
-
-
-
-
-
-
-
-
-</body>
-</html>

@@ -5,7 +5,7 @@ import java.sql.Date;
 
 public class masterInfo implements Serializable {
 
-	private String period;
+	private int period;
 	private String subjectID;
 	private Date date;
 	private String classID;
@@ -18,7 +18,7 @@ public class masterInfo implements Serializable {
 		// TODO 自動生成されたコンストラクター・スタブ
 	}
 
-	public masterInfo(String period, String subjectID, Date date, String classID, String roomID, String teacherName) {
+	public masterInfo(int period, String subjectID, Date date, String classID, String roomID, String teacherName) {
 		super();
 		this.period = period;
 		this.subjectID = subjectID;
@@ -28,11 +28,11 @@ public class masterInfo implements Serializable {
 		this.teacherName = teacherName;
 	}
 
-	public String getPeriod() {
+	public int getPeriod() {
 		return period;
 	}
 
-	public void setPeriod(String period) {
+	public void setPeriod(int period) {
 		this.period = period;
 	}
 
