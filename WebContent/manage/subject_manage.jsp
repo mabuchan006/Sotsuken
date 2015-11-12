@@ -12,12 +12,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>科目管理</title>
-
+<!-- css -->
 <link href="../css/custom.css" rel="stylesheet">
-
-<!-- BootstrapのCSS読み込み -->
-
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<!-- js -->
 <script src="../js/jquery-2.1.1.min.js"></script>
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script src="../js/jquery.appear.js"></script>
@@ -48,7 +46,7 @@
 
 		<div id="logo">
           <h1>
-            講師管理
+            科目管理
           </h1>
           </div>
 
@@ -57,7 +55,7 @@
 <form action="" method="get">
 
 
-科目名、持ち物、クラス識別ID１、クラス識別ID２、全体表示フラグ
+
 
 <table class="col-md-6 col-md-offset-3" id="first_table">
 <tr>
@@ -67,15 +65,59 @@
 </td>
 
 <td class="col-md-4">
-			<label for="password" class="labels">クラス１</label>
-			<input type="password" class="form-control" name="password" >
+			<label for="class1" class="labels">学年１</label>
+			<select class="selectpicker">
+ 				<option value="R4">R4</option>
+  				<option value="R3">R3</option>
+ 				<option value="R2">R2</option>
+ 				<option value="R1">R1</option>
+			</select>
+
+</td>
+
+<td class="col-md-4">
+			<label for="class2" class="labels">クラス1</label>
+			<select class="selectpicker">
+ 				<option value="A1">S4</option>
+  				<option value="A2">A2</option>
+ 				<option value="A3">A3</option>
+ 				<option value="H1">H1</option>
+			</select>
+</td>
+
+
+
+<td class="col-md-4">
+			<label for="class2" class="labels">学年2</label>
+			<select class="selectpicker">
+ 				<option value="S3">S4</option>
+  				<option value="S2">S3</option>
+ 				<option value="S1">S2</option>
+ 				<option value="J1">J1</option>
+			</select>
+</td>
+
+<td class="col-md-4">
+			<label for="class2" class="labels">クラス1</label>
+			<select class="selectpicker">
+ 				<option value="A1">S4</option>
+  				<option value="A2">A2</option>
+ 				<option value="A3">A3</option>
+ 				<option value="H1">H1</option>
+			</select>
 </td>
 
 <td class="col-md-4">
 	<label for="password" class="empty">________</label>
 		<button type="button" class="btn btn-primary" id="regist_btn">登録</button>
 </td>
+
+
+
+
 </tr>
+
+
 
 <div class="checkbox">
     <label>
