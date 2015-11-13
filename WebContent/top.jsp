@@ -136,11 +136,13 @@
         <h4 class="modal-title">ログイン</h4>
       </div>
       <div class="modal-body">
-<form>
-<input type="text" value="ID" id="enterId">
-<input type="text" value="PASS" id="enterPw">
-<input type="button" value="ログイン" id="login">
-</form>
+<form action="loginServlet">
+	<label>ID:</label><br>
+	<input type="text" placeholder="ID" id="enterId" value=""> <br>
+	<label>パスワード:</label><br>
+	<input type="text" placeholder="PASS" id="enterPw" value=""><br> <br>
+	<input type="button" value="ログイン" id="login" >
+	</form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">閉じる</button>
