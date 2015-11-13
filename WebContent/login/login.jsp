@@ -7,6 +7,15 @@
 <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
 <script src="login.js"></script>
 
+   <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Font Awesome CSS -->
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+
+		<!-- Custom CSS -->
+        <link href="../css/animate.css" rel="stylesheet">
+
+
 <title>login</title>
 </head>
 <body>

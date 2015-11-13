@@ -10,7 +10,7 @@ $(function login() {
 		$(function ckInfo() {
 			if ( pw === null || id === null ) {
 				alert("ログインをキャンセルします。");
-			} else if ( pw != "syam" || id != "syam" ) {
+			} else if ( pw == "syam" || id == "syam" ) {
 				alert("ログイン情報が違います。");
 			} else {
 				//ログイン処理

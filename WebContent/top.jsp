@@ -30,6 +30,7 @@
         <script src="js/jqBootstrapValidation.js"></script>
         <script src="js/modernizr.custom.js"></script>
         <script src="js/script.js"></script>
+        <script src="js/login.js"></script>
 
           <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -110,16 +111,44 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-6">
+
+
+<!-- モーダルウィンドウを呼び出すボタン -->
+
+						<div class="col-md-6">
                                 <div class="menu-item light-orange responsive-2">
-                                    <a href="#team-modal" data-toggle="modal">
+                                    <a href="#team-modal" data-toggle="modal" data-target="#myModal">
                                         <i class="fa fa-users"></i>
                                         <p>login</p>
                                     </a>
                                 </div>
-                            </div>
+                          </div>
 
                         </div>
+
+
+<!-- モーダルウィンドウの中身 -->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">ログイン</h4>
+      </div>
+      <div class="modal-body">
+<form>
+<input type="text" value="ID" id="enterId">
+<input type="text" value="PASS" id="enterPw">
+<input type="button" value="ログイン" id="login">
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">閉じる</button>
+       </div>
+    </div>
+  </div>
+</div>
+
 
 
 

@@ -14,7 +14,7 @@
 
 <style>
 h1 { padding: .2em; margin: 0; font-size:14px; }
-#class { float:left; width: 10%; margin-right: 2em; }
+#class { float:left; width: 15%; margin-right: 2em; }
 #divide { width: 200px; float: left; margin-top: 1em; }
 /* style the list to maximize the droppable hitarea */
 #divide td { margin: 0; padding: 1em 0 1em 3em;}
