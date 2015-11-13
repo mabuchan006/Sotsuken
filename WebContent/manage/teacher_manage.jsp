@@ -2,6 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
   <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+  <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -16,7 +17,7 @@
 
 
 <!-- BootstrapのCSS読み込み -->
-
+<link href="../bootstrap/css/style.css" rel="stylesheet">
 <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="../js/jquery-2.1.1.min.js"></script>
 <script src="../bootstrap/js/bootstrap.min.js"></script>
@@ -28,14 +29,14 @@
 </head>
 <body>
 
-      <div class="row">
+      <div class="row ">
       <ul class="nav nav-tabs">
 <li><a href="#tab1" data-toggle="tab">管理者メニュー</a></li>
 <li><a href="#tab2" data-toggle="tab">時間割管理</a></li>
-<li><a href="#tab2" data-toggle="tab">講師管理</a></li>
-<li class="active"><a href="#tab2" data-toggle="tab">科目管理</a></li>
+<li class="active"><a href="#tab2" data-toggle="tab">講師管理</a></li>
+<li><a href="#tab2" data-toggle="tab">科目管理</a></li>
 <li><a href="#tab2" data-toggle="tab">クラス管理</a></li>
-<li><a href="#tab2" data-toggle="tab">コマ割管理</a></li>
+<li><a href="time_manage.jsp" data-toggle="tab">コマ割管理</a></li>
 </ul>
 
 		<div class="content-header">
@@ -77,8 +78,15 @@
 
 	</table>
 
+<!-- sql処理 -->
+<sql:query sql="select teacherID,teacherName from tbl_teacher" var="rs" dataSource="jdbc/MySqlCon"></sql:query>
 
-<div class="col-md-9 col-md-offset-3">
+
+
+
+
+
+<div class="col-md-6 col-md-offset-3">
 	<div class="back">
 		            <table class="table ">
 						<thead>
@@ -86,22 +94,17 @@
 						</thead>
 
 		                <tbody>
+		                <c:forEach var="teacher" items="${rs.rows }">
+
+
 		                    <tr class="select">
-		                        <td>阿知波</td>
-		                        <td><button type="button" class="btn btn-danger">削除</button></td>
+		                        <td>${ teacher.teacherName }
+		                        <input type="hidden" name="${ teacher.teacherID }" />
+		                        </td>
+		                        <td><button type="button" class="btn btn-danger" name="delete_btn">削除</button></td>
 
 		                    </tr>
-		                    <tr class="select">
-		                        <td>河合</td>
-								<td><button type="button" class="btn btn-danger">削除</button></td>
-
-
-		                    </tr>
-		                    <tr class="select">
-		                        <td>元木</td>
-								<td><button type="button" class="btn btn-danger">削除</button></td>
-
-		                    </tr>
+						</c:forEach>
 
 		                </tbody>
 		            </table>

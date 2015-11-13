@@ -30,6 +30,7 @@
         <script src="js/jqBootstrapValidation.js"></script>
         <script src="js/modernizr.custom.js"></script>
         <script src="js/script.js"></script>
+        <script src="js/login.js"></script>
 
           <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -63,37 +64,37 @@
                 <div class="row">
 
 
-                   		 <div class="col-md-3">
+                    <div class="col-md-3" style="cursor: pointer">
 
                         <div class="menu-item blue">
-                            <a href="#feature-modal" data-toggle="modal">
+                            <a href="http://localhost:8080/Sotsuken/timeTable/timeTable_master.jsp" data-toggle="modal">
                                 <i class="fa fa-mortar-board"></i>
                                 <p>R</p>
                             </a>
                         </div>
                         </div>
 
-                        <div class="col-md-3">
+                        <div class="col-md-3" style="cursor: pointer">
                         <div class="menu-item red">
-                            <a href="#portfolio-modal" data-toggle="modal">
+                            <a href="http://localhost:8080/Sotsuken/timeTable/timeTable_master.jsp" data-toggle="modal">
                                 <i class="fa fa-android"></i>
                                 <p>S</p>
                             </a>
                         </div>
                         </div>
 
-                        <div class="col-md-3">
+                        <div class="col-md-3" style="cursor: pointer">
                         <div class="menu-item green">
-                            <a href="#about-modal" data-toggle="modal">
+                            <a href="http://localhost:8080/Sotsuken/timeTable/timeTable_master.jsp" data-toggle="modal">
                                 <i class="fa fa-paint-brush"></i>
                                 <p>J</p>
                             </a>
                         </div>
                         </div>
 
-                        <div class="col-md-3">
+                        <div class="col-md-3" style="cursor: pointer">
                         <div class="menu-item yellow">
-                            <a href="#about-modal" data-toggle="modal">
+                            <a href="http://localhost:8080/Sotsuken/timeTable/timeTable_master.jsp" data-toggle="modal">
                                 <i class="fa fa-book"></i>
                                 <p>A</p>
                             </a>
@@ -101,31 +102,61 @@
                         </div>
 
                          <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6" style="cursor: pointer">
                                 <div class="menu-item color responsive">
-                                    <a href="#service-modal" data-toggle="modal">
+                                    <a href="http://localhost:8080/Sotsuken/timeTable/timeTable_master.jsp" data-toggle="modal">
                                         <i class="fa fa-file-text"></i>
                                         <p>exam</p>
                                     </a>
                                 </div>
                             </div>
 
-                            <div class="col-md-6">
-                                <div class="menu-item light-orange responsive-2">
-                                    <a href="#team-modal" data-toggle="modal">
+
+
+<!-- モーダルウィンドウを呼び出すボタン -->
+
+						<div class="col-md-6" id="#team-modal" data-toggle="modal" data-target="#myModal" style="cursor: pointer">
+                                <div class="menu-item light-orange responsive-2" >
+                                    <a href="#team-modal">
                                         <i class="fa fa-users"></i>
                                         <p>login</p>
                                     </a>
                                 </div>
-                            </div>
+                          </div>
 
                         </div>
 
 
+<!-- モーダルウィンドウの中身 -->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header back-color">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title white">login</h3>
+      </div>
+      <div class="modal-body">
+<form action="loginServlet">
+	<label>username:</label>
+	<input type="text" placeholder="username" id="enterId" value=""> <br>
+	<label>password:</label>
+	<input type="text" placeholder="PASS" id="enterPw" value=""><br> <br>
+	<input type="button" value="login" id="login" >
+	</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">close</button>
+       </div>
+    </div>
+  </div>
+</div>
 
 
 
-                    </div>
+
+
+
+                    </div></div></div>
 
 
 

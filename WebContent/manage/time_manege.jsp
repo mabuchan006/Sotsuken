@@ -39,17 +39,18 @@
 <script type="text/javascript" src="../bootstrap/js/bootstrap-datepicker.js"></script>
 
 <title>コマ割画面</title>
+
 </head>
 <body>
 
 <!-- タグ -->
-<ul class="nav nav-tabs">
+<ul class="nav nav-tabs ">
 <li><a href="#tab1" data-toggle="tab">管理者メニュー</a></li>
 <li><a href="#tab2" data-toggle="tab">時間割管理</a></li>
 <li><a href="#tab2" data-toggle="tab">講師管理</a></li>
-<li class="active"><a href="#tab2" data-toggle="tab">科目管理</a></li>
+<li><a href="#tab2" data-toggle="tab">科目管理</a></li>
 <li><a href="#tab2" data-toggle="tab">クラス管理</a></li>
-<li><a href="#tab2" data-toggle="tab">コマ割管理</a></li>
+<li class="active"><a href="#tab2" data-toggle="tab">コマ管理</a></li>
 </ul>
 <!-- タグ終了 -->
 
@@ -67,9 +68,9 @@
             </div>
         </section>
         <!-- End Logo Section -->
-
+<div class="container-fluid">
 <!-- button -->
-<button  class="btn-danger btn-lg">登録</button>
+<button  class="btn-danger btn-lg col-md-1">登録</button>
 <script>
 	$("button").click(function(){
 		alert("登録されました");
@@ -78,15 +79,72 @@
 
 <!-- button end -->
         <!-- カレンダー部分 -->
-<div class="form-group">
-	<label for="mydate">日付：</label>
+<div class="form-group col-md-1">
+	<label for="mydate"></label>
 	<input type="text" class="form-control" id="mydate">
 </div>
+
+<div class="col-md-10"></div>
+</div>
 <!-- カレンダーEND -->
-<h1 class="text-center">NCS</h1>
+
+
+
+
+<!-- ドラッグ&ドロップ -->
+<div  class="col-md-1 ">
+<input type="hidden" id="hold" value="">
+<div id="class">
+	<h1 class="ui-widget-header">クラス</h1>
+	<div id="class-room">
+		<h2><a href="#">R1</a></h2>
+		<div>
+			<ul>
+				<li>R1A1</li>
+				<li>R1A2</li>
+				<li>R1A3</li>
+				<li>R1A4</li>
+				<li>R1A5</li>
+			</ul>
+		</div>
+		<h2><a href="#">R2</a></h2>
+		<div>
+			<ul>
+				<li>R2A1</li>
+				<li>R2A2</li>
+				<li>R2A3</li>
+				<li>R2A4</li>
+				<li>R2A5</li>
+			</ul>
+		</div>
+		<h2><a href="#">R3</a></h2>
+		<div>
+			<ul>
+				<li>R3A1</li>
+				<li>R3A2</li>
+				<li>R3A3</li>
+				<li>R3A4</li>
+				<li>R3A5</li>
+			</ul>
+		</div>
+		<h2><a href="#">R4</a></h2>
+		<div>
+			<ul>
+				<li>R4A1</li>
+				<li>R4A2</li>
+				<li>R4A3</li>
+				<li>R4A4</li>
+				<li>R4A5</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+
     <div  class="container">
-    <div class="table">
-    <table class="table table-striped table-bordered text-center table-hover;">
+    <div class="table  col-md-6 ">
+    <h1 class="text-center">NCS</h1>
+    <table class="table table-striped table-bordered text-center ;">
     <thead>
 
       </thead>
@@ -261,7 +319,7 @@
 
 <h1 class="text-center">NMIC</h1>
 <div  class="container">
-    <div class="table">
+    <div class="table col-md-6 ">
     <table class="table table-striped table-bordered text-center table-hover;">
     <thead>
 
