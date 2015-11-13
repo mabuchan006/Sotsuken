@@ -70,7 +70,7 @@
 
 <td class="col-md-4">
 	<label for="password" class="empty">________</label>
-		<button type="button" class="btn btn-primary" id="regist_btn">登録</button>
+		<button type="button" class="btn btn-primary" id="regist_btn" name="regist_btn">登録</button>
 </td>
 </tr>
 
@@ -81,11 +81,6 @@
 <!-- sql処理 -->
 <sql:query sql="select teacherID,teacherName from tbl_teacher" var="rs" dataSource="jdbc/MySqlCon"></sql:query>
 
-
-
-
-
-
 <div class="col-md-6 col-md-offset-3">
 	<div class="back">
 		            <table class="table ">
@@ -95,7 +90,6 @@
 
 		                <tbody>
 		                <c:forEach var="teacher" items="${rs.rows }">
-
 
 		                    <tr class="select">
 		                        <td>${ teacher.teacherName }
