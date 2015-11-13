@@ -10,7 +10,15 @@
 <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
 
 <!-- ドラッグアンドドロップのJS -->
-<script type="text/javascript" src="../js/drag_drop.js"></script>
+<script type="text/javascript" src="../js/drag_drop/f_drag.js"></script>
+<script type="text/javascript" src="../js/drag_drop/NCS8/NCS802_1.js"></script>
+<script type="text/javascript" src="../js/drag_drop/NCS8/NCS802_2.js"></script>
+<script type="text/javascript" src="../js/drag_drop/NCS8/NCS802_3.js"></script>
+<script type="text/javascript" src="../js/drag_drop/NCS8/NCS802_4.js"></script>
+
+<script type="text/javascript" src="../js/drag_drop/NCS8/NCS803_1.js"></script>
+<script type="text/javascript" src="../js/drag_drop/NCS701_1.js"></script>
+<script type="text/javascript" src="../js/drag_drop/NCS702_1.js"></script>
 
 <style>
 h1 { padding: .2em; margin: 0; font-size:14px; }
@@ -24,57 +32,76 @@ h1 { padding: .2em; margin: 0; font-size:14px; }
 <script>
 $(function(){
 	$( "#class-grade" ).accordion();
-	f_hold();
 	f_drag();
-	f_drop();
-	DragOver();
+	NCS802_1_hold();
+	NCS802_1_drop();
+	NCS802_2_hold();
+	NCS802_2_drop();
+	NCS802_3_hold();
+	NCS802_3_drop();
+	NCS802_4_hold();
+	NCS802_4_drop();
+
+	NCS803_1_hold();
+	NCS803_1_drop();
+	NCS701_1_hold();
+	NCS701_1_drop();
+	NCS702_1_hold();
+	NCS702_1_drop();
 });
 </script>
 
 </head>
 <body>
-<input type="hidden" id="hold" value="">
+<input type="hidden" id="holdNCS802_1" value="">
+<input type="hidden" id="holdNCS802_2" value="">
+<input type="hidden" id="holdNCS802_3" value="">
+<input type="hidden" id="holdNCS802_4" value="">
+
+<input type="hidden" id="holdNCS803_1" value="">
+<input type="hidden" id="holdNCS701_1" value="">
+<input type="hidden" id="holdNCS702_1" value="">
 <div id="class">
 	<h1 class="ui-widget-header">クラス</h1>
 	<div id="class-grade">
 		<h2><a href="#" draggable="false">R1</a></h2>
 		<div>
 			<ul>
-				<li draggable="true">R1A1</li>
-				<li draggable="true">R1A2</li>
-				<li draggable="true">R1A3</li>
-				<li draggable="true">R1A4</li>
-				<li draggable="true">R1A5</li>
+				<li>R1A1</li>
+				<li>R1A2</li>
+				<li>R1A3</li>
+				<li>R1A4</li>
+				<li>R1A5</li>
 			</ul>
 		</div>
 		<h2><a href="#" draggable="false">R2</a></h2>
 		<div>
 			<ul>
-				<li draggable="true">R2A1</li>
-				<li draggable="true">R2A2</li>
-				<li draggable="true">R2A3</li>
-				<li draggable="true">R2A4</li>
-				<li draggable="true">R2A5</li>
+				<li>R2A1</li>
+				<li>R2A2</li>
+				<li>R2A3</li>
+				<li>R2A4</li>
+				<li>R2A5</li>
 			</ul>
 		</div>
 		<h2><a href="#" draggable="false">R3</a></h2>
 		<div>
 			<ul>
-				<li draggable="true">R3A1</li>
-				<li draggable="true">R3A2</li>
-				<li draggable="true">R3A3</li>
-				<li draggable="true">R3A4</li>
-				<li draggable="true">R3A5</li>
+				<li>R3A1</li>
+				<li>R3A2</li>
+				<li>R3A3</li>
+				<li>R3A4</li>
+				<li>R3A5</li>
 			</ul>
 		</div>
 		<h2><a href="#" draggable="false">R4</a></h2>
 		<div>
 			<ul>
-				<li draggable="true">R4A1</li>
-				<li draggable="true">R4A2</li>
-				<li draggable="true">R4A3</li>
-				<li draggable="true">R4A4</li>
-				<li draggable="true">R4A5</li>
+				<li>R4A1</li>
+				<li>R4A2</li>
+				<li>R4A3</li>
+				<li>R4A4</li>
+				<li>R4A5</li>
 			</ul>
 		</div>
 	</div>
@@ -83,29 +110,38 @@ $(function(){
 	<table border="1">
 			<tr>
 				<th>802</th>
-				<td ondragover="DragOver()">
-					<div class="class-drop">
-						<textarea cols="5" rows="2" style="overflow:auto;" class="class-divide" name="NCS802_1"></textarea>
-					</div>
+				<td>
+					<div id="NCS802_1-drop">
+						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802_1"></textarea>
+					</div><br>
+					<div id="NCS802_2-drop">
+						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802_2"></textarea>
+					</div><br>
+					<div id="NCS802_3-drop">
+						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802_3"></textarea>
+					</div><br>
+					<div id="NCS802_4-drop">
+						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802_4"></textarea>
+					</div><br>
 				</td>
 				<th>803</th>
-				<td ondragover="DragOver()">
-					<div class="class-drop">
-						<textarea cols="5" rows="2" style="overflow:auto;" class="class-divide" name="NCS803_1"></textarea>
+				<td>
+					<div id="NCS803_1-drop">
+						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS803_1"></textarea>
 					</div>
 				</td>
 			</tr>
 			<tr>
 				<th>701</th>
-				<td ondragover="DragOver()">
-					<div class="class-drop">
-						<textarea cols="5" rows="2" style="overflow: auto;" class="class-divide" name="NCS701_1"></textarea>
+				<td>
+					<div id="NCS701_1-drop">
+						<textarea cols="5" rows="2" style="overflow: auto;" id="NCS701_1"></textarea>
 					</div>
 				</td>
 				<th>702</th>
-				<td ondragover="DragOver()">
-					<div class="class-drop">
-						<textarea cols="5" rows="2" style="overflow: auto;" class="class-divide" name="NCS702_1"></textarea>
+				<td>
+					<div id="NCS702_1-drop">
+						<textarea cols="5" rows="2" style="overflow: auto;" id="NCS702_1"></textarea>
 					</div>
 				</td>
 			</tr>

@@ -40,7 +40,6 @@
 
 <title>コマ割画面</title>
 
-
 </head>
 <body>
 
