@@ -29,6 +29,7 @@
 <body>
 	<div id="content">
 	<jsp:include page="${content_page}" />
+	
 	</div>
 </body>
 </html>

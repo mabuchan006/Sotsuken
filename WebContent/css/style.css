@@ -2,6 +2,10 @@
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,300);
 
 
+.font{
+	font-family:'Comic Sans MS' ;
+}
+
 body {
 
     background-color:#202020;
@@ -12,6 +16,9 @@ body {
     color:#000;
 }
 
+.back-color{
+	background-color: #8590CA;
+}
 
 h1 {
 	color:#FFF;
@@ -197,7 +204,14 @@ fieldset[disabled] .btn-primary.active {
 
 }
 
+.white{
+	color:#fff;
+	}
+}
 
+.w{
+	width: 65px;
+}
 
 }
 

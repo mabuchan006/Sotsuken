@@ -44,7 +44,7 @@
 <body>
 
 <!-- タグ -->
-<ul class="nav nav-tabs">
+<ul class="nav nav-tabs ">
 <li><a href="#tab1" data-toggle="tab">管理者メニュー</a></li>
 <li><a href="#tab2" data-toggle="tab">時間割管理</a></li>
 <li><a href="#tab2" data-toggle="tab">講師管理</a></li>
