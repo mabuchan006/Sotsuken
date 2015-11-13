@@ -3,19 +3,24 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8" />
-<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
-<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+
+<!-- js -->
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/jquery.appear.js"></script>
 <script src="login.js"></script>
 
-<title>login</title>
+<title>ログイン画面</title>
 </head>
 <body>
 
-<form>
-<input type="text" value="ID" id="enterId">
-<input type="text" value="PASS" id="enterPw">
-<input type="button" value="ログイン" id="login">
-</form>
+	<form action="loginServlet">
+	<label>ID:</label><br>
+	<input type="text" placeholder="ID" id="enterId" value=""> <br>
+	<label>パスワード:</label><br>
+	<input type="text" placeholder="PASS" id="enterPw" value=""><br> <br>
+	<input type="button" value="ログイン" id="login" >
+	</form>
 
 </body>
 </html>
