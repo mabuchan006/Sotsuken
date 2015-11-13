@@ -98,8 +98,10 @@
 
 
 		                    <tr class="select">
-		                        <td>${ teacher.teacherName }</td>
-		                        <td><button type="button" class="btn btn-danger">削除</button></td>
+		                        <td>${ teacher.teacherName }
+		                        <input type="hidden" name="${ teacher.teacherID }" />
+		                        </td>
+		                        <td><button type="button" class="btn btn-danger" name="delete_btn">削除</button></td>
 
 		                    </tr>
 						</c:forEach>
