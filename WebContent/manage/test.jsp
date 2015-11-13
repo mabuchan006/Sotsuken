@@ -4,9 +4,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+<script src="../js/belongings.js"></script>
+<title>テスト</title>
 </head>
 <body>
+
+<form>
+<input type="button" id="lec" value="テキスト">
+</form>
 
 </body>
 </html>
