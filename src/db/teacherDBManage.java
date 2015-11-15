@@ -13,7 +13,18 @@ import DB.DBAccess;
 public class teacherDBManage extends DBAccess{
 	private String selectSql;//講師全検索用
 	private String deleteSql;//講師1件削除用
+	private String insertSql;//講師1件登録用
 
+	//*******Msg*********
+	private String msg;
+
+	public String getMsg() {
+		return msg;
+	}
+	public void setMsg(String msg) {
+		this.msg = msg;
+	}
+  //********endMsg*************
 	private final static String DRIVER_NAME = "java:comp/env/jdbc/MySqlCon";//コネクタ
 
 	public teacherDBManage() {
@@ -22,7 +33,8 @@ public class teacherDBManage extends DBAccess{
 		selectSql = String.format("select teacherID,teacherName,password from tbl_teacher");
 		//講師IDから削除からsql
 		deleteSql = String.format("select teacherID,teacherName,password from tbl_teacher where id = ?");
-
+		//講師情報登録sql
+		insertSql= String.format(" insert into tbl_teacher (teacherName, password) values ( ? , ? )");
 	}
 	/*
 	 * @param teacherinfo 講師情報
@@ -60,16 +72,35 @@ public class teacherDBManage extends DBAccess{
 	 * @param 講師情報 teacherinfo
 	 * @see teacherControl
 	 */
-	public void teacherDBDelete(teacherInfo ti) throws Exception{
+	public void teacherDBUpdate(teacherInfo ti,int state,String msg) throws Exception{
 		connect();
-		createStstement(deleteSql);
-		getPstmt().setInt(1,ti.getTeacherID());//削除するIDをセット
-		updateExe();//delete実行
+		switch(state){
+		case INSERT:
+			createStstement(insertSql);
+			getPstmt().setString(1,ti.getTeacherName());
+			getPstmt().setString(2,ti.getPassword());
+
+			break;
+		case DELETE:
+			createStstement(deleteSql);
+			getPstmt().setInt(1,ti.getTeacherID());//削除するIDをセット
+
+			break;
+		}
+
+		setMsg(resultMsg(ti,msg));//実行メッセージ取得
+		updateExe();//実行
 		disConnection();//切断
 
-	}//delete
+	}//method
 
-
+private String resultMsg(teacherInfo ti,String msg){
+		//処理が実行されなかったら
+		if (getIntResult() == 0){
+			return String.format("%sを%sできませんでした。",ti.getTeacherName(),msg);
+		}
+	return String.format("%sを%sしました。",ti.getTeacherName(),msg);
+}
 
 
 }
