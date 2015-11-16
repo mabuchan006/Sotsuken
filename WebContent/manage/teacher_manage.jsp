@@ -51,7 +51,7 @@
 
         </div>
 
-<form action="" method="get">
+<form action="/ManageUpdate" method="get">
 
 
 
@@ -78,8 +78,6 @@
 
 	</table>
 
-<!-- sql処理 -->
-<sql:query sql="select teacherID,teacherName from tbl_teacher" var="rs" dataSource="jdbc/MySqlCon"></sql:query>
 
 <div class="col-md-6 col-md-offset-3">
 	<div class="back">
@@ -89,7 +87,7 @@
 						</thead>
 
 		                <tbody>
-		                <c:forEach var="teacher" items="${rs.rows }">
+		                <c:forEach var="teacher" items="${teacherList}">
 
 		                    <tr class="select">
 		                        <td>${ teacher.teacherName }
