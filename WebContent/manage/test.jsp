@@ -13,6 +13,11 @@
 
 <form>
 <input type="button" id="lec" value="テキスト">
+<p style="
+	background-color : #ffeeee;
+	padding : 20px;
+	text-align : center;
+	"> Hi them (^^)/ </p>
 </form>
 
 </body>
