@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import db.masterDBManage;
-import db.masterInfo;
+import timetable.db.masterDBManage;
+import timetable.db.masterInfo;
 
 /**
  * Servlet implementation class timeTableMaster
