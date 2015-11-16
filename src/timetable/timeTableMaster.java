@@ -25,6 +25,7 @@ public class timeTableMaster extends HttpServlet {
 	ArrayList<String> js = new ArrayList<String>(); //JavaScript用List
 	masterDBManage mDM = new masterDBManage();//マスターDBマネージャの起動
 
+	private List<masterInfo> dList; //時間割マスタ保持用
 	private List<masterInfo> mList; //時間割マスタ保持用
 
     /**
@@ -39,6 +40,8 @@ public class timeTableMaster extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		//●確定時間割情報表示機能
 		String content_page = "/timeTable/timeTable_master.jsp"; //見せたい画面のパスを入れる
 		String page_title = "R4A1"; //タブに表示される表示名を入力
 		//timeTable_master.jspで使用
@@ -52,11 +55,14 @@ public class timeTableMaster extends HttpServlet {
 			js.add("/Sotsuken/js/jquery.appear.js");
 
 			try {
+				 dList = mDM.dateSelect(); //日付取得
 				 mList = mDM.selectTimeTable();
+				 request.setAttribute("dList", dList);
 				 request.setAttribute("mList", mList);
 			} catch (Exception e) {
 				// TODO 自動生成された catch ブロック
 				e.printStackTrace();
+
 			}
 		//ディスパッチ準備
 			request.setAttribute("css", css);
