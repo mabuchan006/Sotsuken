@@ -91,7 +91,7 @@
 			<tr class="purple1">
 
 				<th></th>
-				<c:forEach var="dateitem" items="${mList }">
+				<c:forEach var="dateitem" items="${dList }">
 				<th nowrap>	${dateitem.date}</th>
 				</c:forEach>
 
@@ -122,27 +122,36 @@ for (int cnt1=1; cnt1<=4; cnt1++) {%>
 
 
 	<%
-	for (int cnt2=0; cnt2<3; cnt2++) {%>
-			<%
-		for (int cnt3=0; cnt3<30; cnt3++) {%>
-			<%
-			if (cnt1==1){ %>
-				<td class="info" nowrap>a</td>
+	for (int cnt2=0; cnt2<3; cnt2++) {%> <!-- 各項目（０：教科　１：講師　２：部屋） -->
+
+		<% for (int cnt3=0; cnt3<30; cnt3++) {%> <!-- 30日分 -->
+			<%if (cnt1==1){ %>
+
+				<%if(cnt2==0){ %>
+				<td class="info" nowrap>教科</td>
+				<%} %>
+				<%if(cnt2==1){ %>
+				<td class="info" nowrap>講師</td>
+				<%} %>
+				<%if(cnt2==2){ %>
+				<td class="info" nowrap>へや</td>
+				<%} %>
+
 			<%} %>
 
 			<%
 			if (cnt1==2){ %>
-				<td class="danger" nowrap>a</td>
+				<td class="danger" nowrap>1</td>
 			<%} %>
 
 			<%
 			if (cnt1==3){ %>
-				<td class="success" nowrap>a</td>
+				<td class="success" nowrap>2</td>
 			<%} %>
 
 			<%
 			if (cnt1==4){ %>
-				<td class="warning" nowrap>a</td>
+				<td class="warning" nowrap>3</td>
 			<%} %>
 
 		<%} %>
