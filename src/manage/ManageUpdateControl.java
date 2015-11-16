@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import DB.DBAccess;
-import db.teacherDBManage;
-import db.teacherInfo;
+import manage.db.teacherDBManage;
+import manage.db.teacherInfo;
 
 /**
  * Servlet implementation class ManageUpdateControl

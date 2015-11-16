@@ -1,4 +1,4 @@
-package db;
+package manage.db;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
