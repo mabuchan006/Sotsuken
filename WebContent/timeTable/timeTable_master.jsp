@@ -128,7 +128,8 @@ for (int cnt1=1; cnt1<=4; cnt1++) {%>
 			<%if (cnt1==1){ %>
 
 				<%if(cnt2==0){ %>
-				<td class="info" nowrap>教科</td>
+					<td class="info" nowrap>${ dList[0].date }</td>
+
 				<%} %>
 				<%if(cnt2==1){ %>
 				<td class="info" nowrap>講師</td>

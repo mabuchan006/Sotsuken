@@ -1,6 +1,7 @@
 package manage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -21,8 +22,10 @@ import manage.db.teacherInfo;
 public class ManageUpdateControl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	//とりあえず講師画面
-	private String content_page = "/Sotsuken/manage/teacher_manage.jsp";
-	private String page_title = "講師管理画面";
+	private String content_page;
+	private String page_title ;
+	ArrayList<String> css = new ArrayList<String>(); //css用List
+	ArrayList<String> js = new ArrayList<String>(); //JavaScript用List
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -43,14 +46,17 @@ public class ManageUpdateControl extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		//jspからのページ情報取得
 		String get_page = request.getParameter("page");
+		//使用するcss,jsファイルの適用
+		getIncludeFile(request);
 
+		//teacher管理の画面処理
 		//if(get_page == "teacher_manage"){
 			teacherUpdate(request, tdm);
 		//}
 
 		//ページデータセット
 		try {
-			request.setAttribute("page", content_page);
+			request.setAttribute("content_page", content_page);
 			request.setAttribute("page_title", page_title);
 
 		} catch (Exception e) {
@@ -60,13 +66,12 @@ public class ManageUpdateControl extends HttpServlet {
 
 
 		//画面遷移
-			RequestDispatcher disp = request.getRequestDispatcher("/manage/teacher_manage.jsp");
+			RequestDispatcher disp = request.getRequestDispatcher("template/layout.jsp");
 		      disp.forward(request, response);
 		//response.sendRedirect(content_page);
 
 
 	}//doGet
-
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -83,7 +88,9 @@ public class ManageUpdateControl extends HttpServlet {
 
 			//送信された講師情報取得
 			teacherInfo ti = new teacherInfo(
-					0,request.getParameter("teacherName"),
+					request.getParameter("id")==null?0//true
+							:Integer.parseInt(request.getParameter("id"))//false
+					,request.getParameter("teacherName"),
 					request.getParameter("password")==null?""
 							:request.getParameter("password")
 
@@ -91,7 +98,7 @@ public class ManageUpdateControl extends HttpServlet {
 
 			try {
 				//ページ情報指定
-				content_page = "/Sotsuken/manage/teacher_manage.jsp";
+				content_page = "/manage/teacher_manage.jsp";
 				page_title = "講師管理画面";
 
 				if(request.getParameter("regist_btn") != null ){
@@ -110,8 +117,22 @@ public class ManageUpdateControl extends HttpServlet {
 				// TODO 自動生成された catch ブロック
 				e.printStackTrace();
 			}
-		}
-	}//teacher
+		}//teacher
+	private void getIncludeFile(HttpServletRequest request) {
+		css.add("/Sotsuken/bootstrap/css/bootstrap.min.css");
+		css.add("/Sotsuken/css/font-awesome.min.css");
+		css.add("/Sotsuken/css/style.css");
+
+		css.add("/Sotsuken/css/custom.css");
+
+		js.add("/Sotsuken/js/jquery-2.1.1.min.js");
+		js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
+		js.add("/Sotsuken/js/jquery.appear.js");
+		js.add("/Sotsuken/js/teacher_regist.js");
+		request.setAttribute("css", css);
+		request.setAttribute("js", js);
+	}//css&js
+	}
 
 
 

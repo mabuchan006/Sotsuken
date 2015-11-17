@@ -16,9 +16,6 @@ body {
     color:#000;
 }
 
-.back-color{
-	background-color: #8590CA;
-}
 
 h1 {
 	color:#FFF;
@@ -179,10 +176,17 @@ fieldset[disabled] .btn-primary.active {
 }
 
 .yellow {
-	background: #ffd900;
+	background: #8590CA;
 }
 
 
+.back-color{
+	background-color: #8590CA;
+}
+/*drop color*/
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+	background:#f2e5ff;
+}
 
 /**** Start Main Body Section ****/
 
