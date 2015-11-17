@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+
+.tb {
+	border:1px;
+}
+
+.info-con {
+	width:200px;
+	padding:200px;
+}
+
+.info-all {
+	width:200px;
+	padding:200px;
+}
