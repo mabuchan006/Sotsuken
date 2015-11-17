@@ -182,7 +182,10 @@ fieldset[disabled] .btn-primary.active {
 	background: #ffd900;
 }
 
-
+/*drop color*/
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+	background:#d6eaff;
+}
 
 /**** Start Main Body Section ****/
 
