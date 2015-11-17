@@ -58,7 +58,7 @@ sb.setLength(0);
 
 	/**
 	 *
-	 * @return
+	 * @return 日付取得用
 	 * @throws Exception
 	 */
 	public List<masterInfo> dateSelect() throws Exception{
