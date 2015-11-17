@@ -7,17 +7,35 @@
 <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
 <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
 <script src="../js/belongings.js"></script>
+
+<!-- テスト用css -->
+<script src="../css/test.css"></script>
+
 <title>テスト</title>
 </head>
 <body>
 
 <form>
-<input type="button" id="lec" value="テキスト">
-<p style="
-	background-color : #ffeeee;
-	padding : 20px;
-	text-align : center;
-	"> Hi them (^^)/ </p>
+	<input type="button" id="lec" value="test"><br/><br/>
+
+		<table class="tb">
+			<tr class="info-con" >
+				<td>コンサイ</td>
+				<td>OS基礎論</td>
+				<td>アルゴリズム</td>
+			</tr>
+			<tr class="info-all">
+				<td>J401</td>
+				<td>M302</td>
+				<td>J601</td>
+			</tr>
+			<tr class="info-all">
+				<td>阿知波</td>
+				<td>小田</td>
+				<td>村上</td>
+			</tr>
+		</table>
+
 </form>
 
 </body>

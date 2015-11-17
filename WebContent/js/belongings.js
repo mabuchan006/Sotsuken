@@ -11,7 +11,7 @@ $(function belongings () {
 		})//queueAction
 	}})//.slide*/
 	$("#lec").click(function () {
-		$("p").toggle( "slide" , { direction : "left" } , 1000 );
+		$("sld").toggle( "slide" , { direction : "left" } , 1000 );
 	});
 
 });
