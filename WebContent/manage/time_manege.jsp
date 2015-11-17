@@ -99,11 +99,12 @@ $(function(){
 </button>
 
 <!-- モーダルウィンドウの中身 -->
+
 <div class="modal fade" id="myModal">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header back-color">
-      
+      <h3 class="modal-title white text-center">Confirmation</h3>
       </div>
       <div class="modal-body">
       <h3 class="modal-title text-center">登録されました！</h3>
