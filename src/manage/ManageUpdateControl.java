@@ -45,8 +45,41 @@ public class ManageUpdateControl extends HttpServlet {
 		String get_page = request.getParameter("page");
 
 		//if(get_page == "teacher_manage"){
-			teacherUpdate(request, tdm);
+			//teacherUpdate(request, tdm);
 		//}
+
+		//送信された講師情報取得
+		teacherInfo ti = new teacherInfo(
+				request.getParameter("teacher_id")==null?0//true
+						:Integer.parseInt(request.getParameter("teacher_id"))//false
+				,request.getParameter("teacherName"),
+				request.getParameter("password")==null?""
+						:request.getParameter("password")
+
+				);
+
+		try {
+			//ページ情報指定
+			content_page = "/Sotsuken/manage/teacher_manage.jsp";
+			page_title = "講師管理画面";
+
+			if(request.getParameter("regist_btn") != null ){
+				tdm.teacherDBUpdate(ti, DBAccess.INSERT, "登録");
+			}
+
+			if(request.getParameter("delete_btn") != null){
+				tdm.teacherDBUpdate(ti, DBAccess.DELETE, "削除");
+			}
+			//更新済み講師情報全件取得
+			List<teacherInfo> teacherList = tdm.teacherDBSelect();
+			request.setAttribute("teacherList", teacherList);
+			System.out.println(teacherList);
+
+		} catch (Exception e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
+
 
 		//ページデータセット
 		try {
@@ -83,7 +116,9 @@ public class ManageUpdateControl extends HttpServlet {
 
 			//送信された講師情報取得
 			teacherInfo ti = new teacherInfo(
-					0,request.getParameter("teacherName"),
+					request.getParameter("id")==null?0//true
+							:Integer.parseInt(request.getParameter("id"))//false
+					,request.getParameter("teacherName"),
 					request.getParameter("password")==null?""
 							:request.getParameter("password")
 
