@@ -11,7 +11,7 @@
 
 <!-- ドラッグアンドドロップのJS -->
 <script type="text/javascript" src="../js/drag_drop/f_drag.js"></script>
-<script type="text/javascript" src="../js/drag_drop/NCS8/NCS802_1.js"></script>
+<script type="text/javascript" src="../js/drag_drop/f_drop.js"></script>
 
 <style>
 h1 { padding: .2em; margin: 0; font-size:14px; }
@@ -26,7 +26,7 @@ h1 { padding: .2em; margin: 0; font-size:14px; }
 $(function( e ){
 	$( "#class-room" ).accordion();
 	f_drag();
-	 NCS802_1_drop( e );
+	f_drop( e );
 });
 </script>
 
@@ -82,16 +82,16 @@ $(function( e ){
 			<tr>
 				<th>802</th>
 				<td>
-					<div id="NCS802_1-drop">
+					<div class="drop-target" id="NCS802-1-drop">
 						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802-1"></textarea>
 					</div><br>
-					<div id="NCS802_2-drop">
+					<div class="drop-target" id="NCS802-2-drop">
 						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802-2"></textarea>
 					</div><br>
-					<div id="NCS802_3-drop">
+					<div class="drop-target" id="NCS802-3-drop">
 						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802-3"></textarea>
 					</div><br>
-					<div id="NCS802_4-drop">
+					<div class="drop-target" id="NCS802-4-drop">
 						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802-4"></textarea>
 					</div><br>
 				</td>
