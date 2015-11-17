@@ -2,12 +2,12 @@ var repComma;
 var str;
 
 //ドロップ
-function NCS802_1_drop( e ) {
-	$( "#NCS802_1-drop" ).droppable({
+function NCS802_2_drop( e ) {
+	$( "#NCS802_2-drop" ).droppable({
 		drop: function( e, ui ) {
 
 			//テキストボックスの中身とドロップされたテキストを入れる
-			str = ($( "#NCS802-1" ).text() + ui.draggable.text() );
+			str = ($( "#NCS802-2" ).text() + ui.draggable.text() );
 
 			//一度カンマを取り除く
 			repComma = str.replace(/,/g, "");
@@ -17,7 +17,7 @@ function NCS802_1_drop( e ) {
 			}
 
 			//テキストボックスに追加
-			$( "#NCS802-1" ).text( repComma ).appendTo( this );
+			$( "#NCS802-2" ).text( repComma ).appendTo( this );
 
 		}
 	})
