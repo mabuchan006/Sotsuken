@@ -1,6 +1,6 @@
 //ドラッグ
 function f_drag( e ) {
-	$( "#class-grade li" ).draggable({
+	$( "#class-room li" ).draggable({
 		appendTo: "body",
 		revert: "invalid",
 		helper: "clone"
