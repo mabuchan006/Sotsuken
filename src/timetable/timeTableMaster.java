@@ -56,7 +56,7 @@ public class timeTableMaster extends HttpServlet {
 
 			try {
 				 dList = mDM.dateSelect(); //日付取得
-				 mList = mDM.selectTimeTable();
+				 mList = mDM.selectTimeTable();//マスタ時間割取得
 				 request.setAttribute("dList", dList);
 				 request.setAttribute("mList", mList);
 			} catch (Exception e) {
@@ -70,7 +70,7 @@ public class timeTableMaster extends HttpServlet {
 			request.setAttribute("content_page", content_page);
 			request.setAttribute("page_title", page_title);
 
-		//ディスパッチ処理　layout.jspに投げると中身をcontent_pageのjspに合わせて表示
+		//ディスパッチ処理 layout.jspに投げると中身をcontent_pageのjspに合わせて表示
 			RequestDispatcher disp = request.getRequestDispatcher("/template/layout.jsp");
 					disp.forward(request, response);
 	}

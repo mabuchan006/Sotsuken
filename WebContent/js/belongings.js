@@ -1,11 +1,17 @@
 $(function belongings () {
 
+	/*$.slide( { ex : function( argElem , argDirc , argDisp ) {
+		argElem.queue(function() {
+			if ( $( this ).css("display") == "none" ) {
+				$(this).show( "slide" , { direction : argDirc } ,
+						argDisp , function(){
+					$(this),clearQueue();
+				})//$(this).show_Events
+			}//if
+		})//queueAction
+	}})//.slide*/
 	$("#lec").click(function () {
-		if ( $("#lec :checked") ) {
-			$("#lec").animate ({"left" : "500px"} , 100 );
-		} else {
-			$("#lec").animate ({"right" : "500px"} , 100 );
-		}
+		$("p").toggle( "slide" , { direction : "left" } , 1000 );
 	});
 
 });
