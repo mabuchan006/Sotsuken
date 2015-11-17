@@ -26,8 +26,7 @@
         <script src="../bootstrap/js/bootstrap.min.js"></script>
         <script src="../js/jquery.appear.js"></script>
 
-		 <!-- Custom CSS -->
-        <link href="../css/style.css" rel="stylesheet">
+
           <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -47,6 +46,9 @@
 <script type="text/javascript" src="../js/drag_drop/NCS8/NCS802_2.js"></script>
 <script type="text/javascript" src="../js/drag_drop/NCS8/NCS802_3.js"></script>
 <script type="text/javascript" src="../js/drag_drop/NCS8/NCS802_4.js"></script>
+
+<!-- Custom CSS -->
+        <link href="../css/style.css" rel="stylesheet">
 
 <script>
 $(function(){
@@ -134,9 +136,9 @@ $(function(){
 <!-- ドラッグ&ドロップ -->
 <div  class="col-md-1 ">
 <div id="class">
-	<h1 class="ui-widget-header-red">クラス</h1>
+	<h1 >class</h1>
 	<div id="class-room">
-		<h2><a href="#" draggable="false">R1</a></h2>
+		<h2 ><a href="#" draggable="false">R1</a></h2>
 		<div>
 			<ul>
 				<li>R1A1</li>
