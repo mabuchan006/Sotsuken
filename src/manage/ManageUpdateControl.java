@@ -88,8 +88,8 @@ public class ManageUpdateControl extends HttpServlet {
 
 			//送信された講師情報取得
 			teacherInfo ti = new teacherInfo(
-					request.getParameter("id")==null?0//true
-							:Integer.parseInt(request.getParameter("id"))//false
+					request.getParameter("teacher_id")==null?0//true
+							:Integer.parseInt(request.getParameter("teacher_id"))//false
 					,request.getParameter("teacherName"),
 					request.getParameter("password")==null?""
 							:request.getParameter("password")
@@ -103,15 +103,17 @@ public class ManageUpdateControl extends HttpServlet {
 
 				if(request.getParameter("regist_btn") != null ){
 					tdm.teacherDBUpdate(ti, DBAccess.INSERT, "登録");
+					System.out.println("登録");
 				}
 
 				if(request.getParameter("delete_btn") != null){
 					tdm.teacherDBUpdate(ti, DBAccess.DELETE, "削除");
+					System.out.println("削除");
 				}
 				//更新済み講師情報全件取得
 				List<teacherInfo> teacherList = tdm.teacherDBSelect();
 				request.setAttribute("teacherList", teacherList);
-				System.out.println(teacherList);
+
 
 			} catch (Exception e) {
 				// TODO 自動生成された catch ブロック
@@ -121,9 +123,10 @@ public class ManageUpdateControl extends HttpServlet {
 	private void getIncludeFile(HttpServletRequest request) {
 		css.add("/Sotsuken/bootstrap/css/bootstrap.min.css");
 		css.add("/Sotsuken/css/font-awesome.min.css");
+		css.add("/Sotsuken/css/custom.css");
 		css.add("/Sotsuken/css/style.css");
 
-		css.add("/Sotsuken/css/custom.css");
+
 
 		js.add("/Sotsuken/js/jquery-2.1.1.min.js");
 		js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
