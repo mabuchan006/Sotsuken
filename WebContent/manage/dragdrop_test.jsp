@@ -23,10 +23,10 @@ h1 { padding: .2em; margin: 0; font-size:14px; }
 </style>
 
 <script>
-$(function(){
+$(function( e ){
 	$( "#class-room" ).accordion();
 	f_drag();
-	NCS802_1_drop();
+	 NCS802_1_drop( e );
 });
 </script>
 
@@ -83,16 +83,16 @@ $(function(){
 				<th>802</th>
 				<td>
 					<div id="NCS802_1-drop">
-						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802_1"></textarea>
+						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802-1"></textarea>
 					</div><br>
 					<div id="NCS802_2-drop">
-						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802_2"></textarea>
+						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802-2"></textarea>
 					</div><br>
 					<div id="NCS802_3-drop">
-						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802_3"></textarea>
+						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802-3"></textarea>
 					</div><br>
 					<div id="NCS802_4-drop">
-						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802_4"></textarea>
+						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802-4"></textarea>
 					</div><br>
 				</td>
 				<th>803</th>

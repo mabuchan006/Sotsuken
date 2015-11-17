@@ -19,6 +19,16 @@ function NCS802_1_drop( e ) {
 			//テキストボックスに追加
 			$( "#NCS802-1" ).text( repComma ).appendTo( this );
 
+			var rect = this.getBoundingClientRect();
+			var X = rect.left + window.pageXOffset;
+			var Y = rect.top + window.pageYOffset;
+			var elm = document.elementFromPoint( X, Y );
+			alert(elm.id);
+			console.log(elm.id);
+			console.log(elm.children().id())
+			console.log(X);
+			console.log(Y);
+
 		}
 	})
 }
