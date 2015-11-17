@@ -106,7 +106,11 @@ $(function(){
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header back-color">
+<<<<<<< HEAD
+
+=======
       <h3 class="modal-title white text-center">Confirmation</h3>
+>>>>>>> branch 'master' of https://github.com/mabuchan006/Sotsuken.git
       </div>
       <div class="modal-body">
       <h3 class="modal-title text-center">登録されました！</h3>

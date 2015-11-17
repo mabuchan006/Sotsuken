@@ -32,7 +32,7 @@ public class teacherDBManage extends DBAccess{
 		//ID,NAME,PASSを全件取得sql
 		selectSql = String.format("select teacherID,teacherName,password from tbl_teacher");
 		//講師IDから削除からsql
-		deleteSql = String.format("select teacherID,teacherName,password from tbl_teacher where id = ?");
+		deleteSql = String.format("delete  from tbl_teacher where teacherID = ?");
 		//講師情報登録sql
 		insertSql= String.format(" insert into tbl_teacher (teacherName, password) values ( ? , ? )");
 	}
