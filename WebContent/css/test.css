@@ -1,15 +1,21 @@
 @CHARSET "UTF-8";
 
-.tb {
-	border:1px;
+#lec {
+;
 }
 
-.info-con {
-	width:200px;
-	padding:200px;
+.tb{
+border:5;
 }
 
-.info-all {
-	width:200px;
-	padding:200px;
+.info , .info tr , .info td{
+background-color:#6699ff;
+}
+
+.sld , .sld td{
+background-color:#ffee99;
+}
+
+#sldCell100{
+	display:none;
 }

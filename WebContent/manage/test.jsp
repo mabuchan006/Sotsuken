@@ -8,7 +8,7 @@
 <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
 <script src="../js/belongings.js"></script>
 
-<!-- テスト用css -->
+<!-- テスト用css  関連されない問題点①-->
 <link href="../css/test.css" rel="stylesheet" type="text/css">
 
 <title>テスト</title>
@@ -16,23 +16,30 @@
 <body>
 
 <form>
-	<input type="button" id="lec" value="test"><br/><br/>
+	<input type="button" id="fade_btn" value="test"><br/><br/>
 
 		<table class="tb">
-			<tr class="info-con" >
+			<!-- 1行目：授業 -->
+			<tr class="info" >
 				<td>コンサイ</td>
-				<td>OS基礎論</td>
-				<td>アルゴリズム</td>
 			</tr>
-			<tr class="info-all">
-				<td>J401</td>
-				<td>M302</td>
-				<td>J601</td>
+			<!-- 2行目：持ち物 -->
+			<tr class="sld">
+				<td style="padding:0px">
+					<div id="sldCell100" style="padding:1px; height:22px;">スライド対象セル</div>
+				</td>
 			</tr>
-			<tr class="info-all">
-				<td>阿知波</td>
-				<td>小田</td>
-				<td>村上</td>
+			<!-- 3行目：教室 -->
+			<tr class="info">
+				<td >
+					教室
+				</td>
+			</tr>
+			<!-- 4行目：講師 -->
+			<tr class="info">
+				<td >
+					講師
+				</td>
 			</tr>
 		</table>
 

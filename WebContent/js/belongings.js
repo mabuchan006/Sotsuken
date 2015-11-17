@@ -1,17 +1,7 @@
 $(function belongings () {
-
-	/*$.slide( { ex : function( argElem , argDirc , argDisp ) {
-		argElem.queue(function() {
-			if ( $( this ).css("display") == "none" ) {
-				$(this).show( "slide" , { direction : argDirc } ,
-						argDisp , function(){
-					$(this),clearQueue();
-				})//$(this).show_Events
-			}//if
-		})//queueAction
-	}})//.slide*/
-	$("#lec").click(function () {
-		$("sld").toggle( "slide" , { direction : "left" } , 1000 );
+	$("#fade_btn").on("click",function () {
+		$("sldCell100").hide();
+		$($(this).attr( "href" ) ) .fadeToggle();
 	});
-
+	return false;
 });
