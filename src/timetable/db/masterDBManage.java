@@ -9,6 +9,7 @@ import DB.DBAccess;
 public class masterDBManage extends DBAccess {
 	private final static String DRIVER_NAME = "java:comp/env/jdbc/MySqlCon";
 	private String selectSQL;  //マスタ時間割抽出用
+	private String dateSQL; //日付取得用
 
 	public masterDBManage() {
 		super(DRIVER_NAME);
@@ -17,6 +18,10 @@ public class masterDBManage extends DBAccess {
 		sb.append("SELECT * FROM tbl_master_R4A1timetable order by date asc");
 		selectSQL = sb.toString();
 		sb.setLength(0);
+
+		sb.append("SELECT date FROM tbl_master_R4A1timetable GROUP BY date order by date asc");
+		dateSQL = sb.toString();
+sb.setLength(0);
 	}
 	/**
 	 * @param
@@ -48,6 +53,36 @@ public class masterDBManage extends DBAccess {
 				timeTableMasterList.add(masterinfo);
 			}
 		return timeTableMasterList;
+
+	}
+
+	/**
+	 *
+	 * @return
+	 * @throws Exception
+	 */
+	public List<masterInfo> dateSelect() throws Exception{
+		List<masterInfo> timeTableDateList = new ArrayList<masterInfo>();
+
+		//DB接続
+		connect();
+		//ステートメント作成
+		createStstement();
+		//SQL実行
+		selectExe(dateSQL);
+		ResultSet rs = getRsResult();
+		masterInfo masterinfo = null;
+			while(rs.next()) {
+				masterinfo = new masterInfo(
+						0,
+						"",
+						rs.getDate("date"),
+						"",
+						"",
+						"");
+				timeTableDateList.add(masterinfo);
+			}
+		return timeTableDateList;
 
 	}
 }

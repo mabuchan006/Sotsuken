@@ -12,15 +12,6 @@
 <!-- ドラッグアンドドロップのJS -->
 <script type="text/javascript" src="../js/drag_drop/f_drag.js"></script>
 <script type="text/javascript" src="../js/drag_drop/NCS8/NCS802_1.js"></script>
-<script type="text/javascript" src="../js/drag_drop/NCS8/NCS802_2.js"></script>
-<script type="text/javascript" src="../js/drag_drop/NCS8/NCS802_3.js"></script>
-<script type="text/javascript" src="../js/drag_drop/NCS8/NCS802_4.js"></script>
-
-<script type="text/javascript" src="../js/drag_drop/NCS8/NCS803_1.js"></script>
-<script type="text/javascript" src="../js/drag_drop/NCS701_1.js"></script>
-<script type="text/javascript" src="../js/drag_drop/NCS702_1.js"></script>
-
-<script type="text/javascript" src="../js/drag_drop/comma.js"></script>
 
 <style>
 h1 { padding: .2em; margin: 0; font-size:14px; }
@@ -35,35 +26,12 @@ h1 { padding: .2em; margin: 0; font-size:14px; }
 $(function(){
 	$( "#class-grade" ).accordion();
 	f_drag();
-	NCS802_1_hold();
 	NCS802_1_drop();
-	NCS802_2_hold();
-	NCS802_2_drop();
-	NCS802_3_hold();
-	NCS802_3_drop();
-	NCS802_4_hold();
-	NCS802_4_drop();
-
-	NCS803_1_hold();
-	NCS803_1_drop();
-	NCS701_1_hold();
-	NCS701_1_drop();
-	NCS702_1_hold();
-	NCS702_1_drop();
 });
 </script>
 
 </head>
 <body>
-<input type="hidden" id="holdNCS802_1" value="">
-<input type="hidden" id="holdNCS802_2" value="">
-<input type="hidden" id="holdNCS802_3" value="">
-<input type="hidden" id="holdNCS802_4" value="">
-
-<input type="hidden" id="holdNCS803_1" value="">
-<input type="hidden" id="holdNCS701_1" value="">
-<input type="hidden" id="holdNCS702_1" value="">
-
 <div id="class">
 	<h1 class="ui-widget-header">クラス</h1>
 	<div id="class-grade">
