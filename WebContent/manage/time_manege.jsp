@@ -138,19 +138,19 @@ $(function(){
 <div id="class">
 	<h1 >class</h1>
 	<div id="class-room">
-		<h2 ><a href="#" draggable="false">R1</a></h2>
+		<h2 class="font"><a href="#" draggable="false">R1</a></h2>
 		<div>
-			<ul>
-				<li>R1A1</li>
-				<li>R1A2</li>
-				<li>R1A3</li>
-				<li>R1A4</li>
-				<li>R1A5</li>
+			<ul class="font">
+				<li >R1A1</li>
+				<li >R1A2</li>
+				<li >R1A3</li>
+				<li >R1A4</li>
+				<li >R1A5</li>
 			</ul>
 		</div>
-		<h2><a href="#" draggable="false">R2</a></h2>
+		<h2 class="font"><a href="#" draggable="false">R2</a></h2>
 		<div>
-			<ul>
+			<ul class="font">
 				<li>R2A1</li>
 				<li>R2A2</li>
 				<li>R2A3</li>
@@ -158,9 +158,9 @@ $(function(){
 				<li>R2A5</li>
 			</ul>
 		</div>
-		<h2><a href="#" draggable="false">R3</a></h2>
+		<h2 class="font"><a href="#" draggable="false">R3</a></h2>
 		<div>
-			<ul>
+			<ul class="font">
 				<li>R3A1</li>
 				<li>R3A2</li>
 				<li>R3A3</li>
@@ -168,9 +168,9 @@ $(function(){
 				<li>R3A5</li>
 			</ul>
 		</div>
-		<h2><a href="#" draggable="false">R4</a></h2>
+		<h2 class="font"><a href="#" draggable="false">R4</a></h2>
 		<div>
-			<ul>
+			<ul class="font">
 				<li>R4A1</li>
 				<li>R4A2</li>
 				<li>R4A3</li>
