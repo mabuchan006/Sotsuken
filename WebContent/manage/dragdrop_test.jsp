@@ -24,7 +24,7 @@ h1 { padding: .2em; margin: 0; font-size:14px; }
 
 <script>
 $(function(){
-	$( "#class-grade" ).accordion();
+	$( "#class-room" ).accordion();
 	f_drag();
 	NCS802_1_drop();
 });
@@ -34,7 +34,7 @@ $(function(){
 <body>
 <div id="class">
 	<h1 class="ui-widget-header">クラス</h1>
-	<div id="class-grade">
+	<div id="class-room">
 		<h2><a href="#" draggable="false">R1</a></h2>
 		<div>
 			<ul>
