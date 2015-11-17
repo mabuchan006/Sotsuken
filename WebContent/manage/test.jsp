@@ -9,7 +9,7 @@
 <script src="../js/belongings.js"></script>
 
 <!-- テスト用css -->
-<script src="../css/test.css"></script>
+<link href="../css/test.css" rel="stylesheet" type="text/css">
 
 <title>テスト</title>
 </head>
