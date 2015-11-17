@@ -38,6 +38,27 @@
 <script type="text/javascript" src="../bootstrap/js/bootstrap-datepicker.min.js"></script>
 <script type="text/javascript" src="../bootstrap/js/bootstrap-datepicker.js"></script>
 
+<!-- ドラッグアンドドロップとアコーディオン化 -->
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/drag_drop/f_drag.js"></script>
+<script type="text/javascript" src="../js/drag_drop/NCS8/NCS802_1.js"></script>
+<script type="text/javascript" src="../js/drag_drop/NCS8/NCS802_2.js"></script>
+<script type="text/javascript" src="../js/drag_drop/NCS8/NCS802_3.js"></script>
+<script type="text/javascript" src="../js/drag_drop/NCS8/NCS802_4.js"></script>
+
+<script>
+$(function(){
+	$( "#class-room" ).accordion();
+	f_drag();
+	NCS802_1_drop();
+	NCS802_2_drop();
+	NCS802_3_drop();
+	NCS802_4_drop();
+});
+</script>
+
 <title>コマ割画面</title>
 
 </head>
@@ -111,11 +132,10 @@
 
 <!-- ドラッグ&ドロップ -->
 <div  class="col-md-1 ">
-<input type="hidden" id="hold" value="">
 <div id="class">
-	<h1 class="ui-widget-header">クラス</h1>
+	<h1 class="ui-widget-header-red">クラス</h1>
 	<div id="class-room">
-		<h2><a href="#">R1</a></h2>
+		<h2><a href="#" draggable="false">R1</a></h2>
 		<div>
 			<ul>
 				<li>R1A1</li>
@@ -125,7 +145,7 @@
 				<li>R1A5</li>
 			</ul>
 		</div>
-		<h2><a href="#">R2</a></h2>
+		<h2><a href="#" draggable="false">R2</a></h2>
 		<div>
 			<ul>
 				<li>R2A1</li>
@@ -135,7 +155,7 @@
 				<li>R2A5</li>
 			</ul>
 		</div>
-		<h2><a href="#">R3</a></h2>
+		<h2><a href="#" draggable="false">R3</a></h2>
 		<div>
 			<ul>
 				<li>R3A1</li>
@@ -145,7 +165,7 @@
 				<li>R3A5</li>
 			</ul>
 		</div>
-		<h2><a href="#">R4</a></h2>
+		<h2><a href="#" draggable="false">R4</a></h2>
 		<div>
 			<ul>
 				<li>R4A1</li>
@@ -172,10 +192,10 @@
 
         <td class="size">802</td>
         <td class="size">
-        	<p class="size">1　　<input type="text" name="NCS802-1" size="10" maxlength="10"></p>
-            <p class="size">2　　<input type="text" name="NCS802-2" size="10" maxlength="10"></p>
-            <p class="size">3　　<input type="text" name="NCS802-3" size="10" maxlength="10"></p>
-			<p class="size">4　　<input type="text" name="NCS802-4" size="10" maxlength="10"></p>
+        	<p class="size" id="NCS802_1-drop">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS802-1"></textarea></p>
+            <p class="size" id="NCS802_2-drop">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS802-2"></textarea></p>
+            <p class="size" id="NCS802_3-drop">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS802-3"></textarea></p>
+			<p class="size" id="NCS802_4-drop">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS802-4"></textarea></p>
         </td>
 
         <td class="size">803</td>
