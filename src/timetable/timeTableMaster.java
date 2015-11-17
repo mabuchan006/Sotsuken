@@ -56,7 +56,7 @@ public class timeTableMaster extends HttpServlet {
 
 			try {
 				 dList = mDM.dateSelect(); //日付取得
-				 mList = mDM.selectTimeTable();
+				 mList = mDM.selectTimeTable();//マスタ時間割取得
 				 request.setAttribute("dList", dList);
 				 request.setAttribute("mList", mList);
 			} catch (Exception e) {
