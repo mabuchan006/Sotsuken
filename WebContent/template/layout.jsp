@@ -10,13 +10,8 @@
 <c:if test="${js != null}">
 <meta http-equiv="content-script-type" content="text/javascript" />
 </c:if>
-<title>${page_title}</title>
 
-<c:if test="${css != null}">
-<c:forEach var="itemcss" items="${css}">
-<link href="${itemcss}" rel="stylesheet" type="text/css" >
-</c:forEach>
-</c:if>
+<title>${page_title}</title>
 
 <c:if test="${js != null}">
 <c:forEach var="itemjs" items="${js}">
@@ -24,12 +19,17 @@
 </c:forEach>
 </c:if>
 
+<c:if test="${css != null}">
+<c:forEach var="itemcss" items="${css}">
+<link href="${itemcss}" rel="stylesheet" type="text/css" >
+</c:forEach>
+</c:if>
 </head>
 
 <body>
 	<div id="content">
 	<jsp:include page="${content_page}" />
-	
+
 	</div>
 </body>
 </html>

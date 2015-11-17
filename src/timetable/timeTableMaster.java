@@ -50,7 +50,7 @@ public class timeTableMaster extends HttpServlet {
 			css.add("/Sotsuken/css/style.css");
 			css.add("http://fonts.googleapis.com/css?family=Lobster");
 
-			js.add("/Sotsuken/js/jquery-1.11.3.js");
+			js.add("/Sotsuken/js/jquery-2.1.1.min.js");
 			js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
 			js.add("/Sotsuken/js/jquery.appear.js");
 
