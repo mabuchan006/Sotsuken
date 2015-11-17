@@ -68,14 +68,33 @@
             </div>
         </section>
         <!-- End Logo Section -->
+
 <div class="container-fluid">
+
 <!-- button -->
-<button  class="btn-danger btn-lg col-md-1">登録</button>
-<script>
-	$("button").click(function(){
-		alert("登録されました");
-	});
-</script>
+
+<button class="btn btn-primary btn-lg col-md-1" data-toggle="modal" data-target="#myModal">
+    登録
+</button>
+
+<!-- モーダルウィンドウの中身 -->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header back-color">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+      </div>
+      <div class="modal-body">
+      <h3 class="modal-title text-center">登録されました！</h3>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">close</button>
+       </div>
+    </div>
+  </div>
+</div>
 
 <!-- button end -->
         <!-- カレンダー部分 -->

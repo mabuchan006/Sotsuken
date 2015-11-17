@@ -8,8 +8,10 @@ $(function login() {
 			var id = $("#enterId").val();
 
 			if (  pw == "" || id == ""  ) {
-				alert("未入力があります、入力してください。");
-				login();
+
+				$("#msg").html("未入力があります、入力してください。");
+				$("#msg").css("color","red");
+
 			}
 
 		});

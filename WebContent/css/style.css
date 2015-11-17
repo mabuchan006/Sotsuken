@@ -209,6 +209,10 @@ fieldset[disabled] .btn-primary.active {
 	}
 }
 
+.color-red{
+	color:#FF432E;
+}
+
 .w{
 	width: 65px;
 }

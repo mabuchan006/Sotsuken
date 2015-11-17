@@ -137,6 +137,9 @@
       </div>
       <div class="modal-body">
 <form action="loginServlet">
+
+<div id="msg"></div>
+
 	<label>username:</label>
 	<input type="text" placeholder="username" id="enterId" value=""> <br>
 	<label>password:</label>
