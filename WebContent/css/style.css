@@ -21,10 +21,6 @@ h1 {
 	color:#FFF;
 }
 
-.color-yellow {
-	color:#ffff84;
-}
-
 a,
 a:hover,
 a:focus,
@@ -182,6 +178,14 @@ fieldset[disabled] .btn-primary.active {
 
 .back-color{
 	background-color: #8590CA;
+}
+
+.back-color2{
+	background-color:#336ca6;
+}
+
+back-color3{
+	background-color:#34495e;
 }
 /*drop color*/
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
