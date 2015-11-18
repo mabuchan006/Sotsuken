@@ -81,16 +81,16 @@ $(function( e ){
 			<tr>
 				<th>802</th>
 				<td>
-					<div class="drop-target" id="NCS802-1-drop">
+					<div class="size">
 						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802-1"></textarea>
 					</div><br>
-					<div class="drop-target" id="NCS802-2-drop">
+					<div class="size">
 						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802-2"></textarea>
 					</div><br>
-					<div class="drop-target" id="NCS802-3-drop">
+					<div class="size">
 						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802-3"></textarea>
 					</div><br>
-					<div class="drop-target" id="NCS802-4-drop">
+					<div class="size">
 						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802-4"></textarea>
 					</div><br>
 				</td>
