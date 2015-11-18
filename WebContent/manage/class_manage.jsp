@@ -21,8 +21,8 @@
 
 <td class="col-md-4">
 <!-- 名前入力 -->
-<label for="teacherName" class="labels">名前</label>
-<input type="text" class="form-control" id="teacherName" name="teacherName" >
+<label for="ClassID" class="labels">クラス</label>
+<input type="text" class="form-control" id="ClassID" name="ClassID" >
 </td>
 
 <td class="col-md-4">
