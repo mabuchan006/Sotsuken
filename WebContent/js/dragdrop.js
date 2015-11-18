@@ -1,4 +1,4 @@
-var repComma, str, elm;
+var repComma = "", str = "", elm = "";
 
 //ドラッグ
 function f_drag( e ) {
@@ -12,11 +12,12 @@ function f_drag( e ) {
 
 //ドロップ
 function f_drop( e ) {
-	$( ".drop-target" ).droppable({
+	$( ".size" ).droppable({
 		drop: function( e, ui ) {
 
 			//子要素の取得
 			elm = $(this).children("textarea").get(0);
+			console.log($(this).children("textarea").get(0));
 
 			//テキストボックスの中身とドロップされたテキストを入れる
 			str = ( elm.value + ui.draggable.text() );
