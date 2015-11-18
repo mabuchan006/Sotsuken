@@ -6,7 +6,7 @@
 
 <div class="content-header">
 <div id="logo">
-<h1>講師管理</h1>
+<h1>クラス管理</h1>
 </div>
 </div>
 
@@ -27,37 +27,37 @@
 
 <td class="col-md-4">
 <!-- pass入力 -->
-<label for="password" class="labels">パスワード</label>
-<input type="password" class="form-control" name="password" >
+<label for="ClassName" class="labels">専攻名</label>
+<input type="text" class="form-control" name="ClassName" >
 </td>
 
 <td class="col-md-4">
 <!-- 登録ボタン -->
 <label for="password" class="empty">________</label>
-<button type="submit" class="btn btn-primary" id="regist_btn" name="regist_btn">登録</button>
+<button type="submit" class="btn btn-primary" id="regist_btn" name="regist_class">登録</button>
 </td>
 
 </tr>
 </table>
 </form><!-- 登録終わり -->
 
-<!-- 講師一覧表示 -->
+<!-- クラス一覧表示 -->
 <div class="col-md-6 col-md-offset-3">
 <div class="back">
 <table class="table ">
 <thead>
-<tr><td colspan="2">lecturers</td></tr>
+<tr><td colspan="2">class</td></tr>
 </thead>
 <tbody>
-<!-- 講師情報取得 -->
-<c:forEach var="teacher" items="${teacherList}">
+<!-- クラス情報取得 -->
+<c:forEach var="class" items="${classList}">
 <tr class="select">
-<td>${ teacher.teacherName }</td>
+<td>${ class.className }</td>
 <td>
 <!-- 削除用フォーム -->
 <form action="/Sotsuken/ManageUpdate" method="get">
-<input type="hidden" name = "teacher_id" value="${ teacher.teacherID }" />
-<input type="submit" class="btn btn-danger" name="delete_btn" value="削除"/>
+<input type="hidden" name = "classID" value="${ class.classID }" />
+<input type="submit" class="btn btn-danger" name="delete_class" value="削除"/>
 </form>
 <!-- 削除 -->
 </td>

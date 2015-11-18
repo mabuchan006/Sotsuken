@@ -32,9 +32,9 @@
  <ul class="nav nav-tabs">
 <li><a href="#tab1" data-toggle="tab">管理者メニュー</a></li>
 <li><a href="#tab2" data-toggle="tab">時間割管理</a></li>
-<li><a href="/Sotsuken/ManageUpdate?page=teacher_manage" data-toggle="tab">講師管理</a></li>
-<li><a href="#tab2" data-toggle="tab">科目管理</a></li>
-<li><a href="#tab2" data-toggle="tab">クラス管理</a></li>
+<li><a href="ManageUpdate?page=teacher_manage" data-toggle="tab">講師管理</a></li>
+<li><a href="ManageUpdate?page=subject_manage" data-toggle="tab">科目管理</a></li>
+<li><a href="ManageUpdate?page=class_manage" data-toggle="tab">クラス管理</a></li>
 <li><a href="time_manage.jsp" data-toggle="tab">コマ割管理</a></li>
 </ul>
 </div>
