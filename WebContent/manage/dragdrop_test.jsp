@@ -94,27 +94,6 @@ $(function( e ){
 						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802-4"></textarea>
 					</div><br>
 				</td>
-				<th>803</th>
-				<td>
-					<div id="NCS803_1-drop">
-						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS803_1"></textarea>
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<th>701</th>
-				<td>
-					<div id="NCS701_1-drop">
-						<textarea cols="5" rows="2" style="overflow: auto;" id="NCS701_1"></textarea>
-					</div>
-				</td>
-				<th>702</th>
-				<td>
-					<div id="NCS702_1-drop">
-						<textarea cols="5" rows="2" style="overflow: auto;" id="NCS702_1"></textarea>
-					</div>
-				</td>
-			</tr>
 		</table>
 </div>
 </body>

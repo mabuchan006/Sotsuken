@@ -1,3 +1,42 @@
+var repComma, str, elm;
+
+//ドラッグ
+function f_drag( e ) {
+	$( "#class-room li" ).draggable({
+		appendTo: "body",
+		revert: "invalid",
+		helper: "clone",
+		cursor: "pointer"
+	})//draggable
+}//f_drag
+
+//ドロップ
+function f_drop( e ) {
+	$( ".drop-target" ).droppable({
+		drop: function( e, ui ) {
+
+			//子要素の取得
+			elm = $(this).children("textarea").get(0);
+
+			//テキストボックスの中身とドロップされたテキストを入れる
+			str = ( elm.value + ui.draggable.text() );
+
+			//一度カンマを取り除く
+			repComma = str.replace(/,/g, "");
+
+			//下４桁ずつカンマ区切りにしていく
+			while( repComma != repComma.replace( /(\w+)(\w{4})/, "$1,$2" ) ) {
+				repComma = repComma.replace( /(\w+)(\w{4})/, "$1,$2" )
+			}//while
+
+			//テキストボックスに追加
+			elm.value = repComma;
+
+		}//drop
+	})//droppable
+}//f_drop
+
+/**
 var repComma, str, parentElm, childElm, rect, X, Y;
 
 //ドラッグ
@@ -48,3 +87,4 @@ function f_drop( e ) {
 		}//drop
 	})//droppable
 }//f_drop
+**/
