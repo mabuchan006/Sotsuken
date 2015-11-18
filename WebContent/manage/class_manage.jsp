@@ -46,17 +46,18 @@
 <div class="back">
 <table class="table ">
 <thead>
-<tr><td colspan="2">class</td></tr>
+<tr><td colspan="3">class</td></tr>
 </thead>
 <tbody>
 <!-- クラス情報取得 -->
-<c:forEach var="class" items="${classList }">
+<c:forEach var="rs" items="${classList }">
 <tr class="select">
-<td>${class.classID }</td>
+<td>${rs.classID}</td>
+<td>${rs.className}</td>
 <td>
 <!-- 削除用フォーム -->
 <form action="/Sotsuken/ManageUpdate" method="get">
-<input type="hidden" name = "classID" value="${class.classID }" />
+<input type="hidden" name = "classID" value="${rs.classID }" />
 <input type="submit" class="btn btn-danger" name="delete_class" value="削除"/>
 </form>
 <!-- 削除 -->

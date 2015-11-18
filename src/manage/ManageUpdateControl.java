@@ -89,6 +89,42 @@ public class ManageUpdateControl extends HttpServlet {
 		// TODO Auto-generated method stub
 	}
 
+	//クラス管理画面指定時の処理
+		private void classUpdate(HttpServletRequest request, classDBManage cdm) {
+
+
+				//送信されたクラス情報取得
+				classInfo ci = new classInfo(
+						request.getParameter("classID")==null?""//true
+								:request.getParameter("classID")//false
+						,request.getParameter("className")
+
+						);
+
+				try {
+					//ページ情報指定
+					content_page = "/manage/class_manage.jsp";
+					page_title = "クラス管理画面";
+
+					if(request.getParameter("regist_class") != null ){
+						cdm.classDBUpdate(ci, DBAccess.INSERT, "登録");
+						System.out.println("登録");
+					}
+
+					if(request.getParameter("delete_class") != null){
+						cdm.classDBUpdate(ci, DBAccess.DELETE, "削除");
+						System.out.println("削除");
+					}
+					//更新済み講師情報全件取得
+					List<classInfo> classList = cdm.classDBSelect();
+
+					request.setAttribute("classList", classList);
+				} catch (Exception e) {
+					// TODO 自動生成された catch ブロック
+					e.printStackTrace();
+				}
+			}//class
+
 	//講師管理画面指定時の処理
 	private void teacherUpdate(HttpServletRequest request, teacherDBManage tdm) {
 
@@ -125,44 +161,7 @@ public class ManageUpdateControl extends HttpServlet {
 				e.printStackTrace();
 			}
 		}//teacher
-	//クラス管理画面指定時の処理
-	private void classUpdate(HttpServletRequest request, classDBManage cdm) {
 
-
-			//送信されたクラス情報取得
-			classInfo ci = new classInfo(
-					request.getParameter("classID")==null?""//true
-							:request.getParameter("classID")//false
-					,request.getParameter("className")
-
-					);
-
-			try {
-				//ページ情報指定
-				content_page = "/manage/class_manage.jsp";
-				page_title = "クラス管理画面";
-
-				if(request.getParameter("regist_class") != null ){
-					cdm.classDBUpdate(ci, DBAccess.INSERT, "登録");
-					System.out.println("登録");
-				}
-
-				if(request.getParameter("delete_class") != null){
-					cdm.classDBUpdate(ci, DBAccess.DELETE, "削除");
-					System.out.println("削除");
-				}
-				//更新済み講師情報全件取得
-				List<classInfo> classList = cdm.classDBSelect();
-
-				request.setAttribute("classList", classList);
-				System.out.println(classList);
-
-
-			} catch (Exception e) {
-				// TODO 自動生成された catch ブロック
-				e.printStackTrace();
-			}
-		}//class
 	private void getIncludeFile(HttpServletRequest request) {
 		css.add("/Sotsuken/bootstrap/css/bootstrap.min.css");
 		css.add("/Sotsuken/css/font-awesome.min.css");
