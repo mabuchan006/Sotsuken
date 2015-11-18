@@ -98,7 +98,7 @@
 
 
 <%
-for (int cnt1=1; cnt1<=4; cnt1++) {%>
+for (int cnt1=1; cnt1<=4; cnt1++) {%>  <!-- 1限～4限 -->
 
 	<% if (cnt1==1){ %>
 <tr class="info">
@@ -121,24 +121,25 @@ for (int cnt1=1; cnt1<=4; cnt1++) {%>
 	<%} %>
 
 
-	<%
-	for (int cnt2=0; cnt2<3; cnt2++) {%> <!-- 各項目（０：教科　１：講師　２：部屋） -->
 
-		<% for (int cnt3=0; cnt3<30; cnt3++) {%> <!-- 30日分 -->
+	<%for (int cnt2=0; cnt2<3; cnt2++) {%> <!-- 各項目（０：教科　１：講師　２：部屋） -->
+
+		<% for (int cnt3=0; cnt3<28; cnt3++) {%> <!-- 28日分 -->
+			<c:forEach var="masitem" items="${mList }" >
 			<%if (cnt1==1){ %>
 
 				<%if(cnt2==0){ %>
-					<td class="info" nowrap>${ dList[0].date }</td>
-
+					<td class="info" nowrap>${masitem.subjectName }</td>
 				<%} %>
 				<%if(cnt2==1){ %>
-				<td class="info" nowrap>講師</td>
+				<td class="info" nowrap>${masitem.teacherName }</td>
 				<%} %>
 				<%if(cnt2==2){ %>
-				<td class="info" nowrap>へや</td>
+				<td class="info" nowrap>${masitem.roomName }</td>
 				<%} %>
 
 			<%} %>
+			</c:forEach>
 
 			<%
 			if (cnt1==2){ %>
@@ -156,7 +157,9 @@ for (int cnt1=1; cnt1<=4; cnt1++) {%>
 			<%} %>
 
 		<%} %>
+
 		</tr>
+
 	<%} %>
 
 <%} %>
