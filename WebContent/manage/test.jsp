@@ -25,14 +25,14 @@
 			</tr>
 			<!-- 2行目：教室 -->
 			<tr class="sldRow">
-				<td >
-					<p id="sldCell100">教室</p>
+				<td class="sldCll">
+					<div class="sldCell100">教室</div>
 				</td>
 			</tr>
 			<!-- 3行目：講師 -->
 			<tr class="sldRow">
-				<td >
-					<p id="sldCell101">講師</p>
+				<td class="sldCll">
+					<div class="sldCell101">講師</div>
 				</td>
 			</tr>
 		</table>
