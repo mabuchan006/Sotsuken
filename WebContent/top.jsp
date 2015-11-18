@@ -67,7 +67,7 @@
                     <div class="col-md-3" style="cursor: pointer">
 
                         <div class="menu-item blue">
-                            <a href="http://localhost:8080/Sotsuken/timeTable/timeTable_master.jsp" data-toggle="modal">
+                            <a href="../Sotsuken/publicView" data-toggle="modal">
                                 <i class="fa fa-mortar-board"></i>
                                 <p>R</p>
                             </a>
