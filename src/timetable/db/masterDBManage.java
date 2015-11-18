@@ -15,7 +15,11 @@ public class masterDBManage extends DBAccess {
 		super(DRIVER_NAME);
 		StringBuilder sb = new StringBuilder();
 		//TODO テーブルを柔軟にすること。
-		sb.append("SELECT * FROM tbl_master_R4A1timetable order by date asc");
+		sb.append("SELECT timetable.period, subject.subjectName, timetable.date, timetable.classID, room.roomName, timetable.teacherName ");
+		sb.append("FROM tbl_master_R4A1timetable timetable ");
+		sb.append("INNER JOIN tbl_subject subject on timetable.subjectID = subject.subjectID ");
+		sb.append("INNER JOIN tbl_room room on timetable.roomID = room.roomID ");
+		sb.append("ORDER BY date ASC");
 		selectSQL = sb.toString();
 		sb.setLength(0);
 
@@ -44,10 +48,10 @@ sb.setLength(0);
 			while(rs.next()) {
 				masterinfo = new masterInfo(
 						rs.getInt("period"),
-						rs.getString("subjectID"),
+						rs.getString("subjectName"),
 						rs.getDate("date"),
 						rs.getString("classID"),
-						rs.getString("roomID"),
+						rs.getString("roomName"),
 						rs.getString("teacherName")
 						);
 				timeTableMasterList.add(masterinfo);

@@ -10,8 +10,7 @@
 <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
 
 <!-- ドラッグアンドドロップのJS -->
-<script type="text/javascript" src="../js/drag_drop/f_drag.js"></script>
-<script type="text/javascript" src="../js/drag_drop/f_drop.js"></script>
+<script type="text/javascript" src="../js/dragdrop.js"></script>
 
 <style>
 h1 { padding: .2em; margin: 0; font-size:14px; }
