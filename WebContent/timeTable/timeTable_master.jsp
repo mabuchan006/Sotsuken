@@ -1,5 +1,10 @@
+<%@page import="timetable.db.masterInfo"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.sun.xml.internal.bind.v2.schemagen.xmlschema.Import"%>
 <%@ page pageEncoding="UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+
 
         <!-- Start Logo Section --><!-- ヘッダー部分 -->
         <section id="logo-section" class="text-center">
@@ -95,8 +100,6 @@
 				<th nowrap>	${dateitem.date}</th>
 				</c:forEach>
 
-
-	<c:forEach var="masitem" items="${mList }" />
 <%for (int cnt1=1; cnt1<=4; cnt1++) {%>  <!-- 1限～4限 -->
 
 	<% if (cnt1==1){ %>
@@ -119,39 +122,56 @@
 				<th class="warning" rowspan=3><%=cnt1 %></th>
 	<%} %>
 
-
-
 	<%for (int cnt2=0; cnt2<3; cnt2++) {%> <!-- 各項目（０：教科　１：講師　２：部屋） -->
 
 		<% for (int cnt3=0; cnt3<28; cnt3++) {%> <!-- 28日分 -->
-
+		<% pageContext.setAttribute("index", cnt3); %>
 			<%if (cnt1==1){ %>
-
 				<%if(cnt2==0){ %>
-					<td class="info" nowrap>${masitem.subjectName }</td>
+				<td class="info" nowrap>${period1List[index].subjectName}</td>
 				<%} %>
 				<%if(cnt2==1){ %>
-				<td class="info" nowrap>${masitem.teacherName }</td>
+				<td class="info" nowrap>${period1List[index].teacherName}</td>
 				<%} %>
 				<%if(cnt2==2){ %>
-				<td class="info" nowrap>${masitem.roomName }</td>
+				<td class="info" nowrap>${period1List[index].roomName}</td>
 				<%} %>
-
 			<%} %>
 
-			<%
-			if (cnt1==2){ %>
-				<td class="danger" nowrap>1</td>
+			<%if (cnt1==2){ %>
+				<%if(cnt2==0){ %>
+				<td class="danger" nowrap>${period2List[index].subjectName}</td>
+				<%} %>
+				<%if(cnt2==1){ %>
+				<td class="danger" nowrap>${period2List[index].teacherName}</td>
+				<%} %>
+				<%if(cnt2==2){ %>
+				<td class="danger" nowrap>${period2List[index].roomName}</td>
+				<%} %>
 			<%} %>
 
-			<%
-			if (cnt1==3){ %>
-				<td class="success" nowrap>2</td>
+			<%if (cnt1==3){ %>
+				<%if(cnt2==0){ %>
+				<td class="success" nowrap>${period3List[index].subjectName}</td>
+				<%} %>
+				<%if(cnt2==1){ %>
+				<td class="success" nowrap>${period3List[index].teacherName}</td>
+				<%} %>
+				<%if(cnt2==2){ %>
+				<td class="success" nowrap>${period3List[index].roomName}</td>
+				<%} %>
 			<%} %>
 
-			<%
-			if (cnt1==4){ %>
-				<td class="warning" nowrap>3</td>
+			<%if (cnt1==4){ %>
+				<%if(cnt2==0){ %>
+				<td class="warning" nowrap>${period4List[index].subjectName}</td>
+				<%} %>
+				<%if(cnt2==1){ %>
+				<td class="warning" nowrap>${period4List[index].teacherName}</td>
+				<%} %>
+				<%if(cnt2==2){ %>
+				<td class="warning" nowrap>${period4List[index].roomName}</td>
+				<%} %>
 			<%} %>
 
 		<%} %>

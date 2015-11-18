@@ -26,7 +26,11 @@ public class timeTableMaster extends HttpServlet {
 	masterDBManage mDM = new masterDBManage();//マスターDBマネージャの起動
 
 	private List<masterInfo> dList; //時間割マスタ保持用
-	private List<masterInfo> mList; //時間割マスタ保持用
+	private List<masterInfo> period1List; //時間割マスタ保持用
+	private List<masterInfo> period2List; //時間割マスタ保持用
+	private List<masterInfo> period3List; //時間割マスタ保持用
+	private List<masterInfo> period4List; //時間割マスタ保持用
+
 
     /**
      * @see HttpServlet#HttpServlet()
@@ -56,9 +60,15 @@ public class timeTableMaster extends HttpServlet {
 
 			try {
 				 dList = mDM.dateSelect(); //日付取得
-				 mList = mDM.selectTimeTable();//マスタ時間割取得
+				 period1List = mDM.selectTimeTable(1);//1限目
+				 period2List = mDM.selectTimeTable(2);//2限目
+				 period3List = mDM.selectTimeTable(3);//3限目
+				 period4List = mDM.selectTimeTable(4);//4限目
 				 request.setAttribute("dList", dList);
-				 request.setAttribute("mList", mList);
+				 request.setAttribute("period1List", period1List);
+				 request.setAttribute("period2List", period2List);
+				 request.setAttribute("period3List", period3List);
+				 request.setAttribute("period4List", period4List);
 			} catch (Exception e) {
 				// TODO 自動生成された catch ブロック
 				e.printStackTrace();
