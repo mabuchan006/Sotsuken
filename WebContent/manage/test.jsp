@@ -8,7 +8,7 @@
 <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
 <script src="../js/belongings.js"></script>
 
-<!-- テスト用css  関連されない問題点①-->
+<!-- テスト用css -->
 <link href="../css/test.css" rel="stylesheet" type="text/css">
 
 <title>テスト</title>
@@ -23,22 +23,16 @@
 			<tr class="info" >
 				<td>コンサイ</td>
 			</tr>
-			<!-- 2行目：持ち物 -->
-			<tr class="sld">
-				<td style="padding:0px">
-					<div id="sldCell100" style="padding:1px; height:22px;">スライド対象セル</div>
+			<!-- 2行目：教室 -->
+			<tr class="sldRow">
+				<td >
+					<p id="sldCell100">教室</p>
 				</td>
 			</tr>
-			<!-- 3行目：教室 -->
-			<tr class="info">
+			<!-- 3行目：講師 -->
+			<tr class="sldRow">
 				<td >
-					教室
-				</td>
-			</tr>
-			<!-- 4行目：講師 -->
-			<tr class="info">
-				<td >
-					講師
+					<p id="sldCell101">講師</p>
 				</td>
 			</tr>
 		</table>

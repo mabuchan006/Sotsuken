@@ -1,7 +1,22 @@
+/*$(function cd() {
+	try {
+		$("#sldRow").css("display","table-row");
+	} catch(e) {}
+});
+*/
 $(function belongings () {
-	$("#fade_btn").on("click",function () {
-		$("sldCell100").hide();
-		$($(this).attr( "href" ) ) .fadeToggle();
+	var speed = 200;
+	$("#fade_btn").click(function() {
+		$("#sldCell100").fadeToggle(speed);
+		$("#sldCell101").fadeToggle(speed);
+/*		setTimeout(function() {
+			$("sldRow").hide();
+		} , speed);
+
+
+		$("#sldCell100").css("background-color","#6699ff");
+		$("#sldCell101").css("background-color","#6699ff");
+		$("#sldCell101").css("height","200px");
+*/
 	});
-	return false;
 });
