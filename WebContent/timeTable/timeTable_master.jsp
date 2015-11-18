@@ -96,9 +96,8 @@
 				</c:forEach>
 
 
-
-<%
-for (int cnt1=1; cnt1<=4; cnt1++) {%>  <!-- 1限～4限 -->
+	<c:forEach var="masitem" items="${mList }" />
+<%for (int cnt1=1; cnt1<=4; cnt1++) {%>  <!-- 1限～4限 -->
 
 	<% if (cnt1==1){ %>
 <tr class="info">
@@ -125,7 +124,7 @@ for (int cnt1=1; cnt1<=4; cnt1++) {%>  <!-- 1限～4限 -->
 	<%for (int cnt2=0; cnt2<3; cnt2++) {%> <!-- 各項目（０：教科　１：講師　２：部屋） -->
 
 		<% for (int cnt3=0; cnt3<28; cnt3++) {%> <!-- 28日分 -->
-			<c:forEach var="masitem" items="${mList }" >
+
 			<%if (cnt1==1){ %>
 
 				<%if(cnt2==0){ %>
@@ -139,7 +138,6 @@ for (int cnt1=1; cnt1<=4; cnt1++) {%>  <!-- 1限～4限 -->
 				<%} %>
 
 			<%} %>
-			</c:forEach>
 
 			<%
 			if (cnt1==2){ %>
@@ -157,11 +155,8 @@ for (int cnt1=1; cnt1<=4; cnt1++) {%>  <!-- 1限～4限 -->
 			<%} %>
 
 		<%} %>
-
 		</tr>
-
 	<%} %>
-
 <%} %>
 			</tbody>
 		</table>
