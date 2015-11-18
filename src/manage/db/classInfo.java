@@ -1,11 +1,9 @@
 package manage.db;
-
 import java.io.Serializable;
-//クラス情報
-public class classInfo implements Serializable{
-	//INSERT INTO tbl_class (classID, className) VALUES
-	private String classID;
 
+public class classInfo implements Serializable {
+
+	private String classID;
 	private String className;
 
 	public classInfo() {
@@ -34,5 +32,6 @@ public class classInfo implements Serializable{
 	public void setClassName(String className) {
 		this.className = className;
 	}
+
 
 }

@@ -23,7 +23,7 @@ import manage.db.teacherInfo;
 @WebServlet("/ManageUpdate")
 public class ManageUpdateControl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	//とりあえず講師画面
+	//
 	private String content_page;
 	private String page_title ;
 	ArrayList<String> css = new ArrayList<String>(); //css用List
@@ -153,7 +153,9 @@ public class ManageUpdateControl extends HttpServlet {
 				}
 				//更新済み講師情報全件取得
 				List<classInfo> classList = cdm.classDBSelect();
+
 				request.setAttribute("classList", classList);
+				System.out.println(classList);
 
 
 			} catch (Exception e) {

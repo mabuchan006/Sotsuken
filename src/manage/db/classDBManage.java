@@ -60,6 +60,7 @@ public class classDBManage extends DBAccess{
 				//クラス要素を1件ずつリストに追加
 				classList.add(classinfo);
 
+
 			}//while
 
 			disConnection();//切断
