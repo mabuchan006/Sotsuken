@@ -1,7 +1,9 @@
-$('.popbox').popbox({
-	'open'				 :	 '.open',
-	'box'					 :	 '.box',
-	'arrow'				 :	 '.arrow',
-	'arrow-border'	 :	 '.arrow-border',
-	'close'				 :	 '.close'
+$(document).ready(function(){
+	$('.popbox').popbox({
+		'open'				 :	 '.open',
+		'box'					 :	 '.box',
+		'arrow'				 :	 '.arrow',
+		'arrow-border'	 :	 '.arrow-border',
+		'close'				 :	 '.close'
+	});
 });
