@@ -24,22 +24,29 @@
 <link href="${itemcss}" rel="stylesheet" type="text/css" >
 </c:forEach>
 </c:if>
+
 </head>
 
 <body>
-<div class="row ">
+<div class="pure-container" data-effect="pure-effect-scaleRotate">
+            <input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"/>
+            <label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"><span class="pure-toggle-icon"></span></label>
 
- <ul class="nav nav-tabs">
-<li><a href="#tab1" data-toggle="tab">管理者メニュー</a></li>
-<li><a href="#tab2" data-toggle="tab">時間割管理</a></li>
-<li><a href="../ManageUpdate?page=teacher_manage" data-toggle="tab">講師管理</a></li>
-<li><a href="../ManageUpdate?page=subject_manage" data-toggle="tab">科目管理</a></li>
-<li><a href="../ManageUpdate?page=class_manage" data-toggle="tab">クラス管理</a></li>
-<li><a href="time_manage.jsp" data-toggle="tab">コマ割管理</a></li>
-</ul>
-</div>
+            <nav class="pure-drawer" data-position="left">
+
+                <p style="padding: 100px 20px; margin: 0;">管理者メニュー</p>
+            </nav>
+
+            <div class="pure-pusher-container ">
+                <div class="pure-pusher">
 
 	<jsp:include page="${content_page}" />
+
+
+	</div>
+	</div>
+	<label class="pure-overlay" for="pure-toggle-left" data-overlay="left"></label>
+        </div>
 
 
 </body>

@@ -39,7 +39,7 @@
 
 
 
-        <link rel="stylesheet" href="../css/pure-drawer.css"/>
+
         <link href="../css/style.css" rel="stylesheet">
     </head>
 

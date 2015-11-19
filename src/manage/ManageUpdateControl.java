@@ -45,7 +45,7 @@ public class ManageUpdateControl extends HttpServlet {
 		//文字コードutf8
 		request.setCharacterEncoding("UTF-8");
 		//jspからのページ情報取得
-		String get_page = request.getParameter("page")==null?"class_manage"
+		String get_page = request.getParameter("page")==null?"divide_manage"
 				:request.getParameter("page");
 		//使用するcss,jsファイルの適用
 		getIncludeFile(request);
@@ -62,6 +62,14 @@ public class ManageUpdateControl extends HttpServlet {
 			classDBManage cdm = new classDBManage();
 			classUpdate(request, cdm);
 		}//if
+
+		if(get_page == "divide_manage"){
+
+			//ページ情報指定
+			content_page = "/manage/time_divide_manege.jsp";
+			page_title = "コマ割り管理画面";
+
+		}
 
 		//ページデータセット
 		try {
@@ -167,6 +175,7 @@ public class ManageUpdateControl extends HttpServlet {
 		css.add("/Sotsuken/css/font-awesome.min.css");
 		css.add("/Sotsuken/css/custom.css");
 		css.add("/Sotsuken/css/style.css");
+		css.add("/Sotsuken/css/pure-drawer.css");
 
 
 
