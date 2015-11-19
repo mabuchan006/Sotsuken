@@ -23,13 +23,17 @@ public class timeTableMaster extends HttpServlet {
 
 	ArrayList<String> css = new ArrayList<String>(); //css用List
 	ArrayList<String> js = new ArrayList<String>(); //JavaScript用List
-	masterDBManage mDM = new masterDBManage();//マスターDBマネージャの起動
+
 
 	private List<masterInfo> dList; //時間割マスタ保持用
 	private List<masterInfo> period1List; //時間割マスタ保持用
 	private List<masterInfo> period2List; //時間割マスタ保持用
 	private List<masterInfo> period3List; //時間割マスタ保持用
 	private List<masterInfo> period4List; //時間割マスタ保持用
+
+	String content_page ="";
+	String page_title = "";
+	String chooseTableName="";
 
 
     /**
@@ -44,10 +48,32 @@ public class timeTableMaster extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String page = request.getParameter("page");
+		switch (page) {
+		case "R":
+			 page_title = "R4A1";
+			 chooseTableName = "tbl_master_R4A1timetable";
+			break;
+		case "S":
+			page_title = "";
+			break;
+		case "J":
+			page_title = "";
+			break;
+		case "A":
+			page_title = "";
+			break;
+		case "exam":
+			page_title = "";
+			break;
+		default:
+			//TODO:redirect処理topに。
+			break;
+		}//switch end(tbl名切り替え)
 
 		//●確定時間割情報表示機能
-		String content_page = "/timeTable/timeTable_master.jsp"; //見せたい画面のパスを入れる
-		String page_title = "R4A1"; //タブに表示される表示名を入力
+		content_page = "/timeTable/R_master.jsp";
+		masterDBManage mDM = new masterDBManage(chooseTableName);//マスターDBマネージャの起動
 		//timeTable_master.jspで使用
 			css.add("/Sotsuken/bootstrap/css/bootstrap.min.css");
 			css.add("/Sotsuken/css/font-awesome.min.css");

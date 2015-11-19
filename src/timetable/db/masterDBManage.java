@@ -17,48 +17,40 @@ public class masterDBManage extends DBAccess {
 
 	private String dateSQL; //日付取得用
 
-	public masterDBManage() {
+	public masterDBManage(String chooseTableName) {
 		super(DRIVER_NAME);
 		StringBuilder sb = new StringBuilder();
 		//TODO テーブルを柔軟にすること。
-		sb.append("SELECT timetable.period, subject.subjectName, timetable.date, timetable.classID, room.roomName, timetable.teacherName ");
-		sb.append("FROM tbl_master_R4A1timetable timetable ");
-		sb.append("INNER JOIN tbl_subject subject on timetable.subjectID = subject.subjectID ");
-		sb.append("INNER JOIN tbl_room room on timetable.roomID = room.roomID ");
-		sb.append("Where timetable.period = '1' ORDER BY date,period ASC");
-		period1_SQL = sb.toString();
-		sb.setLength(0);
+		period1_SQL = String.format("SELECT timetable.period, subject.subjectName, timetable.date, timetable.classID, room.roomName, timetable.teacherName "
+							 +"FROM %s timetable "
+                             +"INNER JOIN tbl_subject subject on timetable.subjectID = subject.subjectID "
+                             +"INNER JOIN tbl_room room on timetable.roomID = room.roomID "
+                             +"Where timetable.period = '1' ORDER BY date,period ASC",chooseTableName);
 
-		sb.append("SELECT timetable.period, subject.subjectName, timetable.date, timetable.classID, room.roomName, timetable.teacherName ");
-		sb.append("FROM tbl_master_R4A1timetable timetable ");
-		sb.append("INNER JOIN tbl_subject subject on timetable.subjectID = subject.subjectID ");
-		sb.append("INNER JOIN tbl_room room on timetable.roomID = room.roomID ");
-		sb.append("Where timetable.period = '2' ORDER BY date,period ASC");
-		period2_SQL = sb.toString();
-		sb.setLength(0);
 
-		sb.append("SELECT timetable.period, subject.subjectName, timetable.date, timetable.classID, room.roomName, timetable.teacherName ");
-		sb.append("FROM tbl_master_R4A1timetable timetable ");
-		sb.append("INNER JOIN tbl_subject subject on timetable.subjectID = subject.subjectID ");
-		sb.append("INNER JOIN tbl_room room on timetable.roomID = room.roomID ");
-		sb.append("Where timetable.period = '3' ORDER BY date,period ASC");
-		period3_SQL = sb.toString();
-		sb.setLength(0);
+		period2_SQL =String.format("SELECT timetable.period, subject.subjectName, timetable.date, timetable.classID, room.roomName, timetable.teacherName "
+                             +"FROM %s timetable "
+                             +"INNER JOIN tbl_subject subject on timetable.subjectID = subject.subjectID "
+                             +"INNER JOIN tbl_room room on timetable.roomID = room.roomID "
+                             +"Where timetable.period = '2' ORDER BY date,period ASC",chooseTableName);
 
-		sb.append("SELECT timetable.period, subject.subjectName, timetable.date, timetable.classID, room.roomName, timetable.teacherName ");
-		sb.append("FROM tbl_master_R4A1timetable timetable ");
-		sb.append("INNER JOIN tbl_subject subject on timetable.subjectID = subject.subjectID ");
-		sb.append("INNER JOIN tbl_room room on timetable.roomID = room.roomID ");
-		sb.append("Where timetable.period = '4' ORDER BY date,period ASC");
-		period4_SQL = sb.toString();
-		sb.setLength(0);
+
+		period3_SQL =String.format("SELECT timetable.period, subject.subjectName, timetable.date, timetable.classID, room.roomName, timetable.teacherName "
+                             +"FROM %s timetable "
+                             +"INNER JOIN tbl_subject subject on timetable.subjectID = subject.subjectID "
+                             +"INNER JOIN tbl_room room on timetable.roomID = room.roomID "
+                             +"Where timetable.period = '3' ORDER BY date,period ASC",chooseTableName);
+
+		period4_SQL =String.format("SELECT timetable.period, subject.subjectName, timetable.date, timetable.classID, room.roomName, timetable.teacherName "
+                             +"FROM %s timetable "
+                             +"INNER JOIN tbl_subject subject on timetable.subjectID = subject.subjectID "
+                             +"INNER JOIN tbl_room room on timetable.roomID = room.roomID "
+                             +"Where timetable.period = '4' ORDER BY date,period ASC",chooseTableName);
 
 
 
 
-		sb.append("SELECT date FROM tbl_master_R4A1timetable GROUP BY date order by date asc");
-		dateSQL = sb.toString();
-sb.setLength(0);
+		dateSQL =String.format("SELECT date FROM %s GROUP BY date order by date asc",chooseTableName);
 	}
 	/**
 	 * @param
@@ -103,6 +95,7 @@ sb.setLength(0);
 						);
 				timeTableMasterList.add(masterinfo);
 			}
+			disConnection();
 		return timeTableMasterList;
 
 	}
@@ -133,6 +126,7 @@ sb.setLength(0);
 						"");
 				timeTableDateList.add(masterinfo);
 			}
+			disConnection();
 		return timeTableDateList;
 
 	}

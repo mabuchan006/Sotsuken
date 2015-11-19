@@ -67,7 +67,7 @@
                     <div class="col-md-3" style="cursor: pointer">
 
                         <div class="menu-item blue">
-                            <a href="../Sotsuken/publicView" data-toggle="modal">
+                            <a href="../Sotsuken/publicView?page=R" data-toggle="modal">
                                 <i class="fa fa-mortar-board"></i>
                                 <p>R</p>
                             </a>
@@ -76,7 +76,7 @@
 
                         <div class="col-md-3" style="cursor: pointer">
                         <div class="menu-item red">
-                            <a href="http://localhost:8080/Sotsuken/timeTable/timeTable_master.jsp" data-toggle="modal">
+                            <a href="../Sotsuken/publicView?page=S" data-toggle="modal">
                                 <i class="fa fa-android"></i>
                                 <p>S</p>
                             </a>
@@ -85,7 +85,7 @@
 
                         <div class="col-md-3" style="cursor: pointer">
                         <div class="menu-item green">
-                            <a href="http://localhost:8080/Sotsuken/timeTable/timeTable_master.jsp" data-toggle="modal">
+                            <a href="../Sotsuken/publicView?page=J" data-toggle="modal">
                                 <i class="fa fa-paint-brush"></i>
                                 <p>J</p>
                             </a>
@@ -94,7 +94,7 @@
 
                         <div class="col-md-3" style="cursor: pointer">
                         <div class="menu-item yellow">
-                            <a href="http://localhost:8080/Sotsuken/timeTable/timeTable_master.jsp" data-toggle="modal">
+                            <a href="../Sotsuken/publicView?page=A" data-toggle="modal">
                                 <i class="fa fa-book"></i>
                                 <p>A</p>
                             </a>
@@ -104,7 +104,7 @@
                          <div class="row">
                             <div class="col-md-6" style="cursor: pointer">
                                 <div class="menu-item color responsive">
-                                    <a href="http://localhost:8080/Sotsuken/timeTable/timeTable_master.jsp" data-toggle="modal">
+                                    <a href="../Sotsuken/publicView?page=exam" data-toggle="modal">
                                         <i class="fa fa-file-text"></i>
                                         <p>exam</p>
                                     </a>
