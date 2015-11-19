@@ -12,7 +12,7 @@ function f_drag( e ) {
 
 //ドロップ
 function f_drop( e ) {
-	$( ".drag-target" ).droppable({
+	$( ".drop-target" ).droppable({
 		drop: function( e, ui ) {
 
 			//子要素の取得
