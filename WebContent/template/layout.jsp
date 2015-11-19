@@ -25,8 +25,6 @@
 </c:forEach>
 </c:if>
 
-	<!-- ドロワーメニュー（消す予定） -->
-		<link rel="stylesheet" href="../css/pure-drawer.css"/>
 </head>
 
 <body>
@@ -43,8 +41,8 @@
                 <div class="pure-pusher">
 
 	<jsp:include page="${content_page}" />
-	
-	
+
+
 	</div>
 	</div>
 	<label class="pure-overlay" for="pure-toggle-left" data-overlay="left"></label>
