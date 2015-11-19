@@ -182,10 +182,10 @@ $(function( e ){
 
 				<td class="size">802</td>
 				<td class="size">
-					<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS802-1"></textarea></p>
-					<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS802-2"></textarea></p>
-					<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS802-3"></textarea></p>
-					<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS802-4"></textarea></p>
+					<div class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS802-1"></textarea></div>
+					<div class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS802-2"></textarea></div>
+					<div class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS802-3"></textarea></div>
+					<div class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS802-4"></textarea></div>
 				</td>
 
 				<td class="size">803</td>
