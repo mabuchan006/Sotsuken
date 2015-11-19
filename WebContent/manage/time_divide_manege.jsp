@@ -10,8 +10,7 @@
         <meta name="author" content="">
 <!-- Bootstrap Core CSS -->
         <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<!-- ドロワーメニュー -->
-		<link rel="stylesheet" href="../css/pure-drawer.css"/>
+
         <!-- Font Awesome CSS -->
         <link href="../css/font-awesome.min.css" rel="stylesheet">
 
@@ -62,17 +61,6 @@ $(function( e ){
 
 <!-- タグ -->
 
-<div class="pure-container" data-effect="pure-effect-scaleRotate">
-            <input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"/>
-            <label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"><span class="pure-toggle-icon"></span></label>
-
-            <nav class="pure-drawer" data-position="left">
-
-                <p style="padding: 100px 20px; margin: 0;">管理者メニュー</p>
-            </nav>
-
-            <div class="pure-pusher-container ">
-                <div class="pure-pusher">
 
 
         <!-- Start Logo Section --><!-- ヘッダー部分 -->
@@ -495,7 +483,6 @@ $(function( e ){
 			</table>
 		</div>
 	</div>
-	<label class="pure-overlay" for="pure-toggle-left" data-overlay="left"></label>
-        </div>
+
 </body>
 </html>
