@@ -31,9 +31,9 @@ public class timeTableMaster extends HttpServlet {
 	private List<masterInfo> period3List; //時間割マスタ保持用
 	private List<masterInfo> period4List; //時間割マスタ保持用
 
-	String content_page ="";
-	String page_title = "";
-	String chooseTableName="";
+	private String content_page ="";
+	private String page_title = "";
+	private String chooseTableName="";
 
 
     /**
@@ -53,6 +53,7 @@ public class timeTableMaster extends HttpServlet {
 		case "R":
 			 page_title = "R4A1";
 			 chooseTableName = "tbl_master_R4A1timetable";
+			 content_page = "/timeTable/R_master.jsp";
 			break;
 		case "S":
 			page_title = "";
@@ -72,7 +73,6 @@ public class timeTableMaster extends HttpServlet {
 		}//switch end(tbl名切り替え)
 
 		//●確定時間割情報表示機能
-		content_page = "/timeTable/R_master.jsp";
 		masterDBManage mDM = new masterDBManage(chooseTableName);//マスターDBマネージャの起動
 		//timeTable_master.jspで使用
 			css.add("/Sotsuken/bootstrap/css/bootstrap.min.css");
