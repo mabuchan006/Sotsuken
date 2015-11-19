@@ -251,7 +251,7 @@ body {
   overflow-y: auto;
   left: 0;
   z-index: 2;
-  background-color: #fff;
+  background-color: #202020;
   -webkit-transition-property: -webkit-transform;
           transition-property: transform;
   -webkit-transition-duration: 500ms;

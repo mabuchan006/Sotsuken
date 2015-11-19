@@ -44,7 +44,7 @@
     </head>
 
     <body >
-        <div class="pure-container" data-effect="pure-effect-push">
+        <div class="pure-container" data-effect="pure-effect-scaleRotate">
             <input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"/>
             <label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"><span class="pure-toggle-icon"></span></label>
 
