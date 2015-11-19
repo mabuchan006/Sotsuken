@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html >
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -10,7 +10,8 @@
         <meta name="author" content="">
 <!-- Bootstrap Core CSS -->
         <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+		<!-- ドロワーメニュー -->
+		<link rel="stylesheet" href="../css/pure-drawer.css"/>
         <!-- Font Awesome CSS -->
         <link href="../css/font-awesome.min.css" rel="stylesheet">
 
@@ -60,15 +61,19 @@ $(function( e ){
 <body>
 
 <!-- タグ -->
-<ul class="nav nav-tabs ">
-<li><a href="#tab1" data-toggle="tab">管理者メニュー</a></li>
-<li><a href="#tab2" data-toggle="tab">時間割管理</a></li>
-<li><a href="#tab2" data-toggle="tab">講師管理</a></li>
-<li><a href="#tab2" data-toggle="tab">科目管理</a></li>
-<li><a href="#tab2" data-toggle="tab">クラス管理</a></li>
-<li class="active"><a href="#tab2" data-toggle="tab">コマ管理</a></li>
-</ul>
-<!-- タグ終了 -->
+
+<div class="pure-container" data-effect="pure-effect-scaleRotate">
+            <input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"/>
+            <label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"><span class="pure-toggle-icon"></span></label>
+
+            <nav class="pure-drawer" data-position="left">
+
+                <p style="padding: 100px 20px; margin: 0;">管理者メニュー</p>
+            </nav>
+
+            <div class="pure-pusher-container ">
+                <div class="pure-pusher">
+
 
         <!-- Start Logo Section --><!-- ヘッダー部分 -->
         <section id="logo-section" class="text-center">
@@ -490,5 +495,7 @@ $(function( e ){
 			</table>
 		</div>
 	</div>
+	<label class="pure-overlay" for="pure-toggle-left" data-overlay="left"></label>
+        </div>
 </body>
 </html>
