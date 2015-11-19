@@ -8,36 +8,26 @@
 <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
 <script src="../js/belongings.js"></script>
 
-<!-- テスト用css -->
-<link href="../css/test.css" rel="stylesheet" type="text/css">
+<!-- PopBox -->
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/popbox.js" type="text/javascript"></script>
+
+<!-- CSS -->
+<link href="css/popbox.css" type="text/css" rel="stylesheet">
 
 <title>テスト</title>
 </head>
 <body>
-
-<form>
-	<input type="button" id="fade_btn" value="test"><br/><br/>
-
-		<table class="tb">
-			<!-- 1行目：授業 -->
-			<tr class="info" >
-				<td>コンサイ</td>
-			</tr>
-			<!-- 2行目：教室 -->
-			<tr class="sldRow">
-				<td >
-					<p id="sldCell100">教室</p>
-				</td>
-			</tr>
-			<!-- 3行目：講師 -->
-			<tr class="sldRow">
-				<td >
-					<p id="sldCell101">講師</p>
-				</td>
-			</tr>
-		</table>
-
-</form>
-
+<div class='popbox'>
+    <a class='open' href='#'>Click Here!</a>
+    <div class='collapse'>                       <!-- ポップアップ全体 -->
+        <div class='box'>                        <!-- ポップアップ -->
+            <div class='arrow'></div>            <!-- ポップアップの矢印 -->
+            <div class='arrow-border'></div>     <!-- ポップアップの外線 -->
+            Content in PopBox goes here          <!-- ポップアップ内のコンテンツ -->
+            <a href="#" class="close">close</a>  <!-- closeリンク -->
+        </div>
+    </div>
+</div>
 </body>
 </html>
