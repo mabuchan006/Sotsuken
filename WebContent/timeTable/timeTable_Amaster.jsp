@@ -85,13 +85,13 @@
   <div  class="container">
     <div class="table-responsive">
     <table class="table table-striped table-bordered text-center table-hover;">
-    <thead>
-
-      </thead>
-		<tbody>
-			<tr class="purple2">
+    <thead >
+	<tr class="purple2 ">
 				<th colspan="31">10月</th>
 			</tr>
+      </thead>
+		<tbody>
+
 
 
 			<tr class="purple1">
@@ -105,22 +105,22 @@
 
 	<% if (cnt1==1){ %>
 <tr class="info">
-				<th class="info" rowspan=3><%=cnt1 %></th>
+				<th class="info " rowspan=3><%=cnt1 %></th>
 	<%} %>
 
 	<% if (cnt1==2){ %>
 <tr class="danger">
-				<th class="info" rowspan=3><%=cnt1 %></th>
+				<th class="info " rowspan=3><%=cnt1 %></th>
 	<%} %>
 
 	<% if (cnt1==3){ %>
-<tr class="success">
-				<th class="success" rowspan=3><%=cnt1 %></th>
+<tr class="success ">
+				<th class="success " rowspan=3><%=cnt1 %></th>
 	<%} %>
 
 	<% if (cnt1==4){ %>
 <tr class="active">
-				<th class="warning" rowspan=3><%=cnt1 %></th>
+				<th class="warning " rowspan=3><%=cnt1 %></th>
 	<%} %>
 
 	<%for (int cnt2=0; cnt2<3; cnt2++) {%> <!-- 各項目（０：教科　１：講師　２：部屋） -->
