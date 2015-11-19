@@ -3,6 +3,7 @@
 <%@page import="com.sun.xml.internal.bind.v2.schemagen.xmlschema.Import"%>
 <%@ page pageEncoding="UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 
 
@@ -97,7 +98,7 @@
 
 				<th></th>
 				<c:forEach var="dateitem" items="${dList }">
-				<th nowrap>	${dateitem.date}</th>
+				<th nowrap><fmt:formatDate value="${dateitem.date}" pattern="dd日(E)"/></th>
 				</c:forEach>
 
 <%for (int cnt1=1; cnt1<=4; cnt1++) {%>  <!-- 1限～4限 -->
