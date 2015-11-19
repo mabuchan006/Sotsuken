@@ -82,7 +82,7 @@ $(function( e ){
 
 <!-- button -->
 
-<button class="btn btn-primary btn-lg col-md-1" data-toggle="modal" data-target="#myModal">
+<button class="btn btn-primary btn-lg col-md-1 fix" data-toggle="modal" data-target="#myModal">
     登録
 </button>
 
@@ -108,7 +108,7 @@ $(function( e ){
 
 <!-- button end -->
         <!-- カレンダー部分 -->
-<div class="form-group col-md-1">
+<div class="form-group col-md-1 col-md-offset-1">
 	<label for="mydate"></label>
 	<input type="text" class="form-control" id="mydate">
 </div>
@@ -121,7 +121,7 @@ $(function( e ){
 
 
 <!-- ドラッグ&ドロップ -->
-<div  class="col-md-1 ">
+<div  class="col-md-1 fix">
 	<div id="class">
 		<h1 >class</h1>
 		<div id="class-room">
