@@ -32,7 +32,10 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-
+        <!-- カレンダーJS読み込み -->
+<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-datepicker.min.css">
+<script type="text/javascript" src="../bootstrap/js/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript" src="../bootstrap/js/bootstrap-datepicker.js"></script>
 
 <!-- ドラッグアンドドロップとアコーディオン化 -->
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
@@ -104,6 +107,17 @@ $(function( e ){
 </div>
 
 <!-- button end -->
+        <!-- カレンダー部分 -->
+<div class="form-group col-md-1 col-md-offset-1">
+	<label for="mydate"></label>
+	<input type="text" class="form-control" id="mydate">
+</div>
+
+<div class="col-md-10"></div>
+</div>
+<!-- カレンダーEND -->
+
+
 
 
 <!-- ドラッグ&ドロップ -->
