@@ -68,7 +68,7 @@ public class timeTableMaster extends HttpServlet {
 			page_title = "";
 			break;
 		default:
-			//TODO:redirect処理topに。
+
 			break;
 		}//switch end(tbl名切り替え)
 
