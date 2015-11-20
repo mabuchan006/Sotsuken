@@ -24,6 +24,9 @@
 <!-- Custom Fonts -->
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
+<!-- Test_css -->
+<link href='test.css' rel='stylesheet' type='text/css'>
+
 <script src="../js/jquery-2.1.1.min.js"></script>
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script src="../js/jquery.appear.js"></script>
@@ -64,33 +67,24 @@
 </section>
 <!-- End Logo Section -->
 
-<!-- BootStrap_Test -->
-<h2>
-<div style="text-align:center;">
-<a href="javascript:void(0);"
+<!--
+<button type="button" id="h"
+	class="btn btn-lg btn-danger"
 	data-toggle="popover"
-	data-html="true"
-	data-placement="bottom"
-	data-title="Aipo.comのSプランに登録します。"
-	data-content="このプランでは期間やユーザー数など無制限に、完全無料でご利用いただけます。"
-	data-original-title=""
-	title="">この登録により何ができますか？
-</a>
-</div>
-</h2>
-
-
-
+	title="持ち物"
+	data-content="教科書">
+	クリック
+</button>
+ -->
 
 <div  class="container">
 <div class="table-responsive">
 <table class="table table-striped table-bordered text-center table-hover;">
 <thead>
-
 </thead>
 		<tbody>
-			<tr class="purple2">
 
+			<tr class="purple2">
 				<th colspan="15">10月</th>
 			</tr>
 
@@ -113,21 +107,20 @@
 			</tr>
 
 			<tr class="info probox">
-
-				<th class="info" rowspan=3>1</th>
-				<td>授業</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+				<th class="infos" rowspan=3>1</th>
+				<div class="one"><td>授業</td></div>
+				<div class="one"><td>授業</td></div>
+				<div class="one"><td>授業</td></div>
+				<div class="one"><td>授業</td></div>
+				<div class="one"><td>授業</td></div>
+				<div class="one"><td>授業</td></div>
+				<div class="one"><td>授業</td></div>
+				<div class="one"><td>授業</td></div>
+				<div class="one"><td>授業</td></div>
+				<div class="one"><td>授業</td></div>
+				<div class="one"><td>授業</td></div>
+				<div class="one"><td>授業</td></div>
+				<div class="one"><td>授業</td></div>
 			</tr>
 
 			<tr class="info">
