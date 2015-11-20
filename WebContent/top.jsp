@@ -67,7 +67,7 @@
                     <div class="col-md-3" style="cursor: pointer">
 
                         <div class="menu-item blue">
-                            <a href="../Sotsuken/publicView?page=R" data-toggle="modal">
+                            <a href="/Sotsuken/publicView?page=R4A1" data-toggle="modal">
                                 <i class="fa fa-mortar-board"></i>
                                 <p>R</p>
                             </a>

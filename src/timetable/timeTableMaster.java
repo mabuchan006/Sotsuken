@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import timetable.db.masterDBManage;
+import timetable.db.masterDBSwitch;
+import timetable.db.masterDBSwitch.masterDBSwitchInfo;
 import timetable.db.masterInfo;
 
 /**
@@ -31,9 +33,9 @@ public class timeTableMaster extends HttpServlet {
 	private List<masterInfo> period3List; //時間割マスタ保持用
 	private List<masterInfo> period4List; //時間割マスタ保持用
 
-	private String content_page ="";
-	private String page_title = "";
-	private String chooseTableName="";
+	private String content_page =""; //遷移先jsp
+	private String page_title = "";//ページ名
+	private String chooseTableName="";//選択時間割
 
 
     /**
@@ -49,31 +51,22 @@ public class timeTableMaster extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String page = request.getParameter("page");
-		switch (page) {
-		case "R":
-			 page_title = "R4A1";
-			 chooseTableName = "tbl_master_R4A1timetable";
-			 content_page = "/timeTable/R_master.jsp";
-			break;
-		case "S":
-			page_title = "";
-			break;
-		case "J":
-			page_title = "";
-			break;
-		case "A":
-			page_title = "";
-			break;
-		case "exam":
-			page_title = "";
-			break;
-		default:
 
-			break;
-		}//switch end(tbl名切り替え)
+		if( page != null ){
+			//DB切り替えClassへ（masteDBSwich.java）
+			 masterDBSwitch tblSW= new masterDBSwitch();
+			 masterDBSwitchInfo value =tblSW.switchDB(page);
+			page_title = value.page_title;
+			chooseTableName = value.chooseTableName;
+			content_page = value.content_page;
+		} else {
+			String url = "/Sotsuken/top.jsp";
+			response.sendRedirect(url);
+			return;
+		}
 
 		//●確定時間割情報表示機能
-		masterDBManage mDM = new masterDBManage(chooseTableName);//マスターDBマネージャの起動
+			masterDBManage mDM = new masterDBManage(chooseTableName);//マスターDBマネージャの起動
 		//timeTable_master.jspで使用
 			css.add("/Sotsuken/bootstrap/css/bootstrap.min.css");
 			css.add("/Sotsuken/css/font-awesome.min.css");
@@ -107,7 +100,7 @@ public class timeTableMaster extends HttpServlet {
 			request.setAttribute("page_title", page_title);
 
 		//ディスパッチ処理 layout.jspに投げると中身をcontent_pageのjspに合わせて表示
-			RequestDispatcher disp = request.getRequestDispatcher("/template/layout.jsp");
+			RequestDispatcher disp = request.getRequestDispatcher("/template/public_layout.jsp");
 					disp.forward(request, response);
 	}
 

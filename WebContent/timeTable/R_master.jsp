@@ -13,7 +13,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="logo text-center">
-                            <h1>R4A1</h1>
+                            <h1>${page_title }</h1>
                             <p class="text-right"><i class="fa fa-star color-yellow fa-3x"></i></p>
 
                         </div>
@@ -30,8 +30,8 @@
 			R4 <span class="caret"></span>
 		</a>
 		<ul class="dropdown-menu" role="menu">
-			<li role="presentation"><a href="#">R4A1</a></li>
-			<li role="presentation"><a href="#">R4A2</a></li>
+			<li role="presentation"><a href="/Sotsuken/publicView?page=R4A1">R4A1</a></li>
+			<li role="presentation"><a href="/Sotsuken/publicView?page=R4A2">R4A2</a></li>
 			<li role="presentation"><a href="#">R4A3</a></li>
 			<li role="presentation"><a href="#">R4A4</a></li>
 			<li role="presentation"><a href="#">R4A5</a></li>
