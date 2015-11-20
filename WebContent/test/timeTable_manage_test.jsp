@@ -4,37 +4,40 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
 <!-- Bootstrap Core CSS -->
-        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Font Awesome CSS -->
-        <link href="../css/font-awesome.min.css" rel="stylesheet">
+<!-- Font Awesome CSS -->
+<link href="../css/font-awesome.min.css" rel="stylesheet">
 
-		<!-- Custom CSS -->
-        <link href="../css/animate.css" rel="stylesheet">
+<!-- Custom CSS -->
+<link href="../css/animate.css" rel="stylesheet">
 
-        <!-- Custom CSS -->
-        <link href="../css/style.css" rel="stylesheet">
+<!-- Custom CSS -->
+<link href="../css/style.css" rel="stylesheet">
 
-        <!-- Custom Fonts -->
-        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<!-- Custom Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
-        <script src="../js/jquery-2.1.1.min.js"></script>
-        <script src="../bootstrap/js/bootstrap.min.js"></script>
-        <script src="../js/jquery.appear.js"></script>
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/jquery.appear.js"></script>
+<script src="../js/belongings.js"></script>
 
-          <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
 
 <title>タイムテーブル管理</title>
 </head>
 <body>
+
 <!-- タグ -->
 <ul class="nav nav-tabs">
 <li><a href="#tab1" data-toggle="tab">管理者メニュー</a></li>
@@ -46,30 +49,45 @@
 </ul>
 <!-- タグ終了 -->
 
-        <!-- Start Logo Section --><!-- ヘッダー部分 -->
-        <section id="logo-section" class="text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="logo text-center">
-                            <h1>R4A1</h1>
+<!-- Start Logo Section --><!-- ヘッダー部分 -->
+<section id="logo-section" class="text-center">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="logo text-center">
+<h1>R4A1</h1>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Logo Section -->
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- End Logo Section -->
+
+<!-- BootStrap_Test -->
+<h2>
+<div style="text-align:center;">
+<a href="javascript:void(0);"
+	data-toggle="popover"
+	data-html="true"
+	data-placement="bottom"
+	data-title="Aipo.comのSプランに登録します。"
+	data-content="このプランでは期間やユーザー数など無制限に、完全無料でご利用いただけます。"
+	data-original-title=""
+	title="">この登録により何ができますか？
+</a>
+</div>
+</h2>
 
 
 
 
-    <div  class="container">
-    <div class="table-responsive">
-    <table class="table table-striped table-bordered text-center table-hover;">
-    <thead>
+<div  class="container">
+<div class="table-responsive">
+<table class="table table-striped table-bordered text-center table-hover;">
+<thead>
 
-      </thead>
+</thead>
 		<tbody>
 			<tr class="purple2">
 
