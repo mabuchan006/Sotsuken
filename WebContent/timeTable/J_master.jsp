@@ -13,7 +13,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="logo text-center">
-                            <h1>R4A1</h1>
+                            <h1>J2A1</h1>
                             <p class="text-right"><i class="fa fa-star color-yellow fa-3x"></i></p>
 
                         </div>
@@ -27,56 +27,27 @@
 <!-- R4 -->
 	<li role="presentation" class="dropdown">
 		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-			R4 <span class="caret"></span>
+			J2 <span class="caret"></span>
 		</a>
 		<ul class="dropdown-menu" role="menu">
-			<li role="presentation"><a href="#">R4A1</a></li>
-			<li role="presentation"><a href="#">R4A2</a></li>
-			<li role="presentation"><a href="#">R4A3</a></li>
-			<li role="presentation"><a href="#">R4A4</a></li>
-			<li role="presentation"><a href="#">R4A5</a></li>
+			<li role="presentation"><a href="#">J2A1</a></li>
+			<li role="presentation"><a href="#">J2A2</a></li>
+			<li role="presentation"><a href="#">J2M1</a></li>
+			<li role="presentation"><a href="#">J2M2</a></li>
 		</ul>
 	</li>
 <!-- R3 -->
 	<li role="presentation" class="dropdown">
 		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-			R3 <span class="caret"></span>
+			J1 <span class="caret"></span>
 		</a>
 		<ul class="dropdown-menu" role="menu">
-			<li role="presentation"><a href="#">R3A1</a></li>
-			<li role="presentation"><a href="#">R3A2</a></li>
-			<li role="presentation"><a href="#">R3A3</a></li>
-			<li role="presentation"><a href="#">R3A4</a></li>
-			<li role="presentation"><a href="#">R3A5</a></li>
+			<li role="presentation"><a href="#">J1A1</a></li>
+			<li role="presentation"><a href="#">J1A2</a></li>
+			<li role="presentation"><a href="#">J1M1</a></li>
+			<li role="presentation"><a href="#">J1M2</a></li>
 		</ul>
 	</li>
-<!-- R2 -->
-	<li role="presentation" class="dropdown">
-		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-			R2 <span class="caret"></span>
-		</a>
-		<ul class="dropdown-menu" role="menu">
-			<li role="presentation"><a href="#">R2A1</a></li>
-			<li role="presentation"><a href="#">R2A2</a></li>
-			<li role="presentation"><a href="#">R2A3</a></li>
-			<li role="presentation"><a href="#">R2A4</a></li>
-			<li role="presentation"><a href="#">R2A5</a></li>
-		</ul>
-	</li>
-<!-- R1 -->
-	<li role="presentation" class="dropdown">
-		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-			R1 <span class="caret"></span>
-		</a>
-		<ul class="dropdown-menu" role="menu">
-			<li role="presentation"><a href="#">R1A1</a></li>
-			<li role="presentation"><a href="#">R1A2</a></li>
-			<li role="presentation"><a href="#">R1A3</a></li>
-			<li role="presentation"><a href="#">R1A4</a></li>
-			<li role="presentation"><a href="#">R1A5</a></li>
-		</ul>
-	</li>
-
 
 
 </ul>
