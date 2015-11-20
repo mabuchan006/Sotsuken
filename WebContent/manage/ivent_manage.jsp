@@ -114,7 +114,7 @@
 
 
 		                    <tr class="select">
-		                        <td>イベント名</td><td>日時</td><td>コマ</td><td>教室</td><td>講師</td>
+		                        <td>イベント名</td><td>日時</td><td>コマ</td><td>教室</td><td>講師</td><td>クラス名</td>
 		                        <td>
 									<form action="/Sotsuken/ManageUpdate" method="get">
 									<input type="hidden" name = "iventID" value="${rs.iventID }" />
