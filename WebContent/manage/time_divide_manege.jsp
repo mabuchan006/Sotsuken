@@ -182,162 +182,162 @@ $(function( e ){
 
 				<td class="size">802</td>
 				<td class="size">
-					<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS802-1"></textarea></p>
-					<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS802-2"></textarea></p>
-					<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS802-3"></textarea></p>
-					<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS802-4"></textarea></p>
+					<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS802-1"></textarea></p>
+					<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS802-2"></textarea></p>
+					<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS802-3"></textarea></p>
+					<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS802-4"></textarea></p>
 				</td>
 
 				<td class="size">803</td>
 				<td class="size">
-					<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS803-1"></textarea></p>
-					<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS803-2"></textarea></p>
-					<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS803-3"></textarea></p>
-					<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS803-4"></textarea></p>
+					<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS803-1"></textarea></p>
+					<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS803-2"></textarea></p>
+					<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS803-3"></textarea></p>
+					<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS803-4"></textarea></p>
 				</td>
 			</tr>
 			<tr class="pink1">
 				<td class="size">7F</td>
 				<td class="size">701</td>
 				<td class="size">
-					<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS701-1"></textarea></p>
-					<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS701-2"></textarea></p>
-					<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS701-3"></textarea></p>
-					<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS701-4"></textarea></p>
+					<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS701-1"></textarea></p>
+					<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS701-2"></textarea></p>
+					<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS701-3"></textarea></p>
+					<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS701-4"></textarea></p>
 				</td>
 				<td class="size">702</td>
 				<td class="size">
-					<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS702-1"></textarea></p>
-					<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS702-2"></textarea></p>
-					<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS702-3"></textarea></p>
-					<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS702-4"></textarea></p>
+					<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS702-1"></textarea></p>
+					<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS702-2"></textarea></p>
+					<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS702-3"></textarea></p>
+					<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS702-4"></textarea></p>
 				</td>
 			</tr>
 			<tr class="danger">
 				<td class="size">6F</td>
 				<td class="size">601</td>
 				<td class="size">
-					<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS601-1"></textarea></p>
-					<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS601-2"></textarea></p>
-					<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS601-3"></textarea></p>
-					<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS601-4"></textarea></p>
+					<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS601-1"></textarea></p>
+					<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS601-2"></textarea></p>
+					<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS601-3"></textarea></p>
+					<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS601-4"></textarea></p>
 				</td>
 				<td class="size">603</td>
 				<td class="size">
-					<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS603-1"></textarea></p>
-					<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS603-2"></textarea></p>
-					<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS603-3"></textarea></p>
-					<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS603-4"></textarea></p>
+					<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS603-1"></textarea></p>
+					<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS603-2"></textarea></p>
+					<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS603-3"></textarea></p>
+					<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS603-4"></textarea></p>
 				</td>
 				<td class="size">604</td>
 				<td class="size">
-					<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS604-1"></textarea></p>
-					<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS604-2"></textarea></p>
-					<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS604-3"></textarea></p>
-					<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS604-4"></textarea></p>
+					<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS604-1"></textarea></p>
+					<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS604-2"></textarea></p>
+					<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS604-3"></textarea></p>
+					<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS604-4"></textarea></p>
 				</td>
 			</tr>
 			<tr class="pink1">
 				<td class="size">5F</td>
 				<td class="size">501</td>
 				<td class="size">
-					<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS501-1"></textarea></p>
-					<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS501-2"></textarea></p>
-					<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS501-3"></textarea></p>
-					<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS501-4"></textarea></p>
+					<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS501-1"></textarea></p>
+					<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS501-2"></textarea></p>
+					<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS501-3"></textarea></p>
+					<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS501-4"></textarea></p>
 				</td>
 				<td class="size">502</td>
 				<td class="size">
-					<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS502-1"></textarea></p>
-					<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS502-2"></textarea></p>
-					<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS502-3"></textarea></p>
-					<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS502-4"></textarea></p>
+					<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS502-1"></textarea></p>
+					<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS502-2"></textarea></p>
+					<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS502-3"></textarea></p>
+					<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS502-4"></textarea></p>
 				</td>
 				<td class="size">503</td>
 				<td class="size">
-					<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS503-1"></textarea></p>
-					<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS503-2"></textarea></p>
-					<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS503-3"></textarea></p>
-					<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS503-4"></textarea></p>
+					<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS503-1"></textarea></p>
+					<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS503-2"></textarea></p>
+					<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS503-3"></textarea></p>
+					<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS503-4"></textarea></p>
 				</td>
 				<td class="size">504</td>
 				<td class="size">
-					<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS504-1"></textarea></p>
-					<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS504-2"></textarea></p>
-					<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS504-3"></textarea></p>
-					<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS504-4"></textarea></p>
+					<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS504-1"></textarea></p>
+					<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS504-2"></textarea></p>
+					<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS504-3"></textarea></p>
+					<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS504-4"></textarea></p>
 				</td>
 			</tr>
 			<tr class="danger">
 				<td class="size">4F</td>
 				<td class="size">401</td>
 				<td class="size">
-					<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS401-1"></textarea></p>
-					<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS401-2"></textarea></p>
-					<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS401-3"></textarea></p>
-					<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS401-4"></textarea></p>
+					<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS401-1"></textarea></p>
+					<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS401-2"></textarea></p>
+					<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS401-3"></textarea></p>
+					<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS401-4"></textarea></p>
 				</td>
 				<td class="size">402</td>
 				<td class="size">
-					<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS402-1"></textarea></p>
-					<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS402-2"></textarea></p>
-					<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS402-3"></textarea></p>
-					<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS402-4"></textarea></p>
+					<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS402-1"></textarea></p>
+					<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS402-2"></textarea></p>
+					<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS402-3"></textarea></p>
+					<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS402-4"></textarea></p>
 				</td>
 				<td class="size">403</td>
 				<td class="size">
-					<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS403-1"></textarea></p>
-					<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS403-2"></textarea></p>
-					<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS403-3"></textarea></p>
-					<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS403-4"></textarea></p>
+					<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS403-1"></textarea></p>
+					<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS403-2"></textarea></p>
+					<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS403-3"></textarea></p>
+					<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS403-4"></textarea></p>
 				</td>
 				<td class="size">404</td>
 				<td class="size">
-					<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS404-1"></textarea></p>
-					<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS404-2"></textarea></p>
-					<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS404-3"></textarea></p>
-					<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS404-4"></textarea></p>
+					<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS404-1"></textarea></p>
+					<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS404-2"></textarea></p>
+					<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS404-3"></textarea></p>
+					<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS404-4"></textarea></p>
 				</td>
 			</tr>
 			<tr class="pink1">
 				<td class="size">3F</td>
 				<td class="size">301</td>
 				<td class="size">
-					<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS301-1"></textarea></p>
-					<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS301-2"></textarea></p>
-					<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS301-3"></textarea></p>
-					<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS301-4"></textarea></p>
+					<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS301-1"></textarea></p>
+					<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS301-2"></textarea></p>
+					<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS301-3"></textarea></p>
+					<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS301-4"></textarea></p>
 				</td>
 				<td class="size">302</td>
 				<td class="size">
-					<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS302-1"></textarea></p>
-					<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS302-2"></textarea></p>
-					<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS302-3"></textarea></p>
-					<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS302-4"></textarea></p>
+					<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS302-1"></textarea></p>
+					<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS302-2"></textarea></p>
+					<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS302-3"></textarea></p>
+					<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS302-4"></textarea></p>
 				</td>
 				<td class="size">303</td>
 				<td class="size">
-					<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS303-1"></textarea></p>
-					<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS303-2"></textarea></p>
-					<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS303-3"></textarea></p>
-					<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS303-4"></textarea></p>
+					<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS303-1"></textarea></p>
+					<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS303-2"></textarea></p>
+					<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS303-3"></textarea></p>
+					<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS303-4"></textarea></p>
 				</td>
 				<td class="size">304</td>
 				<td class="size">
-					<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS304-1"></textarea></p>
-					<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS304-2"></textarea></p>
-					<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS304-3"></textarea></p>
-					<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS304-4"></textarea></p>
+					<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS304-1"></textarea></p>
+					<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS304-2"></textarea></p>
+					<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS304-3"></textarea></p>
+					<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS304-4"></textarea></p>
 				</td>
 			</tr>
 			<tr class="danger">
 				<td class="size">2F</td>
 				<td class="size">201</td>
 				<td class="size">
-					<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS201-1"></textarea></p>
-					<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS201-2"></textarea></p>
-					<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS201-3"></textarea></p>
-					<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS201-4"></textarea></p>
+					<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS201-1"></textarea></p>
+					<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS201-2"></textarea></p>
+					<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS201-3"></textarea></p>
+					<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NCS201-4"></textarea></p>
 				</td>
 			</tr>
 		</table>
@@ -356,127 +356,127 @@ $(function( e ){
 					<td class="size">5F</td>
 					<td class="size">501</td>
 					<td class="size">
-						<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC501-1"></textarea></p>
-						<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC501-2"></textarea></p>
-						<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC501-3"></textarea></p>
-						<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC501-4"></textarea></p>
+						<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC501-1"></textarea></p>
+						<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC501-2"></textarea></p>
+						<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC501-3"></textarea></p>
+						<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC501-4"></textarea></p>
 					</td>
 					<td class="size">502</td>
 					<td class="size">
-						<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC502-1"></textarea></p>
-						<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC502-2"></textarea></p>
-						<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC502-3"></textarea></p>
-						<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC502-4"></textarea></p>
+						<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC502-1"></textarea></p>
+						<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC502-2"></textarea></p>
+						<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC502-3"></textarea></p>
+						<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC502-4"></textarea></p>
 					</td>
 					<td class="size">503</td>
 					<td class="size">
-						<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC503-1"></textarea></p>
-						<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC503-2"></textarea></p>
-						<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC503-3"></textarea></p>
-						<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC503-4"></textarea></p>
+						<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC503-1"></textarea></p>
+						<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC503-2"></textarea></p>
+						<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC503-3"></textarea></p>
+						<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC503-4"></textarea></p>
 					</td>
 				</tr>
 				<tr class="pink2">
 					<td class="size">4F</td>
 					<td class="size">401</td>
 					<td class="size">
-						<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC401-1"></textarea></p>
-						<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC401-2"></textarea></p>
-						<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC401-3"></textarea></p>
-						<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC401-4"></textarea></p>
+						<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC401-1"></textarea></p>
+						<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC401-2"></textarea></p>
+						<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC401-3"></textarea></p>
+						<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC401-4"></textarea></p>
 					</td>
 					<td class="size">402</td>
 					<td class="size">
-						<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC402-1"></textarea></p>
-						<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC402-2"></textarea></p>
-						<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC402-3"></textarea></p>
-						<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC402-4"></textarea></p>
+						<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC402-1"></textarea></p>
+						<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC402-2"></textarea></p>
+						<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC402-3"></textarea></p>
+						<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC402-4"></textarea></p>
 					</td>
 					<td class="size">403</td>
 					<td class="size">
-						<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC403-1"></textarea></p>
-						<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC403-2"></textarea></p>
-						<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC403-3"></textarea></p>
-						<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC403-4"></textarea></p>
+						<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC403-1"></textarea></p>
+						<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC403-2"></textarea></p>
+						<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC403-3"></textarea></p>
+						<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC403-4"></textarea></p>
 					</td>
 					<td class="size">404</td>
 					<td class="size">
-						<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC404-1"></textarea></p>
-						<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC404-2"></textarea></p>
-						<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC404-3"></textarea></p>
-						<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC404-4"></textarea></p>
+						<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC404-1"></textarea></p>
+						<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC404-2"></textarea></p>
+						<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC404-3"></textarea></p>
+						<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC404-4"></textarea></p>
 					</td>
 				</tr>
 				<tr class="pink3">
 					<td class="size">3F</td>
 					<td class="size">301</td>
 					<td class="size">
-						<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC301-1"></textarea></p>
-						<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC301-2"></textarea></p>
-						<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC301-3"></textarea></p>
-						<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC301-4"></textarea></p>
+						<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC301-1"></textarea></p>
+						<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC301-2"></textarea></p>
+						<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC301-3"></textarea></p>
+						<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC301-4"></textarea></p>
 					</td>
 					<td class="size">302</td>
 					<td class="size">
-						<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC302-1"></textarea></p>
-						<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC302-2"></textarea></p>
-						<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC302-3"></textarea></p>
-						<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC302-4"></textarea></p>
+						<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC302-1"></textarea></p>
+						<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC302-2"></textarea></p>
+						<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC302-3"></textarea></p>
+						<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC302-4"></textarea></p>
 					</td>
 					<td class="size">303</td>
 					<td class="size">
-						<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC303-1"></textarea></p>
-						<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC303-2"></textarea></p>
-						<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC303-3"></textarea></p>
-						<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC303-4"></textarea></p>
+						<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC303-1"></textarea></p>
+						<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC303-2"></textarea></p>
+						<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC303-3"></textarea></p>
+						<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC303-4"></textarea></p>
 					</td>
 					<td class="size">304</td>
 					<td class="size">
-						<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC304-1"></textarea></p>
-						<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC304-2"></textarea></p>
-						<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC304-3"></textarea></p>
-						<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC304-4"></textarea></p>
+						<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC304-1"></textarea></p>
+						<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC304-2"></textarea></p>
+						<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC304-3"></textarea></p>
+						<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC304-4"></textarea></p>
 					</td>
 				</tr>
 				<tr class="pink2">
 					<td class="size">2F</td>
 					<td class="size">201</td>
 					<td class="size">
-						<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC201-1"></textarea></p>
-						<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC201-2"></textarea></p>
-						<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC201-3"></textarea></p>
-						<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC201-4"></textarea></p>
+						<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC201-1"></textarea></p>
+						<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC201-2"></textarea></p>
+						<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC201-3"></textarea></p>
+						<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC201-4"></textarea></p>
 					</td>
 					<td class="size">202</td>
 					<td class="size">
-						<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC202-1"></textarea></p>
-						<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC202-2"></textarea></p>
-						<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC202-3"></textarea></p>
-						<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC202-4"></textarea></p>
+						<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC202-1"></textarea></p>
+						<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC202-2"></textarea></p>
+						<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC202-3"></textarea></p>
+						<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC202-4"></textarea></p>
 					</td>
 					<td class="size">203</td>
 					<td class="size">
-						<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC203-1"></textarea></p>
-						<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC203-2"></textarea></p>
-						<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC203-3"></textarea></p>
-						<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC203-4"></textarea></p>
+						<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC203-1"></textarea></p>
+						<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC203-2"></textarea></p>
+						<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC203-3"></textarea></p>
+						<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC203-4"></textarea></p>
 					</td>
 					<td class="size">204</td>
 					<td class="size">
-						<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC204-1"></textarea></p>
-						<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC204-2"></textarea></p>
-						<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC204-3"></textarea></p>
-						<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC204-4"></textarea></p>
+						<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC204-1"></textarea></p>
+						<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC204-2"></textarea></p>
+						<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC204-3"></textarea></p>
+						<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC204-4"></textarea></p>
 					</td>
 				</tr>
 				<tr class="pink3">
 				<td class="size">1F</td>
 				<td class="size">101</td>
 				<td class="size">
-					<p class="size">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC101-1"></textarea></p>
-					<p class="size">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC101-2"></textarea></p>
-					<p class="size">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC101-3"></textarea></p>
-					<p class="size">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC101-4"></textarea></p>
+					<p class="size drop-target">1　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC101-1"></textarea></p>
+					<p class="size drop-target">2　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC101-2"></textarea></p>
+					<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC101-3"></textarea></p>
+					<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC101-4"></textarea></p>
 				</td>
 
 				</tr>

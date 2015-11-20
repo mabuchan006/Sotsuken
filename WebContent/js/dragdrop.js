@@ -1,4 +1,4 @@
-var repComma = "", str = "", elm = "";
+var repComma = "", str = "", ele = "";
 
 //ドラッグ
 function f_drag( e ) {
@@ -12,15 +12,14 @@ function f_drag( e ) {
 
 //ドロップ
 function f_drop( e ) {
-	$( ".size" ).droppable({
+	$( ".drop-target" ).droppable({
 		drop: function( e, ui ) {
 
 			//子要素の取得
-			elm = $(this).children("textarea").get(0);
-			console.log($(this).children("textarea").get(0));
-
+			ele = $(this).children("textarea").get(0);
+			console.log(ele);
 			//テキストボックスの中身とドロップされたテキストを入れる
-			str = ( elm.value + ui.draggable.text() );
+			str = ( ele.value + ui.draggable.text() );
 
 			//一度カンマを取り除く
 			repComma = str.replace(/,/g, "");
@@ -31,7 +30,8 @@ function f_drop( e ) {
 			}//while
 
 			//テキストボックスに追加
-			elm.value = repComma;
+			ele.value = repComma;
+			console.log(ele.value);
 
 		}//drop
 	})//droppable

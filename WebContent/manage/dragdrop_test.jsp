@@ -82,16 +82,16 @@ $(function( e ){
 				<th>802</th>
 				<td>
 					<div class="size">
-						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802-1"></textarea>
+						<textarea cols="6" rows="1" style="overflow:auto;" id="NCS802-1"></textarea>
 					</div><br>
 					<div class="size">
-						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802-2"></textarea>
+						<textarea cols="6" rows="1" style="overflow:auto;" id="NCS802-2"></textarea>
 					</div><br>
 					<div class="size">
-						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802-3"></textarea>
+						<textarea cols="6" rows="1" style="overflow:auto;" id="NCS802-3"></textarea>
 					</div><br>
 					<div class="size">
-						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802-4"></textarea>
+						<textarea cols="6" rows="1" style="overflow:auto;" id="NCS802-4"></textarea>
 					</div><br>
 				</td>
 		</table>
