@@ -28,36 +28,23 @@
 </head>
 <body>
 
+<div class="row">
+<!-- header -->
+<div class="content-header">
+<div id="logo">
+<h1> 科目管理</h1>
+</div>
+</div><!-- header -->
 
-      <div class="row">
-
-
-		<div class="content-header">
-
-
-
-		<div id="logo">
-          <h1>
-            科目管理
-          </h1>
-          </div>
-
-        </div>
-
+<!-- form -->
 <form action="" method="get">
-
-
-
-
 <table class="col-md-6 col-md-offset-3" id="first_table">
 <tr>
 <td class="col-md-4">
-		    <label for="subjectName" class="labels">科目名</label>
-		    <input type="text" class="form-control" id="subjectName" name="subjectName" >
-
-
-			<label for="password" class="labels">持ち物</label>
-			<input type="password" class="form-control" name="password" >
+<label for="subjectName" class="labels">科目名</label>
+<input type="text" class="form-control" id="subjectName" name="subjectName" >
+<label for="password" class="labels">持ち物</label>
+<input type="password" class="form-control" name="password" >
 </td>
 
 
@@ -106,55 +93,41 @@
 </select>
 </td>
 
-
-
 <td class="col-md-4">
-	<label for="password" class="empty">________</label>
-		<button type="button" class="btn btn-primary" id="regist_btn">登録</button>
+<label for="password" class="empty">________</label>
+<button type="button" class="btn btn-primary" id="regist_btn">登録</button>
 </td>
 </tr>
-
-
-
-	</table>
-
-
-<div class="col-md-6 col-md-offset-3">
-	<div class="back">
-		            <table class="table ">
-						<thead>
-						<tr><td colspan="2">Subject List</td></tr>
-						</thead>
-
-		                <tbody>
-		                    <tr class="select">
-		                        <td>阿知波</td>
-		                        <td><button type="button" class="btn btn-danger">削除</button></td>
-
-		                    </tr>
-		                    <tr class="select">
-		                        <td>河合</td>
-								<td><button type="button" class="btn btn-danger">削除</button></td>
-
-
-		                    </tr>
-		                    <tr class="select">
-		                        <td>元木</td>
-								<td><button type="button" class="btn btn-danger">削除</button></td>
-
-		                    </tr>
-
-		                </tbody>
-		            </table>
-		            </div>
-		            </div>
-
+</table>
 </form>
 
+<!-- 科目一覧表示 -->
+<div class="col-md-6 col-md-offset-3">
+<div class="back">
+<table class="table ">
+<thead>
+<tr><td colspan="3">subject</td></tr>
+</thead>
+<tbody>
+<!-- 科目情報取得 -->
+<c:forEach var="rs" items="${subjectList }">
+<tr class="select">
+<td>${rs.subjectName}</td>
+<td>${rs.bringThings}</td>
+<td>
+<!-- 削除用フォーム -->
+<form action="/Sotsuken/ManageUpdate" method="get">
+<input type="hidden" name = "subjectID" value="${rs.subjectID }" />
+<input type="submit" class="btn btn-danger" name="delete_subject" value="削除"/>
+</form>
+<!-- 削除 -->
+</td>
+
+</tr>
+</c:forEach>
+
+</tbody>
+</table>
 </div>
-
-
-
-
-</body>
-</html>
+</div>
+</div>
