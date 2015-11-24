@@ -168,7 +168,7 @@ $(function( e ){
 		</div>
 	</div>
 </div>
-
+<form>
 <div  class="container">
 	<div class="table  col-md-6 ">
 		<h1 class="text-center">NCS</h1>
@@ -478,11 +478,10 @@ $(function( e ){
 					<p class="size drop-target">3　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC101-3"></textarea></p>
 					<p class="size drop-target">4　　<textarea cols="6" rows="1" style="overflow: auto;" id="NMIC101-4"></textarea></p>
 				</td>
-
 				</tr>
 			</table>
 		</div>
 	</div>
-
+</form>
 </body>
 </html>
