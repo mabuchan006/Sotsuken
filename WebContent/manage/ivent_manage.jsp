@@ -118,7 +118,7 @@
 		                        <td>
 									<form action="/Sotsuken/ManageUpdate" method="get">
 									<input type="hidden" name = "iventID" value="${rs.iventID }" />
-									<input type="submit" class="btn btn-danger" name="delete_ivent" value="削除"/>
+									<input type="submit" class="btn btn-danger " name="delete_ivent" value="削除"/>
 									</form>
 								</td>
 
