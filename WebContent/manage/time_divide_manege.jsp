@@ -109,7 +109,8 @@ $(function( e ){
 <!-- button end -->
         <!-- カレンダー部分 -->
 <div class="form-group col-md-1 col-md-offset-1">
-
+	<label for="mydate"></label>
+	<input type="text" class="form-control" id="mydate">
 </div>
 
 <div class="col-md-10"></div>
@@ -120,7 +121,7 @@ $(function( e ){
 
 
 <!-- ドラッグ&ドロップ -->
-<div  class="col-md-1 fix margin-top">
+<div  class="col-md-1 fix">
 	<div id="class">
 		<h1 >class</h1>
 		<div id="class-room">
@@ -171,11 +172,11 @@ $(function( e ){
 <div  class="container">
 	<div class="table  col-md-6 ">
 		<h1 class="text-center">NCS</h1>
-		<table class="table table-striped table-bordered text-center ">
+		<table class="table table-striped table-bordered text-center ;">
 			<thead>
 
 			</thead>
-			<tbody >
+			<tbody>
 			<tr class="danger">
 				<td class="size">8F</td>
 
