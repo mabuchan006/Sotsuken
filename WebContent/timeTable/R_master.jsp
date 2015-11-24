@@ -3,7 +3,7 @@
 <%@page import="com.sun.xml.internal.bind.v2.schemagen.xmlschema.Import"%>
 <%@ page pageEncoding="UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>d
 
 
 
@@ -26,10 +26,10 @@
 <ul class="nav nav-tabs">
 <!-- R4 -->
 	<li role="presentation" class="dropdown">
-		<a class="dropdown-toggle" data-toggle="dropdown" href="#test" role="button" aria-expanded="false">
+		<a class="dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-expanded="false">
 			R4 <span class="caret"></span>
 		</a>
-		<ul class="dropdown-menu" role="menu" id="test">
+		<ul class="dropdown-menu" role="menu">
 			<li role="presentation"><a href="/Sotsuken/publicView?page=R4A1">R4A1</a></li>
 			<li role="presentation"><a href="/Sotsuken/publicView?page=R4A2">R4A2</a></li>
 			<li role="presentation"><a href="#">R4A3</a></li>

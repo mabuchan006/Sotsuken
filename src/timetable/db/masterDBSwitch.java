@@ -24,6 +24,12 @@ public class masterDBSwitch {
 		switch (page) {
 
 		//●R4
+		case "R":
+			 value.page_title = "R4A1";
+			 value. chooseTableName = "tbl_master_R4A1timetable";
+			 value.content_page = "/timeTable/R_master.jsp";
+			break;
+
 		case "R4A1":
 			 value.page_title = "R4A1";
 			 value. chooseTableName = "tbl_master_R4A1timetable";
