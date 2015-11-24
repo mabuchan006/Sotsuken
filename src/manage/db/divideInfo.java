@@ -13,7 +13,7 @@ public class divideInfo implements Serializable {
 		// TODO 自動生成されたコンストラクター・スタブ
 	}
 
-	public divideInfo(int period, String roomID, String week, String classID, int joinFlag) {
+	public divideInfo(int period, String roomID, String week, String classID) {
 		super();
 		this.period = period;
 		this.roomID = roomID;
