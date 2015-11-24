@@ -6,6 +6,10 @@
 	font-family:'Comic Sans MS' ;
 }
 
+.margin-top{
+	margin-top:15px;
+}
+
 body {
 
     background-color:#202020;
@@ -184,11 +188,11 @@ fieldset[disabled] .btn-primary.active {
 	background-color:#336ca6;
 }
 
-back-color3{
+.back-color3{
 	background-color:#34495e;
 }
 
-back-color4{
+.back-color4{
 	background-color:#202020;
 }
 /*drop color*/

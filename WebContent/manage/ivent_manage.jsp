@@ -106,7 +106,7 @@
 	<div class="back">
 		            <table class="table ">
 						<thead>
-						<tr><td colspan="6">Ivent List</td></tr>
+						<tr><td colspan="7">Ivent List</td></tr>
 						</thead>
 
 		                <tbody>
