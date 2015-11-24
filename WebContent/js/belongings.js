@@ -1,21 +1,23 @@
-//infosクラスのtdの数だけfunctionをループ実行
-$('.infos td').each(function(i) {
-
-	//tdにクラス名を設定
-	$(this).addClass( 'cell' + i );
-
+//timeTableのinfo1のtdへ連番意idを付与するメソッド
+$('#timeTable info1 td').each(function (i) {
+	$(this).attr( 'id' , 'cell' + (i+1) );
+	$(this).prepend( ' data-toggle="popover" title="持ち物" data-content="教科書" ');
 });
 
-//選んだ授業をクリックしたら、その授業の持ち物をポップアップで表示するメソッド
-$('.one').click(function() {
+//$(function() {
+//	$('#cell001').popover();
+//})
 
-	//子要素の取得(この場合はtd)
-	var ele = $(this).children('td').get(0);
+//クラスoneをクリックしたら、その要素の情報がele内に格納される
+$('#timeTable info1 one').live( 'click' , function() {
 
+	//ele = <div class="one"><td id="cell01">授業</td><div>
+	var $ele = $(this)[0];
+	//cell = cell01
+	var $cell = ele.td.id;
 	//取得した子要素にデータを加える
-	$(ele).prepend( ' data-toggle="popover" title="持ち物" data-content="教科書" ');
+	$($cell).prepend( ' class="btn btn-lg btn-danger" data-toggle="popover" title="持ち物" data-content="教科書" ');
 
-	//
-	ele.id.popover();
+	$cell.popover();
 
 } );

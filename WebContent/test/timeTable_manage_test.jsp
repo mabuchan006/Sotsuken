@@ -67,19 +67,18 @@
 </section>
 <!-- End Logo Section -->
 
-<!--
-<button type="button" id="h"
+<button type="button" id="j"
 	class="btn btn-lg btn-danger"
 	data-toggle="popover"
 	title="持ち物"
 	data-content="教科書">
 	クリック
 </button>
- -->
+
 
 <div  class="container">
 <div class="table-responsive">
-<table class="table table-striped table-bordered text-center table-hover;">
+<table id="timeTable" class="table table-striped table-bordered text-center table-hover;">
 <thead>
 </thead>
 		<tbody>
@@ -106,8 +105,8 @@
 				<td>10/31(土)　</td>
 			</tr>
 
-			<tr class="info probox">
-				<th class="infos" rowspan=3>1</th>
+			<tr class="info1">
+				<th rowspan=3>1</th>
 				<div class="one"><td>授業</td></div>
 				<div class="one"><td>授業</td></div>
 				<div class="one"><td>授業</td></div>
