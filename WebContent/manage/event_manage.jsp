@@ -53,7 +53,7 @@
 <tr>
 <td class="col-md-4">
 		    <label for="IventName" class="labels">イベント名</label>
-		    <input type="text" class="form-control" id="IventName" name="ivent_name" >
+		    <input type="text" class="form-control" id="IventName" name="event_name" >
 
 
 			<label for="Time" class="labels">日時</label>
@@ -91,7 +91,7 @@
 
 <td class="col-md-4">
 	<label for="password" class="empty">________</label>
-		<button type="button" class="btn btn-primary" id="regist_btn" name="regist_ivent">登録</button>
+		<button type="submit" class="btn btn-primary" id="regist_btn" name="regist_event">登録</button>
 </td>
 </tr>
 
@@ -117,8 +117,8 @@
 		                        <td>イベント名</td><td>日時</td><td>コマ</td><td>教室</td><td>講師</td><td>クラス名</td>
 		                        <td>
 									<form action="/Sotsuken/ManageUpdate" method="get">
-									<input type="hidden" name = "iventID" value="${rs.iventID }" />
-									<input type="submit" class="btn btn-danger " name="delete_ivent" value="削除"/>
+									<input type="hidden" name = "eventID" value="${rs.eventID }" />
+									<input type="submit" class="btn btn-danger " name="delete_event" value="削除"/>
 									</form>
 								</td>
 
