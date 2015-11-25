@@ -17,6 +17,7 @@ public class subjetDBManage extends DBAccess{
 	private String insertSql;//科目1件登録用
 	private String ins_infoSubject;//科目、クラス対応テーブル挿入
 	private String selectBox;//科目管理画面のセレクトボックス表示用
+	private String select_par;
 
 	//*******Msg*********
 	private String msg;
@@ -37,6 +38,7 @@ public class subjetDBManage extends DBAccess{
 				+ " from tbl_subject");
 		//selectbox表示用
 		selectBox = String.format("select classID from tbl_class");
+		select_par = String.format("select classID from tbl_class where classID like ' "+ " ? " +"% ' ");
 		//科目IDから削除からsql
 		deleteSql = String.format("delete  from tbl_subject where subjectID = ?");
 		//科目情報登録sql
@@ -124,10 +126,11 @@ public class subjetDBManage extends DBAccess{
 	 * @param classID クラスID
 	 * @return classMap 分割したクラス情報
 	 */
-	public HashMap<String,Partition> classDBSelect() throws Exception{
+	public HashMap<String,List<String>> classDBSelect() throws Exception{
 
 			//分割クラス格納
-			HashMap<String,Partition> classMap = new HashMap<String,Partition>();
+			HashMap<String,List<String>> classMap = new HashMap<String,List<String>>();
+			List <String> par_classList = new ArrayList<String>();//分割したクラス格納
 			//DB接続
 			connect();
 			createStstement();
@@ -135,14 +138,35 @@ public class subjetDBManage extends DBAccess{
 			//要素取得用準備
 			ResultSet rs = getRsResult();
 			String classID;
+			String par_grade;
+			String par_class;
+			String tempStr;
+			
+			//要素取得用準備
+			ResultSet rs2;
+
 			//全件取得
 			while(rs.next()){
 
 				classID = rs.getString("classID");
-				classMap.put(classID,
-						new Partition(
-								classID.substring(0,2),
-								classID.substring(2)));
+				
+				selectExe(select_par);
+				
+				par_grade = classID.substring(0,2);
+
+				tempStr  = par_grade;
+
+				par_class =  classID.substring(2);
+
+				if(par_grade.equals(tempStr)){
+					par_classList.add(par_class);
+				}//if
+
+
+
+
+
+
 			}//while
 
 			disConnection();//切断
