@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import divide.db.divideDBManage;
 import divide.db.divideInfo;
 
 /**
@@ -49,15 +50,16 @@ public class divideUpdateControl extends HttpServlet {
 
 		if(get_page == "divide_manage"){
 
+			divideDBManage ddm = new divideDBManage();
 			//ページ情報指定
 			content_page = "/manage/time_divide_manage.jsp";
 			page_title = "コマ割り管理画面";
 
 			String[] classIDArray;
 			int period = 0;
-			String week = request.getParameter("week");
-			String roomID = null,classID = null;
-			List<divideInfo> diList = null;
+			String week = "月";
+			String roomID = null;
+			List<divideInfo> diList = new ArrayList<>();
 			String inputStr[];
 			//取得
 			Map<String, String[]> map = request.getParameterMap();
@@ -66,23 +68,25 @@ public class divideUpdateControl extends HttpServlet {
 				inputStr = key.split("-");
 				roomID = inputStr[0];
 				period = Integer.parseInt(inputStr[1]);
-
 				classIDArray = map.get(key)[0].split(",");//,区切りのクラスIDを1つずつ取得
 
-				diList.add ( new divideInfo(
+				for (String classID : classIDArray) {
+					diList.add ( new divideInfo(
 
-						period,
-						roomID,
-						week,
-						classID
+							period,
+							roomID,
+							week,
+							classID
 
-						));
+							));
+				}
 
 				classIDArray = new String[5];
 				inputStr = new String[2];
 				//System.out.println(key + ":" +map.get(key)[0]);
 			}//for
-			//divideDBInsert();
+			//insert
+			try { ddm.divideDBInsert(diList); } catch (Exception e) {e.printStackTrace();}
 		}//if
 
 		//ページデータセット
