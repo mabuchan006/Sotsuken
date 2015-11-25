@@ -67,6 +67,7 @@
 </section>
 <!-- End Logo Section -->
 
+<!--
 <button type="button" id="j"
 	class="btn btn-lg btn-danger"
 	data-toggle="popover"
@@ -74,6 +75,7 @@
 	data-content="教科書">
 	クリック
 </button>
+ -->
 
 
 <div  class="container">
@@ -109,7 +111,7 @@
 
 			<tr class="info1">
 				<th rowspan=3>1</th>
-				<td id="cell1">授業</td>
+				<td>授業</td>
 				<td>授業</td>
 				<td>授業</td>
 				<td>授業</td>
