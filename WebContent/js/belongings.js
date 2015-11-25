@@ -1,6 +1,7 @@
 //timeTableのinfo1のtdへ連番意idを付与するメソッド
 $('#timeTable info1 td').each(function (i) {
 	$(this).attr( 'id' , 'cell' + (i+1) );
+	//持ち物表示コード
 	$(this).prepend( ' data-toggle="popover" title="持ち物" data-content="教科書" ');
 });
 
