@@ -77,12 +77,12 @@ $(function( e ){
             </div>
         </section>
         <!-- End Logo Section -->
-
+<form action="/Sotsuken/divideUpdate?page=divide_manage" method="get">
 <div class="container-fluid">
 
 <!-- button -->
 
-<button class="btn btn-primary btn-lg col-md-1 fix" data-toggle="modal" data-target="#myModal">
+<button type="submit" class="btn btn-primary btn-lg col-md-1 fix" data-toggle="modal" data-target="#myModal">
     登録
 </button>
 
@@ -232,7 +232,7 @@ $(function( e ){
 		</div>
 	</div>
 </div>
-<form>
+
 <div  class="container">
 	<div class="table  col-md-6 ">
 		<h1 class="text-center">NCS</h1>

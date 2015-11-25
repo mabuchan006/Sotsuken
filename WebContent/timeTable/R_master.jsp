@@ -23,61 +23,44 @@
         </section>
         <!-- End Logo Section -->
 <!-- タブ -->
+
 <ul class="nav nav-tabs">
-<!-- R4 -->
-	<li role="presentation" class="dropdown">
-		<a class="dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-expanded="false">
-			R4 <span class="caret"></span>
-		</a>
-		<ul class="dropdown-menu" role="menu">
-			<li role="presentation"><a href="/Sotsuken/publicView?page=R4A1">R4A1</a></li>
-			<li role="presentation"><a href="/Sotsuken/publicView?page=R4A2">R4A2</a></li>
-			<li role="presentation"><a href="#">R4A3</a></li>
-			<li role="presentation"><a href="#">R4A4</a></li>
-			<li role="presentation"><a href="#">R4A5</a></li>
-		</ul>
-	</li>
-<!-- R3 -->
-	<li role="presentation" class="dropdown">
-		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-			R3 <span class="caret"></span>
-		</a>
-		<ul class="dropdown-menu" role="menu">
-			<li role="presentation"><a href="#">R3A1</a></li>
-			<li role="presentation"><a href="#">R3A2</a></li>
-			<li role="presentation"><a href="#">R3A3</a></li>
-			<li role="presentation"><a href="#">R3A4</a></li>
-			<li role="presentation"><a href="#">R3A5</a></li>
-		</ul>
-	</li>
-<!-- R2 -->
-	<li role="presentation" class="dropdown">
-		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-			R2 <span class="caret"></span>
-		</a>
-		<ul class="dropdown-menu" role="menu">
-			<li role="presentation"><a href="#">R2A1</a></li>
-			<li role="presentation"><a href="#">R2A2</a></li>
-			<li role="presentation"><a href="#">R2A3</a></li>
-			<li role="presentation"><a href="#">R2A4</a></li>
-			<li role="presentation"><a href="#">R2A5</a></li>
-		</ul>
-	</li>
-<!-- R1 -->
-	<li role="presentation" class="dropdown">
-		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-			R1 <span class="caret"></span>
-		</a>
-		<ul class="dropdown-menu" role="menu">
-			<li role="presentation"><a href="#">R1A1</a></li>
-			<li role="presentation"><a href="#">R1A2</a></li>
-			<li role="presentation"><a href="#">R1A3</a></li>
-			<li role="presentation"><a href="#">R1A4</a></li>
-			<li role="presentation"><a href="#">R1A5</a></li>
-		</ul>
-	</li>
-
-
+<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">R4 <b class="caret"></b></a>
+	<ul class="dropdown-menu" >
+		<li><a href="/Sotsuken/publicView?page=R4A1">R4A1</a></li>
+		<li><a href="/Sotsuken/publicView?page=R4A2">R4A2</a></li>
+		<li><a href="/Sotsuken/publicView?page=R4A3">R4A3</a></li>
+    	<li><a href="#">R4A4</a></li>
+    	<li><a href="#">R4A5</a></li>
+	</ul>
+</li>
+<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">R3 <b class="caret"></b></a>
+	<ul class="dropdown-menu">
+		<li><a href="/Sotsuken/publicView?page=R4A1">R3A1</a></li>
+		<li><a href="/Sotsuken/publicView?page=R4A2">R3A2</a></li>
+		<li><a href="/Sotsuken/publicView?page=R4A3">R3A3</a></li>
+    	<li><a href="#">R3A4</a></li>
+    	<li><a href="#">R3A5</a></li>
+	</ul>
+</li>
+<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">R2 <b class="caret"></b></a>
+	<ul class="dropdown-menu">
+		<li><a href="/Sotsuken/publicView?page=R4A1">R2A1</a></li>
+		<li><a href="/Sotsuken/publicView?page=R4A2">R2A2</a></li>
+		<li><a href="/Sotsuken/publicView?page=R4A3">R2A3</a></li>
+    	<li><a href="#">R2A4</a></li>
+    	<li><a href="#">R2A5</a></li>
+	</ul>
+</li>
+<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">R1 <b class="caret"></b></a>
+	<ul class="dropdown-menu">
+		<li><a href="/Sotsuken/publicView?page=R4A1">R1A1</a></li>
+		<li><a href="/Sotsuken/publicView?page=R4A2">R1A2</a></li>
+		<li><a href="/Sotsuken/publicView?page=R4A3">R1A3</a></li>
+    	<li><a href="#">R1A4</a></li>
+    	<li><a href="#">R1A5</a></li>
+	</ul>
+</li>
 
 </ul>
 

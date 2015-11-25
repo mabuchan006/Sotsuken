@@ -1,4 +1,4 @@
-package manage.db;
+package divide.db;
 
 import java.io.Serializable;
 
