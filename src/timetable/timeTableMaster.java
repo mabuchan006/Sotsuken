@@ -55,7 +55,7 @@ public class timeTableMaster extends HttpServlet {
 		if( page != null ){
 			//DB切り替えClassへ（masteDBSwich.java）
 			 masterDBSwitch tblSW= new masterDBSwitch();
-			 masterDBSwitchInfo value =tblSW.switchDB(page);
+			 masterDBSwitchInfo value = tblSW.switchDB(page);
 			page_title = value.page_title;
 			chooseTableName = value.chooseTableName;
 			content_page = value.content_page;
@@ -67,15 +67,7 @@ public class timeTableMaster extends HttpServlet {
 
 		//●確定時間割情報表示機能
 			masterDBManage mDM = new masterDBManage(chooseTableName);//マスターDBマネージャの起動
-		//timeTable_master.jspで使用
-			css.add("/Sotsuken/bootstrap/css/bootstrap.min.css");
-			css.add("/Sotsuken/css/font-awesome.min.css");
-			css.add("/Sotsuken/css/style.css");
-			css.add("http://fonts.googleapis.com/css?family=Lobster");
 
-			js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
-			js.add("/Sotsuken/js/jquery-2.1.1.min.js");
-			js.add("/Sotsuken/js/jquery.appear.js");
 
 			try {
 				 dList = mDM.dateSelect(); //日付取得
@@ -83,6 +75,17 @@ public class timeTableMaster extends HttpServlet {
 				 period2List = mDM.selectTimeTable(2);//2限目
 				 period3List = mDM.selectTimeTable(3);//3限目
 				 period4List = mDM.selectTimeTable(4);//4限目
+					//●R~A_master.jspで使用
+
+					css.add("/Sotsuken/bootstrap/css/bootstrap.min.css");
+					css.add("/Sotsuken/css/font-awesome.min.css");
+					css.add("/Sotsuken/css/style.css");
+					css.add("http://fonts.googleapis.com/css?family=Lobster");
+
+					js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
+					js.add("/Sotsuken/js/jquery-2.1.1.min.js");
+					js.add("/Sotsuken/js/jquery.appear.js");
+
 				 request.setAttribute("dList", dList);
 				 request.setAttribute("period1List", period1List);
 				 request.setAttribute("period2List", period2List);
