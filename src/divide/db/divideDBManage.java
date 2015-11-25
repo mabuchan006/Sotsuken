@@ -18,7 +18,8 @@ public class divideDBManage extends DBAccess{
 		super(DRIVER_NAME);
 
 		selectSql = String.format("select * from tbl_timedivide");
-		insertSql = String.format("insert into tbl_timedivide ( period, roomID, week, classID ) values ( ?, ?, ?, ?)");
+		insertSql = String.format("insert into tbl_timedivide ( period, roomID, week, classID ) values ( ?,"
+				+ " (select tbl_room.roomID from tbl_room where tbl_room.roomID = ?), ?, (select tbl_class.classID from tbl_class where tbl_class.classID = ?))");
 		deleteSql = String.format("delete from tbl_timedivide");
 
 	}
