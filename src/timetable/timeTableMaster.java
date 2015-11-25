@@ -38,12 +38,12 @@ public class timeTableMaster extends HttpServlet {
 	private String chooseTableName="";//選択時間割
 
 
+
+
     /**
      * @see HttpServlet#HttpServlet()
      */
     public timeTableMaster() {
-        super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
@@ -51,6 +51,19 @@ public class timeTableMaster extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String page = request.getParameter("page");
+
+    	//●R~A_master.jspで使用
+    	css.add("/Sotsuken/bootstrap/css/bootstrap.css");
+    	css.add("/Sotsuken/css/style.css");
+       	css.add("/Sotsuken/css/font-awesome.min.css");
+    	css.add("http://fonts.googleapis.com/css?family=Lobster");
+
+
+    	js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
+    	js.add("/Sotsuken/js/jquery-2.1.1.min.js");
+       	js.add("/Sotsuken/js/jquery.appear.js");
+       	js.add("/Sotsuken/bootstrap/js/bootstrap-dropdown.js");
+
 
 		if( page != null ){
 			//DB切り替えClassへ（masteDBSwich.java）
@@ -67,24 +80,12 @@ public class timeTableMaster extends HttpServlet {
 
 		//●確定時間割情報表示機能
 			masterDBManage mDM = new masterDBManage(chooseTableName);//マスターDBマネージャの起動
-
-
 			try {
 				 dList = mDM.dateSelect(); //日付取得
 				 period1List = mDM.selectTimeTable(1);//1限目
 				 period2List = mDM.selectTimeTable(2);//2限目
 				 period3List = mDM.selectTimeTable(3);//3限目
 				 period4List = mDM.selectTimeTable(4);//4限目
-					//●R~A_master.jspで使用
-
-					css.add("/Sotsuken/bootstrap/css/bootstrap.min.css");
-					css.add("/Sotsuken/css/font-awesome.min.css");
-					css.add("/Sotsuken/css/style.css");
-					css.add("http://fonts.googleapis.com/css?family=Lobster");
-
-					js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
-					js.add("/Sotsuken/js/jquery-2.1.1.min.js");
-					js.add("/Sotsuken/js/jquery.appear.js");
 
 				 request.setAttribute("dList", dList);
 				 request.setAttribute("period1List", period1List);
@@ -92,10 +93,8 @@ public class timeTableMaster extends HttpServlet {
 				 request.setAttribute("period3List", period3List);
 				 request.setAttribute("period4List", period4List);
 			} catch (Exception e) {
-				// TODO 自動生成された catch ブロック
 				e.printStackTrace();
-
-			}
+	}
 		//ディスパッチ準備
 			request.setAttribute("css", css);
 			request.setAttribute("js", js);
