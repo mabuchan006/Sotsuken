@@ -1,24 +1,24 @@
-//timeTableのinfo1のtdへ連番意idを付与するメソッド
-$('#timeTable info1 td').each(function (i) {
-	$(this).attr( 'id' , 'cell' + (i+1) );
-	//持ち物表示コード
-	$(this).prepend( ' data-toggle="popover" title="持ち物" data-content="教科書" ');
-});
+//timeTableのinfo1のtdへ連番idを付与するメソッド
+//tdの数だけ連番を与える
+//$('#timeTable info1').children().each(function (i) {
+//		$(this).attr( 'id' , 'cell' + (i+1) );
+//});
 
-//$(function() {
-//	$('#cell001').popover();
-//})
+//tdをクリックしたら、その要素の情報がele内に格納され、ポップアップが表示される
+$('#timeTable info1 td').on( 'click' , function() {
 
-//クラスoneをクリックしたら、その要素の情報がele内に格納される
-$('#timeTable info1 one').live( 'click' , function() {
+	//ele = <td id="cell1">授業</td>
+	//var ele = $(this)[1];
 
-	//ele = <div class="one"><td id="cell01">授業</td><div>
-	var $ele = $(this)[0];
-	//cell = cell01
-	var $cell = ele.td.id;
+	//cellに指定したidが格納
+	//var cell = ele.td.id;
+
+	//ele = <td id="cell1" class="btn btn-lg btn-danger" data-toggle="popover" title="持ち物" data-content="教科書">授業</td>
+	$('#cel1').after( ' class="btn btn-lg btn-danger" data-toggle="popover" title="持ち物" data-content="教科書" ' );
+
 	//取得した子要素にデータを加える
-	$($cell).prepend( ' class="btn btn-lg btn-danger" data-toggle="popover" title="持ち物" data-content="教科書" ');
+	//$(cell).prepend( ' class="btn btn-lg btn-danger" data-toggle="popover" title="持ち物" data-content="教科書" ');
 
-	$cell.popover();
+	$('#cell1').popover();
 
 } );

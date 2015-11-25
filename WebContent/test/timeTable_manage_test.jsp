@@ -78,7 +78,9 @@
 
 <div  class="container">
 <div class="table-responsive">
-<table id="timeTable" class="table table-striped table-bordered text-center table-hover;">
+<table id="timeTable"
+	class="table table-striped table-bordered text-center table-hover;"
+	>
 <thead>
 </thead>
 		<tbody>
@@ -107,19 +109,19 @@
 
 			<tr class="info1">
 				<th rowspan=3>1</th>
-				<div class="one"><td>授業</td></div>
-				<div class="one"><td>授業</td></div>
-				<div class="one"><td>授業</td></div>
-				<div class="one"><td>授業</td></div>
-				<div class="one"><td>授業</td></div>
-				<div class="one"><td>授業</td></div>
-				<div class="one"><td>授業</td></div>
-				<div class="one"><td>授業</td></div>
-				<div class="one"><td>授業</td></div>
-				<div class="one"><td>授業</td></div>
-				<div class="one"><td>授業</td></div>
-				<div class="one"><td>授業</td></div>
-				<div class="one"><td>授業</td></div>
+				<td id="cell1">授業</td>
+				<td>授業</td>
+				<td>授業</td>
+				<td>授業</td>
+				<td>授業</td>
+				<td>授業</td>
+				<td>授業</td>
+				<td>授業</td>
+				<td>授業</td>
+				<td>授業</td>
+				<td>授業</td>
+				<td>授業</td>
+				<td>授業</td>
 			</tr>
 
 			<tr class="info">
