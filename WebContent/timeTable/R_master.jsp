@@ -24,7 +24,7 @@
         <!-- End Logo Section -->
 <!-- タブ -->
 
-<ul class="dropdown">
+<ul class="nav nav-tabs">
 <li><a class="dropdown-toggle" data-toggle="dropdown" href="#">R4 <b class="caret"></b></a>
 	<ul class="dropdown-menu" >
 		<li><a href="/Sotsuken/publicView?page=R4A1">R4A1</a></li>

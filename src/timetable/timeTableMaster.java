@@ -53,7 +53,7 @@ public class timeTableMaster extends HttpServlet {
 		String page = request.getParameter("page");
 
     	//●R~A_master.jspで使用
-    	css.add("/Sotsuken/bootstrap/css/bootstrap.css");
+    	css.add("/Sotsuken/bootstrap/css/bootstrap.min.css");
     	css.add("/Sotsuken/css/style.css");
        	css.add("/Sotsuken/css/font-awesome.min.css");
     	css.add("http://fonts.googleapis.com/css?family=Lobster");
