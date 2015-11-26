@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html >
 <html>
 <head>
@@ -78,14 +79,11 @@ $(function( e ){
         </section>
         <!-- End Logo Section -->
 <form action="/Sotsuken/divideUpdate?page=divide_manage" method="get">
-<div class="container-fluid">
 
-<!-- button -->
 
-<button type="submit" class="btn btn-primary btn-lg col-md-1 fix" data-toggle="modal" data-target="#myModal">
-    登録
-</button>
-
+<% request.setAttribute("err_msg", "値が正しくありません"); %>
+<!-- エラーページ -->
+<c:if test ="${!empty err_msg }">
 <!-- モーダルウィンドウの中身 -->
 
 <div class="modal fade" id="myModal">
@@ -96,7 +94,7 @@ $(function( e ){
       <h3 class="modal-title white text-center">Confirmation</h3>
       </div>
       <div class="modal-body">
-      <h3 class="modal-title text-center">登録されました！</h3>
+      <h3 class="modal-title text-center">"${err_msg }"</h3>
 
       </div>
       <div class="modal-footer">
@@ -105,6 +103,28 @@ $(function( e ){
     </div>
   </div>
 </div>
+
+
+</c:if>
+
+
+<div class="container-fluid">
+
+<!-- タブ -->
+ <ul class="nav nav-tabs nav-justified">
+     <li><a href="#">月</a></li>
+     <li><a href="#">火</a></li>
+     <li><a href="#">水</a></li>
+     <li><a href="#">木</a></li>
+     <li><a href="#">金</a></li>
+    </ul>
+<!-- button -->
+
+<button type="submit" class="btn btn-primary btn-lg col-md-1 fix" data-toggle="modal" data-target="#myModal" name="regist_divide">
+    登録
+</button>
+
+
 
 <!-- button end -->
         <!-- カレンダー部分 -->
@@ -130,8 +150,6 @@ $(function( e ){
 					<li >R1A1</li>
 					<li >R1A2</li>
 					<li >R1A3</li>
-					<li >R1A4</li>
-					<li >R1A5</li>
 				</ul>
 			</div>
 			<h2 class="font"><a href="#" draggable="false">R2</a></h2>
