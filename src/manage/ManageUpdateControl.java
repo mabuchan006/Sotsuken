@@ -66,7 +66,7 @@ public class ManageUpdateControl extends HttpServlet {
 		if(get_page == "divide_manage"){
 
 			//ページ情報指定
-			content_page = "/manage/time_divide_manege.jsp";
+			content_page = "/manage/time_divide_manage.jsp";
 			page_title = "コマ割り管理画面";
 
 		}
