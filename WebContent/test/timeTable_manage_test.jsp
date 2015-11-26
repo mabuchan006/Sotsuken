@@ -25,7 +25,7 @@
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
 <!-- Test_css -->
-<link href='test.css' rel='stylesheet' type='text/css'>
+<!-- <link href='../css/test.css' rel='stylesheet' type='text/css'>  -->
 
 <script src="../js/jquery-2.1.1.min.js"></script>
 <script src="../bootstrap/js/bootstrap.min.js"></script>
@@ -80,8 +80,7 @@
 
 <div  class="container">
 <div class="table-responsive">
-<table id="timeTable"
-	class="table table-striped table-bordered text-center table-hover;"
+<table class="table table-striped table-bordered text-center table-hover;"
 	>
 <thead>
 </thead>
@@ -109,21 +108,31 @@
 				<td>10/31(土)　</td>
 			</tr>
 
-			<tr class="info1">
+			<tr class="info">
 				<th rowspan=3>1</th>
-				<td>授業</td>
-				<td>授業</td>
-				<td>授業</td>
-				<td>授業</td>
-				<td>授業</td>
-				<td>授業</td>
-				<td>授業</td>
-				<td>授業</td>
-				<td>授業</td>
-				<td>授業</td>
-				<td>授業</td>
-				<td>授業</td>
-				<td>授業</td>
+				<td id="cell1"
+					data-toggle="popover" data-placement="right"
+					data-content="教科書" title="持ち物">授業</td>
+				<td id="cell2"
+					data-toggle="popover" data-placement="right"
+					data-content="教科書" title="持ち物">授業</td>
+				<td id="cell3"
+					data-toggle="popover" data-placement="right"
+					data-content="教科書" title="持ち物">授業</td>
+				<td id="cell4"
+					data-toggle="popover" data-placement="right"
+					data-content="教科書" title="持ち物">授業</td>
+				<td id="cell5"
+					data-toggle="popover" data-placement="right"
+					data-content="教科書" title="持ち物">授業</td>
+				<td data-toggle="popover" title="持ち物">授業</td>
+				<td data-toggle="popover" title="持ち物">授業</td>
+				<td data-toggle="popover" title="持ち物">授業</td>
+				<td data-toggle="popover" title="持ち物">授業</td>
+				<td data-toggle="popover" title="持ち物">授業</td>
+				<td data-toggle="popover" title="持ち物">授業</td>
+				<td data-toggle="popover" title="持ち物">授業</td>
+				<td data-toggle="popover" title="持ち物">授業</td>
 			</tr>
 
 			<tr class="info">

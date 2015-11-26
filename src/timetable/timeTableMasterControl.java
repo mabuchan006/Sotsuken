@@ -20,7 +20,7 @@ import timetable.db.masterInfo;
  * Servlet implementation class timeTableMaster
  */
 @WebServlet("/publicView")
-public class timeTableMaster extends HttpServlet {
+public class timeTableMasterControl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	ArrayList<String> css = new ArrayList<String>(); //css用List
@@ -43,7 +43,7 @@ public class timeTableMaster extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public timeTableMaster() {
+    public timeTableMasterControl() {
     }
 
 	/**

@@ -11,7 +11,7 @@ import DB.DBAccess;
  * @see subjectInfo
  */
 
-public class subjetDBManage extends DBAccess{
+public class subjectDBManage extends DBAccess{
 	private String selectSql;//科目全検索用
 	private String deleteSql;//科目1件削除用
 	private String insertSql;//科目1件登録用
@@ -31,7 +31,7 @@ public class subjetDBManage extends DBAccess{
   //********endMsg*************
 	private final static String DRIVER_NAME = "java:comp/env/jdbc/MySqlCon";//コネクタ
 
-	public subjetDBManage() {
+	public subjectDBManage() {
 		super(DRIVER_NAME);//DBAccessに接続
 		//ID,NAME、持ち物、表示フラグを全件取得sql
 		selectSql = String.format("select subjectID,subjectName,bringThings,showFlag"
