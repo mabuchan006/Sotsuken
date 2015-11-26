@@ -25,12 +25,12 @@
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
 <!-- Test_css -->
-<link href='test.css' rel='stylesheet' type='text/css'>
+<!-- <link href='../css/test.css' rel='stylesheet' type='text/css'>  -->
 
 <script src="../js/jquery-2.1.1.min.js"></script>
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script src="../js/jquery.appear.js"></script>
-<script src="../js/belongings.js"></script>
+<!-- <script src="../js/belongings.js"></script> -->
 
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -80,8 +80,7 @@
 
 <div  class="container">
 <div class="table-responsive">
-<table id="timeTable"
-	class="table table-striped table-bordered text-center table-hover;"
+<table class="table table-striped table-bordered text-center table-hover;"
 	>
 <thead>
 </thead>
@@ -108,22 +107,25 @@
 				<td>10/30(金)　</td>
 				<td>10/31(土)　</td>
 			</tr>
-
-			<tr class="info1">
+	<type="button" class="btn btn-default"
+	data-container="body" data-toggle="popover" data-placement="right" data-content="右に出るポップオーバー">
+			<tr class="info">
 				<th rowspan=3>1</th>
-				<td>授業</td>
-				<td>授業</td>
-				<td>授業</td>
-				<td>授業</td>
-				<td>授業</td>
-				<td>授業</td>
-				<td>授業</td>
-				<td>授業</td>
-				<td>授業</td>
-				<td>授業</td>
-				<td>授業</td>
-				<td>授業</td>
-				<td>授業</td>
+				<td type="button" class="btn btn-default"
+					data-container="body" data-toggle="popover"
+					data-placement="right" data-content="教科書" title="持ち物">授業</td>
+				<td data-toggle="popover" title="持ち物">授業</td>
+				<td data-toggle="popover" title="持ち物">授業</td>
+				<td data-toggle="popover" title="持ち物">授業</td>
+				<td data-toggle="popover" title="持ち物">授業</td>
+				<td data-toggle="popover" title="持ち物">授業</td>
+				<td data-toggle="popover" title="持ち物">授業</td>
+				<td data-toggle="popover" title="持ち物">授業</td>
+				<td data-toggle="popover" title="持ち物">授業</td>
+				<td data-toggle="popover" title="持ち物">授業</td>
+				<td data-toggle="popover" title="持ち物">授業</td>
+				<td data-toggle="popover" title="持ち物">授業</td>
+				<td data-toggle="popover" title="持ち物">授業</td>
 			</tr>
 
 			<tr class="info">

@@ -87,19 +87,19 @@
 			<tr class="info">
 
 				<th class="info" rowspan=3>1</th>
-				<td>授業</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+				<td data-toggle="popover" title="持ち物" data-content="教科書">授業</td>
+				<td data-toggle="popover" title="持ち物" data-content="教科書"></td>
+				<td data-toggle="popover" title="持ち物" data-content="教科書"></td>
+				<td data-toggle="popover" title="持ち物" data-content="教科書"></td>
+				<td data-toggle="popover" title="持ち物" data-content="教科書"></td>
+				<td data-toggle="popover" title="持ち物" data-content="教科書"></td>
+				<td data-toggle="popover" title="持ち物" data-content="教科書"></td>
+				<td data-toggle="popover" title="持ち物" data-content="教科書"></td>
+				<td data-toggle="popover" title="持ち物" data-content="教科書"></td>
+				<td data-toggle="popover" title="持ち物" data-content="教科書"></td>
+				<td data-toggle="popover" title="持ち物" data-content="教科書"></td>
+				<td data-toggle="popover" title="持ち物" data-content="教科書"></td>
+				<td data-toggle="popover" title="持ち物" data-content="教科書"></td>
 			</tr>
 
 			<tr class="info">
