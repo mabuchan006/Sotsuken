@@ -14,10 +14,13 @@ function f_drag( e ) {
 function f_drop( e ) {
 	$( ".drop-target" ).droppable({
 		drop: function( e, ui ) {
+
+			//子要素の取得
+			ele = $(this).children("textarea").get(0);
+
 			//同値チェック
-			if( repComma.indexOf( ui.draggable.text() ) === -1 ){
-				//子要素の取得
-				ele = $(this).children("textarea").get(0);
+			if( ele.value.indexOf( ui.draggable.text() ) === -1 ){
+
 				//テキストボックスの中身とドロップされたテキストを入れる
 				str = ( ele.value + ui.draggable.text() );
 				//一度カンマを取り除く

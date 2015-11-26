@@ -79,6 +79,11 @@ public class divideUpdateControl extends HttpServlet {
 							classID
 
 							));
+
+					System.out.print(period);
+					System.out.print(roomID);
+					System.out.print(week);
+					System.out.println(classID);
 				}
 
 				classIDArray = new String[5];
@@ -86,7 +91,11 @@ public class divideUpdateControl extends HttpServlet {
 				//System.out.println(key + ":" +map.get(key)[0]);
 			}//for
 			//insert
-			try { ddm.divideDBInsert(diList); } catch (Exception e) {e.printStackTrace();}
+			try {
+				String Msg;
+				Msg=ddm.divideDBInsert(diList);
+				request.setAttribute("msg", Msg);
+				} catch (Exception e) {e.printStackTrace();}
 		}//if
 
 		//ページデータセット
