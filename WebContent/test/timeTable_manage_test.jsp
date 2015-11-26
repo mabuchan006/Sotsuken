@@ -25,7 +25,7 @@
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
 <!-- Test_css -->
-<link href='test.css' rel='stylesheet' type='text/css'>
+<link href='../css/test.css' rel='stylesheet' type='text/css'>
 
 <script src="../js/jquery-2.1.1.min.js"></script>
 <script src="../bootstrap/js/bootstrap.min.js"></script>
