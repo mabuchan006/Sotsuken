@@ -20,7 +20,6 @@ public class masterDBManage extends DBAccess {
 	public masterDBManage(String chooseTableName) {
 		super(DRIVER_NAME);
 		StringBuilder sb = new StringBuilder();
-		//TODO テーブルを柔軟にすること。
 		period1_SQL = String.format("SELECT timetable.period, timetable.subjectName, timetable.date, timetable.classID, room.roomName, timetable.teacherName "
 							 +"FROM %s timetable "
                              +"INNER JOIN tbl_room room on timetable.roomID = room.roomID "

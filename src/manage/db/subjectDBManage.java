@@ -141,7 +141,7 @@ public class subjectDBManage extends DBAccess{
 			String par_grade;
 			String par_class;
 			String tempStr;
-			
+
 			//要素取得用準備
 			ResultSet rs2;
 
@@ -149,9 +149,9 @@ public class subjectDBManage extends DBAccess{
 			while(rs.next()){
 
 				classID = rs.getString("classID");
-				
+
 				selectExe(select_par);
-				
+
 				par_grade = classID.substring(0,2);
 
 				tempStr  = par_grade;
