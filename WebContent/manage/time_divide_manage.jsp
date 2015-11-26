@@ -78,7 +78,7 @@ $(function( e ){
             </div>
         </section>
         <!-- End Logo Section -->
-<form action="/Sotsuken/divideUpdate?page=divide_manage" method="get">
+<form action="/Sotsuken/divideUpdate?page=divide_manage" method="post">
 
 
 <div class="container-fluid">
@@ -93,7 +93,7 @@ $(function( e ){
     </ul>
 <!-- button -->
 
-<button type="submit" class="btn btn-primary btn-lg col-md-1 fix"name="regist_divide">
+<button type="submit" class="btn btn-primary btn-lg col-md-1 fix">
     登録
 </button>
 

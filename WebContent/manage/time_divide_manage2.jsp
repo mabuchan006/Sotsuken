@@ -82,7 +82,7 @@ $(function( e ){
 
 <!-- button -->
 
-<button type="submit" class="btn btn-primary btn-lg col-md-1 fix" data-toggle="modal" data-target="#myModal">
+<button class="btn btn-primary btn-lg col-md-1 fix" data-toggle="modal" data-target="#myModal">
     登録
 </button>
 
