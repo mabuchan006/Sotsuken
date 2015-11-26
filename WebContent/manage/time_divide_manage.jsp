@@ -120,7 +120,7 @@ $(function( e ){
     </ul>
 <!-- button -->
 
-<button type="submit" class="btn btn-primary btn-lg col-md-1 fix" data-toggle="modal" data-target="#myModal" name="regist_divide">
+<button type="submit" class="btn btn-primary btn-lg col-md-1 fix" data-toggle="modal" data-target="#myModal">
     登録
 </button>
 
