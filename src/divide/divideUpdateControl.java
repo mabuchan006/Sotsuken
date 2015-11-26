@@ -52,11 +52,13 @@ public class divideUpdateControl extends HttpServlet {
 
 		if(get_page == "divide_manage"){
 
-			if(request.getParameter("regist_divide")!=null){
-			divideDBManage ddm = new divideDBManage();
 			//ページ情報指定
 			content_page = "/manage/time_divide_manage.jsp";
 			page_title = "コマ割り管理画面";
+
+			if(request.getParameter("regist_divide")!=null){
+			divideDBManage ddm = new divideDBManage();
+
 
 			String[] classIDArray;
 			int period = 0;
