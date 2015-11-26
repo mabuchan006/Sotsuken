@@ -5,10 +5,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
-<script src="../js/jquery-2.1.1.min.js"></script>
-<script src="../bootstrap/js/bootstrap.min.js"></script>
-<script src="../js/jquery.appear.js"></script>
-<script src="../js/belongings.js"></script>
+
 
         <!-- Start Logo Section --><!-- ヘッダー部分 -->
         <section id="logo-section" class="text-center">
@@ -91,7 +88,7 @@
 		<% pageContext.setAttribute("index", cnt3); %>
 			<%if (cnt1==1){ %>
 				<%if(cnt2==0){ %>
-				<td class="info" id="cell" data-toggle="popover" data-placement="right" data-content="教科書" title="" nowrap>${period1List[index].subjectName}</td>
+				<td class="info" id="cell" data-toggle="popover" data-placement="right" data-content="" title="持ち物" nowrap>${period1List[index].subjectName}</td>
 				<%} %>
 				<%if(cnt2==1){ %>
 				<td class="info" nowrap>${period1List[index].teacherName}</td>
@@ -115,7 +112,7 @@
 
 			<%if (cnt1==3){ %>
 				<%if(cnt2==0){ %>
-				<td class="success" id="cell" data-toggle="popover" data-placement="right" data-content="教科書" title="" nowrap>${period3List[index].subjectName}</td>
+				<td class="success" id="cell" data-toggle="popover" data-placement="right" data-content="" title="持ち物" nowrap>${period3List[index].subjectName}</td>
 				<%} %>
 				<%if(cnt2==1){ %>
 				<td class="success" nowrap>${period3List[index].teacherName}</td>
@@ -127,7 +124,7 @@
 
 			<%if (cnt1==4){ %>
 				<%if(cnt2==0){ %>
-				<td class="warning" id="cell" data-toggle="popover" data-placement="right" data-content="教科書" title="" nowrap>${period4List[index].subjectName}</td>
+				<td class="warning" id="cell" data-toggle="popover" data-placement="right" data-content="" title="持ち物" nowrap>${period4List[index].subjectName}</td>
 				<%} %>
 				<%if(cnt2==1){ %>
 				<td class="warning" nowrap>${period4List[index].teacherName}</td>
