@@ -81,33 +81,6 @@ $(function( e ){
 <form action="/Sotsuken/divideUpdate?page=divide_manage" method="get">
 
 
-<% request.setAttribute("err_msg", "値が正しくありません"); %>
-<!-- エラーページ -->
-<c:if test ="${!empty err_msg }">
-<!-- モーダルウィンドウの中身 -->
-
-<div class="modal fade" id="myModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header back-color">
-
-      <h3 class="modal-title white text-center">Confirmation</h3>
-      </div>
-      <div class="modal-body">
-      <h3 class="modal-title text-center">"${err_msg }"</h3>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">close</button>
-       </div>
-    </div>
-  </div>
-</div>
-
-
-</c:if>
-
-
 <div class="container-fluid">
 
 <!-- タブ -->
@@ -120,7 +93,7 @@ $(function( e ){
     </ul>
 <!-- button -->
 
-<button type="submit" class="btn btn-primary btn-lg col-md-1 fix" data-toggle="modal" data-target="#myModal">
+<button type="submit" class="btn btn-primary btn-lg col-md-1 fix"name="regist_divide">
     登録
 </button>
 

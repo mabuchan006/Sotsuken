@@ -53,7 +53,7 @@ public class divideUpdateControl extends HttpServlet {
 		if(get_page == "divide_manage"){
 
 			//ページ情報指定
-			content_page = "/manage/time_divide_manage.jsp";
+			content_page = "/manage/time_divide_manage2.jsp";
 			page_title = "コマ割り管理画面";
 
 			if(request.getParameter("regist_divide")!=null){
