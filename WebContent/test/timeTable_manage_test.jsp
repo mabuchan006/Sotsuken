@@ -30,7 +30,7 @@
 <script src="../js/jquery-2.1.1.min.js"></script>
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script src="../js/jquery.appear.js"></script>
-<!-- <script src="../js/belongings.js"></script> -->
+<script src="../js/belongings.js"></script>
 
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -107,17 +107,24 @@
 				<td>10/30(金)　</td>
 				<td>10/31(土)　</td>
 			</tr>
-	<type="button" class="btn btn-default"
-	data-container="body" data-toggle="popover" data-placement="right" data-content="右に出るポップオーバー">
+
 			<tr class="info">
 				<th rowspan=3>1</th>
-				<td type="button" class="btn btn-default"
-					data-container="body" data-toggle="popover"
-					data-placement="right" data-content="教科書" title="持ち物">授業</td>
-				<td data-toggle="popover" title="持ち物">授業</td>
-				<td data-toggle="popover" title="持ち物">授業</td>
-				<td data-toggle="popover" title="持ち物">授業</td>
-				<td data-toggle="popover" title="持ち物">授業</td>
+				<td id="cell1"
+					data-toggle="popover" data-placement="right"
+					data-content="教科書" title="持ち物">授業</td>
+				<td id="cell2"
+					data-toggle="popover" data-placement="right"
+					data-content="教科書" title="持ち物">授業</td>
+				<td id="cell3"
+					data-toggle="popover" data-placement="right"
+					data-content="教科書" title="持ち物">授業</td>
+				<td id="cell4"
+					data-toggle="popover" data-placement="right"
+					data-content="教科書" title="持ち物">授業</td>
+				<td id="cell5"
+					data-toggle="popover" data-placement="right"
+					data-content="教科書" title="持ち物">授業</td>
 				<td data-toggle="popover" title="持ち物">授業</td>
 				<td data-toggle="popover" title="持ち物">授業</td>
 				<td data-toggle="popover" title="持ち物">授業</td>

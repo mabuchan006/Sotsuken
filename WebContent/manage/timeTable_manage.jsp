@@ -26,6 +26,7 @@
         <script src="../js/jquery-2.1.1.min.js"></script>
         <script src="../bootstrap/js/bootstrap.min.js"></script>
         <script src="../js/jquery.appear.js"></script>
+        <script src="../js/belongings.js"></script>
 
           <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -87,19 +88,19 @@
 			<tr class="info">
 
 				<th class="info" rowspan=3>1</th>
-				<td data-toggle="popover" title="持ち物" data-content="教科書">授業</td>
-				<td data-toggle="popover" title="持ち物" data-content="教科書"></td>
-				<td data-toggle="popover" title="持ち物" data-content="教科書"></td>
-				<td data-toggle="popover" title="持ち物" data-content="教科書"></td>
-				<td data-toggle="popover" title="持ち物" data-content="教科書"></td>
-				<td data-toggle="popover" title="持ち物" data-content="教科書"></td>
-				<td data-toggle="popover" title="持ち物" data-content="教科書"></td>
-				<td data-toggle="popover" title="持ち物" data-content="教科書"></td>
-				<td data-toggle="popover" title="持ち物" data-content="教科書"></td>
-				<td data-toggle="popover" title="持ち物" data-content="教科書"></td>
-				<td data-toggle="popover" title="持ち物" data-content="教科書"></td>
-				<td data-toggle="popover" title="持ち物" data-content="教科書"></td>
-				<td data-toggle="popover" title="持ち物" data-content="教科書"></td>
+				<td id="cell1" data-toggle="popover" data-placement="right" data-content="教科書" title="持ち物">授業</td>
+				<td>授業</td>
+				<td>授業</td>
+				<td>授業</td>
+				<td>授業</td>
+				<td>授業</td>
+				<td>授業</td>
+				<td>授業</td>
+				<td>授業</td>
+				<td>授業</td>
+				<td>授業</td>
+				<td>授業</td>
+				<td>授業</td>
 			</tr>
 
 			<tr class="info">
