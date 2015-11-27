@@ -27,7 +27,7 @@
 <!-- Test_css -->
 <!-- <link href='../css/test.css' rel='stylesheet' type='text/css'>  -->
 
-<script src="../js/jquery-2.1.1.min.js"></script>
+
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script src="/Sotsuken/js/jquery.appear.js"></script>
 <script src="/Sotsuken/js/belongings.js"></script>
