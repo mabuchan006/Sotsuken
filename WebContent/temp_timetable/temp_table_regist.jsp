@@ -1,20 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
-	<jsp:directive.page contentType="text/html; charset=UTF-8"
-		pageEncoding="UTF-8" session="false"/>
-	<jsp:output doctype-root-element="html"
-		doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN"
-		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
-		omit-xml-declaration="true" />
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>Insert title here</title>
-</head>
-<body>
-${ InfosubjectList[0].classID }
-${ InfosubjectList[0].className }
-${ InfosubjectList[0].subjectID }
-${ InfosubjectList[0].subjectName }
-</body>
-</html>
-</jsp:root>
+<%@page import="timetable.db.masterInfo"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.sun.xml.internal.bind.v2.schemagen.xmlschema.Import"%>
+<%@ page pageEncoding="UTF-8" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<c:forEach var="Infosub" items="${InfosubjectList}">
+	${Infosub.classID }
+</c:forEach>
