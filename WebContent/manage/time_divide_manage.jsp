@@ -88,13 +88,14 @@ $(function( e ){
 <div class="container-fluid">
 
 <!-- タブ -->
- <ul class="nav nav-tabs nav-justified">
-     <li><a href="#">月</a></li>
-     <li><a href="#">火</a></li>
-     <li><a href="#">水</a></li>
-     <li><a href="#">木</a></li>
-     <li><a href="#">金</a></li>
-    </ul>
+ <ul class="nav nav-tabs nav-justified ">
+     <li class="active h4"><a href="#test2">月</a></li>
+     <li class="h4"><a href="#test3">火</a></li>
+     <li class="h4"><a href="#test4">水</a></li>
+     <li class="h4"><a href="#test5">木</a></li>
+     <li class="h4"><a href="#test6">金</a></li>
+</ul>
+
 <!-- button -->
 
 <button type="submit" class="btn btn-primary btn-lg col-md-1 fix">
