@@ -31,6 +31,7 @@
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script src="../js/jquery.appear.js"></script>
 <script src="../js/belongings.js"></script>
+<script src="../js/jPrintArea.js"></script>
 <script src="../js/print.js"></script>
 
 <!--[if lt IE 9]>
@@ -68,20 +69,15 @@
 </section>
 <!-- End Logo Section -->
 
-<!--
-<button type="button" id="j"
-	class="btn btn-lg btn-danger"
-	data-toggle="popover"
-	title="持ち物"
-	data-content="教科書">
-	クリック
-</button>
- -->
-
+<!-- 印刷エリア指定id printareaで囲んだ範囲で可能 -->
 <div id="printarea">
+
 <div  class="container">
 <div class="table-responsive">
+
+<!-- 印刷ボタン -->
 <input type="button" id="btn_print" value="印刷テスト">
+
 <table class="table table-striped table-bordered text-center table-hover;"
 	>
 <thead>
