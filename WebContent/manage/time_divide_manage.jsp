@@ -91,12 +91,12 @@
 		<div class="container-fluid">
 
 			<!-- タブ -->
-			<ul class="nav nav-tabs nav-justified ">
+			<ul class="nav nav-pills nav-justified ">
 				<li class="h4" id="mon"><a href="#test2">月</a></li>
 				<li class="h4" id="tue"><a href="#test3">火</a></li>
 				<li class="h4" id="wed"><a href="#test4">水</a></li>
 				<li class="h4" id="thu"><a href="#test5">木</a></li>
-				<li class="h41" id="fri"><a href="#test6">金</a></li>
+				<li class="h4" id="fri"><a href="#test6">金</a></li>
 			</ul>
 
 			<!-- button -->
