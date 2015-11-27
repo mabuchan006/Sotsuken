@@ -31,6 +31,8 @@
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script src="../js/jquery.appear.js"></script>
 <script src="../js/belongings.js"></script>
+
+<!-- 印刷用js 下2つ-->
 <script src="../js/jPrintArea.js"></script>
 <script src="../js/print.js"></script>
 
@@ -69,14 +71,14 @@
 </section>
 <!-- End Logo Section -->
 
-<!-- 印刷エリア指定id printareaで囲んだ範囲で可能 -->
-<div id="printarea">
-
 <div  class="container">
 <div class="table-responsive">
 
 <!-- 印刷ボタン -->
 <input type="button" id="btn_print" value="印刷テスト">
+
+<!-- 印刷エリア指定id printareaで囲んだ範囲で可能 -->
+<div id="printarea">
 
 <table class="table table-striped table-bordered text-center table-hover;"
 	>
@@ -314,6 +316,7 @@
 			</tbody>
 
 		</table>
+	<!-- printArea -->
 	</div>
   </div>
 

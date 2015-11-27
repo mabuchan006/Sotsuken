@@ -5,10 +5,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> branch 'master' of https://github.com/mabuchan006/Sotsuken.git
 
         <!-- Start Logo Section --><!-- ヘッダー部分 -->
         <section id="logo-section" class="text-center">
@@ -70,6 +66,13 @@
 
   <div  class="container">
     <div class="table-responsive">
+
+    <!-- 印刷ボタン -->
+	<input type="button" id="btn_print" value="印刷テスト">
+
+    <!-- 印刷エリア指定id printareaで囲んだ範囲で可能 -->
+    <div id="printarea">
+
     <table class="table table-striped table-bordered text-center table-hover;">
     <thead >
 	<tr class="purple2 ">
@@ -167,5 +170,6 @@
 <%} %>
 			</tbody>
 		</table>
+	</div>
   </div>
 </div>

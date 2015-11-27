@@ -12,6 +12,6 @@ $.jPrintArea=function(el){
 	doc.close();
 	iframe.contentWindow.focus();
 	iframe.contentWindow.print();
-	alert('Printing...');
+	//alert('印刷準備中');
 	document.body.removeChild(iframe);
 }
