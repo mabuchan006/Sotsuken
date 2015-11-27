@@ -32,10 +32,7 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <!-- カレンダーJS読み込み -->
-<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-datepicker.min.css">
-<script type="text/javascript" src="../bootstrap/js/bootstrap-datepicker.min.js"></script>
-<script type="text/javascript" src="../bootstrap/js/bootstrap-datepicker.js"></script>
+
 
 
 
@@ -546,6 +543,9 @@ $(function( e ){
 	</div>
 </form>
 
+
+
+<!-- もーだる -->
 <div id="auto_modal" class="modal fade ">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -562,5 +562,6 @@ $(function( e ){
     </div>
   </div>
 </div>
+<!-- もーだる終了 -->
 </body>
 </html>
