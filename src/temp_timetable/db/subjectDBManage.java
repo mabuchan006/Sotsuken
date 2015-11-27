@@ -12,11 +12,11 @@ public class subjectDBManage extends DBAccess {
 
 	public subjectDBManage(String chooseClassID) {
 		super(DRIVER_NAME);
-		choiceSubjectSQL = String.format("SELECT infoSub.subjectID, sub.subjectName, infoSub.classID, cla.className"
+		choiceSubjectSQL = String.format("SELECT infoSub.subjectID, sub.subjectName, infoSub.classID, cla.className "
                 +"FROM tbl_infoSubject infoSub "
                 +"INNER JOIN tbl_subject sub on infoSub.subjectID = sub.subjectID "
                 +"INNER JOIN tbl_class cla on infoSub.classID = cla.classID "
-                +"Where infoSub.classID = % ORDER BY infoSub.SubjectID ASC",chooseClassID);
+                +"Where infoSub.classID = %s ORDER BY infoSub.subjectID ASC",chooseClassID);
 
 		// TODO 自動生成されたコンストラクター・スタブ
 	}

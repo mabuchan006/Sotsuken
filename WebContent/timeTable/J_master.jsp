@@ -5,10 +5,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
-<script src="../js/jquery-2.1.1.min.js"></script>
-<script src="../bootstrap/js/bootstrap.min.js"></script>
-<script src="../js/jquery.appear.js"></script>
-<script src="../js/belongings.js"></script>
+
 
         <!-- Start Logo Section --><!-- ヘッダー部分 -->
         <section id="logo-section" class="text-center">

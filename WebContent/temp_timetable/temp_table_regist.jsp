@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
-	<jsp:directive.page contentType="text/html; charset=UTF-8" 
+	<jsp:directive.page contentType="text/html; charset=UTF-8"
 		pageEncoding="UTF-8" session="false"/>
 	<jsp:output doctype-root-element="html"
 		doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -11,7 +11,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+${ InfosubjectList[0].classID }
+${ InfosubjectList[0].className }
+${ InfosubjectList[0].subjectID }
+${ InfosubjectList[0].subjectName }
 </body>
 </html>
 </jsp:root>
