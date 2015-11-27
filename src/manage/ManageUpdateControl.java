@@ -74,9 +74,9 @@ public class ManageUpdateControl extends HttpServlet {
 			//更新済み講師情報全件取得
 			subjectDBManage sdm = new subjectDBManage();
 
-				Map<String,List<String>> classList = sdm.classDBSelect();
-				System.out.println(classList);
-				request.setAttribute("classList", classList);
+				Map<String,List<String>> classMap = sdm.classDBSelect();
+				System.out.println(classMap);
+				request.setAttribute("classMap", classMap);
 
 			} catch (Exception e) {
 				// TODO 自動生成された catch ブロック
