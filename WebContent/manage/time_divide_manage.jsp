@@ -23,9 +23,8 @@
         <!-- Custom Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
-        <script src="../js/jquery-2.1.1.min.js"></script>
-        <script src="../bootstrap/js/bootstrap.min.js"></script>
-        <script src="../js/jquery.appear.js"></script>
+
+
 
 
           <!--[if lt IE 9]>
@@ -38,11 +37,16 @@
 <script type="text/javascript" src="../bootstrap/js/bootstrap-datepicker.min.js"></script>
 <script type="text/javascript" src="../bootstrap/js/bootstrap-datepicker.js"></script>
 
+
+
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+
 <!-- ドラッグアンドドロップとアコーディオン化 -->
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
-<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
 <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
 <script type="text/javascript" src="../js/dragdrop.js"></script>
+<script src="../js/modal.js"></script>
 
 <!-- Custom CSS -->
         <link href="../css/style.css" rel="stylesheet">
@@ -58,9 +62,12 @@ $(function( e ){
 <title>コマ割画面</title>
 
 </head>
+
+
 <body>
 
-<!-- タグ -->
+
+
 
 
 
@@ -538,5 +545,22 @@ $(function( e ){
 		</div>
 	</div>
 </form>
+
+<div id="auto_modal" class="modal fade ">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header back-color">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title white">login</h3>
+      </div>
+      <div class="modal-body">
+<h3 >login</h3>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">close</button>
+       </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
