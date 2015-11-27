@@ -29,8 +29,8 @@
 
 <script src="../js/jquery-2.1.1.min.js"></script>
 <script src="../bootstrap/js/bootstrap.min.js"></script>
-<script src="../js/jquery.appear.js"></script>
-<script src="../js/belongings.js"></script>
+<script src="/Sotsuken/js/jquery.appear.js"></script>
+<script src="/Sotsuken/js/belongings.js"></script>
 
 <!-- 印刷用js 下2つ-->
 <script src="../js/jPrintArea.js"></script>
