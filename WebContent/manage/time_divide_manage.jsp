@@ -92,11 +92,11 @@
 
 			<!-- タブ -->
 			<ul class="nav nav-tabs nav-justified ">
-				<li class="h4 "><a href="#test2">月</a></li>
-				<li class="h4 font1"><a href="#test3">火</a></li>
-				<li class="h4 font1"><a href="#test4">水</a></li>
-				<li class="h4 font1"><a href="#test5">木</a></li>
-				<li class="h4 font1"><a href="#test6">金</a></li>
+				<li class="h4" id="mon"><a href="#test2">月</a></li>
+				<li class="h4" id="tue"><a href="#test3">火</a></li>
+				<li class="h4" id="wed"><a href="#test4">水</a></li>
+				<li class="h4" id="thu"><a href="#test5">木</a></li>
+				<li class="h41" id="fri"><a href="#test6">金</a></li>
 			</ul>
 
 			<!-- button -->

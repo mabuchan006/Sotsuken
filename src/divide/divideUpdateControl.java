@@ -46,13 +46,12 @@ public class divideUpdateControl extends HttpServlet {
 
 		// 文字コードutf8
 		request.setCharacterEncoding("UTF-8");
-		// jspからのページ情報取得
 		// 使用するcss,jsファイルの適用
 		getIncludeFile(request);
-
 		// ページ情報指定
 		content_page = "/manage/time_divide_manage.jsp";
 		page_title = "コマ割り管理画面";
+
 		divideDBManage ddm = new divideDBManage();
 		String[] classIDArray;
 		int period = 0;
@@ -71,9 +70,7 @@ public class divideUpdateControl extends HttpServlet {
 
 			for (String classID : classIDArray) {
 
-				diList.add(new divideInfo(
-						period, roomID, week, classID
-				));
+				diList.add(new divideInfo(period, roomID, week, classID));
 
 			}
 
@@ -82,7 +79,7 @@ public class divideUpdateControl extends HttpServlet {
 
 		} // for
 
-			// insert
+		// insert
 		try {
 
 			ddm.divideDBInsert(diList);
@@ -121,13 +118,9 @@ public class divideUpdateControl extends HttpServlet {
 
 		js.add("/Sotsuken/js/jquery-2.1.1.min.js");
 		js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
-		js.add("/Sotsuken/bootstrap/js/bootstrap.js");
-		js.add("/Sotsuken/js/jquery.appear.js");
-		js.add("/Sotsuken/js/teacher_regist.js");
 		js.add("/Sotsuken/js/dragdrop.js");
 		js.add("/Sotsuken/js/modal.js");
 		js.add("http://code.jquery.com/ui/1.10.0/jquery-ui.js");
-		js.add("http://code.jquery.com/jquery-1.8.3.js");
 		request.setAttribute("css", css);
 		request.setAttribute("js", js);
 	}// css&js
