@@ -37,7 +37,8 @@ public class divideDBManage extends DBAccess {
 
 		while (rs.next()) {
 
-			divideInfo = new divideInfo(rs.getInt("period"), rs.getString("roomID"), rs.getString("week"), rs.getString("classID"));
+			divideInfo = new divideInfo(rs.getInt("period"), rs.getString("roomID"), rs.getString("week"),
+					rs.getString("classID"));
 			divideList.add(divideInfo);
 		}
 
