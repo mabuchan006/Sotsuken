@@ -78,7 +78,7 @@ $(function( e ){
             </div>
         </section>
         <!-- End Logo Section -->
-<form action="/Sotsuken/divideUpdate?page=divide_manage" method="post">
+<form action="/Sotsuken/divideUpdate" method="post">
 
 
 <div class="container-fluid">
