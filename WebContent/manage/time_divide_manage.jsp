@@ -89,7 +89,7 @@ $(function( e ){
 
 <!-- タブ -->
  <ul class="nav nav-tabs nav-justified ">
-     <li class="active h4"><a href="#test2">月</a></li>
+     <li class="h4"><a href="#test2">月</a></li>
      <li class="h4"><a href="#test3">火</a></li>
      <li class="h4"><a href="#test4">水</a></li>
      <li class="h4"><a href="#test5">木</a></li>
