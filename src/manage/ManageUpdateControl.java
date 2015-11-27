@@ -3,6 +3,7 @@ package manage;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import DB.DBAccess;
 import manage.db.classDBManage;
 import manage.db.classInfo;
+import manage.db.subjectDBManage;
 import manage.db.teacherDBManage;
 import manage.db.teacherInfo;
 
@@ -45,29 +47,40 @@ public class ManageUpdateControl extends HttpServlet {
 		//文字コードutf8
 		request.setCharacterEncoding("UTF-8");
 		//jspからのページ情報取得
-		String get_page = request.getParameter("page")==null?"divide_manage"
+		String get_page = request.getParameter("page")==null?"subject_manage"
 				:request.getParameter("page");
 		//使用するcss,jsファイルの適用
 		getIncludeFile(request);
 
 		//teacher管理の画面処理
-		if(get_page == "teacher_manage"){
+		if(get_page.equals("teacher_manage")){
 			//講師DB操作クラス取得
 			teacherDBManage tdm = new teacherDBManage();
 			teacherUpdate(request, tdm);
 		}//if
 		//class管理画面の処理
-		if(get_page == "class_manage"){
+		if(get_page.equals("class_manage")){
 			//クラスDB操作クラス取得
 			classDBManage cdm = new classDBManage();
 			classUpdate(request, cdm);
 		}//if
 
-		if(get_page == "divide_manage"){
+		if(get_page.equals("subject_manage")){
 
+			try {
 			//ページ情報指定
-			content_page = "/manage/time_divide_manage.jsp";
-			page_title = "コマ割り管理画面";
+			content_page = "/manage/subject_manage.jsp";
+			page_title = "科目管理画面";
+			//更新済み講師情報全件取得
+			subjectDBManage sdm = new subjectDBManage();
+
+				Map<String,List<String>> classList = sdm.classDBSelect();
+				System.out.println(classList);
+
+			} catch (Exception e) {
+				// TODO 自動生成された catch ブロック
+				e.printStackTrace();
+			}
 
 		}
 
