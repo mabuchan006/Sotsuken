@@ -1,5 +1,4 @@
 
-
 package divide;
 
 import java.io.IOException;
@@ -25,180 +24,91 @@ public class divideUpdateControl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private String content_page;
-	private String page_title ;
-	ArrayList<String> css = new ArrayList<String>(); //css用List
-	ArrayList<String> js = new ArrayList<String>(); //JavaScript用List
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+	private String page_title;
+	ArrayList<String> css = new ArrayList<String>(); // css用List
+	ArrayList<String> js = new ArrayList<String>(); // JavaScript用List
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
 	public divideUpdateControl() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 
-		//文字コードutf8
+		// 文字コードutf8
 		request.setCharacterEncoding("UTF-8");
-		//jspからのページ情報取得
-		String get_page = request.getParameter("page")==null?"divide_manage"
-				:request.getParameter("page");
-		//使用するcss,jsファイルの適用
+		// jspからのページ情報取得
+		// 使用するcss,jsファイルの適用
 		getIncludeFile(request);
 
-		if(get_page == "divide_manage"){
+		// ページ情報指定
+		content_page = "/manage/time_divide_manage.jsp";
+		page_title = "コマ割り管理画面";
+		divideDBManage ddm = new divideDBManage();
+		String[] classIDArray;
+		int period = 0;
+		String week = "月";
+		String roomID = null;
+		List<divideInfo> diList = new ArrayList<>();
+		String inputStr[] = new String[2]; // 取得
+		Map<String, String[]> map = request.getParameterMap();
 
-			//ページ情報指定
-			content_page = "/manage/time_divide_manage.jsp";
-			page_title = "コマ割り管理画面";
-			divideDBManage ddm = new divideDBManage();
+		for (String key : map.keySet()) {
 
+			inputStr = key.split("-");
+			roomID = inputStr[0];
+			period = Integer.parseInt(inputStr[1]);
+			classIDArray = map.get(key)[0].split(",");// ,区切りのクラスIDを1つずつ取得
 
-			String[] classIDArray;
-			int period = 0;
-			String week = "月";
-			String roomID = null;
-			List<divideInfo> diList = new ArrayList<>();
-			String inputStr[] = new String[2];			//取得
-			Map<String, String[]> map = request.getParameterMap();
-			for (String key : map.keySet()) {
+			for (String classID : classIDArray) {
 
-				inputStr = key.split("-");
-				System.out.println(key);
-				System.out.println(inputStr.length);
-				roomID = inputStr[0];
-				period = Integer.parseInt(inputStr[1]);
-				classIDArray = map.get(key)[0].split(",");//,区切りのクラスIDを1つずつ取得
+				diList.add(new divideInfo(
+						period, roomID, week, classID
+				));
 
-				for (String classID : classIDArray) {
-					diList.add ( new divideInfo(
+			}
 
-							period,
-							roomID,
-							week,
-							classID
+			classIDArray = new String[5];
+			inputStr = new String[2];
 
-							));
+		} // for
 
-					System.out.print(period);
-					System.out.print(roomID);
-					System.out.print(week);
-					System.out.println(classID);
-				}
-
-				classIDArray = new String[5];
-				inputStr = new String[2];
-				//System.out.println(key + ":" +map.get(key)[0]);
-			}//for
-			//insert
-			try {
-
-				ddm.divideDBInsert(diList);
-
-				} catch (Exception e) {e.printStackTrace();}
-		}//if
-		//ページデータセット
+			// insert
 		try {
+
+			ddm.divideDBInsert(diList);
 			request.setAttribute("content_page", content_page);
 			request.setAttribute("page_title", page_title);
 
 		} catch (Exception e) {
-			// TODO 自動生成された catch ブロック
+
 			e.printStackTrace();
+
 		}
 
-		//画面遷移
+		// 画面遷移
 		RequestDispatcher disp = request.getRequestDispatcher("template/layout.jsp");
 		disp.forward(request, response);
-		//response.sendRedirect(content_page);
 
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
-		//文字コードutf8
-		request.setCharacterEncoding("UTF-8");
-		//jspからのページ情報取得
-		String get_page = request.getParameter("page")==null?"divide_manage"
-				:request.getParameter("page");
-		//使用するcss,jsファイルの適用
-		getIncludeFile(request);
-
-		if(get_page == "divide_manage"){
-
-			//ページ情報指定
-			content_page = "/manage/time_divide_manage.jsp";
-			page_title = "コマ割り管理画面";
-
-
-				divideDBManage ddm = new divideDBManage();
-
-
-				String[] classIDArray;
-				int period = 0;
-				String week = "月";
-				String roomID = null;
-				List<divideInfo> diList = new ArrayList<>();
-				String inputStr[];
-				//取得
-				Map<String, String[]> map = request.getParameterMap();
-				for (String key : map.keySet()) {
-
-					inputStr = key.split("-");
-					roomID = inputStr[0];
-					period = Integer.parseInt(inputStr[1]);
-					classIDArray = map.get(key)[0].split(",");//,区切りのクラスIDを1つずつ取得
-
-					for (String classID : classIDArray) {
-						diList.add ( new divideInfo(
-
-								period,
-								roomID,
-								week,
-								classID
-
-								));
-
-						System.out.print(period);
-						System.out.print(roomID);
-						System.out.print(week);
-						System.out.println(classID);
-					}
-
-					classIDArray = new String[5];
-					inputStr = new String[2];
-					//System.out.println(key + ":" +map.get(key)[0]);
-				}//for
-				//insert
-				try {
-					String Msg;
-					Msg=ddm.divideDBInsert(diList);
-					request.setAttribute("msg", Msg);
-					} catch (Exception e) {e.printStackTrace();}
-			}//if
-
-		//ページデータセット
-		try {
-			request.setAttribute("content_page", content_page);
-			request.setAttribute("page_title", page_title);
-
-		} catch (Exception e) {
-			// TODO 自動生成された catch ブロック
-			e.printStackTrace();
-		}
-
-		//画面遷移
-		RequestDispatcher disp = request.getRequestDispatcher("template/layout.jsp");
-		disp.forward(request, response);
-		//response.sendRedirect(content_page);
-		//doGet(request, response);
+		doGet(request, response);
 	}
 
 	private void getIncludeFile(HttpServletRequest request) {
@@ -208,8 +118,6 @@ public class divideUpdateControl extends HttpServlet {
 		css.add("/Sotsuken/css/style.css");
 		css.add("/Sotsuken/css/pure-drawer.css");
 		css.add("http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css");
-
-
 
 		js.add("/Sotsuken/js/jquery-2.1.1.min.js");
 		js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
@@ -222,6 +130,6 @@ public class divideUpdateControl extends HttpServlet {
 		js.add("http://code.jquery.com/jquery-1.8.3.js");
 		request.setAttribute("css", css);
 		request.setAttribute("js", js);
-	}//css&js
+	}// css&js
 
 }
