@@ -3,12 +3,8 @@
 <%@page import="com.sun.xml.internal.bind.v2.schemagen.xmlschema.Import"%>
 <%@ page pageEncoding="UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>d
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
-<script src="../js/jquery-2.1.1.min.js"></script>
-<script src="../bootstrap/js/bootstrap.min.js"></script>
-<script src="../js/jquery.appear.js"></script>
-<script src="../js/belongings.js"></script>
 
         <!-- Start Logo Section --><!-- ヘッダー部分 -->
         <section id="logo-section" class="text-center">
@@ -70,6 +66,13 @@
 
   <div  class="container">
     <div class="table-responsive">
+
+    <!-- 印刷ボタン -->
+	<input type="button" id="btn_print" value="印刷テスト">
+
+    <!-- 印刷エリア指定id printareaで囲んだ範囲で可能 -->
+    <div id="printarea">
+
     <table class="table table-striped table-bordered text-center table-hover;">
     <thead >
 	<tr class="purple2 ">
@@ -115,7 +118,7 @@
 		<% pageContext.setAttribute("index", cnt3); %>
 			<%if (cnt1==1){ %>
 				<%if(cnt2==0){ %>
-				<td class="info" id="cell" data-toggle="popover" data-placement="right" data-content="教科書" title="持ち物" nowrap>${period1List[index].subjectName}</td>
+				<td class="info" id="cell" data-toggle="popover" data-placement="right" data-content="" title="持ち物" nowrap>${period1List[index].subjectName} 授業 </td>
 				<%} %>
 				<%if(cnt2==1){ %>
 				<td class="info" nowrap>${period1List[index].teacherName}</td>
@@ -127,7 +130,7 @@
 
 			<%if (cnt1==2){ %>
 				<%if(cnt2==0){ %>
-				<td class="danger" id="cell" data-toggle="popover" data-placement="right" data-content="教科書" title="" nowrap>${period2List[index].subjectName}</td>
+				<td class="danger" id="cell" data-toggle="popover" data-placement="right" data-content="" title="持ち物" nowrap>${period2List[index].subjectName}</td>
 				<%} %>
 				<%if(cnt2==1){ %>
 				<td class="danger" nowrap>${period2List[index].teacherName}</td>
@@ -139,7 +142,7 @@
 
 			<%if (cnt1==3){ %>
 				<%if(cnt2==0){ %>
-				<td class="success" id="cell" data-toggle="popover" data-placement="right" data-content="教科書" title="" nowrap>${period3List[index].subjectName}</td>
+				<td class="success" id="cell" data-toggle="popover" data-placement="right" data-content="" title="持ち物" nowrap>${period3List[index].subjectName}</td>
 				<%} %>
 				<%if(cnt2==1){ %>
 				<td class="success" nowrap>${period3List[index].teacherName}</td>
@@ -151,7 +154,7 @@
 
 			<%if (cnt1==4){ %>
 				<%if(cnt2==0){ %>
-				<td class="warning" id="cell" data-toggle="popover" data-placement="right" data-content="教科書" title="" nowrap>${period4List[index].subjectName}</td>
+				<td class="warning" id="cell" data-toggle="popover" data-placement="right" data-content="" title="持ち物" nowrap>${period4List[index].subjectName}</td>
 				<%} %>
 				<%if(cnt2==1){ %>
 				<td class="warning" nowrap>${period4List[index].teacherName}</td>
@@ -167,5 +170,6 @@
 <%} %>
 			</tbody>
 		</table>
+	</div>
   </div>
 </div>

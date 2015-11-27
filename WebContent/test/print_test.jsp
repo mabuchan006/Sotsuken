@@ -32,6 +32,10 @@
 <script src="../js/jquery.appear.js"></script>
 <script src="../js/belongings.js"></script>
 
+<!-- 印刷用js 下2つ-->
+<script src="../js/jPrintArea.js"></script>
+<script src="../js/print.js"></script>
+
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -67,19 +71,15 @@
 </section>
 <!-- End Logo Section -->
 
-<!--
-<button type="button" id="j"
-	class="btn btn-lg btn-danger"
-	data-toggle="popover"
-	title="持ち物"
-	data-content="教科書">
-	クリック
-</button>
- -->
-
-
 <div  class="container">
 <div class="table-responsive">
+
+<!-- 印刷ボタン -->
+<input type="button" id="btn_print" value="印刷テスト">
+
+<!-- 印刷エリア指定id printareaで囲んだ範囲で可能 -->
+<div id="printarea">
+
 <table class="table table-striped table-bordered text-center table-hover;"
 	>
 <thead>
@@ -316,6 +316,8 @@
 			</tbody>
 
 		</table>
+	<!-- printArea -->
+	</div>
   </div>
 
 
