@@ -67,8 +67,6 @@
   <div  class="container">
     <div class="table-responsive">
 
-    <!-- 印刷ボタン -->
-	<input type="button" id="btn_print" value="印刷テスト">
 
     <!-- 印刷エリア指定id printareaで囲んだ範囲で可能 -->
     <div id="printarea">
@@ -118,7 +116,7 @@
 		<% pageContext.setAttribute("index", cnt3); %>
 			<%if (cnt1==1){ %>
 				<%if(cnt2==0){ %>
-				<td class="info" id="cell" data-toggle="popover" data-placement="right" data-content="" title="持ち物" nowrap>${period1List[index].subjectName} 授業 </td>
+				<td  class="info cell1" data-toggle="popover" data-placement="right" data-content="教科書" title="持ち物" nowrap>${period1List[index].subjectName}</td>
 				<%} %>
 				<%if(cnt2==1){ %>
 				<td class="info" nowrap>${period1List[index].teacherName}</td>
@@ -171,5 +169,8 @@
 			</tbody>
 		</table>
 	</div>
+	<!-- 印刷ボタン -->
+	<input type="button" id="btn_print" value="印刷テスト">
+
   </div>
 </div>
