@@ -50,7 +50,7 @@ public class divideUpdateControl extends HttpServlet {
 		getIncludeFile(request);
 		// ページ情報指定
 		content_page = "/manage/time_divide_manage.jsp";
-		page_title = "コマ割り管理画面";
+		page_title = "Create Schedule";
 
 		divideDBManage ddm = new divideDBManage();
 		String[] classIDArray;
@@ -62,18 +62,36 @@ public class divideUpdateControl extends HttpServlet {
 		Map<String, String[]> map = request.getParameterMap();
 
 		for (String key : map.keySet()) {
+			if (key.equals("mon") || key.equals("tue") || key.equals("wed") || key.equals("thu") || key.equals("fri")) {
+				switch (key) {
+				case "mon":
+					week = "月";
+					break;
+				case "tue":
+					week = "火";
+					break;
+				case "wed":
+					week = "水";
+					break;
+				case "thu":
+					week = "木";
+					break;
+				case "fri":
+					week = "金";
+					break;
+				}
+			} else {
+				inputStr = key.split("-");
+				roomID = inputStr[0];
+				period = Integer.parseInt(inputStr[1]);
+				classIDArray = map.get(key)[0].split(",");// ,区切りのクラスIDを1つずつ取得
 
-			inputStr = key.split("-");
-			roomID = inputStr[0];
-			period = Integer.parseInt(inputStr[1]);
-			classIDArray = map.get(key)[0].split(",");// ,区切りのクラスIDを1つずつ取得
+				for (String classID : classIDArray) {
 
-			for (String classID : classIDArray) {
+					diList.add(new divideInfo(period, roomID, week, classID));
 
-				diList.add(new divideInfo(period, roomID, week, classID));
-
-			}
-
+				} // for
+			} // if
 			classIDArray = new String[5];
 			inputStr = new String[2];
 
@@ -120,6 +138,7 @@ public class divideUpdateControl extends HttpServlet {
 		js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
 		js.add("/Sotsuken/js/dragdrop.js");
 		js.add("/Sotsuken/js/modal.js");
+		js.add("/Sotsuken/js/week.js");
 		js.add("http://code.jquery.com/ui/1.10.0/jquery-ui.js");
 		request.setAttribute("css", css);
 		request.setAttribute("js", js);

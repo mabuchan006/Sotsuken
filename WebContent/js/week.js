@@ -1,8 +1,8 @@
 function f_active(e) {
-	$('#addClassTest li').click(function(e) {
-		var elem = $(this).get(0);
-		$("li").removeAttr("name");
-		$(this).attr("name", elem.id);
+	$('#weekTab li').click(function(e) {
+		var elem = $(this).children("input").get(0)
+		$("input").removeAttr("name");
+		$(elem).attr("name", $(this).get(0).id);
 		$("li").removeClass("active");
 		$(this).addClass("active");
 	});
