@@ -147,11 +147,14 @@ public class subjectDBManage extends DBAccess{
 
 			//全件取得
 			while(rs.next()){
-
-				classID = rs.getString("classID");
 				
+				//classIDいったん取得
+				classID = rs.getString("classID");
 				selectExe(select_par);
 				
+				/*
+				 * ex
+				 */
 				par_grade = classID.substring(0,2);
 
 				tempStr  = par_grade;

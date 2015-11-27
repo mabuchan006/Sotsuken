@@ -53,10 +53,8 @@ public class divideUpdateControl extends HttpServlet {
 		if(get_page == "divide_manage"){
 
 			//ページ情報指定
-			content_page = "/manage/time_divide_manage2.jsp";
+			content_page = "/manage/time_divide_manage.jsp";
 			page_title = "コマ割り管理画面";
-
-			if(request.getParameter("regist_divide")!=null){
 			divideDBManage ddm = new divideDBManage();
 
 
@@ -65,12 +63,13 @@ public class divideUpdateControl extends HttpServlet {
 			String week = "月";
 			String roomID = null;
 			List<divideInfo> diList = new ArrayList<>();
-			String inputStr[];
-			//取得
+			String inputStr[] = new String[2];			//取得
 			Map<String, String[]> map = request.getParameterMap();
 			for (String key : map.keySet()) {
 
 				inputStr = key.split("-");
+				System.out.println(key);
+				System.out.println(inputStr.length);
 				roomID = inputStr[0];
 				period = Integer.parseInt(inputStr[1]);
 				classIDArray = map.get(key)[0].split(",");//,区切りのクラスIDを1つずつ取得
@@ -97,11 +96,10 @@ public class divideUpdateControl extends HttpServlet {
 			}//for
 			//insert
 			try {
-				String Msg;
-				Msg=ddm.divideDBInsert(diList);
-				request.setAttribute("msg", Msg);
+
+				ddm.divideDBInsert(diList);
+
 				} catch (Exception e) {e.printStackTrace();}
-		}//if
 		}//if
 		//ページデータセット
 		try {
@@ -139,7 +137,7 @@ public class divideUpdateControl extends HttpServlet {
 			content_page = "/manage/time_divide_manage.jsp";
 			page_title = "コマ割り管理画面";
 
-			if (request.getParameter("regist_divide")!=null ) {
+
 				divideDBManage ddm = new divideDBManage();
 
 
@@ -185,7 +183,7 @@ public class divideUpdateControl extends HttpServlet {
 					request.setAttribute("msg", Msg);
 					} catch (Exception e) {e.printStackTrace();}
 			}//if
-		}//if
+
 		//ページデータセット
 		try {
 			request.setAttribute("content_page", content_page);
@@ -200,8 +198,6 @@ public class divideUpdateControl extends HttpServlet {
 		RequestDispatcher disp = request.getRequestDispatcher("template/layout.jsp");
 		disp.forward(request, response);
 		//response.sendRedirect(content_page);
-
-
 		//doGet(request, response);
 	}
 
