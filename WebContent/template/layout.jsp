@@ -39,7 +39,10 @@
 
             <div class="pure-pusher-container ">
                 <div class="pure-pusher">
+	<div class="logo text-center">
+                            <h1>${page_title }</h1>
 
+                        </div>
 	<jsp:include page="${content_page}" />
 
 
