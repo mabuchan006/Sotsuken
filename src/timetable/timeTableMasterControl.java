@@ -63,6 +63,7 @@ public class timeTableMasterControl extends HttpServlet {
     	js.add("/Sotsuken/js/jquery-2.1.1.min.js");
        	js.add("/Sotsuken/js/jquery.appear.js");
        	js.add("/Sotsuken/bootstrap/js/bootstrap-dropdown.js");
+       	js.add("/Sotsuken/js/belongings.js");
 
 
 		if( page != null ){

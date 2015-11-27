@@ -120,7 +120,7 @@
 		<% pageContext.setAttribute("index", cnt3); %>
 			<%if (cnt1==1){ %>
 				<%if(cnt2==0){ %>
-				<td class="info" id="cell" data-toggle="popover" data-placement="right" data-content="" title="" nowrap>${period1List[index].subjectName}</td>
+				<td class="info" id="cell" data-toggle="popover" data-placement="right" data-content="" title="持ち物" nowrap>${period1List[index].subjectName}</td>
 				<%} %>
 				<%if(cnt2==1){ %>
 				<td class="info" nowrap>${period1List[index].teacherName}</td>
@@ -132,7 +132,7 @@
 
 			<%if (cnt1==2){ %>
 				<%if(cnt2==0){ %>
-				<td class="danger" id="cell" data-toggle="popover" data-placement="right" data-content="教科書" title="" nowrap>${period2List[index].subjectName}</td>
+				<td class="danger" id="cell" data-toggle="popover" data-placement="right" data-content="" title="持ち物" nowrap>${period2List[index].subjectName}</td>
 				<%} %>
 				<%if(cnt2==1){ %>
 				<td class="danger" nowrap>${period2List[index].teacherName}</td>
@@ -144,7 +144,7 @@
 
 			<%if (cnt1==3){ %>
 				<%if(cnt2==0){ %>
-				<td class="success" id="cell" data-toggle="popover" data-placement="right" data-content="教科書" title="" nowrap>${period3List[index].subjectName}</td>
+				<td class="success" id="cell" data-toggle="popover" data-placement="right" data-content="" title="持ち物" nowrap>${period3List[index].subjectName}</td>
 				<%} %>
 				<%if(cnt2==1){ %>
 				<td class="success" nowrap>${period3List[index].teacherName}</td>
@@ -156,7 +156,7 @@
 
 			<%if (cnt1==4){ %>
 				<%if(cnt2==0){ %>
-				<td class="warning" id="cell" data-toggle="popover" data-placement="right" data-content="教科書" title="" nowrap>${period4List[index].subjectName}</td>
+				<td class="warning" id="cell" data-toggle="popover" data-placement="right" data-content="" title="持ち物" nowrap>${period4List[index].subjectName}</td>
 				<%} %>
 				<%if(cnt2==1){ %>
 				<td class="warning" nowrap>${period4List[index].teacherName}</td>
