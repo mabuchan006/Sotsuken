@@ -46,6 +46,7 @@
 <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
 <script type="text/javascript" src="../js/dragdrop.js"></script>
 <script src="../js/modal.js"></script>
+<script src="../js/week.js"></script>
 
 <!-- Custom CSS -->
 <link href="../css/style.css" rel="stylesheet">
@@ -55,6 +56,7 @@
 		$("#class-room").accordion();
 		f_drag();
 		f_drop(e);
+		f_active(e);
 	});
 </script>
 
@@ -91,7 +93,7 @@
 		<div class="container-fluid">
 
 			<!-- タブ -->
-			<ul class="nav nav-pills nav-justified ">
+			<ul class="nav nav-pills nav-justified " id="addClassTest">
 				<li class="h4" id="mon"><a href="#test2">月</a></li>
 				<li class="h4" id="tue"><a href="#test3">火</a></li>
 				<li class="h4" id="wed"><a href="#test4">水</a></li>
