@@ -31,6 +31,7 @@
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script src="../js/jquery.appear.js"></script>
 <script src="../js/belongings.js"></script>
+<script src="../js/print.js"></script>
 
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -77,9 +78,10 @@
 </button>
  -->
 
-
+<div id="printarea">
 <div  class="container">
 <div class="table-responsive">
+<input type="button" id="btn_print" value="印刷テスト">
 <table class="table table-striped table-bordered text-center table-hover;"
 	>
 <thead>
@@ -316,6 +318,7 @@
 			</tbody>
 
 		</table>
+	</div>
   </div>
 
 
