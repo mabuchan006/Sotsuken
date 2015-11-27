@@ -55,13 +55,13 @@ public class timeTableMasterControl extends HttpServlet {
     	//●R~A_master.jspで使用
     	css.add("/Sotsuken/bootstrap/css/bootstrap.min.css");
     	css.add("/Sotsuken/css/style.css");
+    	css.add("/Sotsuken/css/animate.css");
        	css.add("/Sotsuken/css/font-awesome.min.css");
-       	css.add("/Sotsuken/css/animate.css");
     	css.add("http://fonts.googleapis.com/css?family=Lobster");
 
-    	js.add("/Sotsuken/js/jquery-2.1.1.min.js");
+    	js.add("/Sotsuken/bootstrap/js/bootstrap-dropdown.js");
+       	js.add("/Sotsuken/js/jquery-2.1.1.min.js");
     	js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
-       	js.add("/Sotsuken/bootstrap/js/bootstrap-dropdown.js");
        	js.add("/Sotsuken/js/jquery.appear.js");
        	js.add("/Sotsuken/js/belongings.js");
        	js.add("/Sotsuken/js/jPrintArea.js");
