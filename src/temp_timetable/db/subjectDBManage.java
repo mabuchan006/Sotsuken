@@ -16,7 +16,7 @@ public class subjectDBManage extends DBAccess {
                 +"FROM tbl_infoSubject infoSub "
                 +"INNER JOIN tbl_subject sub on infoSub.subjectID = sub.subjectID "
                 +"INNER JOIN tbl_class cla on infoSub.classID = cla.classID "
-                +"Where infoSub.classID = %s ORDER BY infoSub.subjectID ASC",chooseClassID);
+                +"WHERE infoSub.classID = '%s' ORDER BY infoSub.subjectID ASC",chooseClassID);
 
 		// TODO 自動生成されたコンストラクター・スタブ
 	}

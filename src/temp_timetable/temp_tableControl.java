@@ -40,16 +40,7 @@ public class temp_tableControl extends HttpServlet {
      */
     public temp_tableControl() {
       //●temp_table_regist.jspで使用
-    	css.add("/Sotsuken/bootstrap/css/bootstrap.min.css");
-    	css.add("/Sotsuken/css/style.css");
-       	css.add("/Sotsuken/css/font-awesome.min.css");
-    	css.add("http://fonts.googleapis.com/css?family=Lobster");
 
-
-    	js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
-    	js.add("/Sotsuken/js/jquery-2.1.1.min.js");
-       	js.add("/Sotsuken/js/jquery.appear.js");
-       	js.add("/Sotsuken/bootstrap/js/bootstrap-dropdown.js");
     }
 
 	/**
@@ -62,7 +53,7 @@ public class temp_tableControl extends HttpServlet {
 		//TODO テーブル柔軟にすること
 		try {
 			InfosubjectList = suDBM.choiceSubject();
-			request.setAttribute(" InfosubjectList", InfosubjectList);
+			request.setAttribute("InfosubjectList", InfosubjectList);
 		} catch (Exception e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
