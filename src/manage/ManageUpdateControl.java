@@ -76,6 +76,7 @@ public class ManageUpdateControl extends HttpServlet {
 
 				Map<String,List<String>> classList = sdm.classDBSelect();
 				System.out.println(classList);
+				request.setAttribute("classList", classList);
 
 			} catch (Exception e) {
 				// TODO 自動生成された catch ブロック
