@@ -112,7 +112,7 @@
 		<% pageContext.setAttribute("index", cnt3); %>
 			<%if (cnt1==1){ %>
 				<%if(cnt2==0){ %>
-				<td class="info" id="cell" data-toggle="popover" data-placement="right" data-content="教科書" title="持ち物" nowrap>${period1List[index].subjectName} 授業 </td>
+				<td class="info" id="cell" data-toggle="popover" data-placement="right" data-content="" title="持ち物" nowrap>${period1List[index].subjectName} 授業 </td>
 				<%} %>
 				<%if(cnt2==1){ %>
 				<td class="info" nowrap>${period1List[index].teacherName}</td>

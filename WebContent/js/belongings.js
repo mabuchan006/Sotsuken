@@ -14,10 +14,6 @@
 //} );
 
 $(function() {
-	//tdの数だけ連番を与える
-	$('info ').children().each(function (i) {
-		$(this).attr( 'id' , 'cell' + (i+1) );
-	});
 	//シングルクォーテーションの中に対応するid名を指定 ex→('#cell1')
-	$('#cell').popover();
+	$('#').popover();
 })
