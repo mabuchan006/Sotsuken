@@ -3,6 +3,7 @@ package divide;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -51,8 +52,16 @@ public class divideUpdateControl extends HttpServlet {
 		// ページ情報指定
 		content_page = "/manage/time_divide_manage.jsp";
 		page_title = "Create Schedule";
-
+		// コマ割りDB操作クラス取得
 		divideDBManage ddm = new divideDBManage();
+		try {
+			HashMap<String, String> divideMap = ddm.viewDivideDBSelect();
+			System.out.println(divideMap);
+		} catch (Exception e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
+
 		String[] classIDArray;
 		int period = 0;
 		String week = "月";
@@ -81,6 +90,7 @@ public class divideUpdateControl extends HttpServlet {
 					break;
 				}
 			} else {
+
 				inputStr = key.split("-");
 				roomID = inputStr[0];
 				period = Integer.parseInt(inputStr[1]);
