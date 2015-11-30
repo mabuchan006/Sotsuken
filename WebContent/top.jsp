@@ -66,7 +66,7 @@
 
 				<div class="col-md-3" style="cursor: pointer">
 
-					<div class="menu-item color1">
+					<div class="menu-item blue">
 						<a href="/Sotsuken/publicView?page=R" data-toggle="modal"> <i
 							class="fa fa-mortar-board"></i>
 							<p>R</p>
@@ -75,7 +75,7 @@
 				</div>
 
 				<div class="col-md-3" style="cursor: pointer">
-					<div class="menu-item color2">
+					<div class="menu-item red">
 						<a href="../Sotsuken/publicView?page=S" data-toggle="modal"> <i
 							class="fa fa-android"></i>
 							<p>S</p>
@@ -84,7 +84,7 @@
 				</div>
 
 				<div class="col-md-3" style="cursor: pointer">
-					<div class="menu-item color3">
+					<div class="menu-item green">
 						<a href="../Sotsuken/publicView?page=J" data-toggle="modal"> <i
 							class="fa fa-paint-brush"></i>
 							<p>J</p>
@@ -93,7 +93,7 @@
 				</div>
 
 				<div class="col-md-3" style="cursor: pointer">
-					<div class="menu-item color4">
+					<div class="menu-item yellow">
 						<a href="../Sotsuken/publicView?page=A" data-toggle="modal"> <i
 							class="fa fa-book"></i>
 							<p>A</p>
@@ -103,7 +103,7 @@
 
 				<div class="row">
 					<div class="col-md-6" style="cursor: pointer">
-						<div class="menu-item color5 responsive">
+						<div class="menu-item color responsive">
 							<a href="../Sotsuken/publicView?page=exam" data-toggle="modal">
 								<i class="fa fa-file-text"></i>
 								<p>exam</p>
