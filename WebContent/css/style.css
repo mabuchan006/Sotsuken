@@ -20,7 +20,7 @@
 }
 
 body {
-	background-color: #232323;
+	background-color: #202020;
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: 50% 50%;
@@ -177,7 +177,7 @@ p {
 }
 
 .back-color4 {
-	background-color: #232323;
+	background-color: #202020;
 }
 /*drop color*/
 .ui-state-default, .ui-widget-content .ui-state-default,
