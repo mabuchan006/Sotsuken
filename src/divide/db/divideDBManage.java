@@ -22,7 +22,7 @@ public class divideDBManage extends DBAccess {
 		super(DRIVER_NAME);
 
 		selectSql = String.format("select * from tbl_timedivide");
-		viewSelect = String.format("select roomID, period, classID from tbl_timedivide where week = '月' order by roomID , period");
+		viewSelect = String.format("select roomID, period, classID from tbl_timedivide where week = ? order by roomID , period");
 		insertSql = String.format("replace into tbl_timedivide ( period, roomID, week, classID ) values"
 				+ " ( ?, (select tbl_room.roomID from tbl_room where tbl_room.roomID = ?), ?, (select tbl_class.classID from tbl_class where tbl_class.classID = ?))");
 		deleteSql = String.format("delete from tbl_timedivide");
@@ -50,24 +50,28 @@ public class divideDBManage extends DBAccess {
 		return divideList;
 	}
 
-	public HashMap<String, String> viewDivideDBSelect() throws Exception {
+	public HashMap<String, String> viewDivideDBSelect(String week) throws Exception {
 
 		HashMap<String, String> divideMap = new HashMap<String, String>();
 
 		connect();
-		createStstement();
-		selectExe(viewSelect);
+		createStstement(viewSelect);
+		getPstmt().setString(1, week);
+		selectExe();
 
 		ResultSet rs = getRsResult();
 		String roomID = null;
 		int period = 0;
 		String classID = null;
+		week="月";
+
 
 		// １件取得
 		while (rs.next()) {
 			roomID = rs.getString("roomID");
 			period = rs.getInt("period");
 			classID = rs.getString("classID");
+
 			break;
 		}
 
