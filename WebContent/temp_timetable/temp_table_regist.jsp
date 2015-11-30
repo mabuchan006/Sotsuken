@@ -162,27 +162,36 @@
 	</table>
 </div>
 <div class="container col-md-3 col-md-offset-2">
-<div id="class">
-				<div id="class-room">
-					<h2 class="font">
-						<a href="#" draggable="false">科目リスト</a>
-					</h2>
-					<div>
-						<ul class="list-group font">
-						<c:forEach var="subject" items="${InfosubjectList }">
-							<li class="list-group-item">${subject.subjectName}</li>
-						</c:forEach>
-						</ul>
-					</div>
+	<div id="class">
+		<div id="class-room">
+			<h2 class="font">
+				<a href="#" draggable="false">科目リスト</a>
+			</h2>
+			<div>
+				<ul class="list-group font">
+					<c:forEach var="subject" items="${infoSubjectList }">
+						<li class="list-group-item">${subject.subjectName}</li>
+					</c:forEach>
+				</ul>
 			</div>
+		</div>
+	</div>
 </div>
 
+<div class="col-md-6 col-md-offset-3">
+	<div id="class">
+		<div id="class-room">
+			<h2 class="font">
+				<a href="#" draggable="false">先生リスト</a>
+			</h2>
+			<div>
+				<ul class="list-group font">
+					<c:forEach var="teacher" items="${teacherList }">
+						<li class="list-group-item">${teacher.teacherName}</li>
+					</c:forEach>
+				</ul>
+			</div>
+		</div>
+	</div>
 </div>
-<h2 class="font">
-						<a href="#" draggable="false">teacherリスト</a>
-					</h2>
-<ul class="list-group col-md-3">
-    <li class="list-group-item">商品1</li>
-    <li class="list-group-item">商品2</li>
-    <li class="list-group-item">商品3</li>
-</ul>
+</div>

@@ -69,7 +69,7 @@
 		</ul></li>
 
 </ul>
-</div>
+
 
 
 	<!-- 印刷エリア指定id printareaで囲んだ範囲で可能 -->
@@ -282,4 +282,4 @@
 </div>
 
 <!-- 印刷ボタン -->
-<input type="button" id="btn_print" value="印刷テスト">
+<input type="button" id="btn_print" value="印刷テスト" onclick="window.print()">

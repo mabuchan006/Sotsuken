@@ -58,6 +58,7 @@ public class timeTableMasterControl extends HttpServlet {
     	css.add("/Sotsuken/css/animate.css");
        	css.add("/Sotsuken/css/font-awesome.min.css");
     	css.add("http://fonts.googleapis.com/css?family=Lobster");
+    	css.add("/Sotsuken/css/print.css");
 
 
     	js.add("/Sotsuken/bootstrap/js/bootstrap-dropdown.js");

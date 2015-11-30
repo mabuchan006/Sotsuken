@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import divide.db.divideInfo;
+import manage.db.teacherDBManage;
 import manage.db.teacherInfo;
 import temp_timetable.db.subjectDBManage;
 import temp_timetable.db.subjectInfo;
@@ -27,7 +28,7 @@ public class temp_tableControl extends HttpServlet {
 	ArrayList<String> js = new ArrayList<String>(); // JavaScript用List
 
 	private List<divideInfo> divideList; // コマ割り情報保持用
-	private List<subjectInfo> InfosubjectList; // 科目情報保持用
+	private List<subjectInfo> infoSubjectList; // 科目情報保持用
 	private List<teacherInfo> teacherList; // 先生情報保持用
 
 	private String content_page = "/temp_timetable/temp_table_regist.jsp"; // 遷移先jsp
@@ -55,12 +56,15 @@ public class temp_tableControl extends HttpServlet {
 		getIncludeFile(request);
 
 		subjectDBManage suDBM = new subjectDBManage(chooseClassID);
-		// teacherDBManage teDM = new teacherDBManage();
+		teacherDBManage teDBM = new teacherDBManage();
 		// masterDBSwitch tblSW= new masterDBSwitch();
 		// TODO テーブル柔軟にすること
 		try {
-			InfosubjectList = suDBM.choiceSubject();
-			request.setAttribute("InfosubjectList", InfosubjectList);
+			infoSubjectList = suDBM.choiceSubject(); // 科目取得
+			teacherList = teDBM.teacherDBSelect(); // 先生取得
+
+			request.setAttribute("infoSubjectList", infoSubjectList);
+			request.setAttribute("teacherList",teacherList);
 		} catch (Exception e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();

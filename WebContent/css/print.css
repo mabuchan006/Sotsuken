@@ -1,7 +1,11 @@
-.printarea {
-	display: block;
-}
+@media print{
 
-.noprint{
-	display: none;
+	.printarea {
+		display: block;
+	}
+
+	.noprint{
+		display: none;
+	}
+
 }
