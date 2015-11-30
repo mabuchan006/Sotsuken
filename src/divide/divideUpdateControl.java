@@ -104,8 +104,15 @@ public class divideUpdateControl extends HttpServlet {
 
 			// insert
 
-			HashMap<String, String> divideMap = ddm.viewDivideDBSelect(week);
-			System.out.println(divideMap);
+			HashMap<String, String[]> divideMap = ddm.viewDivideDBSelect(week);
+			for (String Key : divideMap.keySet()) {
+				System.out.print("{" + Key + ":");
+				System.out.print(divideMap.get(Key)[0] + ":");
+				System.out.print(divideMap.get(Key)[1] + ":");
+				System.out.print(divideMap.get(Key)[2] + ":");
+				System.out.println(divideMap.get(Key)[3] + "}");
+			}
+
 
 			ddm.divideDBInsert(diList);
 			request.setAttribute("content_page", content_page);

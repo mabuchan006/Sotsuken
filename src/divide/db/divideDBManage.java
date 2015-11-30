@@ -50,9 +50,9 @@ public class divideDBManage extends DBAccess {
 		return divideList;
 	}
 
-	public HashMap<String, String> viewDivideDBSelect(String week) throws Exception {
+	public HashMap<String, String[]> viewDivideDBSelect(String week) throws Exception {
 
-		HashMap<String, String> divideMap = new HashMap<String, String>();
+		HashMap<String, String[]> divideMap = new HashMap<String, String[]>();
 
 		connect();
 		createStstement(viewSelect);
@@ -65,30 +65,45 @@ public class divideDBManage extends DBAccess {
 		String classID = null;
 		week="月";
 
+		String classIDList[] = new String[4];
 
 		// １件取得
 		while (rs.next()) {
-			roomID = rs.getString("roomID");
-			period = rs.getInt("period");
-			classID = rs.getString("classID");
-
-			break;
+			divideMap.put(rs.getString("roomID"), classIDList);
 		}
 
+		for ( String key : divideMap.keySet()) {
+			rs.beforeFirst();
+			while ( rs.next() ) {
+				if ( divideMap.containsKey(key) ){
+					if ( divideMap.get(key)[rs.getInt("period")] != null ) {
+						classIDList[rs.getInt("period")] = rs.getString("classID");
+						divideMap.put(rs.getString("roomID"), classIDList);
+					} else {
+						classIDList[rs.getInt("period")] += "," + rs.getString("classID");
+						divideMap.put(rs.getString("roomID"), classIDList);
+					}//if
+				}//if
+			}//while
+			classIDList = new String[4];
+		}//for
+/**
 		// 取得した情報と比較しながら格納していく
 		while (rs.next()) {
-			if ((rs.getString("roomID").equals(roomID)) && (rs.getInt("period") == period)
-					&& !(rs.getString("classID").equals(classID))) {
-				classID += "," + rs.getString("classID");
+			if ((rs.getString("roomID").equals(roomID)) && (rs.getInt("period") == period) && !(rs.getString("classID").equals(classID))) {
+				classIDList[period] = classID + "," + rs.getString("classID");
+			} else if ((rs.getString("roomID").equals(roomID)) && (rs.getInt("period") != period) && !(rs.getString("classID").equals(classID))) {
+				period = rs.getInt("period");
+				classIDList[period] = classID + "," + rs.getString("classID");
 			} else {
-				divideMap.put(roomID + "-" + period, classID);
+				divideMap.put(roomID, classIDList);
 				roomID = rs.getString("roomID");
 				period = rs.getInt("period");
 				classID = rs.getString("classID");
 			} // if
 		} // while
-		divideMap.put(roomID + "-" + period, classID);
-
+		divideMap.put(roomID, classIDList);
+**/
 		disConnection();
 
 		return divideMap;
