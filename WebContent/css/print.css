@@ -1,0 +1,7 @@
+.printarea {
+	display: block;
+}
+
+.noprint{
+	display: none;
+}

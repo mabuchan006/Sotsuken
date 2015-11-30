@@ -20,11 +20,16 @@
 </c:forEach>
 </c:if>
 
+<!-- いんさつよう　CSS -->
+<link rel="stylesheet" href="../css/print.css" type="text/css" media="print" />
+
 <c:if test="${js != null}">
 <c:forEach var="itemjs" items="${js}">
 <script type="text/javascript" src="${itemjs}"></script>
 </c:forEach>
 </c:if>
+
+
 
 
 </head>
