@@ -1,6 +1,5 @@
 package manage.db;
 
-
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -52,32 +51,33 @@ public class subjectDBManage extends DBAccess {
 	 *
 	 * @return subjectList 全科目情報
 	 */
-//	public List<subjectInfo> subjectDBSelect() throws Exception {
-//		List<subjectInfo> subjectList = new ArrayList<subjectInfo>();
-//		// DB接続
-//		connect();
-//		createStstement();
-//		selectExe(selectSql);
-//		// 要素取得用準備
-//		ResultSet rs = getRsResult();
-//		subjectInfo subjectinfo;
-//
-//		// 全件取得
-//		while (rs.next()) {
-//
-//			subjectinfo = new subjectInfo(rs.getInt("subjectID"), rs.getString("subjectName"),
-//					rs.getString("bringThings"), rs.getInt("showFlag"));
-//
-//			// 科目要素を1件ずつリストに追加
-//			subjectList.add(subjectinfo);
-//
-//		} // while
-//
-//		disConnection();// 切断
-//
-//		return subjectList;
-//
-//	}// select
+	 public List<subjectInfo> subjectDBSelect() throws Exception {
+	 List<subjectInfo> subjectList = new ArrayList<subjectInfo>();
+	 // DB接続
+	 connect();
+	 createStstement();
+	 selectExe(selectSql);
+	 // 要素取得用準備
+	 ResultSet rs = getRsResult();
+	 subjectInfo subjectinfo;
+
+	 // 全件取得
+	 while (rs.next()) {
+
+	 subjectinfo = new subjectInfo(rs.getInt("subjectID"),
+	 rs.getString("subjectName"),
+	 rs.getString("bringThings"), rs.getInt("showFlag"));
+
+	 // 科目要素を1件ずつリストに追加
+	 subjectList.add(subjectinfo);
+
+	 } // while
+
+	 disConnection();// 切断
+
+	 return subjectList;
+
+	 }// select
 
 	/*
 	 * @param 科目情報 subjectinfo
@@ -86,40 +86,41 @@ public class subjectDBManage extends DBAccess {
 	 *
 	 * @see subjectControl
 	 */
-//	public void subjectDBUpdate(subjectInfo ci, String classID, int state, String msg) throws Exception {
-//		connect();
-//		switch (state) {
-//		case INSERT:
-//			// 通常科目情報登録
-//			createStstement(insertSql);
-//			getPstmt().setInt(1, ci.getSubjectID());
-//			getPstmt().setString(2, ci.getSubjectName());
-//			getPstmt().setInt(3, ci.getShowFlag());
-//
-//			// クラス情報テーブルが外部キー参照するため一度実行
-//			updateExe();// 実行
-//			disConnection();// 切断
-//
-//			// クラス情報テーブル登録
-//			connect();
-//			createStstement(ins_infoSubject);
-//			getPstmt().setString(1, classID);
-//			getPstmt().setInt(2, ci.getSubjectID());
-//
-//
-//			break;
-//		case DELETE:
-//			createStstement(deleteSql);
-//			getPstmt().setInt(1, ci.getSubjectID());// 削除するIDをセット
-//
-//			break;
-//		}
-//
-//		setMsg(resultMsg(ci, msg));// 実行メッセージ取得
-//		updateExe();// 実行
-//		disConnection();// 切断
-//
-//	}// method
+	 public void subjectDBUpdate(subjectInfo ci, String classID, int state,
+	 String msg) throws Exception {
+	 connect();
+	 switch (state) {
+	 case INSERT:
+	 // 通常科目情報登録
+	 createStstement(insertSql);
+	 getPstmt().setInt(1, ci.getSubjectID());
+	 getPstmt().setString(2, ci.getSubjectName());
+	 getPstmt().setInt(3, ci.getShowFlag());
+
+	 // クラス情報テーブルが外部キー参照するため一度実行
+	 updateExe();// 実行
+	 disConnection();// 切断
+
+	 // クラス情報テーブル登録
+	 connect();
+	 createStstement(ins_infoSubject);
+	 getPstmt().setString(1, classID);
+	 getPstmt().setInt(2, ci.getSubjectID());
+
+
+	 break;
+	 case DELETE:
+	 createStstement(deleteSql);
+	 getPstmt().setInt(1, ci.getSubjectID());// 削除するIDをセット
+
+	 break;
+	 }
+
+	 setMsg(resultMsg(ci, msg));// 実行メッセージ取得
+	 updateExe();// 実行
+	 disConnection();// 切断
+
+	 }// method
 
 	/*
 	 * @param classID クラスID
@@ -129,45 +130,41 @@ public class subjectDBManage extends DBAccess {
 	public HashMap<String, List<String>> classDBSelect() throws Exception {
 
 		// 分割クラス格納
-		System.out.println("1");
 		HashMap<String, List<String>> classMap = new HashMap<String, List<String>>();
 		List<String> par_classList = new ArrayList<String>();// 分割したクラス格納
 		// DB接続
-		System.out.println("2");
 		connect();
-		System.out.println("3");
 		createStstement();
-		System.out.println("4");
 		selectExe(selectBox);
-		System.out.println("5");
 		// 要素取得用準備
 		ResultSet rs = getRsResult();
-		String classID;
+		String classID = null;
 		String par_grade;
 
-		classID = rs.getString("classID");// クラスID取得
-		
+		while (rs.next()) {
+			classID = rs.getString("classID");
+			rs.beforeFirst();
+			break;
+		}
 		par_grade = classID.substring(0, 2);// ex)R4A1 → R4 抽出
-		
-		System.out.println("6");
+
 		// 全件取得 クラス情報分割処理
 		while (rs.next()) {
 
 			classID = rs.getString("classID");// クラスID取得
-			System.out.print(classID);
-			System.out.println(" : 1" + par_grade);
 
-			//クラスが切り替わっていたら
-			if (classID.indexOf(par_grade) == -1) {
+			// クラスが切り替わっていたら
+			if (!(classID.substring(0, 2).equals(par_grade))) {
 				// ex ) classMap → R4: [A1,A2,A3]
 				// R3: [A1,A2]
 				classMap.put(par_grade, par_classList);
+				System.out.println(par_grade + " : " + classMap.get(par_grade));
 				// 次のクラス
 				par_grade = classID.substring(0, 2);// ex)R3A1 → R3 抽出
-				System.out.println(" : 2" + par_grade);
+				par_classList = new ArrayList<String>();
 
-			}//if
-			//クラス専攻情報追加
+			} // if
+				// クラス専攻情報追加
 			par_classList.add(classID.substring(2));
 
 		} // while
@@ -178,12 +175,12 @@ public class subjectDBManage extends DBAccess {
 
 	}// selectClass
 
-//	private String resultMsg(subjectInfo ci, String msg) {
-//		// 処理が実行されなかったら
-//		if (getIntResult() == 0) {
-//			return String.format("%sを%sできませんでした。", ci.getSubjectID(), msg);
-//		}
-//		return String.format("%sを%sしました。", ci.getSubjectID(), msg);
-//	}
+	 private String resultMsg(subjectInfo ci, String msg) {
+	 // 処理が実行されなかったら
+	 if (getIntResult() == 0) {
+	 return String.format("%sを%sできませんでした。", ci.getSubjectID(), msg);
+	 }
+	 return String.format("%sを%sしました。", ci.getSubjectID(), msg);
+	 }
 
 }

@@ -1,0 +1,11 @@
+@media print{
+
+	.printarea {
+		display: block;
+	}
+
+	.noprint{
+		display: none;
+	}
+
+}

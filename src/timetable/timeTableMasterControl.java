@@ -58,14 +58,16 @@ public class timeTableMasterControl extends HttpServlet {
     	css.add("/Sotsuken/css/animate.css");
        	css.add("/Sotsuken/css/font-awesome.min.css");
     	css.add("http://fonts.googleapis.com/css?family=Lobster");
+    	css.add("/Sotsuken/css/print.css");
+
 
     	js.add("/Sotsuken/bootstrap/js/bootstrap-dropdown.js");
        	js.add("/Sotsuken/js/jquery-2.1.1.min.js");
     	js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
        	js.add("/Sotsuken/js/jquery.appear.js");
        	js.add("/Sotsuken/js/belongings.js");
-       	js.add("/Sotsuken/js/jPrintArea.js");
-       	js.add("/Sotsuken/js/print.js");
+
+
 
 
 		if( page != null ){
