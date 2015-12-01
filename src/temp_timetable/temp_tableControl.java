@@ -62,9 +62,11 @@ public class temp_tableControl extends HttpServlet {
 		try {
 			infoSubjectList = suDBM.choiceSubject(); // 科目取得
 			teacherList = teDBM.teacherDBSelect(); // 先生取得
+			int teacher_count = teacherList.size();
 
 			request.setAttribute("infoSubjectList", infoSubjectList);
 			request.setAttribute("teacherList",teacherList);
+			request.setAttribute("teacher_count",teacher_count);
 		} catch (Exception e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
