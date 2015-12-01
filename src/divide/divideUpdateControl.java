@@ -102,8 +102,6 @@ public class divideUpdateControl extends HttpServlet {
 
 			} // for
 
-			// insert
-
 			HashMap<String, String[]> divideMap = ddm.viewDivideDBSelect(week);
 			for (String Key : divideMap.keySet()) {
 				System.out.print("{" + Key + ":");
@@ -113,7 +111,7 @@ public class divideUpdateControl extends HttpServlet {
 				System.out.println(divideMap.get(Key)[3] + "}");
 			}
 
-
+			// insert
 			ddm.divideDBInsert(diList);
 			request.setAttribute("content_page", content_page);
 			request.setAttribute("page_title", page_title);
@@ -145,9 +143,8 @@ public class divideUpdateControl extends HttpServlet {
 		css.add("/Sotsuken/bootstrap/css/bootstrap.min.css");
 		css.add("/Sotsuken/css/font-awesome.min.css");
 		css.add("/Sotsuken/css/custom.css");
-		css.add("/Sotsuken/css/style.css");
 		css.add("/Sotsuken/css/pure-drawer.css");
-
+		css.add("/Sotsuken/css/style.css");
 
 		js.add("/Sotsuken/js/jquery-2.1.1.min.js");
 		js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
