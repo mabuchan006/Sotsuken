@@ -37,7 +37,7 @@
 
 
 		<div id="logo">
-          <h1>
+          <h1 class="font1">
            イベント管理
           </h1>
           </div>
