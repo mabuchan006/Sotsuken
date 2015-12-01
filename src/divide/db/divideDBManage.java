@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.TreeMap;
 
 import DB.DBAccess;
 
@@ -50,9 +51,9 @@ public class divideDBManage extends DBAccess {
 		return divideList;
 	}
 
-	public HashMap<String, String[]> viewDivideDBSelect(String week) throws Exception {
+	public TreeMap<String, String[]> viewDivideDBSelect(String week) throws Exception {
 
-		HashMap<String, String[]> divideMap = new HashMap<String, String[]>();
+		TreeMap<String, String[]> divideMap = new TreeMap<String, String[]>();
 
 		connect();
 		createStstement(viewSelect);
