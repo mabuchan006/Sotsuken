@@ -341,3 +341,8 @@ p {
 .color9{
 	background-color:#22397F;
 }
+
+.bold{
+	font-weight: 900;
+	font-size: 200%;
+}
