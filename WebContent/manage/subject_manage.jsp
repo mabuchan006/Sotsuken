@@ -47,7 +47,6 @@
 					</td>
 
 
-
 					<td class="col-md-4"><label for="password" class="labels">学年</label>
 						<select name="grade1" class="form-control col-md-1">
 							<!-- 学年表示 -->
@@ -61,6 +60,8 @@
 					</select> <!-- 学科　選択学年から学科をjqで自動抽出予定 -->
 						<div class="grade1_push"></div> <label for="password"
 						class="labels">学科</label> <select class="form-control col-md-1">
+
+
 
 							<option style="color: black;">R1</option>
 							<option style="color: black;">R1</option>
