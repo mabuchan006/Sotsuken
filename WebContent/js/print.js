@@ -1,5 +1,5 @@
-$(function(){
-  $('#btn_print').click(function(){
-    $.jPrintArea("#printarea");
-  });
-});
+//$(function(){
+//		$('#btn_print').click(function (){
+//			$('.off').css('display:none;');
+//		});
+//})
