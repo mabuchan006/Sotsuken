@@ -40,15 +40,17 @@
 		<form action="" method="get">
 			<table class="col-md-6 col-md-offset-3" id="first_table">
 				<tr>
-					<td class="col-md-4"><label for="subjectName" class="labels">科目名</label>
+					<td class="col-md-4">
+					<label for="subjectName" class="labels">科目名</label>
 						<input type="text" class="form-control" id="subjectName"
 						name="subjectName"> <label for="password" class="labels">持ち物</label>
 						<input type="password" class="form-control" name="password">
 					</td>
 
 
-					<td class="col-md-4"><label for="password" class="labels">学年</label>
-						<select name="grade1" class="form-control col-md-1">
+					<td class="col-md-4">
+					<label for="password" class="labels">学年</label>
+						<select name="grade1" id="grade1" class="form-control col-md-1" onchange="">
 							<!-- 学年表示 -->
 							<c:forEach var="rs" items="${classMap}">
 
@@ -57,20 +59,26 @@
 							</c:forEach>
 							<option style="color: black;" value="ALL">ALL</option>
 
-					</select> <!-- 学科　選択学年から学科をjqで自動抽出予定 -->
-						<div class="grade1_push"></div> <label for="password"
-						class="labels">学科</label> <select class="form-control col-md-1">
+					</select> <!-- 1回目select終了 -->
+
+					<!-- 学科　選択学年から学科をjqで自動抽出予定 -->
+						<div class="grade1_push"></div>
+						<label for="password"class="labels">学科</label>
+						<script type="text/javascript">
+						var value = $("select[name=grade1]").children(':selected').val();
+
+						$("#grade1").append(value);
+
+
+						</script>
 
 
 
-							<option style="color: black;">R1</option>
-							<option style="color: black;">R1</option>
-							<option style="color: black;">R2</option>
-							<option style="color: black;">R3</option>
-							<option style="color: black;">R4</option>
+
+						 <select class="form-control col-md-1">
+							<option style="color: black;">${classMap.R4[0] }</option>
 							<option style="color: black;">ALL</option>
-
-					</select></td>
+						</select></td>
 					<td class="col-md-4"><label for="password" class="labels">学年</label>
 						<select class="form-control col-md-1">
 							<c:forEach var="rs" items="${classMap}">
