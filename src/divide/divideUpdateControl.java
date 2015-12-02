@@ -3,9 +3,9 @@ package divide;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.TreeMap;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -102,7 +102,7 @@ public class divideUpdateControl extends HttpServlet {
 
 			} // for
 
-			TreeMap<String, String[]> divideMap = ddm.viewDivideDBSelect(week);
+			HashMap<String, String[]> divideMap = ddm.viewDivideDBSelect(week);
 			for (String Key : divideMap.keySet()) {
 				System.out.print("{" + Key + ":");
 				System.out.print(divideMap.get(Key)[0] + ":");
@@ -113,6 +113,7 @@ public class divideUpdateControl extends HttpServlet {
 
 			// insert
 			ddm.divideDBInsert(diList);
+			request.setAttribute("divideMap", divideMap);
 			request.setAttribute("content_page", content_page);
 			request.setAttribute("page_title", page_title);
 

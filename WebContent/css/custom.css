@@ -156,6 +156,14 @@ body {
 }
 
 
+.select2:hover{
+	background-color:#223771;
+	color:#fff;
+
+	position:relative;
+
+}
+
 .back{
 	background-color: #fff;
 }
