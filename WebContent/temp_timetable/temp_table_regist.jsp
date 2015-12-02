@@ -16,7 +16,6 @@
 		</thead>
 		<tbody>
 			<tr class="purple1">
-
 				<td></td>
 				<td>(月)</td>
 				<td>(火)</td>
@@ -167,7 +166,12 @@
 			<div>
 				<ul class="list-group font">
 					<c:forEach var="subject" items="${infoSubjectList }">
+						<c:if test="${subject.subjectName != ''}"  var="flg"/>
+
+						<c:if test="${flg}" >
 						<li class="list-group-item">${subject.subjectName}</li>
+						</c:if>
+
 					</c:forEach>
 				</ul>
 			</div>
