@@ -40,7 +40,8 @@
 
 </ul>
 
-
+<!-- 印刷エリア指定id printareaで囲んだ範囲で可能 -->
+<div class="printarea">
   <div  class="container">
     <div class="table-responsive">
     <table class="table table-striped table-bordered text-center table-hover;">
@@ -140,5 +141,6 @@
 <%} %>
 			</tbody>
 		</table>
+	</div>
   </div>
 </div>

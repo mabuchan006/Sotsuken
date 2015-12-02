@@ -2,6 +2,7 @@
 
 	.printarea {
 		display: block;
+		width : auto;
 	}
 
 	.noprint{
