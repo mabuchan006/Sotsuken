@@ -301,57 +301,57 @@ p {
 	position: fixed;
 }
 
-.color1{
-	background-color:#3744BF;
+.color1 {
+	background-color: #3744BF;
 }
 
-
-.color2{
-	background-color:#252D7F;
+.color2 {
+	background-color: #252D7F;
 }
 
-
-.color3{
-	background-color:#495AFF;
+.color3 {
+	background-color: #495AFF;
 }
 
-
-.color4{
-	background-color:#211F7F;
+.color4 {
+	background-color: #211F7F;
 }
 
-
-.color5{
-	background-color:#4251E5;
+.color5 {
+	background-color: #4251E5;
 }
 
-
-.color6{
-	background-color:#1A1E40;
+.color6 {
+	background-color: #1A1E40;
 }
 
-.color7{
-	background-color:#20247F;
+.color7 {
+	background-color: #20247F;
 }
 
-.color8{
-	background-color:#3339CC;
+.color8 {
+	background-color: #3339CC;
 }
 
-.color9{
-	background-color:#22397F;
+.color9 {
+	background-color: #22397F;
 }
 
-.bold{
+.bold {
 	font-weight: 900;
 	font-size: 200%;
 }
 
-<!--一時登録機能の先生リスト　テーブル用-->
+/**一時登録機能の先生リスト　テーブル用 by mabuchan**/
 
-.table-border>thead>tr>th, .table-border>tbody>tr>th,
-	.table-border>tfoot>tr>th, .table-border>thead>tr>td,
-	.table-border>tbody>tr>td, .table-border>tfoot>tr>td {
-	border: 1px solid #000
+	.table-border>thead>tr>th, .table-border>tbody>tr>th,
+	.table-border>tfoot>tr>th, .table-border>thead>tr>td, .table-border>tbody>tr>td,
+	.table-border>tfoot>tr>td {
+	border: 1px solid #202020;
+	border-color: #202020;
+	border-radius: 10px;        /* CSS3草案 */
+    -webkit-border-radius: 10px;    /* Safari,Google Chrome用 */
+    -moz-border-radius: 10px;   /* Firefox用 */
+    background-color: white;
 
 }
