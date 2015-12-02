@@ -342,6 +342,11 @@ p {
 	font-size: 200%;
 }
 
+
+.botom{
+margin-bottom: 5px;
+}
+
 /**一時登録機能の先生リスト　テーブル用 by mabuchan**/
 
 	.table-border>thead>tr>th, .table-border>tbody>tr>th,
