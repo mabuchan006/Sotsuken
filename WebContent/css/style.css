@@ -345,5 +345,13 @@ p {
 .bold{
 	font-weight: 900;
 	font-size: 200%;
->>>>>>> branch 'master' of https://github.com/mabuchan006/Sotsuken.git
+}
+
+<!--一時登録機能の先生リスト　テーブル用-->
+
+.table-border>thead>tr>th, .table-border>tbody>tr>th,
+	.table-border>tfoot>tr>th, .table-border>thead>tr>td,
+	.table-border>tbody>tr>td, .table-border>tfoot>tr>td {
+	border: 1px solid #000
+
 }

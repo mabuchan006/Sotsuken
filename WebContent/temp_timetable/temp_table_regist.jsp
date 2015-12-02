@@ -182,7 +182,10 @@
 </div>
 
 <div class="col-md-5 ">
-	<table class="table table-bordered ">
+	<h2 class="font">
+		<a href="#" draggable="false">先生リスト</a>
+	</h2>
+	<table class="table table-border back">
 		<tbody>
 			<%
 				int teacher_count = (int) request.getAttribute("teacher_count");
