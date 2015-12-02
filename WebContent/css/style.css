@@ -10,9 +10,9 @@
 .font {
 	font-family: 'Comic Sans MS';
 }
-
+/**ƒSƒVƒbƒv**/
 .font1 {
-	font-family: sans-serif;
+	font-family: 'Meiryo UI';
 }
 
 .margin-top {
@@ -59,7 +59,7 @@ p {
 	font-size: 13px;
 	line-height: 21px;
 }
-
+/*
 .btn-primary {
 	border-color: #FF432E;
 	background-color: #FF432E;
@@ -92,7 +92,7 @@ p {
 	border-color: #FF432E;
 	background-color: #FF432E;
 }
-
+**/
 /**** Start Section Title Section ****/
 .section-title h3 {
 	color: #666 !important; //
@@ -342,6 +342,8 @@ p {
 	background-color:#22397F;
 }
 
-.border-color{
-	border-color: #000;
+.bold{
+	font-weight: 900;
+	font-size: 200%;
+>>>>>>> branch 'master' of https://github.com/mabuchan006/Sotsuken.git
 }

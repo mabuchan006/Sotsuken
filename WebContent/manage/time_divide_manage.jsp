@@ -94,11 +94,11 @@
 
 			<!-- タブ -->
 			<ul class="nav nav-pills nav-justified " id="weekTab">
-				<li class="h4 active" id="mon"><input type="hidden" name="mon"><a href="#test2" draggable="false">月</a></li>
-				<li class="h4" id="tue"><input type="hidden"><a href="#test3" draggable="false">火</a></li>
-				<li class="h4" id="wed"><input type="hidden"><a href="#test4" draggable="false">水</a></li>
-				<li class="h4" id="thu"><input type="hidden"><a href="#test5" draggable="false">木</a></li>
-				<li class="h4" id="fri"><input type="hidden"><a href="#test6" draggable="false">金</a></li>
+				<li class="h4 active  bold" id="mon"><input type="hidden" name="mon"><a href="#test2" draggable="false">月</a></li>
+				<li class="h4 bold" id="tue"><input type="hidden"><a href="#test3" draggable="false">火</a></li>
+				<li class="h4 bold" id="wed"><input type="hidden"><a href="#test4" draggable="false">水</a></li>
+				<li class="h4 bold" id="thu"><input type="hidden"><a href="#test5" draggable="false">木</a></li>
+				<li class="h4 bold" id="fri"><input type="hidden"><a href="#test6" draggable="false">金</a></li>
 			</ul>
 
 			<!-- button -->
@@ -1154,10 +1154,10 @@
 						aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
-					<h3 class="modal-title white">login</h3>
+					<h3 class="modal-title white text-center">login</h3>
 				</div>
-				<div class="modal-body">
-					<h3>login</h3>
+				<div class="modal-body text-center font1">
+					<h3>登録されました。</h3>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-primary" data-dismiss="modal">close</button>

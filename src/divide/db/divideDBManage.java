@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.TreeMap;
 
 import DB.DBAccess;
 
@@ -50,44 +51,42 @@ public class divideDBManage extends DBAccess {
 		return divideList;
 	}
 
-	public HashMap<String, String> viewDivideDBSelect(String week) throws Exception {
+	public TreeMap<String, String[]> viewDivideDBSelect(String week) throws Exception {
 
-		HashMap<String, String> divideMap = new HashMap<String, String>();
+		TreeMap<String, String[]> divideMap = new TreeMap<String, String[]>();
 
 		connect();
 		createStstement(viewSelect);
 		getPstmt().setString(1, week);
 		selectExe();
-
 		ResultSet rs = getRsResult();
-		String roomID = null;
-		int period = 0;
-		String classID = null;
-		week="月";
 
+		week = "月";
+		//roomID取得用
+		HashMap<String, String> map = new HashMap<String, String>();
+		//
+		String classIDList[] = new String[4];
 
-		// １件取得
+		// roomID取得
 		while (rs.next()) {
-			roomID = rs.getString("roomID");
-			period = rs.getInt("period");
-			classID = rs.getString("classID");
-
-			break;
+			map.put(rs.getString("roomID"), null);
 		}
 
-		// 取得した情報と比較しながら格納していく
-		while (rs.next()) {
-			if ((rs.getString("roomID").equals(roomID)) && (rs.getInt("period") == period)
-					&& !(rs.getString("classID").equals(classID))) {
-				classID += "," + rs.getString("classID");
-			} else {
-				divideMap.put(roomID + "-" + period, classID);
-				roomID = rs.getString("roomID");
-				period = rs.getInt("period");
-				classID = rs.getString("classID");
-			} // if
-		} // while
-		divideMap.put(roomID + "-" + period, classID);
+		//各roomIDごとに処理していく
+		for(String key : map.keySet()) {
+			rs.beforeFirst();
+			while (rs.next()) {
+				if ( key.equals(rs.getString("roomID")) ) {
+					if ( classIDList[rs.getInt("period") - 1] != null ) {
+						classIDList[rs.getInt("period") - 1] += "," + rs.getString("classID");
+					} else {
+						classIDList[rs.getInt("period") - 1] = rs.getString("classID");
+					}//if
+				}//if
+			}// while
+			divideMap.put(key, classIDList);
+			classIDList = new String[4];
+		}//for
 
 		disConnection();
 

@@ -3,9 +3,9 @@ package divide;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -102,11 +102,16 @@ public class divideUpdateControl extends HttpServlet {
 
 			} // for
 
+			TreeMap<String, String[]> divideMap = ddm.viewDivideDBSelect(week);
+			for (String Key : divideMap.keySet()) {
+				System.out.print("{" + Key + ":");
+				System.out.print(divideMap.get(Key)[0] + ":");
+				System.out.print(divideMap.get(Key)[1] + ":");
+				System.out.print(divideMap.get(Key)[2] + ":");
+				System.out.println(divideMap.get(Key)[3] + "}");
+			}
+
 			// insert
-
-			HashMap<String, String> divideMap = ddm.viewDivideDBSelect(week);
-			System.out.println(divideMap);
-
 			ddm.divideDBInsert(diList);
 			request.setAttribute("content_page", content_page);
 			request.setAttribute("page_title", page_title);
@@ -138,9 +143,8 @@ public class divideUpdateControl extends HttpServlet {
 		css.add("/Sotsuken/bootstrap/css/bootstrap.min.css");
 		css.add("/Sotsuken/css/font-awesome.min.css");
 		css.add("/Sotsuken/css/custom.css");
-		css.add("/Sotsuken/css/style.css");
 		css.add("/Sotsuken/css/pure-drawer.css");
-
+		css.add("/Sotsuken/css/style.css");
 
 		js.add("/Sotsuken/js/jquery-2.1.1.min.js");
 		js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
