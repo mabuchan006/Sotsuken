@@ -52,7 +52,7 @@
 					<ul id="flip3" class="dropmenu select2">
 						<li class="select2 " style="padding: 15px 40px; margin: 0;"><a
 							href="#">時間割管理</a>
-							<ul style="width:300px;">
+							<ul >
 								<li><a href="#">R</a></li>
 								<li><a href="#">S</a></li>
 								<li><a href="#">J</a></li>

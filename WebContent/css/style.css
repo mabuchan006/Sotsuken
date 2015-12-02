@@ -410,8 +410,6 @@ margin-bottom: 5px;
 
   position: absolute;
 
-
-
   z-index: 9999;
 
   top: 100%;
@@ -427,7 +425,8 @@ margin-bottom: 5px;
   padding: 18px 50px;
   border-top: 1px solid #374c5d;
   background: #374c5d;
-  text-align: left;
+  text-align: right;
+  float: right;
 }
 .dropmenu li:hover > a{
   background: #223771;
