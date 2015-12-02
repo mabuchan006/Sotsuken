@@ -15,12 +15,6 @@
 		<thead>
 		</thead>
 		<tbody>
-
-			<tr class="purple2">
-				<th colspan="15">10月</th>
-			</tr>
-
-
 			<tr class="purple1">
 
 				<td></td>
@@ -35,13 +29,13 @@
 
 			<tr class="info">
 				<th rowspan=3>1</th>
-				<td data-toggle="popover" title="持ち物"></td>
-				<td data-toggle="popover" title="持ち物"></td>
-				<td data-toggle="popover" title="持ち物"></td>
-				<td data-toggle="popover" title="持ち物"></td>
-				<td data-toggle="popover" title="持ち物"></td>
-				<td data-toggle="popover" title="持ち物"></td>
-				<td data-toggle="popover" title="持ち物"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
 
 			</tr>
 
@@ -185,7 +179,7 @@
 	<h2 class="font">
 		<a href="#" draggable="false">先生リスト</a>
 	</h2>
-	<table class="table table-border back">
+	<table class="table table-border ">
 		<tbody>
 			<%
 				int teacher_count = (int) request.getAttribute("teacher_count");
@@ -197,12 +191,20 @@
 				<%
 					for (int cnt2 = 0; cnt2 <= 4; cnt2++) {
 				%>
+				<c:if test="${ teacherList[cnt1].teacherName != null}"  var="flg"/>
+
+				<c:if test="${flg}" >
 				<td class="text-center h5">${ teacherList[cnt1].teacherName }</td>
+				</c:if>
+
+				<c:if test="${!flg}" >
+				<td style="background-color: #202020;border-color: #202020"></td>
+				</c:if>
+
 				<%
 					cnt1++;
-							pageContext.setAttribute("cnt1", cnt1);
-						}
-				%>
+					pageContext.setAttribute("cnt1", cnt1);
+						}%>
 			</tr>
 			<%
 				}
