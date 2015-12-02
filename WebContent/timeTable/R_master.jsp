@@ -280,6 +280,3 @@
 		</div>
 	</div>
 </div>
-
-<!-- 印刷ボタン -->
-<input type="button" id="btn_print" value="印刷テスト" onclick="window.print()">
