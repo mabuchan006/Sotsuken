@@ -72,7 +72,7 @@
 
 </ul>
 
-
+<div class="printarea">
   <div  class="container">
     <div class="table-responsive">
     <table class="table table-striped table-bordered text-center table-hover;">
@@ -172,5 +172,6 @@
 <%} %>
 			</tbody>
 		</table>
+	</div>
   </div>
 </div>
