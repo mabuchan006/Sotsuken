@@ -4,6 +4,8 @@
 <%@ page pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+
 <c:forEach var="Infosub" items="${InfosubjectList}">
 	${Infosub.classID }
 </c:forEach>
@@ -161,7 +163,8 @@
 		</tbody>
 	</table>
 </div>
-<div class="container col-md-3 col-md-offset-2">
+
+<div class="col-md-3 col-md-offset-2">
 	<div id="class">
 		<div id="class-room">
 			<h2 class="font">
@@ -178,20 +181,31 @@
 	</div>
 </div>
 
-<div class="col-md-6 col-md-offset-3">
-	<div id="class">
-		<div id="class-room">
-			<h2 class="font">
-				<a href="#" draggable="false">先生リスト</a>
-			</h2>
-			<div>
-				<ul class="list-group font">
-					<c:forEach var="teacher" items="${teacherList }">
-						<li class="list-group-item">${teacher.teacherName}</li>
-					</c:forEach>
-				</ul>
-			</div>
-		</div>
-	</div>
+<div class="col-md-5 ">
+	<table class="table table-bordered ">
+		<tbody>
+			<%
+				int teacher_count = (int) request.getAttribute("teacher_count");
+				int cnt1 = 0;
+				for (; cnt1 < teacher_count; cnt1++) {
+					pageContext.setAttribute("cnt1", cnt1);
+			%>
+			<tr>
+				<%
+					for (int cnt2 = 0; cnt2 <= 4; cnt2++) {
+				%>
+				<td class="text-center h5">${ teacherList[cnt1].teacherName }</td>
+				<%
+					cnt1++;
+							pageContext.setAttribute("cnt1", cnt1);
+						}
+				%>
+			</tr>
+			<%
+				}
+			%>
+		</tbody>
+	</table>
 </div>
-</div>
+
+
