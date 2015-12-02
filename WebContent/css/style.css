@@ -347,6 +347,146 @@ p {
 margin-bottom: 5px;
 }
 
+
+.dropmenu{
+
+  *zoom: 1;
+
+  list-style-type: none;
+
+
+}
+
+.dropmenu:before, .dropmenu:after{
+
+  content: "";
+
+  display: table;
+
+}
+
+.dropmenu:after{
+
+  clear: both;
+
+}
+
+.dropmenu li{
+
+  position: relative;
+
+
+  float: left;
+
+  margin: 0;
+
+  padding: 0;
+
+  text-align: center;
+
+}
+
+.dropmenu li a{
+
+  display: block;
+
+  margin: 0;
+
+  background: #374c5d;
+
+  color: #fff;
+
+  font-size: 36px;
+
+  line-height: 1;
+
+  text-decoration: none;
+
+}
+
+.dropmenu li ul{
+
+  list-style: none;
+
+  position: absolute;
+
+
+
+  z-index: 9999;
+
+  top: 100%;
+
+  left: 0;
+
+  margin: 0;
+  padding: 0;
+}
+
+.dropmenu li ul li a{
+	font-size:36px;
+  padding: 18px 50px;
+  border-top: 1px solid #374c5d;
+  background: #374c5d;
+  text-align: left;
+}
+.dropmenu li:hover > a{
+  background: #223771;
+}
+.dropmenu li a:hover{
+  background: #223771;
+}
+
+#flip3 ul {
+  visibility: hidden;
+
+}
+#flip3 li:hover ul{
+  visibility: visible;
+}
+#flip3 ul li{
+  transform: rotateX(-90deg);
+  transform-origin: 50% 0;
+  transition: .1s;
+}
+#flip3 li:hover ul li{
+  transform: rotateX(0);
+}
+#flip3 li:hover ul li:nth-child(1) {
+  transition-delay: 0s;
+}
+#flip3 li:hover ul li:nth-child(2) {
+  transition-delay: .1s;
+}
+#flip3 li:hover ul li:nth-child(3) {
+  transition-delay: .2s;
+}
+#flip3 li:hover ul li:nth-child(4) {
+  transition-delay: .3s;
+}
+#flip3 li ul li:nth-last-of-type(1) {
+  transition-delay: 0s;
+}
+#flip3 li ul li:nth-last-of-type(2) {
+  transition-delay: .1s;
+}
+#flip3 li ul li:nth-last-of-type(3) {
+  transition-delay: .2s;
+}
+#flip3 li ul li:nth-last-of-type(4) {
+  transition-delay: .3s;
+}
+
+#dropmenu li ul li{
+  overflow: hidden;
+  height: 0;
+  transition: .2s;
+}
+
+#dropmenu li:hover ul li{
+  overflow: visible;
+  height: 38px;
+}
+
 /**一時登録機能の先生リスト　テーブル用 by mabuchan**/
 
 	.table-border>thead>tr>th, .table-border>tbody>tr>th,
