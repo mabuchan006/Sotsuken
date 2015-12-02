@@ -36,7 +36,20 @@ public class divideUpdateControl extends HttpServlet {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+/**
+	public void init(HttpServletRequest request, HttpServletResponse response) throws ServletException {
+		try {
+			System.out.println("init");
+			String week = "月";
+			divideDBManage ddm = new divideDBManage();
+			HashMap<String, String[]> divideMap = ddm.viewDivideDBSelect(week);
+			request.setAttribute("divideMap", divideMap);
+		} catch (Exception e) {
 
+			e.printStackTrace();
+		}
+	}
+**/
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)
@@ -45,6 +58,7 @@ public class divideUpdateControl extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 
+		System.out.println("doGet");
 		// 文字コードutf8
 		request.setCharacterEncoding("UTF-8");
 		// 使用するcss,jsファイルの適用
@@ -102,17 +116,15 @@ public class divideUpdateControl extends HttpServlet {
 
 			} // for
 
+			// select
 			HashMap<String, String[]> divideMap = ddm.viewDivideDBSelect(week);
-			for (String Key : divideMap.keySet()) {
-				System.out.print("{" + Key + ":");
-				System.out.print(divideMap.get(Key)[0] + ":");
-				System.out.print(divideMap.get(Key)[1] + ":");
-				System.out.print(divideMap.get(Key)[2] + ":");
-				System.out.println(divideMap.get(Key)[3] + "}");
-			}
-
+			// delete
+			ddm.divideDBDelete();
 			// insert
 			ddm.divideDBInsert(diList);
+			// select
+			divideMap = ddm.viewDivideDBSelect(week);
+
 			request.setAttribute("divideMap", divideMap);
 			request.setAttribute("content_page", content_page);
 			request.setAttribute("page_title", page_title);
@@ -135,7 +147,6 @@ public class divideUpdateControl extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
 		doGet(request, response);
 	}
 

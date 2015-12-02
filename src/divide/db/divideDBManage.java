@@ -115,7 +115,7 @@ public class divideDBManage extends DBAccess {
 		return msg = "登録できました";
 	}// divideDBUpdate
 
-	public void divideDBDelete(divideInfo di) throws Exception {
+	public void divideDBDelete() throws Exception {
 		connect();
 		createStstement(deleteSql);
 		updateExe();
