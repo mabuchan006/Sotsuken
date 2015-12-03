@@ -53,22 +53,7 @@
 						<li class="select2 moji box" style="padding: 15px 40px; margin:  0 20px 0 0;"><a
 							href="#">時間割管理</a>
 							<ul >
-								<li><a href="#">R4</a></li>
-								<li><a href="#">S3</a></li>
-								<li><a href="#">J2</a></li>
-								<li><a href="#">A1</a></li>
-
-								<li><a href="#">R3</a></li>
-								<li><a href="#">S2</a></li>
-								<li><a href="#">J1</a></li>
-								<li><a href="#">A</a></li>
-
-								<li><a href="#">R2</a></li>
-								<li><a href="#">S1</a></li>
-								<li><a href="#">J</a></li>
-								<li><a href="#">A</a></li>
-
-								<li><a href="#">R1</a></li>
+								<li><a href="#">R</a></li>
 								<li><a href="#">S</a></li>
 								<li><a href="#">J</a></li>
 								<li><a href="#">A</a></li>
