@@ -6,6 +6,9 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 
+<!-- 印刷時非表示 -->
+<div class="noprint">
+
 <!-- Start Logo Section -->
 <!-- ヘッダー部分 -->
 <section id="logo-section" class="text-center">
@@ -69,6 +72,8 @@
 		</ul></li>
 
 </ul>
+
+</div>
 
 
 
