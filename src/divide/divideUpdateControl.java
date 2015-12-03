@@ -107,7 +107,6 @@ public class divideUpdateControl extends HttpServlet {
 
 			// select
 			HashMap<String, String[]> divideMap = ddm.viewDivideDBSelect(week);
-
 			// insert
 			ddm.divideDBInsert(diList);
 			// select
@@ -140,12 +139,15 @@ public class divideUpdateControl extends HttpServlet {
 	}
 
 	private void getIncludeFile(HttpServletRequest request) {
-		css.add("http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css");
+
 		css.add("/Sotsuken/bootstrap/css/bootstrap.min.css");
 		css.add("/Sotsuken/css/font-awesome.min.css");
+		css.add("/Sotsuken/css/animate.css");
 		css.add("/Sotsuken/css/custom.css");
 		css.add("/Sotsuken/css/pure-drawer.css");
+		css.add("http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css");
 		css.add("/Sotsuken/css/style.css");
+
 
 		js.add("/Sotsuken/js/jquery-2.1.1.min.js");
 		js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
