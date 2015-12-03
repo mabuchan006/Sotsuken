@@ -36,35 +36,19 @@ public class divideUpdateControl extends HttpServlet {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-/**
-	public void init(HttpServletRequest request, HttpServletResponse response) throws ServletException {
-		try {
-			System.out.println("init");
-			String week = "月";
-			divideDBManage ddm = new divideDBManage();
-			HashMap<String, String[]> divideMap = ddm.viewDivideDBSelect(week);
-			request.setAttribute("divideMap", divideMap);
-		} catch (Exception e) {
 
-			e.printStackTrace();
-		}
-	}
-**/
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-
-		System.out.println("doGet");
 		// 文字コードutf8
 		request.setCharacterEncoding("UTF-8");
 		// 使用するcss,jsファイルの適用
 		getIncludeFile(request);
 		// ページ情報指定
-		content_page = "/manage/time_divide_manage.jsp";
+		content_page = "/manage/time_divide_manage_edit.jsp";
 		page_title = "Create Schedule";
 
 		String[] classIDArray;
@@ -98,7 +82,12 @@ public class divideUpdateControl extends HttpServlet {
 						week = "金";
 						break;
 					}
-				} else {
+				} else if ( key.equals("submit") ) {
+
+					// delete
+					ddm.divideDBDelete();
+
+				}else {
 
 					inputStr = key.split("-");
 					roomID = inputStr[0];
@@ -118,12 +107,12 @@ public class divideUpdateControl extends HttpServlet {
 
 			// select
 			HashMap<String, String[]> divideMap = ddm.viewDivideDBSelect(week);
-			// delete
-			ddm.divideDBDelete();
+
 			// insert
 			ddm.divideDBInsert(diList);
 			// select
 			divideMap = ddm.viewDivideDBSelect(week);
+
 
 			request.setAttribute("divideMap", divideMap);
 			request.setAttribute("content_page", content_page);
