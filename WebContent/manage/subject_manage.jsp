@@ -39,7 +39,17 @@
 </c:forEach>
 <option style="color: black;" value="ALL">ALL</option>
 </select> <!-- 1回目学年select終了 -->
+<c:forEach var="rs" items="${classMap}">
 
+		<script>
+var test = "${rs}";
+var array =
+alert(test);
+
+
+</script>
+
+</c:forEach>
 
 
 
@@ -47,7 +57,9 @@
 <!-- 学科　選択学年から学科をjqで自動抽出予定 -->
 <label for="cource"class="labels">学科</label>
 <select class="form-control col-md-1" name="cource_name" id="cource_id">
-
+<c:forEach  var="rs" items="${classMap.val}">
+<option style="color: black;" value="${rs }">${rs }</option>
+</c:forEach>
 <option style="color: black;">ALL</option>
 </select></td>
 
