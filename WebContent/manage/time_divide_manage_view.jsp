@@ -109,7 +109,7 @@
 			<!-- button -->
 
 			<button type="submit" class="btn btn-primary btn-lg col-md-1 fix">
-				登録</button>
+				編集画面へ</button>
 
 
 
@@ -133,14 +133,14 @@
 						<a href="#" draggable="false">NCS</a>
 					</h2>
 					<div>
-						<ul class="font">
-							<li><a href="#8F">8F</a></li>
-							<li><a href="#7F">7F</a></li>
-							<li><a href="#6F">6F</a></li>
-							<li><a href="#5F">5F</a></li>
-							<li><a href="#4F">4F</a></li>
-							<li><a href="#3F">3F</a></li>
-							<li><a href="#2F">2F</a></li>
+						<ul class="font ">
+							<li class="select0"><a href="#8F">8F　　　　　</a></li>
+							<li class="select0"><a href="#7F">7F　　　　　</a></li>
+							<li class="select0"><a href="#6F">6F　　　　　</a></li>
+							<li class="select0"><a href="#5F">5F　　　　　</a></li>
+							<li class="select0"><a href="#4F">4F　　　　　</a></li>
+							<li class="select0"><a href="#3F">3F　　　　　</a></li>
+							<li class="select0"><a href="#2F">2F　　　　　</a></li>
 
 						</ul>
 					</div>
@@ -149,11 +149,11 @@
 					</h2>
 					<div>
 						<ul class="font">
-							<li><a href="#M5F">5F</a></li>
-							<li><a href="#M4F">4F</a></li>
-							<li><a href="#M3F">3F</a></li>
-							<li><a href="#M2F">2F</a></li>
-							<li><a href="#M1F">1F</a></li>
+							<li class="select0"><a href="#M5F">5F　　　　　</a></li>
+							<li class="select0"><a href="#M4F">4F　　　　　</a></li>
+							<li class="select0"><a href="#M3F">3F　　　　　</a></li>
+							<li class="select0"><a href="#M2F">2F　　　　　</a></li>
+							<li class="select0"><a href="#M1F">1F　　　　　</a></li>
 
 
 						</ul>
