@@ -16,6 +16,7 @@ import DB.DBAccess;
 import manage.db.classDBManage;
 import manage.db.classInfo;
 import manage.db.subjectDBManage;
+import manage.db.subjectInfo;
 import manage.db.teacherDBManage;
 import manage.db.teacherInfo;
 
@@ -74,9 +75,12 @@ public class ManageUpdateControl extends HttpServlet {
 			//更新済み講師情報全件取得
 			subjectDBManage sdm = new subjectDBManage();
 
-				Map<String,List<String>> classMap = sdm.classDBSelect();
-				System.out.println(classMap);
-				request.setAttribute("classMap", classMap);
+			Map<String,List<String>> classMap = sdm.classDBSelect();
+			//更新済み科目情報全件取得
+			List<subjectInfo> subjectList = sdm.subjectDBSelect();
+
+			request.setAttribute("subjectList", subjectList);
+			request.setAttribute("classMap", classMap);
 
 			} catch (Exception e) {
 				// TODO 自動生成された catch ブロック

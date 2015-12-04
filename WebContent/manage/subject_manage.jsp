@@ -11,7 +11,7 @@
 var classItems = new Array();
 var arrayflag = 0;
 
-function test(val1,val2){
+function firstSelect(val1,val2){
 	var test1 = val1;
 	var test2 = val2;
 	//最初のキー値に対して初期化判別
@@ -21,56 +21,39 @@ function test(val1,val2){
 		classItems[test1]+=(","+test2);
 	}//if
 
+}//firstSelect
 
-
-}
-
-function selectInsert(selVal){
-	var select=$("#cource_id");
+function selectInsert(selVal,num){
+	var select=$("#cource_id"+num);
 	var selArray = new Array();
-	select.text = "";
+	select.text("");
 	var selArray = classItems[selVal].split(",");
 
     for (i = 0; i < selArray.length ; i++) {
 
         $("<option style=\"color: black;\" value=\""+selArray[i]+"\">"+selArray[i]+"</option>").appendTo(select);
 
-    }
+    }//for
+    $("<option style=\"color: black;\" value=\"ALL\">ALL</option>").appendTo(select);
+}//function selectInsert(selVal
 
-
-
-}
-
-$(function($) {
-	$("#grade_id").change(function(){
+function selectChange(num){
 	//選択されているvalue属性を取り出す
-	var val = $("#grade_id").val();
+	var val = $("#grade_id"+num).val();
+	selectInsert(val,num);
+	}//selectChange
 
-	selectInsert(val);
-
-
-	});
-});
 </script>
 
 <c:forEach var="rs" items="${classMap}">
 	<c:forEach var="array" items="${rs.value }">
 	<script>
-	test("${rs.key }","${array }");
+	firstSelect("${rs.key }","${array }");
 	</script>
 	</c:forEach>
 </c:forEach>
 
 <div class="row">
-	<!-- header -->
-<div class="content-header">
-	<div id="logo">
-		<h1>科目管理</h1>
-	</div>
-</div>
-<!-- header -->
-<div id = "test"></div>
-
 
 <!-- form -->
 <form action="" method="get">
@@ -83,12 +66,12 @@ $(function($) {
 <input type="text" class="form-control" name="cource">
 </td>
 
-
 <td class="col-md-4">
 <label for="cource" class="labels">学年</label>
 
 <!-- 学年表示セレクト -->
-<select name="grade_name" id="grade_id" class="form-control col-md-1" onchange="">
+<select name="grade_name1" id="grade_id1" class="form-control col-md-1" onchange="selectChange(1)">
+<option style="color: black;" >--選択--</option>
 <c:forEach var="rs" items="${classMap}">
 <option style="color: black;" value="${rs.key }">${rs.key }</option>
 </c:forEach>
@@ -97,32 +80,24 @@ $(function($) {
 
 <!-- 学科　選択学年から学科をjqで自動抽出予定 -->
 <label for="cource"class="labels">学科</label>
-<select class="form-control col-md-1" name="cource_name" id="cource_id">
-<c:forEach  var="rs" items="${classMap.val}">
-<option style="color: black;" value="${rs }">${rs }</option>
-</c:forEach>
-<option style="color: black;">ALL</option>
+<select class="form-control col-md-1" name="cource_name1" id="cource_id1">
+<option style="color: black;">--学年を選んでください--</option>
 </select></td>
 
 <td class="col-md-4"><label for="cource" class="labels">学年</label>
-<select class="form-control col-md-1">
+<!-- 学年表示セレクト -->
+<select name="grade_name2" id="grade_id2" class="form-control col-md-1" onchange="selectChange(2)">
+<option style="color: black;" >--選択--</option>
 <c:forEach var="rs" items="${classMap}">
-
-<option style="color: black;">${rs.key }</option>
-
+<option style="color: black;" value="${rs.key }">${rs.key }</option>
 </c:forEach>
-<option style="color: black;">ALL</option>
+<option style="color: black;" value="ALL">ALL</option>
+</select> <!-- 2回目学年select終了 -->
 
-</select>
-<label for="cource" class="labels">学科</label>
-<select class="form-control col-md-1">
-<option style="color: black;">R1</option>
-<option style="color: black;">R1</option>
-<option style="color: black;">R2</option>
-<option style="color: black;">R3</option>
-<option style="color: black;">R4</option>
-<option style="color: black;">ALL</option>
-
+<!-- 2回目学科 -->
+<label for="cource"class="labels">学科</label>
+<select class="form-control col-md-1" name="cource_name2" id="cource_id2">
+<option style="color: black;">--学年を選んでください--</option>
 </select></td>
 
 <td class="col-md-4"><label for="cource" class="empty">________</label>
