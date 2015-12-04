@@ -1,4 +1,5 @@
 @media print{
+@page{ size: landscape; margin: auto; }
 
 	.printarea {
 		display: block;
