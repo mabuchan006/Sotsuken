@@ -4,10 +4,11 @@ $(function($) {
 	var val = $("#grade_id").val();
 	var select=$("#cource_id");//学科select要素そのものを取り出す
 
-	$("").appendTo($("#test"));
-	var test = [];
-	var test = ${classMap.R4}
-	alert(test);
+
+//	$("").appendTo($("#test"));
+//	var test = [];
+	//var test = ${classMap.R4}
+
 
 	});
 });
