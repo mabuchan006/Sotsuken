@@ -2,7 +2,7 @@ var repComma = "", str = "", ele = "";
 
 // ドラッグ
 function f_drag(e) {
-	$("#class-room li").draggable({
+	$("#drag-target li").draggable({
 		appendTo : "body",
 		revert : "invalid",
 		helper : "clone",
@@ -34,6 +34,43 @@ function f_drop(e) {
 			} else {
 				disabled: true;
 			}// if
+		}// drop
+	})// droppable
+}// f_drop
+
+
+//一時マスタ用
+
+function f_temp_drag(e) {
+	$("#drag-target td").draggable({
+		appendTo : "body",
+		revert : "invalid",
+		helper : "clone",
+		cursor : "pointer"
+	})// draggable
+}// f_drag
+
+
+
+//ドロップ
+function f_temp_drop(e) {
+	$(".drop-target").droppable({
+		drop : function(e, ui) {
+
+			// 子要素の取得
+			ele = $(this).children("textarea").get(0);
+			console.log(ele);
+			ele.value = ui.draggable.text();
+			console.log(ele.value);
+			console.log(ele);
+			/**
+			// 同値チェック
+			if (ele.value.indexOf(ui.draggable.text()) === -1) {
+				ele.value = ui.draggable.text();
+			} else {
+				disabled: true;
+			}// if
+			**/
 		}// drop
 	})// droppable
 }// f_drop

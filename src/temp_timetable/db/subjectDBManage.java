@@ -41,6 +41,7 @@ public class subjectDBManage extends DBAccess {
 				infoSubjectList.add(infoSub);
 
 				}
+				disConnection();
 		return infoSubjectList;
 
 	}

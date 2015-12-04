@@ -27,14 +27,14 @@
 			</tr>
 
 			<tr class="info">
-				<th rowspan=3>1</th>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+				<th rowspan=3 >1</th>
+				<td ><div class="drop-target"><textarea rows="" cols="" id="test"></textarea></div></td>
+				<td><textarea rows="" cols=""></textarea></td>
+				<td><textarea rows="" cols=""></textarea></td>
+				<td><textarea rows="" cols=""></textarea></td>
+				<td><textarea rows="" cols=""></textarea></td>
+				<td><textarea rows="" cols=""></textarea></td>
+				<td><textarea rows="" cols=""></textarea></td>
 
 			</tr>
 
@@ -159,12 +159,12 @@
 
 <div class="col-md-3 col-md-offset-2">
 	<div id="class">
-		<div id="class-room">
-			<h2 class="font">
-				<a href="#" draggable="false">科目リスト</a>
-			</h2>
-			<div>
-				<ul class="list-group font">
+		<div >
+			<h3 class="font" style="background-color: #202020;color: white">
+				科目リスト
+			</h3>
+			<div id="drag-target" >
+				<ul class="list-group font" >
 					<c:forEach var="subject" items="${infoSubjectList }">
 						<c:if test="${subject.subjectName != ''}"  var="flg"/>
 
@@ -180,9 +180,9 @@
 </div>
 
 <div class="col-md-5 ">
-	<h2 class="font">
-		<a href="#" draggable="false">先生リスト</a>
-	</h2>
+	<h3 class="font" style="background-color: #202020;color: white">
+		先生リスト
+	</h3>
 	<table class="table table-border ">
 		<tbody>
 			<%
@@ -191,7 +191,7 @@
 				for (; cnt1 < teacher_count; cnt1++) {
 					pageContext.setAttribute("cnt1", cnt1);
 			%>
-			<tr>
+			<tr  id="drag-target">
 				<%
 					for (int cnt2 = 0; cnt2 <= 4; cnt2++) {
 				%>

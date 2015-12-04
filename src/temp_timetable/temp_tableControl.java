@@ -99,7 +99,7 @@ public class temp_tableControl extends HttpServlet {
 		css.add("/Sotsuken/css/custom.css");
 		css.add("/Sotsuken/css/style.css");
 		css.add("/Sotsuken/css/pure-drawer.css");
-		css.add("http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css");
+
 
 		js.add("/Sotsuken/js/jquery-2.1.1.min.js");
 		js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
@@ -109,7 +109,7 @@ public class temp_tableControl extends HttpServlet {
 		js.add("/Sotsuken/js/dragdrop.js");
 		js.add("/Sotsuken/js/modal.js");
 		js.add("http://code.jquery.com/ui/1.10.0/jquery-ui.js");
-		js.add("http://code.jquery.com/jquery-1.8.3.js");
+
 		request.setAttribute("css", css);
 		request.setAttribute("js", js);
 	}// css&js
