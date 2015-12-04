@@ -22,8 +22,9 @@ public class divideDBManage extends DBAccess {
 		super(DRIVER_NAME);
 
 		selectSql = String.format("select * from tbl_timedivide");
-		viewSelect = String.format("select r.roomName, d.period, c.classID from tbl_timedivide d, tbl_room r, tbl_class c "
-				+ "where d.roomID = r.roomID and d.classID = c.classID and week = ?");
+		viewSelect = String
+				.format("select r.roomName, d.period, c.classID from tbl_timedivide d, tbl_room r, tbl_class c "
+						+ "where d.roomID = r.roomID and d.classID = c.classID and week = ?");
 		insertSql = String.format("replace into tbl_timedivide ( period, roomID, week, classID ) values"
 				+ " ( ?, (select tbl_room.roomID from tbl_room where tbl_room.roomID = ?), ?, (select tbl_class.classID from tbl_class where tbl_class.classID = ?))");
 		deleteSql = String.format("delete from tbl_timedivide");
@@ -51,7 +52,7 @@ public class divideDBManage extends DBAccess {
 		return divideList;
 	}
 
-	public HashMap<String, String[]> viewDivideDBSelect(String week) throws Exception {
+	public HashMap<String, String[]> editDivideDBSelect(String week) throws Exception {
 
 		HashMap<String, String[]> divideMap = new HashMap<String, String[]>();
 
@@ -62,7 +63,7 @@ public class divideDBManage extends DBAccess {
 		ResultSet rs = getRsResult();
 
 		week = "月";
-		//roomID取得用
+		// roomID取得用
 		HashMap<String, String> map = new HashMap<String, String>();
 		//
 		String classIDList[] = new String[4];
@@ -72,21 +73,21 @@ public class divideDBManage extends DBAccess {
 			map.put(rs.getString("roomName"), null);
 		}
 
-		//各roomIDごとに処理していく
-		for(String key : map.keySet()) {
+		// 各roomIDごとに処理していく
+		for (String key : map.keySet()) {
 			rs.beforeFirst();
 			while (rs.next()) {
-				if ( key.equals(rs.getString("roomName")) ) {
-					if ( classIDList[rs.getInt("period") - 1] != null ) {
+				if (key.equals(rs.getString("roomName"))) {
+					if (classIDList[rs.getInt("period") - 1] != null) {
 						classIDList[rs.getInt("period") - 1] += "," + rs.getString("classID");
 					} else {
 						classIDList[rs.getInt("period") - 1] = rs.getString("classID");
-					}//if
-				}//if
-			}// while
+					} // if
+				} // if
+			} // while
 			divideMap.put(key, classIDList);
 			classIDList = new String[4];
-		}//for
+		} // for
 
 		disConnection();
 

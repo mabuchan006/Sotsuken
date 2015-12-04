@@ -82,12 +82,12 @@ public class divideUpdateControl extends HttpServlet {
 						week = "金";
 						break;
 					}
-				} else if ( key.equals("submit") ) {
+				} else if (key.equals("submit")) {
 
 					// delete
 					ddm.divideDBDelete();
 
-				}else {
+				} else {
 
 					inputStr = key.split("-");
 					roomID = inputStr[0];
@@ -105,13 +105,28 @@ public class divideUpdateControl extends HttpServlet {
 
 			} // for
 
-			// select
-			HashMap<String, String[]> divideMap = ddm.viewDivideDBSelect(week);
+			HashMap<String, HashMap<String, String[]>> viewMap = new HashMap<String, HashMap<String, String[]>>();
+
+			// select edit
+			HashMap<String, String[]> divideMap = ddm.editDivideDBSelect(week);
+
+			// select view
+			for (String rKey : divideMap.keySet()) {
+				viewMap.put(rKey, new HashMap<String, String[]>());
+				for (int i = 0; i < divideMap.get(rKey).length; i++) {
+					if (divideMap.get(rKey)[i] != null) {
+						inputStr = new String[5];
+						inputStr = divideMap.get(rKey)[i].split(",");
+						viewMap.get(rKey).put("p" + (i + 1), inputStr);
+						System.out.println(rKey + ":" +viewMap.get(rKey) + ":" +viewMap.get(rKey).get("p" + (i + 1))[0]);
+					} // if
+				} // for
+			} // for
+
 			// insert
 			ddm.divideDBInsert(diList);
 			// select
-			divideMap = ddm.viewDivideDBSelect(week);
-
+			divideMap = ddm.editDivideDBSelect(week);
 
 			request.setAttribute("divideMap", divideMap);
 			request.setAttribute("content_page", content_page);
@@ -147,7 +162,6 @@ public class divideUpdateControl extends HttpServlet {
 		css.add("/Sotsuken/css/pure-drawer.css");
 		css.add("http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css");
 		css.add("/Sotsuken/css/style.css");
-
 
 		js.add("/Sotsuken/js/jquery-2.1.1.min.js");
 		js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
