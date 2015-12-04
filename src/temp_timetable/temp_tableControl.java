@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import Tools.layoutInclude;
+import Tools.layoutInclude.layoutIncludeInfo;
 import divide.db.divideInfo;
 import manage.db.teacherDBManage;
 import manage.db.teacherInfo;
@@ -51,9 +53,12 @@ public class temp_tableControl extends HttpServlet {
 			throws ServletException, IOException {
 		// 文字コードutf8
 		request.setCharacterEncoding("UTF-8");
-		// jspからのページ情報取得
+
 		// 使用するcss,jsファイルの適用
-		getIncludeFile(request);
+		layoutInclude tools = new layoutInclude();
+		layoutIncludeInfo info =  tools.layout();
+		request.setAttribute("css", info.css);
+		request.setAttribute("js", info.js);
 
 		subjectDBManage suDBM = new subjectDBManage(chooseClassID);
 		teacherDBManage teDBM = new teacherDBManage();
@@ -73,8 +78,6 @@ public class temp_tableControl extends HttpServlet {
 		}
 		// ディスパッチ準備
 
-		request.setAttribute("css", css);
-		request.setAttribute("js", js);
 		request.setAttribute("content_page", content_page);
 		request.setAttribute("page_title", page_title);
 
@@ -93,25 +96,6 @@ public class temp_tableControl extends HttpServlet {
 		doGet(request, response);
 	}
 
-	private void getIncludeFile(HttpServletRequest request) {
-		css.add("/Sotsuken/bootstrap/css/bootstrap.min.css");
-		css.add("/Sotsuken/css/font-awesome.min.css");
-		css.add("/Sotsuken/css/custom.css");
-		css.add("/Sotsuken/css/style.css");
-		css.add("/Sotsuken/css/pure-drawer.css");
 
-
-		js.add("/Sotsuken/js/jquery-2.1.1.min.js");
-		js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
-		js.add("/Sotsuken/bootstrap/js/bootstrap.js");
-		js.add("/Sotsuken/js/jquery.appear.js");
-		js.add("/Sotsuken/js/teacher_regist.js");
-		js.add("/Sotsuken/js/dragdrop.js");
-		js.add("/Sotsuken/js/modal.js");
-		js.add("http://code.jquery.com/ui/1.10.0/jquery-ui.js");
-
-		request.setAttribute("css", css);
-		request.setAttribute("js", js);
-	}// css&js
 
 }

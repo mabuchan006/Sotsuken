@@ -11,9 +11,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import Tools.layoutInclude;
+import Tools.layoutInclude.layoutIncludeInfo;
+import Tools.masterDBSwitch;
+import Tools.masterDBSwitch.masterDBSwitchInfo;
 import timetable.db.masterDBManage;
-import timetable.db.masterDBSwitch;
-import timetable.db.masterDBSwitch.masterDBSwitchInfo;
 import timetable.db.masterInfo;
 
 /**
@@ -52,23 +54,11 @@ public class timeTableMasterControl extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String page = request.getParameter("page");
 
-    	//●R~A_master.jspで使用
-    	css.add("/Sotsuken/bootstrap/css/bootstrap.min.css");
-    	css.add("/Sotsuken/css/style.css");
-    	css.add("/Sotsuken/css/animate.css");
-       	css.add("/Sotsuken/css/font-awesome.min.css");
-    	css.add("http://fonts.googleapis.com/css?family=Lobster");
-    	css.add("/Sotsuken/css/print.css");
-
-
-    	js.add("/Sotsuken/bootstrap/js/bootstrap-dropdown.js");
-       	js.add("/Sotsuken/js/jquery-2.1.1.min.js");
-    	js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
-       	js.add("/Sotsuken/js/jquery.appear.js");
-       	js.add("/Sotsuken/js/belongings.js");
-
-
-
+		// 使用するcss,jsファイルの適用
+				layoutInclude tools = new layoutInclude();
+				layoutIncludeInfo info =  tools.public_layout();
+				request.setAttribute("css", info.css);
+				request.setAttribute("js", info.js);
 
 		if( page != null ){
 			//DB切り替えClassへ（masteDBSwich.java）
