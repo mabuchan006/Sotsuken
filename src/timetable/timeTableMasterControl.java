@@ -91,8 +91,6 @@ public class timeTableMasterControl extends HttpServlet {
 				e.printStackTrace();
 	}
 		//ディスパッチ準備
-			request.setAttribute("css", css);
-			request.setAttribute("js", js);
 			request.setAttribute("content_page", content_page);
 			request.setAttribute("page_title", page_title);
 

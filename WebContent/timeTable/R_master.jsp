@@ -75,7 +75,7 @@
 
 </div>
 
-
+<br />
 
 	<!-- 印刷エリア指定id printareaで囲んだ範囲で可能 -->
 	<div class="printarea">
