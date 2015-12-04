@@ -15,6 +15,10 @@
 	font-family: 'Meiryo UI';
 }
 
+.font2 {
+	font-family: 'Verdana';
+}
+
 .margin-top {
 	margin-top: 15px;
 }
@@ -501,6 +505,12 @@ margin-bottom: 5px;
 	position:relative;
 
 }
+
+.view-size {
+	font-size: 30px;
+	text-justify: auto;
+}
+
 /**一時登録機能の先生リスト　テーブル用 by mabuchan**/
 
 	.table-border>thead>tr>th, .table-border>tbody>tr>th,

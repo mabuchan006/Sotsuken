@@ -127,7 +127,7 @@
 		<!-- ドラッグ&ドロップ -->
 		<div class="col-md-1 fix margin-top">
 			<div id="class">
-				<h1>class</h1>
+				<h1>room</h1>
 				<div id="class-room">
 					<h2 class="font">
 						<a href="#" draggable="false">NCS</a>
@@ -171,743 +171,743 @@
 					</thead>
 					<tbody>
 						<tr class="danger">
-							<td class="size" id="8F">803</td>
-							<td class="size">1</td>
+							<td class="size font2" id="8F">803</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS803.p1[0] }"><p>${viewMap.NCS803.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS803.p1[1] }"><p>${viewMap.NCS803.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS803.p1[2] }"><p>${viewMap.NCS803.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS803.p1[3] }"><p>${viewMap.NCS803.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS803.p1[4] }"><p>${viewMap.NCS803.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p1[0] }"><p class="view-size font2">${viewMap.NCS803.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p1[1] }"><p class="view-size font2">${viewMap.NCS803.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p1[2] }"><p class="view-size font2">${viewMap.NCS803.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p1[3] }"><p class="view-size font2">${viewMap.NCS803.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p1[4] }"><p class="view-size font2">${viewMap.NCS803.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS803.p2[0] }"><p>${viewMap.NCS803.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS803.p2[1] }"><p>${viewMap.NCS803.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS803.p2[2] }"><p>${viewMap.NCS803.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS803.p2[3] }"><p>${viewMap.NCS803.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS803.p2[4] }"><p>${viewMap.NCS803.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p2[0] }"><p class="view-size font2">${viewMap.NCS803.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p2[1] }"><p class="view-size font2">${viewMap.NCS803.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p2[2] }"><p class="view-size font2">${viewMap.NCS803.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p2[3] }"><p class="view-size font2">${viewMap.NCS803.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p2[4] }"><p class="view-size font2">${viewMap.NCS803.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS803.p3[0] }"><p>${viewMap.NCS803.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS803.p3[1] }"><p>${viewMap.NCS803.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS803.p3[2] }"><p>${viewMap.NCS803.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS803.p3[3] }"><p>${viewMap.NCS803.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS803.p3[4] }"><p>${viewMap.NCS803.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p3[0] }"><p class="view-size font2">${viewMap.NCS803.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p3[1] }"><p class="view-size font2">${viewMap.NCS803.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p3[2] }"><p class="view-size font2">${viewMap.NCS803.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p3[3] }"><p class="view-size font2">${viewMap.NCS803.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p3[4] }"><p class="view-size font2">${viewMap.NCS803.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS803.p4[0] }"><p>${viewMap.NCS803.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS803.p4[1] }"><p>${viewMap.NCS803.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS803.p4[2] }"><p>${viewMap.NCS803.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS803.p4[3] }"><p>${viewMap.NCS803.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS803.p4[4] }"><p>${viewMap.NCS803.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p4[0] }"><p class="view-size font2">${viewMap.NCS803.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p4[1] }"><p class="view-size font2">${viewMap.NCS803.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p4[2] }"><p class="view-size font2">${viewMap.NCS803.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p4[3] }"><p class="view-size font2">${viewMap.NCS803.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p4[4] }"><p class="view-size font2">${viewMap.NCS803.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
 
 
 						<tr class="pink1">
-							<td class="size">802</td>
-							<td class="size">1</td>
+							<td class="size font2">802</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS802.p1[0] }"><p>${viewMap.NCS802.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS802.p1[1] }"><p>${viewMap.NCS802.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS802.p1[2] }"><p>${viewMap.NCS802.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS802.p1[3] }"><p>${viewMap.NCS802.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS802.p1[4] }"><p>${viewMap.NCS802.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p1[0] }"><p class="view-size font2">${viewMap.NCS802.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p1[1] }"><p class="view-size font2">${viewMap.NCS802.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p1[2] }"><p class="view-size font2">${viewMap.NCS802.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p1[3] }"><p class="view-size font2">${viewMap.NCS802.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p1[4] }"><p class="view-size font2">${viewMap.NCS802.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS802.p2[0] }"><p>${viewMap.NCS802.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS802.p2[1] }"><p>${viewMap.NCS802.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS802.p2[2] }"><p>${viewMap.NCS802.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS802.p2[3] }"><p>${viewMap.NCS802.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS802.p2[4] }"><p>${viewMap.NCS802.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p2[0] }"><p class="view-size font2">${viewMap.NCS802.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p2[1] }"><p class="view-size font2">${viewMap.NCS802.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p2[2] }"><p class="view-size font2">${viewMap.NCS802.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p2[3] }"><p class="view-size font2">${viewMap.NCS802.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p2[4] }"><p class="view-size font2">${viewMap.NCS802.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS802.p3[0] }"><p>${viewMap.NCS802.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS802.p3[1] }"><p>${viewMap.NCS802.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS802.p3[2] }"><p>${viewMap.NCS802.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS802.p3[3] }"><p>${viewMap.NCS802.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS802.p3[4] }"><p>${viewMap.NCS802.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p3[0] }"><p class="view-size font2">${viewMap.NCS802.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p3[1] }"><p class="view-size font2">${viewMap.NCS802.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p3[2] }"><p class="view-size font2">${viewMap.NCS802.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p3[3] }"><p class="view-size font2">${viewMap.NCS802.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p3[4] }"><p class="view-size font2">${viewMap.NCS802.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS802.p4[0] }"><p>${viewMap.NCS802.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS802.p4[1] }"><p>${viewMap.NCS802.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS802.p4[2] }"><p>${viewMap.NCS802.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS802.p4[3] }"><p>${viewMap.NCS802.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS802.p4[4] }"><p>${viewMap.NCS802.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p4[0] }"><p class="view-size font2">${viewMap.NCS802.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p4[1] }"><p class="view-size font2">${viewMap.NCS802.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p4[2] }"><p class="view-size font2">${viewMap.NCS802.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p4[3] }"><p class="view-size font2">${viewMap.NCS802.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p4[4] }"><p class="view-size font2">${viewMap.NCS802.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
 
 						<tr class="danger">
-							<td class="size" id="7F">702</td>
-							<td class="size">1</td>
+							<td class="size font2" id="7F">702</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS702.p1[0] }"><p>${viewMap.NCS702.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS702.p1[1] }"><p>${viewMap.NCS702.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS702.p1[2] }"><p>${viewMap.NCS702.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS702.p1[3] }"><p>${viewMap.NCS702.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS702.p1[4] }"><p>${viewMap.NCS702.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p1[0] }"><p class="view-size font2">${viewMap.NCS702.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p1[1] }"><p class="view-size font2">${viewMap.NCS702.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p1[2] }"><p class="view-size font2">${viewMap.NCS702.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p1[3] }"><p class="view-size font2">${viewMap.NCS702.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p1[4] }"><p class="view-size font2">${viewMap.NCS702.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS702.p2[0] }"><p>${viewMap.NCS702.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS702.p2[1] }"><p>${viewMap.NCS702.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS702.p2[2] }"><p>${viewMap.NCS702.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS702.p2[3] }"><p>${viewMap.NCS702.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS702.p2[4] }"><p>${viewMap.NCS702.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p2[0] }"><p class="view-size font2">${viewMap.NCS702.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p2[1] }"><p class="view-size font2">${viewMap.NCS702.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p2[2] }"><p class="view-size font2">${viewMap.NCS702.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p2[3] }"><p class="view-size font2">${viewMap.NCS702.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p2[4] }"><p class="view-size font2">${viewMap.NCS702.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS702.p3[0] }"><p>${viewMap.NCS702.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS702.p3[1] }"><p>${viewMap.NCS702.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS702.p3[2] }"><p>${viewMap.NCS702.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS702.p3[3] }"><p>${viewMap.NCS702.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS702.p3[4] }"><p>${viewMap.NCS702.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p3[0] }"><p class="view-size font2">${viewMap.NCS702.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p3[1] }"><p class="view-size font2">${viewMap.NCS702.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p3[2] }"><p class="view-size font2">${viewMap.NCS702.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p3[3] }"><p class="view-size font2">${viewMap.NCS702.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p3[4] }"><p class="view-size font2">${viewMap.NCS702.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS702.p4[0] }"><p>${viewMap.NCS702.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS702.p4[1] }"><p>${viewMap.NCS702.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS702.p4[2] }"><p>${viewMap.NCS702.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS702.p4[3] }"><p>${viewMap.NCS702.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS702.p4[4] }"><p>${viewMap.NCS702.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p4[0] }"><p class="view-size font2">${viewMap.NCS702.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p4[1] }"><p class="view-size font2">${viewMap.NCS702.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p4[2] }"><p class="view-size font2">${viewMap.NCS702.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p4[3] }"><p class="view-size font2">${viewMap.NCS702.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p4[4] }"><p class="view-size font2">${viewMap.NCS702.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
 
 
 						<tr class="pink1">
-							<td class="size">701</td>
-							<td class="size">1</td>
+							<td class="size font2">701</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS701.p1[0] }"><p>${viewMap.NCS701.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS701.p1[1] }"><p>${viewMap.NCS701.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS701.p1[2] }"><p>${viewMap.NCS701.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS701.p1[3] }"><p>${viewMap.NCS701.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS701.p1[4] }"><p>${viewMap.NCS701.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p1[0] }"><p class="view-size font2">${viewMap.NCS701.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p1[1] }"><p class="view-size font2">${viewMap.NCS701.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p1[2] }"><p class="view-size font2">${viewMap.NCS701.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p1[3] }"><p class="view-size font2">${viewMap.NCS701.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p1[4] }"><p class="view-size font2">${viewMap.NCS701.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS701.p2[0] }"><p>${viewMap.NCS701.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS701.p2[1] }"><p>${viewMap.NCS701.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS701.p2[2] }"><p>${viewMap.NCS701.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS701.p2[3] }"><p>${viewMap.NCS701.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS701.p2[4] }"><p>${viewMap.NCS701.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p2[0] }"><p class="view-size font2">${viewMap.NCS701.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p2[1] }"><p class="view-size font2">${viewMap.NCS701.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p2[2] }"><p class="view-size font2">${viewMap.NCS701.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p2[3] }"><p class="view-size font2">${viewMap.NCS701.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p2[4] }"><p class="view-size font2">${viewMap.NCS701.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS701.p3[0] }"><p>${viewMap.NCS701.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS701.p3[1] }"><p>${viewMap.NCS701.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS701.p3[2] }"><p>${viewMap.NCS701.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS701.p3[3] }"><p>${viewMap.NCS701.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS701.p3[4] }"><p>${viewMap.NCS701.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p3[0] }"><p class="view-size font2">${viewMap.NCS701.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p3[1] }"><p class="view-size font2">${viewMap.NCS701.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p3[2] }"><p class="view-size font2">${viewMap.NCS701.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p3[3] }"><p class="view-size font2">${viewMap.NCS701.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p3[4] }"><p class="view-size font2">${viewMap.NCS701.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS701.p4[0] }"><p>${viewMap.NCS701.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS701.p4[1] }"><p>${viewMap.NCS701.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS701.p4[2] }"><p>${viewMap.NCS701.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS701.p4[3] }"><p>${viewMap.NCS701.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS701.p4[4] }"><p>${viewMap.NCS701.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p4[0] }"><p class="view-size font2">${viewMap.NCS701.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p4[1] }"><p class="view-size font2">${viewMap.NCS701.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p4[2] }"><p class="view-size font2">${viewMap.NCS701.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p4[3] }"><p class="view-size font2">${viewMap.NCS701.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p4[4] }"><p class="view-size font2">${viewMap.NCS701.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
 						<tr class="danger">
-							<td class="size" id="6F">604</td>
-							<td class="size">1</td>
+							<td class="size font2" id="6F">604</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS604.p1[0] }"><p>${viewMap.NCS604.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS604.p1[1] }"><p>${viewMap.NCS604.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS604.p1[2] }"><p>${viewMap.NCS604.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS604.p1[3] }"><p>${viewMap.NCS604.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS604.p1[4] }"><p>${viewMap.NCS604.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p1[0] }"><p class="view-size font2">${viewMap.NCS604.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p1[1] }"><p class="view-size font2">${viewMap.NCS604.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p1[2] }"><p class="view-size font2">${viewMap.NCS604.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p1[3] }"><p class="view-size font2">${viewMap.NCS604.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p1[4] }"><p class="view-size font2">${viewMap.NCS604.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS604.p2[0] }"><p>${viewMap.NCS604.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS604.p2[1] }"><p>${viewMap.NCS604.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS604.p2[2] }"><p>${viewMap.NCS604.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS604.p2[3] }"><p>${viewMap.NCS604.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS604.p2[4] }"><p>${viewMap.NCS604.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p2[0] }"><p class="view-size font2">${viewMap.NCS604.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p2[1] }"><p class="view-size font2">${viewMap.NCS604.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p2[2] }"><p class="view-size font2">${viewMap.NCS604.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p2[3] }"><p class="view-size font2">${viewMap.NCS604.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p2[4] }"><p class="view-size font2">${viewMap.NCS604.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS604.p3[0] }"><p>${viewMap.NCS604.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS604.p3[1] }"><p>${viewMap.NCS604.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS604.p3[2] }"><p>${viewMap.NCS604.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS604.p3[3] }"><p>${viewMap.NCS604.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS604.p3[4] }"><p>${viewMap.NCS604.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p3[0] }"><p class="view-size font2">${viewMap.NCS604.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p3[1] }"><p class="view-size font2">${viewMap.NCS604.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p3[2] }"><p class="view-size font2">${viewMap.NCS604.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p3[3] }"><p class="view-size font2">${viewMap.NCS604.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p3[4] }"><p class="view-size font2">${viewMap.NCS604.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS604.p4[0] }"><p>${viewMap.NCS604.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS604.p4[1] }"><p>${viewMap.NCS604.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS604.p4[2] }"><p>${viewMap.NCS604.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS604.p4[3] }"><p>${viewMap.NCS604.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS604.p4[4] }"><p>${viewMap.NCS604.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p4[0] }"><p class="view-size font2">${viewMap.NCS604.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p4[1] }"><p class="view-size font2">${viewMap.NCS604.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p4[2] }"><p class="view-size font2">${viewMap.NCS604.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p4[3] }"><p class="view-size font2">${viewMap.NCS604.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p4[4] }"><p class="view-size font2">${viewMap.NCS604.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
 
 
 						<tr class="pink1">
-							<td class="size">603</td>
-							<td class="size">1</td>
+							<td class="size font2">603</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS603.p1[0] }"><p>${viewMap.NCS603.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS603.p1[1] }"><p>${viewMap.NCS603.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS603.p1[2] }"><p>${viewMap.NCS603.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS603.p1[3] }"><p>${viewMap.NCS603.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS603.p1[4] }"><p>${viewMap.NCS603.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p1[0] }"><p class="view-size font2">${viewMap.NCS603.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p1[1] }"><p class="view-size font2">${viewMap.NCS603.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p1[2] }"><p class="view-size font2">${viewMap.NCS603.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p1[3] }"><p class="view-size font2">${viewMap.NCS603.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p1[4] }"><p class="view-size font2">${viewMap.NCS603.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS603.p2[0] }"><p>${viewMap.NCS603.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS603.p2[1] }"><p>${viewMap.NCS603.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS603.p2[2] }"><p>${viewMap.NCS603.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS603.p2[3] }"><p>${viewMap.NCS603.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS603.p2[4] }"><p>${viewMap.NCS603.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p2[0] }"><p class="view-size font2">${viewMap.NCS603.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p2[1] }"><p class="view-size font2">${viewMap.NCS603.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p2[2] }"><p class="view-size font2">${viewMap.NCS603.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p2[3] }"><p class="view-size font2">${viewMap.NCS603.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p2[4] }"><p class="view-size font2">${viewMap.NCS603.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS603.p3[0] }"><p>${viewMap.NCS603.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS603.p3[1] }"><p>${viewMap.NCS603.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS603.p3[2] }"><p>${viewMap.NCS603.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS603.p3[3] }"><p>${viewMap.NCS603.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS603.p3[4] }"><p>${viewMap.NCS603.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p3[0] }"><p class="view-size font2">${viewMap.NCS603.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p3[1] }"><p class="view-size font2">${viewMap.NCS603.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p3[2] }"><p class="view-size font2">${viewMap.NCS603.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p3[3] }"><p class="view-size font2">${viewMap.NCS603.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p3[4] }"><p class="view-size font2">${viewMap.NCS603.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS603.p4[0] }"><p>${viewMap.NCS603.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS603.p4[1] }"><p>${viewMap.NCS603.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS603.p4[2] }"><p>${viewMap.NCS603.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS603.p4[3] }"><p>${viewMap.NCS603.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS603.p4[4] }"><p>${viewMap.NCS603.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p4[0] }"><p class="view-size font2">${viewMap.NCS603.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p4[1] }"><p class="view-size font2">${viewMap.NCS603.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p4[2] }"><p class="view-size font2">${viewMap.NCS603.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p4[3] }"><p class="view-size font2">${viewMap.NCS603.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p4[4] }"><p class="view-size font2">${viewMap.NCS603.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
 						<tr class="danger">
-							<td class="size">601</td>
-							<td class="size">1</td>
+							<td class="size font2">601</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS601.p1[0] }"><p>${viewMap.NCS601.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS601.p1[1] }"><p>${viewMap.NCS601.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS601.p1[2] }"><p>${viewMap.NCS601.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS601.p1[3] }"><p>${viewMap.NCS601.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS601.p1[4] }"><p>${viewMap.NCS601.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p1[0] }"><p class="view-size font2">${viewMap.NCS601.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p1[1] }"><p class="view-size font2">${viewMap.NCS601.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p1[2] }"><p class="view-size font2">${viewMap.NCS601.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p1[3] }"><p class="view-size font2">${viewMap.NCS601.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p1[4] }"><p class="view-size font2">${viewMap.NCS601.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS601.p2[0] }"><p>${viewMap.NCS601.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS601.p2[1] }"><p>${viewMap.NCS601.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS601.p2[2] }"><p>${viewMap.NCS601.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS601.p2[3] }"><p>${viewMap.NCS601.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS601.p2[4] }"><p>${viewMap.NCS601.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p2[0] }"><p class="view-size font2">${viewMap.NCS601.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p2[1] }"><p class="view-size font2">${viewMap.NCS601.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p2[2] }"><p class="view-size font2">${viewMap.NCS601.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p2[3] }"><p class="view-size font2">${viewMap.NCS601.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p2[4] }"><p class="view-size font2">${viewMap.NCS601.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS601.p3[0] }"><p>${viewMap.NCS601.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS601.p3[1] }"><p>${viewMap.NCS601.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS601.p3[2] }"><p>${viewMap.NCS601.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS601.p3[3] }"><p>${viewMap.NCS601.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS601.p3[4] }"><p>${viewMap.NCS601.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p3[0] }"><p class="view-size font2">${viewMap.NCS601.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p3[1] }"><p class="view-size font2">${viewMap.NCS601.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p3[2] }"><p class="view-size font2">${viewMap.NCS601.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p3[3] }"><p class="view-size font2">${viewMap.NCS601.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p3[4] }"><p class="view-size font2">${viewMap.NCS601.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS601.p4[0] }"><p>${viewMap.NCS601.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS601.p4[1] }"><p>${viewMap.NCS601.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS601.p4[2] }"><p>${viewMap.NCS601.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS601.p4[3] }"><p>${viewMap.NCS601.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS601.p4[4] }"><p>${viewMap.NCS601.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p4[0] }"><p class="view-size font2">${viewMap.NCS601.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p4[1] }"><p class="view-size font2">${viewMap.NCS601.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p4[2] }"><p class="view-size font2">${viewMap.NCS601.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p4[3] }"><p class="view-size font2">${viewMap.NCS601.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p4[4] }"><p class="view-size font2">${viewMap.NCS601.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
 
 
 						<tr class="pink1">
-							<td class="size" id="5F">504</td>
-							<td class="size">1</td>
+							<td class="size font2" id="5F">504</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS504.p1[0] }"><p>${viewMap.NCS504.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS504.p1[1] }"><p>${viewMap.NCS504.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS504.p1[2] }"><p>${viewMap.NCS504.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS504.p1[3] }"><p>${viewMap.NCS504.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS504.p1[4] }"><p>${viewMap.NCS504.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p1[0] }"><p class="view-size font2">${viewMap.NCS504.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p1[1] }"><p class="view-size font2">${viewMap.NCS504.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p1[2] }"><p class="view-size font2">${viewMap.NCS504.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p1[3] }"><p class="view-size font2">${viewMap.NCS504.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p1[4] }"><p class="view-size font2">${viewMap.NCS504.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS504.p2[0] }"><p>${viewMap.NCS504.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS504.p2[1] }"><p>${viewMap.NCS504.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS504.p2[2] }"><p>${viewMap.NCS504.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS504.p2[3] }"><p>${viewMap.NCS504.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS504.p2[4] }"><p>${viewMap.NCS504.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p2[0] }"><p class="view-size font2">${viewMap.NCS504.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p2[1] }"><p class="view-size font2">${viewMap.NCS504.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p2[2] }"><p class="view-size font2">${viewMap.NCS504.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p2[3] }"><p class="view-size font2">${viewMap.NCS504.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p2[4] }"><p class="view-size font2">${viewMap.NCS504.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS504.p3[0] }"><p>${viewMap.NCS504.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS504.p3[1] }"><p>${viewMap.NCS504.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS504.p3[2] }"><p>${viewMap.NCS504.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS504.p3[3] }"><p>${viewMap.NCS504.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS504.p3[4] }"><p>${viewMap.NCS504.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p3[0] }"><p class="view-size font2">${viewMap.NCS504.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p3[1] }"><p class="view-size font2">${viewMap.NCS504.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p3[2] }"><p class="view-size font2">${viewMap.NCS504.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p3[3] }"><p class="view-size font2">${viewMap.NCS504.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p3[4] }"><p class="view-size font2">${viewMap.NCS504.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS504.p4[0] }"><p>${viewMap.NCS504.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS504.p4[1] }"><p>${viewMap.NCS504.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS504.p4[2] }"><p>${viewMap.NCS504.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS504.p4[3] }"><p>${viewMap.NCS504.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS504.p4[4] }"><p>${viewMap.NCS504.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p4[0] }"><p class="view-size font2">${viewMap.NCS504.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p4[1] }"><p class="view-size font2">${viewMap.NCS504.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p4[2] }"><p class="view-size font2">${viewMap.NCS504.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p4[3] }"><p class="view-size font2">${viewMap.NCS504.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p4[4] }"><p class="view-size font2">${viewMap.NCS504.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
 						<tr class="danger">
-							<td class="size">503</td>
-							<td class="size">1</td>
+							<td class="size font2">503</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS503.p1[0] }"><p>${viewMap.NCS503.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS503.p1[1] }"><p>${viewMap.NCS503.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS503.p1[2] }"><p>${viewMap.NCS503.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS503.p1[3] }"><p>${viewMap.NCS503.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS503.p1[4] }"><p>${viewMap.NCS503.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p1[0] }"><p class="view-size font2">${viewMap.NCS503.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p1[1] }"><p class="view-size font2">${viewMap.NCS503.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p1[2] }"><p class="view-size font2">${viewMap.NCS503.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p1[3] }"><p class="view-size font2">${viewMap.NCS503.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p1[4] }"><p class="view-size font2">${viewMap.NCS503.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS503.p2[0] }"><p>${viewMap.NCS503.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS503.p2[1] }"><p>${viewMap.NCS503.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS503.p2[2] }"><p>${viewMap.NCS503.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS503.p2[3] }"><p>${viewMap.NCS503.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS503.p2[4] }"><p>${viewMap.NCS503.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p2[0] }"><p class="view-size font2">${viewMap.NCS503.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p2[1] }"><p class="view-size font2">${viewMap.NCS503.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p2[2] }"><p class="view-size font2">${viewMap.NCS503.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p2[3] }"><p class="view-size font2">${viewMap.NCS503.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p2[4] }"><p class="view-size font2">${viewMap.NCS503.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS503.p3[0] }"><p>${viewMap.NCS503.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS503.p3[1] }"><p>${viewMap.NCS503.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS503.p3[2] }"><p>${viewMap.NCS503.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS503.p3[3] }"><p>${viewMap.NCS503.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS503.p3[4] }"><p>${viewMap.NCS503.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p3[0] }"><p class="view-size font2">${viewMap.NCS503.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p3[1] }"><p class="view-size font2">${viewMap.NCS503.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p3[2] }"><p class="view-size font2">${viewMap.NCS503.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p3[3] }"><p class="view-size font2">${viewMap.NCS503.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p3[4] }"><p class="view-size font2">${viewMap.NCS503.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS503.p4[0] }"><p>${viewMap.NCS503.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS503.p4[1] }"><p>${viewMap.NCS503.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS503.p4[2] }"><p>${viewMap.NCS503.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS503.p4[3] }"><p>${viewMap.NCS503.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS503.p4[4] }"><p>${viewMap.NCS503.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p4[0] }"><p class="view-size font2">${viewMap.NCS503.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p4[1] }"><p class="view-size font2">${viewMap.NCS503.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p4[2] }"><p class="view-size font2">${viewMap.NCS503.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p4[3] }"><p class="view-size font2">${viewMap.NCS503.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p4[4] }"><p class="view-size font2">${viewMap.NCS503.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
 
 
 						<tr class="pink1">
-							<td class="size">502</td>
-							<td class="size">1</td>
+							<td class="size font2">502</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS502.p1[0] }"><p>${viewMap.NCS502.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS502.p1[1] }"><p>${viewMap.NCS502.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS502.p1[2] }"><p>${viewMap.NCS502.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS502.p1[3] }"><p>${viewMap.NCS502.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS502.p1[4] }"><p>${viewMap.NCS502.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p1[0] }"><p class="view-size font2">${viewMap.NCS502.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p1[1] }"><p class="view-size font2">${viewMap.NCS502.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p1[2] }"><p class="view-size font2">${viewMap.NCS502.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p1[3] }"><p class="view-size font2">${viewMap.NCS502.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p1[4] }"><p class="view-size font2">${viewMap.NCS502.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS502.p2[0] }"><p>${viewMap.NCS502.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS502.p2[1] }"><p>${viewMap.NCS502.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS502.p2[2] }"><p>${viewMap.NCS502.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS502.p2[3] }"><p>${viewMap.NCS502.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS502.p2[4] }"><p>${viewMap.NCS502.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p2[0] }"><p class="view-size font2">${viewMap.NCS502.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p2[1] }"><p class="view-size font2">${viewMap.NCS502.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p2[2] }"><p class="view-size font2">${viewMap.NCS502.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p2[3] }"><p class="view-size font2">${viewMap.NCS502.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p2[4] }"><p class="view-size font2">${viewMap.NCS502.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS502.p3[0] }"><p>${viewMap.NCS502.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS502.p3[1] }"><p>${viewMap.NCS502.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS502.p3[2] }"><p>${viewMap.NCS502.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS502.p3[3] }"><p>${viewMap.NCS502.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS502.p3[4] }"><p>${viewMap.NCS502.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p3[0] }"><p class="view-size font2">${viewMap.NCS502.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p3[1] }"><p class="view-size font2">${viewMap.NCS502.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p3[2] }"><p class="view-size font2">${viewMap.NCS502.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p3[3] }"><p class="view-size font2">${viewMap.NCS502.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p3[4] }"><p class="view-size font2">${viewMap.NCS502.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS502.p4[0] }"><p>${viewMap.NCS502.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS502.p4[1] }"><p>${viewMap.NCS502.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS502.p4[2] }"><p>${viewMap.NCS502.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS502.p4[3] }"><p>${viewMap.NCS502.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS502.p4[4] }"><p>${viewMap.NCS502.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p4[0] }"><p class="view-size font2">${viewMap.NCS502.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p4[1] }"><p class="view-size font2">${viewMap.NCS502.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p4[2] }"><p class="view-size font2">${viewMap.NCS502.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p4[3] }"><p class="view-size font2">${viewMap.NCS502.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p4[4] }"><p class="view-size font2">${viewMap.NCS502.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
 						<tr class="danger">
-							<td class="size">501</td>
-							<td class="size">1</td>
+							<td class="size font2">501</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS501.p1[0] }"><p>${viewMap.NCS501.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS501.p1[1] }"><p>${viewMap.NCS501.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS501.p1[2] }"><p>${viewMap.NCS501.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS501.p1[3] }"><p>${viewMap.NCS501.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS501.p1[4] }"><p>${viewMap.NCS501.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p1[0] }"><p class="view-size font2">${viewMap.NCS501.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p1[1] }"><p class="view-size font2">${viewMap.NCS501.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p1[2] }"><p class="view-size font2">${viewMap.NCS501.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p1[3] }"><p class="view-size font2">${viewMap.NCS501.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p1[4] }"><p class="view-size font2">${viewMap.NCS501.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS501.p2[0] }"><p>${viewMap.NCS501.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS501.p2[1] }"><p>${viewMap.NCS501.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS501.p2[2] }"><p>${viewMap.NCS501.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS501.p2[3] }"><p>${viewMap.NCS501.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS501.p2[4] }"><p>${viewMap.NCS501.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p2[0] }"><p class="view-size font2">${viewMap.NCS501.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p2[1] }"><p class="view-size font2">${viewMap.NCS501.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p2[2] }"><p class="view-size font2">${viewMap.NCS501.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p2[3] }"><p class="view-size font2">${viewMap.NCS501.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p2[4] }"><p class="view-size font2">${viewMap.NCS501.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS501.p3[0] }"><p>${viewMap.NCS501.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS501.p3[1] }"><p>${viewMap.NCS501.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS501.p3[2] }"><p>${viewMap.NCS501.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS501.p3[3] }"><p>${viewMap.NCS501.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS501.p3[4] }"><p>${viewMap.NCS501.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p3[0] }"><p class="view-size font2">${viewMap.NCS501.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p3[1] }"><p class="view-size font2">${viewMap.NCS501.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p3[2] }"><p class="view-size font2">${viewMap.NCS501.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p3[3] }"><p class="view-size font2">${viewMap.NCS501.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p3[4] }"><p class="view-size font2">${viewMap.NCS501.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS501.p4[0] }"><p>${viewMap.NCS501.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS501.p4[1] }"><p>${viewMap.NCS501.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS501.p4[2] }"><p>${viewMap.NCS501.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS501.p4[3] }"><p>${viewMap.NCS501.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS501.p4[4] }"><p>${viewMap.NCS501.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p4[0] }"><p class="view-size font2">${viewMap.NCS501.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p4[1] }"><p class="view-size font2">${viewMap.NCS501.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p4[2] }"><p class="view-size font2">${viewMap.NCS501.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p4[3] }"><p class="view-size font2">${viewMap.NCS501.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p4[4] }"><p class="view-size font2">${viewMap.NCS501.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
 
 
 						<tr class="pink1">
-							<td class="size" id="4F">404</td>
-							<td class="size">1</td>
+							<td class="size font2" id="4F">404</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS404.p1[0] }"><p>${viewMap.NCS404.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS404.p1[1] }"><p>${viewMap.NCS404.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS404.p1[2] }"><p>${viewMap.NCS404.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS404.p1[3] }"><p>${viewMap.NCS404.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS404.p1[4] }"><p>${viewMap.NCS404.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p1[0] }"><p class="view-size font2">${viewMap.NCS404.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p1[1] }"><p class="view-size font2">${viewMap.NCS404.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p1[2] }"><p class="view-size font2">${viewMap.NCS404.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p1[3] }"><p class="view-size font2">${viewMap.NCS404.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p1[4] }"><p class="view-size font2">${viewMap.NCS404.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS404.p2[0] }"><p>${viewMap.NCS404.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS404.p2[1] }"><p>${viewMap.NCS404.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS404.p2[2] }"><p>${viewMap.NCS404.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS404.p2[3] }"><p>${viewMap.NCS404.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS404.p2[4] }"><p>${viewMap.NCS404.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p2[0] }"><p class="view-size font2">${viewMap.NCS404.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p2[1] }"><p class="view-size font2">${viewMap.NCS404.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p2[2] }"><p class="view-size font2">${viewMap.NCS404.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p2[3] }"><p class="view-size font2">${viewMap.NCS404.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p2[4] }"><p class="view-size font2">${viewMap.NCS404.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS404.p3[0] }"><p>${viewMap.NCS404.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS404.p3[1] }"><p>${viewMap.NCS404.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS404.p3[2] }"><p>${viewMap.NCS404.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS404.p3[3] }"><p>${viewMap.NCS404.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS404.p3[4] }"><p>${viewMap.NCS404.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p3[0] }"><p class="view-size font2">${viewMap.NCS404.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p3[1] }"><p class="view-size font2">${viewMap.NCS404.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p3[2] }"><p class="view-size font2">${viewMap.NCS404.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p3[3] }"><p class="view-size font2">${viewMap.NCS404.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p3[4] }"><p class="view-size font2">${viewMap.NCS404.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS404.p4[0] }"><p>${viewMap.NCS404.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS404.p4[1] }"><p>${viewMap.NCS404.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS404.p4[2] }"><p>${viewMap.NCS404.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS404.p4[3] }"><p>${viewMap.NCS404.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS404.p4[4] }"><p>${viewMap.NCS404.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p4[0] }"><p class="view-size font2">${viewMap.NCS404.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p4[1] }"><p class="view-size font2">${viewMap.NCS404.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p4[2] }"><p class="view-size font2">${viewMap.NCS404.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p4[3] }"><p class="view-size font2">${viewMap.NCS404.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p4[4] }"><p class="view-size font2">${viewMap.NCS404.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
 						<tr class="danger">
-							<td class="size">403</td>
-							<td class="size">1</td>
+							<td class="size font2">403</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS403.p1[0] }"><p>${viewMap.NCS403.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS403.p1[1] }"><p>${viewMap.NCS403.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS403.p1[2] }"><p>${viewMap.NCS403.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS403.p1[3] }"><p>${viewMap.NCS403.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS403.p1[4] }"><p>${viewMap.NCS403.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p1[0] }"><p class="view-size font2">${viewMap.NCS403.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p1[1] }"><p class="view-size font2">${viewMap.NCS403.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p1[2] }"><p class="view-size font2">${viewMap.NCS403.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p1[3] }"><p class="view-size font2">${viewMap.NCS403.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p1[4] }"><p class="view-size font2">${viewMap.NCS403.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS403.p2[0] }"><p>${viewMap.NCS403.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS403.p2[1] }"><p>${viewMap.NCS403.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS403.p2[2] }"><p>${viewMap.NCS403.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS403.p2[3] }"><p>${viewMap.NCS403.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS403.p2[4] }"><p>${viewMap.NCS403.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p2[0] }"><p class="view-size font2">${viewMap.NCS403.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p2[1] }"><p class="view-size font2">${viewMap.NCS403.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p2[2] }"><p class="view-size font2">${viewMap.NCS403.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p2[3] }"><p class="view-size font2">${viewMap.NCS403.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p2[4] }"><p class="view-size font2">${viewMap.NCS403.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS403.p3[0] }"><p>${viewMap.NCS403.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS403.p3[1] }"><p>${viewMap.NCS403.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS403.p3[2] }"><p>${viewMap.NCS403.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS403.p3[3] }"><p>${viewMap.NCS403.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS403.p3[4] }"><p>${viewMap.NCS403.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p3[0] }"><p class="view-size font2">${viewMap.NCS403.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p3[1] }"><p class="view-size font2">${viewMap.NCS403.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p3[2] }"><p class="view-size font2">${viewMap.NCS403.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p3[3] }"><p class="view-size font2">${viewMap.NCS403.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p3[4] }"><p class="view-size font2">${viewMap.NCS403.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS403.p4[0] }"><p>${viewMap.NCS403.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS403.p4[1] }"><p>${viewMap.NCS403.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS403.p4[2] }"><p>${viewMap.NCS403.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS403.p4[3] }"><p>${viewMap.NCS403.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS403.p4[4] }"><p>${viewMap.NCS403.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p4[0] }"><p class="view-size font2">${viewMap.NCS403.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p4[1] }"><p class="view-size font2">${viewMap.NCS403.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p4[2] }"><p class="view-size font2">${viewMap.NCS403.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p4[3] }"><p class="view-size font2">${viewMap.NCS403.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p4[4] }"><p class="view-size font2">${viewMap.NCS403.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
 
 
 						<tr class="pink1">
-							<td class="size">402</td>
-							<td class="size">1</td>
+							<td class="size font2">402</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS402.p1[0] }"><p>${viewMap.NCS402.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS402.p1[1] }"><p>${viewMap.NCS402.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS402.p1[2] }"><p>${viewMap.NCS402.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS402.p1[3] }"><p>${viewMap.NCS402.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS402.p1[4] }"><p>${viewMap.NCS402.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p1[0] }"><p class="view-size font2">${viewMap.NCS402.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p1[1] }"><p class="view-size font2">${viewMap.NCS402.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p1[2] }"><p class="view-size font2">${viewMap.NCS402.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p1[3] }"><p class="view-size font2">${viewMap.NCS402.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p1[4] }"><p class="view-size font2">${viewMap.NCS402.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS402.p2[0] }"><p>${viewMap.NCS402.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS402.p2[1] }"><p>${viewMap.NCS402.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS402.p2[2] }"><p>${viewMap.NCS402.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS402.p2[3] }"><p>${viewMap.NCS402.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS402.p2[4] }"><p>${viewMap.NCS402.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p2[0] }"><p class="view-size font2">${viewMap.NCS402.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p2[1] }"><p class="view-size font2">${viewMap.NCS402.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p2[2] }"><p class="view-size font2">${viewMap.NCS402.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p2[3] }"><p class="view-size font2">${viewMap.NCS402.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p2[4] }"><p class="view-size font2">${viewMap.NCS402.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS402.p3[0] }"><p>${viewMap.NCS402.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS402.p3[1] }"><p>${viewMap.NCS402.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS402.p3[2] }"><p>${viewMap.NCS402.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS402.p3[3] }"><p>${viewMap.NCS402.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS402.p3[4] }"><p>${viewMap.NCS402.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p3[0] }"><p class="view-size font2">${viewMap.NCS402.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p3[1] }"><p class="view-size font2">${viewMap.NCS402.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p3[2] }"><p class="view-size font2">${viewMap.NCS402.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p3[3] }"><p class="view-size font2">${viewMap.NCS402.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p3[4] }"><p class="view-size font2">${viewMap.NCS402.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS402.p4[0] }"><p>${viewMap.NCS402.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS402.p4[1] }"><p>${viewMap.NCS402.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS402.p4[2] }"><p>${viewMap.NCS402.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS402.p4[3] }"><p>${viewMap.NCS402.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS402.p4[4] }"><p>${viewMap.NCS402.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p4[0] }"><p class="view-size font2">${viewMap.NCS402.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p4[1] }"><p class="view-size font2">${viewMap.NCS402.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p4[2] }"><p class="view-size font2">${viewMap.NCS402.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p4[3] }"><p class="view-size font2">${viewMap.NCS402.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p4[4] }"><p class="view-size font2">${viewMap.NCS402.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
 						<tr class="danger">
-							<td class="size">401</td>
-							<td class="size">1</td>
+							<td class="size font2">401</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS401.p1[0] }"><p>${viewMap.NCS401.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS401.p1[1] }"><p>${viewMap.NCS401.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS401.p1[2] }"><p>${viewMap.NCS401.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS401.p1[3] }"><p>${viewMap.NCS401.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS401.p1[4] }"><p>${viewMap.NCS401.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p1[0] }"><p class="view-size font2">${viewMap.NCS401.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p1[1] }"><p class="view-size font2">${viewMap.NCS401.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p1[2] }"><p class="view-size font2">${viewMap.NCS401.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p1[3] }"><p class="view-size font2">${viewMap.NCS401.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p1[4] }"><p class="view-size font2">${viewMap.NCS401.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS401.p2[0] }"><p>${viewMap.NCS401.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS401.p2[1] }"><p>${viewMap.NCS401.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS401.p2[2] }"><p>${viewMap.NCS401.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS401.p2[3] }"><p>${viewMap.NCS401.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS401.p2[4] }"><p>${viewMap.NCS401.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p2[0] }"><p class="view-size font2">${viewMap.NCS401.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p2[1] }"><p class="view-size font2">${viewMap.NCS401.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p2[2] }"><p class="view-size font2">${viewMap.NCS401.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p2[3] }"><p class="view-size font2">${viewMap.NCS401.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p2[4] }"><p class="view-size font2">${viewMap.NCS401.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS401.p3[0] }"><p>${viewMap.NCS401.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS401.p3[1] }"><p>${viewMap.NCS401.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS401.p3[2] }"><p>${viewMap.NCS401.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS401.p3[3] }"><p>${viewMap.NCS401.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS401.p3[4] }"><p>${viewMap.NCS401.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p3[0] }"><p class="view-size font2">${viewMap.NCS401.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p3[1] }"><p class="view-size font2">${viewMap.NCS401.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p3[2] }"><p class="view-size font2">${viewMap.NCS401.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p3[3] }"><p class="view-size font2">${viewMap.NCS401.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p3[4] }"><p class="view-size font2">${viewMap.NCS401.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS401.p4[0] }"><p>${viewMap.NCS401.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS401.p4[1] }"><p>${viewMap.NCS401.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS401.p4[2] }"><p>${viewMap.NCS401.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS401.p4[3] }"><p>${viewMap.NCS401.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS401.p4[4] }"><p>${viewMap.NCS401.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p4[0] }"><p class="view-size font2">${viewMap.NCS401.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p4[1] }"><p class="view-size font2">${viewMap.NCS401.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p4[2] }"><p class="view-size font2">${viewMap.NCS401.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p4[3] }"><p class="view-size font2">${viewMap.NCS401.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p4[4] }"><p class="view-size font2">${viewMap.NCS401.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
 
 
 						<tr class="pink1">
-							<td class="size" id="3F">304</td>
-							<td class="size">1</td>
+							<td class="size font2" id="3F">304</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS304.p1[0] }"><p>${viewMap.NCS304.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS304.p1[1] }"><p>${viewMap.NCS304.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS304.p1[2] }"><p>${viewMap.NCS304.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS304.p1[3] }"><p>${viewMap.NCS304.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS304.p1[4] }"><p>${viewMap.NCS304.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p1[0] }"><p class="view-size font2">${viewMap.NCS304.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p1[1] }"><p class="view-size font2">${viewMap.NCS304.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p1[2] }"><p class="view-size font2">${viewMap.NCS304.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p1[3] }"><p class="view-size font2">${viewMap.NCS304.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p1[4] }"><p class="view-size font2">${viewMap.NCS304.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS304.p2[0] }"><p>${viewMap.NCS304.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS304.p2[1] }"><p>${viewMap.NCS304.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS304.p2[2] }"><p>${viewMap.NCS304.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS304.p2[3] }"><p>${viewMap.NCS304.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS304.p2[4] }"><p>${viewMap.NCS304.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p2[0] }"><p class="view-size font2">${viewMap.NCS304.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p2[1] }"><p class="view-size font2">${viewMap.NCS304.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p2[2] }"><p class="view-size font2">${viewMap.NCS304.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p2[3] }"><p class="view-size font2">${viewMap.NCS304.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p2[4] }"><p class="view-size font2">${viewMap.NCS304.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS304.p3[0] }"><p>${viewMap.NCS304.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS304.p3[1] }"><p>${viewMap.NCS304.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS304.p3[2] }"><p>${viewMap.NCS304.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS304.p3[3] }"><p>${viewMap.NCS304.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS304.p3[4] }"><p>${viewMap.NCS304.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p3[0] }"><p class="view-size font2">${viewMap.NCS304.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p3[1] }"><p class="view-size font2">${viewMap.NCS304.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p3[2] }"><p class="view-size font2">${viewMap.NCS304.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p3[3] }"><p class="view-size font2">${viewMap.NCS304.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p3[4] }"><p class="view-size font2">${viewMap.NCS304.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS304.p4[0] }"><p>${viewMap.NCS304.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS304.p4[1] }"><p>${viewMap.NCS304.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS304.p4[2] }"><p>${viewMap.NCS304.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS304.p4[3] }"><p>${viewMap.NCS304.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS304.p4[4] }"><p>${viewMap.NCS304.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p4[0] }"><p class="view-size font2">${viewMap.NCS304.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p4[1] }"><p class="view-size font2">${viewMap.NCS304.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p4[2] }"><p class="view-size font2">${viewMap.NCS304.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p4[3] }"><p class="view-size font2">${viewMap.NCS304.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p4[4] }"><p class="view-size font2">${viewMap.NCS304.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
 						<tr class="danger">
-							<td class="size">303</td>
-							<td class="size">1</td>
+							<td class="size font2">303</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS303.p1[0] }"><p>${viewMap.NCS303.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS303.p1[1] }"><p>${viewMap.NCS303.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS303.p1[2] }"><p>${viewMap.NCS303.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS303.p1[3] }"><p>${viewMap.NCS303.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS303.p1[4] }"><p>${viewMap.NCS303.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p1[0] }"><p class="view-size font2">${viewMap.NCS303.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p1[1] }"><p class="view-size font2">${viewMap.NCS303.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p1[2] }"><p class="view-size font2">${viewMap.NCS303.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p1[3] }"><p class="view-size font2">${viewMap.NCS303.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p1[4] }"><p class="view-size font2">${viewMap.NCS303.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS303.p2[0] }"><p>${viewMap.NCS303.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS303.p2[1] }"><p>${viewMap.NCS303.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS303.p2[2] }"><p>${viewMap.NCS303.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS303.p2[3] }"><p>${viewMap.NCS303.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS303.p2[4] }"><p>${viewMap.NCS303.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p2[0] }"><p class="view-size font2">${viewMap.NCS303.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p2[1] }"><p class="view-size font2">${viewMap.NCS303.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p2[2] }"><p class="view-size font2">${viewMap.NCS303.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p2[3] }"><p class="view-size font2">${viewMap.NCS303.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p2[4] }"><p class="view-size font2">${viewMap.NCS303.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS303.p3[0] }"><p>${viewMap.NCS303.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS303.p3[1] }"><p>${viewMap.NCS303.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS303.p3[2] }"><p>${viewMap.NCS303.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS303.p3[3] }"><p>${viewMap.NCS303.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS303.p3[4] }"><p>${viewMap.NCS303.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p3[0] }"><p class="view-size font2">${viewMap.NCS303.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p3[1] }"><p class="view-size font2">${viewMap.NCS303.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p3[2] }"><p class="view-size font2">${viewMap.NCS303.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p3[3] }"><p class="view-size font2">${viewMap.NCS303.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p3[4] }"><p class="view-size font2">${viewMap.NCS303.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS303.p4[0] }"><p>${viewMap.NCS303.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS303.p4[1] }"><p>${viewMap.NCS303.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS303.p4[2] }"><p>${viewMap.NCS303.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS303.p4[3] }"><p>${viewMap.NCS303.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS303.p4[4] }"><p>${viewMap.NCS303.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p4[0] }"><p class="view-size font2">${viewMap.NCS303.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p4[1] }"><p class="view-size font2">${viewMap.NCS303.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p4[2] }"><p class="view-size font2">${viewMap.NCS303.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p4[3] }"><p class="view-size font2">${viewMap.NCS303.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p4[4] }"><p class="view-size font2">${viewMap.NCS303.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
 
 
 						<tr class="pink1">
-							<td class="size">302</td>
-							<td class="size">1</td>
+							<td class="size font2">302</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS302.p1[0] }"><p>${viewMap.NCS302.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS302.p1[1] }"><p>${viewMap.NCS302.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS302.p1[2] }"><p>${viewMap.NCS302.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS302.p1[3] }"><p>${viewMap.NCS302.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS302.p1[4] }"><p>${viewMap.NCS302.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p1[0] }"><p class="view-size font2">${viewMap.NCS302.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p1[1] }"><p class="view-size font2">${viewMap.NCS302.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p1[2] }"><p class="view-size font2">${viewMap.NCS302.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p1[3] }"><p class="view-size font2">${viewMap.NCS302.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p1[4] }"><p class="view-size font2">${viewMap.NCS302.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS302.p2[0] }"><p>${viewMap.NCS302.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS302.p2[1] }"><p>${viewMap.NCS302.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS302.p2[2] }"><p>${viewMap.NCS302.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS302.p2[3] }"><p>${viewMap.NCS302.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS302.p2[4] }"><p>${viewMap.NCS302.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p2[0] }"><p class="view-size font2">${viewMap.NCS302.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p2[1] }"><p class="view-size font2">${viewMap.NCS302.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p2[2] }"><p class="view-size font2">${viewMap.NCS302.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p2[3] }"><p class="view-size font2">${viewMap.NCS302.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p2[4] }"><p class="view-size font2">${viewMap.NCS302.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS302.p3[0] }"><p>${viewMap.NCS302.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS302.p3[1] }"><p>${viewMap.NCS302.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS302.p3[2] }"><p>${viewMap.NCS302.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS302.p3[3] }"><p>${viewMap.NCS302.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS302.p3[4] }"><p>${viewMap.NCS302.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p3[0] }"><p class="view-size font2">${viewMap.NCS302.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p3[1] }"><p class="view-size font2">${viewMap.NCS302.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p3[2] }"><p class="view-size font2">${viewMap.NCS302.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p3[3] }"><p class="view-size font2">${viewMap.NCS302.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p3[4] }"><p class="view-size font2">${viewMap.NCS302.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS302.p4[0] }"><p>${viewMap.NCS302.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS302.p4[1] }"><p>${viewMap.NCS302.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS302.p4[2] }"><p>${viewMap.NCS302.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS302.p4[3] }"><p>${viewMap.NCS302.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS302.p4[4] }"><p>${viewMap.NCS302.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p4[0] }"><p class="view-size font2">${viewMap.NCS302.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p4[1] }"><p class="view-size font2">${viewMap.NCS302.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p4[2] }"><p class="view-size font2">${viewMap.NCS302.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p4[3] }"><p class="view-size font2">${viewMap.NCS302.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p4[4] }"><p class="view-size font2">${viewMap.NCS302.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
 						<tr class="danger">
-							<td class="size">301</td>
-							<td class="size">1</td>
+							<td class="size font2">301</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS301.p1[0] }"><p>${viewMap.NCS301.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS301.p1[1] }"><p>${viewMap.NCS301.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS301.p1[2] }"><p>${viewMap.NCS301.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS301.p1[3] }"><p>${viewMap.NCS301.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS301.p1[4] }"><p>${viewMap.NCS301.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p1[0] }"><p class="view-size font2">${viewMap.NCS301.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p1[1] }"><p class="view-size font2">${viewMap.NCS301.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p1[2] }"><p class="view-size font2">${viewMap.NCS301.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p1[3] }"><p class="view-size font2">${viewMap.NCS301.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p1[4] }"><p class="view-size font2">${viewMap.NCS301.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS301.p2[0] }"><p>${viewMap.NCS301.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS301.p2[1] }"><p>${viewMap.NCS301.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS301.p2[2] }"><p>${viewMap.NCS301.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS301.p2[3] }"><p>${viewMap.NCS301.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS301.p2[4] }"><p>${viewMap.NCS301.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p2[0] }"><p class="view-size font2">${viewMap.NCS301.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p2[1] }"><p class="view-size font2">${viewMap.NCS301.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p2[2] }"><p class="view-size font2">${viewMap.NCS301.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p2[3] }"><p class="view-size font2">${viewMap.NCS301.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p2[4] }"><p class="view-size font2">${viewMap.NCS301.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS301.p3[0] }"><p>${viewMap.NCS301.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS301.p3[1] }"><p>${viewMap.NCS301.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS301.p3[2] }"><p>${viewMap.NCS301.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS301.p3[3] }"><p>${viewMap.NCS301.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS301.p3[4] }"><p>${viewMap.NCS301.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p3[0] }"><p class="view-size font2">${viewMap.NCS301.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p3[1] }"><p class="view-size font2">${viewMap.NCS301.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p3[2] }"><p class="view-size font2">${viewMap.NCS301.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p3[3] }"><p class="view-size font2">${viewMap.NCS301.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p3[4] }"><p class="view-size font2">${viewMap.NCS301.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS301.p4[0] }"><p>${viewMap.NCS301.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS301.p4[1] }"><p>${viewMap.NCS301.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS301.p4[2] }"><p>${viewMap.NCS301.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS301.p4[3] }"><p>${viewMap.NCS301.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS301.p4[4] }"><p>${viewMap.NCS301.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p4[0] }"><p class="view-size font2">${viewMap.NCS301.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p4[1] }"><p class="view-size font2">${viewMap.NCS301.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p4[2] }"><p class="view-size font2">${viewMap.NCS301.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p4[3] }"><p class="view-size font2">${viewMap.NCS301.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p4[4] }"><p class="view-size font2">${viewMap.NCS301.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
 
 
 						<tr class="pink1">
-							<td class="size" id="2F">201</td>
-							<td class="size">1</td>
+							<td class="size font2" id="2F">201</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS201.p1[0] }"><p>${viewMap.NCS201.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS201.p1[1] }"><p>${viewMap.NCS201.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS201.p1[2] }"><p>${viewMap.NCS201.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS201.p1[3] }"><p>${viewMap.NCS201.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS201.p1[4] }"><p>${viewMap.NCS201.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p1[0] }"><p class="view-size font2">${viewMap.NCS201.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p1[1] }"><p class="view-size font2">${viewMap.NCS201.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p1[2] }"><p class="view-size font2">${viewMap.NCS201.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p1[3] }"><p class="view-size font2">${viewMap.NCS201.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p1[4] }"><p class="view-size font2">${viewMap.NCS201.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS201.p2[0] }"><p>${viewMap.NCS201.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS201.p2[1] }"><p>${viewMap.NCS201.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS201.p2[2] }"><p>${viewMap.NCS201.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS201.p2[3] }"><p>${viewMap.NCS201.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS201.p2[4] }"><p>${viewMap.NCS201.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p2[0] }"><p class="view-size font2">${viewMap.NCS201.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p2[1] }"><p class="view-size font2">${viewMap.NCS201.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p2[2] }"><p class="view-size font2">${viewMap.NCS201.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p2[3] }"><p class="view-size font2">${viewMap.NCS201.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p2[4] }"><p class="view-size font2">${viewMap.NCS201.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS201.p3[0] }"><p>${viewMap.NCS201.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS201.p3[1] }"><p>${viewMap.NCS201.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS201.p3[2] }"><p>${viewMap.NCS201.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS201.p3[3] }"><p>${viewMap.NCS201.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS201.p3[4] }"><p>${viewMap.NCS201.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p3[0] }"><p class="view-size font2">${viewMap.NCS201.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p3[1] }"><p class="view-size font2">${viewMap.NCS201.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p3[2] }"><p class="view-size font2">${viewMap.NCS201.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p3[3] }"><p class="view-size font2">${viewMap.NCS201.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p3[4] }"><p class="view-size font2">${viewMap.NCS201.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NCS201.p4[0] }"><p>${viewMap.NCS201.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS201.p4[1] }"><p>${viewMap.NCS201.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS201.p4[2] }"><p>${viewMap.NCS201.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS201.p4[3] }"><p>${viewMap.NCS201.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NCS201.p4[4] }"><p>${viewMap.NCS201.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p4[0] }"><p class="view-size font2">${viewMap.NCS201.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p4[1] }"><p class="view-size font2">${viewMap.NCS201.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p4[2] }"><p class="view-size font2">${viewMap.NCS201.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p4[3] }"><p class="view-size font2">${viewMap.NCS201.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p4[4] }"><p class="view-size font2">${viewMap.NCS201.p4[4]}</p></c:if>
 							</td>
 						</tr>
 				</table>
@@ -925,570 +925,570 @@
 					<tbody>
 
 						<tr class="pink2">
-							<td class="size" id="M5F">503</td>
-							<td class="size">1</td>
+							<td class="size font2" id="M5F">503</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC503.p1[0] }"><p>${viewMap.NMIC503.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC503.p1[1] }"><p>${viewMap.NMIC503.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC503.p1[2] }"><p>${viewMap.NMIC503.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC503.p1[3] }"><p>${viewMap.NMIC503.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC503.p1[4] }"><p>${viewMap.NMIC503.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p1[0] }"><p class="view-size font2">${viewMap.NMIC503.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p1[1] }"><p class="view-size font2">${viewMap.NMIC503.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p1[2] }"><p class="view-size font2">${viewMap.NMIC503.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p1[3] }"><p class="view-size font2">${viewMap.NMIC503.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p1[4] }"><p class="view-size font2">${viewMap.NMIC503.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC503.p2[0] }"><p>${viewMap.NMIC503.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC503.p2[1] }"><p>${viewMap.NMIC503.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC503.p2[2] }"><p>${viewMap.NMIC503.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC503.p2[3] }"><p>${viewMap.NMIC503.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC503.p2[4] }"><p>${viewMap.NMIC503.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p2[0] }"><p class="view-size font2">${viewMap.NMIC503.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p2[1] }"><p class="view-size font2">${viewMap.NMIC503.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p2[2] }"><p class="view-size font2">${viewMap.NMIC503.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p2[3] }"><p class="view-size font2">${viewMap.NMIC503.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p2[4] }"><p class="view-size font2">${viewMap.NMIC503.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC503.p3[0] }"><p>${viewMap.NMIC503.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC503.p3[1] }"><p>${viewMap.NMIC503.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC503.p3[2] }"><p>${viewMap.NMIC503.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC503.p3[3] }"><p>${viewMap.NMIC503.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC503.p3[4] }"><p>${viewMap.NMIC503.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p3[0] }"><p class="view-size font2">${viewMap.NMIC503.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p3[1] }"><p class="view-size font2">${viewMap.NMIC503.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p3[2] }"><p class="view-size font2">${viewMap.NMIC503.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p3[3] }"><p class="view-size font2">${viewMap.NMIC503.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p3[4] }"><p class="view-size font2">${viewMap.NMIC503.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC503.p4[0] }"><p>${viewMap.NMIC503.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC503.p4[1] }"><p>${viewMap.NMIC503.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC503.p4[2] }"><p>${viewMap.NMIC503.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC503.p4[3] }"><p>${viewMap.NMIC503.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC503.p4[4] }"><p>${viewMap.NMIC503.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p4[0] }"><p class="view-size font2">${viewMap.NMIC503.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p4[1] }"><p class="view-size font2">${viewMap.NMIC503.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p4[2] }"><p class="view-size font2">${viewMap.NMIC503.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p4[3] }"><p class="view-size font2">${viewMap.NMIC503.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p4[4] }"><p class="view-size font2">${viewMap.NMIC503.p4[4]}</p></c:if>
 							</td>
 						</tr>
 						<tr class="pink3">
-							<td class="size">502</td>
-							<td class="size">1</td>
+							<td class="size font2">502</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC502.p1[0] }"><p>${viewMap.NMIC502.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC502.p1[1] }"><p>${viewMap.NMIC502.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC502.p1[2] }"><p>${viewMap.NMIC502.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC502.p1[3] }"><p>${viewMap.NMIC502.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC502.p1[4] }"><p>${viewMap.NMIC502.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p1[0] }"><p class="view-size font2">${viewMap.NMIC502.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p1[1] }"><p class="view-size font2">${viewMap.NMIC502.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p1[2] }"><p class="view-size font2">${viewMap.NMIC502.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p1[3] }"><p class="view-size font2">${viewMap.NMIC502.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p1[4] }"><p class="view-size font2">${viewMap.NMIC502.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC502.p2[0] }"><p>${viewMap.NMIC502.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC502.p2[1] }"><p>${viewMap.NMIC502.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC502.p2[2] }"><p>${viewMap.NMIC502.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC502.p2[3] }"><p>${viewMap.NMIC502.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC502.p2[4] }"><p>${viewMap.NMIC502.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p2[0] }"><p class="view-size font2">${viewMap.NMIC502.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p2[1] }"><p class="view-size font2">${viewMap.NMIC502.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p2[2] }"><p class="view-size font2">${viewMap.NMIC502.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p2[3] }"><p class="view-size font2">${viewMap.NMIC502.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p2[4] }"><p class="view-size font2">${viewMap.NMIC502.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC502.p3[0] }"><p>${viewMap.NMIC502.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC502.p3[1] }"><p>${viewMap.NMIC502.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC502.p3[2] }"><p>${viewMap.NMIC502.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC502.p3[3] }"><p>${viewMap.NMIC502.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC502.p3[4] }"><p>${viewMap.NMIC502.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p3[0] }"><p class="view-size font2">${viewMap.NMIC502.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p3[1] }"><p class="view-size font2">${viewMap.NMIC502.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p3[2] }"><p class="view-size font2">${viewMap.NMIC502.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p3[3] }"><p class="view-size font2">${viewMap.NMIC502.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p3[4] }"><p class="view-size font2">${viewMap.NMIC502.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC502.p4[0] }"><p>${viewMap.NMIC502.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC502.p4[1] }"><p>${viewMap.NMIC502.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC502.p4[2] }"><p>${viewMap.NMIC502.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC502.p4[3] }"><p>${viewMap.NMIC502.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC502.p4[4] }"><p>${viewMap.NMIC502.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p4[0] }"><p class="view-size font2">${viewMap.NMIC502.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p4[1] }"><p class="view-size font2">${viewMap.NMIC502.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p4[2] }"><p class="view-size font2">${viewMap.NMIC502.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p4[3] }"><p class="view-size font2">${viewMap.NMIC502.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p4[4] }"><p class="view-size font2">${viewMap.NMIC502.p4[4]}</p></c:if>
 							</td>
 						</tr>
 						<tr class="pink2">
-							<td class="size">501</td>
-							<td class="size">1</td>
+							<td class="size font2">501</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC501.p1[0] }"><p>${viewMap.NMIC501.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC501.p1[1] }"><p>${viewMap.NMIC501.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC501.p1[2] }"><p>${viewMap.NMIC501.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC501.p1[3] }"><p>${viewMap.NMIC501.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC501.p1[4] }"><p>${viewMap.NMIC501.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p1[0] }"><p class="view-size font2">${viewMap.NMIC501.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p1[1] }"><p class="view-size font2">${viewMap.NMIC501.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p1[2] }"><p class="view-size font2">${viewMap.NMIC501.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p1[3] }"><p class="view-size font2">${viewMap.NMIC501.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p1[4] }"><p class="view-size font2">${viewMap.NMIC501.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC501.p2[0] }"><p>${viewMap.NMIC501.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC501.p2[1] }"><p>${viewMap.NMIC501.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC501.p2[2] }"><p>${viewMap.NMIC501.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC501.p2[3] }"><p>${viewMap.NMIC501.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC501.p2[4] }"><p>${viewMap.NMIC501.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p2[0] }"><p class="view-size font2">${viewMap.NMIC501.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p2[1] }"><p class="view-size font2">${viewMap.NMIC501.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p2[2] }"><p class="view-size font2">${viewMap.NMIC501.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p2[3] }"><p class="view-size font2">${viewMap.NMIC501.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p2[4] }"><p class="view-size font2">${viewMap.NMIC501.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC501.p3[0] }"><p>${viewMap.NMIC501.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC501.p3[1] }"><p>${viewMap.NMIC501.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC501.p3[2] }"><p>${viewMap.NMIC501.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC501.p3[3] }"><p>${viewMap.NMIC501.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC501.p3[4] }"><p>${viewMap.NMIC501.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p3[0] }"><p class="view-size font2">${viewMap.NMIC501.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p3[1] }"><p class="view-size font2">${viewMap.NMIC501.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p3[2] }"><p class="view-size font2">${viewMap.NMIC501.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p3[3] }"><p class="view-size font2">${viewMap.NMIC501.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p3[4] }"><p class="view-size font2">${viewMap.NMIC501.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC501.p4[0] }"><p>${viewMap.NMIC501.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC501.p4[1] }"><p>${viewMap.NMIC501.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC501.p4[2] }"><p>${viewMap.NMIC501.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC501.p4[3] }"><p>${viewMap.NMIC501.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC501.p4[4] }"><p>${viewMap.NMIC501.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p4[0] }"><p class="view-size font2">${viewMap.NMIC501.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p4[1] }"><p class="view-size font2">${viewMap.NMIC501.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p4[2] }"><p class="view-size font2">${viewMap.NMIC501.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p4[3] }"><p class="view-size font2">${viewMap.NMIC501.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p4[4] }"><p class="view-size font2">${viewMap.NMIC501.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
 						<tr class="pink3">
-							<td class="size" id="M4F">404</td>
-							<td class="size">1</td>
+							<td class="size font2" id="M4F">404</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC404.p1[0] }"><p>${viewMap.NMIC404.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC404.p1[1] }"><p>${viewMap.NMIC404.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC404.p1[2] }"><p>${viewMap.NMIC404.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC404.p1[3] }"><p>${viewMap.NMIC404.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC404.p1[4] }"><p>${viewMap.NMIC404.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p1[0] }"><p class="view-size font2">${viewMap.NMIC404.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p1[1] }"><p class="view-size font2">${viewMap.NMIC404.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p1[2] }"><p class="view-size font2">${viewMap.NMIC404.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p1[3] }"><p class="view-size font2">${viewMap.NMIC404.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p1[4] }"><p class="view-size font2">${viewMap.NMIC404.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC404.p2[0] }"><p>${viewMap.NMIC404.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC404.p2[1] }"><p>${viewMap.NMIC404.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC404.p2[2] }"><p>${viewMap.NMIC404.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC404.p2[3] }"><p>${viewMap.NMIC404.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC404.p2[4] }"><p>${viewMap.NMIC404.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p2[0] }"><p class="view-size font2">${viewMap.NMIC404.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p2[1] }"><p class="view-size font2">${viewMap.NMIC404.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p2[2] }"><p class="view-size font2">${viewMap.NMIC404.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p2[3] }"><p class="view-size font2">${viewMap.NMIC404.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p2[4] }"><p class="view-size font2">${viewMap.NMIC404.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC404.p3[0] }"><p>${viewMap.NMIC404.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC404.p3[1] }"><p>${viewMap.NMIC404.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC404.p3[2] }"><p>${viewMap.NMIC404.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC404.p3[3] }"><p>${viewMap.NMIC404.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC404.p3[4] }"><p>${viewMap.NMIC404.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p3[0] }"><p class="view-size font2">${viewMap.NMIC404.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p3[1] }"><p class="view-size font2">${viewMap.NMIC404.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p3[2] }"><p class="view-size font2">${viewMap.NMIC404.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p3[3] }"><p class="view-size font2">${viewMap.NMIC404.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p3[4] }"><p class="view-size font2">${viewMap.NMIC404.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC404.p4[0] }"><p>${viewMap.NMIC404.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC404.p4[1] }"><p>${viewMap.NMIC404.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC404.p4[2] }"><p>${viewMap.NMIC404.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC404.p4[3] }"><p>${viewMap.NMIC404.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC404.p4[4] }"><p>${viewMap.NMIC404.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p4[0] }"><p class="view-size font2">${viewMap.NMIC404.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p4[1] }"><p class="view-size font2">${viewMap.NMIC404.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p4[2] }"><p class="view-size font2">${viewMap.NMIC404.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p4[3] }"><p class="view-size font2">${viewMap.NMIC404.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p4[4] }"><p class="view-size font2">${viewMap.NMIC404.p4[4]}</p></c:if>
 							</td>
 						</tr>
 						<tr class="pink2">
-							<td class="size">403</td>
-							<td class="size">1</td>
+							<td class="size font2">403</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC403.p1[0] }"><p>${viewMap.NMIC403.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC403.p1[1] }"><p>${viewMap.NMIC403.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC403.p1[2] }"><p>${viewMap.NMIC403.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC403.p1[3] }"><p>${viewMap.NMIC403.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC403.p1[4] }"><p>${viewMap.NMIC403.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p1[0] }"><p class="view-size font2">${viewMap.NMIC403.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p1[1] }"><p class="view-size font2">${viewMap.NMIC403.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p1[2] }"><p class="view-size font2">${viewMap.NMIC403.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p1[3] }"><p class="view-size font2">${viewMap.NMIC403.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p1[4] }"><p class="view-size font2">${viewMap.NMIC403.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC403.p2[0] }"><p>${viewMap.NMIC403.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC403.p2[1] }"><p>${viewMap.NMIC403.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC403.p2[2] }"><p>${viewMap.NMIC403.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC403.p2[3] }"><p>${viewMap.NMIC403.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC403.p2[4] }"><p>${viewMap.NMIC403.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p2[0] }"><p class="view-size font2">${viewMap.NMIC403.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p2[1] }"><p class="view-size font2">${viewMap.NMIC403.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p2[2] }"><p class="view-size font2">${viewMap.NMIC403.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p2[3] }"><p class="view-size font2">${viewMap.NMIC403.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p2[4] }"><p class="view-size font2">${viewMap.NMIC403.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC403.p3[0] }"><p>${viewMap.NMIC403.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC403.p3[1] }"><p>${viewMap.NMIC403.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC403.p3[2] }"><p>${viewMap.NMIC403.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC403.p3[3] }"><p>${viewMap.NMIC403.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC403.p3[4] }"><p>${viewMap.NMIC403.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p3[0] }"><p class="view-size font2">${viewMap.NMIC403.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p3[1] }"><p class="view-size font2">${viewMap.NMIC403.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p3[2] }"><p class="view-size font2">${viewMap.NMIC403.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p3[3] }"><p class="view-size font2">${viewMap.NMIC403.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p3[4] }"><p class="view-size font2">${viewMap.NMIC403.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC403.p4[0] }"><p>${viewMap.NMIC403.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC403.p4[1] }"><p>${viewMap.NMIC403.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC403.p4[2] }"><p>${viewMap.NMIC403.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC403.p4[3] }"><p>${viewMap.NMIC403.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC403.p4[4] }"><p>${viewMap.NMIC403.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p4[0] }"><p class="view-size font2">${viewMap.NMIC403.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p4[1] }"><p class="view-size font2">${viewMap.NMIC403.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p4[2] }"><p class="view-size font2">${viewMap.NMIC403.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p4[3] }"><p class="view-size font2">${viewMap.NMIC403.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p4[4] }"><p class="view-size font2">${viewMap.NMIC403.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
 						<tr class="pink3">
-							<td class="size">402</td>
-							<td class="size">1</td>
+							<td class="size font2">402</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC402.p1[0] }"><p>${viewMap.NMIC402.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC402.p1[1] }"><p>${viewMap.NMIC402.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC402.p1[2] }"><p>${viewMap.NMIC402.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC402.p1[3] }"><p>${viewMap.NMIC402.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC402.p1[4] }"><p>${viewMap.NMIC402.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p1[0] }"><p class="view-size font2">${viewMap.NMIC402.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p1[1] }"><p class="view-size font2">${viewMap.NMIC402.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p1[2] }"><p class="view-size font2">${viewMap.NMIC402.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p1[3] }"><p class="view-size font2">${viewMap.NMIC402.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p1[4] }"><p class="view-size font2">${viewMap.NMIC402.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC402.p2[0] }"><p>${viewMap.NMIC402.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC402.p2[1] }"><p>${viewMap.NMIC402.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC402.p2[2] }"><p>${viewMap.NMIC402.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC402.p2[3] }"><p>${viewMap.NMIC402.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC402.p2[4] }"><p>${viewMap.NMIC402.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p2[0] }"><p class="view-size font2">${viewMap.NMIC402.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p2[1] }"><p class="view-size font2">${viewMap.NMIC402.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p2[2] }"><p class="view-size font2">${viewMap.NMIC402.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p2[3] }"><p class="view-size font2">${viewMap.NMIC402.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p2[4] }"><p class="view-size font2">${viewMap.NMIC402.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC402.p3[0] }"><p>${viewMap.NMIC402.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC402.p3[1] }"><p>${viewMap.NMIC402.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC402.p3[2] }"><p>${viewMap.NMIC402.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC402.p3[3] }"><p>${viewMap.NMIC402.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC402.p3[4] }"><p>${viewMap.NMIC402.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p3[0] }"><p class="view-size font2">${viewMap.NMIC402.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p3[1] }"><p class="view-size font2">${viewMap.NMIC402.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p3[2] }"><p class="view-size font2">${viewMap.NMIC402.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p3[3] }"><p class="view-size font2">${viewMap.NMIC402.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p3[4] }"><p class="view-size font2">${viewMap.NMIC402.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC402.p4[0] }"><p>${viewMap.NMIC402.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC402.p4[1] }"><p>${viewMap.NMIC402.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC402.p4[2] }"><p>${viewMap.NMIC402.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC402.p4[3] }"><p>${viewMap.NMIC402.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC402.p4[4] }"><p>${viewMap.NMIC402.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p4[0] }"><p class="view-size font2">${viewMap.NMIC402.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p4[1] }"><p class="view-size font2">${viewMap.NMIC402.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p4[2] }"><p class="view-size font2">${viewMap.NMIC402.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p4[3] }"><p class="view-size font2">${viewMap.NMIC402.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p4[4] }"><p class="view-size font2">${viewMap.NMIC402.p4[4]}</p></c:if>
 							</td>
 						</tr>
 						<tr class="pink2">
-							<td class="size">401</td>
-							<td class="size">1</td>
+							<td class="size font2">401</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC401.p1[0] }"><p>${viewMap.NMIC401.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC401.p1[1] }"><p>${viewMap.NMIC401.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC401.p1[2] }"><p>${viewMap.NMIC401.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC401.p1[3] }"><p>${viewMap.NMIC401.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC401.p1[4] }"><p>${viewMap.NMIC401.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p1[0] }"><p class="view-size font2">${viewMap.NMIC401.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p1[1] }"><p class="view-size font2">${viewMap.NMIC401.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p1[2] }"><p class="view-size font2">${viewMap.NMIC401.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p1[3] }"><p class="view-size font2">${viewMap.NMIC401.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p1[4] }"><p class="view-size font2">${viewMap.NMIC401.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC401.p2[0] }"><p>${viewMap.NMIC401.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC401.p2[1] }"><p>${viewMap.NMIC401.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC401.p2[2] }"><p>${viewMap.NMIC401.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC401.p2[3] }"><p>${viewMap.NMIC401.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC401.p2[4] }"><p>${viewMap.NMIC401.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p2[0] }"><p class="view-size font2">${viewMap.NMIC401.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p2[1] }"><p class="view-size font2">${viewMap.NMIC401.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p2[2] }"><p class="view-size font2">${viewMap.NMIC401.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p2[3] }"><p class="view-size font2">${viewMap.NMIC401.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p2[4] }"><p class="view-size font2">${viewMap.NMIC401.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC401.p3[0] }"><p>${viewMap.NMIC401.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC401.p3[1] }"><p>${viewMap.NMIC401.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC401.p3[2] }"><p>${viewMap.NMIC401.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC401.p3[3] }"><p>${viewMap.NMIC401.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC401.p3[4] }"><p>${viewMap.NMIC401.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p3[0] }"><p class="view-size font2">${viewMap.NMIC401.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p3[1] }"><p class="view-size font2">${viewMap.NMIC401.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p3[2] }"><p class="view-size font2">${viewMap.NMIC401.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p3[3] }"><p class="view-size font2">${viewMap.NMIC401.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p3[4] }"><p class="view-size font2">${viewMap.NMIC401.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC401.p4[0] }"><p>${viewMap.NMIC401.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC401.p4[1] }"><p>${viewMap.NMIC401.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC401.p4[2] }"><p>${viewMap.NMIC401.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC401.p4[3] }"><p>${viewMap.NMIC401.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC401.p4[4] }"><p>${viewMap.NMIC401.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p4[0] }"><p class="view-size font2">${viewMap.NMIC401.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p4[1] }"><p class="view-size font2">${viewMap.NMIC401.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p4[2] }"><p class="view-size font2">${viewMap.NMIC401.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p4[3] }"><p class="view-size font2">${viewMap.NMIC401.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p4[4] }"><p class="view-size font2">${viewMap.NMIC401.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
 						<tr class="pink3">
-							<td class="size" id="M3F">304</td>
-							<td class="size">1</td>
+							<td class="size font2" id="M3F">304</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC304.p1[0] }"><p>${viewMap.NMIC304.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC304.p1[1] }"><p>${viewMap.NMIC304.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC304.p1[2] }"><p>${viewMap.NMIC304.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC304.p1[3] }"><p>${viewMap.NMIC304.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC304.p1[4] }"><p>${viewMap.NMIC304.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p1[0] }"><p class="view-size font2">${viewMap.NMIC304.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p1[1] }"><p class="view-size font2">${viewMap.NMIC304.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p1[2] }"><p class="view-size font2">${viewMap.NMIC304.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p1[3] }"><p class="view-size font2">${viewMap.NMIC304.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p1[4] }"><p class="view-size font2">${viewMap.NMIC304.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC304.p2[0] }"><p>${viewMap.NMIC304.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC304.p2[1] }"><p>${viewMap.NMIC304.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC304.p2[2] }"><p>${viewMap.NMIC304.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC304.p2[3] }"><p>${viewMap.NMIC304.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC304.p2[4] }"><p>${viewMap.NMIC304.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p2[0] }"><p class="view-size font2">${viewMap.NMIC304.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p2[1] }"><p class="view-size font2">${viewMap.NMIC304.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p2[2] }"><p class="view-size font2">${viewMap.NMIC304.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p2[3] }"><p class="view-size font2">${viewMap.NMIC304.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p2[4] }"><p class="view-size font2">${viewMap.NMIC304.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC304.p3[0] }"><p>${viewMap.NMIC304.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC304.p3[1] }"><p>${viewMap.NMIC304.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC304.p3[2] }"><p>${viewMap.NMIC304.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC304.p3[3] }"><p>${viewMap.NMIC304.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC304.p3[4] }"><p>${viewMap.NMIC304.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p3[0] }"><p class="view-size font2">${viewMap.NMIC304.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p3[1] }"><p class="view-size font2">${viewMap.NMIC304.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p3[2] }"><p class="view-size font2">${viewMap.NMIC304.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p3[3] }"><p class="view-size font2">${viewMap.NMIC304.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p3[4] }"><p class="view-size font2">${viewMap.NMIC304.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC304.p4[0] }"><p>${viewMap.NMIC304.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC304.p4[1] }"><p>${viewMap.NMIC304.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC304.p4[2] }"><p>${viewMap.NMIC304.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC304.p4[3] }"><p>${viewMap.NMIC304.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC304.p4[4] }"><p>${viewMap.NMIC304.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p4[0] }"><p class="view-size font2">${viewMap.NMIC304.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p4[1] }"><p class="view-size font2">${viewMap.NMIC304.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p4[2] }"><p class="view-size font2">${viewMap.NMIC304.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p4[3] }"><p class="view-size font2">${viewMap.NMIC304.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p4[4] }"><p class="view-size font2">${viewMap.NMIC304.p4[4]}</p></c:if>
 							</td>
 						</tr>
 						<tr class="pink2">
-							<td class="size">303</td>
-							<td class="size">1</td>
+							<td class="size font2">303</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC303.p1[0] }"><p>${viewMap.NMIC303.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC303.p1[1] }"><p>${viewMap.NMIC303.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC303.p1[2] }"><p>${viewMap.NMIC303.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC303.p1[3] }"><p>${viewMap.NMIC303.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC303.p1[4] }"><p>${viewMap.NMIC303.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p1[0] }"><p class="view-size font2">${viewMap.NMIC303.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p1[1] }"><p class="view-size font2">${viewMap.NMIC303.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p1[2] }"><p class="view-size font2">${viewMap.NMIC303.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p1[3] }"><p class="view-size font2">${viewMap.NMIC303.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p1[4] }"><p class="view-size font2">${viewMap.NMIC303.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC303.p2[0] }"><p>${viewMap.NMIC303.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC303.p2[1] }"><p>${viewMap.NMIC303.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC303.p2[2] }"><p>${viewMap.NMIC303.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC303.p2[3] }"><p>${viewMap.NMIC303.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC303.p2[4] }"><p>${viewMap.NMIC303.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p2[0] }"><p class="view-size font2">${viewMap.NMIC303.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p2[1] }"><p class="view-size font2">${viewMap.NMIC303.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p2[2] }"><p class="view-size font2">${viewMap.NMIC303.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p2[3] }"><p class="view-size font2">${viewMap.NMIC303.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p2[4] }"><p class="view-size font2">${viewMap.NMIC303.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC303.p3[0] }"><p>${viewMap.NMIC303.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC303.p3[1] }"><p>${viewMap.NMIC303.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC303.p3[2] }"><p>${viewMap.NMIC303.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC303.p3[3] }"><p>${viewMap.NMIC303.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC303.p3[4] }"><p>${viewMap.NMIC303.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p3[0] }"><p class="view-size font2">${viewMap.NMIC303.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p3[1] }"><p class="view-size font2">${viewMap.NMIC303.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p3[2] }"><p class="view-size font2">${viewMap.NMIC303.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p3[3] }"><p class="view-size font2">${viewMap.NMIC303.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p3[4] }"><p class="view-size font2">${viewMap.NMIC303.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC303.p4[0] }"><p>${viewMap.NMIC303.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC303.p4[1] }"><p>${viewMap.NMIC303.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC303.p4[2] }"><p>${viewMap.NMIC303.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC303.p4[3] }"><p>${viewMap.NMIC303.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC303.p4[4] }"><p>${viewMap.NMIC303.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p4[0] }"><p class="view-size font2">${viewMap.NMIC303.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p4[1] }"><p class="view-size font2">${viewMap.NMIC303.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p4[2] }"><p class="view-size font2">${viewMap.NMIC303.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p4[3] }"><p class="view-size font2">${viewMap.NMIC303.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p4[4] }"><p class="view-size font2">${viewMap.NMIC303.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
 						<tr class="pink3">
-							<td class="size">302</td>
-							<td class="size">1</td>
+							<td class="size font2">302</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC302.p1[0] }"><p>${viewMap.NMIC302.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC302.p1[1] }"><p>${viewMap.NMIC302.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC302.p1[2] }"><p>${viewMap.NMIC302.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC302.p1[3] }"><p>${viewMap.NMIC302.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC302.p1[4] }"><p>${viewMap.NMIC302.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p1[0] }"><p class="view-size font2">${viewMap.NMIC302.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p1[1] }"><p class="view-size font2">${viewMap.NMIC302.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p1[2] }"><p class="view-size font2">${viewMap.NMIC302.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p1[3] }"><p class="view-size font2">${viewMap.NMIC302.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p1[4] }"><p class="view-size font2">${viewMap.NMIC302.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC302.p2[0] }"><p>${viewMap.NMIC302.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC302.p2[1] }"><p>${viewMap.NMIC302.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC302.p2[2] }"><p>${viewMap.NMIC302.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC302.p2[3] }"><p>${viewMap.NMIC302.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC302.p2[4] }"><p>${viewMap.NMIC302.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p2[0] }"><p class="view-size font2">${viewMap.NMIC302.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p2[1] }"><p class="view-size font2">${viewMap.NMIC302.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p2[2] }"><p class="view-size font2">${viewMap.NMIC302.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p2[3] }"><p class="view-size font2">${viewMap.NMIC302.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p2[4] }"><p class="view-size font2">${viewMap.NMIC302.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC302.p3[0] }"><p>${viewMap.NMIC302.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC302.p3[1] }"><p>${viewMap.NMIC302.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC302.p3[2] }"><p>${viewMap.NMIC302.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC302.p3[3] }"><p>${viewMap.NMIC302.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC302.p3[4] }"><p>${viewMap.NMIC302.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p3[0] }"><p class="view-size font2">${viewMap.NMIC302.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p3[1] }"><p class="view-size font2">${viewMap.NMIC302.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p3[2] }"><p class="view-size font2">${viewMap.NMIC302.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p3[3] }"><p class="view-size font2">${viewMap.NMIC302.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p3[4] }"><p class="view-size font2">${viewMap.NMIC302.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC302.p4[0] }"><p>${viewMap.NMIC302.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC302.p4[1] }"><p>${viewMap.NMIC302.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC302.p4[2] }"><p>${viewMap.NMIC302.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC302.p4[3] }"><p>${viewMap.NMIC302.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC302.p4[4] }"><p>${viewMap.NMIC302.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p4[0] }"><p class="view-size font2">${viewMap.NMIC302.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p4[1] }"><p class="view-size font2">${viewMap.NMIC302.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p4[2] }"><p class="view-size font2">${viewMap.NMIC302.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p4[3] }"><p class="view-size font2">${viewMap.NMIC302.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p4[4] }"><p class="view-size font2">${viewMap.NMIC302.p4[4]}</p></c:if>
 							</td>
 						</tr>
 						<tr class="pink2">
-							<td class="size">301</td>
-							<td class="size">1</td>
+							<td class="size font2">301</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC301.p1[0] }"><p>${viewMap.NMIC301.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC301.p1[1] }"><p>${viewMap.NMIC301.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC301.p1[2] }"><p>${viewMap.NMIC301.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC301.p1[3] }"><p>${viewMap.NMIC301.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC301.p1[4] }"><p>${viewMap.NMIC301.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p1[0] }"><p class="view-size font2">${viewMap.NMIC301.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p1[1] }"><p class="view-size font2">${viewMap.NMIC301.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p1[2] }"><p class="view-size font2">${viewMap.NMIC301.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p1[3] }"><p class="view-size font2">${viewMap.NMIC301.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p1[4] }"><p class="view-size font2">${viewMap.NMIC301.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC301.p2[0] }"><p>${viewMap.NMIC301.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC301.p2[1] }"><p>${viewMap.NMIC301.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC301.p2[2] }"><p>${viewMap.NMIC301.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC301.p2[3] }"><p>${viewMap.NMIC301.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC301.p2[4] }"><p>${viewMap.NMIC301.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p2[0] }"><p class="view-size font2">${viewMap.NMIC301.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p2[1] }"><p class="view-size font2">${viewMap.NMIC301.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p2[2] }"><p class="view-size font2">${viewMap.NMIC301.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p2[3] }"><p class="view-size font2">${viewMap.NMIC301.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p2[4] }"><p class="view-size font2">${viewMap.NMIC301.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC301.p3[0] }"><p>${viewMap.NMIC301.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC301.p3[1] }"><p>${viewMap.NMIC301.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC301.p3[2] }"><p>${viewMap.NMIC301.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC301.p3[3] }"><p>${viewMap.NMIC301.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC301.p3[4] }"><p>${viewMap.NMIC301.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p3[0] }"><p class="view-size font2">${viewMap.NMIC301.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p3[1] }"><p class="view-size font2">${viewMap.NMIC301.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p3[2] }"><p class="view-size font2">${viewMap.NMIC301.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p3[3] }"><p class="view-size font2">${viewMap.NMIC301.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p3[4] }"><p class="view-size font2">${viewMap.NMIC301.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC301.p4[0] }"><p>${viewMap.NMIC301.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC301.p4[1] }"><p>${viewMap.NMIC301.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC301.p4[2] }"><p>${viewMap.NMIC301.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC301.p4[3] }"><p>${viewMap.NMIC301.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC301.p4[4] }"><p>${viewMap.NMIC301.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p4[0] }"><p class="view-size font2">${viewMap.NMIC301.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p4[1] }"><p class="view-size font2">${viewMap.NMIC301.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p4[2] }"><p class="view-size font2">${viewMap.NMIC301.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p4[3] }"><p class="view-size font2">${viewMap.NMIC301.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p4[4] }"><p class="view-size font2">${viewMap.NMIC301.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
 						<tr class="pink3">
-							<td class="size" id="M2F">204</td>
-							<td class="size">1</td>
+							<td class="size font2" id="M2F">204</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC204.p1[0] }"><p>${viewMap.NMIC204.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC204.p1[1] }"><p>${viewMap.NMIC204.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC204.p1[2] }"><p>${viewMap.NMIC204.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC204.p1[3] }"><p>${viewMap.NMIC204.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC204.p1[4] }"><p>${viewMap.NMIC204.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p1[0] }"><p class="view-size font2">${viewMap.NMIC204.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p1[1] }"><p class="view-size font2">${viewMap.NMIC204.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p1[2] }"><p class="view-size font2">${viewMap.NMIC204.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p1[3] }"><p class="view-size font2">${viewMap.NMIC204.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p1[4] }"><p class="view-size font2">${viewMap.NMIC204.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC204.p2[0] }"><p>${viewMap.NMIC204.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC204.p2[1] }"><p>${viewMap.NMIC204.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC204.p2[2] }"><p>${viewMap.NMIC204.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC204.p2[3] }"><p>${viewMap.NMIC204.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC204.p2[4] }"><p>${viewMap.NMIC204.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p2[0] }"><p class="view-size font2">${viewMap.NMIC204.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p2[1] }"><p class="view-size font2">${viewMap.NMIC204.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p2[2] }"><p class="view-size font2">${viewMap.NMIC204.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p2[3] }"><p class="view-size font2">${viewMap.NMIC204.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p2[4] }"><p class="view-size font2">${viewMap.NMIC204.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC204.p3[0] }"><p>${viewMap.NMIC204.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC204.p3[1] }"><p>${viewMap.NMIC204.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC204.p3[2] }"><p>${viewMap.NMIC204.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC204.p3[3] }"><p>${viewMap.NMIC204.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC204.p3[4] }"><p>${viewMap.NMIC204.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p3[0] }"><p class="view-size font2">${viewMap.NMIC204.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p3[1] }"><p class="view-size font2">${viewMap.NMIC204.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p3[2] }"><p class="view-size font2">${viewMap.NMIC204.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p3[3] }"><p class="view-size font2">${viewMap.NMIC204.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p3[4] }"><p class="view-size font2">${viewMap.NMIC204.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC204.p4[0] }"><p>${viewMap.NMIC204.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC204.p4[1] }"><p>${viewMap.NMIC204.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC204.p4[2] }"><p>${viewMap.NMIC204.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC204.p4[3] }"><p>${viewMap.NMIC204.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC204.p4[4] }"><p>${viewMap.NMIC204.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p4[0] }"><p class="view-size font2">${viewMap.NMIC204.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p4[1] }"><p class="view-size font2">${viewMap.NMIC204.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p4[2] }"><p class="view-size font2">${viewMap.NMIC204.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p4[3] }"><p class="view-size font2">${viewMap.NMIC204.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p4[4] }"><p class="view-size font2">${viewMap.NMIC204.p4[4]}</p></c:if>
 							</td>
 						</tr>
 						<tr class="pink2">
-							<td class="size">203</td>
-							<td class="size">1</td>
+							<td class="size font2">203</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC203.p1[0] }"><p>${viewMap.NMIC203.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC203.p1[1] }"><p>${viewMap.NMIC203.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC203.p1[2] }"><p>${viewMap.NMIC203.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC203.p1[3] }"><p>${viewMap.NMIC203.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC203.p1[4] }"><p>${viewMap.NMIC203.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p1[0] }"><p class="view-size font2">${viewMap.NMIC203.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p1[1] }"><p class="view-size font2">${viewMap.NMIC203.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p1[2] }"><p class="view-size font2">${viewMap.NMIC203.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p1[3] }"><p class="view-size font2">${viewMap.NMIC203.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p1[4] }"><p class="view-size font2">${viewMap.NMIC203.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC203.p2[0] }"><p>${viewMap.NMIC203.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC203.p2[1] }"><p>${viewMap.NMIC203.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC203.p2[2] }"><p>${viewMap.NMIC203.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC203.p2[3] }"><p>${viewMap.NMIC203.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC203.p2[4] }"><p>${viewMap.NMIC203.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p2[0] }"><p class="view-size font2">${viewMap.NMIC203.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p2[1] }"><p class="view-size font2">${viewMap.NMIC203.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p2[2] }"><p class="view-size font2">${viewMap.NMIC203.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p2[3] }"><p class="view-size font2">${viewMap.NMIC203.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p2[4] }"><p class="view-size font2">${viewMap.NMIC203.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC203.p3[0] }"><p>${viewMap.NMIC203.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC203.p3[1] }"><p>${viewMap.NMIC203.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC203.p3[2] }"><p>${viewMap.NMIC203.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC203.p3[3] }"><p>${viewMap.NMIC203.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC203.p3[4] }"><p>${viewMap.NMIC203.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p3[0] }"><p class="view-size font2">${viewMap.NMIC203.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p3[1] }"><p class="view-size font2">${viewMap.NMIC203.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p3[2] }"><p class="view-size font2">${viewMap.NMIC203.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p3[3] }"><p class="view-size font2">${viewMap.NMIC203.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p3[4] }"><p class="view-size font2">${viewMap.NMIC203.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC203.p4[0] }"><p>${viewMap.NMIC203.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC203.p4[1] }"><p>${viewMap.NMIC203.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC203.p4[2] }"><p>${viewMap.NMIC203.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC203.p4[3] }"><p>${viewMap.NMIC203.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC203.p4[4] }"><p>${viewMap.NMIC203.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p4[0] }"><p class="view-size font2">${viewMap.NMIC203.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p4[1] }"><p class="view-size font2">${viewMap.NMIC203.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p4[2] }"><p class="view-size font2">${viewMap.NMIC203.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p4[3] }"><p class="view-size font2">${viewMap.NMIC203.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p4[4] }"><p class="view-size font2">${viewMap.NMIC203.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
 						<tr class="pink3">
-							<td class="size">202</td>
-							<td class="size">1</td>
+							<td class="size font2">202</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC202.p1[0] }"><p>${viewMap.NMIC202.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC202.p1[1] }"><p>${viewMap.NMIC202.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC202.p1[2] }"><p>${viewMap.NMIC202.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC202.p1[3] }"><p>${viewMap.NMIC202.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC202.p1[4] }"><p>${viewMap.NMIC202.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p1[0] }"><p class="view-size font2">${viewMap.NMIC202.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p1[1] }"><p class="view-size font2">${viewMap.NMIC202.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p1[2] }"><p class="view-size font2">${viewMap.NMIC202.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p1[3] }"><p class="view-size font2">${viewMap.NMIC202.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p1[4] }"><p class="view-size font2">${viewMap.NMIC202.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC202.p2[0] }"><p>${viewMap.NMIC202.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC202.p2[1] }"><p>${viewMap.NMIC202.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC202.p2[2] }"><p>${viewMap.NMIC202.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC202.p2[3] }"><p>${viewMap.NMIC202.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC202.p2[4] }"><p>${viewMap.NMIC202.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p2[0] }"><p class="view-size font2">${viewMap.NMIC202.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p2[1] }"><p class="view-size font2">${viewMap.NMIC202.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p2[2] }"><p class="view-size font2">${viewMap.NMIC202.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p2[3] }"><p class="view-size font2">${viewMap.NMIC202.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p2[4] }"><p class="view-size font2">${viewMap.NMIC202.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC202.p3[0] }"><p>${viewMap.NMIC202.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC202.p3[1] }"><p>${viewMap.NMIC202.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC202.p3[2] }"><p>${viewMap.NMIC202.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC202.p3[3] }"><p>${viewMap.NMIC202.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC202.p3[4] }"><p>${viewMap.NMIC202.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p3[0] }"><p class="view-size font2">${viewMap.NMIC202.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p3[1] }"><p class="view-size font2">${viewMap.NMIC202.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p3[2] }"><p class="view-size font2">${viewMap.NMIC202.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p3[3] }"><p class="view-size font2">${viewMap.NMIC202.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p3[4] }"><p class="view-size font2">${viewMap.NMIC202.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC202.p4[0] }"><p>${viewMap.NMIC202.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC202.p4[1] }"><p>${viewMap.NMIC202.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC202.p4[2] }"><p>${viewMap.NMIC202.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC202.p4[3] }"><p>${viewMap.NMIC202.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC202.p4[4] }"><p>${viewMap.NMIC202.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p4[0] }"><p class="view-size font2">${viewMap.NMIC202.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p4[1] }"><p class="view-size font2">${viewMap.NMIC202.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p4[2] }"><p class="view-size font2">${viewMap.NMIC202.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p4[3] }"><p class="view-size font2">${viewMap.NMIC202.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p4[4] }"><p class="view-size font2">${viewMap.NMIC202.p4[4]}</p></c:if>
 							</td>
 						</tr>
 						<tr class="pink2">
-							<td class="size">201</td>
-							<td class="size">1</td>
+							<td class="size font2">201</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC201.p1[0] }"><p>${viewMap.NMIC201.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC201.p1[1] }"><p>${viewMap.NMIC201.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC201.p1[2] }"><p>${viewMap.NMIC201.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC201.p1[3] }"><p>${viewMap.NMIC201.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC201.p1[4] }"><p>${viewMap.NMIC201.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p1[0] }"><p class="view-size font2">${viewMap.NMIC201.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p1[1] }"><p class="view-size font2">${viewMap.NMIC201.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p1[2] }"><p class="view-size font2">${viewMap.NMIC201.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p1[3] }"><p class="view-size font2">${viewMap.NMIC201.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p1[4] }"><p class="view-size font2">${viewMap.NMIC201.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC201.p2[0] }"><p>${viewMap.NMIC201.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC201.p2[1] }"><p>${viewMap.NMIC201.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC201.p2[2] }"><p>${viewMap.NMIC201.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC201.p2[3] }"><p>${viewMap.NMIC201.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC201.p2[4] }"><p>${viewMap.NMIC201.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p2[0] }"><p class="view-size font2">${viewMap.NMIC201.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p2[1] }"><p class="view-size font2">${viewMap.NMIC201.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p2[2] }"><p class="view-size font2">${viewMap.NMIC201.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p2[3] }"><p class="view-size font2">${viewMap.NMIC201.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p2[4] }"><p class="view-size font2">${viewMap.NMIC201.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC201.p3[0] }"><p>${viewMap.NMIC201.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC201.p3[1] }"><p>${viewMap.NMIC201.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC201.p3[2] }"><p>${viewMap.NMIC201.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC201.p3[3] }"><p>${viewMap.NMIC201.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC201.p3[4] }"><p>${viewMap.NMIC201.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p3[0] }"><p class="view-size font2">${viewMap.NMIC201.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p3[1] }"><p class="view-size font2">${viewMap.NMIC201.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p3[2] }"><p class="view-size font2">${viewMap.NMIC201.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p3[3] }"><p class="view-size font2">${viewMap.NMIC201.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p3[4] }"><p class="view-size font2">${viewMap.NMIC201.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC201.p4[0] }"><p>${viewMap.NMIC201.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC201.p4[1] }"><p>${viewMap.NMIC201.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC201.p4[2] }"><p>${viewMap.NMIC201.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC201.p4[3] }"><p>${viewMap.NMIC201.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC201.p4[4] }"><p>${viewMap.NMIC201.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p4[0] }"><p class="view-size font2">${viewMap.NMIC201.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p4[1] }"><p class="view-size font2">${viewMap.NMIC201.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p4[2] }"><p class="view-size font2">${viewMap.NMIC201.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p4[3] }"><p class="view-size font2">${viewMap.NMIC201.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p4[4] }"><p class="view-size font2">${viewMap.NMIC201.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
 						<tr class="pink3">
-							<td class="size" id="M1F">101</td>
-							<td class="size">1</td>
+							<td class="size font2" id="M1F">101</td>
+							<td class="size font2">1</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC101.p1[0] }"><p>${viewMap.NMIC101.p1[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC101.p1[1] }"><p>${viewMap.NMIC101.p1[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC101.p1[2] }"><p>${viewMap.NMIC101.p1[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC101.p1[3] }"><p>${viewMap.NMIC101.p1[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC101.p1[4] }"><p>${viewMap.NMIC101.p1[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p1[0] }"><p class="view-size font2">${viewMap.NMIC101.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p1[1] }"><p class="view-size font2">${viewMap.NMIC101.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p1[2] }"><p class="view-size font2">${viewMap.NMIC101.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p1[3] }"><p class="view-size font2">${viewMap.NMIC101.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p1[4] }"><p class="view-size font2">${viewMap.NMIC101.p1[4]}</p></c:if>
 							</td>
-							<td class="size">2</td>
+							<td class="size font2">2</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC101.p2[0] }"><p>${viewMap.NMIC101.p2[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC101.p2[1] }"><p>${viewMap.NMIC101.p2[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC101.p2[2] }"><p>${viewMap.NMIC101.p2[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC101.p2[3] }"><p>${viewMap.NMIC101.p2[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC101.p2[4] }"><p>${viewMap.NMIC101.p2[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p2[0] }"><p class="view-size font2">${viewMap.NMIC101.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p2[1] }"><p class="view-size font2">${viewMap.NMIC101.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p2[2] }"><p class="view-size font2">${viewMap.NMIC101.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p2[3] }"><p class="view-size font2">${viewMap.NMIC101.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p2[4] }"><p class="view-size font2">${viewMap.NMIC101.p2[4]}</p></c:if>
 							</td>
-							<td class="size">3</td>
+							<td class="size font2">3</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC101.p3[0] }"><p>${viewMap.NMIC101.p3[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC101.p3[1] }"><p>${viewMap.NMIC101.p3[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC101.p3[2] }"><p>${viewMap.NMIC101.p3[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC101.p3[3] }"><p>${viewMap.NMIC101.p3[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC101.p3[4] }"><p>${viewMap.NMIC101.p3[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p3[0] }"><p class="view-size font2">${viewMap.NMIC101.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p3[1] }"><p class="view-size font2">${viewMap.NMIC101.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p3[2] }"><p class="view-size font2">${viewMap.NMIC101.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p3[3] }"><p class="view-size font2">${viewMap.NMIC101.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p3[4] }"><p class="view-size font2">${viewMap.NMIC101.p3[4]}</p></c:if>
 							</td>
-							<td class="size">4</td>
+							<td class="size font2">4</td>
 							<td class="size">
-								<c:if test="${!empty viewMap.NMIC101.p4[0] }"><p>${viewMap.NMIC101.p4[0]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC101.p4[1] }"><p>${viewMap.NMIC101.p4[1]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC101.p4[2] }"><p>${viewMap.NMIC101.p4[2]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC101.p4[3] }"><p>${viewMap.NMIC101.p4[3]}</p></c:if>
-								<c:if test="${!empty viewMap.NMIC101.p4[4] }"><p>${viewMap.NMIC101.p4[4]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p4[0] }"><p class="view-size font2">${viewMap.NMIC101.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p4[1] }"><p class="view-size font2">${viewMap.NMIC101.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p4[2] }"><p class="view-size font2">${viewMap.NMIC101.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p4[3] }"><p class="view-size font2">${viewMap.NMIC101.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p4[4] }"><p class="view-size font2">${viewMap.NMIC101.p4[4]}</p></c:if>
 							</td>
 						</tr>
 				</table>

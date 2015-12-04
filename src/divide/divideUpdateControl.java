@@ -116,7 +116,6 @@ public class divideUpdateControl extends HttpServlet {
 						inputStr = new String[5];
 						inputStr = divideMap.get(rKey)[i].split(",");
 						viewMap.get(rKey).put("p" + (i + 1), inputStr);
-						System.out.println(rKey + ":" +viewMap.get(rKey) + ":" +viewMap.get(rKey).get("p" + (i + 1))[0]);
 					} // if
 				} // for
 			} // for
