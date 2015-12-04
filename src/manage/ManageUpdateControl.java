@@ -72,15 +72,27 @@ public class ManageUpdateControl extends HttpServlet {
 			//ページ情報指定
 			content_page = "/manage/subject_manage.jsp";
 			page_title = "科目管理画面";
-			//更新済み講師情報全件取得
+			//更新済み科目情報全件取得
 			subjectDBManage sdm = new subjectDBManage();
 
-			Map<String,List<String>> classMap = sdm.classDBSelect();
-			//更新済み科目情報全件取得
-			List<subjectInfo> subjectList = sdm.subjectDBSelect();
+			String grade_name = request.getParameter("grade_name1");
+			String cource_name = request.getParameter("cource_name1");
+			String classID1 = grade_name+
+					cource_name;
 
-			request.setAttribute("subjectList", subjectList);
-			request.setAttribute("classMap", classMap);
+			if(grade_name.equals("ALL")){
+				
+			}
+
+			subjectUpdate(request, sdm, classID1);
+
+			String classID2 = request.getParameter("grade_name2")+
+					request.getParameter("cource_name2");
+
+			//2つ目指定されていたら
+			if (!(classID2.equals(""))){
+				subjectUpdate(request, sdm, classID2);
+			}//if
 
 			} catch (Exception e) {
 				// TODO 自動生成された catch ブロック
@@ -107,6 +119,34 @@ public class ManageUpdateControl extends HttpServlet {
 
 
 	}//doGet
+
+	private void subjectUpdate(HttpServletRequest request, subjectDBManage sdm, String classID) throws Exception {
+		//送信された科目情報取得
+		subjectInfo si = new subjectInfo(
+				request.getParameter("subjectID")==null?0//true
+						:Integer.parseInt(request.getParameter("subjectID"))//false
+				,request.getParameter("subjectName")
+				,request.getParameter("bringThings"),0
+
+				);
+
+		if(request.getParameter("regist_subject") != null ){
+			sdm.subjectDBUpdate(si, classID,DBAccess.INSERT, "登録");
+			System.out.println("登録");
+		}
+
+		if(request.getParameter("delete_subject") != null){
+			sdm.subjectDBUpdate(si, classID,DBAccess.DELETE, "削除");
+			System.out.println("削除");
+		}
+
+		Map<String,List<String>> classMap = sdm.classDBSelect();
+		//更新済み科目情報全件取得
+		List<subjectInfo> subjectList = sdm.subjectDBSelect();
+
+		request.setAttribute("subjectList", subjectList);
+		request.setAttribute("classMap", classMap);
+	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

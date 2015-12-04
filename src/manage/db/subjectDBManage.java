@@ -18,6 +18,7 @@ public class subjectDBManage extends DBAccess {
 	private String ins_infoSubject;// 科目、クラス対応テーブル挿入
 	private String selectBox;// 科目管理画面のセレクトボックス表示用
 
+
 	// *******Msg*********
 	private String msg;
 
