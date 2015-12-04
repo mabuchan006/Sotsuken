@@ -12,4 +12,8 @@ function f_active(e) {
 		// クリックしたタブのliにあるクラスにactiveを追加
 		$(this).addClass("active");
 	});
+
+	$("#submitBtn").click(function(e) {
+		$("button").attr("name", "submit");
+	});
 }

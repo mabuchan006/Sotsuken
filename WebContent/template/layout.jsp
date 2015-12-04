@@ -49,18 +49,18 @@
 
 			<h1 style="padding: 100px 20px 20px; margin: 0;">管理者メニュー</h1>
 			<ul>
-				<li class="select2"><h1 style="padding: 15px 40px; margin: 0;">講師管理</h1></li>
+				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">講師管理</h1></li>
 
-				<li class="select2"><h1 style="padding: 15px 40px; margin: 0;">科目管理</h1></li>
+				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">科目管理</h1></li>
 
-				<li class="select2"><h1 style="padding: 15px 40px; margin: 0;">クラス管理</h1></li>
+				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">クラス管理</h1></li>
 
-			<li class="select2"><h1 style="padding: 15px 40px; margin: 0;">コマ割り管理</h1></li>
+				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">コマ割り管理</h1></li>
 
 
 				<li>
-					<ul id="flip3" class="dropmenu select2">
-						<li class="select2 " style="padding: 15px 40px; margin: 0;"><a
+					<ul id="flip3" class="dropmenu select2 ">
+						<li class="select2 moji box" style="padding: 15px 40px; margin:  0 20px 0 0;"><a
 							href="#">時間割管理</a>
 							<ul >
 								<li><a href="#">R</a></li>
