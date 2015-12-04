@@ -48,7 +48,7 @@ public class divideUpdateControl extends HttpServlet {
 		// 使用するcss,jsファイルの適用
 		getIncludeFile(request);
 		// ページ情報指定
-		content_page = "/manage/time_divide_manage_edit.jsp";
+		content_page = "/manage/time_divide_manage_view.jsp";
 		page_title = "Create Schedule";
 
 		String[] classIDArray;
@@ -95,9 +95,7 @@ public class divideUpdateControl extends HttpServlet {
 					classIDArray = map.get(key)[0].split(",");// ,区切りのクラスIDを1つずつ取得
 
 					for (String classID : classIDArray) {
-
 						diList.add(new divideInfo(period, roomID, week, classID));
-
 					} // for
 				} // if
 				classIDArray = new String[5];
@@ -129,6 +127,7 @@ public class divideUpdateControl extends HttpServlet {
 			divideMap = ddm.editDivideDBSelect(week);
 
 			request.setAttribute("divideMap", divideMap);
+			request.setAttribute("viewMap", viewMap);
 			request.setAttribute("content_page", content_page);
 			request.setAttribute("page_title", page_title);
 

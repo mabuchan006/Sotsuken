@@ -174,95 +174,35 @@
 							<td class="size" id="8F">803</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-1" name="006-1">${divideMap.NCS1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-2" name="006-2">${divideMap.NCS1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-3" name="006-3">${divideMap.NCS1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-4" name="006-4">${divideMap.NCS1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS803.p1[0] }"><p>${viewMap.NCS803.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p1[1] }"><p>${viewMap.NCS803.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p1[2] }"><p>${viewMap.NCS803.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p1[3] }"><p>${viewMap.NCS803.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p1[4] }"><p>${viewMap.NCS803.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-1" name="007-1">${divideMap.NCS2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-2" name="007-2">${divideMap.NCS2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-3" name="007-3">${divideMap.NCS2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-4" name="007-4">${divideMap.NCS2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS803.p2[0] }"><p>${viewMap.NCS803.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p2[1] }"><p>${viewMap.NCS803.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p2[2] }"><p>${viewMap.NCS803.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p2[3] }"><p>${viewMap.NCS803.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p2[4] }"><p>${viewMap.NCS803.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-1" name="008-1">${divideMap.NCS3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-2" name="008-2">${divideMap.NCS3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-3" name="008-3">${divideMap.NCS3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-4" name="008-4">${divideMap.NCS3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS803.p3[0] }"><p>${viewMap.NCS803.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p3[1] }"><p>${viewMap.NCS803.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p3[2] }"><p>${viewMap.NCS803.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p3[3] }"><p>${viewMap.NCS803.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p3[4] }"><p>${viewMap.NCS803.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-1" name="009-1">${divideMap.NCS4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-2" name="009-2">${divideMap.NCS4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-3" name="009-3">${divideMap.NCS4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-4" name="009-4">${divideMap.NCS4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS803.p4[0] }"><p>${viewMap.NCS803.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p4[1] }"><p>${viewMap.NCS803.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p4[2] }"><p>${viewMap.NCS803.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p4[3] }"><p>${viewMap.NCS803.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS803.p4[4] }"><p>${viewMap.NCS803.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
@@ -272,95 +212,35 @@
 							<td class="size">802</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-1" name="010-1">${divideMap.NCS1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-2" name="010-2">${divideMap.NCS1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-3" name="010-3">${divideMap.NCS1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-4" name="010-4">${divideMap.NCS1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS802.p1[0] }"><p>${viewMap.NCS802.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p1[1] }"><p>${viewMap.NCS802.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p1[2] }"><p>${viewMap.NCS802.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p1[3] }"><p>${viewMap.NCS802.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p1[4] }"><p>${viewMap.NCS802.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-1" name="011-1">${divideMap.NCS2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-2" name="011-2">${divideMap.NCS2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-3" name="011-3">${divideMap.NCS2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-4" name="011-4">${divideMap.NCS2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS802.p2[0] }"><p>${viewMap.NCS802.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p2[1] }"><p>${viewMap.NCS802.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p2[2] }"><p>${viewMap.NCS802.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p2[3] }"><p>${viewMap.NCS802.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p2[4] }"><p>${viewMap.NCS802.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-1" name="012-1">${divideMap.NCS3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-2" name="012-2">${divideMap.NCS3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-3" name="012-3">${divideMap.NCS3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-4" name="012-4">${divideMap.NCS3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS802.p3[0] }"><p>${viewMap.NCS802.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p3[1] }"><p>${viewMap.NCS802.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p3[2] }"><p>${viewMap.NCS802.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p3[3] }"><p>${viewMap.NCS802.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p3[4] }"><p>${viewMap.NCS802.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-1" name="013-1">${divideMap.NCS4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-2" name="013-2">${divideMap.NCS4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-3" name="013-3">${divideMap.NCS4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-4" name="013-4">${divideMap.NCS4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS802.p4[0] }"><p>${viewMap.NCS802.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p4[1] }"><p>${viewMap.NCS802.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p4[2] }"><p>${viewMap.NCS802.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p4[3] }"><p>${viewMap.NCS802.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS802.p4[4] }"><p>${viewMap.NCS802.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
@@ -369,95 +249,35 @@
 							<td class="size" id="7F">702</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-1" name="006-1">${divideMap.NCS1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-2" name="006-2">${divideMap.NCS1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-3" name="006-3">${divideMap.NCS1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-4" name="006-4">${divideMap.NCS1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS702.p1[0] }"><p>${viewMap.NCS702.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p1[1] }"><p>${viewMap.NCS702.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p1[2] }"><p>${viewMap.NCS702.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p1[3] }"><p>${viewMap.NCS702.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p1[4] }"><p>${viewMap.NCS702.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-1" name="007-1">${divideMap.NCS2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-2" name="007-2">${divideMap.NCS2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-3" name="007-3">${divideMap.NCS2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-4" name="007-4">${divideMap.NCS2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS702.p2[0] }"><p>${viewMap.NCS702.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p2[1] }"><p>${viewMap.NCS702.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p2[2] }"><p>${viewMap.NCS702.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p2[3] }"><p>${viewMap.NCS702.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p2[4] }"><p>${viewMap.NCS702.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-1" name="008-1">${divideMap.NCS3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-2" name="008-2">${divideMap.NCS3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-3" name="008-3">${divideMap.NCS3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-4" name="008-4">${divideMap.NCS3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS702.p3[0] }"><p>${viewMap.NCS702.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p3[1] }"><p>${viewMap.NCS702.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p3[2] }"><p>${viewMap.NCS702.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p3[3] }"><p>${viewMap.NCS702.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p3[4] }"><p>${viewMap.NCS702.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-1" name="009-1">${divideMap.NCS4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-2" name="009-2">${divideMap.NCS4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-3" name="009-3">${divideMap.NCS4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-4" name="009-4">${divideMap.NCS4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS702.p4[0] }"><p>${viewMap.NCS702.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p4[1] }"><p>${viewMap.NCS702.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p4[2] }"><p>${viewMap.NCS702.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p4[3] }"><p>${viewMap.NCS702.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS702.p4[4] }"><p>${viewMap.NCS702.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
@@ -467,95 +287,35 @@
 							<td class="size">701</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-1" name="010-1">${divideMap.NCS1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-2" name="010-2">${divideMap.NCS1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-3" name="010-3">${divideMap.NCS1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-4" name="010-4">${divideMap.NCS1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS701.p1[0] }"><p>${viewMap.NCS701.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p1[1] }"><p>${viewMap.NCS701.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p1[2] }"><p>${viewMap.NCS701.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p1[3] }"><p>${viewMap.NCS701.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p1[4] }"><p>${viewMap.NCS701.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-1" name="011-1">${divideMap.NCS2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-2" name="011-2">${divideMap.NCS2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-3" name="011-3">${divideMap.NCS2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-4" name="011-4">${divideMap.NCS2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS701.p2[0] }"><p>${viewMap.NCS701.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p2[1] }"><p>${viewMap.NCS701.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p2[2] }"><p>${viewMap.NCS701.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p2[3] }"><p>${viewMap.NCS701.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p2[4] }"><p>${viewMap.NCS701.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-1" name="012-1">${divideMap.NCS3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-2" name="012-2">${divideMap.NCS3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-3" name="012-3">${divideMap.NCS3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-4" name="012-4">${divideMap.NCS3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS701.p3[0] }"><p>${viewMap.NCS701.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p3[1] }"><p>${viewMap.NCS701.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p3[2] }"><p>${viewMap.NCS701.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p3[3] }"><p>${viewMap.NCS701.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p3[4] }"><p>${viewMap.NCS701.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-1" name="013-1">${divideMap.NCS4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-2" name="013-2">${divideMap.NCS4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-3" name="013-3">${divideMap.NCS4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-4" name="013-4">${divideMap.NCS4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS701.p4[0] }"><p>${viewMap.NCS701.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p4[1] }"><p>${viewMap.NCS701.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p4[2] }"><p>${viewMap.NCS701.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p4[3] }"><p>${viewMap.NCS701.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS701.p4[4] }"><p>${viewMap.NCS701.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
@@ -563,95 +323,35 @@
 							<td class="size" id="6F">604</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-1" name="006-1">${divideMap.NCS1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-2" name="006-2">${divideMap.NCS1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-3" name="006-3">${divideMap.NCS1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-4" name="006-4">${divideMap.NCS1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS604.p1[0] }"><p>${viewMap.NCS604.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p1[1] }"><p>${viewMap.NCS604.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p1[2] }"><p>${viewMap.NCS604.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p1[3] }"><p>${viewMap.NCS604.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p1[4] }"><p>${viewMap.NCS604.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-1" name="007-1">${divideMap.NCS2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-2" name="007-2">${divideMap.NCS2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-3" name="007-3">${divideMap.NCS2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-4" name="007-4">${divideMap.NCS2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS604.p2[0] }"><p>${viewMap.NCS604.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p2[1] }"><p>${viewMap.NCS604.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p2[2] }"><p>${viewMap.NCS604.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p2[3] }"><p>${viewMap.NCS604.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p2[4] }"><p>${viewMap.NCS604.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-1" name="008-1">${divideMap.NCS3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-2" name="008-2">${divideMap.NCS3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-3" name="008-3">${divideMap.NCS3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-4" name="008-4">${divideMap.NCS3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS604.p3[0] }"><p>${viewMap.NCS604.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p3[1] }"><p>${viewMap.NCS604.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p3[2] }"><p>${viewMap.NCS604.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p3[3] }"><p>${viewMap.NCS604.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p3[4] }"><p>${viewMap.NCS604.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-1" name="009-1">${divideMap.NCS4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-2" name="009-2">${divideMap.NCS4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-3" name="009-3">${divideMap.NCS4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-4" name="009-4">${divideMap.NCS4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS604.p4[0] }"><p>${viewMap.NCS604.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p4[1] }"><p>${viewMap.NCS604.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p4[2] }"><p>${viewMap.NCS604.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p4[3] }"><p>${viewMap.NCS604.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS604.p4[4] }"><p>${viewMap.NCS604.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
@@ -661,95 +361,35 @@
 							<td class="size">603</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-1" name="010-1">${divideMap.NCS1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-2" name="010-2">${divideMap.NCS1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-3" name="010-3">${divideMap.NCS1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-4" name="010-4">${divideMap.NCS1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS603.p1[0] }"><p>${viewMap.NCS603.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p1[1] }"><p>${viewMap.NCS603.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p1[2] }"><p>${viewMap.NCS603.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p1[3] }"><p>${viewMap.NCS603.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p1[4] }"><p>${viewMap.NCS603.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-1" name="011-1">${divideMap.NCS2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-2" name="011-2">${divideMap.NCS2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-3" name="011-3">${divideMap.NCS2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-4" name="011-4">${divideMap.NCS2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS603.p2[0] }"><p>${viewMap.NCS603.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p2[1] }"><p>${viewMap.NCS603.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p2[2] }"><p>${viewMap.NCS603.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p2[3] }"><p>${viewMap.NCS603.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p2[4] }"><p>${viewMap.NCS603.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-1" name="012-1">${divideMap.NCS3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-2" name="012-2">${divideMap.NCS3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-3" name="012-3">${divideMap.NCS3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-4" name="012-4">${divideMap.NCS3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS603.p3[0] }"><p>${viewMap.NCS603.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p3[1] }"><p>${viewMap.NCS603.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p3[2] }"><p>${viewMap.NCS603.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p3[3] }"><p>${viewMap.NCS603.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p3[4] }"><p>${viewMap.NCS603.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-1" name="013-1">${divideMap.NCS4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-2" name="013-2">${divideMap.NCS4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-3" name="013-3">${divideMap.NCS4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-4" name="013-4">${divideMap.NCS4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS603.p4[0] }"><p>${viewMap.NCS603.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p4[1] }"><p>${viewMap.NCS603.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p4[2] }"><p>${viewMap.NCS603.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p4[3] }"><p>${viewMap.NCS603.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS603.p4[4] }"><p>${viewMap.NCS603.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
@@ -757,95 +397,35 @@
 							<td class="size">601</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-1" name="006-1">${divideMap.NCS1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-2" name="006-2">${divideMap.NCS1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-3" name="006-3">${divideMap.NCS1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-4" name="006-4">${divideMap.NCS1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS601.p1[0] }"><p>${viewMap.NCS601.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p1[1] }"><p>${viewMap.NCS601.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p1[2] }"><p>${viewMap.NCS601.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p1[3] }"><p>${viewMap.NCS601.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p1[4] }"><p>${viewMap.NCS601.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-1" name="007-1">${divideMap.NCS2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-2" name="007-2">${divideMap.NCS2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-3" name="007-3">${divideMap.NCS2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-4" name="007-4">${divideMap.NCS2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS601.p2[0] }"><p>${viewMap.NCS601.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p2[1] }"><p>${viewMap.NCS601.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p2[2] }"><p>${viewMap.NCS601.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p2[3] }"><p>${viewMap.NCS601.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p2[4] }"><p>${viewMap.NCS601.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-1" name="008-1">${divideMap.NCS3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-2" name="008-2">${divideMap.NCS3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-3" name="008-3">${divideMap.NCS3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-4" name="008-4">${divideMap.NCS3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS601.p3[0] }"><p>${viewMap.NCS601.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p3[1] }"><p>${viewMap.NCS601.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p3[2] }"><p>${viewMap.NCS601.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p3[3] }"><p>${viewMap.NCS601.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p3[4] }"><p>${viewMap.NCS601.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-1" name="009-1">${divideMap.NCS4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-2" name="009-2">${divideMap.NCS4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-3" name="009-3">${divideMap.NCS4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-4" name="009-4">${divideMap.NCS4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS601.p4[0] }"><p>${viewMap.NCS601.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p4[1] }"><p>${viewMap.NCS601.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p4[2] }"><p>${viewMap.NCS601.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p4[3] }"><p>${viewMap.NCS601.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS601.p4[4] }"><p>${viewMap.NCS601.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
@@ -855,95 +435,35 @@
 							<td class="size" id="5F">504</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-1" name="010-1">${divideMap.NCS1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-2" name="010-2">${divideMap.NCS1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-3" name="010-3">${divideMap.NCS1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-4" name="010-4">${divideMap.NCS1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS504.p1[0] }"><p>${viewMap.NCS504.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p1[1] }"><p>${viewMap.NCS504.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p1[2] }"><p>${viewMap.NCS504.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p1[3] }"><p>${viewMap.NCS504.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p1[4] }"><p>${viewMap.NCS504.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-1" name="011-1">${divideMap.NCS2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-2" name="011-2">${divideMap.NCS2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-3" name="011-3">${divideMap.NCS2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-4" name="011-4">${divideMap.NCS2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS504.p2[0] }"><p>${viewMap.NCS504.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p2[1] }"><p>${viewMap.NCS504.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p2[2] }"><p>${viewMap.NCS504.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p2[3] }"><p>${viewMap.NCS504.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p2[4] }"><p>${viewMap.NCS504.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-1" name="012-1">${divideMap.NCS3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-2" name="012-2">${divideMap.NCS3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-3" name="012-3">${divideMap.NCS3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-4" name="012-4">${divideMap.NCS3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS504.p3[0] }"><p>${viewMap.NCS504.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p3[1] }"><p>${viewMap.NCS504.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p3[2] }"><p>${viewMap.NCS504.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p3[3] }"><p>${viewMap.NCS504.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p3[4] }"><p>${viewMap.NCS504.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-1" name="013-1">${divideMap.NCS4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-2" name="013-2">${divideMap.NCS4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-3" name="013-3">${divideMap.NCS4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-4" name="013-4">${divideMap.NCS4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS504.p4[0] }"><p>${viewMap.NCS504.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p4[1] }"><p>${viewMap.NCS504.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p4[2] }"><p>${viewMap.NCS504.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p4[3] }"><p>${viewMap.NCS504.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS504.p4[4] }"><p>${viewMap.NCS504.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
@@ -951,95 +471,35 @@
 							<td class="size">503</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-1" name="006-1">${divideMap.NCS1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-2" name="006-2">${divideMap.NCS1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-3" name="006-3">${divideMap.NCS1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-4" name="006-4">${divideMap.NCS1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS503.p1[0] }"><p>${viewMap.NCS503.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p1[1] }"><p>${viewMap.NCS503.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p1[2] }"><p>${viewMap.NCS503.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p1[3] }"><p>${viewMap.NCS503.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p1[4] }"><p>${viewMap.NCS503.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-1" name="007-1">${divideMap.NCS2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-2" name="007-2">${divideMap.NCS2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-3" name="007-3">${divideMap.NCS2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-4" name="007-4">${divideMap.NCS2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS503.p2[0] }"><p>${viewMap.NCS503.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p2[1] }"><p>${viewMap.NCS503.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p2[2] }"><p>${viewMap.NCS503.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p2[3] }"><p>${viewMap.NCS503.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p2[4] }"><p>${viewMap.NCS503.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-1" name="008-1">${divideMap.NCS3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-2" name="008-2">${divideMap.NCS3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-3" name="008-3">${divideMap.NCS3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-4" name="008-4">${divideMap.NCS3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS503.p3[0] }"><p>${viewMap.NCS503.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p3[1] }"><p>${viewMap.NCS503.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p3[2] }"><p>${viewMap.NCS503.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p3[3] }"><p>${viewMap.NCS503.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p3[4] }"><p>${viewMap.NCS503.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-1" name="009-1">${divideMap.NCS4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-2" name="009-2">${divideMap.NCS4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-3" name="009-3">${divideMap.NCS4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-4" name="009-4">${divideMap.NCS4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS503.p4[0] }"><p>${viewMap.NCS503.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p4[1] }"><p>${viewMap.NCS503.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p4[2] }"><p>${viewMap.NCS503.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p4[3] }"><p>${viewMap.NCS503.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS503.p4[4] }"><p>${viewMap.NCS503.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
@@ -1049,95 +509,35 @@
 							<td class="size">502</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-1" name="010-1">${divideMap.NCS1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-2" name="010-2">${divideMap.NCS1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-3" name="010-3">${divideMap.NCS1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-4" name="010-4">${divideMap.NCS1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS502.p1[0] }"><p>${viewMap.NCS502.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p1[1] }"><p>${viewMap.NCS502.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p1[2] }"><p>${viewMap.NCS502.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p1[3] }"><p>${viewMap.NCS502.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p1[4] }"><p>${viewMap.NCS502.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-1" name="011-1">${divideMap.NCS2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-2" name="011-2">${divideMap.NCS2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-3" name="011-3">${divideMap.NCS2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-4" name="011-4">${divideMap.NCS2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS502.p2[0] }"><p>${viewMap.NCS502.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p2[1] }"><p>${viewMap.NCS502.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p2[2] }"><p>${viewMap.NCS502.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p2[3] }"><p>${viewMap.NCS502.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p2[4] }"><p>${viewMap.NCS502.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-1" name="012-1">${divideMap.NCS3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-2" name="012-2">${divideMap.NCS3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-3" name="012-3">${divideMap.NCS3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-4" name="012-4">${divideMap.NCS3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS502.p3[0] }"><p>${viewMap.NCS502.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p3[1] }"><p>${viewMap.NCS502.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p3[2] }"><p>${viewMap.NCS502.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p3[3] }"><p>${viewMap.NCS502.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p3[4] }"><p>${viewMap.NCS502.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-1" name="013-1">${divideMap.NCS4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-2" name="013-2">${divideMap.NCS4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-3" name="013-3">${divideMap.NCS4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-4" name="013-4">${divideMap.NCS4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS502.p4[0] }"><p>${viewMap.NCS502.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p4[1] }"><p>${viewMap.NCS502.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p4[2] }"><p>${viewMap.NCS502.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p4[3] }"><p>${viewMap.NCS502.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS502.p4[4] }"><p>${viewMap.NCS502.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
@@ -1145,95 +545,35 @@
 							<td class="size">501</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-1" name="006-1">${divideMap.NCS1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-2" name="006-2">${divideMap.NCS1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-3" name="006-3">${divideMap.NCS1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-4" name="006-4">${divideMap.NCS1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS501.p1[0] }"><p>${viewMap.NCS501.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p1[1] }"><p>${viewMap.NCS501.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p1[2] }"><p>${viewMap.NCS501.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p1[3] }"><p>${viewMap.NCS501.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p1[4] }"><p>${viewMap.NCS501.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-1" name="007-1">${divideMap.NCS2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-2" name="007-2">${divideMap.NCS2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-3" name="007-3">${divideMap.NCS2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-4" name="007-4">${divideMap.NCS2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS501.p2[0] }"><p>${viewMap.NCS501.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p2[1] }"><p>${viewMap.NCS501.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p2[2] }"><p>${viewMap.NCS501.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p2[3] }"><p>${viewMap.NCS501.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p2[4] }"><p>${viewMap.NCS501.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-1" name="008-1">${divideMap.NCS3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-2" name="008-2">${divideMap.NCS3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-3" name="008-3">${divideMap.NCS3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-4" name="008-4">${divideMap.NCS3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS501.p3[0] }"><p>${viewMap.NCS501.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p3[1] }"><p>${viewMap.NCS501.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p3[2] }"><p>${viewMap.NCS501.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p3[3] }"><p>${viewMap.NCS501.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p3[4] }"><p>${viewMap.NCS501.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-1" name="009-1">${divideMap.NCS4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-2" name="009-2">${divideMap.NCS4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-3" name="009-3">${divideMap.NCS4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-4" name="009-4">${divideMap.NCS4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS501.p4[0] }"><p>${viewMap.NCS501.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p4[1] }"><p>${viewMap.NCS501.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p4[2] }"><p>${viewMap.NCS501.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p4[3] }"><p>${viewMap.NCS501.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS501.p4[4] }"><p>${viewMap.NCS501.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
@@ -1243,95 +583,35 @@
 							<td class="size" id="4F">404</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-1" name="010-1">${divideMap.NCS1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-2" name="010-2">${divideMap.NCS1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-3" name="010-3">${divideMap.NCS1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-4" name="010-4">${divideMap.NCS1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS404.p1[0] }"><p>${viewMap.NCS404.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p1[1] }"><p>${viewMap.NCS404.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p1[2] }"><p>${viewMap.NCS404.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p1[3] }"><p>${viewMap.NCS404.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p1[4] }"><p>${viewMap.NCS404.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-1" name="011-1">${divideMap.NCS2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-2" name="011-2">${divideMap.NCS2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-3" name="011-3">${divideMap.NCS2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-4" name="011-4">${divideMap.NCS2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS404.p2[0] }"><p>${viewMap.NCS404.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p2[1] }"><p>${viewMap.NCS404.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p2[2] }"><p>${viewMap.NCS404.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p2[3] }"><p>${viewMap.NCS404.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p2[4] }"><p>${viewMap.NCS404.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-1" name="012-1">${divideMap.NCS3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-2" name="012-2">${divideMap.NCS3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-3" name="012-3">${divideMap.NCS3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-4" name="012-4">${divideMap.NCS3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS404.p3[0] }"><p>${viewMap.NCS404.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p3[1] }"><p>${viewMap.NCS404.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p3[2] }"><p>${viewMap.NCS404.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p3[3] }"><p>${viewMap.NCS404.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p3[4] }"><p>${viewMap.NCS404.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-1" name="013-1">${divideMap.NCS4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-2" name="013-2">${divideMap.NCS4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-3" name="013-3">${divideMap.NCS4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-4" name="013-4">${divideMap.NCS4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS404.p4[0] }"><p>${viewMap.NCS404.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p4[1] }"><p>${viewMap.NCS404.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p4[2] }"><p>${viewMap.NCS404.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p4[3] }"><p>${viewMap.NCS404.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS404.p4[4] }"><p>${viewMap.NCS404.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
@@ -1339,95 +619,35 @@
 							<td class="size">403</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-1" name="006-1">${divideMap.NCS1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-2" name="006-2">${divideMap.NCS1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-3" name="006-3">${divideMap.NCS1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-4" name="006-4">${divideMap.NCS1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS403.p1[0] }"><p>${viewMap.NCS403.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p1[1] }"><p>${viewMap.NCS403.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p1[2] }"><p>${viewMap.NCS403.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p1[3] }"><p>${viewMap.NCS403.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p1[4] }"><p>${viewMap.NCS403.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-1" name="007-1">${divideMap.NCS2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-2" name="007-2">${divideMap.NCS2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-3" name="007-3">${divideMap.NCS2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-4" name="007-4">${divideMap.NCS2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS403.p2[0] }"><p>${viewMap.NCS403.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p2[1] }"><p>${viewMap.NCS403.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p2[2] }"><p>${viewMap.NCS403.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p2[3] }"><p>${viewMap.NCS403.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p2[4] }"><p>${viewMap.NCS403.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-1" name="008-1">${divideMap.NCS3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-2" name="008-2">${divideMap.NCS3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-3" name="008-3">${divideMap.NCS3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-4" name="008-4">${divideMap.NCS3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS403.p3[0] }"><p>${viewMap.NCS403.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p3[1] }"><p>${viewMap.NCS403.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p3[2] }"><p>${viewMap.NCS403.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p3[3] }"><p>${viewMap.NCS403.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p3[4] }"><p>${viewMap.NCS403.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-1" name="009-1">${divideMap.NCS4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-2" name="009-2">${divideMap.NCS4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-3" name="009-3">${divideMap.NCS4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-4" name="009-4">${divideMap.NCS4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS403.p4[0] }"><p>${viewMap.NCS403.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p4[1] }"><p>${viewMap.NCS403.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p4[2] }"><p>${viewMap.NCS403.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p4[3] }"><p>${viewMap.NCS403.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS403.p4[4] }"><p>${viewMap.NCS403.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
@@ -1437,95 +657,35 @@
 							<td class="size">402</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-1" name="010-1">${divideMap.NCS1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-2" name="010-2">${divideMap.NCS1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-3" name="010-3">${divideMap.NCS1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-4" name="010-4">${divideMap.NCS1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS402.p1[0] }"><p>${viewMap.NCS402.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p1[1] }"><p>${viewMap.NCS402.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p1[2] }"><p>${viewMap.NCS402.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p1[3] }"><p>${viewMap.NCS402.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p1[4] }"><p>${viewMap.NCS402.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-1" name="011-1">${divideMap.NCS2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-2" name="011-2">${divideMap.NCS2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-3" name="011-3">${divideMap.NCS2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-4" name="011-4">${divideMap.NCS2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS402.p2[0] }"><p>${viewMap.NCS402.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p2[1] }"><p>${viewMap.NCS402.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p2[2] }"><p>${viewMap.NCS402.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p2[3] }"><p>${viewMap.NCS402.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p2[4] }"><p>${viewMap.NCS402.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-1" name="012-1">${divideMap.NCS3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-2" name="012-2">${divideMap.NCS3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-3" name="012-3">${divideMap.NCS3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-4" name="012-4">${divideMap.NCS3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS402.p3[0] }"><p>${viewMap.NCS402.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p3[1] }"><p>${viewMap.NCS402.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p3[2] }"><p>${viewMap.NCS402.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p3[3] }"><p>${viewMap.NCS402.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p3[4] }"><p>${viewMap.NCS402.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-1" name="013-1">${divideMap.NCS4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-2" name="013-2">${divideMap.NCS4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-3" name="013-3">${divideMap.NCS4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-4" name="013-4">${divideMap.NCS4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS402.p4[0] }"><p>${viewMap.NCS402.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p4[1] }"><p>${viewMap.NCS402.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p4[2] }"><p>${viewMap.NCS402.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p4[3] }"><p>${viewMap.NCS402.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS402.p4[4] }"><p>${viewMap.NCS402.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
@@ -1533,95 +693,35 @@
 							<td class="size">401</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-1" name="006-1">${divideMap.NCS1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-2" name="006-2">${divideMap.NCS1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-3" name="006-3">${divideMap.NCS1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-4" name="006-4">${divideMap.NCS1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS401.p1[0] }"><p>${viewMap.NCS401.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p1[1] }"><p>${viewMap.NCS401.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p1[2] }"><p>${viewMap.NCS401.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p1[3] }"><p>${viewMap.NCS401.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p1[4] }"><p>${viewMap.NCS401.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-1" name="007-1">${divideMap.NCS2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-2" name="007-2">${divideMap.NCS2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-3" name="007-3">${divideMap.NCS2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-4" name="007-4">${divideMap.NCS2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS401.p2[0] }"><p>${viewMap.NCS401.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p2[1] }"><p>${viewMap.NCS401.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p2[2] }"><p>${viewMap.NCS401.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p2[3] }"><p>${viewMap.NCS401.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p2[4] }"><p>${viewMap.NCS401.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-1" name="008-1">${divideMap.NCS3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-2" name="008-2">${divideMap.NCS3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-3" name="008-3">${divideMap.NCS3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-4" name="008-4">${divideMap.NCS3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS401.p3[0] }"><p>${viewMap.NCS401.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p3[1] }"><p>${viewMap.NCS401.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p3[2] }"><p>${viewMap.NCS401.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p3[3] }"><p>${viewMap.NCS401.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p3[4] }"><p>${viewMap.NCS401.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-1" name="009-1">${divideMap.NCS4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-2" name="009-2">${divideMap.NCS4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-3" name="009-3">${divideMap.NCS4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-4" name="009-4">${divideMap.NCS4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS401.p4[0] }"><p>${viewMap.NCS401.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p4[1] }"><p>${viewMap.NCS401.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p4[2] }"><p>${viewMap.NCS401.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p4[3] }"><p>${viewMap.NCS401.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS401.p4[4] }"><p>${viewMap.NCS401.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
@@ -1631,95 +731,35 @@
 							<td class="size" id="3F">304</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-1" name="010-1">${divideMap.NCS1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-2" name="010-2">${divideMap.NCS1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-3" name="010-3">${divideMap.NCS1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-4" name="010-4">${divideMap.NCS1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS304.p1[0] }"><p>${viewMap.NCS304.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p1[1] }"><p>${viewMap.NCS304.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p1[2] }"><p>${viewMap.NCS304.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p1[3] }"><p>${viewMap.NCS304.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p1[4] }"><p>${viewMap.NCS304.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-1" name="011-1">${divideMap.NCS2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-2" name="011-2">${divideMap.NCS2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-3" name="011-3">${divideMap.NCS2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-4" name="011-4">${divideMap.NCS2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS304.p2[0] }"><p>${viewMap.NCS304.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p2[1] }"><p>${viewMap.NCS304.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p2[2] }"><p>${viewMap.NCS304.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p2[3] }"><p>${viewMap.NCS304.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p2[4] }"><p>${viewMap.NCS304.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-1" name="012-1">${divideMap.NCS3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-2" name="012-2">${divideMap.NCS3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-3" name="012-3">${divideMap.NCS3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-4" name="012-4">${divideMap.NCS3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS304.p3[0] }"><p>${viewMap.NCS304.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p3[1] }"><p>${viewMap.NCS304.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p3[2] }"><p>${viewMap.NCS304.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p3[3] }"><p>${viewMap.NCS304.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p3[4] }"><p>${viewMap.NCS304.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-1" name="013-1">${divideMap.NCS4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-2" name="013-2">${divideMap.NCS4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-3" name="013-3">${divideMap.NCS4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-4" name="013-4">${divideMap.NCS4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS304.p4[0] }"><p>${viewMap.NCS304.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p4[1] }"><p>${viewMap.NCS304.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p4[2] }"><p>${viewMap.NCS304.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p4[3] }"><p>${viewMap.NCS304.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS304.p4[4] }"><p>${viewMap.NCS304.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
@@ -1727,95 +767,35 @@
 							<td class="size">303</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-1" name="006-1">${divideMap.NCS1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-2" name="006-2">${divideMap.NCS1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-3" name="006-3">${divideMap.NCS1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-4" name="006-4">${divideMap.NCS1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS303.p1[0] }"><p>${viewMap.NCS303.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p1[1] }"><p>${viewMap.NCS303.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p1[2] }"><p>${viewMap.NCS303.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p1[3] }"><p>${viewMap.NCS303.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p1[4] }"><p>${viewMap.NCS303.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-1" name="007-1">${divideMap.NCS2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-2" name="007-2">${divideMap.NCS2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-3" name="007-3">${divideMap.NCS2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-4" name="007-4">${divideMap.NCS2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS303.p2[0] }"><p>${viewMap.NCS303.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p2[1] }"><p>${viewMap.NCS303.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p2[2] }"><p>${viewMap.NCS303.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p2[3] }"><p>${viewMap.NCS303.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p2[4] }"><p>${viewMap.NCS303.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-1" name="008-1">${divideMap.NCS3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-2" name="008-2">${divideMap.NCS3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-3" name="008-3">${divideMap.NCS3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-4" name="008-4">${divideMap.NCS3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS303.p3[0] }"><p>${viewMap.NCS303.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p3[1] }"><p>${viewMap.NCS303.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p3[2] }"><p>${viewMap.NCS303.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p3[3] }"><p>${viewMap.NCS303.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p3[4] }"><p>${viewMap.NCS303.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-1" name="009-1">${divideMap.NCS4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-2" name="009-2">${divideMap.NCS4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-3" name="009-3">${divideMap.NCS4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-4" name="009-4">${divideMap.NCS4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS303.p4[0] }"><p>${viewMap.NCS303.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p4[1] }"><p>${viewMap.NCS303.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p4[2] }"><p>${viewMap.NCS303.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p4[3] }"><p>${viewMap.NCS303.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS303.p4[4] }"><p>${viewMap.NCS303.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
@@ -1825,95 +805,35 @@
 							<td class="size">302</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-1" name="010-1">${divideMap.NCS1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-2" name="010-2">${divideMap.NCS1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-3" name="010-3">${divideMap.NCS1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-4" name="010-4">${divideMap.NCS1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS302.p1[0] }"><p>${viewMap.NCS302.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p1[1] }"><p>${viewMap.NCS302.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p1[2] }"><p>${viewMap.NCS302.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p1[3] }"><p>${viewMap.NCS302.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p1[4] }"><p>${viewMap.NCS302.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-1" name="011-1">${divideMap.NCS2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-2" name="011-2">${divideMap.NCS2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-3" name="011-3">${divideMap.NCS2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-4" name="011-4">${divideMap.NCS2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS302.p2[0] }"><p>${viewMap.NCS302.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p2[1] }"><p>${viewMap.NCS302.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p2[2] }"><p>${viewMap.NCS302.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p2[3] }"><p>${viewMap.NCS302.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p2[4] }"><p>${viewMap.NCS302.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-1" name="012-1">${divideMap.NCS3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-2" name="012-2">${divideMap.NCS3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-3" name="012-3">${divideMap.NCS3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-4" name="012-4">${divideMap.NCS3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS302.p3[0] }"><p>${viewMap.NCS302.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p3[1] }"><p>${viewMap.NCS302.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p3[2] }"><p>${viewMap.NCS302.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p3[3] }"><p>${viewMap.NCS302.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p3[4] }"><p>${viewMap.NCS302.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-1" name="013-1">${divideMap.NCS4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-2" name="013-2">${divideMap.NCS4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-3" name="013-3">${divideMap.NCS4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-4" name="013-4">${divideMap.NCS4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS302.p4[0] }"><p>${viewMap.NCS302.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p4[1] }"><p>${viewMap.NCS302.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p4[2] }"><p>${viewMap.NCS302.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p4[3] }"><p>${viewMap.NCS302.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS302.p4[4] }"><p>${viewMap.NCS302.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
@@ -1921,95 +841,35 @@
 							<td class="size">301</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-1" name="006-1">${divideMap.NCS1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-2" name="006-2">${divideMap.NCS1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-3" name="006-3">${divideMap.NCS1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-4" name="006-4">${divideMap.NCS1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS301.p1[0] }"><p>${viewMap.NCS301.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p1[1] }"><p>${viewMap.NCS301.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p1[2] }"><p>${viewMap.NCS301.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p1[3] }"><p>${viewMap.NCS301.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p1[4] }"><p>${viewMap.NCS301.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-1" name="007-1">${divideMap.NCS2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-2" name="007-2">${divideMap.NCS2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-3" name="007-3">${divideMap.NCS2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-4" name="007-4">${divideMap.NCS2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS301.p2[0] }"><p>${viewMap.NCS301.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p2[1] }"><p>${viewMap.NCS301.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p2[2] }"><p>${viewMap.NCS301.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p2[3] }"><p>${viewMap.NCS301.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p2[4] }"><p>${viewMap.NCS301.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-1" name="008-1">${divideMap.NCS3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-2" name="008-2">${divideMap.NCS3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-3" name="008-3">${divideMap.NCS3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-4" name="008-4">${divideMap.NCS3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS301.p3[0] }"><p>${viewMap.NCS301.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p3[1] }"><p>${viewMap.NCS301.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p3[2] }"><p>${viewMap.NCS301.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p3[3] }"><p>${viewMap.NCS301.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p3[4] }"><p>${viewMap.NCS301.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-1" name="009-1">${divideMap.NCS4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-2" name="009-2">${divideMap.NCS4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-3" name="009-3">${divideMap.NCS4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-4" name="009-4">${divideMap.NCS4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS301.p4[0] }"><p>${viewMap.NCS301.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p4[1] }"><p>${viewMap.NCS301.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p4[2] }"><p>${viewMap.NCS301.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p4[3] }"><p>${viewMap.NCS301.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS301.p4[4] }"><p>${viewMap.NCS301.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
@@ -2019,95 +879,35 @@
 							<td class="size" id="2F">201</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-1" name="010-1">${divideMap.NCS1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-2" name="010-2">${divideMap.NCS1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-3" name="010-3">${divideMap.NCS1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS1-4" name="010-4">${divideMap.NCS1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS201.p1[0] }"><p>${viewMap.NCS201.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p1[1] }"><p>${viewMap.NCS201.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p1[2] }"><p>${viewMap.NCS201.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p1[3] }"><p>${viewMap.NCS201.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p1[4] }"><p>${viewMap.NCS201.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-1" name="011-1">${divideMap.NCS2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-2" name="011-2">${divideMap.NCS2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-3" name="011-3">${divideMap.NCS2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS2-4" name="011-4">${divideMap.NCS2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS201.p2[0] }"><p>${viewMap.NCS201.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p2[1] }"><p>${viewMap.NCS201.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p2[2] }"><p>${viewMap.NCS201.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p2[3] }"><p>${viewMap.NCS201.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p2[4] }"><p>${viewMap.NCS201.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-1" name="012-1">${divideMap.NCS3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-2" name="012-2">${divideMap.NCS3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-3" name="012-3">${divideMap.NCS3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS3-4" name="012-4">${divideMap.NCS3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS201.p3[0] }"><p>${viewMap.NCS201.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p3[1] }"><p>${viewMap.NCS201.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p3[2] }"><p>${viewMap.NCS201.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p3[3] }"><p>${viewMap.NCS201.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p3[4] }"><p>${viewMap.NCS201.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-1" name="013-1">${divideMap.NCS4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-2" name="013-2">${divideMap.NCS4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-3" name="013-3">${divideMap.NCS4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS4-4" name="013-4">${divideMap.NCS4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NCS201.p4[0] }"><p>${viewMap.NCS201.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p4[1] }"><p>${viewMap.NCS201.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p4[2] }"><p>${viewMap.NCS201.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p4[3] }"><p>${viewMap.NCS201.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NCS201.p4[4] }"><p>${viewMap.NCS201.p4[4]}</p></c:if>
 							</td>
 						</tr>
 				</table>
@@ -2128,285 +928,105 @@
 							<td class="size" id="M5F">503</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-1" name="030-1">${divideMap.NMIC1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-2" name="030-2">${divideMap.NMIC1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-3" name="030-3">${divideMap.NMIC1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-4" name="030-4">${divideMap.NMIC1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC503.p1[0] }"><p>${viewMap.NMIC503.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p1[1] }"><p>${viewMap.NMIC503.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p1[2] }"><p>${viewMap.NMIC503.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p1[3] }"><p>${viewMap.NMIC503.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p1[4] }"><p>${viewMap.NMIC503.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-1" name="031-1">${divideMap.NMIC2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-2" name="031-2">${divideMap.NMIC2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-3" name="031-3">${divideMap.NMIC2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-4" name="031-4">${divideMap.NMIC2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC503.p2[0] }"><p>${viewMap.NMIC503.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p2[1] }"><p>${viewMap.NMIC503.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p2[2] }"><p>${viewMap.NMIC503.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p2[3] }"><p>${viewMap.NMIC503.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p2[4] }"><p>${viewMap.NMIC503.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-1" name="032-1">${divideMap.NMIC3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-2" name="032-2">${divideMap.NMIC3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-3" name="032-3">${divideMap.NMIC3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-4" name="032-4">${divideMap.NMIC3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC503.p3[0] }"><p>${viewMap.NMIC503.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p3[1] }"><p>${viewMap.NMIC503.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p3[2] }"><p>${viewMap.NMIC503.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p3[3] }"><p>${viewMap.NMIC503.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p3[4] }"><p>${viewMap.NMIC503.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-1" name="033-1">${divideMap.NMIC4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-2" name="033-2">${divideMap.NMIC4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-3" name="033-3">${divideMap.NMIC4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-4" name="033-4">${divideMap.NMIC4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC503.p4[0] }"><p>${viewMap.NMIC503.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p4[1] }"><p>${viewMap.NMIC503.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p4[2] }"><p>${viewMap.NMIC503.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p4[3] }"><p>${viewMap.NMIC503.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC503.p4[4] }"><p>${viewMap.NMIC503.p4[4]}</p></c:if>
 							</td>
 						</tr>
 						<tr class="pink3">
 							<td class="size">502</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-1" name="026-1">${divideMap.NMIC1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-2" name="026-2">${divideMap.NMIC1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-3" name="026-3">${divideMap.NMIC1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-4" name="026-4">${divideMap.NMIC1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC502.p1[0] }"><p>${viewMap.NMIC502.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p1[1] }"><p>${viewMap.NMIC502.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p1[2] }"><p>${viewMap.NMIC502.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p1[3] }"><p>${viewMap.NMIC502.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p1[4] }"><p>${viewMap.NMIC502.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-1" name="027-1">${divideMap.NMIC2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-2" name="027-2">${divideMap.NMIC2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-3" name="027-3">${divideMap.NMIC2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-4" name="027-4">${divideMap.NMIC2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC502.p2[0] }"><p>${viewMap.NMIC502.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p2[1] }"><p>${viewMap.NMIC502.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p2[2] }"><p>${viewMap.NMIC502.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p2[3] }"><p>${viewMap.NMIC502.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p2[4] }"><p>${viewMap.NMIC502.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-1" name="028-1">${divideMap.NMIC3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-2" name="028-2">${divideMap.NMIC3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-3" name="028-3">${divideMap.NMIC3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-4" name="028-4">${divideMap.NMIC3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC502.p3[0] }"><p>${viewMap.NMIC502.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p3[1] }"><p>${viewMap.NMIC502.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p3[2] }"><p>${viewMap.NMIC502.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p3[3] }"><p>${viewMap.NMIC502.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p3[4] }"><p>${viewMap.NMIC502.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-1" name="029-1">${divideMap.NMIC4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-2" name="029-2">${divideMap.NMIC4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-3" name="029-3">${divideMap.NMIC4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-4" name="029-4">${divideMap.NMIC4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC502.p4[0] }"><p>${viewMap.NMIC502.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p4[1] }"><p>${viewMap.NMIC502.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p4[2] }"><p>${viewMap.NMIC502.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p4[3] }"><p>${viewMap.NMIC502.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC502.p4[4] }"><p>${viewMap.NMIC502.p4[4]}</p></c:if>
 							</td>
 						</tr>
 						<tr class="pink2">
 							<td class="size">501</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-1" name="022-1">${divideMap.NMIC1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-2" name="022-2">${divideMap.NMIC1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-3" name="022-3">${divideMap.NMIC1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-4" name="022-4">${divideMap.NMIC1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC501.p1[0] }"><p>${viewMap.NMIC501.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p1[1] }"><p>${viewMap.NMIC501.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p1[2] }"><p>${viewMap.NMIC501.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p1[3] }"><p>${viewMap.NMIC501.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p1[4] }"><p>${viewMap.NMIC501.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-1" name="023-1">${divideMap.NMIC2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-2" name="023-2">${divideMap.NMIC2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-3" name="023-3">${divideMap.NMIC2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-4" name="023-4">${divideMap.NMIC2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC501.p2[0] }"><p>${viewMap.NMIC501.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p2[1] }"><p>${viewMap.NMIC501.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p2[2] }"><p>${viewMap.NMIC501.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p2[3] }"><p>${viewMap.NMIC501.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p2[4] }"><p>${viewMap.NMIC501.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-1" name="024-1">${divideMap.NMIC3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-2" name="024-2">${divideMap.NMIC3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-3" name="024-3">${divideMap.NMIC3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-4" name="024-4">${divideMap.NMIC3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC501.p3[0] }"><p>${viewMap.NMIC501.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p3[1] }"><p>${viewMap.NMIC501.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p3[2] }"><p>${viewMap.NMIC501.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p3[3] }"><p>${viewMap.NMIC501.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p3[4] }"><p>${viewMap.NMIC501.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-1" name="025-1">${divideMap.NMIC4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-2" name="025-2">${divideMap.NMIC4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-3" name="025-3">${divideMap.NMIC4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-4" name="025-4">${divideMap.NMIC4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC501.p4[0] }"><p>${viewMap.NMIC501.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p4[1] }"><p>${viewMap.NMIC501.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p4[2] }"><p>${viewMap.NMIC501.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p4[3] }"><p>${viewMap.NMIC501.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC501.p4[4] }"><p>${viewMap.NMIC501.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
@@ -2414,190 +1034,70 @@
 							<td class="size" id="M4F">404</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-1" name="026-1">${divideMap.NMIC1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-2" name="026-2">${divideMap.NMIC1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-3" name="026-3">${divideMap.NMIC1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-4" name="026-4">${divideMap.NMIC1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC404.p1[0] }"><p>${viewMap.NMIC404.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p1[1] }"><p>${viewMap.NMIC404.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p1[2] }"><p>${viewMap.NMIC404.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p1[3] }"><p>${viewMap.NMIC404.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p1[4] }"><p>${viewMap.NMIC404.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-1" name="027-1">${divideMap.NMIC2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-2" name="027-2">${divideMap.NMIC2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-3" name="027-3">${divideMap.NMIC2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-4" name="027-4">${divideMap.NMIC2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC404.p2[0] }"><p>${viewMap.NMIC404.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p2[1] }"><p>${viewMap.NMIC404.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p2[2] }"><p>${viewMap.NMIC404.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p2[3] }"><p>${viewMap.NMIC404.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p2[4] }"><p>${viewMap.NMIC404.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-1" name="028-1">${divideMap.NMIC3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-2" name="028-2">${divideMap.NMIC3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-3" name="028-3">${divideMap.NMIC3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-4" name="028-4">${divideMap.NMIC3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC404.p3[0] }"><p>${viewMap.NMIC404.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p3[1] }"><p>${viewMap.NMIC404.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p3[2] }"><p>${viewMap.NMIC404.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p3[3] }"><p>${viewMap.NMIC404.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p3[4] }"><p>${viewMap.NMIC404.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-1" name="029-1">${divideMap.NMIC4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-2" name="029-2">${divideMap.NMIC4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-3" name="029-3">${divideMap.NMIC4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-4" name="029-4">${divideMap.NMIC4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC404.p4[0] }"><p>${viewMap.NMIC404.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p4[1] }"><p>${viewMap.NMIC404.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p4[2] }"><p>${viewMap.NMIC404.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p4[3] }"><p>${viewMap.NMIC404.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC404.p4[4] }"><p>${viewMap.NMIC404.p4[4]}</p></c:if>
 							</td>
 						</tr>
 						<tr class="pink2">
 							<td class="size">403</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-1" name="022-1">${divideMap.NMIC1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-2" name="022-2">${divideMap.NMIC1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-3" name="022-3">${divideMap.NMIC1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-4" name="022-4">${divideMap.NMIC1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC403.p1[0] }"><p>${viewMap.NMIC403.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p1[1] }"><p>${viewMap.NMIC403.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p1[2] }"><p>${viewMap.NMIC403.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p1[3] }"><p>${viewMap.NMIC403.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p1[4] }"><p>${viewMap.NMIC403.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-1" name="023-1">${divideMap.NMIC2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-2" name="023-2">${divideMap.NMIC2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-3" name="023-3">${divideMap.NMIC2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-4" name="023-4">${divideMap.NMIC2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC403.p2[0] }"><p>${viewMap.NMIC403.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p2[1] }"><p>${viewMap.NMIC403.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p2[2] }"><p>${viewMap.NMIC403.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p2[3] }"><p>${viewMap.NMIC403.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p2[4] }"><p>${viewMap.NMIC403.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-1" name="024-1">${divideMap.NMIC3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-2" name="024-2">${divideMap.NMIC3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-3" name="024-3">${divideMap.NMIC3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-4" name="024-4">${divideMap.NMIC3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC403.p3[0] }"><p>${viewMap.NMIC403.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p3[1] }"><p>${viewMap.NMIC403.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p3[2] }"><p>${viewMap.NMIC403.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p3[3] }"><p>${viewMap.NMIC403.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p3[4] }"><p>${viewMap.NMIC403.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-1" name="025-1">${divideMap.NMIC4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-2" name="025-2">${divideMap.NMIC4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-3" name="025-3">${divideMap.NMIC4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-4" name="025-4">${divideMap.NMIC4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC403.p4[0] }"><p>${viewMap.NMIC403.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p4[1] }"><p>${viewMap.NMIC403.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p4[2] }"><p>${viewMap.NMIC403.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p4[3] }"><p>${viewMap.NMIC403.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC403.p4[4] }"><p>${viewMap.NMIC403.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
@@ -2605,190 +1105,70 @@
 							<td class="size">402</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-1" name="026-1">${divideMap.NMIC1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-2" name="026-2">${divideMap.NMIC1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-3" name="026-3">${divideMap.NMIC1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-4" name="026-4">${divideMap.NMIC1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC402.p1[0] }"><p>${viewMap.NMIC402.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p1[1] }"><p>${viewMap.NMIC402.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p1[2] }"><p>${viewMap.NMIC402.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p1[3] }"><p>${viewMap.NMIC402.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p1[4] }"><p>${viewMap.NMIC402.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-1" name="027-1">${divideMap.NMIC2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-2" name="027-2">${divideMap.NMIC2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-3" name="027-3">${divideMap.NMIC2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-4" name="027-4">${divideMap.NMIC2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC402.p2[0] }"><p>${viewMap.NMIC402.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p2[1] }"><p>${viewMap.NMIC402.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p2[2] }"><p>${viewMap.NMIC402.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p2[3] }"><p>${viewMap.NMIC402.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p2[4] }"><p>${viewMap.NMIC402.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-1" name="028-1">${divideMap.NMIC3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-2" name="028-2">${divideMap.NMIC3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-3" name="028-3">${divideMap.NMIC3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-4" name="028-4">${divideMap.NMIC3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC402.p3[0] }"><p>${viewMap.NMIC402.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p3[1] }"><p>${viewMap.NMIC402.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p3[2] }"><p>${viewMap.NMIC402.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p3[3] }"><p>${viewMap.NMIC402.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p3[4] }"><p>${viewMap.NMIC402.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-1" name="029-1">${divideMap.NMIC4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-2" name="029-2">${divideMap.NMIC4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-3" name="029-3">${divideMap.NMIC4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-4" name="029-4">${divideMap.NMIC4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC402.p4[0] }"><p>${viewMap.NMIC402.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p4[1] }"><p>${viewMap.NMIC402.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p4[2] }"><p>${viewMap.NMIC402.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p4[3] }"><p>${viewMap.NMIC402.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC402.p4[4] }"><p>${viewMap.NMIC402.p4[4]}</p></c:if>
 							</td>
 						</tr>
 						<tr class="pink2">
 							<td class="size">401</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-1" name="022-1">${divideMap.NMIC1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-2" name="022-2">${divideMap.NMIC1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-3" name="022-3">${divideMap.NMIC1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-4" name="022-4">${divideMap.NMIC1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC401.p1[0] }"><p>${viewMap.NMIC401.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p1[1] }"><p>${viewMap.NMIC401.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p1[2] }"><p>${viewMap.NMIC401.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p1[3] }"><p>${viewMap.NMIC401.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p1[4] }"><p>${viewMap.NMIC401.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-1" name="023-1">${divideMap.NMIC2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-2" name="023-2">${divideMap.NMIC2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-3" name="023-3">${divideMap.NMIC2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-4" name="023-4">${divideMap.NMIC2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC401.p2[0] }"><p>${viewMap.NMIC401.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p2[1] }"><p>${viewMap.NMIC401.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p2[2] }"><p>${viewMap.NMIC401.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p2[3] }"><p>${viewMap.NMIC401.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p2[4] }"><p>${viewMap.NMIC401.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-1" name="024-1">${divideMap.NMIC3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-2" name="024-2">${divideMap.NMIC3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-3" name="024-3">${divideMap.NMIC3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-4" name="024-4">${divideMap.NMIC3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC401.p3[0] }"><p>${viewMap.NMIC401.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p3[1] }"><p>${viewMap.NMIC401.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p3[2] }"><p>${viewMap.NMIC401.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p3[3] }"><p>${viewMap.NMIC401.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p3[4] }"><p>${viewMap.NMIC401.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-1" name="025-1">${divideMap.NMIC4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-2" name="025-2">${divideMap.NMIC4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-3" name="025-3">${divideMap.NMIC4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-4" name="025-4">${divideMap.NMIC4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC401.p4[0] }"><p>${viewMap.NMIC401.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p4[1] }"><p>${viewMap.NMIC401.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p4[2] }"><p>${viewMap.NMIC401.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p4[3] }"><p>${viewMap.NMIC401.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC401.p4[4] }"><p>${viewMap.NMIC401.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
@@ -2796,190 +1176,70 @@
 							<td class="size" id="M3F">304</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-1" name="026-1">${divideMap.NMIC1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-2" name="026-2">${divideMap.NMIC1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-3" name="026-3">${divideMap.NMIC1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-4" name="026-4">${divideMap.NMIC1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC304.p1[0] }"><p>${viewMap.NMIC304.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p1[1] }"><p>${viewMap.NMIC304.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p1[2] }"><p>${viewMap.NMIC304.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p1[3] }"><p>${viewMap.NMIC304.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p1[4] }"><p>${viewMap.NMIC304.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-1" name="027-1">${divideMap.NMIC2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-2" name="027-2">${divideMap.NMIC2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-3" name="027-3">${divideMap.NMIC2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-4" name="027-4">${divideMap.NMIC2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC304.p2[0] }"><p>${viewMap.NMIC304.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p2[1] }"><p>${viewMap.NMIC304.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p2[2] }"><p>${viewMap.NMIC304.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p2[3] }"><p>${viewMap.NMIC304.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p2[4] }"><p>${viewMap.NMIC304.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-1" name="028-1">${divideMap.NMIC3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-2" name="028-2">${divideMap.NMIC3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-3" name="028-3">${divideMap.NMIC3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-4" name="028-4">${divideMap.NMIC3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC304.p3[0] }"><p>${viewMap.NMIC304.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p3[1] }"><p>${viewMap.NMIC304.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p3[2] }"><p>${viewMap.NMIC304.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p3[3] }"><p>${viewMap.NMIC304.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p3[4] }"><p>${viewMap.NMIC304.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-1" name="029-1">${divideMap.NMIC4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-2" name="029-2">${divideMap.NMIC4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-3" name="029-3">${divideMap.NMIC4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-4" name="029-4">${divideMap.NMIC4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC304.p4[0] }"><p>${viewMap.NMIC304.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p4[1] }"><p>${viewMap.NMIC304.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p4[2] }"><p>${viewMap.NMIC304.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p4[3] }"><p>${viewMap.NMIC304.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC304.p4[4] }"><p>${viewMap.NMIC304.p4[4]}</p></c:if>
 							</td>
 						</tr>
 						<tr class="pink2">
 							<td class="size">303</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-1" name="022-1">${divideMap.NMIC1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-2" name="022-2">${divideMap.NMIC1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-3" name="022-3">${divideMap.NMIC1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-4" name="022-4">${divideMap.NMIC1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC303.p1[0] }"><p>${viewMap.NMIC303.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p1[1] }"><p>${viewMap.NMIC303.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p1[2] }"><p>${viewMap.NMIC303.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p1[3] }"><p>${viewMap.NMIC303.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p1[4] }"><p>${viewMap.NMIC303.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-1" name="023-1">${divideMap.NMIC2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-2" name="023-2">${divideMap.NMIC2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-3" name="023-3">${divideMap.NMIC2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-4" name="023-4">${divideMap.NMIC2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC303.p2[0] }"><p>${viewMap.NMIC303.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p2[1] }"><p>${viewMap.NMIC303.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p2[2] }"><p>${viewMap.NMIC303.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p2[3] }"><p>${viewMap.NMIC303.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p2[4] }"><p>${viewMap.NMIC303.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-1" name="024-1">${divideMap.NMIC3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-2" name="024-2">${divideMap.NMIC3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-3" name="024-3">${divideMap.NMIC3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-4" name="024-4">${divideMap.NMIC3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC303.p3[0] }"><p>${viewMap.NMIC303.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p3[1] }"><p>${viewMap.NMIC303.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p3[2] }"><p>${viewMap.NMIC303.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p3[3] }"><p>${viewMap.NMIC303.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p3[4] }"><p>${viewMap.NMIC303.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-1" name="025-1">${divideMap.NMIC4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-2" name="025-2">${divideMap.NMIC4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-3" name="025-3">${divideMap.NMIC4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-4" name="025-4">${divideMap.NMIC4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC303.p4[0] }"><p>${viewMap.NMIC303.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p4[1] }"><p>${viewMap.NMIC303.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p4[2] }"><p>${viewMap.NMIC303.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p4[3] }"><p>${viewMap.NMIC303.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC303.p4[4] }"><p>${viewMap.NMIC303.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
@@ -2987,190 +1247,70 @@
 							<td class="size">302</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-1" name="026-1">${divideMap.NMIC1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-2" name="026-2">${divideMap.NMIC1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-3" name="026-3">${divideMap.NMIC1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-4" name="026-4">${divideMap.NMIC1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC302.p1[0] }"><p>${viewMap.NMIC302.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p1[1] }"><p>${viewMap.NMIC302.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p1[2] }"><p>${viewMap.NMIC302.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p1[3] }"><p>${viewMap.NMIC302.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p1[4] }"><p>${viewMap.NMIC302.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-1" name="027-1">${divideMap.NMIC2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-2" name="027-2">${divideMap.NMIC2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-3" name="027-3">${divideMap.NMIC2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-4" name="027-4">${divideMap.NMIC2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC302.p2[0] }"><p>${viewMap.NMIC302.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p2[1] }"><p>${viewMap.NMIC302.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p2[2] }"><p>${viewMap.NMIC302.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p2[3] }"><p>${viewMap.NMIC302.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p2[4] }"><p>${viewMap.NMIC302.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-1" name="028-1">${divideMap.NMIC3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-2" name="028-2">${divideMap.NMIC3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-3" name="028-3">${divideMap.NMIC3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-4" name="028-4">${divideMap.NMIC3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC302.p3[0] }"><p>${viewMap.NMIC302.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p3[1] }"><p>${viewMap.NMIC302.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p3[2] }"><p>${viewMap.NMIC302.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p3[3] }"><p>${viewMap.NMIC302.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p3[4] }"><p>${viewMap.NMIC302.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-1" name="029-1">${divideMap.NMIC4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-2" name="029-2">${divideMap.NMIC4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-3" name="029-3">${divideMap.NMIC4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-4" name="029-4">${divideMap.NMIC4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC302.p4[0] }"><p>${viewMap.NMIC302.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p4[1] }"><p>${viewMap.NMIC302.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p4[2] }"><p>${viewMap.NMIC302.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p4[3] }"><p>${viewMap.NMIC302.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC302.p4[4] }"><p>${viewMap.NMIC302.p4[4]}</p></c:if>
 							</td>
 						</tr>
 						<tr class="pink2">
 							<td class="size">301</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-1" name="022-1">${divideMap.NMIC1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-2" name="022-2">${divideMap.NMIC1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-3" name="022-3">${divideMap.NMIC1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-4" name="022-4">${divideMap.NMIC1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC301.p1[0] }"><p>${viewMap.NMIC301.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p1[1] }"><p>${viewMap.NMIC301.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p1[2] }"><p>${viewMap.NMIC301.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p1[3] }"><p>${viewMap.NMIC301.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p1[4] }"><p>${viewMap.NMIC301.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-1" name="023-1">${divideMap.NMIC2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-2" name="023-2">${divideMap.NMIC2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-3" name="023-3">${divideMap.NMIC2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-4" name="023-4">${divideMap.NMIC2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC301.p2[0] }"><p>${viewMap.NMIC301.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p2[1] }"><p>${viewMap.NMIC301.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p2[2] }"><p>${viewMap.NMIC301.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p2[3] }"><p>${viewMap.NMIC301.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p2[4] }"><p>${viewMap.NMIC301.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-1" name="024-1">${divideMap.NMIC3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-2" name="024-2">${divideMap.NMIC3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-3" name="024-3">${divideMap.NMIC3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-4" name="024-4">${divideMap.NMIC3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC301.p3[0] }"><p>${viewMap.NMIC301.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p3[1] }"><p>${viewMap.NMIC301.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p3[2] }"><p>${viewMap.NMIC301.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p3[3] }"><p>${viewMap.NMIC301.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p3[4] }"><p>${viewMap.NMIC301.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-1" name="025-1">${divideMap.NMIC4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-2" name="025-2">${divideMap.NMIC4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-3" name="025-3">${divideMap.NMIC4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-4" name="025-4">${divideMap.NMIC4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC301.p4[0] }"><p>${viewMap.NMIC301.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p4[1] }"><p>${viewMap.NMIC301.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p4[2] }"><p>${viewMap.NMIC301.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p4[3] }"><p>${viewMap.NMIC301.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC301.p4[4] }"><p>${viewMap.NMIC301.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
@@ -3178,190 +1318,70 @@
 							<td class="size" id="M2F">204</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-1" name="026-1">${divideMap.NMIC1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-2" name="026-2">${divideMap.NMIC1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-3" name="026-3">${divideMap.NMIC1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-4" name="026-4">${divideMap.NMIC1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC204.p1[0] }"><p>${viewMap.NMIC204.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p1[1] }"><p>${viewMap.NMIC204.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p1[2] }"><p>${viewMap.NMIC204.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p1[3] }"><p>${viewMap.NMIC204.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p1[4] }"><p>${viewMap.NMIC204.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-1" name="027-1">${divideMap.NMIC2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-2" name="027-2">${divideMap.NMIC2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-3" name="027-3">${divideMap.NMIC2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-4" name="027-4">${divideMap.NMIC2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC204.p2[0] }"><p>${viewMap.NMIC204.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p2[1] }"><p>${viewMap.NMIC204.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p2[2] }"><p>${viewMap.NMIC204.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p2[3] }"><p>${viewMap.NMIC204.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p2[4] }"><p>${viewMap.NMIC204.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-1" name="028-1">${divideMap.NMIC3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-2" name="028-2">${divideMap.NMIC3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-3" name="028-3">${divideMap.NMIC3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-4" name="028-4">${divideMap.NMIC3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC204.p3[0] }"><p>${viewMap.NMIC204.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p3[1] }"><p>${viewMap.NMIC204.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p3[2] }"><p>${viewMap.NMIC204.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p3[3] }"><p>${viewMap.NMIC204.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p3[4] }"><p>${viewMap.NMIC204.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-1" name="029-1">${divideMap.NMIC4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-2" name="029-2">${divideMap.NMIC4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-3" name="029-3">${divideMap.NMIC4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-4" name="029-4">${divideMap.NMIC4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC204.p4[0] }"><p>${viewMap.NMIC204.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p4[1] }"><p>${viewMap.NMIC204.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p4[2] }"><p>${viewMap.NMIC204.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p4[3] }"><p>${viewMap.NMIC204.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC204.p4[4] }"><p>${viewMap.NMIC204.p4[4]}</p></c:if>
 							</td>
 						</tr>
 						<tr class="pink2">
 							<td class="size">203</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-1" name="022-1">${divideMap.NMIC1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-2" name="022-2">${divideMap.NMIC1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-3" name="022-3">${divideMap.NMIC1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-4" name="022-4">${divideMap.NMIC1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC203.p1[0] }"><p>${viewMap.NMIC203.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p1[1] }"><p>${viewMap.NMIC203.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p1[2] }"><p>${viewMap.NMIC203.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p1[3] }"><p>${viewMap.NMIC203.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p1[4] }"><p>${viewMap.NMIC203.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-1" name="023-1">${divideMap.NMIC2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-2" name="023-2">${divideMap.NMIC2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-3" name="023-3">${divideMap.NMIC2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-4" name="023-4">${divideMap.NMIC2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC203.p2[0] }"><p>${viewMap.NMIC203.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p2[1] }"><p>${viewMap.NMIC203.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p2[2] }"><p>${viewMap.NMIC203.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p2[3] }"><p>${viewMap.NMIC203.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p2[4] }"><p>${viewMap.NMIC203.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-1" name="024-1">${divideMap.NMIC3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-2" name="024-2">${divideMap.NMIC3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-3" name="024-3">${divideMap.NMIC3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-4" name="024-4">${divideMap.NMIC3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC203.p3[0] }"><p>${viewMap.NMIC203.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p3[1] }"><p>${viewMap.NMIC203.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p3[2] }"><p>${viewMap.NMIC203.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p3[3] }"><p>${viewMap.NMIC203.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p3[4] }"><p>${viewMap.NMIC203.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-1" name="025-1">${divideMap.NMIC4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-2" name="025-2">${divideMap.NMIC4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-3" name="025-3">${divideMap.NMIC4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-4" name="025-4">${divideMap.NMIC4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC203.p4[0] }"><p>${viewMap.NMIC203.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p4[1] }"><p>${viewMap.NMIC203.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p4[2] }"><p>${viewMap.NMIC203.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p4[3] }"><p>${viewMap.NMIC203.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC203.p4[4] }"><p>${viewMap.NMIC203.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
@@ -3369,190 +1389,70 @@
 							<td class="size">202</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-1" name="026-1">${divideMap.NMIC1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-2" name="026-2">${divideMap.NMIC1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-3" name="026-3">${divideMap.NMIC1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-4" name="026-4">${divideMap.NMIC1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC202.p1[0] }"><p>${viewMap.NMIC202.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p1[1] }"><p>${viewMap.NMIC202.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p1[2] }"><p>${viewMap.NMIC202.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p1[3] }"><p>${viewMap.NMIC202.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p1[4] }"><p>${viewMap.NMIC202.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-1" name="027-1">${divideMap.NMIC2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-2" name="027-2">${divideMap.NMIC2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-3" name="027-3">${divideMap.NMIC2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-4" name="027-4">${divideMap.NMIC2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC202.p2[0] }"><p>${viewMap.NMIC202.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p2[1] }"><p>${viewMap.NMIC202.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p2[2] }"><p>${viewMap.NMIC202.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p2[3] }"><p>${viewMap.NMIC202.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p2[4] }"><p>${viewMap.NMIC202.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-1" name="028-1">${divideMap.NMIC3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-2" name="028-2">${divideMap.NMIC3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-3" name="028-3">${divideMap.NMIC3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-4" name="028-4">${divideMap.NMIC3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC202.p3[0] }"><p>${viewMap.NMIC202.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p3[1] }"><p>${viewMap.NMIC202.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p3[2] }"><p>${viewMap.NMIC202.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p3[3] }"><p>${viewMap.NMIC202.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p3[4] }"><p>${viewMap.NMIC202.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-1" name="029-1">${divideMap.NMIC4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-2" name="029-2">${divideMap.NMIC4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-3" name="029-3">${divideMap.NMIC4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-4" name="029-4">${divideMap.NMIC4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC202.p4[0] }"><p>${viewMap.NMIC202.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p4[1] }"><p>${viewMap.NMIC202.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p4[2] }"><p>${viewMap.NMIC202.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p4[3] }"><p>${viewMap.NMIC202.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC202.p4[4] }"><p>${viewMap.NMIC202.p4[4]}</p></c:if>
 							</td>
 						</tr>
 						<tr class="pink2">
 							<td class="size">201</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-1" name="022-1">${divideMap.NMIC1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-2" name="022-2">${divideMap.NMIC1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-3" name="022-3">${divideMap.NMIC1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-4" name="022-4">${divideMap.NMIC1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC201.p1[0] }"><p>${viewMap.NMIC201.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p1[1] }"><p>${viewMap.NMIC201.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p1[2] }"><p>${viewMap.NMIC201.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p1[3] }"><p>${viewMap.NMIC201.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p1[4] }"><p>${viewMap.NMIC201.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-1" name="023-1">${divideMap.NMIC2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-2" name="023-2">${divideMap.NMIC2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-3" name="023-3">${divideMap.NMIC2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-4" name="023-4">${divideMap.NMIC2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC201.p2[0] }"><p>${viewMap.NMIC201.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p2[1] }"><p>${viewMap.NMIC201.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p2[2] }"><p>${viewMap.NMIC201.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p2[3] }"><p>${viewMap.NMIC201.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p2[4] }"><p>${viewMap.NMIC201.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-1" name="024-1">${divideMap.NMIC3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-2" name="024-2">${divideMap.NMIC3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-3" name="024-3">${divideMap.NMIC3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-4" name="024-4">${divideMap.NMIC3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC201.p3[0] }"><p>${viewMap.NMIC201.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p3[1] }"><p>${viewMap.NMIC201.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p3[2] }"><p>${viewMap.NMIC201.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p3[3] }"><p>${viewMap.NMIC201.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p3[4] }"><p>${viewMap.NMIC201.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-1" name="025-1">${divideMap.NMIC4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-2" name="025-2">${divideMap.NMIC4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-3" name="025-3">${divideMap.NMIC4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-4" name="025-4">${divideMap.NMIC4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC201.p4[0] }"><p>${viewMap.NMIC201.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p4[1] }"><p>${viewMap.NMIC201.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p4[2] }"><p>${viewMap.NMIC201.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p4[3] }"><p>${viewMap.NMIC201.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC201.p4[4] }"><p>${viewMap.NMIC201.p4[4]}</p></c:if>
 							</td>
 						</tr>
 
@@ -3560,95 +1460,35 @@
 							<td class="size" id="M1F">101</td>
 							<td class="size">1</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-1" name="026-1">${divideMap.NMIC1[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-2" name="026-2">${divideMap.NMIC1[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-3" name="026-3">${divideMap.NMIC1[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC1-4" name="026-4">${divideMap.NMIC1[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC101.p1[0] }"><p>${viewMap.NMIC101.p1[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p1[1] }"><p>${viewMap.NMIC101.p1[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p1[2] }"><p>${viewMap.NMIC101.p1[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p1[3] }"><p>${viewMap.NMIC101.p1[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p1[4] }"><p>${viewMap.NMIC101.p1[4]}</p></c:if>
 							</td>
 							<td class="size">2</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-1" name="027-1">${divideMap.NMIC2[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-2" name="027-2">${divideMap.NMIC2[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-3" name="027-3">${divideMap.NMIC2[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC2-4" name="027-4">${divideMap.NMIC2[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC101.p2[0] }"><p>${viewMap.NMIC101.p2[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p2[1] }"><p>${viewMap.NMIC101.p2[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p2[2] }"><p>${viewMap.NMIC101.p2[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p2[3] }"><p>${viewMap.NMIC101.p2[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p2[4] }"><p>${viewMap.NMIC101.p2[4]}</p></c:if>
 							</td>
 							<td class="size">3</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-1" name="028-1">${divideMap.NMIC3[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-2" name="028-2">${divideMap.NMIC3[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-3" name="028-3">${divideMap.NMIC3[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC3-4" name="028-4">${divideMap.NMIC3[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC101.p3[0] }"><p>${viewMap.NMIC101.p3[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p3[1] }"><p>${viewMap.NMIC101.p3[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p3[2] }"><p>${viewMap.NMIC101.p3[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p3[3] }"><p>${viewMap.NMIC101.p3[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p3[4] }"><p>${viewMap.NMIC101.p3[4]}</p></c:if>
 							</td>
 							<td class="size">4</td>
 							<td class="size">
-								<p class="size drop-target">
-									1
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-1" name="029-1">${divideMap.NMIC4[0] }</textarea>
-								</p>
-								<p class="size drop-target">
-									2
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-2" name="029-2">${divideMap.NMIC4[1] }</textarea>
-								</p>
-								<p class="size drop-target">
-									3
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-3" name="029-3">${divideMap.NMIC4[2] }</textarea>
-								</p>
-								<p class="size drop-target">
-									4
-									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NMIC4-4" name="029-4">${divideMap.NMIC4[3] }</textarea>
-								</p>
+								<c:if test="${!empty viewMap.NMIC101.p4[0] }"><p>${viewMap.NMIC101.p4[0]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p4[1] }"><p>${viewMap.NMIC101.p4[1]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p4[2] }"><p>${viewMap.NMIC101.p4[2]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p4[3] }"><p>${viewMap.NMIC101.p4[3]}</p></c:if>
+								<c:if test="${!empty viewMap.NMIC101.p4[4] }"><p>${viewMap.NMIC101.p4[4]}</p></c:if>
 							</td>
 						</tr>
 				</table>
