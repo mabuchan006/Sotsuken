@@ -46,7 +46,7 @@
 <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
 <script type="text/javascript" src="../js/dragdrop.js"></script>
 <script src="../js/modal.js"></script>
-<script src="../js/week.js"></script>
+<script src="../js/clickEvent.js"></script>
 
 <!-- Custom CSS -->
 <link href="../css/style.css" rel="stylesheet">
@@ -55,8 +55,9 @@
 	$(function(e) {
 		$("#class-room").accordion();
 		f_drag();
-		f_drop(e);
-		f_active(e);
+		f_drop( e );
+		f_active( e );
+		clickEvent( e );
 	});
 </script>
 
@@ -274,7 +275,7 @@
 								<p class="size drop-target">
 									1
 									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS802-1" name="019-1">${divideMap.NCS802[0] }</textarea>
+										id="NCS802-1" name="019-1">${divideMap.NCS802[0] }</textarea><label>X</label>
 								</p>
 								<p class="size drop-target">
 									2
