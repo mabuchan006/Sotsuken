@@ -1,13 +1,15 @@
 var elem = "";
 
 function clickEvent( e ){
-	//登録簿さんが押された時
+	//登録ボタンがクリックされた時
 	$("#submitBtn").click(function(e) {
 		//ボタンにname（submit）を付加
 		$("button").attr("name", "submit");
 	});
 
+	//labelがクリックされた時
 	$("label").click(function( e ){
+		//クリックされたlabelの親要素(p)内にある子要素(textarea)のvalueを初期化
 		$(this).parents("p").children("textarea").get(0).value = "";
 	});
 }
