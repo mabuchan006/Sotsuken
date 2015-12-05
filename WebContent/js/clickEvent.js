@@ -12,6 +12,14 @@ function clickEvent( e ){
 		//クリックされたlabelの親要素(p)内にある子要素(textarea)のvalueを初期化
 		$(this).parents("p").children("textarea").get(0).value = "";
 	});
+
+	//一括削除ボタンがクリックされた時
+	$().click(function( e ){
+		for(var i = 0; i < $("textarea").length; i++){
+			$("textarea").get(i).value = "";
+		}
+	})
+
 }
 
 function f_active(e) {
