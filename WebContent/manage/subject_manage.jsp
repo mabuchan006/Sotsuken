@@ -94,6 +94,7 @@ function selectChange(num){
 <option style="color: black;" value="ALL">ALL</option>
 </select> <!-- 2回目学年select終了 -->
 
+
 <!-- 2回目学科 -->
 <label for="cource"class="labels">学科</label>
 <select class="form-control col-md-1" name="cource_name2" id="cource_id2">

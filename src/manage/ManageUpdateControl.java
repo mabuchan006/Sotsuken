@@ -66,6 +66,7 @@ public class ManageUpdateControl extends HttpServlet {
 			classUpdate(request, cdm);
 		}//if
 
+		//講師管理画面処理
 		if(get_page.equals("subject_manage")){
 
 			try {
@@ -74,25 +75,65 @@ public class ManageUpdateControl extends HttpServlet {
 			page_title = "科目管理画面";
 			//更新済み科目情報全件取得
 			subjectDBManage sdm = new subjectDBManage();
+			int showFlag=0;
+			String grade_name1 = request.getParameter("grade_name1");
+			String cource_name1 = request.getParameter("cource_name1");
+			String classID1 = grade_name1+cource_name1;
+			String grade_name2 = request.getParameter("grade_name2");
+			String cource_name2 = request.getParameter("cource_name2");
+			String classID2 = grade_name2+cource_name2;
 
-			String grade_name = request.getParameter("grade_name1");
-			String cource_name = request.getParameter("cource_name1");
-			String classID1 = grade_name+
-					cource_name;
+			//学年ごとに対応したクラス情報
+			Map<String,List<String>> classMap = sdm.classDBSelect();
+			//更新済み科目情報全件取得
+			List<subjectInfo> subjectList = sdm.subjectDBSelect();
 
-			if(grade_name.equals("ALL")){
-				
+			//学年がallだった場合の処理
+			if(grade_name1.equals("ALL")){
+				showFlag=1;
+			}
+			//学科がallだった場合の処理
+			if(cource_name1.equals("ALL")){
+				//対象学年の全学科に対してinsert
+				for (String cource : classMap.get(grade_name1)) {
+
+					//insert走らせる予定
+					subjectUpdate(request, sdm, cource + grade_name1, showFlag); ;
+
+				}
+				classMap.get("grade_name1");
 			}
 
-			subjectUpdate(request, sdm, classID1);
+			//送信された科目情報取得
+			subjectInfo si = new subjectInfo(
+					request.getParameter("subjectID")==null?0//true
+							:Integer.parseInt(request.getParameter("subjectID"))//false
+					,request.getParameter("subjectName")
+					,request.getParameter("bringThings"),showFlag
 
-			String classID2 = request.getParameter("grade_name2")+
-					request.getParameter("cource_name2");
+					);
+
+			if(request.getParameter("regist_subject") != null ){
+				sdm.subjectDBUpdate(si, classID1,DBAccess.INSERT, "登録");
+				System.out.println("登録");
+			}
+
+			if(request.getParameter("delete_subject") != null){
+				sdm.subjectDBUpdate(si, classID1,DBAccess.DELETE, "削除");
+				System.out.println("削除");
+			}
+
+
+
+			request.setAttribute("subjectList", subjectList);
+			request.setAttribute("classMap", classMap);
 
 			//2つ目指定されていたら
 			if (!(classID2.equals(""))){
-				subjectUpdate(request, sdm, classID2);
-			}//if
+
+
+
+				}//if
 
 			} catch (Exception e) {
 				// TODO 自動生成された catch ブロック
@@ -103,6 +144,7 @@ public class ManageUpdateControl extends HttpServlet {
 
 		//ページデータセット
 		try {
+
 			request.setAttribute("content_page", content_page);
 			request.setAttribute("page_title", page_title);
 
@@ -120,13 +162,13 @@ public class ManageUpdateControl extends HttpServlet {
 
 	}//doGet
 
-	private void subjectUpdate(HttpServletRequest request, subjectDBManage sdm, String classID) throws Exception {
+	private void subjectUpdate(HttpServletRequest request, subjectDBManage sdm, String classID,int showFlag) throws Exception {
 		//送信された科目情報取得
 		subjectInfo si = new subjectInfo(
 				request.getParameter("subjectID")==null?0//true
 						:Integer.parseInt(request.getParameter("subjectID"))//false
 				,request.getParameter("subjectName")
-				,request.getParameter("bringThings"),0
+				,request.getParameter("bringThings"),showFlag
 
 				);
 
