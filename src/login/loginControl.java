@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import manage.db.loginDBManage;
 import manage.db.teacherInfo;
-import manage.db.userDBManage;
 
 
 @WebServlet("/loginControl")
@@ -50,6 +50,7 @@ public class loginControl extends HttpServlet {
 		response.sendRedirect(loginPath);
 	}//doGet
 
+	//ログイン処理
 	//doPost
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//パス初期値
@@ -62,8 +63,7 @@ public class loginControl extends HttpServlet {
 
 		//セッション情報で振り分け
 		try {
-			userDBManage udb = new userDBManage();
-
+			loginDBManage udb = new loginDBManage();
 			teacherInfo tchinf = udb.userDBSearch( tchInf );
 
 			if( tchinf != null ){

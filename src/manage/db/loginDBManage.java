@@ -3,7 +3,7 @@ package manage.db;
 import DB.DBAccess;
 
 
-public class userDBManage extends DBAccess{
+public class loginDBManage extends DBAccess{
 
 	//接続ドライバ未定義
 	private final static String DRIVER_NAME = "java:comp/env/jdbc/MySqlCon";
@@ -20,11 +20,11 @@ public class userDBManage extends DBAccess{
 		this.msg = msg;
 	}
 
-	public userDBManage() {
+	public loginDBManage() {
 		//DBAccessに接続
 		super(DRIVER_NAME);
 		selectSql =
-				String.format( "select teacherID , password from %s where teacherID =? AND password=?" );
+				String.format( "select teacherID,password from %s where teacherID =? AND password=?" );
 	}
 
 
@@ -32,16 +32,16 @@ public class userDBManage extends DBAccess{
 	public teacherInfo userDBSearch(teacherInfo ti) throws Exception{
 		connect();
 		createStstement(searchSql);
-		getPstmt().setInt(1,ti.getTeacherID());
-		getPstmt().setString(2,ti.getPassword());
+		getPstmt().setInt( 1 , ti.getTeacherID() );
+		getPstmt().setString( 2 , ti.getPassword() );
 		selectExe();//PreparedStatement実行
 		//格納ユーザーインスタンス
 		teacherInfo teacher = null;
 		if( getRsResult().next() ){
 			teacher = new teacherInfo(
-					getRsResult().getInt("teacherID"),
-					getRsResult().getString("teacherName"),
-					getRsResult().getString("password")
+					getRsResult().getInt( "teacherID" ),
+					getRsResult().getString( "teacherName" ),
+					getRsResult().getString( "password" )
 					);
 		}//if
 		disConnection();
@@ -49,12 +49,12 @@ public class userDBManage extends DBAccess{
 	}//userDBSearch
 
 
-	private String resultMsg(teacherInfo ti,String msg){
+	private String resultMsg( teacherInfo ti , String msg ){
 		//処理が実行されなかったら
-		if (getIntResult() == 0){
-			return String.format("%sを%sできませんでした。",ti.getTeacherName(),msg);
+		if ( getIntResult() == 0 ){
+			return String.format( "%sを%sできませんでした。" , ti.getTeacherName() , msg );
 		}
-		return String.format("%sを%sしました。",ti.getTeacherName(),msg);
+		return String.format( "%sを%sしました。" , ti.getTeacherName() , msg );
 	}//resultMsg
 
 }
