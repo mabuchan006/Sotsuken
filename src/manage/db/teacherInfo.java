@@ -12,6 +12,7 @@ public class teacherInfo implements Serializable {
 		super();
 		// TODO 自動生成されたコンストラクター・スタブ
 	}
+
 	public teacherInfo(int teacherID, String teacherName, String password) {
 		super();
 		this.teacherID = teacherID;

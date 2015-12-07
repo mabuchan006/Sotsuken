@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import manage.db.loginDBManage;
+import manage.db.teacherInfo;
+
 
 @WebServlet("/loginControl")
 public class loginControl extends HttpServlet {
@@ -22,8 +25,8 @@ public class loginControl extends HttpServlet {
 
     //doGet
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String loginPath = "/Sotsuken/manage/manage_top.jsp";
-		String logoutPath = "/Sotsuken/top.jsp";
+		String loginPath = "/Sotsuken/manage/";//変更予定のため未記述
+		String logoutPath = "/Sotsuken/";//変更予定のため未記述
 
 		//ログアウト処理
 		if( request.getParameter("state") != null &&
@@ -35,7 +38,6 @@ public class loginControl extends HttpServlet {
 			}//if
 
 			//セッション接続を切る
-			//userInfoでも可？
 			session.removeAttribute("id");
 			session.removeAttribute("password");
 
@@ -48,35 +50,34 @@ public class loginControl extends HttpServlet {
 		response.sendRedirect(loginPath);
 	}//doGet
 
+	//ログイン処理
 	//doPost
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//パス初期値
-		String path="/Sotsuken/manage/manage_top.jsp";
-		String errPath="/Sotsuken/";
+		String path="/Sotsuken/manage/";//変更予定のため未記述
+		String errPath="/Sotsuken/";//変更予定のため未記述
 
-//		userInfo user = new userInfo();
-//		user.setName(request.getParameter("id") );
-//		user.setName(request.getParameter("password") );
+		teacherInfo tchInf = new teacherInfo();
+		tchInf.setTeacherID(Integer.parseInt( request.getParameter( "teacherID" ) ) );
+		tchInf.setPassword( request.getParameter( "password" ) );
 
 		//セッション情報で振り分け
 		try {
-//			userDBManage udb = new userDBManage("user");
-//			userInfo loginUser = udb.userDBSelect(user);
-//			SchoolDBManage schoolDB = new SchoolDBManage();
-//			SchoolInfo schoolInfo = schoolDB.schoolDBSearch(loginUser);
+			loginDBManage udb = new loginDBManage();
+			teacherInfo tchinf = udb.userDBSearch( tchInf );
 
-//			if( loginInfo != null ){
-//				session = request.getSession(true);
-//				session.setAttribute( "" , "" );
-//				session.setAttribute( "" , "" );
-//				response.sendRedirect(path);
-//				return;
-//			}//if
+			if( tchinf != null ){
+				session = request.getSession(true);
+				session.setAttribute( "teacherID" , "" );
+				session.setAttribute( "password" , "" );
+				response.sendRedirect(path);
+				return;
+			}//if
 
 		} catch (Exception e) {
 			e.printStackTrace();
-//			request.setAttribute("errMsg", "ユーザ名かパスワードが違います。");
-//			response.sendRedirect(errPath);
+			request.setAttribute("errMsg", "ユーザ名かパスワードが違います。");
+			response.sendRedirect(errPath);
 		}//try-catch
 
 	}//doPost
