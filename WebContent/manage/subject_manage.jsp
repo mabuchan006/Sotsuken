@@ -5,7 +5,7 @@
 <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <!DOCTYPE html>
 
-
+<!-- 学年学科選択処理 -->
 <script>
 
 var classItems = new Array();
@@ -58,17 +58,25 @@ function selectChange(num){
 <!-- form -->
 <form action="" method="get">
 <table class="col-md-6 col-md-offset-3" id="first_table">
+<thead>
+<tr>
+<th class="col-md-3">科目名</th>
+<th class="col-md-3">学年</th>
+<th class="col-md-3">学科</th>
+<th class="col-md-3">持ち物</th>
+<th class="col-md-3"><label for="cource" class="empty">________</label></th></tr>
+</thead>
+<tbody>
 <tr>
 <td class="col-md-4">
-<label for="subjectName" class="labels">科目名</label>
-<input type="text" class="form-control" id="subjectName"name="subjectName">
-<label for="cource" class="labels">持ち物</label>
-<input type="text" class="form-control" name="cource">
+<input type="text" class="form-control" id="subjectName"name="subjectName" />
 </td>
 
 <td class="col-md-4">
-<label for="cource" class="labels">学年</label>
+<input type="text" class="form-control" name="cource" />
+</td>
 
+<td>
 <!-- 学年表示セレクト -->
 <select name="grade_name1" id="grade_id1" class="form-control col-md-1" onchange="selectChange(1)">
 <option style="color: black;" >--選択--</option>
@@ -77,35 +85,23 @@ function selectChange(num){
 </c:forEach>
 <option style="color: black;" value="ALL">ALL</option>
 </select> <!-- 1回目学年select終了 -->
+</td>
 
+<td>
 <!-- 学科　選択学年から学科をjqで自動抽出予定 -->
-<label for="cource"class="labels">学科</label>
 <select class="form-control col-md-1" name="cource_name1" id="cource_id1">
 <option style="color: black;">--学年を選んでください--</option>
-</select></td>
+</select>
+</td>
 
-<td class="col-md-4"><label for="cource" class="labels">学年</label>
-<!-- 学年表示セレクト -->
-<select name="grade_name2" id="grade_id2" class="form-control col-md-1" onchange="selectChange(2)">
-<option style="color: black;" >--選択--</option>
-<c:forEach var="rs" items="${classMap}">
-<option style="color: black;" value="${rs.key }">${rs.key }</option>
-</c:forEach>
-<option style="color: black;" value="ALL">ALL</option>
-</select> <!-- 2回目学年select終了 -->
-
-
-<!-- 2回目学科 -->
-<label for="cource"class="labels">学科</label>
-<select class="form-control col-md-1" name="cource_name2" id="cource_id2">
-<option style="color: black;">--学年を選んでください--</option>
-</select></td>
-
-<td class="col-md-4"><label for="cource" class="empty">________</label>
+<td>
 <button type="button" class="btn btn-primary" id="regist_btn">登録</button>
 </td>
+
 </tr>
+</tbody>
 </table>
+
 </form>
 
 
