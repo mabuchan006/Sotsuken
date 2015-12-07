@@ -62,13 +62,13 @@
 		<tbody>
 			<tr class="purple1">
 				<td></td>
-				<td>(月)</td>
-				<td>(火)</td>
-				<td>(水)</td>
-				<td>(木)</td>
-				<td>(金)</td>
-				<td>(土)</td>
-				<td>(日)</td>
+				<td>(Mon)</td>
+				<td>(Tue)</td>
+				<td>(Wed)</td>
+				<td>(Thu)</td>
+				<td>(Fri)</td>
+				<td>(Sta)</td>
+				<td>(Sun)</td>
 			</tr>
 
 			<tr class="info">
@@ -81,8 +81,6 @@
 				<td><div class="drop-target"><textarea style="text-align: center" rows="1" cols="6" id="test"></textarea></div></td>
 				<td><div class="drop-target"><textarea style="text-align: center" rows="1" cols="6" id="test"></textarea></div></td>
 				<td><div class="drop-target"><textarea style="text-align: center" rows="1" cols="6" id="test"></textarea></div></td>
-
-
 			</tr>
 
 			<tr class="info">
@@ -97,14 +95,9 @@
 			</tr>
 
 			<tr class="info">
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-
+				<c:forEach var="rooms" items="${rooms1List }">
+					<td>${rooms.roomName }</td>
+					</c:forEach>
 			</tr>
 
 			<tr class="danger">

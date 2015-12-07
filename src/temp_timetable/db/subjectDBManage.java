@@ -10,6 +10,7 @@ public class subjectDBManage extends DBAccess {
 	private final static String DRIVER_NAME = "java:comp/env/jdbc/MySqlCon";
 	private String choiceSubjectSQL; //クラスIDから各科目抽出
 
+
 	public subjectDBManage(String chooseClassID) {
 		super(DRIVER_NAME);
 		choiceSubjectSQL = String.format("SELECT infoSub.subjectID, sub.subjectName, infoSub.classID, cla.className "

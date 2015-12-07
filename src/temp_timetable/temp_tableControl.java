@@ -16,8 +16,10 @@ import Tools.layoutInclude.layoutIncludeInfo;
 import divide.db.divideInfo;
 import manage.db.teacherDBManage;
 import manage.db.teacherInfo;
+import temp_timetable.db.roomInfo;
 import temp_timetable.db.subjectDBManage;
 import temp_timetable.db.subjectInfo;
+import temp_timetable.db.tempDBManage;
 
 /**
  * Servlet implementation class temp_tableControl
@@ -32,17 +34,23 @@ public class temp_tableControl extends HttpServlet {
 	private List<divideInfo> divideList; // コマ割り情報保持用
 	private List<subjectInfo> infoSubjectList; // 科目情報保持用
 	private List<teacherInfo> teacherList; // 先生情報保持用
+	private List<String> rooms1List; // 時間割マスタ保持用
+	private List<roomInfo> rooms2List; // 時間割マスタ保持用
+	private List<roomInfo> rooms3List; // 時間割マスタ保持用
+	private List<roomInfo> rooms4List; // 時間割マスタ保持用
 
-	private String content_page = "/temp_timetable/temp_table_regist.jsp"; // 遷移先jsp
+	String content_page = "/temp_timetable/temp_table_regist.jsp"; // 遷移先jsp
 	private String page_title = "Temporary Edit";// ページ名
 	private String chooseClassID = "R4A1";// classID選択
+
+	subjectDBManage suDBM = new subjectDBManage(chooseClassID);
+	teacherDBManage teDBM = new teacherDBManage();
+	tempDBManage tempDBM = new tempDBManage();
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
 	public temp_tableControl() {
-		// ●temp_table_regist.jspで使用
-
 	}
 
 	/**
@@ -60,18 +68,28 @@ public class temp_tableControl extends HttpServlet {
 		request.setAttribute("css", info.css);
 		request.setAttribute("js", info.js);
 
-		subjectDBManage suDBM = new subjectDBManage(chooseClassID);
-		teacherDBManage teDBM = new teacherDBManage();
-		// masterDBSwitch tblSW= new masterDBSwitch();
-		// TODO テーブル柔軟にすること
 		try {
 			infoSubjectList = suDBM.choiceSubject(); // 科目取得
 			teacherList = teDBM.teacherDBSelect(); // 先生取得
 			int teacher_count = teacherList.size();
 
+			for(int i =1; i <= 7; i++){
+				String roomName = tempDBM.roomsSelect(1, chooseClassID, i);
+				System.out.println(roomName);
+				rooms1List.add(roomName);
+				//rooms2List = tempDBM.roomsSelect(2, chooseClassID, i);
+				//rooms3List = tempDBM.roomsSelect(3, chooseClassID, i);
+				//rooms4List = tempDBM.roomsSelect(4, chooseClassID, i);
+			}//for
+
 			request.setAttribute("infoSubjectList", infoSubjectList);
 			request.setAttribute("teacherList",teacherList);
 			request.setAttribute("teacher_count",teacher_count);
+			request.setAttribute("rooms1List", rooms1List);
+			//request.setAttribute("rooms2List", rooms2List);
+			//request.setAttribute("rooms3List", rooms3List);
+			//request.setAttribute("rooms4List", rooms4List);
+
 		} catch (Exception e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
@@ -94,7 +112,5 @@ public class temp_tableControl extends HttpServlet {
 			throws ServletException, IOException {
 		doGet(request, response);
 	}
-
-
 
 }
