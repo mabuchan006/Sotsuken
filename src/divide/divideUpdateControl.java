@@ -48,7 +48,7 @@ public class divideUpdateControl extends HttpServlet {
 		// 使用するcss,jsファイルの適用
 		getIncludeFile(request);
 		// ページ情報指定
-		content_page = "/manage/time_divide_manage_edit.jsp";
+		content_page = "/manage/time_divide_manage_view.jsp";
 		page_title = "Create Schedule";
 
 		String[] classIDArray;
@@ -63,6 +63,7 @@ public class divideUpdateControl extends HttpServlet {
 		divideDBManage ddm = new divideDBManage();
 		try {
 			for (String key : map.keySet()) {
+				System.out.println(key);
 				if (key.equals("mon") || key.equals("tue") || key.equals("wed") || key.equals("thu")
 						|| key.equals("fri")) {
 					switch (key) {
@@ -85,7 +86,7 @@ public class divideUpdateControl extends HttpServlet {
 				} else if (key.equals("submit")) {
 
 					// delete
-					ddm.divideDBDelete();
+					ddm.divideDBDelete(week);
 
 				} else {
 
@@ -103,12 +104,11 @@ public class divideUpdateControl extends HttpServlet {
 
 			} // for
 
-			HashMap<String, HashMap<String, String[]>> viewMap = new HashMap<String, HashMap<String, String[]>>();
-
 			// select edit
 			HashMap<String, String[]> divideMap = ddm.editDivideDBSelect(week);
 
 			// select view
+			HashMap<String, HashMap<String, String[]>> viewMap = new HashMap<String, HashMap<String, String[]>>();
 			for (String rKey : divideMap.keySet()) {
 				viewMap.put(rKey, new HashMap<String, String[]>());
 				for (int i = 0; i < divideMap.get(rKey).length; i++) {
