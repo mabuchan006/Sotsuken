@@ -34,14 +34,14 @@ public class temp_tableControl extends HttpServlet {
 	private List<divideInfo> divideList; // コマ割り情報保持用
 	private List<subjectInfo> infoSubjectList; // 科目情報保持用
 	private List<teacherInfo> teacherList; // 先生情報保持用
-	private List<String> rooms1List; // 時間割マスタ保持用
+	private List<roomInfo> rooms1List; // 時間割マスタ保持用
 	private List<roomInfo> rooms2List; // 時間割マスタ保持用
 	private List<roomInfo> rooms3List; // 時間割マスタ保持用
 	private List<roomInfo> rooms4List; // 時間割マスタ保持用
 
 	String content_page = "/temp_timetable/temp_table_regist.jsp"; // 遷移先jsp
 	private String page_title = "Temporary Edit";// ページ名
-	private String chooseClassID = "R4A1";// classID選択
+	private String chooseClassID = "R1A1";// classID選択
 
 	subjectDBManage suDBM = new subjectDBManage(chooseClassID);
 	teacherDBManage teDBM = new teacherDBManage();
@@ -73,14 +73,13 @@ public class temp_tableControl extends HttpServlet {
 			teacherList = teDBM.teacherDBSelect(); // 先生取得
 			int teacher_count = teacherList.size();
 
-				String roomName = tempDBM.roomsSelect(1, chooseClassID, 1);
-				if(roomName.equals(null)){
-					System.out.println("null");
-				}
-				rooms1List.add(roomName);
-				//rooms2List = tempDBM.roomsSelect(2, chooseClassID, i);
-				//rooms3List = tempDBM.roomsSelect(3, chooseClassID, i);
-				//rooms4List = tempDBM.roomsSelect(4, chooseClassID, i);
+			rooms1List = tempDBM.roomsSelect(1, chooseClassID);
+			int period_1 = rooms1List.size();
+			request.setAttribute("period_1",period_1);
+			//rooms2List = tempDBM.roomsSelect(2, chooseClassID, week);
+			//rooms3List = tempDBM.roomsSelect(3, chooseClassID, week);
+			//rooms4List = tempDBM.roomsSelect(4, chooseClassID, week);
+
 
 
 			request.setAttribute("infoSubjectList", infoSubjectList);

@@ -4,7 +4,7 @@
 <%@ page pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+
 <!-- タブ -->
 
 <ul class="nav nav-tabs noprint" >
@@ -95,9 +95,6 @@
 			</tr>
 
 			<tr class="info">
-				<c:forEach var="rooms" items="${rooms1List }">
-					<td>${rooms.roomName }</td>
-					</c:forEach>
 			</tr>
 
 			<tr class="danger">
@@ -227,7 +224,7 @@
 	<table class="table table-border ">
 		<tbody>
 			<%
-				int teacher_count = (int) request.getAttribute("teacher_count");
+				int teacher_count =  (int)request.getAttribute("teacher_count");
 				int cnt1 = 0;
 				for (; cnt1 < teacher_count; cnt1++) {
 					pageContext.setAttribute("cnt1", cnt1);

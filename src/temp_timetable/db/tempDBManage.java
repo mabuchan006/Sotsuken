@@ -1,6 +1,8 @@
 package temp_timetable.db;
 
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 import DB.DBAccess;
 
@@ -17,11 +19,11 @@ public class tempDBManage extends DBAccess {
 
 	public tempDBManage() {
 		super(DRIVER_NAME);
-		rooms1_SQL = String.format("SELECT GROUP_CONCAT(DISTINCT room.roomName separator '/') AS roomName "
+		rooms1_SQL = String.format("SELECT divide.period, divide.week, GROUP_CONCAT(DISTINCT room.roomName separator '/') AS roomName "
 	            +"FROM tbl_room room "
 	            +"INNER JOIN tbl_timedivide divide on room.roomID = divide.roomID "
 	            +"GROUP BY divide.classID, divide.period, divide.week "
-	            +"HAVING divide.period = 1 && divide.classID = ? && divide.week = ? "
+	            +"HAVING divide.classID = ? && divide.period = ? "
 	            +"ORDER BY case divide.week when '月' then 1 when '火' then 2 when '水' then 3 when '木' then 4 "
 	            +"when '金' then 5 when '土' then 6 when '日' then 7 end");
 
@@ -48,8 +50,8 @@ public class tempDBManage extends DBAccess {
 	}
 
 
-	public String roomsSelect(int periodNum,String classID, int week) throws Exception{
-		String  roomName = "";
+	public List<roomInfo> roomsSelect(int periodNum,String classID) throws Exception{
+		List<roomInfo> roomsList = new ArrayList<roomInfo>();
 				//DB接続
 				connect();
 
@@ -58,126 +60,43 @@ public class tempDBManage extends DBAccess {
 				case 1:
 					createStstement(rooms1_SQL);
 					getPstmt().setString(1, classID);
-						switch(week){
-						case 1:
-							getPstmt().setString(2, "月");
-							break;
-						case 2:
-							getPstmt().setString(2, "火");
-							break;
-						case 3:
-							getPstmt().setString(2, "水");
-							break;
-						case 4:
-							getPstmt().setString(2, "木");
-							break;
-						case 5:
-							getPstmt().setString(2, "金");
-							break;
-						case 6:
-							getPstmt().setString(2, "土");
-								break;
-						case 7:
-							getPstmt().setString(2, "日");
-							break;
-						}
+					getPstmt().setInt(2, periodNum);
 					break;
 				case 2:
 					createStstement(rooms2_SQL);
 					getPstmt().setString(1, classID);
-					switch(week){
-					case 1:
-						getPstmt().setString(2, "月");
-						break;
-					case 2:
-						getPstmt().setString(2, "火");
-						break;
-					case 3:
-						getPstmt().setString(2, "水");
-						break;
-					case 4:
-						getPstmt().setString(2, "木");
-						break;
-					case 5:
-						getPstmt().setString(2, "金");
-						break;
-					case 6:
-						getPstmt().setString(2, "土");
-							break;
-					case 7:
-						getPstmt().setString(2, "日");
-						break;
-					}
+					getPstmt().setInt(2, periodNum);
+
+
 					break;
 				case 3:
 					createStstement(rooms3_SQL);
 					getPstmt().setString(1, classID);
-					switch(week){
-					case 1:
-						getPstmt().setString(2, "月");
-						break;
-					case 2:
-						getPstmt().setString(2, "火");
-						break;
-					case 3:
-						getPstmt().setString(2, "水");
-						break;
-					case 4:
-						getPstmt().setString(2, "木");
-						break;
-					case 5:
-						getPstmt().setString(2, "金");
-						break;
-					case 6:
-						getPstmt().setString(2, "土");
-							break;
-					case 7:
-						getPstmt().setString(2, "日");
-						break;
-					}
+					getPstmt().setInt(2, periodNum);
+
 					break;
 				case 4:
 					createStstement(rooms4_SQL);
 					getPstmt().setString(1, classID);
-					switch(week){
-					case 1:
-						getPstmt().setString(2, "月");
-						break;
-					case 2:
-						getPstmt().setString(2, "火");
-						break;
-					case 3:
-						getPstmt().setString(2, "水");
-						break;
-					case 4:
-						getPstmt().setString(2, "木");
-						break;
-					case 5:
-						getPstmt().setString(2, "金");
-						break;
-					case 6:
-						getPstmt().setString(2, "土");
-							break;
-					case 7:
-						getPstmt().setString(2, "日");
-						break;
-					}
+					getPstmt().setInt(2, periodNum);
+
 					break;
 				}
 				selectExe();
 				ResultSet rs = getRsResult();
+				roomInfo roominfo = null;
 					while(rs.next()) {
-							 if(rs.getString("roomName").equals(null)){
-								 System.out.print("ぬるだよ");
-								 break;
-							 }else{
-								 roomName =rs.getString("roomName");
-								 break;
-							 }
-						}
-					System.out.println("1:"+ roomName);
+								 roominfo =new roomInfo(
+										 rs.getInt("period"),
+										 rs.getString("week"),
+										 rs.getString("roomName")
+										 );
+								 System.out.print("値:"+roominfo);
+								 roomsList.add(roominfo);
+					}
+
 					disConnection();
-					return roomName;
+					return roomsList;
 					//TODO: null に対して空白挿入
 	}
 

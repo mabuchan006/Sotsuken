@@ -7,16 +7,20 @@ import java.io.Serializable;
  *
  */
 public class roomInfo implements Serializable {
-	public roomInfo(String roomName) {
-		super();
-		this.roomName = roomName;
-	}
+
 
 	public roomInfo() {
 		super();
 		// TODO 自動生成されたコンストラクター・スタブ
 	}
-
+	public roomInfo(int period, String week, String roomName) {
+		super();
+		this.period = period;
+		this.week = week;
+		this.roomName = roomName;
+	}
+	private int period;
+	private String week;
 	private String roomName;
 
 	public String getRoomName() {
@@ -25,6 +29,22 @@ public class roomInfo implements Serializable {
 
 	public void setRoomName(String roomName) {
 		this.roomName = roomName;
+	}
+
+	public int getPeriod() {
+		return period;
+	}
+
+	public void setPeriod(int period) {
+		this.period = period;
+	}
+
+	public String getWeek() {
+		return week;
+	}
+
+	public void setWeek(String week) {
+		this.week = week;
 	}
 
 }
