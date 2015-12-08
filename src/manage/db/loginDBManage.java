@@ -14,18 +14,18 @@ public class loginDBManage extends DBAccess{
 
 	public String getMsg() {
 		return msg;
-	}
+	}//getMsg
 
 	public void setMsg(String msg) {
 		this.msg = msg;
-	}
+	}//setMsg
 
 	public loginDBManage() {
 		//DBAccessに接続
 		super(DRIVER_NAME);
 		selectSql =
 				String.format( "select teacherID,password from %s where teacherID =? AND password=?" );
-	}
+	}//loginDBManage()
 
 	public teacherInfo userDBSearch(teacherInfo ti) throws Exception{
 		//接続
@@ -46,17 +46,18 @@ public class loginDBManage extends DBAccess{
 					getRsResult().getString( "password" )
 					);
 		}//if
+
 		//接続解除
 		disConnection();
 		return teacher;
 	}//userDBSearch
 
 
-	private String resultMsg( teacherInfo ti , String msg ){
+	public String resultMsg( teacherInfo ti , String msg ){
 		//処理が実行されなかったら
 		if ( getIntResult() == 0 ){
 			return String.format( "%sを%sできませんでした。" , ti.getTeacherName() , msg );
-		}
+		}//if
 		return String.format( "%sを%sしました。" , ti.getTeacherName() , msg );
 	}//resultMsg
 
