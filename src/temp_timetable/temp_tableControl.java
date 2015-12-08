@@ -73,14 +73,15 @@ public class temp_tableControl extends HttpServlet {
 			teacherList = teDBM.teacherDBSelect(); // 先生取得
 			int teacher_count = teacherList.size();
 
-			for(int i =1; i <= 7; i++){
-				String roomName = tempDBM.roomsSelect(1, chooseClassID, i);
-				System.out.println(roomName);
+				String roomName = tempDBM.roomsSelect(1, chooseClassID, 1);
+				if(roomName.equals(null)){
+					System.out.println("null");
+				}
 				rooms1List.add(roomName);
 				//rooms2List = tempDBM.roomsSelect(2, chooseClassID, i);
 				//rooms3List = tempDBM.roomsSelect(3, chooseClassID, i);
 				//rooms4List = tempDBM.roomsSelect(4, chooseClassID, i);
-			}//for
+
 
 			request.setAttribute("infoSubjectList", infoSubjectList);
 			request.setAttribute("teacherList",teacherList);
