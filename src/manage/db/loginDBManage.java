@@ -2,14 +2,12 @@ package manage.db;
 
 import DB.DBAccess;
 
-
 public class loginDBManage extends DBAccess{
 
-	//接続ドライバ未定義
 	private final static String DRIVER_NAME = "java:comp/env/jdbc/MySqlCon";
 
 	private String selectSql;
-	private String searchSql;
+	//private String searchSql;
 	private String msg;
 
 	public String getMsg() {
@@ -30,8 +28,8 @@ public class loginDBManage extends DBAccess{
 	public teacherInfo userDBSearch(teacherInfo ti) throws Exception{
 		//接続
 		connect();
-		//searchSqlをDBへ流す
-		createStstement(searchSql);
+		//selectSqlをDBへ流す
+		createStstement(selectSql);
 		getPstmt().setInt( 1 , ti.getTeacherID() );
 		getPstmt().setString( 2 , ti.getPassword() );
 		//PreparedStatement実行
@@ -53,7 +51,7 @@ public class loginDBManage extends DBAccess{
 	}//userDBSearch
 
 
-	public String resultMsg( teacherInfo ti , String msg ){
+	public String resultMsg(teacherInfo ti,String msg){
 		//処理が実行されなかったら
 		if ( getIntResult() == 0 ){
 			return String.format( "%sを%sできませんでした。" , ti.getTeacherName() , msg );
