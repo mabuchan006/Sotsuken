@@ -28,11 +28,12 @@ public class loginControl extends HttpServlet {
 		String loginPath = "/Sotsuken/manage/";//変更予定のため未記述
 		String logoutPath = "/Sotsuken/";//変更予定のため未記述
 
-		//ログアウト処理
+		//セッション情報がない場合　セッションが開始されていない場合
+		//request.getParameterメソッドでstate情報を取得
 		if( request.getParameter("state") != null &&
 				request.getParameter("state").equals("logout") ) {
 
-			//セッション情報取得
+			//セッション情報ない場合→開始
 			if( session == null ) {
 				session = request.getSession(true);
 			}//if
@@ -57,23 +58,31 @@ public class loginControl extends HttpServlet {
 		String path="/Sotsuken/manage/";//変更予定のため未記述
 		String errPath="/Sotsuken/";//変更予定のため未記述
 
+		//teacherInfoを参照
 		teacherInfo tchInf = new teacherInfo();
+		//ユーザーが入力したIDとPASSWORDをteacherInfoで取得
 		tchInf.setTeacherID(Integer.parseInt( request.getParameter( "teacherID" ) ) );
 		tchInf.setPassword( request.getParameter( "password" ) );
 
 		//セッション情報で振り分け
 		try {
-			loginDBManage udb = new loginDBManage();
-			teacherInfo tchinf = udb.userDBSearch( tchInf );
+			//loginDBManageを参照し、teacherInfoに格納された情報をuserDBSearchで検索
+			loginDBManage Ldb = new loginDBManage();
+			teacherInfo tchinf = Ldb.userDBSearch( tchInf );
 
+			//teacherInfo内に情報がなかったら
 			if( tchinf != null ){
+				//session start
 				session = request.getSession(true);
-				session.setAttribute( "teacherID" , "" );
-				session.setAttribute( "password" , "" );
-				response.sendRedirect(path);
+				//add teacherID & password
+				session.setAttribute( "teacherID" , "teacherID" );
+				session.setAttribute( "password" , "password" );
+				//login
+				response.sendRedirect( path );
 				return;
 			}//if
 
+		//errManage
 		} catch (Exception e) {
 			e.printStackTrace();
 			request.setAttribute("errMsg", "ユーザ名かパスワードが違います。");
@@ -81,5 +90,6 @@ public class loginControl extends HttpServlet {
 		}//try-catch
 
 	}//doPost
+
 
 }

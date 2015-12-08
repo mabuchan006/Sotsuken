@@ -27,14 +27,16 @@ public class loginDBManage extends DBAccess{
 				String.format( "select teacherID,password from %s where teacherID =? AND password=?" );
 	}
 
-
-
 	public teacherInfo userDBSearch(teacherInfo ti) throws Exception{
+		//接続
 		connect();
+		//searchSqlをDBへ流す
 		createStstement(searchSql);
 		getPstmt().setInt( 1 , ti.getTeacherID() );
 		getPstmt().setString( 2 , ti.getPassword() );
-		selectExe();//PreparedStatement実行
+		//PreparedStatement実行
+		selectExe();
+
 		//格納ユーザーインスタンス
 		teacherInfo teacher = null;
 		if( getRsResult().next() ){
@@ -44,6 +46,7 @@ public class loginDBManage extends DBAccess{
 					getRsResult().getString( "password" )
 					);
 		}//if
+		//接続解除
 		disConnection();
 		return teacher;
 	}//userDBSearch
