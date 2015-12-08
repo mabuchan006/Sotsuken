@@ -23,22 +23,22 @@ public class loginControl extends HttpServlet {
         super();
     }
 
-    //doGet
+    //doGet(情報の取得と操作)
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String loginPath = "/Sotsuken/manage/";//変更予定のため未記述
 		String logoutPath = "/Sotsuken/";//変更予定のため未記述
 
-		//セッション情報がない場合　セッションが開始されていない場合
-		//request.getParameterメソッドでstate情報を取得
+		//if Not SessionInfo & Not start Session
+		//if Got Parameter's is not null & logout
 		if( request.getParameter("state") != null &&
 				request.getParameter("state").equals("logout") ) {
 
-			//セッション情報ない場合→開始
+			//if sessionInfo is null → start
 			if( session == null ) {
 				session = request.getSession(true);
 			}//if
 
-			//セッション接続を切る
+			//inputInfo is delete
 			session.removeAttribute("id");
 			session.removeAttribute("password");
 
@@ -52,7 +52,7 @@ public class loginControl extends HttpServlet {
 	}//doGet
 
 	//ログイン処理
-	//doPost
+	//doPost(サーバから送信)
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//パス初期値
 		String path="/Sotsuken/manage/";//変更予定のため未記述
@@ -75,8 +75,8 @@ public class loginControl extends HttpServlet {
 				//session start
 				session = request.getSession(true);
 				//add teacherID & password
-				session.setAttribute( "teacherID" , "teacherID" );
-				session.setAttribute( "password" , "password" );
+				session.setAttribute( "teacherID" , "" );
+				session.setAttribute( "password" , "" );
 				//login
 				response.sendRedirect( path );
 				return;
