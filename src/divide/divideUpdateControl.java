@@ -48,7 +48,7 @@ public class divideUpdateControl extends HttpServlet {
 		// 使用するcss,jsファイルの適用
 		getIncludeFile(request);
 		// ページ情報指定
-		content_page = "/manage/time_divide_manage_view.jsp";
+		content_page = "/manage/time_divide_manage_edit.jsp";
 		page_title = "Create Schedule";
 
 		String[] classIDArray;
