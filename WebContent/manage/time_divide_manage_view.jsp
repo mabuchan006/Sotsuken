@@ -61,12 +61,6 @@
 </script>
 
 
- <script type="text/javascript">
-    $(document).ready(function () {
-        $('table').fixedTableHeader();
-    });
-</script>
-
 <title>コマ割画面</title>
 
 </head>
@@ -173,7 +167,7 @@
 			<div class="container">
 				<div class="table  col-md-6 ">
 					<h1 class="text-center">NCS</h1>
-					<table class="table table-striped table-bordered text-center ;">
+					<table class="table table-striped table-bordered text-center teble-headerfixed;">
 						<thead>
 
 							<tr class="back-color4 white wide2 ">
