@@ -57,34 +57,32 @@ function selectChange(num){
 
 <!-- form -->
 <form action="" method="get">
-<table class="col-md-6 col-md-offset-3" id="first_table">
+<table class="table col-md-6 col-md-offset-3">
 <thead>
 <tr>
-<th class="col-md-3">科目名</th>
-<th class="col-md-3">学年</th>
-<th class="col-md-3">学科</th>
-<th class="col-md-3">持ち物</th>
-<th class="col-md-3"><label for="cource" class="empty">________</label></th></tr>
+<th>科目名</th>
+<th>学年</th>
+<th>学科</th>
+<th>持ち物</th>
+<th></th></tr>
 </thead>
 <tbody>
 <tr>
-<td class="col-md-4">
+<!-- 科目名 -->
+<td>
 <input type="text" class="form-control" id="subjectName"name="subjectName" />
 </td>
 
-<td class="col-md-4">
-<input type="text" class="form-control" name="cource" />
-</td>
 
-<td>
 <!-- 学年表示セレクト -->
+<td>
 <select name="grade_name1" id="grade_id1" class="form-control col-md-1" onchange="selectChange(1)">
 <option style="color: black;" >--選択--</option>
 <c:forEach var="rs" items="${classMap}">
 <option style="color: black;" value="${rs.key }">${rs.key }</option>
 </c:forEach>
 <option style="color: black;" value="ALL">ALL</option>
-</select> <!-- 1回目学年select終了 -->
+</select> <!-- 学年select終了 -->
 </td>
 
 <td>
@@ -92,6 +90,11 @@ function selectChange(num){
 <select class="form-control col-md-1" name="cource_name1" id="cource_id1">
 <option style="color: black;">--学年を選んでください--</option>
 </select>
+</td>
+
+<!-- 持ち物 -->
+<td>
+<input type="text" class="form-control" name="bringThings" />
 </td>
 
 <td>
