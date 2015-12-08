@@ -6,6 +6,9 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 
+<!-- 印刷時非表示 -->
+<div class="noprint">
+
 <!-- Start Logo Section -->
 <!-- ヘッダー部分 -->
 <section id="logo-section" class="text-center">
@@ -70,7 +73,9 @@
 
 </ul>
 
+</div>
 
+<br />
 
 	<!-- 印刷エリア指定id printareaで囲んだ範囲で可能 -->
 	<div class="printarea">
@@ -279,4 +284,5 @@
 			</table>
 		</div>
 	</div>
+	<style type="text/css" media="print" value="PRINT_TEST">
 </div>
