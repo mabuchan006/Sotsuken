@@ -5,8 +5,8 @@
 	 type="javax.sql.DataSource"
 	 driverClassName="com.mysql.jdbc.Driver"
 	 url="jdbc:mysql://localhost:3306/Sotsuken"
-	 username="root"
-	 password=""
+	 username="ncs_sotsuken"
+	 password="TJwVd9Q"
 	 maxActive="100"
 	 maxIdle="30"
 	 maxWait="1000">
