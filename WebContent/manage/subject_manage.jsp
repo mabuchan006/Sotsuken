@@ -3,10 +3,11 @@
 	pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <!-- 学年学科選択処理 -->
 <script>
+
 
 var classItems = new Array();
 var arrayflag = 0;
@@ -24,7 +25,7 @@ function firstSelect(val1,val2){
 }//firstSelect
 
 function selectInsert(selVal,num){
-	var select=$("#cource_id"+num);
+	var select=$(".cource_id"+num);
 	var selArray = new Array();
 	select.text("");
 	var selArray = classItems[selVal].split(",");
@@ -39,9 +40,12 @@ function selectInsert(selVal,num){
 
 function selectChange(num){
 	//選択されているvalue属性を取り出す
-	var val = $("#grade_id"+num).val();
+	var val = $(".grade_id"+num).val();
 	selectInsert(val,num);
 	}//selectChange
+
+
+
 
 </script>
 
@@ -66,7 +70,7 @@ function selectChange(num){
 <th>持ち物</th>
 <th></th></tr>
 </thead>
-<tbody>
+<tbody id="addTb-tbody">
 <tr>
 <!-- 科目名 -->
 <td>
@@ -76,7 +80,7 @@ function selectChange(num){
 
 <!-- 学年表示セレクト -->
 <td>
-<select name="grade_name1" id="grade_id1" class="form-control col-md-1" onchange="selectChange(1)">
+<select name="grade_name1 grade_id1"  class="form-control col-md-1"  onchange="selectChange(1)">
 <option style="color: black;" >--選択--</option>
 <c:forEach var="rs" items="${classMap}">
 <option style="color: black;" value="${rs.key }">${rs.key }</option>
@@ -87,7 +91,7 @@ function selectChange(num){
 
 <td>
 <!-- 学科　選択学年から学科をjqで自動抽出予定 -->
-<select class="form-control col-md-1" name="cource_name1" id="cource_id1">
+<select class="form-control col-md-1 cource_id1" name="cource_name1">
 <option style="color: black;">--学年を選んでください--</option>
 </select>
 </td>
@@ -100,6 +104,11 @@ function selectChange(num){
 <td>
 <button type="button" class="btn btn-primary" id="regist_btn">登録</button>
 </td>
+
+  <td>
+    <input value="+" type="button" class="addList" >　
+    <input value="-" type="button" class="removeList" />
+  </td>
 
 </tr>
 </tbody>

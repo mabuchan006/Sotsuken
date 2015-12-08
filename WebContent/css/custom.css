@@ -8,6 +8,9 @@ body {
 
 }
 
+#addTb-tbody tr:first-child {
+  display: none;
+}
 
 #wrapper {
   padding-left: 250px;
