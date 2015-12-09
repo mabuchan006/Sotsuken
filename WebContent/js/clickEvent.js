@@ -3,6 +3,7 @@ var elem = "";
 function clickEvent( e ){
 	// 登録ボタンがクリックされた時
 	$("#submitBtn").click(function(e) {
+		$("#modal2").modal("show");
 		// ボタンにname（submit）を付加
 		$("button").attr("name", "submit");
 	});
@@ -36,13 +37,12 @@ function f_active(e) {
 		$(this).addClass("active");
 
 		if($("#dropFlag").get(0).value === "true"){
-			console.log(elem.name);
-			$(".modal").modal("show")
+			$("#modal1").modal("show")
 		} else {
 			$.ajax({
 				type : "POST",
-				url : "/divideAjax.php",
-				data : { "week" : elem.name}
+				url : "/Sotsuken/php/divideAjax.php",
+				//data : { "week" : elem.name}
 			}).done(function(){
 				console.log("ok");
 			}).fail(function(){
