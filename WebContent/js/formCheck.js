@@ -7,8 +7,7 @@ function formCheck( e ) {
 
 	//backspace key と delete key の入力を検知
 	$("textarea").keyup(function( e ){
-		//console.log($(this).val(e.KeyCode));
-		if(e.KeyCode === 8 || e.KeyCode === 46){
+		if(e.which === 8 || e.which === 46){
 			$("#dropFlag").get(0).value = "true";
 			console.log($("#dropFlag").get(0).value);
 		}
