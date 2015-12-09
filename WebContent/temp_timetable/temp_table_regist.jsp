@@ -95,6 +95,19 @@
 			</tr>
 
 			<tr class="info">
+			<%
+			int period_1 =  Integer.parseInt((String)request.getAttribute("period_1")) - 1;
+			for(int week = 1;week <= 7;week++){
+				pageContext.setAttribute("index",period_1);
+			%>
+				<c:if test="${rooms1List[index].week == '月' }"><td>rooms1List[index].roomName</td></c:if>
+			<%
+			period_1 = period_1 - 1;
+			if(period_1 == 0){
+				break;
+			}
+			}
+			%>
 			</tr>
 
 			<tr class="danger">
@@ -224,7 +237,7 @@
 	<table class="table table-border ">
 		<tbody>
 			<%
-				int teacher_count =  (int)request.getAttribute("teacher_count");
+				int teacher_count =  Integer.parseInt((String)request.getAttribute("teacher_count"));
 				int cnt1 = 0;
 				for (; cnt1 < teacher_count; cnt1++) {
 					pageContext.setAttribute("cnt1", cnt1);
