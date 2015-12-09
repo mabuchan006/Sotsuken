@@ -9,6 +9,7 @@
 <script>
 
 
+
 var classItems = new Array();
 var arrayflag = 0;
 
@@ -25,7 +26,7 @@ function firstSelect(val1,val2){
 }//firstSelect
 
 function selectInsert(selVal,num){
-	var select=$(".cource_id"+num);
+	var select=$("#cource_id"+num);
 	var selArray = new Array();
 	select.text("");
 	var selArray = classItems[selVal].split(",");
@@ -40,10 +41,9 @@ function selectInsert(selVal,num){
 
 function selectChange(num){
 	//選択されているvalue属性を取り出す
-	var val = $(".grade_id"+num).val();
+	var val = $("#grade_id"+num).val();
 	selectInsert(val,num);
 	}//selectChange
-
 
 
 
@@ -71,7 +71,7 @@ function selectChange(num){
 <th></th></tr>
 </thead>
 <tbody id="addTb-tbody">
-<tr>
+<tr class="tList">
 <!-- 科目名 -->
 <td>
 <input type="text" class="form-control" id="subjectName"name="subjectName" />
@@ -80,7 +80,7 @@ function selectChange(num){
 
 <!-- 学年表示セレクト -->
 <td>
-<select name="grade_name1 grade_id1"  class="form-control col-md-1"  onchange="selectChange(1)">
+<select name="grade_name1 "  class="form-control col-md-1 grade" id="grade_id1" onchange="selectChange(1)">
 <option style="color: black;" >--選択--</option>
 <c:forEach var="rs" items="${classMap}">
 <option style="color: black;" value="${rs.key }">${rs.key }</option>
@@ -91,7 +91,7 @@ function selectChange(num){
 
 <td>
 <!-- 学科　選択学年から学科をjqで自動抽出予定 -->
-<select class="form-control col-md-1 cource_id1" name="cource_name1">
+<select class="form-control col-md-1 cource" id="cource_id1" name="cource_name1">
 <option style="color: black;">--学年を選んでください--</option>
 </select>
 </td>
