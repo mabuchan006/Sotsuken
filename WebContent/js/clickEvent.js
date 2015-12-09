@@ -37,7 +37,7 @@ function f_active(e) {
 
 		$.ajax({
 			type : "POST",
-			url : ""
+			url : "divideAjax.php"
 		})
 	})
 }
