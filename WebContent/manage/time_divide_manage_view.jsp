@@ -58,6 +58,10 @@
 		f_drop(e);
 		f_active(e);
 	});
+
+	$(document).ready(function () {
+		  $('table').fixedTableHeader();
+		});
 </script>
 
 
