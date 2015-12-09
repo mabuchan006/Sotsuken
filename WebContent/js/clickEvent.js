@@ -34,5 +34,10 @@ function f_active(e) {
 		$("li").removeClass("active");
 		// クリックしたタブのliにあるクラスにactiveを追加
 		$(this).addClass("active");
-	});
+
+		$.ajax({
+			type : "POST",
+			url : ""
+		})
+	})
 }
