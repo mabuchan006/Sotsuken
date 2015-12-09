@@ -35,9 +35,19 @@ function f_active(e) {
 		// クリックしたタブのliにあるクラスにactiveを追加
 		$(this).addClass("active");
 
-		$.ajax({
-			type : "POST",
-			url : "divideAjax.php"
-		})
+		if($("#dropFlag").get(0).value === "true"){
+			console.log(elem.name);
+			$(".modal").modal("show")
+		} else {
+			$.ajax({
+				type : "POST",
+				url : "/divideAjax.php",
+				data : { "week" : elem.name}
+			}).done(function(){
+				console.log("ok");
+			}).fail(function(){
+				console.log("no");
+			})
+		}
 	})
 }

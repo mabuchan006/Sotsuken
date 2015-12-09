@@ -109,6 +109,7 @@
 
 			<!-- button -->
 
+			<input type="hidden" id="dropFlag" value="false">
 			<button type="submit" class="btn btn-primary btn-lg col-md-1 fix"
 				id="submitBtn">登録</button>
 
@@ -1152,7 +1153,7 @@
 	</form>
 
 	<!-- もーだる -->
-	<div id="auto_modal" class="modal fade ">
+	<div class="modal fade ">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header back-color">
@@ -1160,10 +1161,10 @@
 						aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
-					<h3 class="modal-title white text-center">login</h3>
+					<h3 class="modal-title white text-center">warning!!!</h3>
 				</div>
 				<div class="modal-body text-center font1">
-					<h3>登録されました。</h3>
+					<h3>登録されていません</h3>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-primary" data-dismiss="modal">close</button>

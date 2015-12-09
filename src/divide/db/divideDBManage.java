@@ -25,7 +25,7 @@ public class divideDBManage extends DBAccess {
 		viewSelect = String
 				.format("select r.roomName, d.period, c.classID from tbl_timedivide d, tbl_room r, tbl_class c "
 						+ "where d.roomID = r.roomID and d.classID = c.classID and week = ?");
-		insertSql = String.format("insert into tbl_timedivide ( period, roomID, week, classID ) values"
+		insertSql = String.format("replace into tbl_timedivide ( period, roomID, week, classID ) values"
 				+ " ( ?, (select tbl_room.roomID from tbl_room where tbl_room.roomID = ?), ?, (select tbl_class.classID from tbl_class where tbl_class.classID = ?))");
 		deleteSql = String.format("delete from tbl_timedivide where week = ?");
 
