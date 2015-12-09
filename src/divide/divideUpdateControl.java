@@ -166,6 +166,7 @@ public class divideUpdateControl extends HttpServlet {
 		js.add("/Sotsuken/js/dragdrop.js");
 		js.add("/Sotsuken/js/modal.js");
 		js.add("/Sotsuken/js/clickEvent.js");
+		js.add("/Sotsuken/js/formCheck.js");
 		js.add("http://code.jquery.com/ui/1.10.0/jquery-ui.js");
 		request.setAttribute("css", css);
 		request.setAttribute("js", js);

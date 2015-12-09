@@ -47,6 +47,7 @@
 <script type="text/javascript" src="../js/dragdrop.js"></script>
 <script src="../js/modal.js"></script>
 <script src="../js/clickEvent.js"></script>
+<script src="../js/formCheck.js"></script>
 
 <!-- Custom CSS -->
 <link href="../css/style.css" rel="stylesheet">
@@ -58,6 +59,7 @@
 		f_drop( e );
 		f_active( e );
 		clickEvent( e );
+		formCheck( e );
 	});
 </script>
 
