@@ -1,5 +1,5 @@
 <?php
-//header('Content-Type: text/javascript; charset=utf-8');
+
 mysql_set_charset('utf8');
 //データベース接続
 $link=mysql_connect("localhost","ncs_sotsuken","TJVwVd9Q") or die("失敗");
@@ -21,14 +21,18 @@ if (!$db_selected){
 	if (!$result) {
 		die('クエリーが失敗しました。'.mysql_error());
 	}
+
+	$viewMap = array();
 	//とってきた情報を各行ずつ入れる。ループにてすべて出す
 	while ($row = mysql_fetch_assoc($result)) {
-		print($row['roomName']);
-		print($row['period']);
-		print($row['classID']);
+		$viewMap[] = array(
+				'roomName' =>$row->roomName,
+				'period' =>$row->period,
+				'classID' =>$row->classID);
 	}
 	mysql_close($link);
-
+	header('Content-Type: text/javascript; charset=utf-8');
+	echo sprintf("callback(%s)",json_encode($viewMap));
 
 
 
