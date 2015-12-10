@@ -139,7 +139,7 @@
 								<h3 class="modal-title white">login</h3>
 							</div>
 							<div class="modal-body">
-								<form action="loginServlet">
+								<form action="/Sotsuken/loginControl" method="POST">
 
 									<div id="msg"></div>
 
