@@ -21,6 +21,10 @@ $week=$_POST['week'];
 	if (!$result) {
 		die('クエリーが失敗しました。'.mysql_error());
 	}
+	echo $result;
+	//とってきた情報を各行ずつ入れる。ループにてすべて出す
+	//while ($row = mysql_fetch_assoc($result)) {
+	//}
 	mysql_close($link);
 
 
