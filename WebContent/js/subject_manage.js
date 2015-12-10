@@ -35,6 +35,24 @@ $(document).ready(function() {
 //動的にIDの連番を格納
 function firstID(){
 	var cnt = 1;
+	$(".subjectName").each(function(){
+
+		$(this).attr("name","subjectName" + cnt);
+
+
+         cnt++;
+    });
+
+	var cnt = 1;
+	$(".bringThings").each(function(){
+
+		$(this).attr("name","bringThings" + cnt);
+
+
+         cnt++;
+    });
+
+	var cnt = 1;
 	$(".grade").each(function(){
 
 		$(this).attr("name","grade_name" + cnt);
@@ -44,6 +62,7 @@ function firstID(){
          cnt++;
     });
 	var cnt = 1;
+
 	$(".cource").each(function(){
 
 		$(this).attr("name","cource_name" + cnt);

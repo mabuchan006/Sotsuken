@@ -14,10 +14,12 @@ import DB.DBAccess;
 public class subjectDBManage extends DBAccess {
 	private String selectSql;// 科目全検索用
 	private String deleteSql;// 科目1件削除用
+	private String deleteClass;//クラス情報テーブル削除
 	private String insertSql;// 科目1件登録用
 	private String ins_infoSubject;// 科目、クラス対応テーブル挿入
 	private String selectBox;// 科目管理画面のセレクトボックス表示用
 	private String selectAll;//対象学科全部
+	private String selectTID;//講師参照制約用
 
 
 
@@ -39,12 +41,16 @@ public class subjectDBManage extends DBAccess {
 		super(DRIVER_NAME);// DBAccessに接続
 		// ID,NAME、持ち物、表示フラグを全件取得sql
 		selectSql = String.format("select subjectID,subjectName,bringThings,showFlag from tbl_subject");
+		//参照制約用
+		selectTID = String.format("select subjectID from tbl_subject where subjectName = ?");
 		// selectbox表示用
 		selectBox = String.format("select classID from tbl_class");
 		// 科目IDから削除からsql
 		deleteSql = String.format("delete  from tbl_subject where subjectID = ?");
+		// 科目IDから削除からsql
+		deleteSql = String.format("delete  from tbl_infosubject where subjectID = ?");
 		//ALL処理用
-		selectAll = String.format("select classID from tbl_class where classID LIKE % ? %");
+		selectAll = String.format("select classID from tbl_class where classID LIKE ?");
 		// 科目情報登録sql
 		insertSql = String.format(" insert into tbl_subject " + "(subjectName,bringThings,showFlag) values (?,?,?)");
 		// クラス情報テーブル登録sql
@@ -96,36 +102,78 @@ public class subjectDBManage extends DBAccess {
 	 connect();
 	 switch (state) {
 	 case INSERT:
+
 	 // 通常科目情報登録
 	 createStstement(insertSql);
-	 getPstmt().setInt(1, ci.getSubjectID());
-	 getPstmt().setString(2, ci.getSubjectName());
+	 getPstmt().setString(1, ci.getSubjectName());
+	 getPstmt().setString(2, ci.getBringThings());
 	 getPstmt().setInt(3, ci.getShowFlag());
 
 	 // クラス情報テーブルが外部キー参照するため一度実行
 	 updateExe();// 実行
+
 	 disConnection();// 切断
 
 	 // クラス情報テーブル登録
 	 connect();
+	 createStstement(selectTID);
+	 getPstmt().setString(1,ci.getSubjectName());
+	 selectExe();
+
+	 int subjectID=0;
+	 ResultSet rs = getRsResult();
+	 while(rs.next()){
+		 subjectID = rs.getInt("subjectID");
+	 }
+
+
 	 createStstement(ins_infoSubject);
 	 getPstmt().setString(1, classID);
-	 getPstmt().setInt(2, ci.getSubjectID());
+	 getPstmt().setInt(2, subjectID);
 
 
 	 break;
 	 case DELETE:
 	 createStstement(deleteSql);
 	 getPstmt().setInt(1, ci.getSubjectID());// 削除するIDをセット
+	 updateExe();// 実行
+	 createStstement(deleteClass);
+	 getPstmt().setInt(1, ci.getSubjectID());
 
 	 break;
 	 }
 
 	 setMsg(resultMsg(ci, msg));// 実行メッセージ取得
+
 	 updateExe();// 実行
 	 disConnection();// 切断
 
+
 	 }// method
+
+
+	 public List<String> classALLSelect(String grade) throws Exception{
+
+		 List<String> courceList = new ArrayList<String>();
+		 connect();
+		 createStstement(selectAll);
+		 getPstmt().setString(1, "%"+grade+"%");
+		 selectExe();
+
+		 ResultSet rs = getRsResult();
+
+		 while(rs.next()){
+			 courceList.add(rs.getString("classID"));
+			 System.out.println(rs.getString("classID"));
+
+		 }
+
+
+
+
+		return courceList;
+
+	 }
 
 	/*
 	 * @param classID クラスID
@@ -163,7 +211,7 @@ public class subjectDBManage extends DBAccess {
 				// ex ) classMap → R4: [A1,A2,A3]
 				// R3: [A1,A2]
 				classMap.put(par_grade, par_classList);
-				System.out.println(par_grade + " : " + classMap.get(par_grade));
+
 				// 次のクラス
 				par_grade = classID.substring(0, 2);// ex)R3A1 → R3 抽出
 				par_classList = new ArrayList<String>();
@@ -183,9 +231,9 @@ public class subjectDBManage extends DBAccess {
 	 private String resultMsg(subjectInfo ci, String msg) {
 	 // 処理が実行されなかったら
 	 if (getIntResult() == 0) {
-	 return String.format("%sを%sできませんでした。", ci.getSubjectID(), msg);
+	 return String.format("%sを%sできませんでした。", ci.getSubjectName(), msg);
 	 }
-	 return String.format("%sを%sしました。", ci.getSubjectID(), msg);
+	 return String.format("%sを%sしました。", ci.getSubjectName(), msg);
 	 }
 
 }

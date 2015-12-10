@@ -49,6 +49,7 @@ function selectChange(num){
 
 </script>
 
+<!-- foreach2重だよ selectに学年情報を格納-->
 <c:forEach var="rs" items="${classMap}">
 	<c:forEach var="array" items="${rs.value }">
 	<script>
@@ -58,9 +59,12 @@ function selectChange(num){
 </c:forEach>
 
 <div class="row">
+<c:if test=  "${!empty Msg }">
+<div class="alert alert-success" role="alert">${Msg }</div>
+</c:if>
 
 <!-- form -->
-<form action="" method="get">
+<form action="/Sotsuken/ManageUpdate?page=subject_manage" method="get">
 <table class="table col-md-6 col-md-offset-3">
 <thead>
 <tr>
@@ -68,13 +72,13 @@ function selectChange(num){
 <th>学年</th>
 <th>学科</th>
 <th>持ち物</th>
-<th></th></tr>
+<th><button type="submit" class="btn btn-primary" id="regist_btn">登録</button></th></tr>
 </thead>
 <tbody id="addTb-tbody">
 <tr class="tList">
 <!-- 科目名 -->
 <td>
-<input type="text" class="form-control" id="subjectName"name="subjectName" />
+<input type="text" class="form-control subjectName" id="subjectName"name="subjectName1" />
 </td>
 
 
@@ -98,12 +102,9 @@ function selectChange(num){
 
 <!-- 持ち物 -->
 <td>
-<input type="text" class="form-control" name="bringThings" />
+<input type="text" class="form-control bringThings" name="bringThings1" />
 </td>
 
-<td>
-<button type="button" class="btn btn-primary" id="regist_btn">登録</button>
-</td>
 
   <td>
     <input value="+" type="button" class="addList" onclick="addClick()">　

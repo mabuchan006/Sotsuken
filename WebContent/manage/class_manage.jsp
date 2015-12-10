@@ -4,17 +4,13 @@
 
 <div class="row ">
 
-<div class="content-header">
-<div id="logo">
-<h1>クラス管理</h1>
-</div>
-</div>
+<c:if test=  "${!empty Msg }">
+<div class="alert alert-success" role="alert">${Msg }</div>
+</c:if>
 
-
-<!-- header -->
 
 <!-- 登録処理 -->
-<form action="/Sotsuken/ManageUpdate" method="get">
+<form action="/Sotsuken/ManageUpdate?page=class_manage" method="get">
 
 <table class="col-md-6 col-md-offset-3" id="first_table">
 <tr>

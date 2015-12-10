@@ -1,47 +1,14 @@
-
-
-<%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="utf-8">
-
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>科目管理</title>
-
-<!-- BootstrapのCSS読み込み -->
-<link href="../bootstrap/css/style.css" rel="stylesheet">
-<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<script src="../js/jquery-2.1.1.min.js"></script>
-<script src="../bootstrap/js/bootstrap.min.js"></script>
-<script src="../js/jquery.appear.js"></script>
-<script src="../js/teacher_regist.js"></script>
-
-<link href="../css/custom.css" rel="stylesheet">
-
-</head>
-<body>
-
 
 <div class="row ">
 
-<div class="content-header">
-<div id="logo">
-<h1>講師管理</h1>
-</div>
-</div>
-
-
-<!-- header -->
+<c:if test=  "${!empty Msg }">
+<div class="alert alert-success" role="alert">${Msg }</div>
+</c:if>
 
 <!-- 登録処理 -->
-<form action="/Sotsuken/ManageUpdate" method="get">
+<form action="/Sotsuken/ManageUpdate?page=teacher_manage" method="get">
 
 <table class="col-md-6 col-md-offset-3" id="first_table">
 <tr>
@@ -98,6 +65,5 @@
 </div>
 </div>
 
-</body>
-</html>
+
 
