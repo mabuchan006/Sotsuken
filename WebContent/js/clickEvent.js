@@ -42,9 +42,10 @@ function f_active(e) {
 			$.ajax({
 				type : "POST",
 				url : "/Sotsuken/php/divideAjax.php",
-				//data : { "week" : elem.name}
-			}).done(function(){
-				console.log("ok");
+				dataType : "jsonp",
+				data : { "week" : elem.name}
+			}).done(function(response){
+				alert(response);
 			}).fail(function(){
 				console.log("no");
 			})
