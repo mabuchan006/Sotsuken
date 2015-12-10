@@ -48,26 +48,32 @@ public class ManageUpdateControl extends HttpServlet {
 		//文字コードutf8
 		request.setCharacterEncoding("UTF-8");
 		//jspからのページ情報取得
-		String get_page = request.getParameter("page")==null?"subject_manage"
+		String get_page = request.getParameter("page")==null?"teacher_manage"
 				:request.getParameter("page");
 		//使用するcss,jsファイルの適用
 		getIncludeFile(request);
 
 		//teacher管理の画面処理
-		if(get_page.equals("teacher_manage")){
+		if(get_page.equals("teacher_manage") ||
+				request.getParameter("delete_teacher") != null ||
+				request.getParameter("regist_teacher") != null){
 			//講師DB操作クラス取得
 			teacherDBManage tdm = new teacherDBManage();
 			teacherUpdate(request, tdm);
 		}//if
 		//class管理画面の処理
-		if(get_page.equals("class_manage")){
+		if(get_page.equals("class_manage") ||
+				request.getParameter("delete_class") != null ||
+				request.getParameter("regist_class") != null){
 			//クラスDB操作クラス取得
 			classDBManage cdm = new classDBManage();
 			classUpdate(request, cdm);
 		}//if
 
 		//講師管理画面処理
-		if(get_page.equals("subject_manage")){
+		if(get_page.equals("subject_manage") ||
+				request.getParameter("delete_subject") != null ||
+				request.getParameter("regist_subject") != null){
 
 			subjectUpdate(request);
 
@@ -242,6 +248,7 @@ public class ManageUpdateControl extends HttpServlet {
 					List<classInfo> classList = cdm.classDBSelect();
 
 					request.setAttribute("classList", classList);
+					request.setAttribute("Msg",cdm.getMsg());
 				} catch (Exception e) {
 					// TODO 自動生成された catch ブロック
 					e.printStackTrace();
@@ -266,18 +273,19 @@ public class ManageUpdateControl extends HttpServlet {
 				content_page = "/manage/teacher_manage.jsp";
 				page_title = "講師管理画面";
 
-				if(request.getParameter("regist_btn") != null ){
+				if(request.getParameter("regist_teacher") != null ){
 					tdm.teacherDBUpdate(ti, DBAccess.INSERT, "登録");
 					System.out.println("登録");
 				}
 
-				if(request.getParameter("delete_btn") != null){
+				if(request.getParameter("delete_teacher") != null){
 					tdm.teacherDBUpdate(ti, DBAccess.DELETE, "削除");
 					System.out.println("削除");
 				}
 				//更新済み講師情報全件取得
 				List<teacherInfo> teacherList = tdm.teacherDBSelect();
 				request.setAttribute("teacherList", teacherList);
+				request.setAttribute("Msg",tdm.getMsg());
 
 			} catch (Exception e) {
 				// TODO 自動生成された catch ブロック

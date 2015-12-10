@@ -143,9 +143,10 @@ public class subjectDBManage extends DBAccess {
 	 break;
 	 }
 
-	 setMsg(resultMsg(ci, msg));// 実行メッセージ取得
+
 
 	 updateExe();// 実行
+	 setMsg(resultMsg(ci, msg));// 実行メッセージ取得
 	 disConnection();// 切断
 
 

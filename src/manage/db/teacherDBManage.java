@@ -85,11 +85,13 @@ public class teacherDBManage extends DBAccess{
 			createStstement(deleteSql);
 			getPstmt().setInt(1,ti.getTeacherID());//削除するIDをセット
 
+
 			break;
 		}
 
-		setMsg(resultMsg(ti,msg));//実行メッセージ取得
+
 		updateExe();//実行
+		setMsg(resultMsg(ti,msg));//実行メッセージ取得
 		disConnection();//切断
 
 	}//method

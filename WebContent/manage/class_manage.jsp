@@ -52,7 +52,7 @@
 <td>${rs.className}</td>
 <td>
 <!-- 削除用フォーム -->
-<form action="/Sotsuken/ManageUpdate" method="get">
+<form action="/Sotsuken/ManageUpdate?page=class_manage" method="get">
 <input type="hidden" name = "classID" value="${rs.classID }" />
 <input type="submit" class="btn btn-danger" name="delete_class" value="削除"/>
 </form>
@@ -67,4 +67,5 @@
 </div>
 </div>
 </div>
+
 

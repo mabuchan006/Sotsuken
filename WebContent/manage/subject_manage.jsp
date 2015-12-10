@@ -135,8 +135,9 @@ function selectChange(num){
 <td>${rs.bringThings}</td>
 <td>
 <!-- 削除用フォーム -->
-<form action="/Sotsuken/ManageUpdate" method="get">
+<form action="/Sotsuken/ManageUpdate?page=subject_manage" method="get">
 <input type="hidden" name="subjectID" value="${rs.subjectID }" />
+<input type="hidden" name="subjectID" value="${rs.subjectName }" />
 <input type="submit" class="btn btn-danger"name="delete_subject" value="削除" />
 </form> <!-- 削除 -->
 </td>

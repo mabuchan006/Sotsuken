@@ -28,7 +28,7 @@
 <td class="col-md-4">
 <!-- 登録ボタン -->
 <label for="password" class="empty">________</label>
-<button type="submit" class="btn btn-primary" id="regist_btn" name="regist_btn">登録</button>
+<button type="submit" class="btn btn-primary" id="regist_btn" name="regist_teacher">登録</button>
 </td>
 
 </tr>
@@ -51,7 +51,8 @@
 <!-- 削除用フォーム -->
 <form action="/Sotsuken/ManageUpdate" method="get">
 <input type="hidden" name = "teacher_id" value="${ teacher.teacherID }" />
-<input type="submit" class="btn btn-danger" name="delete_btn" value="削除"/>
+<input type="hidden" name = "teacherName" value="${ teacher.teacherName }" />
+<input type="submit" class="btn btn-danger" name="delete_teacher" value="削除"/>
 </form>
 <!-- 削除 -->
 </td>
