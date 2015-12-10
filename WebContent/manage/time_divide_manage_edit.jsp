@@ -53,13 +53,14 @@
 <link href="../css/style.css" rel="stylesheet">
 
 <script>
+	var dropFlag = new Boolean(false);
 	$(function(e) {
 		$("#class-room").accordion();
 		f_drag();
-		f_drop( e );
-		f_active( e );
-		clickEvent( e );
-		formCheck( e );
+		f_drop( dropFlag );
+		f_active( dropFlag );
+		clickEvent();
+		formCheck( dropFlag);
 	});
 </script>
 
@@ -111,11 +112,8 @@
 
 			<!-- button -->
 
-			<input type="hidden" id="dropFlag" value="false">
 			<button type="submit" class="btn btn-primary btn-lg col-md-1 fix"
 				id="submitBtn">登録</button>
-
-
 
 			<!-- button end -->
 			<!-- カレンダー部分 -->

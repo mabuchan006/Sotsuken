@@ -1,7 +1,7 @@
 var repComma = "", str = "", ele = "";
 
 // ドラッグ
-function f_drag(e) {
+function f_drag() {
 	$("#drag-target li").draggable({
 		appendTo : "body",
 		revert : "invalid",
@@ -11,14 +11,14 @@ function f_drag(e) {
 }// f_drag
 
 // ドロップ
-function f_drop(e) {
+function f_drop( dropFlag ) {
 	$(".drop-target").droppable({
 		drop : function(e, ui) {
 
 			// 子要素の取得
 			ele = $(this).children("textarea").get(0);
-			$("#dropFlag").get(0).value = "true";
-			console.log($("#dropFlag").get(0).value);
+			dropFlag = new Boolean(true);
+			console.log(dropFlag);
 
 			// 同値&5クラスまでのチェック
 			if ( (ele.value.indexOf(ui.draggable.text()) === -1 ) && ( ele.value.length < 24 ) ) {
@@ -38,6 +38,7 @@ function f_drop(e) {
 			}// if
 		}// drop
 	})// droppable
+	return dropFlag;
 }// f_drop
 
 
