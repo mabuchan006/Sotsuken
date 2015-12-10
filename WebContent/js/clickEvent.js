@@ -1,30 +1,30 @@
 var elem = "";
 
-function clickEvent(){
+function clickEvent( e ){
 	// 登録ボタンがクリックされた時
-	$("#submitBtn").click(function() {
+	$("#submitBtn").click(function(e) {
 		$("#modal2").modal("show");
 		// ボタンにname（submit）を付加
 		$("button").attr("name", "submit");
 	});
 
 	// labelがクリックされた時
-	$("label").click(function(){
+	$("label").click(function( e ){
 		// クリックされたlabelの親要素(p)内にある子要素(textarea)のvalueを初期化
 		$(this).parents("p").children("textarea").get(0).value = "";
 	});
 
 	// 一括削除ボタンがクリックされた時
-	$().click(function(){
+	$().click(function( e ){
 		for(var i = 0; i < $("textarea").length; i++){
 			$("textarea").get(i).value = "";
 		}
 	});
 }
 
-function f_active( dropFlag ) {
+function f_active(e) {
 	// タブがクリックされた時
-	$('#weekTab li').click(function() {
+	$('#weekTab li').click(function(e) {
 		// クリックされたタブの要素取得
 		elem = $(this).children("input").get(0)
 		// form送信用にあるinput hiddenからname削除
@@ -36,7 +36,7 @@ function f_active( dropFlag ) {
 		// クリックしたタブのliにあるクラスにactiveを追加
 		$(this).addClass("active");
 
-		if( dropFlag ){
+		if($("#dropFlag").get(0).value === "true"){
 			$("#modal1").modal("show")
 		} else {
 			$.ajax({
