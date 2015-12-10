@@ -106,7 +106,7 @@ function selectChange(num){
 </td>
 
   <td>
-    <input value="+" type="button" class="addList" >　
+    <input value="+" type="button" class="addList" onclick="addClick()">　
     <input value="-" type="button" class="removeList" />
   </td>
 

@@ -17,6 +17,8 @@ public class subjectDBManage extends DBAccess {
 	private String insertSql;// 科目1件登録用
 	private String ins_infoSubject;// 科目、クラス対応テーブル挿入
 	private String selectBox;// 科目管理画面のセレクトボックス表示用
+	private String selectAll;//対象学科全部
+
 
 
 	// *******Msg*********
@@ -41,6 +43,8 @@ public class subjectDBManage extends DBAccess {
 		selectBox = String.format("select classID from tbl_class");
 		// 科目IDから削除からsql
 		deleteSql = String.format("delete  from tbl_subject where subjectID = ?");
+		//ALL処理用
+		selectAll = String.format("select classID from tbl_class where classID LIKE % ? %");
 		// 科目情報登録sql
 		insertSql = String.format(" insert into tbl_subject " + "(subjectName,bringThings,showFlag) values (?,?,?)");
 		// クラス情報テーブル登録sql

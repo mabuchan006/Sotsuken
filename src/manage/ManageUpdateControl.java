@@ -75,10 +75,7 @@ public class ManageUpdateControl extends HttpServlet {
 			page_title = "科目管理画面";
 			//更新済み科目情報全件取得
 			subjectDBManage sdm = new subjectDBManage();
-			//学年ごとに対応したクラス情報
-			Map<String,List<String>> classMap = sdm.classDBSelect();
-			//更新済み科目情報全件取得
-			List<subjectInfo> subjectList = sdm.subjectDBSelect();
+
 
 			int showFlag=0;
 			String grade_name1 = request.getParameter("grade_name1");
@@ -124,6 +121,10 @@ public class ManageUpdateControl extends HttpServlet {
 				System.out.println("削除");
 			}
 
+			//学年ごとに対応したクラス情報
+			Map<String,List<String>> classMap = sdm.classDBSelect();
+			//更新済み科目情報全件取得
+			List<subjectInfo> subjectList = sdm.subjectDBSelect();
 
 
 			request.setAttribute("subjectList", subjectList);
