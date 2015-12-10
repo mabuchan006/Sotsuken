@@ -91,23 +91,76 @@
 				<td><div class="drop-target"><textarea style="text-align: center" rows="1" cols="6" id="test"></textarea></div></td>
 				<td><div class="drop-target"><textarea style="text-align: center" rows="1" cols="6" id="test"></textarea></div></td>
 				<td><div class="drop-target"><textarea style="text-align: center" rows="1" cols="6" id="test"></textarea></div></td>
-
 			</tr>
+
 
 			<tr class="info">
 			<%
-			int period_1 =  Integer.parseInt((String)request.getAttribute("period_1")) - 1;
-			for(int week = 1;week <= 7;week++){
-				pageContext.setAttribute("index",period_1);
+			int period_1 = (int)request.getAttribute("period_1");
+			for(int week=0; week <=6; week++){
+				for(int cnt = 0;cnt < period_1; cnt++){
+				pageContext.setAttribute("index", cnt);
+				System.out.println("check:"+cnt);
 			%>
-				<c:if test="${rooms1List[index].week == '月' }"><td>rooms1List[index].roomName</td></c:if>
-			<%
-			period_1 = period_1 - 1;
-			if(period_1 == 0){
-				break;
-			}
-			}
-			%>
+
+			<%if(week == 0){ %>
+				<c:if test="${rooms1List[index].week == '月'}" var="flg_0"/>
+				<c:if test="${flg_0 }"><td>${ rooms1List[index].roomName}</td></c:if>
+					<% if(cnt == period_1 - 1  ){ %>
+					<c:if test="${!flg_0 }"><td>0</td></c:if>
+					<% } %>
+			<% } %>
+
+			<%if(week == 1){ %>
+				<c:if test="${rooms1List[index].week == '火'}" var="flg_1"/>
+					<c:if test="${flg_1 }"><td>${ rooms1List[index].roomName}</td></c:if>
+					<%if(cnt == 0){ %>
+					<c:if test="${!flg_1 }"><td>1</td></c:if>
+					<% } %>
+			<% } %>
+
+			<%if(week == 2){ %>
+				<c:if test="${rooms1List[index].week == '水'}" var="flg_2"/>
+				<c:if test="${flg_2 }"><td>${ rooms1List[index].roomName}</td></c:if>
+					<%if(cnt == 0){ %>
+					<c:if test="${!flg_2 }"><td>2</td></c:if>
+					<% } %>
+			<% } %>
+
+			<%if(week == 3){ %>
+				<c:if test="${rooms1List[index].week == '木'}" var="flg_3"/>
+				<c:if test="${flg_3 }"><td>${ rooms1List[index].roomName}</td></c:if>
+					<%if(cnt == 0){ %>
+					<c:if test="${!flg_3 }"><td>3</td></c:if>
+					<% } %>
+			<% } %>
+
+			<%if(week == 4){ %>
+				<c:if test="${rooms1List[index].week == '金'}" var="flg_4"/>
+				<c:if test="${flg_4}"><td>${ rooms1List[index].roomName}</td></c:if>
+					<%if(cnt == 0){ %>
+					<c:if test="${!flg_4 }"><td>4</td></c:if>
+					<% } %>
+			<% } %>
+
+			<%if(week == 5){ %>
+				<c:if test="${rooms1List[index].week == '土'}" var="flg_5"/>
+				<c:if test="${flg_5 }"><td>${ rooms1List[index].roomName}</td></c:if>
+					<%if(cnt == 0){ %>
+					<c:if test="${!flg_5 }"><td>5</td></c:if>
+					<% } %>
+			<% } %>
+
+			<%if(week == 6){ %>
+				<c:if test="${rooms1List[index].week == '日'}" var="flg_6"/>
+				<c:if test="${flg_6 }"><td>${ rooms1List[index].roomName}</td></c:if>
+					<%if(cnt == 0){ %>
+					<c:if test="${!flg_6 }"><td>6</td></c:if>
+					<% } %>
+			<% } %>
+
+				<% } %>
+			<% } %>
 			</tr>
 
 			<tr class="danger">
@@ -237,7 +290,7 @@
 	<table class="table table-border ">
 		<tbody>
 			<%
-				int teacher_count =  Integer.parseInt((String)request.getAttribute("teacher_count"));
+				int teacher_count =  (int)request.getAttribute("teacher_count");
 				int cnt1 = 0;
 				for (; cnt1 < teacher_count; cnt1++) {
 					pageContext.setAttribute("cnt1", cnt1);

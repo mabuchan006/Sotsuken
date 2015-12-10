@@ -75,6 +75,7 @@ public class temp_tableControl extends HttpServlet {
 
 			rooms1List = tempDBM.roomsSelect(1, chooseClassID);
 			int period_1 = rooms1List.size();
+			System.out.println("count:"+ period_1);
 			request.setAttribute("period_1",period_1);
 			//rooms2List = tempDBM.roomsSelect(2, chooseClassID, week);
 			//rooms3List = tempDBM.roomsSelect(3, chooseClassID, week);

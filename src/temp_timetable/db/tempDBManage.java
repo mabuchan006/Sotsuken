@@ -91,7 +91,7 @@ public class tempDBManage extends DBAccess {
 										 rs.getString("week"),
 										 rs.getString("roomName")
 										 );
-								 System.out.print("値:"+roominfo);
+
 								 roomsList.add(roominfo);
 					}
 
