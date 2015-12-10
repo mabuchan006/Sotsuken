@@ -18,7 +18,6 @@ function f_drop(e) {
 			// 子要素の取得
 			ele = $(this).children("textarea").get(0);
 			$("#dropFlag").get(0).value = "true";
-			console.log($("#dropFlag").get(0).value);
 
 			// 同値&5クラスまでのチェック
 			if ( (ele.value.indexOf(ui.draggable.text()) === -1 ) && ( ele.value.length < 24 ) ) {

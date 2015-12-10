@@ -17,7 +17,7 @@ if (!$db_selected){
 
 //曜日ごとのSELECT
 	$result = mysql_query('select r.roomName, d.period, c.classID from tbl_timedivide d, tbl_room r, tbl_class c
-											where d.roomID = r.roomID and d.classID = c.classID and week = "月" ');
+											where d.roomID = r.roomID and d.classID = c.classID and week = $week ');
 	if (!$result) {
 		die('クエリーが失敗しました。'.mysql_error());
 	}
@@ -25,14 +25,11 @@ if (!$db_selected){
 	$viewMap = array();
 	//とってきた情報を各行ずつ入れる。ループにてすべて出す
 	while ($row = mysql_fetch_assoc($result)) {
-		$viewMap[] = array(
-				'roomName' =>$row->roomName,
-				'period' =>$row->period,
-				'classID' =>$row->classID);
+		$viewMap[] = array($row);
 	}
 	mysql_close($link);
 	header('Content-Type: text/javascript; charset=utf-8');
-	echo sprintf("callback(%s)",json_encode($viewMap));
+	echo 'callback(' . json_encode($viewMap) . ')';
 
 
 
