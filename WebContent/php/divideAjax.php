@@ -21,10 +21,12 @@ $week=$_POST['week'];
 	if (!$result) {
 		die('クエリーが失敗しました。'.mysql_error());
 	}
-	echo $result;
 	//とってきた情報を各行ずつ入れる。ループにてすべて出す
-	//while ($row = mysql_fetch_assoc($result)) {
-	//}
+	while ($row = mysql_fetch_assoc($result)) {
+		print($row['roomName']);
+		print($row['period']);
+		print($row['classID']);
+	}
 	mysql_close($link);
 
 
