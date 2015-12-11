@@ -5,7 +5,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 <c:if test="${empty teacherInfo}">
-	<c:redirect url="/top.jsp" />
+	<c:redirect url="/manage/manage_top.jsp" />
 </c:if>
 
 <p>${teacherInfo.teacherName}さん、ようこそ
