@@ -28,7 +28,7 @@ public class layoutInclude {
 		info.js.add("/Sotsuken/js/dragdrop.js");
 		info.js.add("/Sotsuken/js/modal.js");
 		info.js.add("http://code.jquery.com/ui/1.10.0/jquery-ui.js");
-		
+
 		return info;
 	}
 

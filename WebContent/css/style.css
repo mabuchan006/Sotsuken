@@ -536,3 +536,11 @@ margin-bottom: 5px;
     -webkit-border-radius: 10px;    /* Safari,Google Chrome用 */
     -moz-border-radius: 10px;   /* Firefox用 */
     background-color: white;
+	}
+
+/**持ち物ポップアップ用**/
+.killindex {
+	z-index:2;
+	position: relative;
+
+}
