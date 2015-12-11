@@ -93,7 +93,8 @@
 				<td><div class="drop-target"><textarea style="text-align: center" rows="1" cols="6" id="test"></textarea></div></td>
 			</tr>
 
-
+			<c:if test="${!empty rooms1List }" var="list_flg" />
+			<c:if test="${list_flg }">
 			<tr class="info">
 			<%
 			int period_1 = (int)request.getAttribute("period_1");
@@ -112,7 +113,7 @@
 					<c:if test="${rooms1List[index].week == '月'}" var="flg_0"/>
 						<c:if test="${flg_0 }"><td>${ rooms1List[index].roomName}</td><%status++;%></c:if>
 						<% if(cnt == period_1 - 1 && status == 0){ %>
-						<c:if test="${!flg_0 }"><td></c:if>
+						<c:if test="${!flg_0 }"><td></td></c:if>
 						<% } %>
 				<% } %>
 
@@ -120,7 +121,7 @@
 					<c:if test="${rooms1List[index].week == '火'}" var="flg_1"/>
 						<c:if test="${flg_1 }"><td>${ rooms1List[index].roomName}</td><%status++;%></c:if>
 						<%if(cnt == period_1 - 1 && status == 0){ %>
-						<c:if test="${!flg_1 }"><td>1</td></c:if>
+						<c:if test="${!flg_1 }"><td></td></c:if>
 						<% } %>
 				<% } %>
 
@@ -128,7 +129,7 @@
 					<c:if test="${rooms1List[index].week == '水'}" var="flg_2"/>
 						<c:if test="${flg_2 }"><td>${ rooms1List[index].roomName}</td><%status++;%></c:if>
 						<%if(cnt == period_1 - 1 && status == 0){ %>
-						<c:if test="${!flg_2 }"><td>2</td></c:if>
+						<c:if test="${!flg_2 }"><td></td></c:if>
 						<% } %>
 				<% } %>
 
@@ -136,7 +137,7 @@
 					<c:if test="${rooms1List[index].week == '木'}" var="flg_3"/>
 					<c:if test="${flg_3 }"><td>${ rooms1List[index].roomName}</td><%status++;%></c:if>
 						<%if(cnt == period_1 - 1 && status == 0){ %>
-						<c:if test="${!flg_3 }"><td>3</td></c:if>
+						<c:if test="${!flg_3 }"><td></td></c:if>
 						<% } %>
 				<% } %>
 
@@ -144,7 +145,7 @@
 					<c:if test="${rooms1List[index].week == '金'}" var="flg_4"/>
 					<c:if test="${flg_4}"><td>${ rooms1List[index].roomName}</td><%status++;%></c:if>
 						<%if(cnt == period_1 - 1 && status == 0){ %>
-						<c:if test="${!flg_4 }"><td>4</td></c:if>
+						<c:if test="${!flg_4 }"><td></td></c:if>
 						<% } %>
 				<% } %>
 
@@ -152,7 +153,7 @@
 					<c:if test="${rooms1List[index].week == '土'}" var="flg_5"/>
 					<c:if test="${flg_5 }"><td>${ rooms1List[index].roomName}</td><%status++;%></c:if>
 						<%if(cnt == period_1 - 1 && status == 0){ %>
-						<c:if test="${!flg_5 }"><td>5</td></c:if>
+						<c:if test="${!flg_5 }"><td></td></c:if>
 						<% } %>
 				<% } %>
 
@@ -160,13 +161,28 @@
 					<c:if test="${rooms1List[index].week == '日'}" var="flg_6"/>
 					<c:if test="${flg_6 }"><td>${ rooms1List[index].roomName}</td><%status++;%></c:if>
 						<%if(cnt == period_1 - 1 && status == 0){ %>
-						<c:if test="${!flg_6 }"><td>6</td></c:if>
+						<c:if test="${!flg_6 }"><td></td></c:if>
 						<% } %>
 				<% } %>
 
 					<% } %>
 				<% } %>
 			</tr>
+			</c:if>
+
+			<c:if test="${!list_flg }">
+			<tr class="info">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			</tr>
+			</c:if>
+
+
 
 			<tr class="danger">
 				<!-- ２限目　教科 -->

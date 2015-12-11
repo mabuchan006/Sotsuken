@@ -41,7 +41,7 @@ public class temp_tableControl extends HttpServlet {
 
 	String content_page = "/temp_timetable/temp_table_regist.jsp"; // 遷移先jsp
 	private String page_title = "Temporary Edit";// ページ名
-	private String chooseClassID = "R4A1";// classID選択
+	private String chooseClassID = "R1A1";// classID選択 TODO:テーブル変更を柔軟にする。
 
 	subjectDBManage suDBM = new subjectDBManage(chooseClassID);
 	teacherDBManage teDBM = new teacherDBManage();
