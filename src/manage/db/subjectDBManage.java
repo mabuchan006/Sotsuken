@@ -48,13 +48,13 @@ public class subjectDBManage extends DBAccess {
 		// 科目IDから削除からsql
 		deleteSql = String.format("delete  from tbl_subject where subjectID = ?");
 		// 科目IDから削除からsql
-		deleteSql = String.format("delete  from tbl_infosubject where subjectID = ?");
+		deleteClass = String.format("delete  from tbl_infosubject where subjectID = ?");
 		//ALL処理用
 		selectAll = String.format("select classID from tbl_class where classID LIKE ?");
 		// 科目情報登録sql
-		insertSql = String.format(" insert into tbl_subject " + "(subjectName,bringThings,showFlag) values (?,?,?)");
+		insertSql = String.format(" replace into tbl_subject " + "(subjectName,bringThings,showFlag) values (?,?,?)");
 		// クラス情報テーブル登録sql
-		ins_infoSubject = String.format("insert into tbl_infoSubject " + "(classID,subjectID) values (?,?)");
+		ins_infoSubject = String.format("replace into tbl_infoSubject " + "(classID,subjectID) values (?,?)");
 	}
 
 	/*
@@ -134,10 +134,12 @@ public class subjectDBManage extends DBAccess {
 
 	 break;
 	 case DELETE:
-	 createStstement(deleteSql);
+	 createStstement(deleteClass);
+
 	 getPstmt().setInt(1, ci.getSubjectID());// 削除するIDをセット
 	 updateExe();// 実行
-	 createStstement(deleteClass);
+	 System.out.println(getIntResult());
+	 createStstement(deleteSql);
 	 getPstmt().setInt(1, ci.getSubjectID());
 
 	 break;
@@ -146,6 +148,7 @@ public class subjectDBManage extends DBAccess {
 
 
 	 updateExe();// 実行
+	 System.out.println(getIntResult());
 	 setMsg(resultMsg(ci, msg));// 実行メッセージ取得
 	 disConnection();// 切断
 

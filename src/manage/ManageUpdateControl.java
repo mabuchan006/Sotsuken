@@ -48,7 +48,7 @@ public class ManageUpdateControl extends HttpServlet {
 		//文字コードutf8
 		request.setCharacterEncoding("UTF-8");
 		//jspからのページ情報取得
-		String get_page = request.getParameter("page")==null?"teacher_manage"
+		String get_page = request.getParameter("page")==null?"subject_manage"
 				:request.getParameter("page");
 		//使用するcss,jsファイルの適用
 		getIncludeFile(request);
@@ -99,6 +99,14 @@ public class ManageUpdateControl extends HttpServlet {
 
 	}//doGet
 
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
 	private void subjectUpdate(HttpServletRequest request) {
 		try {
 		//ページ情報指定
@@ -121,15 +129,20 @@ public class ManageUpdateControl extends HttpServlet {
 
 		//すべてのリクエスト情報をinsert処理する
 		for (Map.Entry<String, String[]> rs : getMap.entrySet()) {
+			System.out.println("1");
 
 			//1つ目のリクエストはいらんので除外
 			if(!(rs.getKey().equals("grade_name1") || rs.getKey().equals("cource_name1") ||
-					rs.getKey().equals("subjectName1") || rs.getKey().equals("bringThings1"))){
+					rs.getKey().equals("subjectName1") || rs.getKey().equals("bringThings1")||
+					rs.getKey().equals("regist_subject") || rs.getKey().equals("page")||
+					 rs.getKey().equals("_"))){
 
 				//リクエスト情報を科目情報配列に格納
 				if(cnt < 4){
 
+
 					setSiArray[cnt] = rs.getValue()[0];
+					System.out.println("INkey:"+rs.getKey()+":"+cnt + ":" +setSiArray[cnt] );
 					cnt++;
 					if(cnt == 4){
 
@@ -158,6 +171,7 @@ public class ManageUpdateControl extends HttpServlet {
 							//通常処理
 							//クラス情報作成
 							classID = setSiArray[1] + setSiArray[2];
+
 							System.out.println(classID);
 							//登録処理
 							sdm.subjectDBUpdate(si, classID,DBAccess.INSERT, "登録");
@@ -172,13 +186,15 @@ public class ManageUpdateControl extends HttpServlet {
 						setSiArray = new String[4];
 					}
 				}
+				System.out.println("INkey:"+rs.getKey()+":"+cnt + ":" +setSiArray[cnt] );
 
 
 
 			}//if
 
-		}//foreeach
 
+		}//foreeach
+		System.out.println("2");
 		//送信された削除用科目情報取得
 		subjectInfo delsi = new subjectInfo(
 				request.getParameter("subjectID")==null?0//true
@@ -211,12 +227,7 @@ public class ManageUpdateControl extends HttpServlet {
 	}
 
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-	}
+
 
 	//クラス管理画面指定時の処理
 		private void classUpdate(HttpServletRequest request, classDBManage cdm) {
@@ -299,13 +310,13 @@ public class ManageUpdateControl extends HttpServlet {
 		css.add("/Sotsuken/css/custom.css");
 		css.add("/Sotsuken/css/style.css");
 		css.add("/Sotsuken/css/pure-drawer.css");
-
-
+		css.add("/Sotsuken/css/validationEngine.jquery.css");
 
 		js.add("/Sotsuken/js/jquery-2.1.1.min.js");
 		js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
 		js.add("/Sotsuken/js/jquery.appear.js");
 		js.add("/Sotsuken/js/subject_manage.js");
+
 		request.setAttribute("css", css);
 		request.setAttribute("js", js);
 	}//css&js

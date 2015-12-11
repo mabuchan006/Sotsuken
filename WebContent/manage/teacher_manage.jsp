@@ -4,7 +4,7 @@
 <div class="row ">
 
 <c:if test=  "${!empty Msg }">
-<div class="alert alert-success alert-dismissible" role="alert">
+<div class="alert alert-success alert-dismissible col-md-6 col-md-offset-3" role="alert">
 	<button type="button" class="close" data-dismiss="alert" aria-label="閉じる"><span aria-hidden="true">×</span></button>
 	<strong>success:</strong>${Msg }
 </div>

@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
 
-
 	if($("#addTb-tbody > tr").size() < 2){
 	$("#addTb-tbody > tr").clone(true).insertAfter(
 			$("#addTb-tbody > tr")
@@ -40,6 +39,7 @@ function firstID(){
 		$(this).attr("name","subjectName" + cnt);
 
 
+
          cnt++;
     });
 
@@ -71,5 +71,6 @@ function firstID(){
     });
 
 
-
 }
+
+
