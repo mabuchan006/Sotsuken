@@ -86,6 +86,7 @@ public class temp_tableControl extends HttpServlet {
 			request.setAttribute("infoSubjectList", infoSubjectList);
 			request.setAttribute("teacherList",teacherList);
 			request.setAttribute("teacher_count",teacher_count);
+			System.out.print(rooms1List);
 			request.setAttribute("rooms1List", rooms1List);
 			//request.setAttribute("rooms2List", rooms2List);
 			//request.setAttribute("rooms3List", rooms3List);
