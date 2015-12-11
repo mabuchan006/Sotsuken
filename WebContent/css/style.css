@@ -540,7 +540,7 @@ margin-bottom: 5px;
 
 /**持ち物ポップアップ用**/
 .killindex {
-	z-index:2;
-	position: relative;
+	z-index:99;
+
 
 }
