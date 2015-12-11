@@ -102,7 +102,7 @@ public class subjectDBManage extends DBAccess {
 	 connect();
 	 switch (state) {
 	 case INSERT:
-
+		 System.out.println("6");
 	 // 通常科目情報登録
 	 createStstement(insertSql);
 	 getPstmt().setString(1, ci.getSubjectName());
@@ -138,7 +138,7 @@ public class subjectDBManage extends DBAccess {
 
 	 getPstmt().setInt(1, ci.getSubjectID());// 削除するIDをセット
 	 updateExe();// 実行
-	 System.out.println(getIntResult());
+
 	 createStstement(deleteSql);
 	 getPstmt().setInt(1, ci.getSubjectID());
 
@@ -148,7 +148,7 @@ public class subjectDBManage extends DBAccess {
 
 
 	 updateExe();// 実行
-	 System.out.println(getIntResult());
+	 System.out.println("7");
 	 setMsg(resultMsg(ci, msg));// 実行メッセージ取得
 	 disConnection();// 切断
 
@@ -233,10 +233,12 @@ public class subjectDBManage extends DBAccess {
 	}// selectClass
 
 	 private String resultMsg(subjectInfo ci, String msg) {
+
 	 // 処理が実行されなかったら
 	 if (getIntResult() == 0) {
 	 return String.format("%sを%sできませんでした。", ci.getSubjectName(), msg);
 	 }
+	 System.out.println("8");
 	 return String.format("%sを%sしました。", ci.getSubjectName(), msg);
 	 }
 

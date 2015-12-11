@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
 
+
 	if($("#addTb-tbody > tr").size() < 2){
 	$("#addTb-tbody > tr").clone(true).insertAfter(
 			$("#addTb-tbody > tr")
@@ -28,8 +29,43 @@ $(document).ready(function() {
 		firstID();
 
 	});
+	//validation
+	 $("#submit").submit(function(){
+
+
+		var submitFlg = true;
+		var obj = new Object();
+		alert("test"+submitFlag);
+
+		$(".subjectName").each(function(){
+				if($(this).value===""){
+					submitFlag = false;
+				}
+	    });
+
+		$(".grade").each(function(){
+			if($(this).value==="" ){
+				submitFlag = false;
+			}
+	    });
+
+		$(".cource").each(function(){
+			if($(this).value==="" ){
+				submitFlag = false;
+			}
+	    });
+
+		return submitFlg;
+
+	});
+
 
 });
+
+
+
+
+
 
 //動的にIDの連番を格納
 function firstID(){
@@ -72,5 +108,7 @@ function firstID(){
 
 
 }
+
+
 
 

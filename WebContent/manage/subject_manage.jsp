@@ -47,6 +47,7 @@ function selectChange(num){
 	}//selectChange
 
 
+
 </script>
 
 <!-- foreach2重だよ selectに学年情報を格納-->
@@ -68,7 +69,7 @@ function selectChange(num){
 </c:if>
 
 <!-- form -->
-<form action="/Sotsuken/ManageUpdate?page=subject_manage" method="get" id="form">
+<form action="/Sotsuken/ManageUpdate?page=subject_manage" method="get"  id="submit">
 <table class="table col-md-9 col-md-offset-3">
 <thead>
 <tr>

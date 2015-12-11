@@ -129,7 +129,8 @@ public class ManageUpdateControl extends HttpServlet {
 
 		//すべてのリクエスト情報をinsert処理する
 		for (Map.Entry<String, String[]> rs : getMap.entrySet()) {
-			System.out.println("1");
+
+
 
 			//1つ目のリクエストはいらんので除外
 			if(!(rs.getKey().equals("grade_name1") || rs.getKey().equals("cource_name1") ||
@@ -142,7 +143,7 @@ public class ManageUpdateControl extends HttpServlet {
 
 
 					setSiArray[cnt] = rs.getValue()[0];
-					System.out.println("INkey:"+rs.getKey()+":"+cnt + ":" +setSiArray[cnt] );
+
 					cnt++;
 					if(cnt == 4){
 
@@ -172,10 +173,9 @@ public class ManageUpdateControl extends HttpServlet {
 							//クラス情報作成
 							classID = setSiArray[1] + setSiArray[2];
 
-							System.out.println(classID);
 							//登録処理
 							sdm.subjectDBUpdate(si, classID,DBAccess.INSERT, "登録");
-							System.out.println("ok");
+
 						}//if
 
 
@@ -186,7 +186,7 @@ public class ManageUpdateControl extends HttpServlet {
 						setSiArray = new String[4];
 					}
 				}
-				System.out.println("INkey:"+rs.getKey()+":"+cnt + ":" +setSiArray[cnt] );
+
 
 
 
@@ -194,7 +194,8 @@ public class ManageUpdateControl extends HttpServlet {
 
 
 		}//foreeach
-		System.out.println("2");
+
+
 		//送信された削除用科目情報取得
 		subjectInfo delsi = new subjectInfo(
 				request.getParameter("subjectID")==null?0//true
@@ -209,6 +210,7 @@ public class ManageUpdateControl extends HttpServlet {
 			System.out.println("削除");
 		}
 
+
 		//学年ごとに対応したクラス情報
 		Map<String,List<String>> classMap = sdm.classDBSelect();
 		//更新済み科目情報全件取得
@@ -218,6 +220,7 @@ public class ManageUpdateControl extends HttpServlet {
 		request.setAttribute("subjectList", subjectList);
 		request.setAttribute("classMap", classMap);
 		request.setAttribute("Msg",sdm.getMsg());
+
 
 
 		} catch (Exception e) {
@@ -315,7 +318,12 @@ public class ManageUpdateControl extends HttpServlet {
 		js.add("/Sotsuken/js/jquery-2.1.1.min.js");
 		js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
 		js.add("/Sotsuken/js/jquery.appear.js");
+		js.add("/Sotsuken/js/jquery.validate.min.js");
+		js.add("/Sotsuken/js/jquery.validate.js");
+		js.add("/Sotsuken/js/messages_ja.js");
 		js.add("/Sotsuken/js/subject_manage.js");
+
+
 
 		request.setAttribute("css", css);
 		request.setAttribute("js", js);
