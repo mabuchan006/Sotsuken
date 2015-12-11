@@ -5,7 +5,11 @@
 <div class="row ">
 
 <c:if test=  "${!empty Msg }">
-<div class="alert alert-success" role="alert">${Msg }</div>
+<div class="alert alert-success alert-dismissible" role="alert">
+	<button type="button" class="close" data-dismiss="alert" aria-label="閉じる"><span aria-hidden="true">×</span></button>
+	<strong>success:</strong>${Msg }
+</div>
+
 </c:if>
 
 
