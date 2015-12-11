@@ -29,7 +29,8 @@ if (!$db_selected){
 	}
 	mysql_close($link);
 	header('Content-Type: text/javascript; charset=utf-8');
-	echo 'callback(' . json_encode($viewMap) . ')';
+	echo json_encode($viewMap) ;
+
 
 
 

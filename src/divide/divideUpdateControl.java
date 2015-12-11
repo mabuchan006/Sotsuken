@@ -2,6 +2,7 @@
 package divide;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -16,6 +17,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import divide.db.divideDBManage;
 import divide.db.divideInfo;
+import net.arnx.jsonic.JSON;
+
 
 /**
  * Servlet implementation class divideUpdateControl
@@ -24,6 +27,7 @@ import divide.db.divideInfo;
 public class divideUpdateControl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	private String REQ_WEEK = "ajaxWeek";
 	private String content_page;
 	private String page_title;
 	ArrayList<String> css = new ArrayList<String>(); // css用List
@@ -57,6 +61,9 @@ public class divideUpdateControl extends HttpServlet {
 		String roomID = null;
 		List<divideInfo> diList = new ArrayList<>();
 		String inputStr[] = new String[2]; // 取得
+
+		String param = request.getParameter(REQ_WEEK);
+		System.out.println(param);
 		Map<String, String[]> map = request.getParameterMap();
 
 		// コマ割りDB操作クラス取得
@@ -65,7 +72,7 @@ public class divideUpdateControl extends HttpServlet {
 			for (String key : map.keySet()) {
 				System.out.println(key);
 				if (key.equals("mon") || key.equals("tue") || key.equals("wed") || key.equals("thu")
-						|| key.equals("fri")) {
+						|| key.equals("fri") || key.equals("ajaxWeek")) {
 					switch (key) {
 					case "mon":
 						week = "月";
@@ -81,6 +88,9 @@ public class divideUpdateControl extends HttpServlet {
 						break;
 					case "fri":
 						week = "金";
+						break;
+					case "ajaxWeek":
+						week = param;
 						break;
 					}
 				} else if (key.equals("submit")) {
@@ -125,10 +135,22 @@ public class divideUpdateControl extends HttpServlet {
 			// select
 			divideMap = ddm.editDivideDBSelect(week);
 
+			System.out.println("divideMap:" + divideMap);
+			System.out.println("viewMap:" + viewMap);
+
 			request.setAttribute("divideMap", divideMap);
 			request.setAttribute("viewMap", viewMap);
 			request.setAttribute("content_page", content_page);
 			request.setAttribute("page_title", page_title);
+
+			//ajax
+			if (param != null) {
+				response.setContentType("application/json; charset=utf-8");
+				response.setHeader("Access-Control-Allow-Origin", "*");
+				PrintWriter out = response.getWriter();
+				out.println(JSON.encode(viewMap));
+				System.out.println(JSON.encode(viewMap));
+			}
 
 		} catch (Exception e) {
 

@@ -43,29 +43,28 @@ function f_active(e) {
 
 			switch( elem.name ){
 				case "mon" :
-					data = { week : "月" };
+					data = { ajaxWeek : "月" };
 					break;
 				case "tue" :
-					data = { week : "火" };
+					data = { ajaxWeek : "火" };
 					break;
 				case "wed" :
-					data = { week : "水" };
+					data = { ajaxWeek: "水" };
 					break;
 				case "thu" :
-					data = { week : "木" };
+					data = { ajaxWeek : "木" };
 					break;
 				case "fri" :
-					data = { week : "金" };
+					data = { ajaxWeek : "金" };
 					break;
 			}
 			$.ajax({
 				type : "POST",
-				url : "/Sotsuken/php/divideAjax.php",
-				dataType : "jsonp",
-				jsonpCallback : "callback",
+				url : "divideUpdate",
+				dataType : "json",
 				data : data
 			}).done(function(res){
-				console.log(res);
+				console.log(res[0]);
 			}).fail(function(jqXHR, textStatus, errorThrown ){
 				console.log("NG:" + jqXHR.status + ":" + textStatus.status + ":" + errorThrown);
 			})
