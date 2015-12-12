@@ -77,31 +77,37 @@ public class classDBManage extends DBAccess{
 		connect();
 		switch(state){
 		case INSERT:
+			if(!(ci.getClassID().equals("") || ci.getClassName().equals(""))
+					|| ci.getClassID().length() == 4){
 			createStstement(insertSql);
 			getPstmt().setString(1,ci.getClassID());
 			getPstmt().setString(2,ci.getClassName());
-
+			updateExe();//実行
+			}//if
 			break;
 		case DELETE:
 			createStstement(deleteSql);
 			getPstmt().setString(1,ci.getClassID());//削除するIDをセット
+			updateExe();//実行
 
 			break;
 		}
 
 
-		updateExe();//実行
+
 		setMsg(resultMsg(ci,msg));//実行メッセージ取得
 		disConnection();//切断
 
 	}//method
 
 private String resultMsg(classInfo ci,String msg){
-		//処理が実行されなかったら
-		if (getIntResult() == 0){
-			return String.format("%sを%sできませんでした。",ci.getClassID(),msg);
-		}
-	return String.format("%sを%sしました。",ci.getClassID(),msg);
+
+	if (getIntResult() != 0) {
+		return String.format("%sを%sしました。", ci.getClassID()+" : "+ci.getClassName()
+		, msg);
+
+	}
+	return String.format("入力情報に誤りがあります");
 }
 
 

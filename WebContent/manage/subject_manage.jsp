@@ -44,7 +44,9 @@ function selectChange(num){
 	//選択されているvalue属性を取り出す
 	var val = $("#grade_id"+num).val();
 	selectInsert(val,num);
+
 	}//selectChange
+
 
 
 
@@ -59,38 +61,45 @@ function selectChange(num){
 	</c:forEach>
 </c:forEach>
 
-<div class="row">
+<div class="row col-md-9">
 <c:if test=  "${!empty Msg }">
 <div class="alert alert-success alert-dismissible col-md-6 col-md-offset-3" role="alert">
 	<button type="button" class="close" data-dismiss="alert" aria-label="閉じる"><span aria-hidden="true">×</span></button>
 	<strong>success:</strong>${Msg }
 </div>
+</c:if>
+
+<c:if test=  "${!empty err_Msg }">
+<div class="alert alert-danger alert-dismissible col-md-6 col-md-offset-3" role="alert">
+	<button type="button" class="close" data-dismiss="alert" aria-label="閉じる"><span aria-hidden="true">×</span></button>
+	<strong>error:</strong>${err_Msg }
+</div>
 
 </c:if>
 
 <!-- form -->
-<form action="/Sotsuken/ManageUpdate?page=subject_manage" method="get"  id="submit">
+<form action="/Sotsuken/ManageUpdate" method="get"  id="submit">
 <table class="table col-md-9 col-md-offset-3">
 <thead>
-<tr>
+<tr class="info">
 <th>科目名</th>
 <th>学年</th>
 <th>学科</th>
 <th>持ち物</th>
-<th><button type="submit" class="btn btn-primary" id="regist_btn" name="regist_subject">登録</button></th></tr>
+<th><input type="submit" class="btn btn-primary" id="regist_btn" name="regist_subject" value="登録" /></th></tr>
 </thead>
 <tbody id="addTb-tbody">
 <tr class="tList">
 <!-- 科目名 -->
 <td>
-<input type="text" class="form-control subjectName validate[required] text-input" id="subjectName"name="subjectName1"/>
+<input type="text" class="form-control subjectName " id="subjectName"name="subjectName1"/>
 </td>
 
 
 <!-- 学年表示セレクト -->
 <td>
-<select name="grade_name1 "  class="form-control col-md-1 grade validate[required]" id="grade_id1" onchange="selectChange(1)" >
-<option style="color: black;" value="" >--選択--</option>
+<select name="grade_name1 "  class="form-control col-md-1 grade" id="grade_id1" onchange="selectChange(1)" >
+<option style="color: black;" value="" >--select--</option>
 <c:forEach var="rs" items="${classMap}">
 <option style="color: black;" value="${rs.key }">${rs.key }</option>
 </c:forEach>
@@ -100,8 +109,8 @@ function selectChange(num){
 
 <td>
 <!-- 学科　選択学年から学科をjqで自動抽出予定 -->
-<select class="form-control col-md-1 cource validate[required]" id="cource_id1" name="cource_name1" >
-<option style="color: black;" value="">--学年を選んでください--</option>
+<select class="form-control col-md-1 cource" id="cource_id1" name="cource_name1" >
+<option style="color: black;" value="">--select--</option>
 </select>
 </td>
 
@@ -112,8 +121,8 @@ function selectChange(num){
 
 
   <td>
-    <input value="+" type="button" class="addList" onclick="addClick()">　
-    <input value="-" type="button" class="removeList" />
+    <input value="+" type="button" class="addList btn-primary" onclick="addClick()">　
+    <input value="-" type="button" class="removeList btn-danger" />
   </td>
 
 </tr>
@@ -124,7 +133,7 @@ function selectChange(num){
 
 
 <!-- 科目一覧表示 -->
-<div class="col-md-9 col-md-offset-3">
+<div class="col-md-12 col-md-offset-3">
 <div class="back">
 <table class="table ">
 <thead>
@@ -140,7 +149,7 @@ function selectChange(num){
 <td>${rs.bringThings}</td>
 <td>
 <!-- 削除用フォーム -->
-<form action="/Sotsuken/ManageUpdate?page=subject_manage" method="get">
+<form action="/Sotsuken/ManageUpdate" method="get">
 <input type="hidden" name="subjectID" value="${rs.subjectID }" />
 <input type="hidden" name="subjectName" value="${rs.subjectName }" />
 <input type="submit" class="btn btn-danger"name="delete_subject" value="削除" />

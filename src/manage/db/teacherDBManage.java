@@ -97,11 +97,13 @@ public class teacherDBManage extends DBAccess{
 	}//method
 
 private String resultMsg(teacherInfo ti,String msg){
-		//処理が実行されなかったら
-		if (getIntResult() == 0){
-			return String.format("%sを%sできませんでした。",ti.getTeacherName(),msg);
-		}
-	return String.format("%sを%sしました。",ti.getTeacherName(),msg);
+
+	if (getIntResult() != 0) {
+		return String.format("%sを%sしました。", ti.getTeacherName(), msg);
+
+	}
+	return String.format("入力情報に誤りがあります");
+
 }
 
 

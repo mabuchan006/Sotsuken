@@ -50,6 +50,7 @@ public class ManageUpdateControl extends HttpServlet {
 		//jspからのページ情報取得
 		String get_page = request.getParameter("page")==null?"subject_manage"
 				:request.getParameter("page");
+		System.out.println(get_page);
 		//使用するcss,jsファイルの適用
 		getIncludeFile(request);
 
@@ -62,7 +63,7 @@ public class ManageUpdateControl extends HttpServlet {
 			teacherUpdate(request, tdm);
 		}//if
 		//class管理画面の処理
-		if(get_page.equals("class_manage") ||
+		else if(get_page.equals("class_manage") ||
 				request.getParameter("delete_class") != null ||
 				request.getParameter("regist_class") != null){
 			//クラスDB操作クラス取得
@@ -71,7 +72,7 @@ public class ManageUpdateControl extends HttpServlet {
 		}//if
 
 		//講師管理画面処理
-		if(get_page.equals("subject_manage") ||
+		else if(get_page.equals("subject_manage") ||
 				request.getParameter("delete_subject") != null ||
 				request.getParameter("regist_subject") != null){
 
@@ -147,6 +148,8 @@ public class ManageUpdateControl extends HttpServlet {
 					cnt++;
 					if(cnt == 4){
 
+
+
 						//全学年を指定していた場合
 						if(setSiArray[1].equals("ALL")){
 							showFlag = 1;
@@ -219,13 +222,23 @@ public class ManageUpdateControl extends HttpServlet {
 		//科目情報
 		request.setAttribute("subjectList", subjectList);
 		request.setAttribute("classMap", classMap);
-		request.setAttribute("Msg",sdm.getMsg());
 
+		if(sdm.getMsg() != null){
 
+		if((sdm.getMsg()).indexOf("入力情報に誤りがあります") != -1){
+			request.setAttribute("err_Msg", sdm.getMsg());
+		}else{
+			request.setAttribute("Msg",sdm.getMsg());
+		}
 
+		}//if
 		} catch (Exception e) {
 			// TODO 自動生成された catch ブロック
+
 			e.printStackTrace();
+
+
+
 		}
 	}
 
@@ -262,7 +275,11 @@ public class ManageUpdateControl extends HttpServlet {
 					List<classInfo> classList = cdm.classDBSelect();
 
 					request.setAttribute("classList", classList);
-					request.setAttribute("Msg",cdm.getMsg());
+					if((cdm.getMsg()).indexOf("入力情報に誤りがあります") != -1){
+						request.setAttribute("err_Msg", cdm.getMsg());
+					}else{
+						request.setAttribute("Msg",cdm.getMsg());
+					}
 				} catch (Exception e) {
 					// TODO 自動生成された catch ブロック
 					e.printStackTrace();
@@ -299,7 +316,11 @@ public class ManageUpdateControl extends HttpServlet {
 				//更新済み講師情報全件取得
 				List<teacherInfo> teacherList = tdm.teacherDBSelect();
 				request.setAttribute("teacherList", teacherList);
-				request.setAttribute("Msg",tdm.getMsg());
+				if((tdm.getMsg()).indexOf("入力情報に誤りがあります") != -1){
+					request.setAttribute("err_Msg", tdm.getMsg());
+				}else{
+					request.setAttribute("Msg",tdm.getMsg());
+				}
 
 			} catch (Exception e) {
 				// TODO 自動生成された catch ブロック
@@ -313,14 +334,11 @@ public class ManageUpdateControl extends HttpServlet {
 		css.add("/Sotsuken/css/custom.css");
 		css.add("/Sotsuken/css/style.css");
 		css.add("/Sotsuken/css/pure-drawer.css");
-		css.add("/Sotsuken/css/validationEngine.jquery.css");
+
 
 		js.add("/Sotsuken/js/jquery-2.1.1.min.js");
 		js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
 		js.add("/Sotsuken/js/jquery.appear.js");
-		js.add("/Sotsuken/js/jquery.validate.min.js");
-		js.add("/Sotsuken/js/jquery.validate.js");
-		js.add("/Sotsuken/js/messages_ja.js");
 		js.add("/Sotsuken/js/subject_manage.js");
 
 

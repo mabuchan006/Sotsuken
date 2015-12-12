@@ -11,7 +11,13 @@
 </div>
 
 </c:if>
+<c:if test=  "${!empty err_Msg }">
+<div class="alert alert-danger alert-dismissible col-md-6 col-md-offset-3" role="alert">
+	<button type="button" class="close" data-dismiss="alert" aria-label="閉じる"><span aria-hidden="true">×</span></button>
+	<strong>error:</strong>${err_Msg }
+</div>
 
+</c:if>
 
 <!-- 登録処理 -->
 <form action="/Sotsuken/ManageUpdate?page=class_manage" method="get">

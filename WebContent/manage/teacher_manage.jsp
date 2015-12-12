@@ -10,6 +10,13 @@
 </div>
 
 </c:if>
+<c:if test=  "${!empty err_Msg }">
+<div class="alert alert-danger alert-dismissible col-md-6 col-md-offset-3" role="alert">
+	<button type="button" class="close" data-dismiss="alert" aria-label="閉じる"><span aria-hidden="true">×</span></button>
+	<strong>error:</strong>${err_Msg }
+</div>
+
+</c:if>
 
 <!-- 登録処理 -->
 <form action="/Sotsuken/ManageUpdate?page=teacher_manage" method="get">
@@ -32,7 +39,7 @@
 <td class="col-md-4">
 <!-- 登録ボタン -->
 <label for="password" class="empty">________</label>
-<button type="submit" class="btn btn-primary" id="regist_btn" name="regist_teacher">登録</button>
+<input type="submit" class="btn btn-primary" id="regist_btn" name="regist_teacher" value="登録"/>
 </td>
 
 </tr>
