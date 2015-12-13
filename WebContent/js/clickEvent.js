@@ -60,11 +60,11 @@ function f_active(e) {
 			}
 			$.ajax({
 				type : "POST",
-				url : "divideUpdate",
+				url : "http://localhost:8080/Sotsuken/divideUpdate",
 				dataType : "json",
 				data : data
 			}).done(function(res){
-				console.log(res[0]);
+				$("#NCS803-4").val(JSON.stringify(res));
 			}).fail(function(jqXHR, textStatus, errorThrown ){
 				console.log("NG:" + jqXHR.status + ":" + textStatus.status + ":" + errorThrown);
 			})

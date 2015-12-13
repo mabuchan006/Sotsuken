@@ -19,7 +19,6 @@ import divide.db.divideDBManage;
 import divide.db.divideInfo;
 import net.arnx.jsonic.JSON;
 
-
 /**
  * Servlet implementation class divideUpdateControl
  */
@@ -62,12 +61,15 @@ public class divideUpdateControl extends HttpServlet {
 		List<divideInfo> diList = new ArrayList<>();
 		String inputStr[] = new String[2]; // 取得
 
-		String param = request.getParameter(REQ_WEEK);
-		System.out.println(param);
+		// ajax
+		String param = null;
+		param = request.getParameter(REQ_WEEK);
+
 		Map<String, String[]> map = request.getParameterMap();
 
 		// コマ割りDB操作クラス取得
 		divideDBManage ddm = new divideDBManage();
+
 		try {
 			for (String key : map.keySet()) {
 				System.out.println(key);
@@ -138,19 +140,17 @@ public class divideUpdateControl extends HttpServlet {
 			System.out.println("divideMap:" + divideMap);
 			System.out.println("viewMap:" + viewMap);
 
+			if (param != null) {
+				response.setHeader("Access-Control-Allow-Origin", "*");
+				response.setContentType("application/json; charset=utf-8");
+				PrintWriter out = response.getWriter();
+				out.println(JSON.encode(viewMap));
+			}
+
 			request.setAttribute("divideMap", divideMap);
 			request.setAttribute("viewMap", viewMap);
 			request.setAttribute("content_page", content_page);
 			request.setAttribute("page_title", page_title);
-
-			//ajax
-			if (param != null) {
-				response.setContentType("application/json; charset=utf-8");
-				response.setHeader("Access-Control-Allow-Origin", "*");
-				PrintWriter out = response.getWriter();
-				out.println(JSON.encode(viewMap));
-				System.out.println(JSON.encode(viewMap));
-			}
 
 		} catch (Exception e) {
 
@@ -159,9 +159,10 @@ public class divideUpdateControl extends HttpServlet {
 		}
 
 		// 画面遷移
-		RequestDispatcher disp = request.getRequestDispatcher("template/layout.jsp");
-		disp.forward(request, response);
-
+		if(param == null){
+			RequestDispatcher disp = request.getRequestDispatcher("template/layout.jsp");
+			disp.forward(request, response);
+		}
 	}
 
 	/**
