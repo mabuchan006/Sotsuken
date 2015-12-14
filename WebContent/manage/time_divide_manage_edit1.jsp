@@ -53,6 +53,7 @@
 
 <script>
 $(function(e) {
+	$("thead").fixedTableHeader();
 	$("#class-room").accordion();
 	f_drag();
 	f_drop( e );
@@ -60,11 +61,7 @@ $(function(e) {
 	clickEvent( e );
 	formCheck( e );
 });
-/**
-	$(document).ready(function() {
-		$('table').fixedTableHeader();
-	});
-	**/
+
 </script>
 
 
@@ -75,11 +72,6 @@ $(function(e) {
 
 <body>
 
-
-
-
-
-
 	<!-- Start Logo Section -->
 	<!-- ヘッダー部分 -->
 	<section id="logo-section" class="text-center">
@@ -88,7 +80,6 @@ $(function(e) {
 				<div class="col-md-12">
 					<div class="logo text-center">
 						<h1>Create Schedule</h1>
-
 					</div>
 				</div>
 			</div>
@@ -97,29 +88,21 @@ $(function(e) {
 	<!-- End Logo Section -->
 	<form action="/Sotsuken/divideUpdate" method="post">
 
-
 		<div class="container-fluid">
 
 			<!-- タブ -->
 			<ul class="nav nav-pills nav-justified botom" id="weekTab">
-				<li class="h4 active  bold" id="mon"><input type="hidden"
-					name="mon"><a href="#" draggable="false">月</a></li>
-				<li class="h4 bold" id="tue"><input type="hidden"><a
-					href="#" draggable="false">火</a></li>
-				<li class="h4 bold" id="wed"><input type="hidden"><a
-					href="#" draggable="false">水</a></li>
-				<li class="h4 bold" id="thu"><input type="hidden"><a
-					href="#" draggable="false">木</a></li>
-				<li class="h4 bold" id="fri"><input type="hidden"><a
-					href="#" draggable="false">金</a></li>
+				<li class="h4 active  bold" id="mon"><input type="hidden" name="mon"><a draggable="false">月</a></li>
+				<li class="h4 bold" id="tue"><input type="hidden"><a draggable="false">火</a></li>
+				<li class="h4 bold" id="wed"><input type="hidden"><a draggable="false">水</a></li>
+				<li class="h4 bold" id="thu"><input type="hidden"><a draggable="false">木</a></li>
+				<li class="h4 bold" id="fri"><input type="hidden"><a draggable="false">金</a></li>
 			</ul>
 
 			<!-- button -->
 			<input type="hidden" id="dropFlag" value="false">
 			<button type="submit" class="btn btn-primary btn-lg col-md-1 fix">
 				登録</button>
-
-
 
 			<!-- button end -->
 			<!-- カレンダー部分 -->
@@ -128,9 +111,6 @@ $(function(e) {
 			<div class="col-md-10"></div>
 		</div>
 		<!-- カレンダーEND -->
-
-
-
 
 		<!-- ドラッグ&ドロップ -->
 		<div class="col-md-1 fix margin-top">
@@ -157,18 +137,11 @@ $(function(e) {
 					</h2>
 					<div>
 						<ul class="font">
-							<li class="select0"><a href="#M5F" draggable="false">5F
-							</a></li>
-							<li class="select0"><a href="#M4F" draggable="false">4F
-							</a></li>
-							<li class="select0"><a href="#M3F" draggable="false">3F
-							</a></li>
-							<li class="select0"><a href="#M2F" draggable="false">2F
-							</a></li>
-							<li class="select0"><a href="#M1F" draggable="false">1F
-							</a></li>
-
-
+							<li class="select0"><a href="#M5F" draggable="false">5F</a></li>
+							<li class="select0"><a href="#M4F" draggable="false">4F</a></li>
+							<li class="select0"><a href="#M3F" draggable="false">3F</a></li>
+							<li class="select0"><a href="#M2F" draggable="false">2F</a></li>
+							<li class="select0"><a href="#M1F" draggable="false">1F</a></li>
 						</ul>
 					</div>
 				</div>
@@ -191,10 +164,6 @@ $(function(e) {
 								<th class="view-size font2 wide1 back-color4 white">2</th>
 								<th class="view-size font2 wide1 back-color4 white">3</th>
 								<th class="view-size font2 wide1 back-color4 white">4</th>
-
-
-
-
 							</tr>
 
 						</thead>
@@ -235,8 +204,6 @@ $(function(e) {
 								</td>
 							</tr>
 
-
-
 							<tr class="pink1">
 								<td class="view-size font2" id="7F">802</td>
 
@@ -273,7 +240,6 @@ $(function(e) {
 								</td>
 							</tr>
 
-
 							<tr class="danger">
 								<td class="view-size font2">702</td>
 
@@ -309,8 +275,6 @@ $(function(e) {
 									</p>
 								</td>
 							</tr>
-
-
 
 							<tr class="pink1">
 								<td class="view-size font2" id="6F">701</td>
@@ -384,8 +348,6 @@ $(function(e) {
 								</td>
 							</tr>
 
-
-
 							<tr class="pink1">
 								<td class="view-size font2">603</td>
 
@@ -457,8 +419,6 @@ $(function(e) {
 									</p>
 								</td>
 							</tr>
-
-
 
 							<tr class="pink1">
 								<td class="view-size font2">504</td>
@@ -532,8 +492,6 @@ $(function(e) {
 								</td>
 							</tr>
 
-
-
 							<tr class="pink1">
 								<td class="view-size font2">502</td>
 
@@ -605,8 +563,6 @@ $(function(e) {
 									</p>
 								</td>
 							</tr>
-
-
 
 							<tr class="pink1">
 								<td class="view-size font2">404</td>
@@ -680,8 +636,6 @@ $(function(e) {
 								</td>
 							</tr>
 
-
-
 							<tr class="pink1">
 								<td class="view-size font2">402</td>
 
@@ -753,8 +707,6 @@ $(function(e) {
 									</p>
 								</td>
 							</tr>
-
-
 
 							<tr class="pink1">
 								<td class="view-size font2">304</td>
@@ -828,8 +780,6 @@ $(function(e) {
 								</td>
 							</tr>
 
-
-
 							<tr class="pink1">
 								<td class="view-size font2">302</td>
 
@@ -901,8 +851,6 @@ $(function(e) {
 									</p>
 								</td>
 							</tr>
-
-
 
 							<tr class="pink1">
 								<td class="view-size font2">201</td>
