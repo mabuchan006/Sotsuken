@@ -53,7 +53,7 @@ public class timeTableMasterControl extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String page = request.getParameter("page");
-
+		request.setCharacterEncoding("UTF-8");
 		// 使用するcss,jsファイルの適用
 				layoutInclude tools = new layoutInclude();
 				layoutIncludeInfo info =  tools.public_layout();
