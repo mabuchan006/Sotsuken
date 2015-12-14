@@ -41,7 +41,7 @@ public class temp_tableControl extends HttpServlet {
 
 	String content_page = "/temp_timetable/temp_table_regist.jsp"; // 遷移先jsp
 	private String page_title = "Temporary Edit";// ページ名
-	private String chooseClassID = "R4A1";// classID選択 TODO:テーブル変更を柔軟にする。
+	private String chooseClassID = "R4A1";// classID選択 TODO:DBSWitchテーブル変更を柔軟にする。
 
 	subjectDBManage suDBM = new subjectDBManage(chooseClassID);
 	teacherDBManage teDBM = new teacherDBManage();
@@ -71,37 +71,41 @@ public class temp_tableControl extends HttpServlet {
 		try {
 			infoSubjectList = suDBM.choiceSubject(); // 科目取得
 			teacherList = teDBM.teacherDBSelect(); // 先生取得
-			int teacher_count = teacherList.size();
 
 			rooms1List = tempDBM.roomsSelect(1, chooseClassID);
+			rooms2List = tempDBM.roomsSelect(2, chooseClassID);
+			rooms3List = tempDBM.roomsSelect(3, chooseClassID);
+			rooms4List = tempDBM.roomsSelect(4, chooseClassID);
 			int period_1 = rooms1List.size();
-			System.out.println("count:"+ period_1);
+			int period_2 = rooms2List.size();
+			int period_3 = rooms3List.size();
+			int period_4 = rooms4List.size();
+
+			int teacher_count = teacherList.size();
+			request.setAttribute("teacher_count",teacher_count);
 			request.setAttribute("period_1",period_1);
-			//rooms2List = tempDBM.roomsSelect(2, chooseClassID, week);
-			//rooms3List = tempDBM.roomsSelect(3, chooseClassID, week);
-			//rooms4List = tempDBM.roomsSelect(4, chooseClassID, week);
-
-
+			request.setAttribute("period_2",period_2);
+			request.setAttribute("period_3",period_3);
+			request.setAttribute("period_4",period_4);
 
 			request.setAttribute("infoSubjectList", infoSubjectList);
 			request.setAttribute("teacherList",teacherList);
-			request.setAttribute("teacher_count",teacher_count);
-			System.out.print(rooms1List);
+
 			request.setAttribute("rooms1List", rooms1List);
-			//request.setAttribute("rooms2List", rooms2List);
-			//request.setAttribute("rooms3List", rooms3List);
-			//request.setAttribute("rooms4List", rooms4List);
+			request.setAttribute("rooms2List", rooms2List);
+			request.setAttribute("rooms3List", rooms3List);
+			request.setAttribute("rooms4List", rooms4List);
 
 		} catch (Exception e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
-		}
-		// ディスパッチ準備
+		} //try Edit View 表示
 
+		// ディスパッチ準備
 		request.setAttribute("content_page", content_page);
 		request.setAttribute("page_title", page_title);
 
-		// ディスパッチ処理 layout.jspに投げると中身をcontent_pageのjspに合わせて表示
+		// ディスパッチ処理
 		RequestDispatcher disp = request.getRequestDispatcher("/template/layout.jsp");
 		disp.forward(request, response);
 	}

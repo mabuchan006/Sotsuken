@@ -27,21 +27,21 @@ public class tempDBManage extends DBAccess {
 	            +"ORDER BY CASE divide.week when '月' then 1 when '火' then 2 when '水' then 3 when '木' then 4 "
 	            +"when '金' then 5 when '土' then 6 when '日' then 7 end");
 
-		rooms2_SQL = String.format("SELECT GROUP_CONCAT(room.roomName separator '/') roomName "
+		rooms2_SQL = String.format("SELECT divide.period, divide.week, GROUP_CONCAT(DISTINCT room.roomName separator '/') AS roomName "
 	            +"FROM tbl_room room "
 	            +"INNER JOIN tbl_timedivide divide on room.roomID = divide.roomID "
 	            +"where divide.period = 2 && divide.classID = ? && divide.week = ? "
 	            +"order by case divide.week when '月' then 1 when '火' then 2 when '水' then 3 when '木' then 4 "
 	            +"when '金' then 5 when '土' then 6 when '日' then 7 end");
 
-		rooms3_SQL = String.format("SELECT GROUP_CONCAT(room.roomName separator '/') roomName "
+		rooms3_SQL = String.format("SELECT divide.period, divide.week, GROUP_CONCAT(DISTINCT room.roomName separator '/') AS roomName "
 	            +"FROM tbl_room room "
 	            +"INNER JOIN tbl_timedivide divide on room.roomID = divide.roomID "
 	            +"where divide.period = 3 && divide.classID = ? && divide.week = ? "
 	            +"order by case divide.week when '月' then 1 when '火' then 2 when '水' then 3 when '木' then 4 "
 	            +"when '金' then 5 when '土' then 6 when '日' then 7 end");
 
-		rooms4_SQL = String.format("SELECT GROUP_CONCAT(room.roomName separator '/') roomName "
+		rooms4_SQL = String.format("SELECT divide.period, divide.week, GROUP_CONCAT(DISTINCT room.roomName separator '/') AS roomName "
 	            +"FROM tbl_room room "
 	            +"INNER JOIN tbl_timedivide divide on room.roomID = divide.roomID "
 	            +"where divide.period = 4 && divide.classID = ? && divide.week = ? "
