@@ -5,6 +5,9 @@
 <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 
 <!DOCTYPE html>
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
 
 <!-- 学年学科選択処理 -->
 <script>
@@ -121,7 +124,7 @@ function selectChange(num){
 
 
   <td>
-    <input value="+" type="button" class="addList btn-primary" onclick="addClick()">　
+    <input value="+" type="button" class="addList btn-primary" onclick="addClick();">　
     <input value="-" type="button" class="removeList btn-danger" />
   </td>
 
