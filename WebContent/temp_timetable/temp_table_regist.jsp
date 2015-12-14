@@ -97,7 +97,7 @@
 			<c:if test="${list_flg }">
 			<tr class="info">
 			<%
-			int period_1 = (int)request.getAttribute("period_1");
+			int period_1 = Integer.parseInt(request.getAttribute("period_1").toString());
 			%>
 
 			<%
@@ -311,7 +311,7 @@
 	<table class="table table-border ">
 		<tbody>
 			<%
-				int teacher_count =  (int)request.getAttribute("teacher_count");
+				int teacher_count =  Integer.parseInt(request.getAttribute("teacher_count").toString());
 				int cnt1 = 0;
 				for (; cnt1 < teacher_count; cnt1++) {
 					pageContext.setAttribute("cnt1", cnt1);
