@@ -14,7 +14,7 @@ $(document).ready(function() {
 	$(document).on("click",".addList",function(){
 
 		//parent().parent() => td > tr
-		$("#addTb-tbody > tr").eq(0).clone(true).insertAfter(
+		($("#addTb-tbody > tr").eq(0)).clone(true).insertAfter(
 				$(this).parent().parent()
 				);
 
@@ -29,35 +29,7 @@ $(document).ready(function() {
 		firstID();
 
 	});
-	//validation
-	 $("#submit").submit(function(){
 
-
-		var submitFlg = true;
-		var obj = new Object();
-		alert("test"+submitFlag);
-
-		$(".subjectName").each(function(){
-				if($(this).value===""){
-					submitFlag = false;
-				}
-	    });
-
-		$(".grade").each(function(){
-			if($(this).value==="" ){
-				submitFlag = false;
-			}
-	    });
-
-		$(".cource").each(function(){
-			if($(this).value==="" ){
-				submitFlag = false;
-			}
-	    });
-
-		return submitFlg;
-
-	});
 
 
 });

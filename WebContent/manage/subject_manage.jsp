@@ -89,7 +89,7 @@ function selectChange(num){
 <th><input type="submit" class="btn btn-primary" id="regist_btn" name="regist_subject" value="登録" /></th></tr>
 </thead>
 <tbody id="addTb-tbody">
-<tr class="tList">
+<tr class="tList" id="tID1">
 <!-- 科目名 -->
 <td>
 <input type="text" class="form-control subjectName " id="subjectName"name="subjectName1"/>
