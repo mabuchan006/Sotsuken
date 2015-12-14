@@ -15,6 +15,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import Tools.layoutInclude;
+import Tools.layoutInclude.layoutIncludeInfo;
 import divide.db.divideDBManage;
 import divide.db.divideInfo;
 import net.arnx.jsonic.JSON;
@@ -49,7 +51,10 @@ public class divideUpdateControl extends HttpServlet {
 		// 文字コードutf8
 		request.setCharacterEncoding("UTF-8");
 		// 使用するcss,jsファイルの適用
-		getIncludeFile(request);
+		layoutInclude tools = new layoutInclude();
+		layoutIncludeInfo info =  tools.layout();
+		request.setAttribute("css", info.css);
+		request.setAttribute("js", info.js);
 		// ページ情報指定
 		content_page = "/manage/time_divide_manage_edit1.jsp";
 		page_title = "Create Schedule";
@@ -169,26 +174,4 @@ public class divideUpdateControl extends HttpServlet {
 			throws ServletException, IOException {
 		doGet(request, response);
 	}
-
-	private void getIncludeFile(HttpServletRequest request) {
-
-		css.add("http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css");
-		css.add("/Sotsuken/bootstrap/css/bootstrap.min.css");
-		css.add("/Sotsuken/css/font-awesome.min.css");
-		css.add("/Sotsuken/css/animate.css");
-		css.add("/Sotsuken/css/custom.css");
-		css.add("/Sotsuken/css/pure-drawer.css");
-		css.add("/Sotsuken/css/style.css");
-
-		js.add("/Sotsuken/js/jquery-2.1.1.min.js");
-		js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
-		js.add("/Sotsuken/js/dragdrop.js");
-		js.add("/Sotsuken/js/modal.js");
-		js.add("/Sotsuken/js/clickEvent.js");
-		js.add("/Sotsuken/js/formCheck.js");
-		js.add("http://code.jquery.com/ui/1.10.0/jquery-ui.js");
-		request.setAttribute("css", css);
-		request.setAttribute("js", js);
-	}// css&js
-
 }
