@@ -51,7 +51,7 @@ public class divideUpdateControl extends HttpServlet {
 		// 使用するcss,jsファイルの適用
 		getIncludeFile(request);
 		// ページ情報指定
-		content_page = "/manage/time_divide_manage_edit.jsp";
+		content_page = "/manage/time_divide_manage_edit1.jsp";
 		page_title = "Create Schedule";
 
 		String[] classIDArray;
@@ -72,7 +72,6 @@ public class divideUpdateControl extends HttpServlet {
 
 		try {
 			for (String key : map.keySet()) {
-				System.out.println(key);
 				if (key.equals("mon") || key.equals("tue") || key.equals("wed") || key.equals("thu")
 						|| key.equals("fri") || key.equals("ajaxWeek")) {
 					switch (key) {
@@ -136,9 +135,6 @@ public class divideUpdateControl extends HttpServlet {
 			ddm.divideDBInsert(diList);
 			// select
 			divideMap = ddm.editDivideDBSelect(week);
-
-			System.out.println("divideMap:" + divideMap);
-			System.out.println("viewMap:" + viewMap);
 
 			if (param != null) {
 				response.setHeader("Access-Control-Allow-Origin", "*");

@@ -12,6 +12,7 @@ function clickEvent( e ){
 	$("label").click(function( e ){
 		// クリックされたlabelの親要素(p)内にある子要素(textarea)のvalueを初期化
 		$(this).parents("p").children("textarea").get(0).value = "";
+		$("#dropFlag").get(0).value = "true";
 	});
 
 	// 一括削除ボタンがクリックされた時
@@ -26,7 +27,7 @@ function f_active(e) {
 	// タブがクリックされた時
 	$('#weekTab li').click(function(e) {
 
-		if($("#dropFlag").get(0).value === "true"){
+		if($("#dropFlag").val() === "true"){
 			$("#modal1").modal("show")
 		} else {
 			// クリックされたタブの要素取得
@@ -64,7 +65,17 @@ function f_active(e) {
 				dataType : "json",
 				data : data
 			}).done(function(res){
-				$("#NCS803-4").val(JSON.stringify(res));
+				//全テキストエリアをクリア
+				for(var i = 0; i < $("textarea").length; i++){
+					$("textarea").get(i).value = "";
+				}
+				//受け取ったJSONのKeyごとに処理
+				$.each(res,function(roomID, val1){
+					$.each(val1,function(period, classID){
+						//セレクタに対応するテキストエリアに追加
+						$("#" + roomID + "-" + period.substr(1)).val(classID);
+					})
+				})
 			}).fail(function(jqXHR, textStatus, errorThrown ){
 				console.log("NG:" + jqXHR.status + ":" + textStatus.status + ":" + errorThrown);
 			})
