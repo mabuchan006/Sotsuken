@@ -28,7 +28,6 @@ import net.arnx.jsonic.JSON;
 public class divideUpdateControl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	private String REQ_WEEK = "ajaxWeek";
 	private String content_page;
 	private String page_title;
 	ArrayList<String> css = new ArrayList<String>(); // css用List
@@ -65,12 +64,10 @@ public class divideUpdateControl extends HttpServlet {
 		String roomID = null;
 		List<divideInfo> diList = new ArrayList<>();
 		String inputStr[] = new String[2]; // 取得
-
-		// ajax
-		String param = null;
-		param = request.getParameter(REQ_WEEK);
-
 		Map<String, String[]> map = request.getParameterMap();
+
+		//AjaxFlag
+		Boolean ajaxFlag = new Boolean(false);
 
 		// コマ割りDB操作クラス取得
 		divideDBManage ddm = new divideDBManage();
@@ -97,12 +94,14 @@ public class divideUpdateControl extends HttpServlet {
 						week = "金";
 						break;
 					case "ajaxWeek":
-						week = param;
+						week = map.get(key)[0];
+						ajaxFlag = new Boolean(true);
 						break;
 					}
-				} else if (key.equals("submit")) {
+				} else if (key.equals("regist")) {
 					// delete
 					ddm.divideDBDelete(week);
+					//ajaxFlag = new Boolean(true);
 
 				} else {
 					inputStr = key.split("-");
@@ -118,6 +117,9 @@ public class divideUpdateControl extends HttpServlet {
 				inputStr = new String[2];
 
 			} // for
+
+			// insert
+			ddm.divideDBInsert(diList);
 
 			// select edit
 			HashMap<String, String[]> divideMap = ddm.editDivideDBSelect(week);
@@ -135,12 +137,10 @@ public class divideUpdateControl extends HttpServlet {
 				} // for
 			} // for
 
-			// insert
-			ddm.divideDBInsert(diList);
 			// select
 			divideMap = ddm.editDivideDBSelect(week);
 
-			if (param != null) {
+			if (ajaxFlag) {
 				response.setHeader("Access-Control-Allow-Origin", "*");
 				response.setContentType("application/json; charset=utf-8");
 				PrintWriter out = response.getWriter();
@@ -159,7 +159,7 @@ public class divideUpdateControl extends HttpServlet {
 		}
 
 		// 画面遷移
-		if(param == null){
+		if(!ajaxFlag){
 			RequestDispatcher disp = request.getRequestDispatcher("template/layout.jsp");
 			disp.forward(request, response);
 		}

@@ -101,8 +101,8 @@ $(function(e) {
 			</ul>
 
 			<!-- button -->
-			<input type="hidden" id="dropFlag" value="false">
-			<button type="submit" class="btn btn-primary btn-lg col-md-1 fix" id="submitBtn">登録</button>
+			<input type="hidden" id="checkFlag" value="false">
+			<button type="submit" class="btn btn-primary btn-lg col-md-1 fix" id="sBtn">登録</button>
 
 			<!-- button end -->
 			<!-- カレンダー部分 -->

@@ -2,9 +2,9 @@ var elem = "", data = "";
 
 function clickEvent( e ){
 	// 登録ボタンがクリックされた時
-	$("#submitBtn").click(function(e) {
+	$("#sBtn").click(function(e) {
 		// ボタンにname（submit）を付加
-		$("button").attr("name", "submit");
+		$("#sBtn").attr("name", "regist");
 		$("#modal2").modal("show");
 	});
 
@@ -12,7 +12,7 @@ function clickEvent( e ){
 	$("label").click(function( e ){
 		// クリックされたlabelの親要素(p)内にある子要素(textarea)のvalueを初期化
 		$(this).parents("p").children("textarea").get(0).value = "";
-		$("#dropFlag").get(0).value = "true";
+		$("#checkFlag").get(0).value = "true";
 	});
 
 	// 一括削除ボタンがクリックされた時
@@ -27,7 +27,7 @@ function f_active(e) {
 	// タブがクリックされた時
 	$('#weekTab li').click(function(e) {
 
-		if($("#dropFlag").val() === "true"){
+		if($("#checkFlag").val() === "true"){
 			$("#modal1").modal("show")
 		} else {
 			// クリックされたタブの要素取得
@@ -65,20 +65,24 @@ function f_active(e) {
 				dataType : "json",
 				data : data
 			}).done(function(res){
-				//全テキストエリアをクリア
-				for(var i = 0; i < $("textarea").length; i++){
-					$("textarea").get(i).value = "";
-				}
-				//受け取ったJSONのKeyごとに処理
-				$.each(res,function(roomID, val1){
-					$.each(val1,function(period, classID){
-						//セレクタに対応するテキストエリアに追加
-						$("#" + roomID + "-" + period.substr(1)).val(classID);
-					})
-				})
+				f_ajax_done(res);
 			}).fail(function(jqXHR, textStatus, errorThrown ){
 				console.log("NG:" + jqXHR.status + ":" + textStatus.status + ":" + errorThrown);
 			})
 		}
+	})
+}
+
+function f_ajax_done(res){
+	//全テキストエリアをクリア
+	for(var i = 0; i < $("textarea").length; i++){
+		$("textarea").get(i).value = "";
+	}
+	//受け取ったJSONのKeyごとに処理
+	$.each(res,function(roomID, val1){
+		$.each(val1,function(period, classID){
+			//セレクタに対応するテキストエリアに追加
+			$("#" + roomID + "-" + period.substr(1)).val(classID);
+		})
 	})
 }
