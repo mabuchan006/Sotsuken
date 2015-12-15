@@ -11,7 +11,9 @@ body {
 #addTb-tbody tr:first-child {
   display: none;
 }
-
+.wide{
+font-weight: 700;
+}
 #wrapper {
   padding-left: 250px;
   transition: all 0.4s ease 0s;
@@ -232,15 +234,19 @@ button{
 thead{
 	background-color: #fce9ef;
     margin: 0;
-
+    border-bottom-color:#202020;
     border-bottom: 0;
     padding: 9px 10px 10px;
-    font-size: 14px;
+    font-size: 15px;
     text-align: left;
 
 }
 
 
+color11{
+	background-color: #fce9ef;
+	border-bottom-color:#202020;
+}
 #labelName{
 	font-size: 1.1em;
   	line-height: 1.7em;
