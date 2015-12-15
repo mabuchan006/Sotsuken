@@ -151,6 +151,17 @@ font-weight: 700;
 	font-family: sans-serif;
 }
 
+.select{
+	font-size: 1.7em;
+}
+
+.select2{
+	font-size: 1.7em;
+}
+
+.thead{
+	font-size: 2em;
+}
 .select:hover{
 	background-color:#c0c0c0;
 	color:#fff;
@@ -162,7 +173,7 @@ font-weight: 700;
 
 
 .select2:hover{
-	background-color:#223771;
+	background-color:#404040;
 	color:#fff;
 
 	position:relative;

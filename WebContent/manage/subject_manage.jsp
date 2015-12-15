@@ -158,7 +158,7 @@ function selectChange(num){
 <!-- form -->
 <form action="/Sotsuken/ManageUpdate" method="get"  id="submit">
 <table class="table col-md-9 col-md-offset-3">
-<thead>
+<thead class="thead">
 <tr >
 <th >科目名</th>
 <th >学年</th>
@@ -169,7 +169,7 @@ function selectChange(num){
 </tr>
 </thead>
 <tbody id="addTb-tbody">
-<tr class="tList" id="tID1">
+<tr class="tList select2" id="tID1">
 <!-- 科目名 -->
 <td>
 <input type="text" class="form-control subjectName " id="subjectName"name="subjectName1"/>
@@ -216,7 +216,7 @@ function selectChange(num){
 <div class="col-md-12 col-md-offset-3">
 <div class="back">
 <table class="table ">
-<thead>
+<thead class="thead">
 <tr class="info wide">
 <td colspan="3">科目一覧</td>
 </tr>
@@ -232,7 +232,7 @@ function selectChange(num){
 <form action="/Sotsuken/ManageUpdate" method="get">
 <input type="hidden" name="subjectID" value="${rs.subjectID }" />
 <input type="hidden" name="subjectName" value="${rs.subjectName }" />
-<button type="submit" class="btn btn-danger"name="delete_subject" ><i class="fa fa-trash-o"></i></button>
+<button type="submit" class="btn btn-danger"name="delete_subject" ><i class="fa fa-trash-o fa-2x"></i></button>
 </form> <!-- 削除 -->
 </td>
 
