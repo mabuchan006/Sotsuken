@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html >
 <html>
@@ -7,8 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="">
+
 <!-- Bootstrap Core CSS -->
 <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -52,8 +50,11 @@
 <link href="../css/style.css" rel="stylesheet">
 
 <script>
+$(document).ready(function () {
+	$('table').fixedTableHeader();
+});
+
 $(function(e) {
-	$("thead").fixedTableHeader();
 	$("#class-room").accordion();
 	f_drag();
 	f_drop( e );
@@ -101,8 +102,7 @@ $(function(e) {
 
 			<!-- button -->
 			<input type="hidden" id="dropFlag" value="false">
-			<button type="submit" class="btn btn-primary btn-lg col-md-1 fix">
-				登録</button>
+			<button type="submit" class="btn btn-primary btn-lg col-md-1 fix" id="submitBtn">登録</button>
 
 			<!-- button end -->
 			<!-- カレンダー部分 -->
@@ -219,7 +219,7 @@ $(function(e) {
 									<p class="size drop-target">
 										<textarea cols="24" rows="3"
 											style="overflow: auto; background-color: #9F615E;"
-											id="NCS802-2" name="019-2">${divideMap.NCS802[0] }</textarea>
+											id="NCS802-2" name="019-2">${divideMap.NCS802[1] }</textarea>
 									</p>
 								</td>
 
@@ -227,7 +227,7 @@ $(function(e) {
 									<p class="size drop-target">
 										<textarea cols="24" rows="3"
 											style="overflow: auto; background-color: #9F615E;"
-											id="NCS802-3" name="019-3">${divideMap.NCS802[0] }</textarea>
+											id="NCS802-3" name="019-3">${divideMap.NCS802[2] }</textarea>
 									</p>
 								</td>
 
@@ -235,7 +235,7 @@ $(function(e) {
 									<p class="size drop-target">
 										<textarea cols="24" rows="3"
 											style="overflow: auto; background-color: #9F615E;"
-											id="NCS803-4" name="019-4">${divideMap.NCS802[0] }</textarea>
+											id="NCS803-4" name="019-4">${divideMap.NCS802[3] }</textarea>
 									</p>
 								</td>
 							</tr>
@@ -291,7 +291,7 @@ $(function(e) {
 									<p class="size drop-target">
 										<textarea cols="24" rows="3"
 											style="overflow: auto; background-color: #9F615E;"
-											id="NCS701-2" name="017-2">${divideMap.NCS701[0] }</textarea>
+											id="NCS701-2" name="017-2">${divideMap.NCS701[1] }</textarea>
 									</p>
 								</td>
 
@@ -299,7 +299,7 @@ $(function(e) {
 									<p class="size drop-target">
 										<textarea cols="24" rows="3"
 											style="overflow: auto; background-color: #9F615E;"
-											id="NCS701-3" name="017-3">${divideMap.NCS701[0] }</textarea>
+											id="NCS701-3" name="017-3">${divideMap.NCS701[2] }</textarea>
 									</p>
 								</td>
 
@@ -307,7 +307,7 @@ $(function(e) {
 									<p class="size drop-target">
 										<textarea cols="24" rows="3"
 											style="overflow: auto; background-color: #9F615E;"
-											id="NCS701-4" name="017-4">${divideMap.NCS701[0] }</textarea>
+											id="NCS701-4" name="017-4">${divideMap.NCS701[3] }</textarea>
 									</p>
 								</td>
 							</tr>
