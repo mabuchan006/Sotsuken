@@ -22,7 +22,7 @@ public class loginDBManage extends DBAccess{
 		//DBAccessに接続
 		super(DRIVER_NAME);
 		selectSql =
-				String.format( "select teacherID,password from %s where teacherID =? AND password=?" );
+				String.format( "select teacherName,teacherID,password from tbl_teacher where teacherID =? AND password=?");
 	}//loginDBManage()
 
 	public teacherInfo userDBSearch(teacherInfo ti) throws Exception{
