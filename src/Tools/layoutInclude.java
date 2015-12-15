@@ -25,10 +25,9 @@ public class layoutInclude {
 		info.css.add("/Sotsuken/css/pure-drawer.css");
 		info.css.add("/Sotsuken/css/animate.css");
 
-
 		info.js.add("/Sotsuken/js/jquery-2.1.1.min.js");
+		info.js.add("/Sotsuken/js/jquery-ui.js");
 		info.js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
-		info.js.add("http://code.jquery.com/ui/1.10.0/jquery-ui.js");
 		info.js.add("/Sotsuken/js/dragdrop.js");
 		info.js.add("/Sotsuken/js/modal.js");
 		info.js.add("/Sotsuken/js/clickEvent.js");

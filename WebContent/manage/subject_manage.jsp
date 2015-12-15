@@ -79,16 +79,18 @@ function selectChange(num){
 <!-- form -->
 <form action="/Sotsuken/ManageUpdate" method="get"  id="submit">
 <table class="table col-md-9 col-md-offset-3">
-<thead>
-<tr class="info">
-<th>科目名</th>
-<th>学年</th>
-<th>学科</th>
-<th>持ち物</th>
-<th><input type="submit" class="btn btn-primary" id="regist_btn" name="regist_subject" value="登録" /></th></tr>
+<thead class="thead">
+<tr >
+<th >科目名</th>
+<th >学年</th>
+<th >学科</th>
+<th >持ち物</th>
+
+<th class="color11"><input type="submit" class="btn btn-primary " id="regist_btn" name="regist_subject" value="登録" /></th>
+</tr>
 </thead>
 <tbody id="addTb-tbody">
-<tr class="tList" id="tID1">
+<tr class="tList select2" id="tID1">
 <!-- 科目名 -->
 <td>
 <input type="text" class="form-control subjectName " id="subjectName"name="subjectName1"/>
@@ -135,9 +137,9 @@ function selectChange(num){
 <div class="col-md-12 col-md-offset-3">
 <div class="back">
 <table class="table ">
-<thead>
-<tr>
-<td colspan="3">subject</td>
+<thead class="thead">
+<tr class="info wide">
+<td colspan="3">科目一覧</td>
 </tr>
 </thead>
 <tbody>
@@ -151,7 +153,7 @@ function selectChange(num){
 <form action="/Sotsuken/ManageUpdate" method="get">
 <input type="hidden" name="subjectID" value="${rs.subjectID }" />
 <input type="hidden" name="subjectName" value="${rs.subjectName }" />
-<input type="submit" class="btn btn-danger"name="delete_subject" value="削除" />
+<button type="submit" class="btn btn-danger"name="delete_subject" ><i class="fa fa-trash-o fa-2x"></i></button>
 </form> <!-- 削除 -->
 </td>
 

@@ -3,9 +3,9 @@ var elem = "", data = "";
 function clickEvent( e ){
 	// 登録ボタンがクリックされた時
 	$("#submitBtn").click(function(e) {
-		$("#modal2").modal("show");
 		// ボタンにname（submit）を付加
 		$("button").attr("name", "submit");
+		$("#modal2").modal("show");
 	});
 
 	// labelがクリックされた時

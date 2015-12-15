@@ -77,6 +77,7 @@ public class divideUpdateControl extends HttpServlet {
 
 		try {
 			for (String key : map.keySet()) {
+				System.out.println(key + ":" + map.get(key)[0]);
 				if (key.equals("mon") || key.equals("tue") || key.equals("wed") || key.equals("thu")
 						|| key.equals("fri") || key.equals("ajaxWeek")) {
 					switch (key) {
@@ -100,12 +101,10 @@ public class divideUpdateControl extends HttpServlet {
 						break;
 					}
 				} else if (key.equals("submit")) {
-
 					// delete
 					ddm.divideDBDelete(week);
 
 				} else {
-
 					inputStr = key.split("-");
 					roomID = inputStr[0];
 					period = Integer.parseInt(inputStr[1]);

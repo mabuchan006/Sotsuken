@@ -58,7 +58,7 @@ public class loginControl extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		//パス初期値
-		String path="/Sotsuken/test/login_test.jsp/";//変更予定のため未記述
+		String path="test/login_test.jsp";//変更予定のため未記述
 		String errPath="/Sotsuken/";//変更予定のため未記述
 
 		//セッション情報取得
@@ -86,7 +86,7 @@ public class loginControl extends HttpServlet {
 				session = request.getSession(true);
 
 				//add teacherID & password
-				session.setAttribute( "tchInf" , tchInf );
+				session.setAttribute( "tchinf" , tchinf );
 
 				//login
 				response.sendRedirect( path );
