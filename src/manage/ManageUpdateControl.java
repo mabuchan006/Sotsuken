@@ -339,7 +339,7 @@ public class ManageUpdateControl extends HttpServlet {
 		js.add("/Sotsuken/js/jquery-2.1.1.min.js");
 		js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
 		js.add("/Sotsuken/js/jquery.appear.js");
-		js.add("/Sotsuken/js/subject_manage.js");
+
 
 
 

@@ -76,21 +76,23 @@ public class teacherDBManage extends DBAccess{
 		connect();
 		switch(state){
 		case INSERT:
+			if(!(ti.getTeacherName().equals(""))){
 			createStstement(insertSql);
 			getPstmt().setString(1,ti.getTeacherName());
 			getPstmt().setString(2,ti.getPassword());
-
+			updateExe();//実行
+			}
 			break;
 		case DELETE:
 			createStstement(deleteSql);
 			getPstmt().setInt(1,ti.getTeacherID());//削除するIDをセット
-
+			updateExe();//実行
 
 			break;
 		}
 
 
-		updateExe();//実行
+
 		setMsg(resultMsg(ti,msg));//実行メッセージ取得
 		disConnection();//切断
 
