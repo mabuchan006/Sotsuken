@@ -99,8 +99,6 @@ public class divideUpdateControl extends HttpServlet {
 				} else if (key.equals("regist")) {
 					// delete
 					ddm.divideDBDelete(week);
-					//ajaxFlag = new Boolean(true);
-
 				} else {
 					inputStr = key.split("-");
 					roomID = inputStr[0];
