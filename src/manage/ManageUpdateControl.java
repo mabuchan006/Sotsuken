@@ -51,6 +51,7 @@ public class ManageUpdateControl extends HttpServlet {
 		String get_page = request.getParameter("page")==null?"subject_manage"
 				:request.getParameter("page");
 		System.out.println(get_page);
+		System.out.println(request.getRequestURI());
 		//使用するcss,jsファイルの適用
 		getIncludeFile(request);
 
@@ -75,6 +76,7 @@ public class ManageUpdateControl extends HttpServlet {
 		else if(get_page.equals("subject_manage") ||
 				request.getParameter("delete_subject") != null ||
 				request.getParameter("regist_subject") != null){
+
 
 			subjectUpdate(request);
 

@@ -169,7 +169,7 @@ function selectChange(num){
 </tr>
 </thead>
 <tbody id="addTb-tbody">
-<tr class="tList select2" id="tID1">
+<tr class="tList select3" id="tID1">
 <!-- 科目名 -->
 <td>
 <input type="text" class="form-control subjectName " id="subjectName"name="subjectName1"/>
