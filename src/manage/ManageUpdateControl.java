@@ -3,6 +3,7 @@ package manage;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,6 +13,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import DB.DBAccess;
+import manage.db.classDBManage;
+import manage.db.classInfo;
+import manage.db.subjectDBManage;
 import manage.db.teacherDBManage;
 import manage.db.teacherInfo;
 
@@ -21,7 +25,7 @@ import manage.db.teacherInfo;
 @WebServlet("/ManageUpdate")
 public class ManageUpdateControl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	//とりあえず講師画面
+	//
 	private String content_page;
 	private String page_title ;
 	ArrayList<String> css = new ArrayList<String>(); //css用List
@@ -39,20 +43,47 @@ public class ManageUpdateControl extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//講師DB操作クラス取得
-		teacherDBManage tdm = new teacherDBManage();
 
 		//文字コードutf8
 		request.setCharacterEncoding("UTF-8");
 		//jspからのページ情報取得
-		String get_page = request.getParameter("page");
+		String get_page = request.getParameter("page")==null?"subject_manage"
+				:request.getParameter("page");
 		//使用するcss,jsファイルの適用
 		getIncludeFile(request);
 
 		//teacher管理の画面処理
-		//if(get_page == "teacher_manage"){
+		if(get_page.equals("teacher_manage")){
+			//講師DB操作クラス取得
+			teacherDBManage tdm = new teacherDBManage();
 			teacherUpdate(request, tdm);
-		//}
+		}//if
+		//class管理画面の処理
+		if(get_page.equals("class_manage")){
+			//クラスDB操作クラス取得
+			classDBManage cdm = new classDBManage();
+			classUpdate(request, cdm);
+		}//if
+
+		if(get_page.equals("subject_manage")){
+
+			try {
+			//ページ情報指定
+			content_page = "/manage/subject_manage.jsp";
+			page_title = "科目管理画面";
+			//更新済み講師情報全件取得
+			subjectDBManage sdm = new subjectDBManage();
+
+				Map<String,List<String>> classMap = sdm.classDBSelect();
+				System.out.println(classMap);
+				request.setAttribute("classMap", classMap);
+
+			} catch (Exception e) {
+				// TODO 自動生成された catch ブロック
+				e.printStackTrace();
+			}
+
+		}
 
 		//ページデータセット
 		try {
@@ -80,11 +111,44 @@ public class ManageUpdateControl extends HttpServlet {
 		// TODO Auto-generated method stub
 	}
 
+	//クラス管理画面指定時の処理
+		private void classUpdate(HttpServletRequest request, classDBManage cdm) {
 
+
+				//送信されたクラス情報取得
+				classInfo ci = new classInfo(
+						request.getParameter("classID")==null?""//true
+								:request.getParameter("classID")//false
+						,request.getParameter("className")
+
+						);
+
+				try {
+					//ページ情報指定
+					content_page = "/manage/class_manage.jsp";
+					page_title = "クラス管理画面";
+
+					if(request.getParameter("regist_class") != null ){
+						cdm.classDBUpdate(ci, DBAccess.INSERT, "登録");
+						System.out.println("登録");
+					}
+
+					if(request.getParameter("delete_class") != null){
+						cdm.classDBUpdate(ci, DBAccess.DELETE, "削除");
+						System.out.println("削除");
+					}
+					//更新済み講師情報全件取得
+					List<classInfo> classList = cdm.classDBSelect();
+
+					request.setAttribute("classList", classList);
+				} catch (Exception e) {
+					// TODO 自動生成された catch ブロック
+					e.printStackTrace();
+				}
+			}//class
+
+	//講師管理画面指定時の処理
 	private void teacherUpdate(HttpServletRequest request, teacherDBManage tdm) {
-
-		//講師管理画面指定時の処理
-
 
 			//送信された講師情報取得
 			teacherInfo ti = new teacherInfo(
@@ -114,24 +178,25 @@ public class ManageUpdateControl extends HttpServlet {
 				List<teacherInfo> teacherList = tdm.teacherDBSelect();
 				request.setAttribute("teacherList", teacherList);
 
-
 			} catch (Exception e) {
 				// TODO 自動生成された catch ブロック
 				e.printStackTrace();
 			}
 		}//teacher
+
 	private void getIncludeFile(HttpServletRequest request) {
 		css.add("/Sotsuken/bootstrap/css/bootstrap.min.css");
 		css.add("/Sotsuken/css/font-awesome.min.css");
 		css.add("/Sotsuken/css/custom.css");
 		css.add("/Sotsuken/css/style.css");
+		css.add("/Sotsuken/css/pure-drawer.css");
 
 
 
 		js.add("/Sotsuken/js/jquery-2.1.1.min.js");
 		js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
 		js.add("/Sotsuken/js/jquery.appear.js");
-		js.add("/Sotsuken/js/teacher_regist.js");
+		js.add("/Sotsuken/js/subject_manage.js");
 		request.setAttribute("css", css);
 		request.setAttribute("js", js);
 	}//css&js

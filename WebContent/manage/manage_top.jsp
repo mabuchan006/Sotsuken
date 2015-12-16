@@ -1,9 +1,13 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <head>
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
@@ -32,20 +36,26 @@
         <script src="js/login.js"></script>
 
 
-   <link href="../css/style.css" rel="stylesheet">
-
-          <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-<title>管理者TOP</title>
-</head>
-<body>
 
 
-        <!-- Start Logo Section --><!-- ヘッダー部分 -->
-        <section id="logo-section" class="text-center ">
+
+
+        <link href="../css/style.css" rel="stylesheet">
+    </head>
+
+    <body >
+        <div class="pure-container" data-effect="pure-effect-scaleRotate">
+            <input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"/>
+            <label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"><span class="pure-toggle-icon"></span></label>
+
+            <nav class="pure-drawer" data-position="left">
+
+                <p style="padding: 100px 20px; margin: 0;">Insert your off-canvas content here</p>
+            </nav>
+
+            <div class="pure-pusher-container ">
+                <div class="pure-pusher">
+                    <section id="logo-section" class="text-center ">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -62,7 +72,7 @@
 
         <!-- Start Main Body Section --><!-- メインボディ部分 -->
         <div class="mainbody-section text-center ">
-            <div class="container back-color3">
+            <div class="container ">
                 <div class="row">
 
 
@@ -102,29 +112,11 @@
                             </a>
                         </div>
                         </div>
+                </div>
+            </div>
 
 
-
-
-
-<!-- モーダルウィンドウを呼び出すボタン -->
-
-
-
-
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-                    </div></div></div>
-
-
-
-
-</body>
+            <label class="pure-overlay" for="pure-toggle-left" data-overlay="left"></label>
+        </div>
+    </body>
 </html>

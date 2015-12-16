@@ -81,40 +81,19 @@ $(function( e ){
 			<tr>
 				<th>802</th>
 				<td>
-					<div class="drop-target" id="NCS802-1-drop">
-						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802-1"></textarea>
+					<div class="size">
+						<textarea cols="6" rows="1" style="overflow:auto;" id="NCS802-1"></textarea>
 					</div><br>
-					<div class="drop-target" id="NCS802-2-drop">
-						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802-2"></textarea>
+					<div class="size">
+						<textarea cols="6" rows="1" style="overflow:auto;" id="NCS802-2"></textarea>
 					</div><br>
-					<div class="drop-target" id="NCS802-3-drop">
-						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802-3"></textarea>
+					<div class="size">
+						<textarea cols="6" rows="1" style="overflow:auto;" id="NCS802-3"></textarea>
 					</div><br>
-					<div class="drop-target" id="NCS802-4-drop">
-						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS802-4"></textarea>
+					<div class="size">
+						<textarea cols="6" rows="1" style="overflow:auto;" id="NCS802-4"></textarea>
 					</div><br>
 				</td>
-				<th>803</th>
-				<td>
-					<div id="NCS803_1-drop">
-						<textarea cols="5" rows="2" style="overflow:auto;" id="NCS803_1"></textarea>
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<th>701</th>
-				<td>
-					<div id="NCS701_1-drop">
-						<textarea cols="5" rows="2" style="overflow: auto;" id="NCS701_1"></textarea>
-					</div>
-				</td>
-				<th>702</th>
-				<td>
-					<div id="NCS702_1-drop">
-						<textarea cols="5" rows="2" style="overflow: auto;" id="NCS702_1"></textarea>
-					</div>
-				</td>
-			</tr>
 		</table>
 </div>
 </body>

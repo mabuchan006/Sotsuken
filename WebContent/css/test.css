@@ -1,41 +1,9 @@
 @CHARSET "UTF-8";
 
-/*ボタン*/
-#lec {
+.info1{
+background-color: ffee66;
 }
 
-.tb{
-border:5;
-height:80px;
-width:150px;
-background-color:#6699ff;
-}
-
-/*スライド対象(教室、講師)css*/
-.sldRow{
+#timeTable{
 
 }
-
-.sldCll{
-background-color:#ffee66;
-}
-
-/*表示切替対象セルの文字2行目*/
-#sldCell100{
-
-}
-
-/*表示切替対象セルの文字3行目*/
-#sldCell101{
-
-}
-
-
-/*スライド対象css*/
-
-/*授業セル*/
-.info{
-
-}
-
-/*授業セル*/

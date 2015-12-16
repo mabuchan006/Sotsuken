@@ -1,0 +1,11 @@
+@CHARSET "UTF-8";
+
+h2 {
+    font-size:15px;
+}
+.popover .popover-title {
+    background: none;
+    border-bottom: medium none !important;
+    margin: 0 !important;
+    padding: 10px 14px 0 !important;
+}
