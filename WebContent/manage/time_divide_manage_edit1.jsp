@@ -23,19 +23,17 @@
 </c:if>
 
 <script>
-$(document).ready(function () {
-	$('table').fixedTableHeader();
-});
-
 $(function(e) {
-	$("#class-room").accordion();
+	$(".accordionJS").accordion();
 	f_drag();
 	f_drop( e );
 	f_active( e );
 	clickEvent( e );
 	formCheck( e );
 });
-
+$(document).ready(function () {
+	$('table').fixedTableHeader();
+});
 </script>
 
 
@@ -136,6 +134,7 @@ $(function(e) {
 						<!-- button -->
 						<input type="hidden" id="checkFlag" value="false">
 						<button type="submit" class="btn btn-primary btn-lg col-md-1 fix" id="sBtn">登録</button>
+						<button type="button"class="btn btn-danger btn-lg col-md-1 col-md-offset-10 fix" id="cBtn">クリア</button>
 
 						<!-- button end -->
 						<!-- カレンダー部分 -->
@@ -146,10 +145,141 @@ $(function(e) {
 					<!-- カレンダーEND -->
 
 					<!-- ドラッグ&ドロップ -->
+
 					<div class="col-md-1 fix margin-top">
-						<div id="class">
+						<h1>class</h1>
+						<div id="drag-target">
+							<div class="accordionJS">
+								<h2 class="font">
+									<a href="#" draggable="false">R1</a>
+								</h2>
+								<div>
+									<ul class="font">
+										<li class="select0">R1A1</li>
+										<li class="select0">R1A2</li>
+										<li class="select0">R1A3</li>
+									</ul>
+								</div>
+								<h2 class="font">
+									<a href="#" draggable="false">R2</a>
+								</h2>
+								<div>
+									<ul class="font">
+										<li class="select0">R2A1</li>
+										<li class="select0">R2A2</li>
+										<li class="select0">R2A3</li>
+										<li class="select0">R2A4</li>
+										<li class="select0">R2A5</li>
+									</ul>
+								</div>
+								<h2 class="font">
+									<a href="#" draggable="false">R3</a>
+								</h2>
+								<div>
+									<ul class="font">
+										<li class="select0">R3A1</li>
+										<li class="select0">R3A2</li>
+										<li class="select0">R3A3</li>
+										<li class="select0">R3A4</li>
+										<li class="select0">R3A5</li>
+									</ul>
+								</div>
+								<h2 class="font">
+									<a href="#" draggable="false">R4</a>
+								</h2>
+								<div>
+									<ul class="font">
+										<li class="select0">R4A1</li>
+										<li class="select0">R4A2</li>
+										<li class="select0">R4A3</li>
+										<li class="select0">R4A4</li>
+										<li class="select0">R4A5</li>
+									</ul>
+								</div>
+								<h2 class="font">
+									<a href="#" draggable="false">S1</a>
+								</h2>
+								<div>
+									<ul class="font">
+										<li class="select0">S1A1</li>
+										<li class="select0">S1A2</li>
+										<li class="select0">S1A3</li>
+										<li class="select0">S1A4</li>
+										<li class="select0">S1G1</li>
+										<li class="select0">S1G2</li>
+										<li class="select0">S1G3</li>
+										<li class="select0">S1M1</li>
+										<li class="select0">S1M2</li>
+									</ul>
+								</div>
+								<h2 class="font">
+									<a href="#" draggable="false">S2</a>
+								</h2>
+								<div>
+									<ul class="font">
+										<li class="select0">S2A1</li>
+										<li class="select0">S2A2</li>
+										<li class="select0">S2A3</li>
+										<li class="select0">S2A4</li>
+										<li class="select0">S2G1</li>
+										<li class="select0">S2G2</li>
+										<li class="select0">S2G3</li>
+										<li class="select0">S2M1</li>
+										<li class="select0">S2M2</li>
+									</ul>
+								</div>
+								<h2 class="font">
+									<a href="#" draggable="false">S3</a>
+								</h2>
+								<div>
+									<ul class="font">
+										<li class="select0">S3A1</li>
+										<li class="select0">S3A2</li>
+										<li class="select0">S3G1</li>
+										<li class="select0">S3G2</li>
+										<li class="select0">S3G3</li>
+										<li class="select0">S3M1</li>
+										<li class="select0">S3M2</li>
+									</ul>
+								</div>
+								<h2 class="font">
+									<a href="#" draggable="false">J1</a>
+								</h2>
+								<div>
+									<ul class="font">
+										<li class="select0">J1A1</li>
+										<li class="select0">J1A2</li>
+										<li class="select0">J1M1</li>
+										<li class="select0">J1M2</li>
+									</ul>
+								</div>
+								<h2 class="font">
+									<a href="#" draggable="false">J2</a>
+								</h2>
+								<div>
+									<ul class="font">
+										<li class="select0">J2A1</li>
+										<li class="select0">J2A2</li>
+										<li class="select0">J2M1</li>
+										<li class="select0">J2M2</li>
+									</ul>
+								</div>
+								<h2 class="font">
+									<a href="#" draggable="false">A1</a>
+								</h2>
+								<div>
+									<ul class="font">
+										<li class="select0">A1A1</li>
+										<li class="select0">A1A2</li>
+									</ul>
+								</div>
+							</div><!-- class="accordionJS" -->
+						</div><!-- id="drag-target" -->
+					</div><!-- class="col-md-1 fix margin-top" -->
+
+						<div class="col-md-1 col-md-offset-10 fix margin-top ">
 							<h1>room</h1>
-							<div id="class-room">
+							<div class="accordionJS">
 								<h2 class="font">
 									<a href="#" draggable="false">NCS</a>
 								</h2>
@@ -197,14 +327,9 @@ $(function(e) {
 											<a href="#M1F" draggable="false">1F</a>
 										</li>
 									</ul>
+							</div><!-- class="accordionJS" -->
+						</div><!-- class="col-md-1 fix margin-top" -->
 
-							</div><!-- id="class-room" -->
-						</div><!-- id="class" -->
-					</div><!-- class="col-md-1 fix margin-top" -->
-
-
-
-					<div id="panel-change">
 						<div class="container">
 							<div class="table  col-md-6 ">
 								<h1 class="text-center">NCS</h1>
@@ -1387,7 +1512,6 @@ $(function(e) {
 
 							</div><!-- class="table col-md-6 " -->
 						</div><!-- class="container" -->
-					</div><!-- id="panel-change" -->
 
 				</form>
 

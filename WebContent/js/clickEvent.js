@@ -16,10 +16,11 @@ function clickEvent( e ){
 	});
 
 	// 一括削除ボタンがクリックされた時
-	$().click(function( e ){
+	$("#cBtn").click(function( e ){
 		for(var i = 0; i < $("textarea").length; i++){
 			$("textarea").get(i).value = "";
 		}
+		$("#checkFlag").get(0).value = "true";
 	});
 }
 
