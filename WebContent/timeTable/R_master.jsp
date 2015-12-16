@@ -75,7 +75,7 @@
 
 </div>
 
-
+<br />
 
 	<!-- 印刷エリア指定id printareaで囲んだ範囲で可能 -->
 	<div class="printarea">
@@ -160,7 +160,7 @@
 						<%
 							if (cnt2 == 0) {
 						%>
-						<td class="info cell1" data-toggle="popover"
+						<td class="info cell1 killindex" data-toggle="popover"
 							data-placement="right" data-content="教科書" title="持ち物" nowrap>${period1List[index].subjectName}</td>
 						<%
 							}

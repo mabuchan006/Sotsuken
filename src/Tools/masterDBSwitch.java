@@ -1,4 +1,4 @@
-package timetable.db;
+package Tools;
 
 public class masterDBSwitch {
 

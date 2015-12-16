@@ -25,6 +25,16 @@
 	</c:forEach>
 </c:if>
 
+<script >
+// 	$(function(e) {
+// 		$("#class-room").accordion();
+// 		f_drag();
+// 		f_drop(e);
+// 		f_temp_drag();
+// 		f_temp_drop(e);
+// 	});
+	</script>
+
 </head>
 
 <body>
@@ -39,13 +49,17 @@
 
 			<h1 style="padding: 100px 20px 20px; margin: 0;">管理者メニュー</h1>
 			<ul>
-				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">講師管理</h1></li>
+				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">
+				<a href="/Sotsuken/ManageUpdate?page=teacher_manage">講師管理</a></h1></li>
 
-				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">科目管理</h1></li>
+				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">
+				<a href="/Sotsuken/ManageUpdate?page=subject_manage">科目管理</a></h1></li>
 
-				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">クラス管理</h1></li>
+				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">
+				<a href="/Sotsuken/ManageUpdate?page=class_manage">クラス管理</a></h1></li>
 
-				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">コマ割り管理</h1></li>
+				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">
+				コマ割り管理</h1></li>
 
 
 				<li>

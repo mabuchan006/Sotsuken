@@ -8,23 +8,34 @@
 }
 
 .font {
-	font-family: 'Comic Sans MS';
+	font-family: 'Time New Roman';
 }
 /**ゴシップ**/
 .font1 {
 	font-family: 'Meiryo UI';
 }
 
+.font2 {
+	font-family: 'Verdana';
+}
+
 .margin-top {
 	margin-top: 15px;
 }
 
+.wide1{
+	width: 222px;
+}
+
+.wide2{
+	width: 1110px;
+}
 body {
 	background-color: #202020;
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: 50% 50%;
-	font-family: 'Comic Sans MS';
+	font-family: ' Time New Roman';
 	color: #000;
 }
 
@@ -125,7 +136,7 @@ p {
 }
 
 .logo h1 {
-	font-family: 'Comic Sans MS';
+	font-family:  'Time New Roman';
 	color: #fff;
 	font-size: 60px;
 	font-weight: 700;
@@ -495,6 +506,25 @@ margin-bottom: 5px;
 	text-justify: distribute;
 }
 
+.select0:hover {
+	background-color:#fcc5c6;
+	color:#fff;
+	position:relative;
+
+}
+
+.view-size {
+	font-size: 30px;
+	text-justify: auto;
+}
+
+.kote{
+	float: left;
+}
+
+.kotebo{
+	float: left;height: 60px;overflow: auto;
+}
 /**一時登録機能の先生リスト　テーブル用 by mabuchan**/
 
 	.table-border>thead>tr>th, .table-border>tbody>tr>th,
@@ -506,3 +536,11 @@ margin-bottom: 5px;
     -webkit-border-radius: 10px;    /* Safari,Google Chrome用 */
     -moz-border-radius: 10px;   /* Firefox用 */
     background-color: white;
+	}
+
+/**持ち物ポップアップ用**/
+.killindex {
+	z-index:99;
+
+
+}

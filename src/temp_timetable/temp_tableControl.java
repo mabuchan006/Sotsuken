@@ -11,11 +11,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import Tools.layoutInclude;
+import Tools.layoutInclude.layoutIncludeInfo;
 import divide.db.divideInfo;
 import manage.db.teacherDBManage;
 import manage.db.teacherInfo;
+import temp_timetable.db.roomInfo;
 import temp_timetable.db.subjectDBManage;
 import temp_timetable.db.subjectInfo;
+import temp_timetable.db.tempDBManage;
 
 /**
  * Servlet implementation class temp_tableControl
@@ -30,17 +34,23 @@ public class temp_tableControl extends HttpServlet {
 	private List<divideInfo> divideList; // コマ割り情報保持用
 	private List<subjectInfo> infoSubjectList; // 科目情報保持用
 	private List<teacherInfo> teacherList; // 先生情報保持用
+	private List<roomInfo> rooms1List; // 時間割マスタ保持用
+	private List<roomInfo> rooms2List; // 時間割マスタ保持用
+	private List<roomInfo> rooms3List; // 時間割マスタ保持用
+	private List<roomInfo> rooms4List; // 時間割マスタ保持用
 
-	private String content_page = "/temp_timetable/temp_table_regist.jsp"; // 遷移先jsp
+	String content_page = "/temp_timetable/temp_table_regist.jsp"; // 遷移先jsp
 	private String page_title = "Temporary Edit";// ページ名
-	private String chooseClassID = "R4A1";// classID選択
+	private String chooseClassID = "R4A1";// classID選択 TODO:DBSWitchテーブル変更を柔軟にする。
+
+	subjectDBManage suDBM = new subjectDBManage(chooseClassID);
+	teacherDBManage teDBM = new teacherDBManage();
+	tempDBManage tempDBM = new tempDBManage();
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
 	public temp_tableControl() {
-		// ●temp_table_regist.jspで使用
-
 	}
 
 	/**
@@ -51,34 +61,51 @@ public class temp_tableControl extends HttpServlet {
 			throws ServletException, IOException {
 		// 文字コードutf8
 		request.setCharacterEncoding("UTF-8");
-		// jspからのページ情報取得
-		// 使用するcss,jsファイルの適用
-		getIncludeFile(request);
 
-		subjectDBManage suDBM = new subjectDBManage(chooseClassID);
-		teacherDBManage teDBM = new teacherDBManage();
-		// masterDBSwitch tblSW= new masterDBSwitch();
-		// TODO テーブル柔軟にすること
+		// 使用するcss,jsファイルの適用
+		layoutInclude tools = new layoutInclude();
+		layoutIncludeInfo info =  tools.layout();
+		request.setAttribute("css", info.css);
+		request.setAttribute("js", info.js);
+
 		try {
 			infoSubjectList = suDBM.choiceSubject(); // 科目取得
 			teacherList = teDBM.teacherDBSelect(); // 先生取得
+
+			rooms1List = tempDBM.roomsSelect(1, chooseClassID);
+			rooms2List = tempDBM.roomsSelect(2, chooseClassID);
+			rooms3List = tempDBM.roomsSelect(3, chooseClassID);
+			rooms4List = tempDBM.roomsSelect(4, chooseClassID);
+			int period_1 = rooms1List.size();
+			int period_2 = rooms2List.size();
+			int period_3 = rooms3List.size();
+			int period_4 = rooms4List.size();
+
 			int teacher_count = teacherList.size();
+			request.setAttribute("teacher_count",teacher_count);
+			request.setAttribute("period_1",period_1);
+			request.setAttribute("period_2",period_2);
+			request.setAttribute("period_3",period_3);
+			request.setAttribute("period_4",period_4);
 
 			request.setAttribute("infoSubjectList", infoSubjectList);
 			request.setAttribute("teacherList",teacherList);
-			request.setAttribute("teacher_count",teacher_count);
+
+			request.setAttribute("rooms1List", rooms1List);
+			request.setAttribute("rooms2List", rooms2List);
+			request.setAttribute("rooms3List", rooms3List);
+			request.setAttribute("rooms4List", rooms4List);
+
 		} catch (Exception e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
-		}
-		// ディスパッチ準備
+		} //try Edit View 表示
 
-		request.setAttribute("css", css);
-		request.setAttribute("js", js);
+		// ディスパッチ準備
 		request.setAttribute("content_page", content_page);
 		request.setAttribute("page_title", page_title);
 
-		// ディスパッチ処理 layout.jspに投げると中身をcontent_pageのjspに合わせて表示
+		// ディスパッチ処理
 		RequestDispatcher disp = request.getRequestDispatcher("/template/layout.jsp");
 		disp.forward(request, response);
 	}
@@ -89,29 +116,7 @@ public class temp_tableControl extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
-
-	private void getIncludeFile(HttpServletRequest request) {
-		css.add("/Sotsuken/bootstrap/css/bootstrap.min.css");
-		css.add("/Sotsuken/css/font-awesome.min.css");
-		css.add("/Sotsuken/css/custom.css");
-		css.add("/Sotsuken/css/style.css");
-		css.add("/Sotsuken/css/pure-drawer.css");
-		css.add("http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css");
-
-		js.add("/Sotsuken/js/jquery-2.1.1.min.js");
-		js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
-		js.add("/Sotsuken/bootstrap/js/bootstrap.js");
-		js.add("/Sotsuken/js/jquery.appear.js");
-		js.add("/Sotsuken/js/teacher_regist.js");
-		js.add("/Sotsuken/js/dragdrop.js");
-		js.add("/Sotsuken/js/modal.js");
-		js.add("http://code.jquery.com/ui/1.10.0/jquery-ui.js");
-		js.add("http://code.jquery.com/jquery-1.8.3.js");
-		request.setAttribute("css", css);
-		request.setAttribute("js", js);
-	}// css&js
 
 }

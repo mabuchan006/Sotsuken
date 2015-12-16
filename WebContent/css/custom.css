@@ -8,7 +8,12 @@ body {
 
 }
 
-
+#addTb-tbody tr:first-child {
+  display: none;
+}
+.wide{
+font-weight: 700;
+}
 #wrapper {
   padding-left: 250px;
   transition: all 0.4s ease 0s;
@@ -146,6 +151,17 @@ body {
 	font-family: sans-serif;
 }
 
+.select{
+	font-size: 1.7em;
+}
+
+.select2{
+	font-size: 1.7em;
+}
+
+.thead{
+	font-size: 2em;
+}
 .select:hover{
 	background-color:#c0c0c0;
 	color:#fff;
@@ -157,7 +173,7 @@ body {
 
 
 .select2:hover{
-	background-color:#223771;
+	background-color:#404040;
 	color:#fff;
 
 	position:relative;
@@ -229,15 +245,19 @@ button{
 thead{
 	background-color: #fce9ef;
     margin: 0;
-
+    border-bottom-color:#202020;
     border-bottom: 0;
     padding: 9px 10px 10px;
-    font-size: 14px;
+    font-size: 15px;
     text-align: left;
 
 }
 
 
+color11{
+	background-color: #fce9ef;
+	border-bottom-color:#202020;
+}
 #labelName{
 	font-size: 1.1em;
   	line-height: 1.7em;

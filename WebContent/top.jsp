@@ -139,15 +139,15 @@
 								<h3 class="modal-title white">login</h3>
 							</div>
 							<div class="modal-body">
-								<form action="loginServlet">
+								<form action="/Sotsuken/loginControl" method="POST">
 
 									<div id="msg"></div>
 
 									<label>username:</label> <input type="text"
-										placeholder="username" id="enterId" value=""> <br>
+										placeholder="username" id="enterId" value="" name="teacherID"> <br>
 									<label>password:</label> <input type="text" placeholder="PASS"
-										id="enterPw" value=""><br> <br> <input
-										type="button" value="login" id="login">
+										id="enterPw" value="" name="password"><br> <br> <input
+										type="submit" value="login" id="login">
 								</form>
 							</div>
 							<div class="modal-footer">

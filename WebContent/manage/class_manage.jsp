@@ -4,17 +4,23 @@
 
 <div class="row ">
 
-<div class="content-header">
-<div id="logo">
-<h1>クラス管理</h1>
-</div>
+<c:if test=  "${!empty Msg }">
+<div class="alert alert-success alert-dismissible col-md-6 col-md-offset-3" role="alert">
+	<button type="button" class="close" data-dismiss="alert" aria-label="閉じる"><span aria-hidden="true">×</span></button>
+	<strong>success:</strong>${Msg }
 </div>
 
+</c:if>
+<c:if test=  "${!empty err_Msg }">
+<div class="alert alert-danger alert-dismissible col-md-6 col-md-offset-3" role="alert">
+	<button type="button" class="close" data-dismiss="alert" aria-label="閉じる"><span aria-hidden="true">×</span></button>
+	<strong>error:</strong>${err_Msg }
+</div>
 
-<!-- header -->
+</c:if>
 
 <!-- 登録処理 -->
-<form action="/Sotsuken/ManageUpdate" method="get">
+<form action="/Sotsuken/ManageUpdate?page=class_manage" method="get">
 
 <table class="col-md-6 col-md-offset-3" id="first_table">
 <tr>
@@ -56,7 +62,7 @@
 <td>${rs.className}</td>
 <td>
 <!-- 削除用フォーム -->
-<form action="/Sotsuken/ManageUpdate" method="get">
+<form action="/Sotsuken/ManageUpdate?page=class_manage" method="get">
 <input type="hidden" name = "classID" value="${rs.classID }" />
 <input type="submit" class="btn btn-danger" name="delete_class" value="削除"/>
 </form>
@@ -71,4 +77,5 @@
 </div>
 </div>
 </div>
+
 

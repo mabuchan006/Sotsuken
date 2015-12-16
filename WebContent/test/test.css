@@ -1,11 +1,104 @@
-@CHARSET "UTF-8";
+@media print{
+@page{ size: landscape; margin: auto; }
 
-h2 {
-    font-size:15px;
-}
-.popover .popover-title {
-    background: none;
-    border-bottom: medium none !important;
-    margin: 0 !important;
-    padding: 10px 14px 0 !important;
+	.noprint{
+		display: none;
+	}
+
+	#logo-section {
+		display : none;
+	}
+
+	.container {
+		display : none;
+	}
+
+	.row{
+		display : none;
+	}
+
+	.col-md-12{
+		display : none;
+	}
+
+	.logo text-center{
+		display : none;
+	}
+
+	.text-right{
+		display : none;
+	}
+
+	.fa fa-star color-yellow fa-3x{
+		display : none;
+	}
+
+	.nav nav-tabs noprint{
+		display : none;
+	}
+
+	.dropdown-toggle{
+		display : none;
+	}
+
+	.caret{
+		display : none;
+	}
+
+	.dropdown-menu{
+		display : none;
+	}
+
+
+
+	<!-- ƒvƒŠƒ“ƒg‚·‚é”ÍˆÍ -->
+	.printarea{
+		display : block;
+	}
+
+	.container{
+		display : block;
+	}
+
+	.table-responsive{
+		display : block;
+	}
+
+	.table table-striped table-bordered text-center table-hover{
+		display : block;
+	}
+
+	.purple2{
+		display : block;
+	}
+
+	.purple1{
+		display : block;
+	}
+
+	.info{
+		display : block;
+	}
+
+	.danger{
+		display : block;
+	}
+
+	.success{
+		display : block;
+	}
+
+	.active{
+		display : block;
+	}
+
+	.warning{
+		display : block;
+	}
+
+	#cell{
+		display : block;
+	}
+
+
 }

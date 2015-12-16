@@ -26,17 +26,6 @@
 
 
 
-
-
-<!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-
-
-
-
 <script src="../js/jquery-2.1.1.min.js"></script>
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 
@@ -46,7 +35,8 @@
 <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
 <script type="text/javascript" src="../js/dragdrop.js"></script>
 <script src="../js/modal.js"></script>
-<script src="../js/week.js"></script>
+<script src="../js/clickEvent.js"></script>
+<script src="../js/formCheck.js"></script>
 
 <!-- Custom CSS -->
 <link href="../css/style.css" rel="stylesheet">
@@ -55,8 +45,10 @@
 	$(function(e) {
 		$("#class-room").accordion();
 		f_drag();
-		f_drop(e);
-		f_active(e);
+		f_drop( e );
+		f_active( e );
+		clickEvent( e );
+		formCheck( e );
 	});
 </script>
 
@@ -94,20 +86,16 @@
 
 			<!-- タブ -->
 			<ul class="nav nav-pills nav-justified botom" id="weekTab">
-				<li class="h4 active  bold" id="mon"><input type="hidden"
-					name="mon"><a href="#test2" draggable="false">月</a></li>
-				<li class="h4 bold" id="tue"><input type="hidden"><a
-					href="#test3" draggable="false">火</a></li>
-				<li class="h4 bold" id="wed"><input type="hidden"><a
-					href="#test4" draggable="false">水</a></li>
-				<li class="h4 bold" id="thu"><input type="hidden"><a
-					href="#test5" draggable="false">木</a></li>
-				<li class="h4 bold" id="fri"><input type="hidden"><a
-					href="#test6" draggable="false">金</a></li>
+				<li class="h4 active  bold" id="mon"><input type="hidden" name="mon">月</li>
+				<li class="h4 bold" id="tue"><input type="hidden">火</li>
+				<li class="h4 bold" id="wed"><input type="hidden">水</li>
+				<li class="h4 bold" id="thu"><input type="hidden">木</li>
+				<li class="h4 bold" id="fri"><input type="hidden">金</li>
 			</ul>
 
 			<!-- button -->
 
+			<input type="hidden" id="dropFlag" value="false">
 			<button type="submit" class="btn btn-primary btn-lg col-md-1 fix"
 				id="submitBtn">登録</button>
 
@@ -274,7 +262,7 @@
 								<p class="size drop-target">
 									1
 									<textarea cols="6" rows="1" style="overflow: auto;"
-										id="NCS802-1" name="019-1">${divideMap.NCS802[0] }</textarea>
+										id="NCS802-1" name="019-1">${divideMap.NCS802[0] }</textarea><label>X</label>
 								</p>
 								<p class="size drop-target">
 									2
@@ -1151,7 +1139,7 @@
 	</form>
 
 	<!-- もーだる -->
-	<div id="auto_modal" class="modal fade ">
+	<div id="modal1" class="modal fade ">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header back-color">
@@ -1159,10 +1147,31 @@
 						aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
-					<h3 class="modal-title white text-center">login</h3>
+					<h3 class="modal-title white text-center">warning!!!</h3>
 				</div>
 				<div class="modal-body text-center font1">
-					<h3>登録されました。</h3>
+					<h3>登録されていません</h3>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- もーだる終了 -->
+	<!-- もーだる -->
+	<div id="modal2"class="modal fade ">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header back-color">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h3 class="modal-title white text-center">info</h3>
+				</div>
+				<div class="modal-body text-center font1">
+					<h3>登録されました</h3>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-primary" data-dismiss="modal">close</button>

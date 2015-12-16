@@ -76,30 +76,36 @@ public class teacherDBManage extends DBAccess{
 		connect();
 		switch(state){
 		case INSERT:
+			if(!(ti.getTeacherName().equals(""))){
 			createStstement(insertSql);
 			getPstmt().setString(1,ti.getTeacherName());
 			getPstmt().setString(2,ti.getPassword());
-
+			updateExe();//実行
+			}
 			break;
 		case DELETE:
 			createStstement(deleteSql);
 			getPstmt().setInt(1,ti.getTeacherID());//削除するIDをセット
+			updateExe();//実行
 
 			break;
 		}
 
+
+
 		setMsg(resultMsg(ti,msg));//実行メッセージ取得
-		updateExe();//実行
 		disConnection();//切断
 
 	}//method
 
 private String resultMsg(teacherInfo ti,String msg){
-		//処理が実行されなかったら
-		if (getIntResult() == 0){
-			return String.format("%sを%sできませんでした。",ti.getTeacherName(),msg);
-		}
-	return String.format("%sを%sしました。",ti.getTeacherName(),msg);
+
+	if (getIntResult() != 0) {
+		return String.format("%sを%sしました。", ti.getTeacherName(), msg);
+
+	}
+	return String.format("入力情報に誤りがあります");
+
 }
 
 
