@@ -59,7 +59,7 @@
 				<a href="/Sotsuken/ManageUpdate?page=class_manage">クラス管理</a></h1></li>
 
 				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">
-				コマ割り管理</h1></li>
+				<a href="/Sotsuken/divideUpdate">コマ割り管理</a></h1></li>
 
 
 				<li>

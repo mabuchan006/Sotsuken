@@ -58,18 +58,25 @@ function f_active(e) {
 				case "fri" :
 					data = { ajaxWeek : "金" };
 					break;
+				default :
+					data = { ajaxWeek : "月" };
+					break;
 			}
-			$.ajax({
-				type : "POST",
-				url : "http://localhost:8080/Sotsuken/divideUpdate",
-				dataType : "json",
-				data : data
-			}).done(function(res){
-				f_ajax_done(res);
-			}).fail(function(jqXHR, textStatus, errorThrown ){
-				console.log("NG:" + jqXHR.status + ":" + textStatus.status + ":" + errorThrown);
-			})
+			f_ajax(data);
 		}
+	})
+}
+
+function f_ajax(data){
+	$.ajax({
+		type : "POST",
+		url : "http://localhost:8080/Sotsuken/divideUpdate",
+		dataType : "json",
+		data : data
+	}).done(function(res){
+		f_ajax_done(res);
+	}).fail(function(jqXHR, textStatus, errorThrown ){
+		console.log("NG:" + jqXHR.status + ":" + textStatus.status + ":" + errorThrown);
 	})
 }
 

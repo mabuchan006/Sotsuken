@@ -28,7 +28,6 @@ import net.arnx.jsonic.JSON;
 public class divideUpdateControl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	private String content_page;
 	private String page_title;
 	ArrayList<String> css = new ArrayList<String>(); // css用List
 	ArrayList<String> js = new ArrayList<String>(); // JavaScript用List
@@ -55,7 +54,6 @@ public class divideUpdateControl extends HttpServlet {
 		request.setAttribute("css", info.css);
 		request.setAttribute("js", info.js);
 		// ページ情報指定
-		content_page = "/manage/time_divide_manage_edit1.jsp";
 		page_title = "Create Schedule";
 
 		String[] classIDArray;
@@ -149,7 +147,6 @@ public class divideUpdateControl extends HttpServlet {
 
 			request.setAttribute("divideMap", divideMap);
 			request.setAttribute("viewMap", viewMap);
-			request.setAttribute("content_page", content_page);
 			request.setAttribute("page_title", page_title);
 
 		} catch (Exception e) {
@@ -160,7 +157,7 @@ public class divideUpdateControl extends HttpServlet {
 
 		// 画面遷移
 		if(!ajaxFlag){
-			RequestDispatcher disp = request.getRequestDispatcher("template/layout.jsp");
+			RequestDispatcher disp = request.getRequestDispatcher("manage/time_divide_manage_edit1.jsp");
 			disp.forward(request, response);
 		}
 	}
