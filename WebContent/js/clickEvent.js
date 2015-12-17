@@ -3,9 +3,20 @@ var elem = "", data = "";
 function clickEvent( e ){
 	// 登録ボタンがクリックされた時
 	$("#sBtn").click(function(e) {
-		// ボタンにname（submit）を付加
-		$("#sBtn").attr("name", "regist");
+		$("form").submit(function(e){
+			//form送信キャンセル
+			e.preventDefault();
+			//ajax関数呼び出し
+			f_ajax(
+					$(this).attr("method"),
+					$(this).attr("action"),
+					"json",
+					$(this).serialize()
+					);
+		});
+		//modal呼び出し
 		$("#modal2").modal("show");
+		$("#checkFlag").get(0).value = "false";
 	});
 
 	// labelがクリックされた時
@@ -63,16 +74,21 @@ function f_active(e) {
 					data = { ajaxWeek : "月" };
 					break;
 			}
-			f_ajax(data);
+			f_ajax(
+					$("form").attr("method"),
+					$("form").attr("action"),
+					"json",
+					data
+					);
 		}
 	})
 }
 
-function f_ajax(data){
+function f_ajax(type, url, dataType,data){
 	$.ajax({
-		type : "POST",
-		url : "http://localhost:8080/Sotsuken/divideUpdate",
-		dataType : "json",
+		type : type,
+		url : url,
+		dataType : dataType,
 		data : data
 	}).done(function(res){
 		f_ajax_done(res);

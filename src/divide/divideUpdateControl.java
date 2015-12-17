@@ -63,9 +63,9 @@ public class divideUpdateControl extends HttpServlet {
 		List<divideInfo> diList = new ArrayList<>();
 		String inputStr[] = new String[2]; // 取得
 		Map<String, String[]> map = request.getParameterMap();
+		String ajaxWeek = request.getParameter("ajaxWeek");
 
-		//AjaxFlag
-		Boolean ajaxFlag = new Boolean(false);
+		System.out.println(map + ":" + ajaxWeek);
 
 		// コマ割りDB操作クラス取得
 		divideDBManage ddm = new divideDBManage();
@@ -93,12 +93,8 @@ public class divideUpdateControl extends HttpServlet {
 						break;
 					case "ajaxWeek":
 						week = map.get(key)[0];
-						ajaxFlag = new Boolean(true);
 						break;
 					}
-				} else if (key.equals("regist")) {
-					// delete
-					ddm.divideDBDelete(week);
 				} else {
 					inputStr = key.split("-");
 					roomID = inputStr[0];
@@ -113,6 +109,11 @@ public class divideUpdateControl extends HttpServlet {
 				inputStr = new String[2];
 
 			} // for
+
+			if(ajaxWeek == null && !( map.isEmpty() ) ){
+				// delete
+				ddm.divideDBDelete(week);
+			}
 
 			// insert
 			ddm.divideDBInsert(diList);
@@ -136,7 +137,7 @@ public class divideUpdateControl extends HttpServlet {
 			// select
 			divideMap = ddm.editDivideDBSelect(week);
 
-			if (ajaxFlag) {
+			if (ajaxWeek != null) {
 				response.setHeader("Access-Control-Allow-Origin", "*");
 				response.setContentType("application/json; charset=utf-8");
 				PrintWriter out = response.getWriter();
@@ -154,10 +155,11 @@ public class divideUpdateControl extends HttpServlet {
 		}
 
 		// 画面遷移
-		if(!ajaxFlag){
+		if(ajaxWeek == null && map.isEmpty()){
 			RequestDispatcher disp = request.getRequestDispatcher("manage/time_divide_manage_edit1.jsp");
 			disp.forward(request, response);
 		}
+		ajaxWeek = null;
 	}
 
 	/**
