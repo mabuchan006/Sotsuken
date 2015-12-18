@@ -1009,28 +1009,28 @@ $(document).ready(function () {
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC503-1" name="036-1" class="txtFontSize">${divideMap.NMIC503[0] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC503-2" name="036-2" class="txtFontSize">${divideMap.NMIC503[1] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC503-3" name="036-3" class="txtFontSize">${divideMap.NMIC503[2] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC503-4" name="036-4" class="txtFontSize">${divideMap.NMIC503[3] }</textarea>
 												</p>
 											</td>
@@ -1040,28 +1040,28 @@ $(document).ready(function () {
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC502-1" name="035-1" class="txtFontSize">${divideMap.NMIC502[0] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC502-2" name="035-2" class="txtFontSize">${divideMap.NMIC502[1] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC502-3" name="035-3" class="txtFontSize">${divideMap.NMIC502[2] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC502-4" name="035-4" class="txtFontSize">${divideMap.NMIC502[3] }</textarea>
 												</p>
 											</td>
@@ -1071,28 +1071,28 @@ $(document).ready(function () {
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC501-1" name="034-1" class="txtFontSize">${divideMap.NMIC501[0] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC501-2" name="034-2" class="txtFontSize">${divideMap.NMIC501[1] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC501-3" name="034-3" class="txtFontSize">${divideMap.NMIC501[2] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC501-4" name="034-4" class="txtFontSize">${divideMap.NMIC501[3] }</textarea>
 												</p>
 											</td>
@@ -1103,28 +1103,28 @@ $(document).ready(function () {
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC404-1" name="033-1" class="txtFontSize">${divideMap.NMIC404[0] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC404-2" name="033-2" class="txtFontSize">${divideMap.NMIC404[1] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC404-3" name="033-3" class="txtFontSize">${divideMap.NMIC404[2] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC404-4" name="033-4" class="txtFontSize">${divideMap.NMIC404[3] }</textarea>
 												</p>
 											</td>
@@ -1135,28 +1135,28 @@ $(document).ready(function () {
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC403-1" name="032-1" class="txtFontSize">${divideMap.NMIC403[0] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC403-2" name="032-2" class="txtFontSize">${divideMap.NMIC403[1] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC403-3" name="032-3" class="txtFontSize">${divideMap.NMIC403[2] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC403-4" name="032-4" class="txtFontSize">${divideMap.NMIC403[3] }</textarea>
 												</p>
 											</td>
@@ -1167,28 +1167,28 @@ $(document).ready(function () {
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC402-1" name="031-1" class="txtFontSize">${divideMap.NMIC402[0] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC402-2" name="031-2" class="txtFontSize">${divideMap.NMIC402[1] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC402-3" name="031-3" class="txtFontSize">${divideMap.NMIC402[2] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC402-4" name="031-4" class="txtFontSize">${divideMap.NMIC402[3] }</textarea>
 												</p>
 											</td>
@@ -1198,28 +1198,28 @@ $(document).ready(function () {
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC401-1" name="030-1" class="txtFontSize">${divideMap.NMIC401[0] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC401-2" name="030-2" class="txtFontSize">${divideMap.NMIC401[1] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC401-3" name="030-3" class="txtFontSize">${divideMap.NMIC401[2] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC401-4" name="030-4" class="txtFontSize">${divideMap.NMIC401[3] }</textarea>
 												</p>
 											</td>
@@ -1230,28 +1230,28 @@ $(document).ready(function () {
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC304-1" name="029-1" class="txtFontSize">${divideMap.NMIC304[0] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC304-2" name="029-2" class="txtFontSize">${divideMap.NMIC304[1] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC304-3" name="029-3" class="txtFontSize">${divideMap.NMIC304[2] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC304-4" name="029-4" class="txtFontSize">${divideMap.NMIC304[3] }</textarea>
 												</p>
 											</td>
@@ -1261,28 +1261,28 @@ $(document).ready(function () {
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC303-1" name="028-1" class="txtFontSize">${divideMap.NMIC303[0] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC303-2" name="028-2" class="txtFontSize">${divideMap.NMIC303[1] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC303-3" name="028-3" class="txtFontSize">${divideMap.NMIC303[2] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC303-4" name="028-4" class="txtFontSize">${divideMap.NMIC303[3] }</textarea>
 												</p>
 											</td>
@@ -1293,28 +1293,28 @@ $(document).ready(function () {
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC302-1" name="027-1" class="txtFontSize">${divideMap.NMIC302[0] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC302-2" name="027-2" class="txtFontSize">${divideMap.NMIC302[1] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC302-3" name="027-3" class="txtFontSize">${divideMap.NMIC302[2] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC302-4" name="027-4" class="txtFontSize">${divideMap.NMIC302[3] }</textarea>
 												</p>
 											</td>
@@ -1324,28 +1324,28 @@ $(document).ready(function () {
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC301-1" name="026-1" class="txtFontSize">${divideMap.NMIC301[0] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC301-2" name="026-2" class="txtFontSize">${divideMap.NMIC301[1] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC301-3" name="026-3" class="txtFontSize">${divideMap.NMIC301[2] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC301-4" name="026-4" class="txtFontSize">${divideMap.NMIC301[3] }</textarea>
 												</p>
 											</td>
@@ -1356,28 +1356,28 @@ $(document).ready(function () {
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC204-1" name="025-1" class="txtFontSize">${divideMap.NMIC204[0] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC204-2" name="025-2" class="txtFontSize">${divideMap.NMIC204[1] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC204-3" name="025-3" class="txtFontSize">${divideMap.NMIC204[2] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC204-4" name="025-4" class="txtFontSize">${divideMap.NMIC204[3] }</textarea>
 												</p>
 											</td>
@@ -1387,28 +1387,28 @@ $(document).ready(function () {
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC203-1" name="024-1" class="txtFontSize">${divideMap.NMIC203[0] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC203-2" name="024-2" class="txtFontSize">${divideMap.NMIC203[1] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC203-3" name="024-3" class="txtFontSize">${divideMap.NMIC203[2] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC203-4" name="024-4" class="txtFontSize">${divideMap.NMIC203[3] }</textarea>
 												</p>
 											</td>
@@ -1419,28 +1419,28 @@ $(document).ready(function () {
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC202-1" name="023-1" class="txtFontSize">${divideMap.NMIC202[0] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC202-2" name="023-2" class="txtFontSize">${divideMap.NMIC202[1] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC202-3" name="023-3" class="txtFontSize">${divideMap.NMIC202[2] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC202-4" name="023-4" class="txtFontSize">${divideMap.NMIC202[3] }</textarea>
 												</p>
 											</td>
@@ -1450,28 +1450,28 @@ $(document).ready(function () {
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC201-1" name="022-1" class="txtFontSize">${divideMap.NMIC201[0] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC201-2" name="022-2" class="txtFontSize">${divideMap.NMIC201[1] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC201-3" name="022-3" class="txtFontSize">${divideMap.NMIC201[2] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #4D558A;"
 												id="NMIC201-4" name="022-4" class="txtFontSize">${divideMap.NMIC201[3] }</textarea>
 												</p>
 											</td>
@@ -1482,28 +1482,28 @@ $(document).ready(function () {
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC101-1" name="021-1" class="txtFontSize">${divideMap.NMIC101[0] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC101-2" name="021-2" class="txtFontSize">${divideMap.NMIC101[1] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC101-3" name="021-3" class="txtFontSize">${divideMap.NMIC101[2] }</textarea>
 												</p>
 											</td>
 
 											<td class="size">
 												<p class="size drop-target">
-												<textarea cols="24" rows="3" style="overflow: auto; background-color: #9F615E;"
+												<textarea cols="24" rows="3" style="overflow: auto; background-color: #6872D0;"
 												id="NMIC101-4" name="021-4" class="txtFontSize">${divideMap.NMIC101[3] }</textarea>
 												</p>
 											</td>
