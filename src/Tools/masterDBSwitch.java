@@ -10,6 +10,7 @@ public class masterDBSwitch {
 			public String content_page ="";
 			public String page_title = "";
 			public String chooseTableName="";
+			public String chooseClassID ="";
 			}
 
 /**
@@ -142,6 +143,106 @@ public class masterDBSwitch {
 			break;
 
 		}//switch end(tbl名切り替え)
+		return value;
+	}
+
+	public  masterDBSwitchInfo switchTempDB(String page){
+		masterDBSwitchInfo value = new masterDBSwitchInfo();
+		switch (page) {
+		case "R":
+			value.chooseClassID= "R4A1";
+			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			break;
+		case "R4A1":
+			 value. chooseClassID = "R4A1";
+			 value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			break;
+
+		case "R4A2":
+			 value.chooseClassID = "R4A2";
+			 value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			break;
+		case "R4A3":
+			value.chooseClassID = "R4A3";
+			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			break;
+		case "R4A4":
+			value.chooseClassID = "R4A4";
+			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			break;
+		case "R4A5":
+			value.chooseClassID = "R4A5";
+			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			break;
+
+		//●R3
+		case "R3A1":
+			 value. chooseClassID = "R3A1";
+			 value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			break;
+
+		case "R3A2":
+			 value.chooseClassID = "R3A2";
+			 value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			break;
+		case "R3A3":
+			value.chooseClassID = "R3A3";
+			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			break;
+		case "R3A4":
+			value.chooseClassID = "R3A4";
+			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			break;
+		case "R3A5":
+			value.chooseClassID = "R3A5";
+			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			break;
+
+			//●R2
+		case "R2A1":
+			value. chooseClassID = "R2A1";
+			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			break;
+
+		case "R2A2":
+			value.chooseClassID = "R2A2";
+			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			break;
+		case "R2A3":
+			value.chooseClassID = "R2A3";
+			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			break;
+		case "R2A4":
+			value.chooseClassID = "R2A4";
+			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			break;
+		case "R2A5":
+			value.chooseClassID = "R2A5";
+			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			break;
+			//●R2
+		case "R1A1":
+			value. chooseClassID = "R1A1";
+			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			break;
+
+		case "R1A2":
+			value.chooseClassID = "R1A2";
+			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			break;
+		case "R1A3":
+			value.chooseClassID = "R1A3";
+			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			break;
+		case "R1A4":
+			value.chooseClassID = "R1A4";
+			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			break;
+		case "R1A5":
+			value.chooseClassID = "R1A5";
+			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			break;
+		}
 		return value;
 	}
 }

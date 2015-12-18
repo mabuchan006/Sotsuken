@@ -12,9 +12,9 @@
 			<b class="caret"></b>
 	</a>
 		<ul class="dropdown-menu">
-			<li><a href="/Sotsuken/publicView?page=R4A1">R4A1</a></li>
-			<li><a href="/Sotsuken/publicView?page=R4A2">R4A2</a></li>
-			<li><a href="/Sotsuken/publicView?page=R4A3">R4A3</a></li>
+			<li><a href="/Sotsuken/editView?page=R4A1">R4A1</a></li>
+			<li><a href="/Sotsuken/editView?page=R4A2">R4A2</a></li>
+			<li><a href="/Sotsuken/editView?page=R4A3">R4A3</a></li>
 			<li><a href="#">R4A4</a></li>
 			<li><a href="#">R4A5</a></li>
 		</ul></li>
@@ -22,9 +22,9 @@
 			<b class="caret"></b>
 	</a>
 		<ul class="dropdown-menu">
-			<li><a href="/Sotsuken/publicView?page=R4A1">R3A1</a></li>
-			<li><a href="/Sotsuken/publicView?page=R4A2">R3A2</a></li>
-			<li><a href="/Sotsuken/publicView?page=R4A3">R3A3</a></li>
+			<li><a href="/Sotsuken/editView?page=R4A1">R3A1</a></li>
+			<li><a href="/Sotsuken/editView?page=R4A2">R3A2</a></li>
+			<li><a href="/Sotsuken/editView?page=R4A3">R3A3</a></li>
 			<li><a href="#">R3A4</a></li>
 			<li><a href="#">R3A5</a></li>
 		</ul></li>
@@ -32,9 +32,9 @@
 			<b class="caret"></b>
 	</a>
 		<ul class="dropdown-menu">
-			<li><a href="/Sotsuken/publicView?page=R4A1">R2A1</a></li>
-			<li><a href="/Sotsuken/publicView?page=R4A2">R2A2</a></li>
-			<li><a href="/Sotsuken/publicView?page=R4A3">R2A3</a></li>
+			<li><a href="/Sotsuken/editView?page=R4A1">R2A1</a></li>
+			<li><a href="/Sotsuken/editView?page=R4A2">R2A2</a></li>
+			<li><a href="/Sotsuken/editView?page=R4A3">R2A3</a></li>
 			<li><a href="#">R2A4</a></li>
 			<li><a href="#">R2A5</a></li>
 		</ul></li>
@@ -42,9 +42,9 @@
 			<b class="caret"></b>
 	</a>
 		<ul class="dropdown-menu">
-			<li><a href="/Sotsuken/publicView?page=R4A1">R1A1</a></li>
-			<li><a href="/Sotsuken/publicView?page=R4A2">R1A2</a></li>
-			<li><a href="/Sotsuken/publicView?page=R4A3">R1A3</a></li>
+			<li><a href="/Sotsuken/editView?page=R4A1">R1A1</a></li>
+			<li><a href="/Sotsuken/editView?page=R4A2">R1A2</a></li>
+			<li><a href="/Sotsuken/editView?page=R4A3">R1A3</a></li>
 			<li><a href="#">R1A4</a></li>
 			<li><a href="#">R1A5</a></li>
 		</ul></li>
@@ -526,18 +526,19 @@
 <div class="col-md-2 col-md-offset-3">
 		<h3 class="font" style="background-color: #202020; color: white;">
 			科目リスト</h3>
-		<div id="drag-target">
-			<ul class="panel">
-				<c:forEach var="subject" items="${infoSubjectList }">
-					<c:if test="${subject.subjectName != ''}" var="flg" />
+	<div id="drag-target">
+		<ul class="panel">
+			<c:forEach var="subject" items="${infoSubjectList }">
+				<c:if test="${subject.subjectName != ''}" var="flg" />
 
-					<c:if test="${flg}">
-						<li class="panel-body">${subject.subjectName}</li>
-					</c:if>
+				<c:if test="${flg}">
+					<li class="panel-body select0">${subject.subjectName}</li>
+				</c:if>
 
-				</c:forEach>
-			</ul>
-		</div>
+
+			</c:forEach>
+		</ul>
+	</div>
 </div>
 
 <div class="col-md-5 ">
@@ -558,7 +559,7 @@
 				<c:if test="${ teacherList[cnt1].teacherName != null}" var="flg" />
 
 				<c:if test="${flg}">
-					<td class="text-center h5">${ teacherList[cnt1].teacherName }</td>
+					<td class="text-center h5 select0">${ teacherList[cnt1].teacherName }</td>
 				</c:if>
 
 				<c:if test="${!flg}">

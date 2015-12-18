@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import Tools.layoutInclude;
 import Tools.layoutInclude.layoutIncludeInfo;
+import Tools.masterDBSwitch;
+import Tools.masterDBSwitch.masterDBSwitchInfo;
 import divide.db.divideInfo;
 import manage.db.teacherDBManage;
 import manage.db.teacherInfo;
@@ -39,11 +41,10 @@ public class temp_tableControl extends HttpServlet {
 	private List<roomInfo> rooms3List; // 時間割マスタ保持用
 	private List<roomInfo> rooms4List; // 時間割マスタ保持用
 
-	String content_page = "/temp_timetable/temp_table_regist.jsp"; // 遷移先jsp
 	private String page_title = "Temporary Edit";// ページ名
-	private String chooseClassID = "R4A1";// classID選択 TODO:DBSWitchテーブル変更を柔軟にする。
+	String content_page; // 遷移先jsp
+	private String chooseClassID ;// classID選択 TODO:DBSWitchテーブル変更を柔軟にする。
 
-	subjectDBManage suDBM = new subjectDBManage(chooseClassID);
 	teacherDBManage teDBM = new teacherDBManage();
 	tempDBManage tempDBM = new tempDBManage();
 
@@ -59,6 +60,8 @@ public class temp_tableControl extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+
+		String page = request.getParameter("page");
 		// 文字コードutf8
 		request.setCharacterEncoding("UTF-8");
 
@@ -68,7 +71,22 @@ public class temp_tableControl extends HttpServlet {
 		request.setAttribute("css", info.css);
 		request.setAttribute("js", info.js);
 
+		//page 情報の取得
+		if( page != null ){
+			//DB切り替えClassへ（masteDBSwich.java）
+			 masterDBSwitch tblSW= new masterDBSwitch();
+			 masterDBSwitchInfo value = tblSW.switchTempDB(page);
+			chooseClassID = value.chooseClassID;
+			content_page = value.content_page;
+		} else {
+			String url = "/Sotsuken/top.jsp";
+			response.sendRedirect(url);
+			return;
+		}
+
+		//Divideからの情報取得
 		try {
+			subjectDBManage suDBM = new subjectDBManage(chooseClassID);
 			infoSubjectList = suDBM.choiceSubject(); // 科目取得
 			teacherList = teDBM.teacherDBSelect(); // 先生取得
 
