@@ -127,7 +127,7 @@ p {
 
 .size2 {
 	font-size: 20px;
-	font-weight: 5px;
+	font-weight: 800px;
 }
 
 /**** Start Logo Section ****/
@@ -518,6 +518,10 @@ margin-bottom: 5px;
 	color:#fff;
 	position:relative;
 
+}
+
+padding-left{
+	padding-left: 20px;
 }
 
 .view-size {

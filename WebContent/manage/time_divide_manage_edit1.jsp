@@ -133,7 +133,7 @@ $(document).ready(function () {
 
 						<!-- button -->
 						<input type="hidden" id="checkFlag" value="false">
-						<button type="submit" class="btn btn-primary btn-lg col-md-1 fix" id="sBtn">登録</button>
+						<button type="submit" class="btn btn-primary btn-lg col-md-1 fix padding-left" id="sBtn">登録</button>
 						<button type="button" class="btn btn-danger btn-lg col-md-1 col-md-offset-10 fix" id="cBtn">クリア</button>
 
 						<!-- button end -->
@@ -146,7 +146,7 @@ $(document).ready(function () {
 
 					<!-- ドラッグ&ドロップ -->
 
-					<div class="col-md-1 fix margin-top">
+					<div class="col-md-1 fix margin-top padding-left">
 						<h1>class</h1>
 						<div id="drag-target">
 							<div class="accordionJS">
@@ -155,9 +155,9 @@ $(document).ready(function () {
 								</h2>
 								<div>
 									<ul class="font">
-										<li class="select0">R1A1</li>
-										<li class="select0">R1A2</li>
-										<li class="select0">R1A3</li>
+										<li class="select0 size2">R1A1</li>
+										<li class="select0 size2">R1A2</li>
+										<li class="select0 size2">R1A3</li>
 									</ul>
 								</div>
 								<h2 class="font">
@@ -165,11 +165,11 @@ $(document).ready(function () {
 								</h2>
 								<div>
 									<ul class="font">
-										<li class="select0">R2A1</li>
-										<li class="select0">R2A2</li>
-										<li class="select0">R2A3</li>
-										<li class="select0">R2A4</li>
-										<li class="select0">R2A5</li>
+										<li class="select0 size2">R2A1</li>
+										<li class="select0 size2">R2A2</li>
+										<li class="select0 size2">R2A3</li>
+										<li class="select0 size2">R2A4</li>
+										<li class="select0 size2">R2A5</li>
 									</ul>
 								</div>
 								<h2 class="font">
@@ -177,11 +177,11 @@ $(document).ready(function () {
 								</h2>
 								<div>
 									<ul class="font">
-										<li class="select0">R3A1</li>
-										<li class="select0">R3A2</li>
-										<li class="select0">R3A3</li>
-										<li class="select0">R3A4</li>
-										<li class="select0">R3A5</li>
+										<li class="select0 size2">R3A1</li>
+										<li class="select0 size2">R3A2</li>
+										<li class="select0 size2">R3A3</li>
+										<li class="select0 size2">R3A4</li>
+										<li class="select0 size2">R3A5</li>
 									</ul>
 								</div>
 								<h2 class="font">
@@ -189,11 +189,11 @@ $(document).ready(function () {
 								</h2>
 								<div>
 									<ul class="font">
-										<li class="select0">R4A1</li>
-										<li class="select0">R4A2</li>
-										<li class="select0">R4A3</li>
-										<li class="select0">R4A4</li>
-										<li class="select0">R4A5</li>
+										<li class="select0 size2">R4A1</li>
+										<li class="select0 size2">R4A2</li>
+										<li class="select0 size2">R4A3</li>
+										<li class="select0 size2">R4A4</li>
+										<li class="select0 size2">R4A5</li>
 									</ul>
 								</div>
 								<h2 class="font">
@@ -201,15 +201,15 @@ $(document).ready(function () {
 								</h2>
 								<div>
 									<ul class="font">
-										<li class="select0">S1A1</li>
-										<li class="select0">S1A2</li>
-										<li class="select0">S1A3</li>
-										<li class="select0">S1A4</li>
-										<li class="select0">S1G1</li>
-										<li class="select0">S1G2</li>
-										<li class="select0">S1G3</li>
-										<li class="select0">S1M1</li>
-										<li class="select0">S1M2</li>
+										<li class="select0 size2">S1A1</li>
+										<li class="select0 size2">S1A2</li>
+										<li class="select0 size2">S1A3</li>
+										<li class="select0 size2">S1A4</li>
+										<li class="select0 size2">S1G1</li>
+										<li class="select0 size2">S1G2</li>
+										<li class="select0 size2">S1G3</li>
+										<li class="select0 size2">S1M1</li>
+										<li class="select0 size2">S1M2</li>
 									</ul>
 								</div>
 								<h2 class="font">
@@ -217,15 +217,15 @@ $(document).ready(function () {
 								</h2>
 								<div>
 									<ul class="font">
-										<li class="select0">S2A1</li>
-										<li class="select0">S2A2</li>
-										<li class="select0">S2A3</li>
-										<li class="select0">S2A4</li>
-										<li class="select0">S2G1</li>
-										<li class="select0">S2G2</li>
-										<li class="select0">S2G3</li>
-										<li class="select0">S2M1</li>
-										<li class="select0">S2M2</li>
+										<li class="select0 size2">S2A1</li>
+										<li class="select0 size2">S2A2</li>
+										<li class="select0 size2">S2A3</li>
+										<li class="select0 size2">S2A4</li>
+										<li class="select0 size2">S2G1</li>
+										<li class="select0 size2">S2G2</li>
+										<li class="select0 size2">S2G3</li>
+										<li class="select0 size2">S2M1</li>
+										<li class="select0 size2">S2M2</li>
 									</ul>
 								</div>
 								<h2 class="font">
@@ -233,13 +233,13 @@ $(document).ready(function () {
 								</h2>
 								<div>
 									<ul class="font">
-										<li class="select0">S3A1</li>
-										<li class="select0">S3A2</li>
-										<li class="select0">S3G1</li>
-										<li class="select0">S3G2</li>
-										<li class="select0">S3G3</li>
-										<li class="select0">S3M1</li>
-										<li class="select0">S3M2</li>
+										<li class="select0 size2">S3A1</li>
+										<li class="select0 size2">S3A2</li>
+										<li class="select0 size2">S3G1</li>
+										<li class="select0 size2">S3G2</li>
+										<li class="select0 size2">S3G3</li>
+										<li class="select0 size2">S3M1</li>
+										<li class="select0 size2">S3M2</li>
 									</ul>
 								</div>
 								<h2 class="font">
@@ -247,10 +247,10 @@ $(document).ready(function () {
 								</h2>
 								<div>
 									<ul class="font">
-										<li class="select0">J1A1</li>
-										<li class="select0">J1A2</li>
-										<li class="select0">J1M1</li>
-										<li class="select0">J1M2</li>
+										<li class="select0 size2">J1A1</li>
+										<li class="select0 size2">J1A2</li>
+										<li class="select0 size2">J1M1</li>
+										<li class="select0 size2">J1M2</li>
 									</ul>
 								</div>
 								<h2 class="font">
@@ -258,10 +258,10 @@ $(document).ready(function () {
 								</h2>
 								<div>
 									<ul class="font">
-										<li class="select0">J2A1</li>
-										<li class="select0">J2A2</li>
-										<li class="select0">J2M1</li>
-										<li class="select0">J2M2</li>
+										<li class="select0 size2">J2A1</li>
+										<li class="select0 size2">J2A2</li>
+										<li class="select0 size2">J2M1</li>
+										<li class="select0 size2">J2M2</li>
 									</ul>
 								</div>
 								<h2 class="font">
@@ -269,8 +269,8 @@ $(document).ready(function () {
 								</h2>
 								<div>
 									<ul class="font">
-										<li class="select0">A1A1</li>
-										<li class="select0">A1A2</li>
+										<li class="select0 size2">A1A1</li>
+										<li class="select0 size2">A1A2</li>
 									</ul>
 								</div>
 							</div><!-- class="accordionJS" -->
@@ -284,25 +284,25 @@ $(document).ready(function () {
 									<a href="#" draggable="false">NCS</a>
 								</h2>
 									<ul class="font ">
-										<li class="select0">
+										<li class="select0 size2">
 											<a href="#8F" draggable="false">8F </a>
 										</li>
-										<li class="select0">
+										<li class="select0 size2">
 											<a href="#7F" draggable="false">7F </a>
 										</li>
-										<li class="select0">
+										<li class="select0 size2">
 											<a href="#6F" draggable="false">6F </a>
 										</li>
-										<li class="select0">
+										<li class="select0 size2">
 											<a href="#5F" draggable="false">5F </a>
 										</li>
-										<li class="select0">
+										<li class="select0 size2">
 											<a href="#4F" draggable="false">4F </a>
 										</li>
-										<li class="select0">
+										<li class="select0 size2">
 											<a href="#3F" draggable="false">3F </a>
 										</li>
-										<li class="select0">
+										<li class="select0 size2">
 											<a href="#2F" draggable="false">2F </a>
 										</li>
 									</ul>
@@ -311,19 +311,19 @@ $(document).ready(function () {
 								</h2>
 
 									<ul class="font">
-										<li class="select0">
+										<li class="select0 size2">
 											<a href="#M5F" draggable="false">5F</a>
 										</li>
-										<li class="select0">
+										<li class="select0 size2">
 											<a href="#M4F" draggable="false">4F</a>
 										</li>
-										<li class="select0">
+										<li class="select0 size2">
 											<a href="#M3F" draggable="false">3F</a>
 										</li>
-										<li class="select0">
+										<li class="select0 size2">
 											<a href="#M2F" draggable="false">2F</a>
 										</li>
-										<li class="select0">
+										<li class="select0 size2">
 											<a href="#M1F" draggable="false">1F</a>
 										</li>
 									</ul>
@@ -1520,9 +1520,7 @@ $(document).ready(function () {
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<div class="modal-header back-color">
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								</button>
+
 								<h3 class="modal-title white text-center">warning!!!</h3>
 							</div>
 							<div class="modal-body text-center font1">
