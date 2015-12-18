@@ -145,8 +145,9 @@ $(document).ready(function () {
 					<!-- カレンダーEND -->
 
 					<!-- ドラッグ&ドロップ -->
+					<div class="col-md-2 ">
 
-					<div class="col-md-1 fix margin-top padding-left">
+					<div class="col-md-1  fix margin-top padding-left">
 						<h1>class</h1>
 						<div id="drag-target">
 							<div class="accordionJS">
@@ -276,6 +277,7 @@ $(document).ready(function () {
 							</div><!-- class="accordionJS" -->
 						</div><!-- id="drag-target" -->
 					</div><!-- class="col-md-1 fix margin-top" -->
+					</div>
 
 						<div class="col-md-1 col-md-offset-10 fix margin-top ">
 							<h1>room</h1>
