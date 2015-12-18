@@ -55,7 +55,7 @@
 
 <!-- 科目リスト　先生リスト取得 -->
 
-<div class="col-md-2 ">
+<div class="col-md-2 fix">
 		<h3 class="font" style="background-color: #202020; color: white;">
 			科目リスト</h3>
 	<div id="drag-target">
@@ -66,12 +66,15 @@
 				<c:if test="${flg}">
 					<li class="panel-body select0">${subject.subjectName}</li>
 				</c:if>
+
+
 			</c:forEach>
 		</ul>
 	</div>
 </div>
 
-<div class="col-md-2 ">
+
+<div class="col-md-2 col-md-offset-10 fix">
 	<h3 class="font" style="background-color: #202020; color: white">
 		先生リスト</h3>
 	<table class="table table-border ">
@@ -84,7 +87,7 @@
 			%>
 			<tr id="drag-target">
 				<%
-					for (int cnt2 = 0; cnt2 <= 2; cnt2++) {
+					for (int cnt2 = 0; cnt2 <= 1; cnt2++) {
 				%>
 				<c:if test="${ teacherList[cnt1].teacherName != null}" var="flg" />
 
@@ -108,9 +111,6 @@
 		</tbody>
 	</table>
 </div>
-
-
-
 	<form action="/Sotsuken/temp_tableControl" method="post">
 <div class="container">
 	<table
