@@ -67,7 +67,7 @@
 						<li class="select2 moji box" style="padding: 15px 40px; margin:  0 20px 0 0;"><a
 							href="#">時間割管理</a>
 							<ul >
-								<li><a href="#">R</a></li>
+								<li><a href="/Sotsuken/editView?page=R">R</a></li>
 								<li><a href="#">S</a></li>
 								<li><a href="#">J</a></li>
 								<li><a href="#">A</a></li>

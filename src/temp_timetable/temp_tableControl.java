@@ -3,6 +3,7 @@ package temp_timetable;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -79,7 +80,7 @@ public class temp_tableControl extends HttpServlet {
 			chooseClassID = value.chooseClassID;
 			content_page = value.content_page;
 		} else {
-			String url = "/Sotsuken/top.jsp";
+			String url = "/Sotsuken/editView?page=R";
 			response.sendRedirect(url);
 			return;
 		}
@@ -118,6 +119,13 @@ public class temp_tableControl extends HttpServlet {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
 		} //try Edit View 表示
+
+		//Insert
+		Map<String, String[]> map = request.getParameterMap();
+		for(String key : map.keySet()){
+
+		}
+
 
 		// ディスパッチ準備
 		request.setAttribute("content_page", content_page);
