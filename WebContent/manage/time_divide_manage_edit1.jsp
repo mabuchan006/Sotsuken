@@ -134,7 +134,7 @@ $(document).ready(function () {
 						<!-- button -->
 						<input type="hidden" id="checkFlag" value="false">
 						<button type="submit" class="btn btn-primary btn-lg col-md-1 fix" id="sBtn">登録</button>
-						<button type="button"class="btn btn-danger btn-lg col-md-1 col-md-offset-10 fix" id="cBtn">クリア</button>
+						<button type="button" class="btn btn-danger btn-lg col-md-1 col-md-offset-10 fix" id="cBtn">クリア</button>
 
 						<!-- button end -->
 						<!-- カレンダー部分 -->
@@ -1535,7 +1535,7 @@ $(document).ready(function () {
 					</div>
 				</div>
 
-				<div id="modal2"class="modal fade ">
+				<div id="modal2" class="modal fade ">
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<div class="modal-header back-color">

@@ -7,16 +7,47 @@ function clickEvent( e ){
 			//form送信キャンセル
 			e.preventDefault();
 			//ajax関数呼び出し
-			f_ajax(
-					$(this).attr("method"),
-					$(this).attr("action"),
-					"json",
-					$(this).serialize()
-					);
+			$.ajax({
+					type : $(this).attr("method"),
+					url : $(this).attr("action"),
+					dataType : "json",
+					data : $(this).serialize()
+			}).done(function(){
+
+			switch( elem.name ){
+				case "mon" :
+					data = { ajaxWeek : "月" };
+					break;
+				case "tue" :
+					data = { ajaxWeek : "火" };
+					break;
+				case "wed" :
+					data = { ajaxWeek: "水" };
+					break;
+				case "thu" :
+					data = { ajaxWeek : "木" };
+					break;
+				case "fri" :
+					data = { ajaxWeek : "金" };
+					break;
+				default :
+					data = { ajaxWeek : "月" };
+					break;
+			}
+
+				f_ajax(
+						$(this).attr("method"),
+						$(this).attr("action"),
+						"json",
+						data
+				);
+				//modal呼び出し
+				$("#modal2").modal("show");
+				$("#checkFlag").get(0).value = "false";
+			}).fail(function(jqXHR, textStatus, errorThrown ){
+				console.log("NG:" + jqXHR.status + ":" + textStatus.status + ":" + errorThrown);
+			})
 		});
-		//modal呼び出し
-		$("#modal2").modal("show");
-		$("#checkFlag").get(0).value = "false";
 	});
 
 	// labelがクリックされた時
