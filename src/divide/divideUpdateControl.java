@@ -95,7 +95,10 @@ public class divideUpdateControl extends HttpServlet {
 						week = map.get(key)[0];
 						break;
 					}
-				} else {
+				} else if (key.equals("regist")){
+					// delete
+					ddm.divideDBDelete(week);
+				}else {
 					inputStr = key.split("-");
 					roomID = inputStr[0];
 					period = Integer.parseInt(inputStr[1]);
@@ -109,11 +112,6 @@ public class divideUpdateControl extends HttpServlet {
 				inputStr = new String[2];
 
 			} // for
-
-			if(ajaxWeek == null && !( map.isEmpty() ) ){
-				// delete
-				ddm.divideDBDelete(week);
-			}
 
 			// insert
 			ddm.divideDBInsert(diList);
@@ -159,7 +157,6 @@ public class divideUpdateControl extends HttpServlet {
 			RequestDispatcher disp = request.getRequestDispatcher("manage/time_divide_manage_edit1.jsp");
 			disp.forward(request, response);
 		}
-		ajaxWeek = null;
 	}
 
 	/**

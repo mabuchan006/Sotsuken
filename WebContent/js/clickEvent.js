@@ -6,47 +6,42 @@ function clickEvent( e ){
 		$("form").submit(function(e){
 			//form送信キャンセル
 			e.preventDefault();
-			//ajax関数呼び出し
-			$.ajax({
-					type : $(this).attr("method"),
-					url : $(this).attr("action"),
-					dataType : "json",
-					data : $(this).serialize()
-			}).done(function(){
-
+			//formの情報を配列化
+			data = $(this).serializeArray();
+			//delete実行のための情報
+			data.push({ name : "regist" , value : ""});
+			//アクティブになっているタグの曜日を取得
+			elem = $(".active").children("input").get(0);
+			//曜日の情報をform情報に入れる
 			switch( elem.name ){
 				case "mon" :
-					data = { ajaxWeek : "月" };
+					data.push({ name : "ajaxWeek" , value : "月" });
 					break;
 				case "tue" :
-					data = { ajaxWeek : "火" };
+					data.push({ name : "ajaxWeek" , value : "火" });
 					break;
 				case "wed" :
-					data = { ajaxWeek: "水" };
+					data.push({ name : "ajaxWeek" , value : "水" });
 					break;
 				case "thu" :
-					data = { ajaxWeek : "木" };
+					data.push({ name : "ajaxWeek" , value : "木" });
 					break;
 				case "fri" :
-					data = { ajaxWeek : "金" };
+					data.push({ name : "ajaxWeek" , value : "金" });
 					break;
 				default :
-					data = { ajaxWeek : "月" };
+					data.push({ name : "ajaxWeek" , value : "月" });
 					break;
 			}
-
-				f_ajax(
-						$(this).attr("method"),
-						$(this).attr("action"),
-						"json",
-						data
-				);
-				//modal呼び出し
-				$("#modal2").modal("show");
-				$("#checkFlag").get(0).value = "false";
-			}).fail(function(jqXHR, textStatus, errorThrown ){
-				console.log("NG:" + jqXHR.status + ":" + textStatus.status + ":" + errorThrown);
-			})
+			f_ajax(
+					$(this).attr("method"),
+					$(this).attr("action"),
+					"json",
+					data
+			);
+			//modal呼び出し
+			$("#modal2").modal("show");
+			$("#checkFlag").get(0).value = "false";
 		});
 	});
 
