@@ -225,15 +225,16 @@ public class ManageUpdateControl extends HttpServlet {
 		request.setAttribute("subjectList", subjectList);
 		request.setAttribute("classMap", classMap);
 
+		//メッセージ
 		if(sdm.getMsg() != null){
-
 		if((sdm.getMsg()).indexOf("入力情報に誤りがあります") != -1){
 			request.setAttribute("err_Msg", sdm.getMsg());
 		}else{
 			request.setAttribute("Msg",sdm.getMsg());
-		}
-
 		}//if
+		}//if
+
+		request.setAttribute("cnt", sdm.getCnt());
 		} catch (Exception e) {
 			// TODO 自動生成された catch ブロック
 
@@ -281,7 +282,8 @@ public class ManageUpdateControl extends HttpServlet {
 						request.setAttribute("err_Msg", cdm.getMsg());
 					}else{
 						request.setAttribute("Msg",cdm.getMsg());
-					}
+					}//if
+					request.setAttribute("cnt", cdm.getCnt());
 				} catch (Exception e) {
 					// TODO 自動生成された catch ブロック
 					e.printStackTrace();
@@ -322,7 +324,8 @@ public class ManageUpdateControl extends HttpServlet {
 					request.setAttribute("err_Msg", tdm.getMsg());
 				}else{
 					request.setAttribute("Msg",tdm.getMsg());
-				}
+				}//if
+				request.setAttribute("cnt", tdm.getCnt());
 
 			} catch (Exception e) {
 				// TODO 自動生成された catch ブロック

@@ -52,7 +52,7 @@
 <div class="back">
 <table class="table ">
 <thead>
-<tr><td colspan="3">class</td></tr>
+<tr><td colspan="2">クラス一覧 </td><td>( ${cnt } 件)</td></tr>
 </thead>
 <tbody>
 <!-- クラス情報取得 -->

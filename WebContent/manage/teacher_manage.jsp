@@ -51,7 +51,7 @@
 <div class="back">
 <table class="table ">
 <thead>
-<tr><td colspan="2">lecturers</td></tr>
+<tr><td colspan="2">講師一覧</td><td>( ${cnt } 件)</td></tr>
 </thead>
 <tbody>
 <!-- 講師情報取得 -->

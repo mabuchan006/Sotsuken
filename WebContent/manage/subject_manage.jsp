@@ -6,6 +6,7 @@
 
 <!DOCTYPE html>
 
+
 <!-- 学年学科選択処理 -->
 <script>
 
@@ -169,7 +170,7 @@ function selectChange(num){
 </tr>
 </thead>
 <tbody id="addTb-tbody">
-<tr class="tList select3" id="tID1">
+<tr class="" id="">
 <!-- 科目名 -->
 <td>
 <input type="text" class="form-control subjectName " id="subjectName"name="subjectName1"/>
@@ -218,8 +219,8 @@ function selectChange(num){
 <table class="table ">
 <thead class="thead">
 <tr class="info wide">
-<td colspan="3">科目一覧</td>
-</tr>
+<td colspan="2">科目一覧</td><td>( ${cnt } 件)</td></tr>
+
 </thead>
 <tbody>
 <!-- 科目情報取得 -->

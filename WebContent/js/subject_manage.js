@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-
+alert("test");
 
 		if($("#addTb-tbody > tr").size() < 2){
 		$("#addTb-tbody > tr").clone(true).insertAfter(
