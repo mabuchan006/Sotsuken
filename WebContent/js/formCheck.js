@@ -2,6 +2,9 @@ var regex = new RegExp(/([ajrs][1234][agm][12345],?)*/ig), txtVal = "", valArray
 function formCheck( e ) {
 
 	$("textarea").on({
+		"focusin" : function(e) {
+			txtVal = $(this).val();
+		},
 		//半角英数とエンターキーの入力を検知
 		"keypress" : function(e){
 			if( e != null){
@@ -24,14 +27,9 @@ function formCheck( e ) {
 		},
 		"focusout" : function(e){
 			valArray = txtVal.match(regex);
-			txtVal = "";
 			var thisVal = "";
 			$.each(valArray, function(k,v){
-				$.each($(".drag-target li"), function(liKey, classID){
-					if(v.test(classID)){
-						thisVal += v;
-					}
-				})
+				thisVal += v;
 			})
 			thisVal = thisVal.replace(/,/g,"");
 			while(thisVal != thisVal.replace(/(\w+)(\w{4})/, "$1,$2")){
