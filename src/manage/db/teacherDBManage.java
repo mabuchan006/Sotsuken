@@ -25,15 +25,7 @@ public class teacherDBManage extends DBAccess{
 		this.msg = msg;
 	}
   //********endMsg*************
-	//件数
-		private int cnt;
-
-		public int getCnt() {
-			return cnt;
-		}
-		public void setCnt(int cnt) {
-			this.cnt = cnt;
-		}
+	
 	private final static String DRIVER_NAME = "java:comp/env/jdbc/MySqlCon";//コネクタ
 
 	public teacherDBManage() {
@@ -58,6 +50,7 @@ public class teacherDBManage extends DBAccess{
 			//要素取得用準備
 			ResultSet rs = getRsResult();
 			teacherInfo teacherinfo;
+			
 
 			//全件取得
 			while(rs.next()){
@@ -68,12 +61,8 @@ public class teacherDBManage extends DBAccess{
 						rs.getString("password"));
 				//講師要素を1件ずつリストに追加
 				teacherList.add(teacherinfo);
-
-				cnt++;
-
-
 			}//while
-			setCnt(cnt);
+			
 
 			disConnection();//切断
 

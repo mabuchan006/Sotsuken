@@ -14,7 +14,8 @@ if(cookies != null){
 		}//if
 	}//for
 }//if
-
+if(getCookie!=null){
 request.setAttribute("getCookie", getCookie);
+}
 
 %>

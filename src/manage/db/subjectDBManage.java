@@ -33,15 +33,7 @@ public class subjectDBManage extends DBAccess {
 	}
 
 	// ********endMsg*************
-	//件数
-		private int cnt;
-
-		public int getCnt() {
-			return cnt;
-		}
-		public void setCnt(int cnt) {
-			this.cnt = cnt;
-		}
+	
 	private final static String DRIVER_NAME = "java:comp/env/jdbc/MySqlCon";// コネクタ
 
 	public subjectDBManage() {
@@ -78,6 +70,7 @@ public class subjectDBManage extends DBAccess {
 		// 要素取得用準備
 		ResultSet rs = getRsResult();
 		subjectInfo subjectinfo;
+		
 
 		// 全件取得
 		while (rs.next()) {
@@ -88,11 +81,7 @@ public class subjectDBManage extends DBAccess {
 			// 科目要素を1件ずつリストに追加
 			subjectList.add(subjectinfo);
 
-			cnt++;
-
-
 		}//while
-		setCnt(cnt);
 
 		disConnection();// 切断
 

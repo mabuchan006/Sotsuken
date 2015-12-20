@@ -1,8 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<jsp:include page="/cookie/get_cookie.jsp" />
+  <!-- Start Logo Section --><!-- ヘッダー部分 -->
+        <section id="logo-section" class="text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-8 text-right">
 
-<div class="row ">
+                            <button type="button" class="favolite" >
+                            favolite
+                            <i class="fa fa-star"></i>
+                            </button>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<div class="row col-md-9">
 
 <c:if test=  "${!empty Msg }">
 <div class="alert alert-success alert-dismissible col-md-6 col-md-offset-3" role="alert">
@@ -22,7 +39,7 @@
 <!-- 登録処理 -->
 <form action="/Sotsuken/ManageUpdate?page=class_manage" method="get">
 
-<table class="col-md-6 col-md-offset-3" id="first_table">
+<table class="col-md-9 col-md-offset-3" id="first_table">
 <tr>
 
 <td class="col-md-4">
@@ -48,11 +65,12 @@
 </form><!-- 登録終わり -->
 
 <!-- クラス一覧表示 -->
-<div class="col-md-6 col-md-offset-3">
+<div class="col-md-12 col-md-offset-3">
 <div class="back">
 <table class="table ">
 <thead>
-<tr><td colspan="2">クラス一覧 </td><td>( ${cnt } 件)</td></tr>
+<tr class="info wide">
+<td colspan="3">クラス一覧   ( ${cnt } 件)</td></tr>
 </thead>
 <tbody>
 <!-- クラス情報取得 -->
@@ -64,7 +82,7 @@
 <!-- 削除用フォーム -->
 <form action="/Sotsuken/ManageUpdate?page=class_manage" method="get">
 <input type="hidden" name = "classID" value="${rs.classID }" />
-<input type="submit" class="btn btn-danger" name="delete_class" value="削除"/>
+<button type="submit" class="btn btn-danger"name="delete_class" ><i class="fa fa-trash-o fa-2x"></i></button>
 </form>
 <!-- 削除 -->
 </td>

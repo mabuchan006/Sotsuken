@@ -38,7 +38,9 @@
 <title>Time Table</title>
 </head>
 
-<c:if cookie="${getCookie }"></c:if>
+<c:if cookie="${getCookie }">
+
+</c:if>
 
 <body>
 
