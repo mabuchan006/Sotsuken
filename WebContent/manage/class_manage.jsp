@@ -2,6 +2,10 @@
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="/cookie/get_cookie.jsp" />
+<c:if test = " ${!empty getCookie } ">
+<script>alert("ok");</script>
+
+</c:if>
   <!-- Start Logo Section --><!-- ヘッダー部分 -->
         <section id="logo-section" class="text-center">
             <div class="container">
