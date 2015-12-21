@@ -127,7 +127,7 @@ p {
 
 .size2 {
 	font-size: 20px;
-	font-weight: 5px;
+	font-weight: 800px;
 }
 
 /**** Start Logo Section ****/
@@ -348,6 +348,13 @@ p {
 	background-color: #22397F;
 }
 
+.color01{
+	background-color: #4D558A;
+}
+
+.color02{
+	background-color: #6872D0;
+}
 .bold {
 	font-weight: 900;
 	font-size: 200%;
@@ -513,9 +520,17 @@ margin-bottom: 5px;
 
 }
 
+padding-left{
+	padding-left: 50px;
+}
+
 .view-size {
 	font-size: 30px;
 	text-justify: auto;
+}
+
+margin0{
+	margin: 10px;
 }
 
 .kote{
@@ -525,6 +540,22 @@ margin-bottom: 5px;
 .kotebo{
 	float: left;height: 60px;overflow: auto;
 }
+
+.txtFontSize{
+	font-size : 150%;
+	width :100%;
+	height : 75px;
+	line-height : 140%;
+}
+
+
+.txtFontSize1{
+	font-size : 150%;
+	width :100%;
+	height : 50px;
+	line-height : 140%;
+}
+
 /**一時登録機能の先生リスト　テーブル用 by mabuchan**/
 
 	.table-border>thead>tr>th, .table-border>tbody>tr>th,

@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
-
+		$(document).on("click",".favolite",function(){
+			$(this).css("color","#f5e105");
+		});
 
 		if($("#addTb-tbody > tr").size() < 2){
 		$("#addTb-tbody > tr").clone(true).insertAfter(
@@ -25,8 +27,14 @@ $(document).ready(function() {
 
 		//　-ボタン押されたら行の削除
 		$(document).on("click",".removeList",function(){
+			if($(".removeList").size > 1){
 			$(this).parent().parent().empty();
 			firstID();
+			}else{
+				$(".removeList").css("opacity","0.1");
+
+
+			}
 
 		});
 

@@ -3,9 +3,46 @@ var elem = "", data = "";
 function clickEvent( e ){
 	// 登録ボタンがクリックされた時
 	$("#sBtn").click(function(e) {
-		// ボタンにname（submit）を付加
-		$("#sBtn").attr("name", "regist");
-		$("#modal2").modal("show");
+		$("form").submit(function(e){
+			//form送信キャンセル
+			e.preventDefault();
+			//formの情報を配列化
+			data = $(this).serializeArray();
+			//delete実行のための情報
+			data.push({ name : "regist" , value : ""});
+			//アクティブになっているタグの曜日を取得
+			elem = $(".active").children("input").get(0);
+			//曜日の情報をform情報に入れる
+			switch( elem.name ){
+				case "mon" :
+					data.push({ name : "ajaxWeek" , value : "月" });
+					break;
+				case "tue" :
+					data.push({ name : "ajaxWeek" , value : "火" });
+					break;
+				case "wed" :
+					data.push({ name : "ajaxWeek" , value : "水" });
+					break;
+				case "thu" :
+					data.push({ name : "ajaxWeek" , value : "木" });
+					break;
+				case "fri" :
+					data.push({ name : "ajaxWeek" , value : "金" });
+					break;
+				default :
+					data.push({ name : "ajaxWeek" , value : "月" });
+					break;
+			}
+			f_ajax(
+					$(this).attr("method"),
+					$(this).attr("action"),
+					"json",
+					data
+			);
+			//modal呼び出し
+			$("#modal2").modal("show");
+			$("#checkFlag").get(0).value = "false";
+		});
 	});
 
 	// labelがクリックされた時
@@ -63,16 +100,21 @@ function f_active(e) {
 					data = { ajaxWeek : "月" };
 					break;
 			}
-			f_ajax(data);
+			f_ajax(
+					$("form").attr("method"),
+					$("form").attr("action"),
+					"json",
+					data
+					);
 		}
 	})
 }
 
-function f_ajax(data){
+function f_ajax(type, url, dataType,data){
 	$.ajax({
-		type : "POST",
-		url : "http://localhost:8080/Sotsuken/divideUpdate",
-		dataType : "json",
+		type : type,
+		url : url,
+		dataType : dataType,
 		data : data
 	}).done(function(res){
 		f_ajax_done(res);

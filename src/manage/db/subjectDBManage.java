@@ -33,6 +33,7 @@ public class subjectDBManage extends DBAccess {
 	}
 
 	// ********endMsg*************
+	
 	private final static String DRIVER_NAME = "java:comp/env/jdbc/MySqlCon";// コネクタ
 
 	public subjectDBManage() {
@@ -69,6 +70,7 @@ public class subjectDBManage extends DBAccess {
 		// 要素取得用準備
 		ResultSet rs = getRsResult();
 		subjectInfo subjectinfo;
+		
 
 		// 全件取得
 		while (rs.next()) {
@@ -79,7 +81,7 @@ public class subjectDBManage extends DBAccess {
 			// 科目要素を1件ずつリストに追加
 			subjectList.add(subjectinfo);
 
-		} // while
+		}//while
 
 		disConnection();// 切断
 

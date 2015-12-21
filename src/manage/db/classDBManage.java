@@ -25,6 +25,7 @@ public class classDBManage extends DBAccess{
 		this.msg = msg;
 	}
   //********endMsg*************
+
 	private final static String DRIVER_NAME = "java:comp/env/jdbc/MySqlCon";//コネクタ
 
 	public classDBManage() {
@@ -49,7 +50,6 @@ public class classDBManage extends DBAccess{
 			//要素取得用準備
 			ResultSet rs = getRsResult();
 			classInfo classinfo;
-
 			//全件取得
 			while(rs.next()){
 
@@ -59,7 +59,6 @@ public class classDBManage extends DBAccess{
 
 				//クラス要素を1件ずつリストに追加
 				classList.add(classinfo);
-
 
 			}//while
 

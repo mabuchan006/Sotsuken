@@ -40,6 +40,7 @@
 
 <title>Time Table</title>
 </head>
+
 <body>
 
 <jsp:include page="/cookie/get_cookie.jsp" />
