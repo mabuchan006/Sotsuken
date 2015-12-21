@@ -4,18 +4,7 @@ function formCheck( e ) {
 	$("textarea").on({
 		"focusin" : function(e) {
 			txtVal = $(this).val().toUpperCase();
-		},/**
-		//半角英数とエンターキーの入力を検知
-		"keypress" : function(e){
-			if( e != null){
-				keyChar = String.fromCharCode(e.which).toUpperCase();
-				if(keyChar == "A" || keyChar == "G" || keyChar == "J" || keyChar == "M" || keyChar == "R" || keyChar == "S"
-					|| keyChar == "1" || keyChar == "2" || keyChar == "3" || keyChar == "4" || keyChar == "5"){
-					console.log(txtVal);
-					$("#checkFlag").get(0).value = "true";
-				}
-			}
-		},**/
+		},
 		//backspace key と delete key の入力を検知
 		"keyup" : function(e){
 			txtVal = $(this).val().toUpperCase();
