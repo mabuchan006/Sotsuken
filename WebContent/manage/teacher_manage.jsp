@@ -39,7 +39,7 @@
 <td class="col-md-4">
 <!-- 登録ボタン -->
 <label for="password" class="empty">________</label>
-<input type="submit" class="btn btn-primary" id="regist_btn" name="regist_teacher" value="登録"/>
+<input type="sesubmit" class="btn btn-primary" id="regist_btn" name="regist_teacher" value="登録"/>
 </td>
 
 </tr>
