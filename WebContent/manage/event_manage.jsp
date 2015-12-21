@@ -53,16 +53,16 @@
 
 
 
-			<table class="col-md-6 col-md-offset-3" id="first_table">
+			<table class="col-md-7 col-md-offset-3" id="first_table">
 				<tr>
-					<td class="col-md-4"><label for="IventName" class="labels">イベント名</label>
+					<td class="col-md-3"><label for="IventName" class="labels">イベント名</label>
 						<input type="text" class="form-control" id="eventName"
 						name="event_name"> <label for="Time" class="labels">日時</label>
 						<input type="text" class="form-control" name="time"></td>
 
 
 
-					<td class="col-md-4"><label for="text" class="labels">コマ</label>
+					<td class="col-md-3"><label for="text" class="labels">コマ</label>
 						<select class="form-control col-md-1">
 							<option style="color: black;">1</option>
 							<option style="color: black;">2</option>
@@ -73,15 +73,15 @@
 					</select> <label for="text" class="labels">講師</label> <input type="text"
 						class="form-control" name="teacher"></td>
 
-					<td class="col-md-4"><label for="text" class="labels">教室</label>
+					<td class="col-md-3"><label for="text" class="labels">教室</label>
 						<input type="text" class="form-control" name="room"> <label
 						for="text" class="labels">クラス名</label> <input type="text"
 						class="form-control" name="class"></td>
 
 
 
-					<td class="col-md-4"><label for="password" class="empty">________</label>
-						<button type="submit" class="btn btn-primary" id="regist_btn"
+					<td class="col-md-3"><label for="password" class="empty">________</label>
+						<button type="submit" class="btn btn-primary col-md-2" id="regist_btn"
 							name="regist_event">登録</button></td>
 				</tr>
 
@@ -92,7 +92,7 @@
 		<!-- 登録終わり -->
 
 		<!-- 登録情報表示 -->
-		<div class="col-md-6 col-md-offset-3">
+		<div class="col-md-7 col-md-offset-3">
 			<div class="back">
 				<table class="table ">
 					<thead>
@@ -105,7 +105,7 @@
 
 
 
-						<tr class="select">
+						<tr class="fontSize">
 							<td>イベント名</td>
 							<td>日時</td>
 							<td>コマ</td>
@@ -116,7 +116,7 @@
 								<form action="/Sotsuken/ManageUpdate" method="get">
 									<input type="hidden" name="eventID" value="${rs.eventID }" />
 									<input type="hidden" name="eventName" value="${rs.eventName }" />
-									<button type="submit" class="btn btn-danger btn-lg" name="delete_event">
+									<button type="submit" class="btn btn-danger btn-size" name="delete_event">
 										<i class="fa fa-trash-o fa-2x"></i>
 									</button>
 								</form>

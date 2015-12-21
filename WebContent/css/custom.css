@@ -179,6 +179,14 @@ body {
 	font-size: 2em;
 }
 
+.fontSize{
+	font-size: 1.7em;
+}
+
+btn-size{
+	width: 100px;
+}
+
 .select:hover {
 	background-color: #c0c0c0;
 	color: #fff;
