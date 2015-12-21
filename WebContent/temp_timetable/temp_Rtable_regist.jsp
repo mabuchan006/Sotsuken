@@ -111,7 +111,12 @@
 		</tbody>
 	</table>
 </div>
+
 	<form action="/Sotsuken/temp_tableControl" method="post">
+	<!-- button -->
+						<input type="hidden" id="checkFlag" value="false">
+						<button type="submit" class="btn btn-primary btn-lg col-md-1 fix padding-left" id="sBtn" name="regist">登録</button>
+	<!--button End  -->
 <div class="container">
 	<table
 		class="table table-striped table-bordered text-center table-hover table-condensed">
@@ -135,32 +140,32 @@
 				<td ><div class="drop-target size">
 				<p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														id="test" class="txtFontSize1"></textarea>
+														 name="Su0" class="txtFontSize1" >${subject1List[0].subjectName }</textarea>
 												</p>
 				</div></td>
 				<td><div class="drop-target"><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														id="test" class="txtFontSize1"></textarea>
+														name="Su1" class="txtFontSize1" >${subject1List[1].subjectName }</textarea>
 												</p></div></td>
 				<td><div class="drop-target"><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														id="test" class="txtFontSize1"></textarea>
+														name="Su2" class="txtFontSize1">${subject1List[2].subjectName }</textarea>
 												</p></div></td>
 				<td><div class="drop-target"><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														id="test" class="txtFontSize1"></textarea>
+														name="Su3" class="txtFontSize1">${subject1List[3].subjectName }</textarea>
 												</p></div></td>
 				<td><div class="drop-target"><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														id="test" class="txtFontSize1"></textarea>
+														name="Su4" class="txtFontSize1">${subject1List[4].subjectName }</textarea>
 												</p></div></td>
 				<td><div class="drop-target"><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														id="test" class="txtFontSize1"></textarea>
+														name="Su5" class="txtFontSize1">${subject1List[5].subjectName }</textarea>
 												</p></div></td>
 				<td><div class="drop-target"><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														id="test" class="txtFontSize1"></textarea>
+														name="Su6" class="txtFontSize1">${subject1List[6].subjectName }</textarea>
 												</p></div></td>
 			</tr>
 
