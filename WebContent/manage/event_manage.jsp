@@ -18,12 +18,18 @@
 <!-- BootstrapのCSS読み込み -->
 <link href="../bootstrap/css/style.css" rel="stylesheet">
 <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/custom.css" rel="stylesheet">
+
+<link href="../css/font-awesome.min.css" rel="stylesheet">
+<link href="../css/pure-drawer.css" rel="stylesheet">
+
+
 <script src="../js/jquery-2.1.1.min.js"></script>
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script src="../js/jquery.appear.js"></script>
 <script src="../js/teacher_regist.js"></script>
 
-<link href="../css/custom.css" rel="stylesheet">
+
 
 </head>
 <body>

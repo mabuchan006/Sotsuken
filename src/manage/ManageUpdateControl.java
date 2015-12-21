@@ -84,6 +84,7 @@ public class ManageUpdateControl extends HttpServlet {
 
 		//ページデータセット
 		try {
+			content_page = "/manage/event_manage.jsp";
 
 			request.setAttribute("content_page", content_page);
 			request.setAttribute("page_title", page_title);
