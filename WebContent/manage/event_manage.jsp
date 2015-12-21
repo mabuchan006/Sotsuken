@@ -53,7 +53,7 @@
 <tr>
 <td class="col-md-4">
 		    <label for="IventName" class="labels">イベント名</label>
-		    <input type="text" class="form-control" id="IventName" name="event_name" >
+		    <input type="text" class="form-control" id="eventName" name="event_name" >
 
 
 			<label for="Time" class="labels">日時</label>
@@ -106,7 +106,7 @@
 	<div class="back">
 		            <table class="table ">
 						<thead>
-						<tr><td colspan="7">Ivent List</td></tr>
+						<tr><td colspan="7">event List</td></tr>
 						</thead>
 
 		                <tbody>
@@ -117,8 +117,9 @@
 		                        <td>イベント名</td><td>日時</td><td>コマ</td><td>教室</td><td>講師</td><td>クラス名</td>
 		                        <td>
 									<form action="/Sotsuken/ManageUpdate" method="get">
-									<input type="hidden" name = "eventID" value="${rs.eventID }" />
-									<input type="submit" class="btn btn-danger " name="delete_event" value="削除"/>
+										<input type="hidden" name="eventID" value="${rs.eventID }" />
+										<input type="hidden" name="eventName" value="${rs.eventName }" />
+										<button type="submit" class="btn btn-danger"name="delete_event" ><i class="fa fa-trash-o fa-2x"></i></button>
 									</form>
 								</td>
 
