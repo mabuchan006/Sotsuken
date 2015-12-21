@@ -57,6 +57,7 @@ public class loginControl extends HttpServlet {
 	//クライアントから送られてきた情報を取得するような処理
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+		System.out.println("１");
 		//パス初期値
 		String path="test/login_test.jsp";//変更予定のため未記述
 		String errPath="/Sotsuken/";//変更予定のため未記述
