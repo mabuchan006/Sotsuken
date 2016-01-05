@@ -44,7 +44,7 @@ public class ManageUpdateControl extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-
+		System.out.println("1");
 		//文字コードutf8
 		request.setCharacterEncoding("UTF-8");
 		//jspからのページ情報取得
@@ -84,7 +84,7 @@ public class ManageUpdateControl extends HttpServlet {
 
 		//ページデータセット
 		try {
-			content_page = "/manage/event_manage.jsp";
+
 
 			request.setAttribute("content_page", content_page);
 			request.setAttribute("page_title", page_title);
@@ -265,7 +265,7 @@ public class ManageUpdateControl extends HttpServlet {
 				try {
 					//ページ情報指定
 					content_page = "/manage/class_manage.jsp";
-					page_title = "クラス管理画面";
+					page_title = "class_manage";
 
 					if(request.getParameter("regist_class") != null ){
 						cdm.classDBUpdate(ci, DBAccess.INSERT, "登録");

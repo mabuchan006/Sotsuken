@@ -31,6 +31,7 @@
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <script src="js/jquery.appear.js"></script>
 <script src="js/login.js"></script>
+<script src="js/cookie.js"></script>
 
 
 <!--[if lt IE 9]>
@@ -43,10 +44,10 @@
 
 <body>
 
-<jsp:include page="/cookie/get_cookie.jsp" />
-<c:if test = "${getCookie }">
-	<c:redirect url= "${getCookie }" />
-</c:if>
+<!-- お気に入り登録されたページへ遷移する -->
+<form action="/Sotsuken/publicView" method="post"  id="cookieSubmit">
+<input type="hidden" name="page" value="" id="cookiePage"/>
+</form>
 
 	<!-- Start Logo Section -->
 	<!-- ヘッダー部分 -->

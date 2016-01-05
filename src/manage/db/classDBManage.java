@@ -35,7 +35,7 @@ public class classDBManage extends DBAccess{
 		//クラスIDから削除からsql
 		deleteSql = String.format("delete  from tbl_class where classID = ?");
 		//クラス情報登録sql
-		insertSql= String.format(" insert into tbl_class (classID, className) values ( ? , ? )");
+		insertSql= String.format(" replace into tbl_class (classID, className) values ( ? , ? )");
 	}
 	/*
 	 * @param classinfo クラス情報
@@ -76,13 +76,16 @@ public class classDBManage extends DBAccess{
 		connect();
 		switch(state){
 		case INSERT:
+
 			if(!(ci.getClassID().equals("") || ci.getClassName().equals(""))
-					|| ci.getClassID().length() == 4){
+					&& ci.getClassID().length() == 4){
 			createStstement(insertSql);
 			getPstmt().setString(1,ci.getClassID());
 			getPstmt().setString(2,ci.getClassName());
 			updateExe();//実行
+
 			}//if
+
 			break;
 		case DELETE:
 			createStstement(deleteSql);

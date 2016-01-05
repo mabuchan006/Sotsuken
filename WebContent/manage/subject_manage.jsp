@@ -6,7 +6,6 @@
 
 <!DOCTYPE html>
 
-
 <!-- 学年学科選択処理 -->
 <script>
 
@@ -45,10 +44,6 @@ function selectChange(num){
 	selectInsert(val,num);
 
 	}//selectChange
-
-
-
-
 </script>
 
 <!-- foreach2重だよ selectに学年情報を格納-->
@@ -62,14 +57,14 @@ function selectChange(num){
 
 <div class="row col-md-9">
 <c:if test=  "${!empty Msg }">
-<div class="alert alert-success alert-dismissible col-md-6 col-md-offset-3" role="alert">
+<div class="alert alert-success alert-dismissible col-md-9 col-md-offset-3" role="alert">
 	<button type="button" class="close" data-dismiss="alert" aria-label="閉じる"><span aria-hidden="true">×</span></button>
 	<strong>success:</strong>${Msg }
 </div>
 </c:if>
 
 <c:if test=  "${!empty err_Msg }">
-<div class="alert alert-danger alert-dismissible col-md-6 col-md-offset-3" role="alert">
+<div class="alert alert-danger alert-dismissible col-md-9 col-md-offset-3" role="alert">
 	<button type="button" class="close" data-dismiss="alert" aria-label="閉じる"><span aria-hidden="true">×</span></button>
 	<strong>error:</strong>${err_Msg }
 </div>
@@ -77,7 +72,8 @@ function selectChange(num){
 </c:if>
 
 <!-- form -->
-<form action="/Sotsuken/ManageUpdate" method="get"  id="submit">
+<form action="/Sotsuken/ManageUpdate" method="post"  id="submit">
+<input type="hidden" name="page" value="subject_manage" />
 <table class="table col-md-9 col-md-offset-3">
 <thead class="thead">
 <tr >
@@ -150,7 +146,8 @@ function selectChange(num){
 <td>${rs.bringThings}</td>
 <td>
 <!-- 削除用フォーム -->
-<form action="/Sotsuken/ManageUpdate" method="get">
+<form action="/Sotsuken/ManageUpdate" method="post">
+<input type="hidden" name="page" value="subject_manage" />
 <input type="hidden" name="subjectID" value="${rs.subjectID }" />
 <input type="hidden" name="subjectName" value="${rs.subjectName }" />
 <button type="submit" class="btn btn-danger"name="delete_subject" ><i class="fa fa-trash-o fa-2x"></i></button>
