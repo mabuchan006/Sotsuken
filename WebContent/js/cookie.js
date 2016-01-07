@@ -2,14 +2,21 @@
 $(document).ready(
 		function() {
 
-			var getPage = getCookie();
+			var getPage = getCookie("page");
 
 
-			if(!(getPage == "")){
+			var getTop = getCookie("top");
+
+			if(!(getPage == "") && getTop == ""){
 				$("#cookiePage").val(getPage);
 				$("#cookieSubmit").submit();
 			}
 
+
+			if(!(document.title == "Time Table")){
+				document.cookie = 'top='
+					+ encodeURIComponent("Time Table");
+			}
 			if (getPage == document.title) {
 				$(".favolite").css("color","#f5e105")
 				$(".favolite").attr("id","trueCookie")
@@ -25,7 +32,7 @@ $(document).ready(
 						$(".favolite").attr("id","trueCookie")
 						//有効期限一か月のクッキー情報セット
 						var expire = new Date();
-						expire.setTime(expire.getTime() + 1000*3600*24*30);
+						expire.setTime(expire.getTime() + 1000*3600*24*90);
 						document.cookie = 'page='
 								+ encodeURIComponent(document.title) +
 								"; expires=" + expire.toUTCString();
@@ -39,15 +46,15 @@ $(document).ready(
 
 
 //Cookie取得
-function getCookie() {
+function getCookie(name) {
 
 	var page = null
 
 	cookieName = document.cookie
-	var position = cookieName.indexOf("page=")
+	var position = cookieName.indexOf(name+"=")
 	if (position != -1) {
 
-		var startIndex = position + "page=".length
+		var startIndex = position + (name+"=").length
 		var endIndex = cookieName.indexOf(";", startIndex)
 
 		if (endIndex == -1)
@@ -70,7 +77,7 @@ function delCookie()
   date1.setTime(0);
 
   //有効期限を過去にして書き込む
-  document.cookie = "page=;expires="+date1.toGMTString();
+  document.cookie = name+ "=;expires="+date1.toGMTString();
 
   //ページを再読み込みする
 
