@@ -73,6 +73,6 @@ function delCookie()
   document.cookie = "page=;expires="+date1.toGMTString();
 
   //ページを再読み込みする
-  location.reload();
+
 
 }
