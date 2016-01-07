@@ -112,10 +112,9 @@
 	</table>
 </div>
 
-	<form action="/Sotsuken/temp_tableControl" method="post">
+	<form action="/Sotsuken/editView" method="post">
 	<!-- button -->
-						<input type="hidden" id="checkFlag" value="false">
-						<button type="submit" class="btn btn-primary btn-lg col-md-1 fix padding-left" id="sBtn" name="regist">登録</button>
+				<button type="submit" class="btn btn-primary btn-lg col-md-1 fix padding-left" id="sBtn" name="regist" value="reg">登録</button>
 	<!--button End  -->
 <div class="container">
 	<table
@@ -140,63 +139,64 @@
 				<td ><div class="drop-target size">
 				<p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														 name="Su0" class="txtFontSize1" >${subject1List[0].subjectName }</textarea>
+														 name="Su0_1" class="txtFontSize1" >${subject1List[0].subjectName }</textarea>
 												</p>
 				</div></td>
 				<td><div class="drop-target"><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Su1" class="txtFontSize1" >${subject1List[1].subjectName }</textarea>
+														name="Su1_1" class="txtFontSize1" >${subject1List[1].subjectName }</textarea>
 												</p></div></td>
 				<td><div class="drop-target"><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Su2" class="txtFontSize1">${subject1List[2].subjectName }</textarea>
+														name="Su2_1" class="txtFontSize1">${subject1List[2].subjectName }</textarea>
 												</p></div></td>
 				<td><div class="drop-target"><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Su3" class="txtFontSize1">${subject1List[3].subjectName }</textarea>
+														name="Su3_1" class="txtFontSize1">${subject1List[3].subjectName }</textarea>
 												</p></div></td>
 				<td><div class="drop-target"><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Su4" class="txtFontSize1">${subject1List[4].subjectName }</textarea>
+														name="Su4_1" class="txtFontSize1">${subject1List[4].subjectName }</textarea>
 												</p></div></td>
 				<td><div class="drop-target"><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Su5" class="txtFontSize1">${subject1List[5].subjectName }</textarea>
+														name="Su5_1" class="txtFontSize1">${subject1List[5].subjectName }</textarea>
 												</p></div></td>
 				<td><div class="drop-target"><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Su6" class="txtFontSize1">${subject1List[6].subjectName }</textarea>
+														name="Su6_1" class="txtFontSize1">${subject1List[6].subjectName }</textarea>
 												</p></div></td>
 			</tr>
 
+			<!-- １限目　先生 -->
 			<tr class="info">
 				<td><div class="drop-target"><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														id="test" class="txtFontSize1"></textarea>
+														name="Te0_1" class="txtFontSize1"></textarea>
 												</p></div></td>
 				<td><div class="drop-target"><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														id="test" class="txtFontSize1"></textarea>
+														name="Te1_1"  class="txtFontSize1"></textarea>
 												</p></div></td>
 				<td><div class="drop-target"><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														id="test" class="txtFontSize1"></textarea>
+														name="Te2_1"  class="txtFontSize1"></textarea>
 												</p></div></td>
 				<td><div class="drop-target"><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														id="test" class="txtFontSize1"></textarea>
+														name="Te3_1"  class="txtFontSize1"></textarea>
 												</p></div></td>
 				<td><div class="drop-target"><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														id="test" class="txtFontSize1"></textarea>
+														name="Te4_1"  class="txtFontSize1"></textarea>
 												</p></div></td>
 				<td><div class="drop-target"><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														id="test" class="txtFontSize1"></textarea>
+														name="Te5_1"  class="txtFontSize1"></textarea>
 												</p></div></td>
 				<td><div class="drop-target"><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														id="test" class="txtFontSize1"></textarea>
+														name="Te6_1"  class="txtFontSize1"></textarea>
 												</p></div></td>
 			</tr>
 
@@ -215,60 +215,75 @@
 					pageContext.setAttribute("index", cnt);
 
 				%>
-
+				<!-- １限目　教室 -->
 				<%if(week == 0){ %>
 					<c:if test="${rooms1List[index].week == '月'}" var="flg_0"/>
-						<c:if test="${flg_0 }"><td>${ rooms1List[index].roomName}</td><%status++;%></c:if>
+						<c:if test="${flg_0 }">
+						<td>${ rooms1List[index].roomName} <input type="hidden" name="Ro0_1" value="${ rooms1List[index].roomName}"></td>
+						<%status++;%>
+						</c:if>
 						<% if(cnt == period_1 - 1 && status == 0){ %>
-						<c:if test="${!flg_0 }"><td></td></c:if>
+						<c:if test="${!flg_0 }"><td><input type="hidden" name="Ro0_1" value=""></td></c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 1){ %>
 					<c:if test="${rooms1List[index].week == '火'}" var="flg_1"/>
-						<c:if test="${flg_1 }"><td>${ rooms1List[index].roomName}</td><%status++;%></c:if>
+						<c:if test="${flg_1 }">
+						<td>${ rooms1List[index].roomName}<input type="hidden" name="Ro1_1" value="${ rooms1List[index].roomName}"></td>
+						<%status++;%></c:if>
 						<%if(cnt == period_1 - 1 && status == 0){ %>
-						<c:if test="${!flg_1 }"><td></td></c:if>
+						<c:if test="${!flg_1 }"><td><input type="hidden" name="Ro1_1" value=""></td></c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 2){ %>
 					<c:if test="${rooms1List[index].week == '水'}" var="flg_2"/>
-						<c:if test="${flg_2 }"><td>${ rooms1List[index].roomName}</td><%status++;%></c:if>
+						<c:if test="${flg_2 }">
+						<td>${ rooms1List[index].roomName}<input type="hidden" name="Ro2_1" value="${ rooms1List[index].roomName}"></td>
+						<%status++;%></c:if>
 						<%if(cnt == period_1 - 1 && status == 0){ %>
-						<c:if test="${!flg_2 }"><td></td></c:if>
+						<c:if test="${!flg_2 }"><td><input type="hidden" name="Ro2_1" value=""></td></c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 3){ %>
 					<c:if test="${rooms1List[index].week == '木'}" var="flg_3"/>
-					<c:if test="${flg_3 }"><td>${ rooms1List[index].roomName}</td><%status++;%></c:if>
+					<c:if test="${flg_3 }">
+					<td>${ rooms1List[index].roomName}<input type="hidden" name="Ro3_1" value="${ rooms1List[index].roomName}"></td>
+					<%status++;%></c:if>
 						<%if(cnt == period_1 - 1 && status == 0){ %>
-						<c:if test="${!flg_3 }"><td></td></c:if>
+						<c:if test="${!flg_3 }"><td><input type="hidden" name="Ro3_1" value=""></td></c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 4){ %>
 					<c:if test="${rooms1List[index].week == '金'}" var="flg_4"/>
-					<c:if test="${flg_4}"><td>${ rooms1List[index].roomName}</td><%status++;%></c:if>
+					<c:if test="${flg_4}">
+					<td>${ rooms1List[index].roomName}<input type="hidden" name="Ro4_1" value="${ rooms1List[index].roomName}"></td>
+					<%status++;%></c:if>
 						<%if(cnt == period_1 - 1 && status == 0){ %>
-						<c:if test="${!flg_4 }"><td></td></c:if>
+						<c:if test="${!flg_4 }"><td><input type="hidden" name="Ro4_1" value=""></td></c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 5){ %>
 					<c:if test="${rooms1List[index].week == '土'}" var="flg_5"/>
-					<c:if test="${flg_5 }"><td>${ rooms1List[index].roomName}</td><%status++;%></c:if>
+					<c:if test="${flg_5 }">
+					<td>${ rooms1List[index].roomName}<input type="hidden" name="Ro5_1" value="${ rooms1List[index].roomName}"></td>
+					<%status++;%></c:if>
 						<%if(cnt == period_1 - 1 && status == 0){ %>
-						<c:if test="${!flg_5 }"><td></td></c:if>
+						<c:if test="${!flg_5 }"><td><input type="hidden" name="Ro5_1" value=""></td></c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 6){ %>
 					<c:if test="${rooms1List[index].week == '日'}" var="flg_6"/>
-					<c:if test="${flg_6 }"><td>${ rooms1List[index].roomName}</td><%status++;%></c:if>
+					<c:if test="${flg_6 }">
+					<td>${ rooms1List[index].roomName}<input type="hidden" name="Ro6_1" value="${ rooms1List[index].roomName}"></td>
+					<%status++;%></c:if>
 						<%if(cnt == period_1 - 1 && status == 0){ %>
-						<c:if test="${!flg_6 }"><td></td></c:if>
+						<c:if test="${!flg_6 }"><td><input type="hidden" name="Ro6_1" value=""></td></c:if>
 						<% } %>
 				<% } %>
 
@@ -279,13 +294,13 @@
 
 			<c:if test="${!list_flg }">
 			<tr class="info">
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td><input type="hidden" name="Ro0_1" value=""></td>
+			<td><input type="hidden" name="Ro1_1" value=""></td>
+			<td><input type="hidden" name="Ro2_1" value=""></td>
+			<td><input type="hidden" name="Ro3_1" value=""></td>
+			<td><input type="hidden" name="Ro4_1" value=""></td>
+			<td><input type="hidden" name="Ro5_1" value=""></td>
+			<td><input type="hidden" name="Ro6_1" value=""></td>
 			</tr>
 			</c:if>
 
