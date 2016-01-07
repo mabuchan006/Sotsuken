@@ -577,8 +577,8 @@ margin0{
 
 
 }
-/**お気に入りボタン**/
-.favolite {
+/**お気に入り,ホームボタン**/
+.favolite, .top {
 	border-color:#202020;
    border-top: 1px solid #202020;
    background: #202020;
@@ -601,3 +601,5 @@ margin0{
    text-decoration: none;
    vertical-align: middle;
    }
+
+

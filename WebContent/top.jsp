@@ -31,7 +31,10 @@
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <script src="js/jquery.appear.js"></script>
 <script src="js/login.js"></script>
+<script src="js/delSession.js"></script>
+<c:if test = "${empty top }">
 <script src="js/cookie.js"></script>
+</c:if>
 
 
 <!--[if lt IE 9]>
@@ -43,6 +46,7 @@
 </head>
 
 <body>
+
 
 <!-- お気に入り登録されたページへ遷移する -->
 <form action="/Sotsuken/publicView" method="post"  id="cookieSubmit">

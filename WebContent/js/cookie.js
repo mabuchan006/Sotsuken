@@ -2,21 +2,14 @@
 $(document).ready(
 		function() {
 
-			var getPage = getCookie("page");
+			var getPage = getCookie();
 
 
-			var getTop = getCookie("top");
-
-			if(!(getPage == "") && getTop == ""){
+			if(!(getPage == "")){
 				$("#cookiePage").val(getPage);
 				$("#cookieSubmit").submit();
 			}
 
-
-			if(!(document.title == "Time Table")){
-				document.cookie = 'top='
-					+ encodeURIComponent("Time Table");
-			}
 			if (getPage == document.title) {
 				$(".favolite").css("color","#f5e105")
 				$(".favolite").attr("id","trueCookie")
@@ -46,15 +39,15 @@ $(document).ready(
 
 
 //Cookie取得
-function getCookie(name) {
+function getCookie() {
 
 	var page = null
 
 	cookieName = document.cookie
-	var position = cookieName.indexOf(name+"=")
+	var position = cookieName.indexOf("page=")
 	if (position != -1) {
 
-		var startIndex = position + (name+"=").length
+		var startIndex = position + "page=".length
 		var endIndex = cookieName.indexOf(";", startIndex)
 
 		if (endIndex == -1)
@@ -77,9 +70,16 @@ function delCookie()
   date1.setTime(0);
 
   //有効期限を過去にして書き込む
-  document.cookie = name+ "=;expires="+date1.toGMTString();
+  document.cookie = "page=;expires="+date1.toGMTString();
 
   //ページを再読み込みする
 
 
 }
+
+//topのsession情報を破棄する
+$(window).on("beforeunload",function(e){
+			window.sessionStorage.removeItem("top");
+});
+
+
