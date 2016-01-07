@@ -4,8 +4,9 @@ $(document).ready(
 
 			var getPage = getCookie();
 
+
 			if(!(getPage == "")){
-				$("#cookiePage").val("R4A1");
+				$("#cookiePage").val(getPage);
 				$("#cookieSubmit").submit();
 			}
 
@@ -60,8 +61,18 @@ function getCookie() {
 
 }
 //クッキー削除
-function delCookie(){
-	var date = new Date();
-	date.setTime(0);
-	document.cookie("page=;expires="+date.toUTCString());
+function delCookie()
+{
+  //日付データを作成する
+  var date1 = new Date();
+
+  //1970年1月1日00:00:00の日付データをセットする
+  date1.setTime(0);
+
+  //有効期限を過去にして書き込む
+  document.cookie = "page=;expires="+date1.toGMTString();
+
+  //ページを再読み込みする
+  location.reload();
+
 }
