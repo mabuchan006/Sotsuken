@@ -339,7 +339,7 @@ $(document).ready(function () {
 
 									<thead>
 										<tr class="back-color4 white wide2 ">
-											<th class="view-size font2 wide1 back-color4 white" id="8F">class</th>
+											<th class="view-size font2 wide1 back-color4 white" >class</th>
 											<th class="view-size font2 wide1 back-color4 white">1</th>
 											<th class="view-size font2 wide1 back-color4 white">2</th>
 											<th class="view-size font2 wide1 back-color4 white">3</th>
@@ -349,7 +349,7 @@ $(document).ready(function () {
 
 									<tbody>
 										<tr class="danger">
-											<td class="view-size font2">803</td>
+											<td class="view-size font2"id="8F">803</td>
 											<td class="size">
 												<p class="size drop-target">
 													<textarea cols="24" rows="3" maxlength="24" style="overflow: auto; background-color: #f2dede;"
@@ -380,7 +380,7 @@ $(document).ready(function () {
 										</tr>
 
 										<tr class="pink1">
-											<td class="view-size font2" id="7F">802</td>
+											<td class="view-size font2" >802</td>
 
 											<td class="size">
 												<p class="size drop-target">
@@ -412,7 +412,7 @@ $(document).ready(function () {
 										</tr>
 
 										<tr class="danger">
-											<td class="view-size font2">702</td>
+											<td class="view-size font2"id="7F">702</td>
 
 											<td class="size">
 												<p class="size drop-target">
@@ -444,7 +444,7 @@ $(document).ready(function () {
 										</tr>
 
 										<tr class="pink1">
-											<td class="view-size font2" id="6F">701</td>
+											<td class="view-size font2" >701</td>
 
 											<td class="size">
 												<p class="size drop-target">
@@ -476,7 +476,7 @@ $(document).ready(function () {
 										</tr>
 
 										<tr class="danger">
-											<td class="view-size font2">604</td>
+											<td class="view-size font2"id="6F">604</td>
 
 											<td class="size">
 												<p class="size drop-target">
@@ -540,7 +540,7 @@ $(document).ready(function () {
 										</tr>
 
 										<tr class="danger">
-											<td class="view-size font2" id="5F">601</td>
+											<td class="view-size font2" >601</td>
 
 											<td class="size">
 												<p class="size drop-target">
@@ -572,7 +572,7 @@ $(document).ready(function () {
 										</tr>
 
 										<tr class="pink1">
-											<td class="view-size font2">504</td>
+											<td class="view-size font2"id="5F">504</td>
 
 											<td class="size">
 												<p class="size drop-target">
@@ -668,7 +668,7 @@ $(document).ready(function () {
 										</tr>
 
 										<tr class="danger">
-											<td class="view-size font2" id="4F">501</td>
+											<td class="view-size font2" >501</td>
 
 											<td class="size">
 												<p class="size drop-target">
@@ -700,7 +700,7 @@ $(document).ready(function () {
 										</tr>
 
 										<tr class="pink1">
-											<td class="view-size font2">404</td>
+											<td class="view-size font2"id="4F">404</td>
 
 											<td class="size">
 												<p class="size drop-target">
@@ -796,7 +796,7 @@ $(document).ready(function () {
 										</tr>
 
 										<tr class="danger">
-											<td class="view-size font2" id="3F">401</td>
+											<td class="view-size font2" >401</td>
 
 											<td class="size">
 												<p class="size drop-target">
@@ -828,7 +828,7 @@ $(document).ready(function () {
 										</tr>
 
 										<tr class="pink1">
-											<td class="view-size font2">304</td>
+											<td class="view-size font2"id="3F">304</td>
 
 											<td class="size">
 												<p class="size drop-target">
@@ -924,7 +924,7 @@ $(document).ready(function () {
 										</tr>
 
 										<tr class="danger">
-											<td class="view-size font2" id="2F">301</td>
+											<td class="view-size font2">301</td>
 
 											<td class="size">
 												<p class="size drop-target">
@@ -956,7 +956,7 @@ $(document).ready(function () {
 										</tr>
 
 										<tr class="pink1">
-											<td class="view-size font2">201</td>
+											<td class="view-size font2" id="2F">201</td>
 
 											<td class="size">
 												<p class="size drop-target">
@@ -997,7 +997,7 @@ $(document).ready(function () {
 
 									<thead>
 										<tr class=" wide2">
-											<th class="view-size font2 wide1 back-color4 white" id="M5F">class</th>
+											<th class="view-size font2 wide1 back-color4 white" >class</th>
 											<th class="view-size font2 wide1 back-color4 white">1</th>
 											<th class="view-size font2 wide1 back-color4 white">2</th>
 											<th class="view-size font2 wide1 back-color4 white">3</th>
@@ -1007,7 +1007,7 @@ $(document).ready(function () {
 
 									<tbody>
 										<tr class="pink2">
-											<td class="view-size font2">503</td>
+											<td class="view-size font2"id="M5F">503</td>
 
 											<td class="size">
 												<p class="size drop-target">
@@ -1069,7 +1069,7 @@ $(document).ready(function () {
 											</td>
 										</tr>
 										<tr class="pink2">
-											<td class="view-size font2" id="M4F">501</td>
+											<td class="view-size font2">501</td>
 
 											<td class="size">
 												<p class="size drop-target">
@@ -1101,7 +1101,7 @@ $(document).ready(function () {
 										</tr>
 
 										<tr class="pink3">
-											<td class="view-size font2">404</td>
+											<td class="view-size font2" id="M4F">404</td>
 
 											<td class="size">
 												<p class="size drop-target">
@@ -1196,7 +1196,7 @@ $(document).ready(function () {
 											</td>
 										</tr>
 										<tr class="pink2">
-											<td class="view-size font2" id="M3F">401</td>
+											<td class="view-size font2" >401</td>
 
 											<td class="size">
 												<p class="size drop-target">
@@ -1228,7 +1228,7 @@ $(document).ready(function () {
 										</tr>
 
 										<tr class="pink3">
-											<td class="view-size font2">304</td>
+											<td class="view-size font2"id="M3F">304</td>
 
 											<td class="size">
 												<p class="size drop-target">
@@ -1322,7 +1322,7 @@ $(document).ready(function () {
 											</td>
 										</tr>
 										<tr class="pink2">
-											<td class="view-size font2" id="M2F">301</td>
+											<td class="view-size font2" >301</td>
 
 											<td class="size">
 												<p class="size drop-target">
@@ -1354,7 +1354,7 @@ $(document).ready(function () {
 										</tr>
 
 										<tr class="pink3">
-											<td class="view-size font2">204</td>
+											<td class="view-size font2"id="M2F">204</td>
 
 											<td class="size">
 												<p class="size drop-target">
@@ -1448,7 +1448,7 @@ $(document).ready(function () {
 											</td>
 										</tr>
 										<tr class="pink2">
-											<td class="view-size font2" id="M1F">201</td>
+											<td class="view-size font2" >201</td>
 
 											<td class="size">
 												<p class="size drop-target">
@@ -1480,7 +1480,7 @@ $(document).ready(function () {
 										</tr>
 
 										<tr class="pink3">
-											<td class="view-size font2">101</td>
+											<td class="view-size font2"id="M1F">101</td>
 
 											<td class="size">
 												<p class="size drop-target">
