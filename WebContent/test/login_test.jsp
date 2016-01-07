@@ -6,6 +6,12 @@
 
 <c:if test="${empty tchinf}">
 	<c:redirect url="/manage/manage_top.jsp" />
+	<div class="alert alert-success alert-dismissible col-md-6 col-md-offset-3" role="alert">
+	<button type="button" class="close" data-dismiss="alert" aria-label="閉じる">
+		<span aria-hidden="true">×</span>
+	</button>
+	<strong>success:</strong>${login_Msg }
+	</div>
 </c:if>
 
 <p>${tchinf.teacherName}さん、ようこそ
@@ -16,7 +22,7 @@
 <c:if test=  "${!empty Msg }">
 <div class="alert alert-success alert-dismissible col-md-6 col-md-offset-3" role="alert">
 	<button type="button" class="close" data-dismiss="alert" aria-label="閉じる"><span aria-hidden="true">×</span></button>
-	<strong>success:</strong>${Msg }
+	<strong>success:</strong>${logout_Msg }
 </div>
 
 </c:if>
