@@ -77,9 +77,6 @@ function delCookie()
 
 }
 
-//topのsession情報を破棄する
-$(window).on("beforeunload",function(e){
-			window.sessionStorage.removeItem("top");
-});
+
 
 
