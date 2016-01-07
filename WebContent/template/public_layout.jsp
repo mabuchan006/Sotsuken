@@ -51,12 +51,17 @@
 			<div class="col-md-12">
 				<div class="logo text-center">
 					<h1>${page_title }</h1>
+
 					<div class="col-md-4 col-md-offset-8 text-right">
+
 
                             <button type="button" class="favolite" id="falseCookie" >
 
-                            <i class="fa fa-star"></i>　　　お気に入り
+                            <i class="fa fa-star"></i>お気に入り
                             </button>
+                            <button type="button" class="favolite">
+					<i class="fa fa-home"></i>TOP
+					</button>
 
 
                     </div>
