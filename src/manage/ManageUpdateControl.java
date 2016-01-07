@@ -265,7 +265,7 @@ public class ManageUpdateControl extends HttpServlet {
 				try {
 					//ページ情報指定
 					content_page = "/manage/class_manage.jsp";
-					page_title = "class_manage";
+					page_title = "クラス管理";
 
 					if(request.getParameter("regist_class") != null ){
 						cdm.classDBUpdate(ci, DBAccess.INSERT, "登録");
