@@ -68,9 +68,9 @@
 							href="#">時間割管理</a>
 							<ul >
 								<li><a href="/Sotsuken/editView?page=R">R</a></li>
-								<li><a href="#">S</a></li>
-								<li><a href="#">J</a></li>
-								<li><a href="#">A</a></li>
+								<li><a href="/Sotsuken/editView?page=S">S</a></li>
+								<li><a href="/Sotsuken/editView?page=J">J</a></li>
+								<li><a href="/Sotsuken/editView?page=A">A</a></li>
 							</ul></li>
 					</ul>
 				</li>

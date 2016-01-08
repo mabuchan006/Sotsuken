@@ -92,9 +92,9 @@ public class temp_tableControl extends HttpServlet {
 			chooseClassID = value.chooseClassID;
 			content_page = value.content_page;
 		} else {
-			String url = "/Sotsuken/editView?page=R";
-			response.sendRedirect(url);
-			return;
+			//String url = "/Sotsuken/editView?page=R";
+			//response.sendRedirect(url);
+			//return;
 		} //if else
 
 		//DivideUpdateからの情報取得
@@ -131,19 +131,21 @@ public class temp_tableControl extends HttpServlet {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
 		} //try Edit View 表示
+
 		System.out.println("1");
-		//Insert 登録ボタンが押された場
+
+		//Insert処理：登録ボタンが押された場
 		if(request.getParameter("regist") != null){
 			for(int i=0; i <= 6; i++){
 				String num = String.valueOf(i);
-				String subject = request.getParameter("Su"+ num +"_1");
-				String teacher = request.getParameter("Te"+ num +"_1");
-				String room = request.getParameter("Ro"+ num +"_1");
-				System.out.println(subject + teacher + room);
-				System.out.println("test");
+				String subject = "Su"+ num +"_1";
+				String teacher = "Te"+ num +"_1";
+				String room 	= "Ro"+ num +"_1";
+
+
 			}
 		}
-		System.out.println("2");
+	System.out.println("2");
 
 		// ディスパッチ準備
 		request.setAttribute("content_page", content_page);

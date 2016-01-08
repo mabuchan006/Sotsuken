@@ -6,7 +6,6 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 <!-- タブ -->
-
 <ul class="nav nav-tabs noprint" >
 	<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">R4
 			<b class="caret"></b>
@@ -51,7 +50,11 @@
 
 </ul>
 
+<!-- タブ end-->
+
 <br />
+
+<form action="/Sotsuken/editView" method="post">
 
 <!-- 科目リスト　先生リスト取得 -->
 
@@ -112,11 +115,15 @@
 	</table>
 </div>
 
-	<form action="/Sotsuken/editView" method="post">
-	<!-- button -->
-				<button type="submit" class="btn btn-primary btn-lg col-md-1 fix padding-left" id="sBtn" name="regist" value="reg">登録</button>
-	<!--button End  -->
+
+
+<!-- button -->
+			<button type="submit" class="btn btn-primary btn-lg col-md-1 fix padding-left" id="sBtn" name="regist">reg</button>
+<!--button End  -->
+
 <div class="container">
+
+
 	<table
 		class="table table-striped table-bordered text-center table-hover table-condensed">
 		<thead>
@@ -132,7 +139,6 @@
 				<td>(Sta)</td>
 				<td>(Sun)</td>
 			</tr>
-
 			<tr class="info ">
 				<!-- １限目　教科 -->
 				<th rowspan=3>1</th>
@@ -199,6 +205,7 @@
 														name="Te6_1"  class="txtFontSize1"></textarea>
 												</p></div></td>
 			</tr>
+			<!-- １限目　先生 終わり -->
 
 			<c:if test="${!empty rooms1List }" var="list_flg" />
 			<c:if test="${list_flg }">
@@ -206,7 +213,7 @@
 			<%
 			int period_1 = Integer.parseInt(request.getAttribute("period_1").toString());
 			%>
-
+			<!-- １限目　教室 -->
 			<%
 				for(int week=0; week <=6; week++){
 					int status = 0;
@@ -215,75 +222,103 @@
 					pageContext.setAttribute("index", cnt);
 
 				%>
-				<!-- １限目　教室 -->
+
 				<%if(week == 0){ %>
 					<c:if test="${rooms1List[index].week == '月'}" var="flg_0"/>
 						<c:if test="${flg_0 }">
-						<td>${ rooms1List[index].roomName} <input type="hidden" name="Ro0_1" value="${ rooms1List[index].roomName}"></td>
+						<td>${ rooms1List[index].roomName} </td>
+						<input type="hidden" name="Ro0_1" value="${ rooms1List[index].roomName}" />
 						<%status++;%>
 						</c:if>
 						<% if(cnt == period_1 - 1 && status == 0){ %>
-						<c:if test="${!flg_0 }"><td><input type="hidden" name="Ro0_1" value=""></td></c:if>
+						<c:if test="${!flg_0 }">
+						<td></td>
+						<input type="hidden" name="Ro0_1" value="" />
+						</c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 1){ %>
 					<c:if test="${rooms1List[index].week == '火'}" var="flg_1"/>
 						<c:if test="${flg_1 }">
-						<td>${ rooms1List[index].roomName}<input type="hidden" name="Ro1_1" value="${ rooms1List[index].roomName}"></td>
+						<td>${ rooms1List[index].roomName}</td>
+						<input type="hidden" name="Ro1_1" value="${ rooms1List[index].roomName}" />
 						<%status++;%></c:if>
 						<%if(cnt == period_1 - 1 && status == 0){ %>
-						<c:if test="${!flg_1 }"><td><input type="hidden" name="Ro1_1" value=""></td></c:if>
+						<c:if test="${!flg_1 }">
+						<td></td>
+						<input type="hidden" name="Ro1_1" value="" />
+						</c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 2){ %>
 					<c:if test="${rooms1List[index].week == '水'}" var="flg_2"/>
 						<c:if test="${flg_2 }">
-						<td>${ rooms1List[index].roomName}<input type="hidden" name="Ro2_1" value="${ rooms1List[index].roomName}"></td>
+						<td>${ rooms1List[index].roomName}</td>
+						<input type="hidden" name="Ro2_1" value="${ rooms1List[index].roomName}" />
 						<%status++;%></c:if>
 						<%if(cnt == period_1 - 1 && status == 0){ %>
-						<c:if test="${!flg_2 }"><td><input type="hidden" name="Ro2_1" value=""></td></c:if>
+						<c:if test="${!flg_2 }">
+						<td></td>
+						<input type="hidden" name="Ro2_1" value="" />
+						</c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 3){ %>
 					<c:if test="${rooms1List[index].week == '木'}" var="flg_3"/>
 					<c:if test="${flg_3 }">
-					<td>${ rooms1List[index].roomName}<input type="hidden" name="Ro3_1" value="${ rooms1List[index].roomName}"></td>
+					<td>${ rooms1List[index].roomName}</td>
+					<input type="hidden" name="Ro3_1" value="${ rooms1List[index].roomName}" />
 					<%status++;%></c:if>
 						<%if(cnt == period_1 - 1 && status == 0){ %>
-						<c:if test="${!flg_3 }"><td><input type="hidden" name="Ro3_1" value=""></td></c:if>
+						<c:if test="${!flg_3 }">
+						<td></td>
+						<input type="hidden" name="Ro3_1" value="" />
+						</c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 4){ %>
 					<c:if test="${rooms1List[index].week == '金'}" var="flg_4"/>
 					<c:if test="${flg_4}">
-					<td>${ rooms1List[index].roomName}<input type="hidden" name="Ro4_1" value="${ rooms1List[index].roomName}"></td>
+					<td>${ rooms1List[index].roomName}</td>
+					<input type="hidden" name="Ro4_1" value="${ rooms1List[index].roomName}"  />
 					<%status++;%></c:if>
 						<%if(cnt == period_1 - 1 && status == 0){ %>
-						<c:if test="${!flg_4 }"><td><input type="hidden" name="Ro4_1" value=""></td></c:if>
+						<c:if test="${!flg_4 }">
+						<td></td>
+						<input type="hidden" name="Ro4_1" value="" />
+						</c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 5){ %>
 					<c:if test="${rooms1List[index].week == '土'}" var="flg_5"/>
 					<c:if test="${flg_5 }">
-					<td>${ rooms1List[index].roomName}<input type="hidden" name="Ro5_1" value="${ rooms1List[index].roomName}"></td>
+					<td>${ rooms1List[index].roomName}</td>
+					<input type="hidden" name="Ro5_1" value="${ rooms1List[index].roomName}" />
 					<%status++;%></c:if>
 						<%if(cnt == period_1 - 1 && status == 0){ %>
-						<c:if test="${!flg_5 }"><td><input type="hidden" name="Ro5_1" value=""></td></c:if>
+						<c:if test="${!flg_5 }">
+						<td></td>
+						<input type="hidden" name="Ro5_1" value="" />
+						</c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 6){ %>
 					<c:if test="${rooms1List[index].week == '日'}" var="flg_6"/>
 					<c:if test="${flg_6 }">
-					<td>${ rooms1List[index].roomName}<input type="hidden" name="Ro6_1" value="${ rooms1List[index].roomName}"></td>
+					<td>${ rooms1List[index].roomName}</td>
+					<input type="hidden" name="Ro6_1" value="${ rooms1List[index].roomName}" />
 					<%status++;%></c:if>
 						<%if(cnt == period_1 - 1 && status == 0){ %>
-						<c:if test="${!flg_6 }"><td><input type="hidden" name="Ro6_1" value=""></td></c:if>
+						<c:if test="${!flg_6 }">
+						<td></td>
+						<input type="hidden" name="Ro6_1" value="" />
+						</c:if>
 						<% } %>
 				<% } %>
 
@@ -294,15 +329,16 @@
 
 			<c:if test="${!list_flg }">
 			<tr class="info">
-			<td><input type="hidden" name="Ro0_1" value=""></td>
-			<td><input type="hidden" name="Ro1_1" value=""></td>
-			<td><input type="hidden" name="Ro2_1" value=""></td>
-			<td><input type="hidden" name="Ro3_1" value=""></td>
-			<td><input type="hidden" name="Ro4_1" value=""></td>
-			<td><input type="hidden" name="Ro5_1" value=""></td>
-			<td><input type="hidden" name="Ro6_1" value=""></td>
+			<td><input type="hidden" name="Ro0_1" value="" /></td>
+			<td><input type="hidden" name="Ro1_1" value="" /></td>
+			<td><input type="hidden" name="Ro2_1" value="" /></td>
+			<td><input type="hidden" name="Ro3_1" value="" /></td>
+			<td><input type="hidden" name="Ro4_1" value="" /></td>
+			<td><input type="hidden" name="Ro5_1" value="" /></td>
+			<td><input type="hidden" name="Ro6_1" value="" /></td>
 			</tr>
 			</c:if>
+			<!-- １限目　教室 終わり -->
 
 
 
@@ -763,11 +799,13 @@
 			<td></td>
 			</tr>
 			</c:if>
+
 		</tbody>
 	</table>
 </div>
-
 </form>
+
+
 
 
 
