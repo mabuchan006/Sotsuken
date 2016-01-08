@@ -344,13 +344,18 @@ public class ManageUpdateControl extends HttpServlet {
 		css.add("/Sotsuken/css/custom.css");
 		css.add("/Sotsuken/css/style.css");
 		css.add("/Sotsuken/css/pure-drawer.css");
-
+		css.add("https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css");
 
 		js.add("/Sotsuken/js/jquery-2.1.1.min.js");
+		js.add("http://code.jquery.com/jquery-1.9.1.min.js");
 		js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
 		js.add("/Sotsuken/js/jquery.appear.js");
 		js.add("/Sotsuken/js/subject_manage.js");
 		js.add("/Sotsuken/js/jquery.toaster.js");
+		js.add("https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js");
+		js.add("/Sotsuken/js/toastSelect.js");
+
+
 
 		request.setAttribute("css", css);
 		request.setAttribute("js", js);

@@ -1,21 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<div class="row col-md-9">
-<c:if test=  "${!empty Msg }">
-<div class="alert alert-success alert-dismissible col-md-9 col-md-offset-3" role="alert">
-	<button type="button" class="close" data-dismiss="alert" aria-label="閉じる"><span aria-hidden="true">×</span></button>
-	<strong>success:</strong>${Msg }
-</div>
+
+<c:if test= "${!empty Msg }">
+<script>
+toastSelect("success","${Msg }")</script>
 </c:if>
 
 <c:if test=  "${!empty err_Msg }">
-<div class="alert alert-danger alert-dismissible col-md-9 col-md-offset-3" role="alert">
-	<button type="button" class="close" data-dismiss="alert" aria-label="閉じる"><span aria-hidden="true">×</span></button>
-	<strong>error:</strong>${err_Msg }
-</div>
-
+<script>toastSelect("error","${err_Msg }")</script>
 </c:if>
+
+<div class="row col-md-9">
 
 <!-- 登録処理 -->
 <form action="/Sotsuken/ManageUpdate" method="post">

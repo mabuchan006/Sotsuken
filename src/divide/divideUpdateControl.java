@@ -63,7 +63,7 @@ public class divideUpdateControl extends HttpServlet {
 		List<divideInfo> diList = new ArrayList<>();
 		String inputStr[] = new String[2]; // 取得
 		Map<String, String[]> map = request.getParameterMap();
-		String ajaxWeek = request.getParameter("ajaxWeek");
+		String ajaxWeek = request.getParameter("ajaxWeek");//name value ajax
 
 		System.out.println(map + ":" + ajaxWeek);
 
@@ -135,11 +135,12 @@ public class divideUpdateControl extends HttpServlet {
 			// select
 			divideMap = ddm.editDivideDBSelect(week);
 
+			//ajaxを返す
 			if (ajaxWeek != null) {
-				response.setHeader("Access-Control-Allow-Origin", "*");
-				response.setContentType("application/json; charset=utf-8");
-				PrintWriter out = response.getWriter();
-				out.println(JSON.encode(viewMap));
+				response.setHeader("Access-Control-Allow-Origin", "*");//dmain指定
+				response.setContentType("application/json; charset=utf-8");//json形式
+				PrintWriter out = response.getWriter();//書き込み
+				out.println(JSON.encode(viewMap));//返す
 			}
 
 			request.setAttribute("divideMap", divideMap);

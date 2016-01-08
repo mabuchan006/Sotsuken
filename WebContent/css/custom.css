@@ -280,3 +280,9 @@ color11 {
 	background-color: #408080;
 	color: #fff;
 }
+
+.toast-bottom-right {
+	font-size: 1.7em;
+	right: 12PX;
+	bottom: 6px;
+}

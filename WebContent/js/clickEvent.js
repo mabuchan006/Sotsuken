@@ -34,6 +34,7 @@ function clickEvent( e ){
 					break;
 			}
 			f_ajax(
+					//form
 					$(this).attr("method"),
 					$(this).attr("action"),
 					"json",
@@ -102,20 +103,21 @@ function f_active(e) {
 		}
 	})
 }
-
+//method,action,json,
 function f_ajax(type, url, dataType,data){
 	$.ajax({
 		type : type,
 		url : url,
 		dataType : dataType,
 		data : data
-	}).done(function(res){
+	}).done(function(res){//成功 res=out.print
 		f_ajax_done(res);
-	}).fail(function(jqXHR, textStatus, errorThrown ){
+	}).fail(function(jqXHR, textStatus, errorThrown ){//失敗
 		console.log("NG:" + jqXHR.status + ":" + textStatus.status + ":" + errorThrown);
 	})
 }
 
+//成功処理
 function f_ajax_done(res){
 	//全テキストエリアをクリア
 	for(var i = 0; i < $("textarea").length; i++){
