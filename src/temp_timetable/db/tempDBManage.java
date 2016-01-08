@@ -47,6 +47,9 @@ public class tempDBManage extends DBAccess {
 	            +"where divide.period = 4 && divide.classID = ? && divide.week = ? "
 	            +"order by case divide.week when '月' then 1 when '火' then 2 when '水' then 3 when '木' then 4 "
 	            +"when '金' then 5 when '土' then 6 when '日' then 7 end");
+
+		/*insertSql = String.format("replace into tbl_timedivide ( period, subjectName, date, classID,roomName,teacherName ) values"
+				+ " (?,?,?,?,?,?");*/
 	}
 
 
