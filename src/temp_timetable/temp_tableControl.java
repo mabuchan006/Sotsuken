@@ -3,6 +3,7 @@ package temp_timetable;
 import java.io.IOException;
 import java.sql.Date;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -34,7 +35,6 @@ public class temp_tableControl extends HttpServlet {
 	ArrayList<String> css = new ArrayList<String>(); // css用List
 	ArrayList<String> js = new ArrayList<String>(); // JavaScript用List
 
-	private List<tempInfo> tList; //一時時間割情報用
 	private List<tempInfo> tList1; //一時時間割情報用-1
 	private List<tempInfo> tList2; //一時時間割情報用-2
 	private List<tempInfo> tList3; //一時時間割情報用-3
@@ -132,20 +132,46 @@ public class temp_tableControl extends HttpServlet {
 			e.printStackTrace();
 		} //try Edit View 表示
 
-		System.out.println("1");
+
 
 		//Insert処理：登録ボタンが押された場
 		if(request.getParameter("regist") != null){
-			for(int i=0; i <= 6; i++){
-				String num = String.valueOf(i);
-				String subject = "Su"+ num +"_1";
-				String teacher = "Te"+ num +"_1";
-				String room 	= "Ro"+ num +"_1";
 
+			String date = request.getParameter("start"); //始点の日付取得
+			System.out.println(date);
+			for(int week=0;week <= 3;week++){
+				for(int i=0; i <= 6; i++){
+					String num = String.valueOf(i);
 
+					//1限目の週間予定取得
+					String subjectName1 = request.getParameter("Su"+ num +"_1");System.out.println(subjectName1);
+					String teacherName1 = request.getParameter("Te"+ num +"_1");System.out.println(teacherName1);
+					String roomName1 	= request.getParameter("Ro"+ num +"_1");System.out.println(roomName1);
+
+					/*String subjectName2 = request.getParameter("Su"+ num +"_2");
+					String teacherName2 = request.getParameter("Te"+ num +"_2");
+					String roomName2	=    request.getParameter("Ro"+ num +"_2");
+
+					String subjectName3 = request.getParameter("Su"+ num +"_3");
+					String teacherName3 = request.getParameter("Te"+ num +"_3");
+					String roomName3 	=    request.getParameter("Ro"+ num +"_3");
+
+					String subjectName4 = request.getParameter("Su"+ num +"_4");
+					String teacherName4 = request.getParameter("Te"+ num +"_4");
+					String roomName4	=    request.getParameter("Ro"+ num +"_4");*/
+
+					//tList1.add(new tempInfo( "1", subjectName1,  date,  chooseClassID,  roomName1,  teacherName1));
+					/* tList2.add(new tempInfo( "2", subjectName2,  date,  chooseClassID,  roomName2,  teacherName2));
+					 tList3.add(new tempInfo( "3", subjectName3,  date,  chooseClassID,  roomName3,  teacherName3));
+					 tList4.add(new tempInfo( "4", subjectName4,  date,  chooseClassID,  roomName4,  teacherName4));*/
+
+					date = dateAdd(date);
+					System.out.println(date);
+
+				}
 			}
 		}
-	System.out.println("2");
+
 
 		// ディスパッチ準備
 		request.setAttribute("content_page", content_page);
@@ -163,6 +189,19 @@ public class temp_tableControl extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		doGet(request, response);
+	}
+
+	//日付加算用メソッド
+	private String dateAdd(String date){
+		Calendar calendar = Calendar.getInstance();
+		calendar.set(Integer.parseInt(date.substring(0, 4)),Integer.parseInt(date.substring(5, 7)),Integer.parseInt(date.substring(8)));
+		calendar.add(Calendar.DAY_OF_MONTH, 1);
+		 String year = String.valueOf(calendar.get(Calendar.YEAR));
+		 String month = String.format("%02d", calendar.get(Calendar.MONTH));
+		 String day =String.format("%02d", calendar.get(Calendar.DATE));
+		 date = year+"-"+ month +"-"+ day;
+		return date;
+
 	}
 
 }

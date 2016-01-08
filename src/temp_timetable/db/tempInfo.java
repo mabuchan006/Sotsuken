@@ -1,7 +1,6 @@
 package temp_timetable.db;
 
 import java.io.Serializable;
-import java.sql.Date;
 
 
 public class tempInfo implements Serializable {
@@ -10,13 +9,13 @@ public class tempInfo implements Serializable {
 		// TODO 自動生成されたコンストラクター・スタブ
 	}
 
-	private int period;
+	private String period;
 	private String subjectName;
-	private Date date;
+	private String date;
 	private String classID;
 	private String roomName;
 	private String teacherName;
-	public tempInfo(int period, String subjectName, Date date, String classID, String roomName, String teacherName) {
+	public tempInfo(String period, String subjectName, String date, String classID, String roomName, String teacherName) {
 		super();
 		this.period = period;
 		this.subjectName = subjectName;
@@ -25,10 +24,10 @@ public class tempInfo implements Serializable {
 		this.roomName = roomName;
 		this.teacherName = teacherName;
 	}
-	public int getPeriod() {
+	public String getPeriod() {
 		return period;
 	}
-	public void setPeriod(int period) {
+	public void setPeriod(String period) {
 		this.period = period;
 	}
 	public String getSubjectName() {
@@ -37,10 +36,10 @@ public class tempInfo implements Serializable {
 	public void setSubjectName(String subjectName) {
 		this.subjectName = subjectName;
 	}
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 	public String getClassID() {

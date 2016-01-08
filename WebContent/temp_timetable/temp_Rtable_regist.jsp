@@ -121,8 +121,12 @@
 			<button type="submit" class="btn btn-primary btn-lg col-md-1 fix padding-left" id="sBtn" name="regist">reg</button>
 <!--button End  -->
 
-<div class="container">
 
+
+<div class="container">
+<!-- calender -->
+<input type="date" name="start" style="text-align: center;" min="2016-01-04" max="2020-04-01" step="7" required  />
+<!-- calender End-->
 
 	<table
 		class="table table-striped table-bordered text-center table-hover table-condensed">
