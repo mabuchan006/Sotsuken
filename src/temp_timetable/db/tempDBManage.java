@@ -97,7 +97,6 @@ public class tempDBManage extends DBAccess {
 
 					disConnection();
 					return roomsList;
-					//TODO: null に対して空白挿入
 	}
 
 }

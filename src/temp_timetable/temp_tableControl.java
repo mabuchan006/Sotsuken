@@ -1,6 +1,7 @@
 package temp_timetable;
 
 import java.io.IOException;
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,13 +14,15 @@ import javax.servlet.http.HttpServletResponse;
 
 import Tools.layoutInclude;
 import Tools.layoutInclude.layoutIncludeInfo;
-import divide.db.divideInfo;
+import Tools.masterDBSwitch;
+import Tools.masterDBSwitch.masterDBSwitchInfo;
 import manage.db.teacherDBManage;
 import manage.db.teacherInfo;
 import temp_timetable.db.roomInfo;
 import temp_timetable.db.subjectDBManage;
 import temp_timetable.db.subjectInfo;
 import temp_timetable.db.tempDBManage;
+import temp_timetable.db.tempInfo;
 
 /**
  * Servlet implementation class temp_tableControl
@@ -31,21 +34,32 @@ public class temp_tableControl extends HttpServlet {
 	ArrayList<String> css = new ArrayList<String>(); // css用List
 	ArrayList<String> js = new ArrayList<String>(); // JavaScript用List
 
-	private List<divideInfo> divideList; // コマ割り情報保持用
+	private List<tempInfo> tList; //一時時間割情報用
+	private List<tempInfo> tList1; //一時時間割情報用-1
+	private List<tempInfo> tList2; //一時時間割情報用-2
+	private List<tempInfo> tList3; //一時時間割情報用-3
+	private List<tempInfo> tList4; //一時時間割情報用-4
+
 	private List<subjectInfo> infoSubjectList; // 科目情報保持用
 	private List<teacherInfo> teacherList; // 先生情報保持用
-	private List<roomInfo> rooms1List; // 時間割マスタ保持用
-	private List<roomInfo> rooms2List; // 時間割マスタ保持用
-	private List<roomInfo> rooms3List; // 時間割マスタ保持用
-	private List<roomInfo> rooms4List; // 時間割マスタ保持用
+	private List<roomInfo> rooms1List; // 1限目部屋マスタ保持用
+	private List<roomInfo> rooms2List; // 2限目時間割マスタ保持用
+	private List<roomInfo> rooms3List; // 3限目時間割マスタ保持用
+	private List<roomInfo> rooms4List; // 4限目時間割マスタ保持用
 
-	String content_page = "/temp_timetable/temp_table_regist.jsp"; // 遷移先jsp
 	private String page_title = "Temporary Edit";// ページ名
-	private String chooseClassID = "R4A1";// classID選択 TODO:DBSWitchテーブル変更を柔軟にする。
+	String content_page; // 遷移先jsp
+	private String chooseClassID ;// classID選択 TODO:DBSWitchテーブル変更を柔軟にする。
 
-	subjectDBManage suDBM = new subjectDBManage(chooseClassID);
 	teacherDBManage teDBM = new teacherDBManage();
 	tempDBManage tempDBM = new tempDBManage();
+
+	private int period;
+	private String subjectName;
+	private Date date;
+	private String classID;
+	private String roomName;
+	private String teacherName;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
@@ -59,6 +73,8 @@ public class temp_tableControl extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+
+		String page = request.getParameter("page");
 		// 文字コードutf8
 		request.setCharacterEncoding("UTF-8");
 
@@ -68,7 +84,22 @@ public class temp_tableControl extends HttpServlet {
 		request.setAttribute("css", info.css);
 		request.setAttribute("js", info.js);
 
+		//page 情報の取得
+		if( page != null ){
+			//DB切り替えClassへ（masteDBSwich.java）
+			 masterDBSwitch tblSW= new masterDBSwitch();
+			 masterDBSwitchInfo value = tblSW.switchTempDB(page);
+			chooseClassID = value.chooseClassID;
+			content_page = value.content_page;
+		} else {
+			String url = "/Sotsuken/editView?page=R";
+			response.sendRedirect(url);
+			return;
+		} //if else
+
+		//DivideUpdateからの情報取得
 		try {
+			subjectDBManage suDBM = new subjectDBManage(chooseClassID);
 			infoSubjectList = suDBM.choiceSubject(); // 科目取得
 			teacherList = teDBM.teacherDBSelect(); // 先生取得
 
@@ -100,6 +131,19 @@ public class temp_tableControl extends HttpServlet {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
 		} //try Edit View 表示
+		System.out.println("1");
+		//Insert 登録ボタンが押された場
+		if(request.getParameter("regist") != null){
+			for(int i=0; i <= 6; i++){
+				String num = String.valueOf(i);
+				String subject = request.getParameter("Su"+ num +"_1");
+				String teacher = request.getParameter("Te"+ num +"_1");
+				String room = request.getParameter("Ro"+ num +"_1");
+				System.out.println(subject + teacher + room);
+				System.out.println("test");
+			}
+		}
+		System.out.println("2");
 
 		// ディスパッチ準備
 		request.setAttribute("content_page", content_page);

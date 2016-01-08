@@ -55,6 +55,7 @@ public class layoutInclude {
     	info.js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
     	info.js.add("/Sotsuken/js/jquery.appear.js");
     	info.js.add("/Sotsuken/js/belongings.js");
+    	info.js.add("/Sotsuken/js/cookie.js");
 
 		return info;
 	}

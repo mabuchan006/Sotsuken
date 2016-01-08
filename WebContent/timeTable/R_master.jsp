@@ -9,24 +9,7 @@
 <!-- 印刷時非表示 -->
 <div class="noprint">
 
-<!-- Start Logo Section -->
-<!-- ヘッダー部分 -->
-<section id="logo-section" class="text-center">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="logo text-center">
-					<h1>${page_title }</h1>
-					<p class="text-right">
-						<i class="fa fa-star color-yellow fa-3x"></i>
-					</p>
 
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- End Logo Section -->
 <!-- タブ -->
 
 <ul class="nav nav-tabs noprint" >

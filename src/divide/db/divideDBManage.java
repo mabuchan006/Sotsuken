@@ -15,6 +15,7 @@ public class divideDBManage extends DBAccess {
 	private String deleteSql;
 	private String msg;
 	private String viewSelect;
+	private String classIDSelect;
 
 	private final static String DRIVER_NAME = "java:comp/env/jdbc/MySqlCon";
 
@@ -28,6 +29,7 @@ public class divideDBManage extends DBAccess {
 		insertSql = String.format("replace into tbl_timedivide ( period, roomID, week, classID ) values"
 				+ " ( ?, (select tbl_room.roomID from tbl_room where tbl_room.roomID = ?), ?, (select tbl_class.classID from tbl_class where tbl_class.classID = ?))");
 		deleteSql = String.format("delete from tbl_timedivide where week = ?");
+		classIDSelect = String.format("select classID from tbl_class");
 
 	}
 
@@ -121,6 +123,10 @@ public class divideDBManage extends DBAccess {
 		getPstmt().setString(1, week);
 		updateExe();
 		disConnection();
+	}//divideDBDelete
+
+	public List<divideInfo> classIDDBSelect() throws Exception {
+		return null;
 	}
 
 }// divideDBManage

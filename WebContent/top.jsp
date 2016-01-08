@@ -1,6 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<% session.removeAttribute("top");//初回起動時session設定 %>
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -28,6 +33,10 @@
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <script src="js/jquery.appear.js"></script>
 <script src="js/login.js"></script>
+<script src="js/delSession.js"></script>
+<c:if test = "${empty top }">
+<script src="js/cookie.js"></script>
+</c:if>
 
 
 <!--[if lt IE 9]>
@@ -38,10 +47,13 @@
 <title>Time Table</title>
 </head>
 
-<c:if cookie="${getCookie }"></c:if>
-
 <body>
 
+
+<!-- お気に入り登録されたページへ遷移する -->
+<form action="/Sotsuken/publicView" method="post"  id="cookieSubmit">
+<input type="hidden" name="page" value="" id="cookiePage"/>
+</form>
 
 	<!-- Start Logo Section -->
 	<!-- ヘッダー部分 -->

@@ -29,8 +29,8 @@ public class ManageUpdateControl extends HttpServlet {
 	//
 	private String content_page;
 	private String page_title ;
-	ArrayList<String> css = new ArrayList<String>(); //css用List
-	ArrayList<String> js = new ArrayList<String>(); //JavaScript用List
+
+
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -44,11 +44,11 @@ public class ManageUpdateControl extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-
+		System.out.println("1");
 		//文字コードutf8
 		request.setCharacterEncoding("UTF-8");
 		//jspからのページ情報取得
-		String get_page = request.getParameter("page")==null?"subject_manage"
+		String get_page = request.getParameter("page")==null?"class_manage"
 				:request.getParameter("page");
 		System.out.println(get_page);
 		System.out.println(request.getRequestURI());
@@ -84,6 +84,7 @@ public class ManageUpdateControl extends HttpServlet {
 
 		//ページデータセット
 		try {
+
 
 			request.setAttribute("content_page", content_page);
 			request.setAttribute("page_title", page_title);
@@ -224,16 +225,18 @@ public class ManageUpdateControl extends HttpServlet {
 		//科目情報
 		request.setAttribute("subjectList", subjectList);
 		request.setAttribute("classMap", classMap);
+		request.setAttribute("cnt", subjectList.size());
 
+		//メッセージ
 		if(sdm.getMsg() != null){
-
 		if((sdm.getMsg()).indexOf("入力情報に誤りがあります") != -1){
 			request.setAttribute("err_Msg", sdm.getMsg());
 		}else{
 			request.setAttribute("Msg",sdm.getMsg());
-		}
-
 		}//if
+		}//if
+
+
 		} catch (Exception e) {
 			// TODO 自動生成された catch ブロック
 
@@ -262,7 +265,7 @@ public class ManageUpdateControl extends HttpServlet {
 				try {
 					//ページ情報指定
 					content_page = "/manage/class_manage.jsp";
-					page_title = "クラス管理画面";
+					page_title = "クラス管理";
 
 					if(request.getParameter("regist_class") != null ){
 						cdm.classDBUpdate(ci, DBAccess.INSERT, "登録");
@@ -275,13 +278,17 @@ public class ManageUpdateControl extends HttpServlet {
 					}
 					//更新済み講師情報全件取得
 					List<classInfo> classList = cdm.classDBSelect();
+					request.setAttribute("cnt", classList.size());
 
 					request.setAttribute("classList", classList);
-					if((cdm.getMsg()).indexOf("入力情報に誤りがあります") != -1){
-						request.setAttribute("err_Msg", cdm.getMsg());
-					}else{
-						request.setAttribute("Msg",cdm.getMsg());
+					if(cdm.getMsg() != null){
+						if((cdm.getMsg()).indexOf("入力情報に誤りがあります") != -1){
+							request.setAttribute("err_Msg", cdm.getMsg());
+						}else{
+							request.setAttribute("Msg",cdm.getMsg());
+						}//if
 					}
+
 				} catch (Exception e) {
 					// TODO 自動生成された catch ブロック
 					e.printStackTrace();
@@ -318,11 +325,16 @@ public class ManageUpdateControl extends HttpServlet {
 				//更新済み講師情報全件取得
 				List<teacherInfo> teacherList = tdm.teacherDBSelect();
 				request.setAttribute("teacherList", teacherList);
-				if((tdm.getMsg()).indexOf("入力情報に誤りがあります") != -1){
-					request.setAttribute("err_Msg", tdm.getMsg());
-				}else{
-					request.setAttribute("Msg",tdm.getMsg());
+				request.setAttribute("cnt", teacherList.size());
+
+				if(tdm.getMsg() != null){
+					if((tdm.getMsg()).indexOf("入力情報に誤りがあります") != -1){
+						request.setAttribute("err_Msg", tdm.getMsg());
+					}else{
+						request.setAttribute("Msg",tdm.getMsg());
+					}//if
 				}
+
 
 			} catch (Exception e) {
 				// TODO 自動生成された catch ブロック
@@ -331,6 +343,8 @@ public class ManageUpdateControl extends HttpServlet {
 		}//teacher
 
 	private void getIncludeFile(HttpServletRequest request) {
+		ArrayList<String> css = new ArrayList<String>(); //css用List
+		ArrayList<String> js = new ArrayList<String>(); //JavaScript用List
 		css.add("/Sotsuken/bootstrap/css/bootstrap.min.css");
 		css.add("/Sotsuken/css/font-awesome.min.css");
 		css.add("/Sotsuken/css/custom.css");
@@ -341,9 +355,7 @@ public class ManageUpdateControl extends HttpServlet {
 		js.add("/Sotsuken/js/jquery-2.1.1.min.js");
 		js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
 		js.add("/Sotsuken/js/jquery.appear.js");
-
-
-
+		js.add("/Sotsuken/js/subject_manage.js");
 
 		request.setAttribute("css", css);
 		request.setAttribute("js", js);

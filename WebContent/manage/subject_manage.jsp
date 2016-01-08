@@ -44,90 +44,6 @@ function selectChange(num){
 	selectInsert(val,num);
 
 	}//selectChange
-
-
-	$(document).ready(function() {
-
-
-
-		if($("#addTb-tbody > tr").size() < 2){
-		$("#addTb-tbody > tr").clone(true).insertAfter(
-				$("#addTb-tbody > tr")
-				);
-		}//if
-
-		firstID();
-
-		//+ボタン押されたら行の追加
-		$(document).on("click",".addList",function(){
-
-			//parent().parent() => td > tr
-			($("#addTb-tbody > tr").eq(0)).clone(true).insertAfter(
-					$(this).parent().parent()
-					);
-
-
-				firstID();
-
-		});
-
-		//　-ボタン押されたら行の削除
-		$(document).on("click",".removeList",function(){
-			$(this).parent().parent().empty();
-			firstID();
-
-		});
-
-	});
-
-	//動的にIDの連番を格納
-	function firstID(){
-		var cnt = 1;
-		$(".subjectName").each(function(){
-
-			$(this).attr("name","subjectName" + cnt);
-
-	         cnt++;
-	    });
-
-		var cnt = 1;
-		$(".bringThings").each(function(){
-
-			$(this).attr("name","bringThings" + cnt);
-
-
-	         cnt++;
-	    });
-
-		var cnt = 1;
-		$(".grade").each(function(){
-
-			$(this).attr("name","grade_name" + cnt);
-			$(this).attr("id","grade_id" + cnt);
-			$(this).attr("onchange","selectChange(" + cnt + ")");
-
-	         cnt++;
-	    });
-		var cnt = 1;
-
-		$(".cource").each(function(){
-
-			$(this).attr("name","cource_name" + cnt);
-	        $(this).attr("id","cource_id" + cnt);
-	         cnt++;
-	    });
-
-		var cnt = 1;
-
-		$(".addList").each(function(){
-
-	        $(this).attr("id","addBtn" + cnt);
-	         cnt++;
-	    });
-
-
-	}
-
 </script>
 
 <!-- foreach2重だよ selectに学年情報を格納-->
@@ -141,14 +57,14 @@ function selectChange(num){
 
 <div class="row col-md-9">
 <c:if test=  "${!empty Msg }">
-<div class="alert alert-success alert-dismissible col-md-6 col-md-offset-3" role="alert">
+<div class="alert alert-success alert-dismissible col-md-9 col-md-offset-3" role="alert">
 	<button type="button" class="close" data-dismiss="alert" aria-label="閉じる"><span aria-hidden="true">×</span></button>
 	<strong>success:</strong>${Msg }
 </div>
 </c:if>
 
 <c:if test=  "${!empty err_Msg }">
-<div class="alert alert-danger alert-dismissible col-md-6 col-md-offset-3" role="alert">
+<div class="alert alert-danger alert-dismissible col-md-9 col-md-offset-3" role="alert">
 	<button type="button" class="close" data-dismiss="alert" aria-label="閉じる"><span aria-hidden="true">×</span></button>
 	<strong>error:</strong>${err_Msg }
 </div>
@@ -156,7 +72,8 @@ function selectChange(num){
 </c:if>
 
 <!-- form -->
-<form action="/Sotsuken/ManageUpdate" method="get"  id="submit">
+<form action="/Sotsuken/ManageUpdate" method="post"  id="submit">
+<input type="hidden" name="page" value="subject_manage" />
 <table class="table col-md-9 col-md-offset-3">
 <thead class="thead">
 <tr >
@@ -169,7 +86,7 @@ function selectChange(num){
 </tr>
 </thead>
 <tbody id="addTb-tbody">
-<tr class="tList select3" id="tID1">
+<tr class="" id="">
 <!-- 科目名 -->
 <td>
 <input type="text" class="form-control subjectName " id="subjectName"name="subjectName1"/>
@@ -201,7 +118,7 @@ function selectChange(num){
 
 
   <td>
-    <input value="+" type="button" class="addList btn-primary" id="addBtn1">　
+    <input value="+" type="button" class="addList btn-primary">　
     <input value="-" type="button" class="removeList btn-danger" />
   </td>
 
@@ -218,8 +135,8 @@ function selectChange(num){
 <table class="table ">
 <thead class="thead">
 <tr class="info wide">
-<td colspan="3">科目一覧</td>
-</tr>
+<td colspan="3">科目一覧   ( ${cnt } 件)</td></tr>
+
 </thead>
 <tbody>
 <!-- 科目情報取得 -->
@@ -229,7 +146,8 @@ function selectChange(num){
 <td>${rs.bringThings}</td>
 <td>
 <!-- 削除用フォーム -->
-<form action="/Sotsuken/ManageUpdate" method="get">
+<form action="/Sotsuken/ManageUpdate" method="post">
+<input type="hidden" name="page" value="subject_manage" />
 <input type="hidden" name="subjectID" value="${rs.subjectID }" />
 <input type="hidden" name="subjectName" value="${rs.subjectName }" />
 <button type="submit" class="btn btn-danger"name="delete_subject" ><i class="fa fa-trash-o fa-2x"></i></button>

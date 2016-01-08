@@ -1,17 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<div class="row ">
-
+<div class="row col-md-9">
 <c:if test=  "${!empty Msg }">
-<div class="alert alert-success alert-dismissible col-md-6 col-md-offset-3" role="alert">
+<div class="alert alert-success alert-dismissible col-md-9 col-md-offset-3" role="alert">
 	<button type="button" class="close" data-dismiss="alert" aria-label="閉じる"><span aria-hidden="true">×</span></button>
 	<strong>success:</strong>${Msg }
 </div>
-
 </c:if>
+
 <c:if test=  "${!empty err_Msg }">
-<div class="alert alert-danger alert-dismissible col-md-6 col-md-offset-3" role="alert">
+<div class="alert alert-danger alert-dismissible col-md-9 col-md-offset-3" role="alert">
 	<button type="button" class="close" data-dismiss="alert" aria-label="閉じる"><span aria-hidden="true">×</span></button>
 	<strong>error:</strong>${err_Msg }
 </div>
@@ -19,9 +18,10 @@
 </c:if>
 
 <!-- 登録処理 -->
-<form action="/Sotsuken/ManageUpdate?page=teacher_manage" method="get">
+<form action="/Sotsuken/ManageUpdate" method="post">
+<input type="hidden" name="page" value="subject_manage" />
 
-<table class="col-md-6 col-md-offset-3" id="first_table">
+<table class="col-md-9 col-md-offset-3" id="first_table">
 <tr>
 
 <td class="col-md-4">
@@ -47,11 +47,12 @@
 </form><!-- 登録終わり -->
 
 <!-- 講師一覧表示 -->
-<div class="col-md-6 col-md-offset-3">
+<div class="col-md-12 col-md-offset-3">
 <div class="back">
 <table class="table ">
 <thead>
-<tr><td colspan="2">lecturers</td></tr>
+<tr class="info wide">
+<td colspan="3">講師一覧   ( ${cnt } 件)</td></tr>
 </thead>
 <tbody>
 <!-- 講師情報取得 -->
@@ -60,10 +61,11 @@
 <td>${ teacher.teacherName }</td>
 <td>
 <!-- 削除用フォーム -->
-<form action="/Sotsuken/ManageUpdate" method="get">
+<form action="/Sotsuken/ManageUpdate" method="post">
+<input type="hidden" name="page" value="teacher_manage" />
 <input type="hidden" name = "teacher_id" value="${ teacher.teacherID }" />
 <input type="hidden" name = "teacherName" value="${ teacher.teacherName }" />
-<input type="submit" class="btn btn-danger" name="delete_teacher" value="削除"/>
+<button type="submit" class="btn btn-danger"name="delete_teacher" ><i class="fa fa-trash-o fa-2x"></i></button>
 </form>
 <!-- 削除 -->
 </td>

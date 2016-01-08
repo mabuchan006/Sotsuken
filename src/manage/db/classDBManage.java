@@ -25,6 +25,7 @@ public class classDBManage extends DBAccess{
 		this.msg = msg;
 	}
   //********endMsg*************
+
 	private final static String DRIVER_NAME = "java:comp/env/jdbc/MySqlCon";//コネクタ
 
 	public classDBManage() {
@@ -34,7 +35,7 @@ public class classDBManage extends DBAccess{
 		//クラスIDから削除からsql
 		deleteSql = String.format("delete  from tbl_class where classID = ?");
 		//クラス情報登録sql
-		insertSql= String.format(" insert into tbl_class (classID, className) values ( ? , ? )");
+		insertSql= String.format(" replace into tbl_class (classID, className) values ( ? , ? )");
 	}
 	/*
 	 * @param classinfo クラス情報
@@ -49,7 +50,6 @@ public class classDBManage extends DBAccess{
 			//要素取得用準備
 			ResultSet rs = getRsResult();
 			classInfo classinfo;
-
 			//全件取得
 			while(rs.next()){
 
@@ -59,7 +59,6 @@ public class classDBManage extends DBAccess{
 
 				//クラス要素を1件ずつリストに追加
 				classList.add(classinfo);
-
 
 			}//while
 
@@ -77,13 +76,16 @@ public class classDBManage extends DBAccess{
 		connect();
 		switch(state){
 		case INSERT:
+
 			if(!(ci.getClassID().equals("") || ci.getClassName().equals(""))
-					|| ci.getClassID().length() == 4){
+					&& ci.getClassID().length() == 4){
 			createStstement(insertSql);
 			getPstmt().setString(1,ci.getClassID());
 			getPstmt().setString(2,ci.getClassName());
 			updateExe();//実行
+
 			}//if
+
 			break;
 		case DELETE:
 			createStstement(deleteSql);

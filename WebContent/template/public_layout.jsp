@@ -29,12 +29,52 @@
 </c:forEach>
 </c:if>
 
-
+<!-- 2回目以降のTOP用session -->
+<%
+session.setAttribute("top", "top");
+%>
 
 
 </head>
 
 <body>
+<!-- Start Logo Section --><!-- ヘッダー部分 -->
+        <section id="logo-section" class="text-center">
+            <div class="container">
+                <div class="row">
+
+                </div>
+            </div>
+        </section>
+        <!-- Start Logo Section -->
+<!-- ヘッダー部分 -->
+<section id="logo-section" class="text-center">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="logo text-center">
+					<h1>${page_title }</h1>
+
+					<div class="col-md-4 col-md-offset-8 text-right">
+
+
+                            <button type="button" class="favolite" id="falseCookie" >
+
+                            <i class="fa fa-star"></i>お気に入り
+                            </button>
+                            <button type="button" class="top" onclick="location.href= 'top.jsp' ">
+					<i class="fa fa-home"></i>TOP
+					</button>
+
+
+                    </div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Logo Section -->
 	<jsp:include page="${content_page}" />
 </body>
 </html>
