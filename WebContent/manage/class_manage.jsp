@@ -2,23 +2,7 @@
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-  <!-- Start Logo Section --><!-- ヘッダー部分 -->
-        <section id="logo-section" class="text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-md-offset-8 text-right">
-
-                            <button type="button" class="favolite" id="falseCookie" >
-                            favolite
-                            <i class="fa fa-star"></i>
-                            </button>
-
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
+<button type="button" class="test">test</button>
 <div class="row col-md-9">
 <c:if test=  "${!empty Msg }">
 <div class="alert alert-success alert-dismissible col-md-9 col-md-offset-3" role="alert">

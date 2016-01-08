@@ -44,7 +44,7 @@ public class ManageUpdateControl extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println("1");
+
 		//文字コードutf8
 		request.setCharacterEncoding("UTF-8");
 		//jspからのページ情報取得
@@ -236,19 +236,13 @@ public class ManageUpdateControl extends HttpServlet {
 		}//if
 		}//if
 
-
 		} catch (Exception e) {
 			// TODO 自動生成された catch ブロック
 
 			e.printStackTrace();
 
-
-
 		}
 	}
-
-
-
 
 	//クラス管理画面指定時の処理
 		private void classUpdate(HttpServletRequest request, classDBManage cdm) {
@@ -269,7 +263,7 @@ public class ManageUpdateControl extends HttpServlet {
 
 					if(request.getParameter("regist_class") != null ){
 						cdm.classDBUpdate(ci, DBAccess.INSERT, "登録");
-						System.out.println("登録");
+
 					}
 
 					if(request.getParameter("delete_class") != null){
@@ -356,6 +350,7 @@ public class ManageUpdateControl extends HttpServlet {
 		js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
 		js.add("/Sotsuken/js/jquery.appear.js");
 		js.add("/Sotsuken/js/subject_manage.js");
+		js.add("/Sotsuken/js/jquery.toaster.js");
 
 		request.setAttribute("css", css);
 		request.setAttribute("js", js);

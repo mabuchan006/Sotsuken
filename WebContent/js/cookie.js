@@ -4,8 +4,10 @@ $(document).ready(
 
 			var getPage = getCookie();
 
+			var top = (document.location.search.substring(1)).indexOf("top");
 
-			if(!(getPage == "")){
+			if(!(getPage == "") && top == -1){
+
 				$("#cookiePage").val(getPage);
 				$("#cookieSubmit").submit();
 			}

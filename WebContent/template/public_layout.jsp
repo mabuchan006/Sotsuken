@@ -52,20 +52,21 @@
 					<h1>${page_title }</h1>
 
 					<div class="col-md-4 col-md-offset-8 text-right">
-
+					<div style="display:inline-flex">
 
                             <button type="button" class="favolite" id="falseCookie" >
 
                             <i class="fa fa-star"></i>お気に入り
                             </button>
-
-                            <button type="button" class="top" onclick="location.href= 'top.jsp' ">
+                    <form action="top.jsp">
+                            <button type="submit" class="top">
 							<i class="fa fa-home"></i>TOP
 						</button>
-
+					<input type = "hidden" name="top" value="top" />
+					</form>
 
                     </div>
-
+					</div>
 				</div>
 			</div>
 		</div>
