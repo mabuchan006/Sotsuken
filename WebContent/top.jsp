@@ -47,12 +47,13 @@
 
 <body>
 
+<c:if test="${empty top }">
 
 <!-- お気に入り登録されたページへ遷移する -->
 <form action="/Sotsuken/publicView" method="post"  id="cookieSubmit">
 <input type="hidden" name="page" value="" id="cookiePage"/>
 </form>
-
+</c:if>
 
 	<!-- Start Logo Section -->
 	<!-- ヘッダー部分 -->
