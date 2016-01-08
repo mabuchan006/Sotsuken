@@ -148,7 +148,8 @@
 							if (cnt2 == 0) {
 						%>
 						<td class="info cell1"nowrap>
-  <a href="#" class="a1" data-toggle="tooltip" data-placement="right" data-original-title="持ち物">１${period1List[index].subjectName}</a></td>
+							<div data-toggle="tooltip" data-placement="right" data-original-title="持ち物">${period1List[index].subjectName}</div>
+						</td>
 						<%
 							}
 						%>
@@ -178,7 +179,8 @@
 						%>
 
 						<td class="danger"nowrap>
-  <a href="#" class="a1" data-toggle="tooltip" data-placement="right" data-original-title="持ち物">１${period2List[index].subjectName}</a></td>
+							<div data-toggle="tooltip" data-placement="right" data-original-title="持ち物">${period2List[index].subjectName}</div>
+						</td>
 
 						<%
 							}
@@ -209,7 +211,8 @@
 						%>
 
 						<td class="success"nowrap>
-  <a href="#" class="a1" data-toggle="tooltip" data-placement="right" data-original-title="持ち物">１${period3List[index].subjectName}</a></td>
+							<div data-toggle="tooltip" data-placement="right" data-original-title="持ち物">${period3List[index].subjectName}</div>
+						</td>
 
 						<%
 							}
@@ -238,8 +241,9 @@
 						<%
 							if (cnt2 == 0) {
 						%>
-						<td class="warning" id="cell" data-toggle="popover"
-							data-placement="right" data-content="" title="持ち物" nowrap>${period4List[index].subjectName}</td>
+						<td class="warning" id="cell" nowrap>
+							<div data-toggle="tooltip" data-placement="right" data-original-title="持ち物">${period4List[index].subjectName}</div>
+						</td>
 						<%
 							}
 						%>
