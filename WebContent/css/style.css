@@ -60,7 +60,9 @@ a {
 	color: #FFF;
 	text-decoration: none;
 }
-
+.a1{
+	color:#000;
+}
 a:hover {
 	text-decoration: none;
 }

@@ -5,7 +5,11 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
-
+<script type="text/javascript">
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+    })
+  </script>
 <!-- 印刷時非表示 -->
 <div class="noprint">
 
@@ -65,7 +69,7 @@
 	<div class="container">
 		<div class="table-responsive">
 			<table
-				class="table table-striped table-bordered text-center table-hover;">
+				class="table table-striped table-bordered text-center ;">
 				<thead>
 					<tr class="purple2 ">
 						<th colspan="31">10月</th>
@@ -143,8 +147,8 @@
 						<%
 							if (cnt2 == 0) {
 						%>
-						<td class="info cell1 killindex" data-toggle="popover"
-							data-placement="right" data-content="教科書" title="持ち物" nowrap>${period1List[index].subjectName}</td>
+						<td class="info cell1"nowrap>
+  <a href="#" class="a1" data-toggle="tooltip" data-placement="right" data-original-title="持ち物">１${period1List[index].subjectName}</a></td>
 						<%
 							}
 						%>
@@ -172,8 +176,10 @@
 						<%
 							if (cnt2 == 0) {
 						%>
-						<td class="danger" id="cell" data-toggle="popover"
-							data-placement="right" data-content="" title="持ち物" nowrap>${period2List[index].subjectName}</td>
+
+						<td class="danger"nowrap>
+  <a href="#" class="a1" data-toggle="tooltip" data-placement="right" data-original-title="持ち物">１${period2List[index].subjectName}</a></td>
+
 						<%
 							}
 						%>
@@ -201,8 +207,10 @@
 						<%
 							if (cnt2 == 0) {
 						%>
-						<td class="success" id="cell" data-toggle="popover"
-							data-placement="right" data-content="" title="持ち物" nowrap>${period3List[index].subjectName}</td>
+
+						<td class="success"nowrap>
+  <a href="#" class="a1" data-toggle="tooltip" data-placement="right" data-original-title="持ち物">１${period3List[index].subjectName}</a></td>
+
 						<%
 							}
 						%>
