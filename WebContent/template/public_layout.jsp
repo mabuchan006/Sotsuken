@@ -29,10 +29,6 @@
 </c:forEach>
 </c:if>
 
-<!-- 2回目以降のTOP用session -->
-<%
-session.setAttribute("top", "top");
-%>
 
 
 </head>
@@ -62,9 +58,10 @@ session.setAttribute("top", "top");
 
                             <i class="fa fa-star"></i>お気に入り
                             </button>
+
                             <button type="button" class="top" onclick="location.href= 'top.jsp' ">
-					<i class="fa fa-home"></i>TOP
-					</button>
+							<i class="fa fa-home"></i>TOP
+						</button>
 
 
                     </div>
