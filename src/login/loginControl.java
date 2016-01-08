@@ -45,6 +45,10 @@ public class loginControl extends HttpServlet {
 
 			//JSPに渡す情報がないのでsendRedirectでログアウト
 			response.sendRedirect(logoutPath);
+
+			loginDBManage Ldb = new loginDBManage();
+			request.setAttribute( "logout_Msg" , Ldb.getMsg() );
+
 			return;
 		}//if
 
@@ -60,7 +64,7 @@ public class loginControl extends HttpServlet {
 		//System.out.println("１");
 		//パス初期値
 		String path="test/login_test.jsp";//変更予定のため未記述
-		String errPath="/Sotsuken/";//変更予定のため未記述
+		String errPath="Sotsuken/top.jsp";//変更予定のため未記述
 
 		//セッション情報取得
 		if(session == null){
@@ -91,6 +95,8 @@ public class loginControl extends HttpServlet {
 
 				//login
 				response.sendRedirect( path );
+				request.setAttribute( "login_Msg" , Ldb.getMsg() );
+
 				return;
 			}//if
 
