@@ -31,9 +31,6 @@ $(function(e) {
 	clickEvent( e );
 	formCheck( e );
 });
-$(document).ready(function () {
-	$('table').fixedTableHeader();
-});
 </script>
 
 
@@ -339,11 +336,11 @@ $(document).ready(function () {
 
 									<thead>
 										<tr class="back-color4 white wide2 ">
-											<th class="view-size font2 wide1 back-color4 white" >class</th>
-											<th class="view-size font2 wide1 back-color4 white">1</th>
-											<th class="view-size font2 wide1 back-color4 white">2</th>
-											<th class="view-size font2 wide1 back-color4 white">3</th>
-											<th class="view-size font2 wide1 back-color4 white">4</th>
+											<th class="view-size font2 wide1 back-color4 white text-center">class</th>
+											<th class="view-size font2 wide1 back-color4 white text-center">1</th>
+											<th class="view-size font2 wide1 back-color4 white text-center">2</th>
+											<th class="view-size font2 wide1 back-color4 white text-center">3</th>
+											<th class="view-size font2 wide1 back-color4 white text-center">4</th>
 										</tr>
 									</thead>
 
@@ -997,11 +994,11 @@ $(document).ready(function () {
 
 									<thead>
 										<tr class=" wide2">
-											<th class="view-size font2 wide1 back-color4 white" >class</th>
-											<th class="view-size font2 wide1 back-color4 white">1</th>
-											<th class="view-size font2 wide1 back-color4 white">2</th>
-											<th class="view-size font2 wide1 back-color4 white">3</th>
-											<th class="view-size font2 wide1 back-color4 white">4</th>
+											<th class="view-size font2 wide1 back-color4 white text-center">class</th>
+											<th class="view-size font2 wide1 back-color4 white text-center">1</th>
+											<th class="view-size font2 wide1 back-color4 white text-center">2</th>
+											<th class="view-size font2 wide1 back-color4 white text-center">3</th>
+											<th class="view-size font2 wide1 back-color4 white text-center">4</th>
 										</tr>
 									</thead>
 

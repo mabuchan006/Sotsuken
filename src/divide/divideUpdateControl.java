@@ -154,7 +154,7 @@ public class divideUpdateControl extends HttpServlet {
 
 		// 画面遷移
 		if(ajaxWeek == null && map.isEmpty()){
-			RequestDispatcher disp = request.getRequestDispatcher("manage/time_divide_manage_edit1.jsp");
+			RequestDispatcher disp = request.getRequestDispatcher("manage/time_divide_manage.jsp");
 			disp.forward(request, response);
 		}
 	}

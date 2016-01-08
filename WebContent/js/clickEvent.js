@@ -45,13 +45,6 @@ function clickEvent( e ){
 		});
 	});
 
-	// labelがクリックされた時
-	$("label").click(function( e ){
-		// クリックされたlabelの親要素(p)内にある子要素(textarea)のvalueを初期化
-		$(this).parents("p").children("textarea").get(0).value = "";
-		$("#checkFlag").get(0).value = "true";
-	});
-
 	// 一括削除ボタンがクリックされた時
 	$("#cBtn").click(function( e ){
 		for(var i = 0; i < $("textarea").length; i++){
