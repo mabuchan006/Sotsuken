@@ -134,19 +134,29 @@ public class temp_tableControl extends HttpServlet {
 
 
 
-		//Insert処理：登録ボタンが押された場
+		//Insert
 		if(request.getParameter("regist") != null){
 
 			String date = request.getParameter("start"); //始点の日付取得
-			System.out.println(date);
+
 			for(int week=0;week <= 3;week++){
 				for(int i=0; i <= 6; i++){
 					String num = String.valueOf(i);
 
 					//1限目の週間予定取得
-					String subjectName1 = request.getParameter("Su"+ num +"_1");System.out.println(subjectName1);
-					String teacherName1 = request.getParameter("Te"+ num +"_1");System.out.println(teacherName1);
-					String roomName1 	= request.getParameter("Ro"+ num +"_1");System.out.println(roomName1);
+					String subjectName1 = request.getParameter("Su"+ num +"_1"); System.out.println(subjectName1);
+					if( subjectName1 == null || subjectName1.length() == 0 ){
+						System.out.println(1);
+						subjectName1 = "";
+					}//null排除
+					String teacherName1 = request.getParameter("Te"+ num +"_1"); System.out.println(teacherName1);
+					if( teacherName1 == null || subjectName1.length() == 0 ){
+						teacherName1 = "";
+					}//null排除
+					String roomName1 	= request.getParameter("Ro"+ num +"_1"); System.out.println(roomName1);
+					if( roomName1 == null || roomName1.length() == 0 ){
+						roomName1 = "";
+					}//null排除
 
 					/*String subjectName2 = request.getParameter("Su"+ num +"_2");
 					String teacherName2 = request.getParameter("Te"+ num +"_2");
@@ -160,7 +170,7 @@ public class temp_tableControl extends HttpServlet {
 					String teacherName4 = request.getParameter("Te"+ num +"_4");
 					String roomName4	=    request.getParameter("Ro"+ num +"_4");*/
 
-					//tList1.add(new tempInfo( "1", subjectName1,  date,  chooseClassID,  roomName1,  teacherName1));
+					tList1.add(new tempInfo( "1", subjectName1,  date,  chooseClassID,  roomName1,  teacherName1));
 					/* tList2.add(new tempInfo( "2", subjectName2,  date,  chooseClassID,  roomName2,  teacherName2));
 					 tList3.add(new tempInfo( "3", subjectName3,  date,  chooseClassID,  roomName3,  teacherName3));
 					 tList4.add(new tempInfo( "4", subjectName4,  date,  chooseClassID,  roomName4,  teacherName4));*/
@@ -168,8 +178,8 @@ public class temp_tableControl extends HttpServlet {
 					date = dateAdd(date);
 					System.out.println(date);
 
-				}
-			}
+				}//for 7日分
+			}//for ４週分
 		}
 
 
