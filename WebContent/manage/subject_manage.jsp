@@ -137,9 +137,12 @@ toastSelect("success","${Msg }")</script>
 <!-- 科目情報取得 -->
 <c:forEach var="rs" items="${subjectList }">
 <tr class="select">
-<td>${rs.subjectName}</td>
-<td>${rs.bringThings}</td>
+<td class="subjectname" data-name="${rs.subjectID}">${rs.subjectName}</td>
+<td class="bringthings" data-name="${rs.subjectID}">${rs.bringThings}</td>
 <td>
+<div style="display:inline-flex">
+<button type="button" class="btn btn-success edit_subject "name="edit_subject" ><i class="fa fa-pencil-square-o fa-2x"></i></button>
+
 <!-- 削除用フォーム -->
 <form action="/Sotsuken/ManageUpdate" method="post">
 <input type="hidden" name="page" value="subject_manage" />
@@ -147,6 +150,7 @@ toastSelect("success","${Msg }")</script>
 <input type="hidden" name="subjectName" value="${rs.subjectName }" />
 <button type="submit" class="btn btn-danger"name="delete_subject" ><i class="fa fa-trash-o fa-2x"></i></button>
 </form> <!-- 削除 -->
+</div>
 </td>
 
 </tr>

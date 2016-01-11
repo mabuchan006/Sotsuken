@@ -14,6 +14,7 @@ public class teacherDBManage extends DBAccess{
 	private String selectSql;//講師全検索用
 	private String deleteSql;//講師1件削除用
 	private String insertSql;//講師1件登録用
+	private String updateSql;
 
 	//*******Msg*********
 	private String msg;
@@ -25,7 +26,7 @@ public class teacherDBManage extends DBAccess{
 		this.msg = msg;
 	}
   //********endMsg*************
-	
+
 	private final static String DRIVER_NAME = "java:comp/env/jdbc/MySqlCon";//コネクタ
 
 	public teacherDBManage() {
@@ -36,6 +37,8 @@ public class teacherDBManage extends DBAccess{
 		deleteSql = String.format("delete  from tbl_teacher where teacherID = ?");
 		//講師情報登録sql
 		insertSql= String.format(" insert into tbl_teacher (teacherName, password) values ( ? , ? )");
+
+		updateSql= String.format("update tbl_teacher set teacherName = ? where teacherID = ?");
 	}
 	/*
 	 * @param teacherinfo 講師情報
@@ -50,7 +53,7 @@ public class teacherDBManage extends DBAccess{
 			//要素取得用準備
 			ResultSet rs = getRsResult();
 			teacherInfo teacherinfo;
-			
+
 
 			//全件取得
 			while(rs.next()){
@@ -62,7 +65,6 @@ public class teacherDBManage extends DBAccess{
 				//講師要素を1件ずつリストに追加
 				teacherList.add(teacherinfo);
 			}//while
-			
 
 			disConnection();//切断
 
@@ -91,13 +93,19 @@ public class teacherDBManage extends DBAccess{
 			updateExe();//実行
 
 			break;
+		case UODATE:
+			createStstement(updateSql);
+			getPstmt().setString(1, ti.getTeacherName());
+			getPstmt().setInt(2, ti.getTeacherID());
+			updateExe();//実行
+
+			break;
 		}
 
-
-
+		if(state!=UODATE){
 		setMsg(resultMsg(ti,msg));//実行メッセージ取得
+		}//if
 		disConnection();//切断
-
 	}//method
 
 private String resultMsg(teacherInfo ti,String msg){

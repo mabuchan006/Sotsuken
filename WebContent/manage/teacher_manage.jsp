@@ -54,8 +54,11 @@ toastSelect("success","${Msg }")</script>
 <!-- 講師情報取得 -->
 <c:forEach var="teacher" items="${teacherList}">
 <tr class="select">
-<td>${ teacher.teacherName }</td>
+<td class = "teachername" data-name="${teacher.teacherID }">${ teacher.teacherName }</td>
 <td>
+<div style="display:inline-flex">
+<button type="button" class="btn btn-success edit_teacher "name="edit_teacher" ><i class="fa fa-pencil-square-o fa-2x"></i></button>
+
 <!-- 削除用フォーム -->
 <form action="/Sotsuken/ManageUpdate" method="post">
 <input type="hidden" name="page" value="teacher_manage" />
@@ -64,6 +67,7 @@ toastSelect("success","${Msg }")</script>
 <button type="submit" class="btn btn-danger"name="delete_teacher" ><i class="fa fa-trash-o fa-2x"></i></button>
 </form>
 <!-- 削除 -->
+</div>
 </td>
 
 </tr>

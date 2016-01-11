@@ -29,6 +29,9 @@ public class ManageUpdateControl extends HttpServlet {
 	//
 	private String content_page;
 	private String page_title ;
+	String upName = "";
+	String upValue = "";
+	String upKey = "";
 
 
     /**
@@ -50,33 +53,53 @@ public class ManageUpdateControl extends HttpServlet {
 		//jspからのページ情報取得
 		String get_page = request.getParameter("page")==null?"class_manage"
 				:request.getParameter("page");
-		System.out.println(get_page);
-		System.out.println(request.getRequestURI());
+
+		//各jspページの編集ボタンが押されたときajax通信
+		Map<String,String[]> map = request.getParameterMap();
+		if(map.get("pk")!=null){
+		upName = map.get("name")[0];
+		upValue = map.get("value")[0];
+		upKey = map.get("pk")[0];
+
+		}//if
+
+//		if(map.get("name") != null){
+//			System.out.println("ok");
+//		response.setHeader("Access-Control-Allow-Origin", "*");//dmain指定
+//		response.setContentType("application/json; charset=utf-8");//json形式
+//		PrintWriter out = response.getWriter();//書き込み
+//		out.println(map);
+//		}
+
 		//使用するcss,jsファイルの適用
 		getIncludeFile(request);
 
 		//teacher管理の画面処理
 		if(get_page.equals("teacher_manage") ||
 				request.getParameter("delete_teacher") != null ||
-				request.getParameter("regist_teacher") != null){
+				request.getParameter("regist_teacher") != null ||
+						upKey.equals("3")){
+			System.out.println("teacher");
 			//講師DB操作クラス取得
 			teacherDBManage tdm = new teacherDBManage();
 			teacherUpdate(request, tdm);
 		}//if
+
 		//class管理画面の処理
 		else if(get_page.equals("class_manage") ||
 				request.getParameter("delete_class") != null ||
-				request.getParameter("regist_class") != null){
+				request.getParameter("regist_class") != null ||
+				upKey.equals("1")){
 			//クラスDB操作クラス取得
 			classDBManage cdm = new classDBManage();
-			classUpdate(request, cdm);
+			classUpdate(request, cdm,upName);
 		}//if
 
 		//講師管理画面処理
 		else if(get_page.equals("subject_manage") ||
 				request.getParameter("delete_subject") != null ||
-				request.getParameter("regist_subject") != null){
-
+				request.getParameter("regist_subject") != null ||
+						upKey.equals("2")){
 
 			subjectUpdate(request);
 
@@ -84,7 +107,6 @@ public class ManageUpdateControl extends HttpServlet {
 
 		//ページデータセット
 		try {
-
 
 			request.setAttribute("content_page", content_page);
 			request.setAttribute("page_title", page_title);
@@ -134,9 +156,7 @@ public class ManageUpdateControl extends HttpServlet {
 		//すべてのリクエスト情報をinsert処理する
 		for (Map.Entry<String, String[]> rs : getMap.entrySet()) {
 
-
-
-			//1つ目のリクエストはいらんので除外
+			//1つ目のリクエストはいらないので除外
 			if(!(rs.getKey().equals("grade_name1") || rs.getKey().equals("cource_name1") ||
 					rs.getKey().equals("subjectName1") || rs.getKey().equals("bringThings1")||
 					rs.getKey().equals("regist_subject") || rs.getKey().equals("page")||
@@ -145,13 +165,10 @@ public class ManageUpdateControl extends HttpServlet {
 				//リクエスト情報を科目情報配列に格納
 				if(cnt < 4){
 
-
 					setSiArray[cnt] = rs.getValue()[0];
 
 					cnt++;
 					if(cnt == 4){
-
-
 
 						//全学年を指定していた場合
 						if(setSiArray[1].equals("ALL")){
@@ -181,24 +198,15 @@ public class ManageUpdateControl extends HttpServlet {
 
 							//登録処理
 							sdm.subjectDBUpdate(si, classID,DBAccess.INSERT, "登録");
-
 						}//if
-
-
 
 						//初期化
 						showFlag=0;
 						cnt = 0;
 						setSiArray = new String[4];
-					}
-				}
-
-
-
-
+					}//if
+				}//if
 			}//if
-
-
 		}//foreeach
 
 
@@ -214,8 +222,16 @@ public class ManageUpdateControl extends HttpServlet {
 		if(request.getParameter("delete_subject") != null){
 			sdm.subjectDBUpdate(delsi, "",DBAccess.DELETE, "削除");
 			System.out.println("削除");
-		}
+		}//if
 
+		//更新処理
+		if(upKey.equals("2")){
+			System.out.println("1");
+			System.out.println(upName);
+			si.setSubjectID(Integer.parseInt(upName));
+			si.setBringThings(upValue);
+			sdm.subjectDBUpdate(si, "", DBAccess.UODATE, "更新");
+		}//if
 
 		//学年ごとに対応したクラス情報
 		Map<String,List<String>> classMap = sdm.classDBSelect();
@@ -245,7 +261,7 @@ public class ManageUpdateControl extends HttpServlet {
 	}
 
 	//クラス管理画面指定時の処理
-		private void classUpdate(HttpServletRequest request, classDBManage cdm) {
+		private void classUpdate(HttpServletRequest request, classDBManage cdm,String upName) {
 
 
 				//送信されたクラス情報取得
@@ -261,15 +277,23 @@ public class ManageUpdateControl extends HttpServlet {
 					content_page = "/manage/class_manage.jsp";
 					page_title = "クラス管理";
 
+					//登録
 					if(request.getParameter("regist_class") != null ){
 						cdm.classDBUpdate(ci, DBAccess.INSERT, "登録");
 
 					}
-
+					//削除
 					if(request.getParameter("delete_class") != null){
 						cdm.classDBUpdate(ci, DBAccess.DELETE, "削除");
-						System.out.println("削除");
-					}
+
+					}//if
+					//更新
+					if(upKey.equals("1")){
+						ci.setClassID(upName);
+						ci.setClassName(upValue);
+						cdm.classDBUpdate(ci,DBAccess.UODATE , "更新");
+						System.out.println("更新");
+					}//if
 					//更新済み講師情報全件取得
 					List<classInfo> classList = cdm.classDBSelect();
 					request.setAttribute("cnt", classList.size());
@@ -309,13 +333,19 @@ public class ManageUpdateControl extends HttpServlet {
 
 				if(request.getParameter("regist_teacher") != null ){
 					tdm.teacherDBUpdate(ti, DBAccess.INSERT, "登録");
-					System.out.println("登録");
-				}
+				}//if
 
 				if(request.getParameter("delete_teacher") != null){
 					tdm.teacherDBUpdate(ti, DBAccess.DELETE, "削除");
-					System.out.println("削除");
-				}
+				}//if
+
+				if(upKey.equals("3")){
+					ti.setTeacherID(Integer.parseInt(upName));
+					ti.setTeacherName(upValue);
+					tdm.teacherDBUpdate(ti, DBAccess.UODATE, "更新");
+
+				}//if
+
 				//更新済み講師情報全件取得
 				List<teacherInfo> teacherList = tdm.teacherDBSelect();
 				request.setAttribute("teacherList", teacherList);
@@ -345,6 +375,8 @@ public class ManageUpdateControl extends HttpServlet {
 		css.add("/Sotsuken/css/style.css");
 		css.add("/Sotsuken/css/pure-drawer.css");
 		css.add("https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css");
+		css.add("//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css");
+
 
 		js.add("/Sotsuken/js/jquery-2.1.1.min.js");
 		js.add("http://code.jquery.com/jquery-1.9.1.min.js");
@@ -354,6 +386,8 @@ public class ManageUpdateControl extends HttpServlet {
 		js.add("/Sotsuken/js/jquery.toaster.js");
 		js.add("https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js");
 		js.add("/Sotsuken/js/toastSelect.js");
+		js.add("/Sotsuken/js/editable.js");
+		js.add("//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js");
 
 
 

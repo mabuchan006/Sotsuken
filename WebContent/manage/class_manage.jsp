@@ -1,8 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<link href="path/to/bootstrap-editable/css/bootstrap-editable.css" rel="stylesheet">
-<script src="path/to/bootstrap-editable/js/bootstrap-editable.min.js"></script>
 
 <c:if test= "${!empty Msg }">
 <script>
@@ -14,9 +11,11 @@ toastSelect("success","${Msg }")</script>
 </c:if>
 
 <div class="row col-md-9">
+
 <!-- 登録処理 -->
 <form action="/Sotsuken/ManageUpdate" method="post">
 <input type="hidden"name="page" value="class_manage">
+
 <table class="col-md-9 col-md-offset-3" id="first_table">
 <tr>
 
@@ -42,6 +41,8 @@ toastSelect("success","${Msg }")</script>
 </table>
 </form><!-- 登録終わり -->
 
+
+
 <!-- クラス一覧表示 -->
 <div class="col-md-12 col-md-offset-3">
 <div class="back">
@@ -54,9 +55,12 @@ toastSelect("success","${Msg }")</script>
 <!-- クラス情報取得 -->
 <c:forEach var="rs" items="${classList }">
 <tr class="select">
-<td>${rs.classID}</td>
-<td>${rs.className}</td>
+<td class="classid">${rs.classID}</td>
+<td class="classname" data-name="${rs.classID}">${rs.className}</td>
 <td>
+<div style="display:inline-flex">
+<button type="button" class="btn btn-success edit_class "name="edit_class" ><i class="fa fa-pencil-square-o fa-2x"></i></button>
+
 <!-- 削除用フォーム -->
 <form action="/Sotsuken/ManageUpdate?page=class_manage" method="post">
 <input type="hidden" name = "classID" value="${rs.classID }" />
@@ -64,6 +68,7 @@ toastSelect("success","${Msg }")</script>
 <button type="submit" class="btn btn-danger"name="delete_class" ><i class="fa fa-trash-o fa-2x"></i></button>
 </form>
 <!-- 削除 -->
+</div>
 </td>
 
 </tr>

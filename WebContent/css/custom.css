@@ -1,5 +1,7 @@
 @CHARSET "UTF-8";
 
+
+
 body {
 	margin: auto;
 	padding: auto;
@@ -222,7 +224,19 @@ input {
 }
 
 button {
-	width: 40%;
+	font-size: 3px;
+	line-height: 1.7em;
+	padding-right:5px;
+	margin-right:5px;
+	width: 100%;
+	display:inline;
+}
+
+.edit-btn,.remove-btn{
+	width: 60%;
+}
+.remove-btn{
+	color:#000;
 }
 
 #regist_btn {
@@ -243,13 +257,14 @@ button {
 #table {
 	border-radius: 3px 3px 0 0;
 	border: 1px solid #d8d8d8;
-	background-color: #;
+
 }
 
 #first_table {
 	border-style: none;
 	margin-bottom: 50px;
 	margin-top: 30px;
+
 }
 
 #logo {
@@ -281,8 +296,3 @@ color11 {
 	color: #fff;
 }
 
-.toast-bottom-right {
-	font-size: 1.7em;
-	right: 12PX;
-	bottom: 6px;
-}

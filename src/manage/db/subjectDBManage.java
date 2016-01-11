@@ -20,6 +20,7 @@ public class subjectDBManage extends DBAccess {
 	private String selectBox;// 科目管理画面のセレクトボックス表示用
 	private String selectAll;// 対象学科全部
 	private String selectTID;// 講師参照制約用
+	private String updateSql;//持ち物情報更新用
 
 	// *******Msg*********
 	private String msg;
@@ -33,7 +34,7 @@ public class subjectDBManage extends DBAccess {
 	}
 
 	// ********endMsg*************
-	
+
 	private final static String DRIVER_NAME = "java:comp/env/jdbc/MySqlCon";// コネクタ
 
 	public subjectDBManage() {
@@ -45,15 +46,17 @@ public class subjectDBManage extends DBAccess {
 		// selectbox表示用
 		selectBox = String.format("select classID from tbl_class");
 		// 科目IDから削除からsql
-		deleteSql = String.format("delete  from tbl_subject where subjectID = ?");
+		deleteSql = String.format("delete from tbl_subject where subjectID = ?");
 		// 科目IDから削除からsql
-		deleteClass = String.format("delete  from tbl_infosubject where subjectID = ?");
+		deleteClass = String.format("delete from tbl_infosubject where subjectID = ?");
 		// ALL処理用
 		selectAll = String.format("select classID from tbl_class where classID LIKE ?");
 		// 科目情報登録sql
 		insertSql = String.format(" replace into tbl_subject " + "(subjectName,bringThings,showFlag) values (?,?,?)");
 		// クラス情報テーブル登録sql
 		ins_infoSubject = String.format("replace into tbl_infoSubject " + "(classID,subjectID) values (?,?)");
+		//持ち物更新sql
+		updateSql = String.format("update tbl_subject set bringThings = ? where subjectID = ?");
 	}
 
 	/*
@@ -70,7 +73,6 @@ public class subjectDBManage extends DBAccess {
 		// 要素取得用準備
 		ResultSet rs = getRsResult();
 		subjectInfo subjectinfo;
-		
 
 		// 全件取得
 		while (rs.next()) {
@@ -96,7 +98,7 @@ public class subjectDBManage extends DBAccess {
 	 *
 	 * @see subjectControl
 	 */
-	public void subjectDBUpdate(subjectInfo ci, String classID, int state, String msg) throws Exception {
+	public void subjectDBUpdate(subjectInfo si, String classID, int state, String msg) throws Exception {
 
 		connect();
 		switch (state) {
@@ -104,14 +106,14 @@ public class subjectDBManage extends DBAccess {
 		case INSERT:
 			System.out.println("insert２");
 			// 入力情報に誤りがなければ
-			if (!((ci.getSubjectName()).equals("") || classID.length() > 4)) {
+			if (!((si.getSubjectName()).equals("") || classID.length() > 4)) {
 				System.out.println("insert");
 
 				// 通常科目情報登録
 				createStstement(insertSql);
-				getPstmt().setString(1, ci.getSubjectName());
-				getPstmt().setString(2, ci.getBringThings());
-				getPstmt().setInt(3, ci.getShowFlag());
+				getPstmt().setString(1, si.getSubjectName());
+				getPstmt().setString(2, si.getBringThings());
+				getPstmt().setInt(3, si.getShowFlag());
 
 				// クラス情報テーブルが外部キー参照するため一度実行
 				updateExe();// 実行
@@ -121,7 +123,7 @@ public class subjectDBManage extends DBAccess {
 				// クラス情報テーブル登録
 				connect();
 				createStstement(selectTID);
-				getPstmt().setString(1, ci.getSubjectName());
+				getPstmt().setString(1, si.getSubjectName());
 				selectExe();
 
 				int subjectID = 0;
@@ -140,17 +142,28 @@ public class subjectDBManage extends DBAccess {
 		case DELETE:
 			createStstement(deleteClass);
 
-			getPstmt().setInt(1, ci.getSubjectID());// 削除するIDをセット
+			getPstmt().setInt(1, si.getSubjectID());// 削除するIDをセット
 			updateExe();// 実行
 
 			createStstement(deleteSql);
-			getPstmt().setInt(1, ci.getSubjectID());
+			getPstmt().setInt(1, si.getSubjectID());
 			updateExe();// 実行
+
+			break;
+		case UODATE:
+			System.out.println("2");
+			createStstement(updateSql);
+			getPstmt().setInt(1, si.getSubjectID());
+			getPstmt().setString(2, si.getBringThings());
+
+			updateExe();//実行
 
 			break;
 		}
 
-		setMsg(resultMsg(ci, msg));// 実行メッセージ取得
+		if(state!=UODATE){
+		setMsg(resultMsg(si,msg));//実行メッセージ取得
+		}//if
 		disConnection();// 切断
 
 	}// method
