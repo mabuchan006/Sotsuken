@@ -82,8 +82,8 @@
 
 		<div class="pure-pusher-container ">
 			<div class="pure-pusher">
-			<div class="row col-md-6">
-				<div class="logo text-light">
+			<div class="row col-md-9 col-md-offset-2">
+				<div class="logo text-left">
 					<h1>${page_title }</h1>
 
 				</div>
