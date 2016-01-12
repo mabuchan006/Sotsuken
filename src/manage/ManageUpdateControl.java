@@ -120,8 +120,6 @@ public class ManageUpdateControl extends HttpServlet {
 		//画面遷移
 			RequestDispatcher disp = request.getRequestDispatcher("template/layout.jsp");
 		      disp.forward(request, response);
-		//response.sendRedirect(content_page);
-
 
 	}//doGet
 
@@ -293,6 +291,7 @@ public class ManageUpdateControl extends HttpServlet {
 						ci.setClassName(upValue);
 						cdm.classDBUpdate(ci,DBAccess.UODATE , "更新");
 						System.out.println("更新");
+
 					}//if
 					//更新済み講師情報全件取得
 					List<classInfo> classList = cdm.classDBSelect();

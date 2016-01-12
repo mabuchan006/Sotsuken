@@ -35,13 +35,13 @@ $(document).on("click",".edit_teacher",function(e){
 			    pk: 1,
 			    url: '/Sotsuken/ManageUpdate',
 			    title: 'Enter classname',
+		        //responseキャッシュクリア
+		        beforeSend : function( xhr ){
+		            xhr.setRequestHeader("If-Modified-Since", "Thu, 01 Jun 1970 00:00:00 GMT");
+		        },
 			    	success: function(response, newValue) {
 			    		toastSelect("success",newValue+"に更新しました")
 			            if(response.status == 'error') alert( "error"+response.msg); //msg will be shown in editable form
-			        },
-			        //responseキャッシュクリア
-			        beforeSend : function( xhr ){
-			            xhr.setRequestHeader("If-Modified-Since", "Thu, 01 Jun 1970 00:00:00 GMT");
 			        }
 			});
 
@@ -52,14 +52,15 @@ $(document).on("click",".edit_teacher",function(e){
 			    pk: 2,
 			    url: '/Sotsuken/ManageUpdate',
 			    title: 'Enter bringthings',
+
+		        //responseキャッシュクリア
+		        beforeSend : function( xhr ){
+		            xhr.setRequestHeader("If-Modified-Since", "Thu, 01 Jun 1970 00:00:00 GMT");
+		        },
 			    	success: function(response, newValue)
 			    	{
 			    		toastSelect("success","持ち物を"+newValue+"に更新しました")
 			            if(response.status == 'error') alert( "error"+response.msg); //msg will be shown in editable form
-			        },
-			        //responseキャッシュクリア
-			        beforeSend : function( xhr ){
-			            xhr.setRequestHeader("If-Modified-Since", "Thu, 01 Jun 1970 00:00:00 GMT");
 			        }
 			});
 
@@ -70,13 +71,14 @@ $(document).on("click",".edit_teacher",function(e){
 			    pk: 3,
 			    url: '/Sotsuken/ManageUpdate',
 			    title: 'Enter teachername',
+
+		        //responseキャッシュクリア
+		        beforeSend : function( xhr ){
+		            xhr.setRequestHeader("If-Modified-Since", "Thu, 01 Jun 1970 00:00:00 GMT");
+		        },
 			    	success: function(response, newValue) {
 			    		toastSelect("success",newValue+"に更新しました")
 			            if(response.status == 'error') alert( "error"+response.msg); //msg will be shown in editable form
-			        },
-			        //responseキャッシュクリア
-			        beforeSend : function( xhr ){
-			            xhr.setRequestHeader("If-Modified-Since", "Thu, 01 Jun 1970 00:00:00 GMT");
 			        }
 			});
 
