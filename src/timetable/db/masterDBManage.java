@@ -20,26 +20,26 @@ public class masterDBManage extends DBAccess {
 	public masterDBManage(String chooseTableName) {
 		super(DRIVER_NAME);
 		StringBuilder sb = new StringBuilder();
-		period1_SQL = String.format("SELECT timetable.period, timetable.subjectName, timetable.date, timetable.classID, room.roomName, timetable.teacherName "
+		period1_SQL = String.format("SELECT timetable.period, timetable.subjectName, timetable.date, timetable.classID, timetable.roomName, timetable.teacherName "
 							 +"FROM %s timetable "
-                             +"INNER JOIN tbl_room room on timetable.roomID = room.roomID "
+                             //+"INNER JOIN tbl_room room on timetable.roomName = room.roomName "
                              +"Where timetable.period = '1' ORDER BY date,period ASC",chooseTableName);
 
 
-		period2_SQL =String.format("SELECT timetable.period, timetable.subjectName, timetable.date, timetable.classID, room.roomName, timetable.teacherName "
+		period2_SQL =String.format("SELECT timetable.period, timetable.subjectName, timetable.date, timetable.classID, timetable.roomName, timetable.teacherName "
                              +"FROM %s timetable "
-                             +"INNER JOIN tbl_room room on timetable.roomID = room.roomID "
+                            // +"INNER JOIN tbl_room room on timetable.roomName = room.roomName "
                              +"Where timetable.period = '2' ORDER BY date,period ASC",chooseTableName);
 
 
-		period3_SQL =String.format("SELECT timetable.period, timetable.subjectName, timetable.date, timetable.classID, room.roomName, timetable.teacherName "
+		period3_SQL =String.format("SELECT timetable.period, timetable.subjectName, timetable.date, timetable.classID, timetable.roomName, timetable.teacherName "
                              +"FROM %s timetable "
-                             +"INNER JOIN tbl_room room on timetable.roomID = room.roomID "
+                             //+"INNER JOIN tbl_room room on timetable.roomName = room.roomName "
                              +"Where timetable.period = '3' ORDER BY date,period ASC",chooseTableName);
 
-		period4_SQL =String.format("SELECT timetable.period, timetable.subjectName, timetable.date, timetable.classID, room.roomName, timetable.teacherName "
+		period4_SQL =String.format("SELECT timetable.period, timetable.subjectName, timetable.date, timetable.classID, timetable.roomName, timetable.teacherName "
                              +"FROM %s timetable "
-                             +"INNER JOIN tbl_room room on timetable.roomID = room.roomID "
+                             //+"INNER JOIN tbl_room room on timetable.roomName = room.roomName "
                              +"Where timetable.period = '4' ORDER BY date,period ASC",chooseTableName);
 
 

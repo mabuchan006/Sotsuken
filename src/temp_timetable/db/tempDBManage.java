@@ -48,8 +48,8 @@ public class tempDBManage extends DBAccess {
 	            +"order by case divide.week when '月' then 1 when '火' then 2 when '水' then 3 when '木' then 4 "
 	            +"when '金' then 5 when '土' then 6 when '日' then 7 end");
 
-		/*insertSql = String.format("replace into tbl_timedivide ( period, subjectName, date, classID,roomName,teacherName ) values"
-				+ " (?,?,?,?,?,?");*/
+		insertSQL = String.format("replace into tbl_temp_timetable( period, subjectName, date, classID,roomName,teacherName ) values"
+				+ " (?,?,?,?,?,?");
 	}
 
 
@@ -100,6 +100,28 @@ public class tempDBManage extends DBAccess {
 
 					disConnection();
 					return roomsList;
+	}
+
+	public void tempDBInsert(List<tempInfo> tiList){
+		//DB接続
+		try {
+			connect();
+			for (tempInfo ti : tiList) {
+				createStstement(insertSQL);
+				getPstmt().setString(1, ti.getPeriod());
+				getPstmt().setString(2, ti.getSubjectName());
+				getPstmt().setString(3, ti.getDate());
+				getPstmt().setString(4, ti.getClassID());
+				getPstmt().setString(5, ti.getRoomName());
+				getPstmt().setString(6, ti.getTeacherName());
+				disConnection();
+			}
+		} catch (Exception e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
+
+
 	}
 
 }

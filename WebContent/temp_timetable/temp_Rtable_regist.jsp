@@ -54,7 +54,7 @@
 
 <br />
 
-<form action="/Sotsuken/editView" method="post">
+<form action="/Sotsuken/editView" method="post" >
 
 <!-- 科目リスト　先生リスト取得 -->
 
@@ -805,6 +805,7 @@
 		</tbody>
 	</table>
 </div>
+<input type="hidden" name="page" value="${chooseClassID }" />
 </form>
 
 
