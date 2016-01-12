@@ -82,9 +82,11 @@
 
 		<div class="pure-pusher-container ">
 			<div class="pure-pusher">
-				<div class="logo text-center">
+			<div class="row col-md-6">
+				<div class="logo text-light">
 					<h1>${page_title }</h1>
 
+				</div>
 				</div>
 				<jsp:include page="${content_page}" />
 

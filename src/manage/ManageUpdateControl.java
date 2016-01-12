@@ -135,7 +135,7 @@ public class ManageUpdateControl extends HttpServlet {
 		try {
 		//ページ情報指定
 		content_page = "/manage/subject_manage.jsp";
-		page_title = "科目管理画面";
+		page_title = "subjectmanage";
 		//更新済み科目情報全件取得
 		subjectDBManage sdm = new subjectDBManage();
 		int showFlag=0;
@@ -273,7 +273,7 @@ public class ManageUpdateControl extends HttpServlet {
 				try {
 					//ページ情報指定
 					content_page = "/manage/class_manage.jsp";
-					page_title = "クラス管理";
+					page_title = "classmanage";
 
 					//登録
 					if(request.getParameter("regist_class") != null ){
@@ -328,7 +328,7 @@ public class ManageUpdateControl extends HttpServlet {
 			try {
 				//ページ情報指定
 				content_page = "/manage/teacher_manage.jsp";
-				page_title = "講師管理画面";
+				page_title = "teachermanage";
 
 				if(request.getParameter("regist_teacher") != null ){
 					tdm.teacherDBUpdate(ti, DBAccess.INSERT, "登録");
