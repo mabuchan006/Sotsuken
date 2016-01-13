@@ -160,7 +160,7 @@
 
 									<label>username:</label> <input type="text"
 										placeholder="username" id="enterId" value="" name="teacherID"> <br>
-									<label>password:</label> <input type="text" placeholder="PASS"
+									<label>password:</label> <input type="password" placeholder="PASS"
 										id="enterPw" value="" name="password"><br> <br> <input
 										type="submit" value="login" id="login">
 								</form>

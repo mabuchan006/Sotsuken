@@ -29,10 +29,6 @@ public class ManageUpdateControl extends HttpServlet {
 	//
 	private String content_page;
 	private String page_title ;
-	String upName = "";
-	String upValue = "";
-	String upKey = "";
-
 
     /**
      * @see HttpServlet#HttpServlet()
@@ -54,32 +50,13 @@ public class ManageUpdateControl extends HttpServlet {
 		String get_page = request.getParameter("page")==null?"class_manage"
 				:request.getParameter("page");
 
-		//各jspページの編集ボタンが押されたときajax通信
-		Map<String,String[]> map = request.getParameterMap();
-		if(map.get("pk")!=null){
-		upName = map.get("name")[0];
-		upValue = map.get("value")[0];
-		upKey = map.get("pk")[0];
-
-		}//if
-
-//		if(map.get("name") != null){
-//			System.out.println("ok");
-//		response.setHeader("Access-Control-Allow-Origin", "*");//dmain指定
-//		response.setContentType("application/json; charset=utf-8");//json形式
-//		PrintWriter out = response.getWriter();//書き込み
-//		out.println(map);
-//		}
-
 		//使用するcss,jsファイルの適用
 		getIncludeFile(request);
 
 		//teacher管理の画面処理
 		if(get_page.equals("teacher_manage") ||
 				request.getParameter("delete_teacher") != null ||
-				request.getParameter("regist_teacher") != null ||
-						upKey.equals("3")){
-			System.out.println("teacher");
+				request.getParameter("regist_teacher") != null ){
 			//講師DB操作クラス取得
 			teacherDBManage tdm = new teacherDBManage();
 			teacherUpdate(request, tdm);
@@ -88,22 +65,20 @@ public class ManageUpdateControl extends HttpServlet {
 		//class管理画面の処理
 		else if(get_page.equals("class_manage") ||
 				request.getParameter("delete_class") != null ||
-				request.getParameter("regist_class") != null ||
-				upKey.equals("1")){
+				request.getParameter("regist_class") != null){
 			//クラスDB操作クラス取得
 			classDBManage cdm = new classDBManage();
-			classUpdate(request, cdm,upName);
+			classUpdate(request, cdm);
 		}//if
 
 		//講師管理画面処理
 		else if(get_page.equals("subject_manage") ||
 				request.getParameter("delete_subject") != null ||
-				request.getParameter("regist_subject") != null ||
-						upKey.equals("2")){
+				request.getParameter("regist_subject") != null ){
 
 			subjectUpdate(request);
 
-		}
+		}//if
 
 		//ページデータセット
 		try {
@@ -222,15 +197,6 @@ public class ManageUpdateControl extends HttpServlet {
 			System.out.println("削除");
 		}//if
 
-		//更新処理
-		if(upKey.equals("2")){
-			System.out.println("1");
-			System.out.println(upName);
-			si.setSubjectID(Integer.parseInt(upName));
-			si.setBringThings(upValue);
-			sdm.subjectDBUpdate(si, "", DBAccess.UODATE, "更新");
-		}//if
-
 		//学年ごとに対応したクラス情報
 		Map<String,List<String>> classMap = sdm.classDBSelect();
 		//更新済み科目情報全件取得
@@ -259,7 +225,7 @@ public class ManageUpdateControl extends HttpServlet {
 	}
 
 	//クラス管理画面指定時の処理
-		private void classUpdate(HttpServletRequest request, classDBManage cdm,String upName) {
+		private void classUpdate(HttpServletRequest request, classDBManage cdm) {
 
 
 				//送信されたクラス情報取得
@@ -286,13 +252,7 @@ public class ManageUpdateControl extends HttpServlet {
 
 					}//if
 					//更新
-					if(upKey.equals("1")){
-						ci.setClassID(upName);
-						ci.setClassName(upValue);
-						cdm.classDBUpdate(ci,DBAccess.UODATE , "更新");
-						System.out.println("更新");
 
-					}//if
 					//更新済み講師情報全件取得
 					List<classInfo> classList = cdm.classDBSelect();
 					request.setAttribute("cnt", classList.size());
@@ -338,13 +298,6 @@ public class ManageUpdateControl extends HttpServlet {
 					tdm.teacherDBUpdate(ti, DBAccess.DELETE, "削除");
 				}//if
 
-				if(upKey.equals("3")){
-					ti.setTeacherID(Integer.parseInt(upName));
-					ti.setTeacherName(upValue);
-					tdm.teacherDBUpdate(ti, DBAccess.UODATE, "更新");
-
-				}//if
-
 				//更新済み講師情報全件取得
 				List<teacherInfo> teacherList = tdm.teacherDBSelect();
 				request.setAttribute("teacherList", teacherList);
@@ -387,7 +340,6 @@ public class ManageUpdateControl extends HttpServlet {
 		js.add("/Sotsuken/js/toastSelect.js");
 		js.add("/Sotsuken/js/editable.js");
 		js.add("//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js");
-
 
 
 		request.setAttribute("css", css);

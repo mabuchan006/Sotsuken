@@ -25,7 +25,7 @@ $(document).on("click",".edit_teacher",function(e){
 			$.fn.editable.defaults.mode = 'inline';
 			$.fn.editableform.buttons =
 				 '<button type="submit" class="btn btn-success editable-submit btn-mini edit-btn"><i class="fa fa-check"></i></button>' +
-				 '<button type="button" class="btn editable-cancel btn-mini remove-btn"><i class="fa fa-times"></i></button>';
+				 '<button type="button" class="btn btn-danger editable-cancel btn-mini remove-btn"><i class="fa fa-times"></i></button>';
 
 			//ajax設定
 			//class pk1
@@ -33,7 +33,7 @@ $(document).on("click",".edit_teacher",function(e){
 
 				type:"text",
 			    pk: 1,
-			    url: '/Sotsuken/ManageUpdate',
+			    url: '/Sotsuken/ManageEdit',
 			    title: 'Enter classname',
 		        //responseキャッシュクリア
 		        beforeSend : function( xhr ){
@@ -50,7 +50,7 @@ $(document).on("click",".edit_teacher",function(e){
 
 				type:"text",
 			    pk: 2,
-			    url: '/Sotsuken/ManageUpdate',
+			    url: '/Sotsuken/ManageEdit',
 			    title: 'Enter bringthings',
 
 		        //responseキャッシュクリア
@@ -69,7 +69,7 @@ $(document).on("click",".edit_teacher",function(e){
 
 				type:'text',
 			    pk: 3,
-			    url: '/Sotsuken/ManageUpdate',
+			    url: '/Sotsuken/ManageEdit',
 			    title: 'Enter teachername',
 
 		        //responseキャッシュクリア

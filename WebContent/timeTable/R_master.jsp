@@ -113,7 +113,7 @@
 							if (cnt1 == 3) {
 						%>
 
-					<tr class="success ">
+					<tr class="success">
 						<th class="success " rowspan=3><%=cnt1%></th>
 						<%
 							}
@@ -280,3 +280,5 @@
 		</div>
 	</div>
 </div>
+
+

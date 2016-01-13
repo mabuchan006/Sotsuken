@@ -74,5 +74,18 @@
 </section>
 <!-- End Logo Section -->
 	<jsp:include page="${content_page}" />
+	<script>
+
+
+	$("table tr:eq(2) td:eq(0)").attr("rowspan","12");
+
+	for(var row = 3;row < 15;row++){
+	$("table tr:eq("+row+") td:eq(0)").remove();
+	}
+
+
+
+
+</script>
 </body>
 </html>
