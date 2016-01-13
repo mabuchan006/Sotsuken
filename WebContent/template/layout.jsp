@@ -62,6 +62,9 @@
 				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">
 				<a href="/Sotsuken/divideUpdate">コマ割り管理</a></h1></li>
 
+				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">
+				<a href="/Sotsuken/divideUpdate">イベント管理</a></h1></li>
+
 
 				<li>
 					<ul id="flip3" class="dropmenu select2 ">
