@@ -77,14 +77,14 @@ toastSelect("success","${Msg }")</script>
 								</button>
 								<h3 class="modal-title white">pass変更</h3>
 							</div>
-							<div class="modal-body black">
+							<div class="modal-body black warituke">
 								<form action="/Sotsuken/loginControl" method="POST">
 
 									<div id="msg"></div>
 
-									<label class="black warituke">old pass:</label> <input type="text"
+									<label class="black ">old pass:</label> <input type="text"
 										placeholder="username" id="old_pass" value="" name="old_pass"> <br>
-									<label class="black warituke">new pass:</label> <input type="password" placeholder="PASS"
+									<label class="black ">new pass:</label> <input type="password" placeholder="PASS"
 										id="enterPw" value="" name="password"><br> <br> <input
 										type="submit" value="login" id="new_pass">
 								</form>
