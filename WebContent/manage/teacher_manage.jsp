@@ -59,6 +59,43 @@ toastSelect("success","${Msg }")</script>
 <div style="display:inline-flex">
 <button type="button" class="btn btn-success edit_teacher "name="edit_teacher" ><i class="fa fa-pencil-square-o fa-2x"></i></button>
 
+
+<!--  pass変更ボタン -->
+<button type="button" class="btn btn-info "name="edit_pass" id="#team-modal" data-toggle="modal"
+						data-target="#myModal" style="cursor: pointer">
+								 <i class="fa fa-users fa-2x"></i>
+</button>
+
+<!-- モーダルウィンドウの中身 -->
+				<div class="modal fade" id="myModal">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header back-color">
+								<button type="button" class="close" data-dismiss="modal"
+									aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								<h3 class="modal-title white">pass変更</h3>
+							</div>
+							<div class="modal-body">
+								<form action="/Sotsuken/loginControl" method="POST">
+
+									<div id="msg"></div>
+
+									<label class="black">old pass:</label> <input type="text"
+										placeholder="username" id="old_pass" value="" name="teacherID"> <br>
+									<label class="black">new pass:</label> <input type="text" placeholder="PASS"
+										id="enterPw" value="" name="password"><br> <br> <input
+										type="submit" value="login" id="new_pass">
+								</form>
+							</div>
+						<div class="modal-footer">
+					<button type="button" class="btn btn-primary"
+				data-dismiss="modal">close</button>
+			</div>
+		</div>
+	</div>
+</div>
 <!-- 削除用フォーム -->
 <form action="/Sotsuken/ManageUpdate" method="post">
 <input type="hidden" name="page" value="teacher_manage" />
@@ -67,7 +104,9 @@ toastSelect("success","${Msg }")</script>
 <button type="submit" class="btn btn-danger"name="delete_teacher" ><i class="fa fa-trash-o fa-2x"></i></button>
 </form>
 <!-- 削除 -->
+
 </div>
+
 </td>
 
 </tr>
@@ -78,6 +117,11 @@ toastSelect("success","${Msg }")</script>
 </div>
 </div>
 </div>
+
+
+
+
+
 
 
 
