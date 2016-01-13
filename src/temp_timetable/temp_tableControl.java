@@ -171,8 +171,7 @@ public class temp_tableControl extends HttpServlet {
 					String roomName4	=    request.getParameter("Ro"+ num +"_4");*/
 					//System.out.println(subjectName1+"_1"); System.out.println(date+"_2"); System.out.println(chooseClassID+"_3");
 					//System.out.println(roomName1+"_4"); System.out.println(teacherName1+"_5");
-					 String period = "1";
-					tiList1.add(new tempInfo( period, subjectName1,  date,  chooseClassID,  roomName1,  teacherName1));
+					tiList1.add(new tempInfo("1", subjectName1,  date,  chooseClassID,  roomName1,  teacherName1));
 					/* tiList2.add(new tempInfo( "2", subjectName2,  date, chooseClassID,  roomName2,  teacherName2));
 					 tiList3.add(new tempInfo( "3", subjectName3,  date,  chooseClassID,  roomName3,  teacherName3));
 					 tiList4.add(new tempInfo( "4", subjectName4,  date,  chooseClassID,  roomName4,  teacherName4));*/
