@@ -35,6 +35,7 @@ public class layoutInclude {
 		info.js.add("/Sotsuken/js/dragdrop.js");
 		info.js.add("/Sotsuken/js/clickEvent.js");
 		info.js.add("/Sotsuken/js/formCheck.js");
+		info.js.add("/Sotsuken/js/tempEdit.js");
 
 		return info;
 	}
