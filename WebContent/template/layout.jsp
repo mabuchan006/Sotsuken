@@ -28,9 +28,9 @@
 
 <script >
  	$(function(e) {
- 		f_drag();
  		f_temp_drag();
  		f_temp_drop(e);
+ 		f_temp_formCheck();
  	});
 </script>
 

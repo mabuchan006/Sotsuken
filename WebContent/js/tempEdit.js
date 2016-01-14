@@ -1,11 +1,14 @@
 var textVal = "" , fcEle = "";
 //一時マスタ用
-function f_temp_drag(e) {
+function f_temp_drag() {
 	$(".drag-target td , .drag-target li").draggable({
 		appendTo : "body",
 		revert : "invalid",
 		helper : "clone",
-		cursor : "pointer"
+		cursor : "pointer",
+		start : function(){
+			$(this).trigger("click");
+		}
 	})// draggable
 }// f_drag
 
@@ -37,15 +40,27 @@ function f_temp_formCheck(e) {
 	$("textarea").on({
 		"focusin" : function(e) {
 			textVal = $(this).val();
-			fcEle = $(this).children.get(0);
+			console.log("focusin:"+ textVal);
+			fcEle = $(this).children("textarea").get(0);
 		},
 		"keyup" : function(e) {
 			textVal = $(this).val();
+			console.log("keyup:"+ textVal);
 		},
 		"focusout" : function(e){
+			var insVal = "";
 			$.each($(".drag-target td"), function(k,teacher){
-
+				if (textVal.indexOf($(teacher).text()) != -1) {
+					if(insVal.length > 0){
+						insVal = insVal + "/" + $(teacher).text();
+					} else {
+						insVal = $(teacher).text();
+					}
+				}
 			})
+			console.log("focusout textVal :" + textVal);
+			console.log("focusout insVal :" + insVal);
+			$(this).val(insVal);
 		}
 	})
 }
