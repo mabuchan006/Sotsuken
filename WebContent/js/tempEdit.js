@@ -7,7 +7,7 @@ function f_temp_drag() {
 		helper : "clone",
 		cursor : "pointer",
 		start : function(){
-			$(this).trigger("click");
+			$(this).trigger("focusout");
 		}
 	})// draggable
 }// f_drag
@@ -26,8 +26,12 @@ function f_temp_drop(e) {
 			if (ele.classList.contains("teacher") && dragEle.classList.contains("teacher")) {
 				if (ele.value.length > 0) {
 					ele.value = ele.value + "/" + ui.draggable.text();
+					$(ele).trigger("focusin");
+					$(ele).trigger("focusout");
 				} else {
 					ele.value = ui.draggable.text();
+					$(ele).trigger("focusin");
+					$(ele).trigger("focusout");
 				}
 			} else {
 				disabled: true;
