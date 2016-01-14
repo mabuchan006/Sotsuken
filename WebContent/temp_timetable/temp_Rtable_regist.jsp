@@ -5,7 +5,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
-<!-- タブ -->
+<!-- タブ --><br>
 <ul class="nav nav-tabs noprint" >
 	<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">R4
 			<b class="caret"></b>
@@ -67,7 +67,7 @@
 				<c:if test="${subject.subjectName != ''}" var="flg" />
 
 				<c:if test="${flg}">
-					<li class="panel-body select0">${subject.subjectName}</li>
+					<li class="panel-body select0 subject">${subject.subjectName}</li>
 				</c:if>
 
 
@@ -95,7 +95,7 @@
 				<c:if test="${ teacherList[cnt1].teacherName != null}" var="flg" />
 
 				<c:if test="${flg}">
-					<td class="text-center h5 select0">${ teacherList[cnt1].teacherName }</td>
+					<td class="text-center h5 select0 teacher">${ teacherList[cnt1].teacherName }</td>
 				</c:if>
 
 				<c:if test="${!flg}">
@@ -148,31 +148,31 @@
 				<th rowspan=3>1</th>
 				<td ><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														 name="Su0_1" class="txtFontSize1" >${subject1List[0].subjectName }</textarea>
+														 name="Su0_1" class="txtFontSize1 subject" >${subject1List[0].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Su1_1" class="txtFontSize1" >${subject1List[1].subjectName }</textarea>
+														name="Su1_1" class="txtFontSize1 subject" >${subject1List[1].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Su2_1" class="txtFontSize1">${subject1List[2].subjectName }</textarea>
+														name="Su2_1" class="txtFontSize1 subject">${subject1List[2].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Su3_1" class="txtFontSize1">${subject1List[3].subjectName }</textarea>
+														name="Su3_1" class="txtFontSize1 subject">${subject1List[3].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Su4_1" class="txtFontSize1">${subject1List[4].subjectName }</textarea>
+														name="Su4_1" class="txtFontSize1 subject">${subject1List[4].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Su5_1" class="txtFontSize1">${subject1List[5].subjectName }</textarea>
+														name="Su5_1" class="txtFontSize1 subject">${subject1List[5].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Su6_1" class="txtFontSize1">${subject1List[6].subjectName }</textarea>
+														name="Su6_1" class="txtFontSize1 subject">${subject1List[6].subjectName }</textarea>
 												</p></td>
 			</tr>
 
@@ -180,31 +180,31 @@
 			<tr class="info">
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Te0_1" class="txtFontSize1"></textarea>
+														name="Te0_1" class="txtFontSize1 teacher"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Te1_1"  class="txtFontSize1"></textarea>
+														name="Te1_1"  class="txtFontSize1 teacher"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Te2_1"  class="txtFontSize1"></textarea>
+														name="Te2_1"  class="txtFontSize1 teacher"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Te3_1"  class="txtFontSize1"></textarea>
+														name="Te3_1"  class="txtFontSize1 teacher"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Te4_1"  class="txtFontSize1"></textarea>
+														name="Te4_1"  class="txtFontSize1 teacher"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Te5_1"  class="txtFontSize1"></textarea>
+														name="Te5_1"  class="txtFontSize1 teacher"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Te6_1"  class="txtFontSize1"></textarea>
+														name="Te6_1"  class="txtFontSize1 teacher"></textarea>
 												</p></td>
 			</tr>
 			<!-- １限目　先生 終わり -->
@@ -349,31 +349,31 @@
 				<th rowspan=3>2</th>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 subject"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 subject"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 subject"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 subject"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 subject"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 subject"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 subject"></textarea>
 												</p></td>
 
 			</tr>
@@ -381,31 +381,31 @@
 			<tr class="danger">
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 teacher"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 teacher"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 teacher"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 teacher"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 teacher"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 teacher"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 teacher"></textarea>
 												</p></td>
 			</tr>
 
@@ -502,62 +502,62 @@
 				<th rowspan=3>3</th>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 subject"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 subject"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 subject"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 subject"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 subject"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 subject"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 subject"></textarea>
 												</p></td>
 			</tr>
 
 			<tr class="success">
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 teacher"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 teacher"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 teacher"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 teacher"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 teacher"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 teacher"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 teacher"></textarea>
 												</p></td>
 			</tr>
 
@@ -655,62 +655,62 @@
 				<th rowspan=3>4</th>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 subject"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 subject"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 subject"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 subject"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 subject"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 subject"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 subject"></textarea>
 												</p></td>
 			</tr>
 
 			<tr class="warning">
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1 teacher"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1  teacher"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1  teacher"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1  teacher"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1  teacher"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1  teacher"></textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														id="test" class="txtFontSize1"></textarea>
+														class="txtFontSize1  teacher"></textarea>
 												</p></td>
 			</tr>
 

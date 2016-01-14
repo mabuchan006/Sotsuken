@@ -28,9 +28,7 @@
 
 <script >
  	$(function(e) {
- 		$("#class-room").accordion();
  		f_drag();
- 		f_drop(e);
  		f_temp_drag();
  		f_temp_drop(e);
  	});

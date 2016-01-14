@@ -6,7 +6,7 @@ function f_drag(e) {
 		appendTo : "body",
 		revert : "invalid",
 		helper : "clone",
-		cursor : "pointer"
+		cursor : "pointer",
 	})// draggable
 }// f_drag
 
@@ -60,10 +60,17 @@ function f_temp_drop(e) {
 
 			// 子要素の取得
 			ele = $(this).children("textarea").get(0);
-			console.log(ele);
-			ele.value = ui.draggable.text();
-			console.log(ele.value);
-			console.log(ele);
+			dragEle = ui.draggable.get(0);
+			console.log(ui.draggable.prop("teacher"));
+			console.log(ele.className + ":" + dragEle.className);
+			if (ele.getElementsByClassName("subject") == dragEle.getElementsByClassName("subject")) {
+				ele.value = ui.draggable.text();
+			} else
+			if (ele.getElementsByClassName("teacher") == dragEle.getElementsByClassName("teacher")) {
+				ele.value = ui.draggable.text();
+			} else {
+				disabled: true;
+			}
 			/**
 			// 同値チェック
 			if (ele.value.indexOf(ui.draggable.text()) === -1) {
