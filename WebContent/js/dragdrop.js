@@ -61,24 +61,18 @@ function f_temp_drop(e) {
 			// 子要素の取得
 			ele = $(this).children("textarea").get(0);
 			dragEle = ui.draggable.get(0);
-			console.log(ui.draggable.prop("teacher"));
-			console.log(ele.className + ":" + dragEle.className);
-			if (ele.getElementsByClassName("subject") == dragEle.getElementsByClassName("subject")) {
+			if (ele.classList.contains("subject") && dragEle.classList.contains("subject")) {
 				ele.value = ui.draggable.text();
 			} else
-			if (ele.getElementsByClassName("teacher") == dragEle.getElementsByClassName("teacher")) {
-				ele.value = ui.draggable.text();
+			if (ele.classList.contains("teacher") && dragEle.classList.contains("teacher")) {
+				if (ele.value.length > 0) {
+					ele.value = ele.value + "/" + ui.draggable.text();
+				} else {
+					ele.value = ui.draggable.text();
+				}
 			} else {
 				disabled: true;
 			}
-			/**
-			// 同値チェック
-			if (ele.value.indexOf(ui.draggable.text()) === -1) {
-				ele.value = ui.draggable.text();
-			} else {
-				disabled: true;
-			}// if
-			**/
 		}// drop
 	})// droppable
 }// f_drop
