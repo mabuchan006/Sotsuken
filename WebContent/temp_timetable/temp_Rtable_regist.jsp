@@ -5,8 +5,9 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
-<!-- タブ --><br>
-<ul class="nav nav-tabs noprint" >
+<!-- タブ -->
+<br />
+<ul class="nav nav-tabs noprint ">
 	<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">R4
 			<b class="caret"></b>
 	</a>
@@ -228,7 +229,7 @@
 				<%if(week == 0){ %>
 					<c:if test="${rooms1List[index].week == '月'}" var="flg_0"/>
 						<c:if test="${flg_0 }">
-						<td>${ rooms1List[index].roomName} </td>
+						<td class="fonts">${ rooms1List[index].roomName} </td>
 						<input type="hidden" name="Ro0_1" value="${ rooms1List[index].roomName}" />
 						<%status++;%>
 						</c:if>
@@ -243,7 +244,7 @@
 				<%if(week == 1){ %>
 					<c:if test="${rooms1List[index].week == '火'}" var="flg_1"/>
 						<c:if test="${flg_1 }">
-						<td>${ rooms1List[index].roomName}</td>
+						<td class="fonts">${ rooms1List[index].roomName}</td>
 						<input type="hidden" name="Ro1_1" value="${ rooms1List[index].roomName}" />
 						<%status++;%></c:if>
 						<%if(cnt == period_1 - 1 && status == 0){ %>
@@ -257,7 +258,7 @@
 				<%if(week == 2){ %>
 					<c:if test="${rooms1List[index].week == '水'}" var="flg_2"/>
 						<c:if test="${flg_2 }">
-						<td>${ rooms1List[index].roomName}</td>
+						<td class="fonts">${ rooms1List[index].roomName}</td>
 						<input type="hidden" name="Ro2_1" value="${ rooms1List[index].roomName}" />
 						<%status++;%></c:if>
 						<%if(cnt == period_1 - 1 && status == 0){ %>
@@ -271,7 +272,7 @@
 				<%if(week == 3){ %>
 					<c:if test="${rooms1List[index].week == '木'}" var="flg_3"/>
 					<c:if test="${flg_3 }">
-					<td>${ rooms1List[index].roomName}</td>
+					<td class="fonts">${ rooms1List[index].roomName}</td>
 					<input type="hidden" name="Ro3_1" value="${ rooms1List[index].roomName}" />
 					<%status++;%></c:if>
 						<%if(cnt == period_1 - 1 && status == 0){ %>
@@ -285,7 +286,7 @@
 				<%if(week == 4){ %>
 					<c:if test="${rooms1List[index].week == '金'}" var="flg_4"/>
 					<c:if test="${flg_4}">
-					<td>${ rooms1List[index].roomName}</td>
+					<td class="fonts">${ rooms1List[index].roomName}</td>
 					<input type="hidden" name="Ro4_1" value="${ rooms1List[index].roomName}"  />
 					<%status++;%></c:if>
 						<%if(cnt == period_1 - 1 && status == 0){ %>
@@ -299,7 +300,7 @@
 				<%if(week == 5){ %>
 					<c:if test="${rooms1List[index].week == '土'}" var="flg_5"/>
 					<c:if test="${flg_5 }">
-					<td>${ rooms1List[index].roomName}</td>
+					<td class="fonts">${ rooms1List[index].roomName}</td>
 					<input type="hidden" name="Ro5_1" value="${ rooms1List[index].roomName}" />
 					<%status++;%></c:if>
 						<%if(cnt == period_1 - 1 && status == 0){ %>
@@ -313,7 +314,7 @@
 				<%if(week == 6){ %>
 					<c:if test="${rooms1List[index].week == '日'}" var="flg_6"/>
 					<c:if test="${flg_6 }">
-					<td>${ rooms1List[index].roomName}</td>
+					<td class="fonts">${ rooms1List[index].roomName}</td>
 					<input type="hidden" name="Ro6_1" value="${ rooms1List[index].roomName}" />
 					<%status++;%></c:if>
 						<%if(cnt == period_1 - 1 && status == 0){ %>
@@ -426,7 +427,7 @@
 
 				<%if(week == 0){ %>
 					<c:if test="${rooms2List[index].week == '月'}" var="flg_0"/>
-						<c:if test="${flg_0 }"><td>${ rooms2List[index].roomName}</td><%status++;%></c:if>
+						<c:if test="${flg_0 }"><td class="fonts">${ rooms2List[index].roomName}</td><%status++;%></c:if>
 						<% if(cnt == period_2 - 1 && status == 0){ %>
 						<c:if test="${!flg_0 }"><td></td></c:if>
 						<% } %>
@@ -434,7 +435,7 @@
 
 				<%if(week == 1){ %>
 					<c:if test="${rooms2List[index].week == '火'}" var="flg_1"/>
-						<c:if test="${flg_1 }"><td>${ rooms2List[index].roomName}</td><%status++;%></c:if>
+						<c:if test="${flg_1 }"><td class="fonts">${ rooms2List[index].roomName}</td><%status++;%></c:if>
 						<%if(cnt == period_2 - 1 && status == 0){ %>
 						<c:if test="${!flg_1 }"><td></td></c:if>
 						<% } %>
@@ -442,7 +443,7 @@
 
 				<%if(week == 2){ %>
 					<c:if test="${rooms2List[index].week == '水'}" var="flg_2"/>
-						<c:if test="${flg_2 }"><td>${ rooms2List[index].roomName}</td><%status++;%></c:if>
+						<c:if test="${flg_2 }"><td class="fonts">${ rooms2List[index].roomName}</td><%status++;%></c:if>
 						<%if(cnt == period_2 - 1 && status == 0){ %>
 						<c:if test="${!flg_2 }"><td></td></c:if>
 						<% } %>
@@ -450,7 +451,7 @@
 
 				<%if(week == 3){ %>
 					<c:if test="${rooms2List[index].week == '木'}" var="flg_3"/>
-					<c:if test="${flg_3 }"><td>${ rooms2List[index].roomName}</td><%status++;%></c:if>
+					<c:if test="${flg_3 }"><td class="fonts">${ rooms2List[index].roomName}</td><%status++;%></c:if>
 						<%if(cnt == period_2 - 1 && status == 0){ %>
 						<c:if test="${!flg_3 }"><td></td></c:if>
 						<% } %>
@@ -458,7 +459,7 @@
 
 				<%if(week == 4){ %>
 					<c:if test="${rooms2List[index].week == '金'}" var="flg_4"/>
-					<c:if test="${flg_4}"><td>${ rooms2List[index].roomName}</td><%status++;%></c:if>
+					<c:if test="${flg_4}"><td class="fonts">${ rooms2List[index].roomName}</td><%status++;%></c:if>
 						<%if(cnt == period_2 - 1 && status == 0){ %>
 						<c:if test="${!flg_4 }"><td></td></c:if>
 						<% } %>
@@ -466,7 +467,7 @@
 
 				<%if(week == 5){ %>
 					<c:if test="${rooms2List[index].week == '土'}" var="flg_5"/>
-					<c:if test="${flg_5 }"><td>${ rooms2List[index].roomName}</td><%status++;%></c:if>
+					<c:if test="${flg_5 }"><td class="fonts">${ rooms2List[index].roomName}</td><%status++;%></c:if>
 						<%if(cnt == period_2 - 1 && status == 0){ %>
 						<c:if test="${!flg_5 }"><td></td></c:if>
 						<% } %>
@@ -474,7 +475,7 @@
 
 				<%if(week == 6){ %>
 					<c:if test="${rooms2List[index].week == '日'}" var="flg_6"/>
-					<c:if test="${flg_6 }"><td>${ rooms2List[index].roomName}</td><%status++;%></c:if>
+					<c:if test="${flg_6 }"><td class="fonts">${ rooms2List[index].roomName}</td><%status++;%></c:if>
 						<%if(cnt == period_2 - 1 && status == 0){ %>
 						<c:if test="${!flg_6 }"><td></td></c:if>
 						<% } %>
@@ -578,7 +579,7 @@
 
 				<%if(week == 0){ %>
 					<c:if test="${rooms3List[index].week == '月'}" var="flg_0"/>
-						<c:if test="${flg_0 }"><td>${ rooms3List[index].roomName}</td><%status++;%></c:if>
+						<c:if test="${flg_0 }"><td class="fonts">${ rooms3List[index].roomName}</td><%status++;%></c:if>
 						<% if(cnt == period_3 - 1 && status == 0){ %>
 						<c:if test="${!flg_0 }"><td></td></c:if>
 						<% } %>
@@ -586,7 +587,7 @@
 
 				<%if(week == 1){ %>
 					<c:if test="${rooms3List[index].week == '火'}" var="flg_1"/>
-						<c:if test="${flg_1 }"><td>${ rooms3List[index].roomName}</td><%status++;%></c:if>
+						<c:if test="${flg_1 }"><td class="fonts">${ rooms3List[index].roomName}</td><%status++;%></c:if>
 						<%if(cnt == period_3 - 1 && status == 0){ %>
 						<c:if test="${!flg_1 }"><td></td></c:if>
 						<% } %>
@@ -594,7 +595,7 @@
 
 				<%if(week == 2){ %>
 					<c:if test="${rooms3List[index].week == '水'}" var="flg_2"/>
-						<c:if test="${flg_2 }"><td>${ rooms3List[index].roomName}</td><%status++;%></c:if>
+						<c:if test="${flg_2 }"><td class="fonts">${ rooms3List[index].roomName}</td><%status++;%></c:if>
 						<%if(cnt == period_3 - 1 && status == 0){ %>
 						<c:if test="${!flg_2 }"><td></td></c:if>
 						<% } %>
@@ -602,7 +603,7 @@
 
 				<%if(week == 3){ %>
 					<c:if test="${rooms3List[index].week == '木'}" var="flg_3"/>
-					<c:if test="${flg_3 }"><td>${ rooms3List[index].roomName}</td><%status++;%></c:if>
+					<c:if test="${flg_3 }"><td class="fonts">${ rooms3List[index].roomName}</td><%status++;%></c:if>
 						<%if(cnt == period_3 - 1 && status == 0){ %>
 						<c:if test="${!flg_3 }"><td></td></c:if>
 						<% } %>
@@ -610,7 +611,7 @@
 
 				<%if(week == 4){ %>
 					<c:if test="${rooms3List[index].week == '金'}" var="flg_4"/>
-					<c:if test="${flg_4}"><td>${ rooms3List[index].roomName}</td><%status++;%></c:if>
+					<c:if test="${flg_4}"><td class="fonts">${ rooms3List[index].roomName}</td><%status++;%></c:if>
 						<%if(cnt == period_3 - 1 && status == 0){ %>
 						<c:if test="${!flg_4 }"><td></td></c:if>
 						<% } %>
@@ -618,7 +619,7 @@
 
 				<%if(week == 5){ %>
 					<c:if test="${rooms3List[index].week == '土'}" var="flg_5"/>
-					<c:if test="${flg_5 }"><td>${ rooms3List[index].roomName}</td><%status++;%></c:if>
+					<c:if test="${flg_5 }"><td class="fonts">${ rooms3List[index].roomName}</td><%status++;%></c:if>
 						<%if(cnt == period_3 - 1 && status == 0){ %>
 						<c:if test="${!flg_5 }"><td></td></c:if>
 						<% } %>
@@ -626,7 +627,7 @@
 
 				<%if(week == 6){ %>
 					<c:if test="${rooms3List[index].week == '日'}" var="flg_6"/>
-					<c:if test="${flg_6 }"><td>${ rooms3List[index].roomName}</td><%status++;%></c:if>
+					<c:if test="${flg_6 }"><td class="fonts">${ rooms3List[index].roomName}</td><%status++;%></c:if>
 						<%if(cnt == period_3 - 1 && status == 0){ %>
 						<c:if test="${!flg_6 }"><td></td></c:if>
 						<% } %>
@@ -731,7 +732,7 @@
 
 				<%if(week == 0){ %>
 					<c:if test="${rooms4List[index].week == '月'}" var="flg_0"/>
-						<c:if test="${flg_0 }"><td>${ rooms4List[index].roomName}</td><%status++;%></c:if>
+						<c:if test="${flg_0 }"><td class="fonts">${ rooms4List[index].roomName}</td><%status++;%></c:if>
 						<% if(cnt == period_4 - 1 && status == 0){ %>
 						<c:if test="${!flg_0 }"><td></td></c:if>
 						<% } %>
@@ -739,7 +740,7 @@
 
 				<%if(week == 1){ %>
 					<c:if test="${rooms4List[index].week == '火'}" var="flg_1"/>
-						<c:if test="${flg_1 }"><td>${ rooms4List[index].roomName}</td><%status++;%></c:if>
+						<c:if test="${flg_1 }"><td class="fonts">${ rooms4List[index].roomName}</td><%status++;%></c:if>
 						<%if(cnt == period_4 - 1 && status == 0){ %>
 						<c:if test="${!flg_1 }"><td></td></c:if>
 						<% } %>
@@ -747,7 +748,7 @@
 
 				<%if(week == 2){ %>
 					<c:if test="${rooms4List[index].week == '水'}" var="flg_2"/>
-						<c:if test="${flg_2 }"><td>${ rooms4List[index].roomName}</td><%status++;%></c:if>
+						<c:if test="${flg_2 }"><td class="fonts">${ rooms4List[index].roomName}</td><%status++;%></c:if>
 						<%if(cnt == period_4 - 1 && status == 0){ %>
 						<c:if test="${!flg_2 }"><td></td></c:if>
 						<% } %>
@@ -755,7 +756,7 @@
 
 				<%if(week == 3){ %>
 					<c:if test="${rooms4List[index].week == '木'}" var="flg_3"/>
-					<c:if test="${flg_3 }"><td>${ rooms4List[index].roomName}</td><%status++;%></c:if>
+					<c:if test="${flg_3 }"><td class="fonts">${ rooms4List[index].roomName}</td><%status++;%></c:if>
 						<%if(cnt == period_4 - 1 && status == 0){ %>
 						<c:if test="${!flg_3 }"><td></td></c:if>
 						<% } %>
@@ -763,7 +764,7 @@
 
 				<%if(week == 4){ %>
 					<c:if test="${rooms4List[index].week == '金'}" var="flg_4"/>
-					<c:if test="${flg_4}"><td>${ rooms4List[index].roomName}</td><%status++;%></c:if>
+					<c:if test="${flg_4}"><td class="fonts">${ rooms4List[index].roomName}</td><%status++;%></c:if>
 						<%if(cnt == period_4 - 1 && status == 0){ %>
 						<c:if test="${!flg_4 }"><td></td></c:if>
 						<% } %>
@@ -771,7 +772,7 @@
 
 				<%if(week == 5){ %>
 					<c:if test="${rooms4List[index].week == '土'}" var="flg_5"/>
-					<c:if test="${flg_5 }"><td>${ rooms4List[index].roomName}</td><%status++;%></c:if>
+					<c:if test="${flg_5 }"><td class="fonts">${ rooms4List[index].roomName}</td><%status++;%></c:if>
 						<%if(cnt == period_4 - 1 && status == 0){ %>
 						<c:if test="${!flg_5 }"><td></td></c:if>
 						<% } %>
@@ -779,7 +780,7 @@
 
 				<%if(week == 6){ %>
 					<c:if test="${rooms4List[index].week == '日'}" var="flg_6"/>
-					<c:if test="${flg_6 }"><td>${ rooms4List[index].roomName}</td><%status++;%></c:if>
+					<c:if test="${flg_6 }"><td class="fonts">${ rooms4List[index].roomName}</td><%status++;%></c:if>
 						<%if(cnt == period_4 - 1 && status == 0){ %>
 						<c:if test="${!flg_6 }"><td></td></c:if>
 						<% } %>

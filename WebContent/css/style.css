@@ -605,4 +605,11 @@ margin0{
 
    }
 
+.left{
+	float: left;
+}
+
+.fonts{
+	font-size : 150%;
+}
 
