@@ -18,17 +18,19 @@ $(document).ready(
 						// parent().parent() => td > tr
 						($("#addTb-tbody > tr").eq(0)).clone(true).insertAfter(
 								$(this).parent().parent());
-
+						$(".removeList").css("opacity", "1");
 						firstID();
 
 					});
 
 			// -ボタン押されたら行の削除
 			$(document).on("click", ".removeList", function() {
-				if ($(".removeList").size > 1) {
+
+				if ($("#addTb-tbody > tr").size() > 2) {
 					$(this).parent().parent().empty();
 					firstID();
 				} else {
+
 					$(".removeList").css("opacity", "0.1");
 
 				}

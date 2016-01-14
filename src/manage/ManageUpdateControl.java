@@ -233,7 +233,6 @@ public class ManageUpdateControl extends HttpServlet {
 						request.getParameter("classID")==null?""//true
 								:request.getParameter("classID")//false
 						,request.getParameter("className")
-
 						);
 
 				try {
@@ -311,7 +310,6 @@ public class ManageUpdateControl extends HttpServlet {
 					}//if
 				}
 
-
 			} catch (Exception e) {
 				// TODO 自動生成された catch ブロック
 				e.printStackTrace();
@@ -346,9 +344,3 @@ public class ManageUpdateControl extends HttpServlet {
 		request.setAttribute("js", js);
 	}//css&js
 	}
-
-
-
-
-
-

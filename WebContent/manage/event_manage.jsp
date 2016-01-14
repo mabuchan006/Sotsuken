@@ -1,20 +1,5 @@
-
-<%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="utf-8">
-
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>イベント管理</title>
-
-
-
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!-- BootstrapのCSS読み込み -->
 <link href="../bootstrap/css/style.css" rel="stylesheet">
 <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -31,29 +16,23 @@
 
 
 
-</head>
-<body>
+<c:if test= "${!empty Msg }">
+<script>
+toastSelect("success","${Msg }")</script>
+</c:if>
+
+<c:if test=  "${!empty err_Msg }">
+<script>toastSelect("error","${err_Msg }")</script>
+</c:if>
+
+<div class="row col-md-9">
 
 
-	<div class="row">
+<!-- 登録処理 -->
+<form action="/Sotsuken/ManageUpdate" method="post">
+<input type="hidden"name="page" value="class_manage">
 
-
-		<div class="content-header">
-
-
-
-			<div id="logo">
-				<h1 class="font1">EventManage</h1>
-			</div>
-
-		</div>
-		<!-- 登録 -->
-		<form action="/Sotsuken/ManageUpdate" method="get">
-
-
-
-
-			<table class="col-md-7 col-md-offset-3" id="first_table">
+<table class="col-md-9 col-md-offset-3" id="first_table">
 				<tr>
 					<td class="col-md-3"><label for="IventName" class="labels">イベント名</label>
 						<input type="text" class="form-control" id="eventName"
@@ -84,56 +63,44 @@
 						<button type="submit" class="btn btn-primary col-md-2" id="regist_btn"
 							name="regist_event">登録</button></td>
 				</tr>
+</table>
+</form><!-- 登録終わり -->
 
 
 
-			</table>
-		</form>
-		<!-- 登録終わり -->
+<!-- クラス一覧表示 -->
+<div class="col-md-9 col-md-offset-3">
+<div class="back">
+<table class="table ">
+<thead>
+<tr class="info wide">
+<td colspan="3">クラス一覧   ( ${cnt } 件)</td></tr>
+</thead>
+<tbody>
+<!-- クラス情報取得 -->
+<c:forEach var="rs" items="${classList }">
+<tr class="select">
+<td class="classid">${rs.classID}</td>
+<td class="classname" data-name="${rs.classID}">${rs.className}</td>
+<td>
+<div style="display:inline-flex">
+<button type="button" class="btn btn-success edit_class "name="edit_class" ><i class="fa fa-pencil-square-o fa-2x"></i></button>
 
-		<!-- 登録情報表示 -->
-		<div class="col-md-7 col-md-offset-3">
-			<div class="back">
-				<table class="table ">
-					<thead>
-						<tr>
-							<td colspan="7">event List</td>
-						</tr>
-					</thead>
+<!-- 削除用フォーム -->
+<form action="/Sotsuken/ManageUpdate?page=class_manage" method="post">
+<input type="hidden" name = "classID" value="${rs.classID }" />
+<input type="hidden" name = "className" value="${rs.className }" />
+<button type="submit" class="btn btn-danger"name="delete_class" ><i class="fa fa-trash-o fa-2x"></i></button>
+</form>
+<!-- 削除 -->
+</div>
+</td>
 
-					<tbody>
+</tr>
+</c:forEach>
 
-
-
-						<tr class="fontSize">
-							<td>イベント名</td>
-							<td>日時</td>
-							<td>コマ</td>
-							<td>教室</td>
-							<td>講師</td>
-							<td>クラス名</td>
-							<td>
-								<form action="/Sotsuken/ManageUpdate" method="get">
-									<input type="hidden" name="eventID" value="${rs.eventID }" />
-									<input type="hidden" name="eventName" value="${rs.eventName }" />
-									<button type="submit" class="btn btn-danger btn-size" name="delete_event">
-										<i class="fa fa-trash-o fa-2x"></i>
-									</button>
-								</form>
-							</td>
-
-						</tr>
-
-					</tbody>
-				</table>
-			</div>
-		</div>
-
-
-	</div>
-
-
-
-
-</body>
-</html>
+</tbody>
+</table>
+</div>
+</div>
+</div>
