@@ -69,9 +69,9 @@ toastSelect("success","${Msg }")</script>
 <!-- form -->
 <form action="/Sotsuken/ManageUpdate" method="post"  id="submit">
 <input type="hidden" name="page" value="subject_manage" />
-<table class="table col-md-9 col-md-offset-3">
-<thead class="thead">
-<tr >
+<table class="table col-md-9 col-md-offset-2">
+<thead class="thead bgc">
+<tr class="white">
 <th >科目名</th>
 <th >学年</th>
 <th >学科</th>
@@ -125,7 +125,7 @@ toastSelect("success","${Msg }")</script>
 
 
 <!-- 科目一覧表示 -->
-<div class="col-md-12 col-md-offset-3">
+<div class="col-md-9 col-md-offset-3">
 <div class="back">
 <table class="table ">
 <thead class="thead">

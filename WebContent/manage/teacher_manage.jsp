@@ -43,7 +43,7 @@ toastSelect("success","${Msg }")</script>
 </form><!-- 登録終わり -->
 
 <!-- 講師一覧表示 -->
-<div class="col-md-12 col-md-offset-3">
+<div class="col-md-9 col-md-offset-3">
 <div class="back">
 <table class="table ">
 <thead>
@@ -71,22 +71,22 @@ toastSelect("success","${Msg }")</script>
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<div class="modal-header back-color">
-								<button type="button" class="close" data-dismiss="modal"
+								<button type="button" class="close right" data-dismiss="modal"
 									aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>
 								<h3 class="modal-title white">pass変更</h3>
 							</div>
-							<div class="modal-body black warituke">
+							<div class="modal-body black warituke ">
 								<form action="/Sotsuken/loginControl" method="POST">
 
 									<div id="msg"></div>
 
-									<label class="black ">old pass:</label> <input type="text"
-										placeholder="username" id="old_pass" value="" name="old_pass"> <br>
-									<label class="black ">new pass:</label> <input type="password" placeholder="PASS"
-										id="enterPw" value="" name="password"><br> <br> <input
-										type="submit" value="login" id="new_pass">
+									<label class="black md">old pass:</label>
+									<input type="text"placeholder="username" id="old_pass" value="" name="old_pass"> <br>
+									<label class="black md">new pass:</label>
+									<input type="password" placeholder="PASS" id="enterPw" value="" name="password">
+										<br><input type="submit" value="login" id="new_pass">
 								</form>
 							</div>
 						<div class="modal-footer">

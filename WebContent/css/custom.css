@@ -130,6 +130,10 @@ body {
 	text-align: center;
 }
 
+.right{
+	text-align: right;
+}
+
 
 .favolite {
 	border-color:#202020;
@@ -303,3 +307,11 @@ color11 {
 	color: #fff;
 }
 
+.md{
+width:110px;
+
+}
+
+.bgc{
+	background-color:#202020;
+}
