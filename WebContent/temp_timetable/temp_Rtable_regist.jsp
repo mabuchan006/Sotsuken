@@ -93,15 +93,8 @@
 				<%
 					for (int cnt2 = 0; cnt2 <= 1; cnt2++) {
 				%>
-				<c:if test="${ teacherList[cnt1].teacherName != null}" var="flg" />
 
-				<c:if test="${flg}">
 					<td class="text-center h5 select0 teacher">${ teacherList[cnt1].teacherName }</td>
-				</c:if>
-
-				<c:if test="${!flg}">
-					<td style="background-color: #202020; border-color: #202020"></td>
-				</c:if>
 
 				<%
 					cnt1++;
