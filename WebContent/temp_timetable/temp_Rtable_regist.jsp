@@ -87,6 +87,9 @@
 				int teacher_count =  Integer.parseInt(request.getAttribute("teacher_count").toString());
 				int cnt1 = 0;
 				for (; cnt1 < teacher_count; cnt1++) {
+					if(cnt1 != 0){
+						cnt1 = cnt1 - 1;
+					}
 					pageContext.setAttribute("cnt1", cnt1);
 			%>
 			<tr id="drag-target">
@@ -97,7 +100,7 @@
 					<td class="text-center h5 select0 teacher">${ teacherList[cnt1].teacherName }</td>
 
 				<%
-					cnt1++;
+							cnt1++;
 							pageContext.setAttribute("cnt1", cnt1);
 						}
 				%>

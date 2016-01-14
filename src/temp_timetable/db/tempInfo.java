@@ -12,6 +12,21 @@ public class tempInfo implements Serializable {
 	private String roomName;
 	private String teacherName;
 
+	public tempInfo(String period, String subjectName, String date, String classID, String roomName,
+			String teacherName) {
+		super();
+		this.period = period;
+		this.subjectName = subjectName;
+		this.date = date;
+		this.classID = classID;
+		this.roomName = roomName;
+		this.teacherName = teacherName;
+	}
+
+	public tempInfo() {
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
+
 	public String getPeriod() {
 		return period;
 	}
@@ -57,21 +72,6 @@ public class tempInfo implements Serializable {
 	}
 
 	public void setTeacherName(String teacherName) {
-		this.teacherName = teacherName;
-	}
-
-	public tempInfo() {
-		// TODO 自動生成されたコンストラクター・スタブ
-	}
-
-	public tempInfo(String period, String subjectName, String date, String classID, String roomName,
-			String teacherName) {
-		super();
-		this.period = period;
-		this.subjectName = subjectName;
-		this.date = date;
-		this.classID = classID;
-		this.roomName = roomName;
 		this.teacherName = teacherName;
 	}
 

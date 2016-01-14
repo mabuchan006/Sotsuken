@@ -14,6 +14,7 @@ public class tempDBManage extends DBAccess {
 	private String rooms2_SQL; //コマ割りから部屋情報取得
 	private String rooms3_SQL; //コマ割りから部屋情報取得
 	private String rooms4_SQL; //コマ割りから部屋情報取得
+	List<tempInfo> tempinfo = new ArrayList<tempInfo>();
 
 
 
@@ -48,7 +49,7 @@ public class tempDBManage extends DBAccess {
 	            +"order by case divide.week when '月' then 1 when '火' then 2 when '水' then 3 when '木' then 4 "
 	            +"when '金' then 5 when '土' then 6 when '日' then 7 end");
 
-		insertSQL = String.format("replace into tbl_temp_timetable(period, subjectName, date, classID,roomName,teacherName ) values(?,?,?,?,?,?)");
+		insertSQL = String.format("replace into tbl_temp_timetable(period, subjectName, date, classID, roomName, teacherName) values(?,?,?,?,?,?)");
 	}
 
 
@@ -108,21 +109,12 @@ public class tempDBManage extends DBAccess {
 			connect();
 
 			for (tempInfo ti : tiList) {
-			System.out.println(ti.getPeriod()+"_in1");
-			System.out.println(ti.getSubjectName()+"_in2");
-			System.out.println(ti.getDate()+"_in3");
-			System.out.println(ti.getClassID()+"_in4");
-			System.out.println(ti.getRoomName()+"_in5");
-			System.out.println(ti.getTeacherName()+"_in6");
-			}//test用システムアウト
-
-			for (tempInfo ti : tiList) {
 				createStstement(insertSQL);
-				System.out.println(ti.getPeriod());
-				getPstmt().setString(1, ti.getPeriod());
-				System.out.println("どこで落ちてる２");
+
+				getPstmt().setString(1,ti.getPeriod());
+
 				getPstmt().setString(2, ti.getSubjectName());
-				System.out.println("どこで落ちてる３");
+
 				getPstmt().setString(3, ti.getDate());
 
 				getPstmt().setString(4, ti.getClassID());
@@ -132,8 +124,9 @@ public class tempDBManage extends DBAccess {
 				getPstmt().setString(6, ti.getTeacherName());
 
 				updateExe();
-				disConnection();
+
 			}//for
+			disConnection();
 		} catch (Exception e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();

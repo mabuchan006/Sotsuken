@@ -1,7 +1,6 @@
 package temp_timetable;
 
 import java.io.IOException;
-import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -47,19 +46,13 @@ public class temp_tableControl extends HttpServlet {
 	private List<roomInfo> rooms3List; // 3限目時間割マスタ保持用
 	private List<roomInfo> rooms4List; // 4限目時間割マスタ保持用
 
-	private String page_title = "Temporary Edit";// ページ名
+	private String page_title = "";// ページ名
 	String content_page; // 遷移先jsp
 	private String chooseClassID ;// classID選択 TODO:DBSWitchテーブル変更を柔軟にする。
 
 	teacherDBManage teDBM = new teacherDBManage();
 	tempDBManage tempDBM = new tempDBManage();
 
-	private int period;
-	private String subjectName;
-	private Date date;
-	private String classID;
-	private String roomName;
-	private String teacherName;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
@@ -92,17 +85,21 @@ public class temp_tableControl extends HttpServlet {
 			chooseClassID = value.chooseClassID;
 			content_page = value.content_page;
 			request.setAttribute("chooseClassID",chooseClassID); //Insert のクラス情報に使用するため
-		} else {
-			//String url = "/Sotsuken/editView?page=R";
-			//response.sendRedirect(url);
-			//return;
-		} //if else
+			 page_title = "Temporary Edit" + " 　" +chooseClassID.toString();
+		} else{
+			chooseClassID = "R4A1";
+			content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			 page_title = "Temporary Edit" + " 　" +chooseClassID.toString();
+		}//if DB切り替え
 
 		//DivideUpdateからの情報取得
 		try {
 			subjectDBManage suDBM = new subjectDBManage(chooseClassID);
 			infoSubjectList = suDBM.choiceSubject(); // 科目取得
 			teacherList = teDBM.teacherDBSelect(); // 先生取得
+			for(teacherInfo ti :teacherList){
+				System.out.println(ti.getTeacherName()+"_1");
+			}
 
 			rooms1List = tempDBM.roomsSelect(1, chooseClassID);
 			rooms2List = tempDBM.roomsSelect(2, chooseClassID);
@@ -145,6 +142,7 @@ public class temp_tableControl extends HttpServlet {
 					String num = String.valueOf(i);
 
 					//1限目の週間予定取得
+					//１限目
 					String subjectName1 = request.getParameter("Su"+ num +"_1");
 					if( subjectName1 == null || subjectName1.length() == 0 ){
 						subjectName1 = "";
@@ -158,35 +156,65 @@ public class temp_tableControl extends HttpServlet {
 						roomName1 = "";
 					}//null排除
 
-					/*String subjectName2 = request.getParameter("Su"+ num +"_2");
+					/*//２限目
+					String subjectName2 = request.getParameter("Su"+ num +"_2");
+					  if( subjectName2 == null || subjectName2.length() == 0 ){
+						subjectName2 = "";
+					}//null排除
 					String teacherName2 = request.getParameter("Te"+ num +"_2");
+					if( teacherName2 == null || teacherName2.length() == 0 ){
+						teacherName2 = "";
+					}//null排除
 					String roomName2	=    request.getParameter("Ro"+ num +"_2");
+					if( roomName2 == null || roomName2.length() == 0 ){
+						roomName2 = "";
+					}//null排除
 
+					//３限目
 					String subjectName3 = request.getParameter("Su"+ num +"_3");
+					if( subjectName3 == null || subjectName3.length() == 0 ){
+						subjectName3 = "";
+					}//null排除
 					String teacherName3 = request.getParameter("Te"+ num +"_3");
+					if( teacherName3 == null || teacherName3.length() == 0 ){
+						teacherName3 = "";
+					}//null排除
 					String roomName3 	=    request.getParameter("Ro"+ num +"_3");
+					if( roomName3 == null || roomName3.length() == 0 ){
+						roomName3 = "";
+					}//null排除
 
+					//4限目
 					String subjectName4 = request.getParameter("Su"+ num +"_4");
+					if( subjectName4 == null || subjectName4.length() == 0 ){
+						subjectName4 = "";
+					}//null排除
 					String teacherName4 = request.getParameter("Te"+ num +"_4");
-					String roomName4	=    request.getParameter("Ro"+ num +"_4");*/
-					//System.out.println(subjectName1+"_1"); System.out.println(date+"_2"); System.out.println(chooseClassID+"_3");
-					//System.out.println(roomName1+"_4"); System.out.println(teacherName1+"_5");
+					if( teacherName4 == null || teacherName4.length() == 0 ){
+						teacherName4 = "";
+					}//null排除
+					String roomName4	=    request.getParameter("Ro"+ num +"_4");
+					if( roomName4 == null || roomName4.length() == 0 ){
+						roomName4 = "";
+					}//null排除
+*/
+					//各日のコマをリストに追加
 					tiList1.add(new tempInfo("1", subjectName1,  date,  chooseClassID,  roomName1,  teacherName1));
-					/* tiList2.add(new tempInfo( "2", subjectName2,  date, chooseClassID,  roomName2,  teacherName2));
-					 tiList3.add(new tempInfo( "3", subjectName3,  date,  chooseClassID,  roomName3,  teacherName3));
-					 tiList4.add(new tempInfo( "4", subjectName4,  date,  chooseClassID,  roomName4,  teacherName4));*/
+					//tiList2.add(new tempInfo( "2", subjectName2,  date, chooseClassID,  roomName2,  teacherName2));
+					//tiList3.add(new tempInfo( "3", subjectName3,  date,  chooseClassID,  roomName3,  teacherName3));
+					//tiList4.add(new tempInfo( "4", subjectName4,  date,  chooseClassID,  roomName4,  teacherName4));
 
-					date = dateAdd(date);
+					date = dateAdd(date); //日にち加算
 				}//for 7日分
 			}//for ４週分
 
-			//Insert
+			//Insert　２８日分
 			tempDBM.tempDBInsert(tiList1);
 			//tempDBM.tempDBInsert(tiList2);
 			//tempDBM.tempDBInsert(tiList3);
 			//tempDBM.tempDBInsert(tiList4);
 
-		}
+		}//Insert 終了
 
 
 		// ディスパッチ準備
