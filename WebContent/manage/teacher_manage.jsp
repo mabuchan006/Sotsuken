@@ -23,13 +23,13 @@ toastSelect("success","${Msg }")</script>
 <td class="col-md-4">
 <!-- 名前入力 -->
 <label for="teacherName" class="labels">名前</label>
-<input type="text" class="form-control" id="teacherName" name="teacherName" >
+<input type="text" size="20" class="form-control" id="teacherName" name="teacherName" >
 </td>
 
 <td class="col-md-4">
 <!-- pass入力 -->
 <label for="password" class="labels">パスワード</label>
-<input type="password" class="form-control" name="password" >
+<input type="password" size="20" class="form-control" name="password" >
 </td>
 
 <td class="col-md-4">

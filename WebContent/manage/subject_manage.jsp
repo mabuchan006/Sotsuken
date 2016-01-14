@@ -69,7 +69,7 @@ toastSelect("success","${Msg }")</script>
 <!-- form -->
 <form action="/Sotsuken/ManageUpdate" method="post"  id="submit">
 <input type="hidden" name="page" value="subject_manage" />
-<table class="table col-md-9 col-md-offset-2">
+<table class="table col-md-9 col-md-offset-3 nana">
 <thead class="thead bgc">
 <tr class="white">
 <th >科目名</th>
