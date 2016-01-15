@@ -75,7 +75,7 @@ toastSelect("success","${Msg }")</script>
 									aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>
-								<h3 class="modal-title white">pass変更</h3>
+								<h3 class="modal-title white fonts">password change</h3>
 							</div>
 							<div class="modal-body black warituke ">
 								<form action="/Sotsuken/loginControl" method="POST">
@@ -84,9 +84,13 @@ toastSelect("success","${Msg }")</script>
 
 									<label class="black md">old pass:</label>
 									<input type="text"placeholder="username" id="old_pass" value="" name="old_pass"> <br>
+
 									<label class="black md">new pass:</label>
 									<input type="password" placeholder="PASS" id="enterPw" value="" name="password">
-										<br><input type="submit" value="login" id="new_pass">
+									<br>
+									<label class="black md">one more:</label>
+									<input type="password" placeholder="PASS" id="enterPw" value="" name="password">
+									<br><input type="submit" value="change" id="new_pass">
 								</form>
 							</div>
 						<div class="modal-footer">
