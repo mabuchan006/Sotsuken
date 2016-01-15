@@ -46,28 +46,28 @@
 		<nav class="pure-drawer" data-position="left">
 
 
-			<h1 style="padding: 100px 20px 20px; margin: 0;">管理者メニュー</h1>
+			<h1 style="padding: 100px 20px 20px; margin: 0;">AdminMENU</h1>
 			<ul>
 				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">
-				<a href="/Sotsuken/ManageUpdate?page=teacher_manage">講師管理</a></h1></li>
+				<a href="/Sotsuken/ManageUpdate?page=teacher_manage">Teacher</a></h1></li>
 
 				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">
-				<a href="/Sotsuken/ManageUpdate?page=subject_manage">科目管理</a></h1></li>
+				<a href="/Sotsuken/ManageUpdate?page=subject_manage">Subject</a></h1></li>
 
 				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">
-				<a href="/Sotsuken/ManageUpdate?page=class_manage">クラス管理</a></h1></li>
+				<a href="/Sotsuken/ManageUpdate?page=class_manage">Class</a></h1></li>
 
 				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">
-				<a href="/Sotsuken/divideUpdate">コマ割り管理</a></h1></li>
+				<a href="/Sotsuken/divideUpdate">Create </a></h1></li>
 
 				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">
-				<a href="/Sotsuken/divideUpdate">イベント管理</a></h1></li>
+				<a href="/Sotsuken/divideUpdate">Event</a></h1></li>
 
 
 				<li>
 					<ul id="flip3" class="dropmenu select2 ">
 						<li class="select2 moji box" style="padding: 15px 40px; margin:  0 20px 0 0;"><a
-							href="#">時間割管理</a>
+							href="#">TimeTable</a>
 							<ul >
 								<li><a href="/Sotsuken/editView?page=R">R</a></li>
 								<li><a href="/Sotsuken/editView?page=S">S</a></li>
