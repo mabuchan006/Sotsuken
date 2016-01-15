@@ -44,24 +44,5 @@ $(function login() {
 		}
 	});//onkeypress()
 
-	var login{};
-
-	login.doLogin = function doLogin(loginForm) {
-
-		//ID & PASS null check
-		if ( loginForm.id.value == '' ) {
-			return login.doError('IDを入力してください。');
-		}
-		if ( loginForm.pass.value == '' ) {
-			return login.doError('パスワードを入力してください。');
-		}
-		//NOT Error
-		return true;
-	}
-
-	login.doError = function doError(msg) {
-		alert(msg);
-		return false;
-	}
 
 });//login()
