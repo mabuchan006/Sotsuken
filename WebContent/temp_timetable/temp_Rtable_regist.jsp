@@ -4,12 +4,23 @@
 <%@ page pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-
+<form action="/Sotsuken/editView" method="post" >
 
 
 
 <!-- タブ -->
 <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<!-- button -->
+			<button type="submit" class="btn btn-warning btn-lg col-md-1   right1 center fonts" id="confBtn" name="confirm">マスタ確認</button>
+			<button type="submit" class="btn btn-success btn-lg col-md-1   right1 center fonts" id="masupBtn" name="up">マスタアップ</button>
+			<button type="submit" class="btn btn-primary btn-lg col-md-1  right1 center fonts" id="regBtn" name="regist">登録</button>
+
+<!--button End  -->
 <ul class="nav nav-tabs noprint ">
 	<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">R4
 			<b class="caret"></b>
@@ -58,13 +69,15 @@
 
 <br />
 
-<form action="/Sotsuken/editView" method="post" >
+
+
 
 <!-- 科目リスト　先生リスト取得 -->
 
 <div class="col-md-2 fix">
 		<h3 class="font" style="background-color: #202020; color: white;">
 			科目リスト</h3>
+
 	<div class="drag-target">
 		<ul class="panel">
 			<c:forEach var="subject" items="${infoSubjectList }">
@@ -81,10 +94,11 @@
 </div>
 
 
+
 <div class="col-md-2 col-md-offset-10 fix">
-	<h3 class="font" style="background-color: #202020; color: white">
+	<h3 class="font" style="background-color: #202020; color: white;width:250px;">
 		先生リスト</h3>
-		<div style="height:680px; width:300px; overflow-y:scroll;">
+		<div style="height:600px; width:250px; overflow-y:scroll;">
 	<table class="table table-border ">
 		<tbody>
 			<%
@@ -119,9 +133,7 @@
 
 
 
-<!-- button -->
-			<button type="submit" class="btn btn-primary btn-lg col-md-1 fix padding-left" id="sBtn" name="regist">登録</button>
-<!--button End  -->
+
 
 
 
@@ -133,17 +145,23 @@
 
 
 
-<div class="form-group">
-    <input type="text" class="form-control datepicker" id="mydate" name="start">
-	</div>
+ <div class="input-group date col-md-2">
+<span class="input-group-addon">
+  <i class="fa fa-calendar green"></i>
+  </span>
+  <input type="text" class="form-control "placeholder="始点の日付入力" name="start">
+</div>
 
-   <script>
-$(function(){
-	$('.datepicker').datepicker({
-		  language: 'ja'
-		})
+<script type="text/javascript">
+$('.input-group.date').datepicker({
+    language: "ja",
+    daysOfWeekDisabled: "0,2,3,4,5,6",
+    autoclose: true,
+    format: 'yyyy/mm/dd',
 });
 </script>
+
+
 
 
 

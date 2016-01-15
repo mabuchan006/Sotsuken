@@ -581,7 +581,7 @@ margin0{
 
 }
 /**お気に入り,ホームボタン**/
-.favolite, .top {
+.favolite, .top,.print {
 	border-color:#202020;
    border-top: 1px solid #202020;
    background: #202020;
@@ -606,6 +606,10 @@ margin0{
 
    }
 
+.right1{
+	float: right;
+}
+
 .left{
 	float: left;
 }
@@ -615,3 +619,7 @@ margin0{
 	font-weight: 900;
 }
 
+.center{
+	text-align: center;
+
+}

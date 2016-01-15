@@ -149,98 +149,122 @@ public class masterDBSwitch {
 	public  masterDBSwitchInfo switchTempDB(String page){
 		masterDBSwitchInfo value = new masterDBSwitchInfo();
 		switch (page) {
+
+		//●R4
 		case "R":
 			value.chooseClassID= "R4A1";
 			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			value.chooseTableName = "tbl_temp_R4A1timetable";
 			break;
 		case "R4A1":
 			 value. chooseClassID = "R4A1";
 			 value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			 value.chooseTableName = "tbl_temp_R4A1timetable";
 			break;
 
 		case "R4A2":
 			 value.chooseClassID = "R4A2";
 			 value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			 value.chooseTableName = "tbl_temp_R4A2timetable";
 			break;
 		case "R4A3":
 			value.chooseClassID = "R4A3";
 			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			value.chooseTableName = "tbl_temp_R4A3timetable";
 			break;
 		case "R4A4":
 			value.chooseClassID = "R4A4";
 			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			value.chooseTableName = "tbl_temp_R4A4timetable";
 			break;
 		case "R4A5":
 			value.chooseClassID = "R4A5";
 			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			value.chooseTableName = "tbl_temp_R4A5timetable";
 			break;
 
 		//●R3
 		case "R3A1":
 			 value. chooseClassID = "R3A1";
 			 value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			 value.chooseTableName = "tbl_temp_R3A1timetable";
 			break;
 
 		case "R3A2":
 			 value.chooseClassID = "R3A2";
 			 value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			 value.chooseTableName = "tbl_temp_R3A12timetable";
 			break;
 		case "R3A3":
 			value.chooseClassID = "R3A3";
 			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			value.chooseTableName = "tbl_temp_R3A3timetable";
 			break;
 		case "R3A4":
 			value.chooseClassID = "R3A4";
 			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			value.chooseTableName = "tbl_temp_R3A4timetable";
 			break;
 		case "R3A5":
 			value.chooseClassID = "R3A5";
 			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			value.chooseTableName = "tbl_temp_R3A5timetable";
 			break;
 
 			//●R2
 		case "R2A1":
 			value. chooseClassID = "R2A1";
 			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			value.chooseTableName = "tbl_temp_R2A1timetable";
 			break;
 
 		case "R2A2":
 			value.chooseClassID = "R2A2";
 			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			value.chooseTableName = "tbl_temp_R2A2timetable";
 			break;
 		case "R2A3":
 			value.chooseClassID = "R2A3";
 			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			value.chooseTableName = "tbl_temp_R2A3timetable";
 			break;
 		case "R2A4":
 			value.chooseClassID = "R2A4";
 			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			value.chooseTableName = "tbl_temp_R2A4timetable";
 			break;
 		case "R2A5":
 			value.chooseClassID = "R2A5";
 			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			value.chooseTableName = "tbl_temp_R2A5timetable";
 			break;
-			//●R2
+
+			//●R1
 		case "R1A1":
 			value. chooseClassID = "R1A1";
 			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			value.chooseTableName = "tbl_temp_R1A1timetable";
 			break;
 
 		case "R1A2":
 			value.chooseClassID = "R1A2";
 			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			value.chooseTableName = "tbl_temp_R1A2timetable";
 			break;
 		case "R1A3":
 			value.chooseClassID = "R1A3";
 			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			value.chooseTableName = "tbl_temp_R1A3timetable";
 			break;
 		case "R1A4":
 			value.chooseClassID = "R1A4";
 			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			value.chooseTableName = "tbl_temp_R1A4timetable";
 			break;
 		case "R1A5":
 			value.chooseClassID = "R1A5";
 			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
+			value.chooseTableName = "tbl_temp_R1A5timetable";
 			break;
 		}
 		return value;

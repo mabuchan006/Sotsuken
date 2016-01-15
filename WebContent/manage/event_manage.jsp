@@ -31,38 +31,33 @@ toastSelect("success","${Msg }")</script>
 <!-- 登録処理 -->
 <form action="/Sotsuken/ManageUpdate" method="post">
 <input type="hidden"name="page" value="class_manage">
-
 <table class="col-md-9 col-md-offset-3" id="first_table">
-				<tr>
-					<td class="col-md-3"><label for="IventName" class="labels">イベント名</label>
-						<input type="text" class="form-control" id="eventName"
-						name="event_name"> <label for="Time" class="labels">日時</label>
-						<input type="text" class="form-control" name="time"></td>
+<tr>
+<td class="col-md-3"><label for="IventName" class="labels">イベント名</label>
+	<input type="text" class="form-control" id="eventName"name="event_name">
+	<label for="Time" class="labels">日時</label>
+	 <input type="text" class="form-control datepicker"  name="eventDate">
+</td>
+
+<td class="col-md-3">
+<label for="text" class="labels">コマ</label>
+<input type="text" autocomplete="on" list="period" class="form-control">
+
+
+ <label for="text" class="labels">講師</label>
+ <input type="text" class="form-control" name="teacher"></td>
+
+<td class="col-md-3"><label for="text" class="labels">教室</label>
+<input type="text" class="form-control" name="room">
+<label for="text" class="labels">クラス名</label>
+ <input type="text" class="form-control" name="class"></td>
 
 
 
-					<td class="col-md-3"><label for="text" class="labels">コマ</label>
-						<select class="form-control col-md-1">
-							<option style="color: black;">1</option>
-							<option style="color: black;">2</option>
-							<option style="color: black;">3</option>
-							<option style="color: black;">4</option>
-							<option style="color: black;">ALL</option>
-
-					</select> <label for="text" class="labels">講師</label> <input type="text"
-						class="form-control" name="teacher"></td>
-
-					<td class="col-md-3"><label for="text" class="labels">教室</label>
-						<input type="text" class="form-control" name="room"> <label
-						for="text" class="labels">クラス名</label> <input type="text"
-						class="form-control" name="class"></td>
-
-
-
-					<td class="col-md-3"><label for="password" class="empty">________</label>
-						<button type="submit" class="btn btn-primary col-md-2" id="regist_btn"
-							name="regist_event">登録</button></td>
-				</tr>
+<td class="col-md-3"><label for="password" class="empty">________</label>
+<button type="submit" class="btn btn-primary col-md-2"
+id="regist_btn"name="regist_event">登録</button></td>
+</tr>
 </table>
 </form><!-- 登録終わり -->
 
@@ -74,23 +69,34 @@ toastSelect("success","${Msg }")</script>
 <table class="table ">
 <thead>
 <tr class="info wide">
-<td colspan="3">クラス一覧   ( ${cnt } 件)</td></tr>
+<td colspan="3">イベント一覧   ( ${cnt } 件)</td></tr>
 </thead>
 <tbody>
-<!-- クラス情報取得 -->
-<c:forEach var="rs" items="${classList }">
+<!-- イベント情報取得 -->
+<c:forEach var="rs" items="${eventList }">
 <tr class="select">
-<td class="classid">${rs.classID}</td>
-<td class="classname" data-name="${rs.classID}">${rs.className}</td>
+<td class="eventname"  data-name="${rs.eventName}">${rs.eventName}</td>
+<td>
+<td class="period"  data-name="${rs.period}">${rs.period}　時限目</td>
+<td>
+<td class="date"  data-name="${rs.date}">${rs.date}</td>
+<td>
+<td class="classID"  data-name="${rs.classID}">${rs.classID}</td>
+<td>
+<td class="roomID"  data-name="${rs.roomID}">${rs.roomID}</td>
+<td>
+<td class="teacherName"  data-name="${rs.teacherName}">${rs.teacherName}</td>
+<td>
+<td class="notice"  data-name="${rs.notice}">${rs.notice}</td>
 <td>
 <div style="display:inline-flex">
-<button type="button" class="btn btn-success edit_class "name="edit_class" ><i class="fa fa-pencil-square-o fa-2x"></i></button>
+<button type="button" class="btn btn-success edit_event "name="edit_event" ><i class="fa fa-pencil-square-o fa-2x"></i></button>
 
 <!-- 削除用フォーム -->
-<form action="/Sotsuken/ManageUpdate?page=class_manage" method="post">
-<input type="hidden" name = "classID" value="${rs.classID }" />
-<input type="hidden" name = "className" value="${rs.className }" />
-<button type="submit" class="btn btn-danger"name="delete_class" ><i class="fa fa-trash-o fa-2x"></i></button>
+<form action="/Sotsuken/ManageUpdate?page=event_manage" method="post">
+<input type="hidden" name = "eventID" value="${rs.eventID }" />
+<input type="hidden" name = "eventName" value="${rs.eventName }" />
+<button type="submit" class="btn btn-danger"name="delete_event" ><i class="fa fa-trash-o fa-2x"></i></button>
 </form>
 <!-- 削除 -->
 </div>
@@ -104,3 +110,48 @@ toastSelect("success","${Msg }")</script>
 </div>
 </div>
 </div>
+
+<!-- 表示用datalist -->
+<!-- コマ -->
+<datalist id="period">
+    <option value="1">
+    <option value="2">
+    <option value="3">
+    <option value="4">
+</datalist>
+
+<!-- class -->
+<datalist id="class">
+<c:forEach var="rs" items="${classList }">
+<option style="color: black;" value="${rs.classID}">${rs.classID}</option>
+</c:forEach>
+</datalist>
+
+<!-- teacher -->
+<datalist id="teacher">
+<c:forEach var="rs" items="${teacherList }">
+<option style="color: black;" value="${rs.teacherID}">${rs.teacherName}</option>
+</c:forEach>
+</datalist>
+
+<!-- room -->
+<datalist id="room">
+<c:forEach var="rs" items="${roomList }">
+<option style="color: black;" value="${rs.room}">${rs.room}</option>
+</c:forEach>
+</datalist>
+
+<!-- 日にち -->
+<script type="text/javascript">
+        $( document ).ready(function() {
+           $('.datepicker').datepicker( {
+        	   language: 'ja',
+ 			  daysOfWeekDisabled: [ '0', '2', '3', '4', '5', '6', ],
+ 			  format: 'yyyy/mm/dd',
+            } );
+        });
+   </script>
+
+
+
+

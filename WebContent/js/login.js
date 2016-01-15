@@ -7,7 +7,7 @@ $(function login() {
 			var pw = $("#enterPw").val();
 			var id = $("#enterId").val();
 
-			if (  pw == "" || id == ""  ) {
+			if (  pw == "" || id == "" || pw == 0 || id == 0 ) {
 
 				$("#msg").html("未入力があります、入力してください。");
 				$("#msg").css("color","red");
