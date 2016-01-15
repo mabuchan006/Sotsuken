@@ -77,6 +77,7 @@
 <div class="col-md-2 fix">
 		<h3 class="font" style="background-color: #202020; color: white;">
 			科目リスト</h3>
+
 	<div class="drag-target">
 		<ul class="panel">
 			<c:forEach var="subject" items="${infoSubjectList }">
@@ -93,10 +94,11 @@
 </div>
 
 
+
 <div class="col-md-2 col-md-offset-10 fix">
-	<h3 class="font" style="background-color: #202020; color: white">
+	<h3 class="font" style="background-color: #202020; color: white;width:250px;">
 		先生リスト</h3>
-		<div style="height:680px; width:300px; overflow-y:scroll;">
+		<div style="height:600px; width:250px; overflow-y:scroll;">
 	<table class="table table-border ">
 		<tbody>
 			<%
@@ -154,7 +156,8 @@
 $('.input-group.date').datepicker({
     language: "ja",
     daysOfWeekDisabled: "0,2,3,4,5,6",
-    autoclose: true
+    autoclose: true,
+    format: 'yyyy-mm-dd',
 });
 </script>
 
@@ -168,7 +171,7 @@ $('.input-group.date').datepicker({
            $('.datepicker').datepicker( {
         	   language: 'ja',
  			  daysOfWeekDisabled: [ '0', '2', '3', '4', '5', '6', ],
- 			  format: 'yyyy/mm/dd',
+
             } );
         });
    </script> -->
