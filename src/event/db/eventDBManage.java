@@ -12,10 +12,10 @@ public class  eventDBManage extends DBAccess{
 
 	public eventDBManage(){
 		super(DRIVER_NAME);
-		selectSql = String.format("select eventID,eventName from tbl_event");
+		selectSql = String.format("select * from tbl_event");
 		//クラスIDから削除からsql
-		deleteSql = String.format("delete  from tbl_event where eventName = ? AND period = ? AND date = ? AND classID = ?");
+		deleteSql = String.format("delete  from tbl_event where eventID = ?");
 		//クラス情報登録sql
-		insertSql= String.format(" insert into tbl_class (classID, className) values ( ? , ? )");
+		insertSql= String.format(" insert into tbl_class (period,date,classID, roomID,eventName,endFlag,guestTeacher,notice) values ( ? , ? )");
 	}
 }

@@ -80,7 +80,7 @@
 
 						<th></th>
 						<c:forEach var="dateitem" items="${dList }">
-							<th nowrap><fmt:formatDate value="${dateitem.date}"
+							<th nowrap class="countDate"><fmt:formatDate value="${dateitem.date}"
 									pattern="dd日(E)" /></th>
 						</c:forEach>
 

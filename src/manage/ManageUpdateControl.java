@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import DB.DBAccess;
+import Tools.layoutInclude;
+import Tools.layoutInclude.layoutIncludeInfo;
 import manage.db.classDBManage;
 import manage.db.classInfo;
 import manage.db.subjectDBManage;
@@ -316,31 +318,13 @@ public class ManageUpdateControl extends HttpServlet {
 			}
 		}//teacher
 
+	//css,js file import
 	private void getIncludeFile(HttpServletRequest request) {
-		ArrayList<String> css = new ArrayList<String>(); //css用List
-		ArrayList<String> js = new ArrayList<String>(); //JavaScript用List
-		css.add("/Sotsuken/bootstrap/css/bootstrap.min.css");
-		css.add("/Sotsuken/css/font-awesome.min.css");
-		css.add("/Sotsuken/css/custom.css");
-		css.add("/Sotsuken/css/style.css");
-		css.add("/Sotsuken/css/pure-drawer.css");
-		css.add("https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css");
-		css.add("//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css");
+		// 使用するcss,jsファイルの適用
+		layoutInclude tools = new layoutInclude();
+		layoutIncludeInfo info =  tools.manage_layout();
+		request.setAttribute("css", info.css);
+		request.setAttribute("js", info.js);
 
-
-		js.add("/Sotsuken/js/jquery-2.1.1.min.js");
-		js.add("http://code.jquery.com/jquery-1.9.1.min.js");
-		js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
-		js.add("/Sotsuken/js/jquery.appear.js");
-		js.add("/Sotsuken/js/subject_manage.js");
-		js.add("/Sotsuken/js/jquery.toaster.js");
-		js.add("https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js");
-		js.add("/Sotsuken/js/toastSelect.js");
-		js.add("/Sotsuken/js/editable.js");
-		js.add("//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js");
-
-
-		request.setAttribute("css", css);
-		request.setAttribute("js", js);
 	}//css&js
 	}
