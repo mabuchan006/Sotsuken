@@ -20,7 +20,7 @@
 </c:forEach>
 </c:if>
 
-<!-- いんさつよう　CSS -->
+<!-- 印刷用CSS -->
 <link rel="stylesheet" href="../css/print.css" type="text/css" media="print" />
 
 <c:if test="${js != null}">
@@ -54,16 +54,21 @@
 					<div class="col-md-4 col-md-offset-8 text-right">
 					<div style="display:inline-flex">
 
-                            <button type="button" class="favolite" id="falseCookie" >
+					<button type="button" class="favolite" id="falseCookie" >
+						<i class="fa fa-star"></i>お気に入り
+					</button>
 
-                            <i class="fa fa-star"></i>お気に入り
-                            </button>
                     <form action="top.jsp">
-                            <button type="submit" class="top">
+						<button type="submit" class="top">
 							<i class="fa fa-home"></i>TOP
 						</button>
-					<input type = "hidden" name="top" value="top" />
+						<input type = "hidden" name="top" value="top" />
 					</form>
+
+					<!-- 印刷用アイコン -->
+					<button type="button" class="print" onclick="window.print()">
+						<i class="fa fa-print"></i>印刷
+					</button>
 
                     </div>
 					</div>
