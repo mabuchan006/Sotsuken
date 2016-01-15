@@ -146,7 +146,9 @@
    <script>
 $(function(){
 	$('.datepicker').datepicker({
-		  language: 'ja'
+		  language: 'ja',
+			  daysOfWeekDisabled: [ '0', '2', '3', '4', '5', '6', ],
+			  format: 'yyyy/mm/dd',
 		})
 });
 </script>
