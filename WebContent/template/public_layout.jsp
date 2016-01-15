@@ -63,6 +63,11 @@ $(function(e) {
 						<i class="fa fa-star"></i>お気に入り
 					</button>
 
+					<!-- 印刷用アイコン -->
+					<button type="button" class="print" onclick="window.print()">
+						<i class="fa fa-print"></i>印刷
+					</button>
+
                     <form action="top.jsp">
 						<button type="submit" class="top">
 							<i class="fa fa-home"></i>TOP
@@ -70,10 +75,7 @@ $(function(e) {
 						<input type = "hidden" name="top" value="top" />
 					</form>
 
-					<!-- 印刷用アイコン -->
-					<button type="button" class="print" onclick="window.print()">
-						<i class="fa fa-print"></i>印刷
-					</button>
+
 
                     </div>
 					</div>
