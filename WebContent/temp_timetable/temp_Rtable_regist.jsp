@@ -5,14 +5,8 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
-<script>
-$(function(){$('#mydate').datepicker();})
-</script>
 
-<div class="form-group">
-    <label for="mydate">日付：</label>
-    <input type="text" class="form-control" id="mydate">
-	</div>
+
 
 <!-- タブ -->
 <br />
@@ -124,7 +118,7 @@ $(function(){$('#mydate').datepicker();})
 
 
 <!-- button -->
-			<button type="submit" class="btn btn-primary btn-lg col-md-1 fix padding-left" id="sBtn" name="regist">reg</button>
+			<button type="submit" class="btn btn-primary btn-lg col-md-1 fix padding-left" id="sBtn" name="regist">登録</button>
 <!--button End  -->
 
 
@@ -134,6 +128,20 @@ $(function(){$('#mydate').datepicker();})
 <!-- calender
 <input type="date" name="start" style="text-align: center;" min="2016-01-04" max="2040-04-01" step="7" required  />
    calender End-->
+
+   <script>
+$(function(){
+	$('.datepicker').datepicker({
+	    format: 'yyyy/mm/dd',
+	    language: 'ja',
+	    autoclose: true
+	})
+});
+</script>
+
+<div class="form-group">
+    <input type="text" class="form-control datepicker" id="mydate" name="start">
+	</div>
 
 
 

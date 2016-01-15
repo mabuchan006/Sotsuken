@@ -28,7 +28,6 @@ public class layoutInclude {
 		info.css.add("/Sotsuken/bootstrap/css/bootstrap-datepicker.min.css");
 
 
-
 		info.js.add("/Sotsuken/js/jquery-2.1.1.min.js");
 		info.js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
 		info.js.add("/Sotsuken/js/jquery-1.10.0.ui.js");
@@ -37,9 +36,8 @@ public class layoutInclude {
 		info.js.add("/Sotsuken/js/dragdrop.js");
 		info.js.add("/Sotsuken/js/clickEvent.js");
 		info.js.add("/Sotsuken/js/formCheck.js");
-		info.js.add("/Sotsuken/bootstrap/js/bootstrap-datepicker.min.js");
 		info.js.add("/Sotsuken/js/tempEdit.js");
-
+		info.js.add("/Sotsuken/bootstrap/js/bootstrap-datepicker.ja.min.js");
 
 		return info;
 	}

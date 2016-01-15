@@ -97,9 +97,6 @@ public class temp_tableControl extends HttpServlet {
 			subjectDBManage suDBM = new subjectDBManage(chooseClassID);
 			infoSubjectList = suDBM.choiceSubject(); // 科目取得
 			teacherList = teDBM.teacherDBSelect(); // 先生取得
-			for(teacherInfo ti :teacherList){
-				System.out.println(ti.getTeacherName()+"_1");
-			}
 
 			rooms1List = tempDBM.roomsSelect(1, chooseClassID);
 			rooms2List = tempDBM.roomsSelect(2, chooseClassID);
