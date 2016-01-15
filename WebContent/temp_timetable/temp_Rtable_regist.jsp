@@ -139,19 +139,23 @@
 
 
 
-<div class="form-group">
-    <input type="text" class="form-control datepicker" id="mydate" name="start">
-	</div>
 
-   <script>
-$(function(){
-	$('.datepicker').datepicker({
-		  language: 'ja',
-			  daysOfWeekDisabled: [ '0', '2', '3', '4', '5', '6', ],
-			  format: 'yyyy/mm/dd',
-		})
-});
-</script>
+
+
+
+    <input type="text" class="form-control datepicker"  name="start">
+
+
+<script type="text/javascript">
+        $( document ).ready(function() {
+           $('.datepicker').datepicker( {
+        	   language: 'ja',
+ 			  daysOfWeekDisabled: [ '0', '2', '3', '4', '5', '6', ],
+ 			  format: 'yyyy/mm/dd',
+            } );
+        });
+   </script>
+
 
 
 
