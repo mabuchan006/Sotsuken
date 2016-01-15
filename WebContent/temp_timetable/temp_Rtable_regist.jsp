@@ -10,6 +10,12 @@
 
 <!-- タブ -->
 <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
 <ul class="nav nav-tabs noprint ">
 	<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">R4
 			<b class="caret"></b>
