@@ -27,36 +27,48 @@ toastSelect("success","${Msg }")</script>
 
 <div class="row col-md-9">
 
-
 <!-- 登録処理 -->
 <form action="/Sotsuken/ManageUpdate" method="post">
-<input type="hidden"name="page" value="class_manage">
+<input type="hidden"name="page" value="event_manage">
 <table class="col-md-9 col-md-offset-3" id="first_table">
 <tr>
-<td class="col-md-3"><label for="IventName" class="labels">イベント名</label>
-	<input type="text" class="form-control" id="eventName"name="event_name">
+<td class="col-md-3"><label for="EventName" class="labels">イベント名</label>
+	<input type="text" class="form-control" name="eventName">
+</td>
+
+<td class="col-md-3">
+<label for="text" class="labels">コマ</label>
+<input type="text" autocomplete="on" list="period" class="form-control" name="period">
+
+</td>
+
+<td class="col-md-3"><label for="text" class="labels">教室</label>
+<input type="text" class="form-control" name="roomName">
+</td>
+<td></td>
+
+</tr>
+<tr>
+<td class="col-md-3">
 	<label for="Time" class="labels">日時</label>
 	 <input type="text" class="form-control datepicker"  name="eventDate">
 </td>
 
 <td class="col-md-3">
-<label for="text" class="labels">コマ</label>
-<input type="text" autocomplete="on" list="period" class="form-control">
-
 
  <label for="text" class="labels">講師</label>
- <input type="text" class="form-control" name="teacher"></td>
+ <input type="text" class="form-control" name="guestTeacher"></td>
 
-<td class="col-md-3"><label for="text" class="labels">教室</label>
-<input type="text" class="form-control" name="room">
+<td class="col-md-3">
 <label for="text" class="labels">クラス名</label>
- <input type="text" class="form-control" name="class"></td>
+ <input type="text" class="form-control" name="class_id"></td>
 
 
 
-<td class="col-md-3"><label for="password" class="empty">________</label>
-<button type="submit" class="btn btn-primary col-md-2"
-id="regist_btn"name="regist_event">登録</button></td>
+<td class="col-md-3">
+<label for="password" class="empty">________</label>
+<button type="submit" class="btn btn-primary col-md-2"id="regist_btn"name="regist_event">登録</button>
+</td>
 </tr>
 </table>
 </form><!-- 登録終わり -->
@@ -83,9 +95,9 @@ id="regist_btn"name="regist_event">登録</button></td>
 <td>
 <td class="classID"  data-name="${rs.classID}">${rs.classID}</td>
 <td>
-<td class="roomID"  data-name="${rs.roomID}">${rs.roomID}</td>
+<td class="roomID"  data-name="${rs.roomName}">${rs.roomName}</td>
 <td>
-<td class="teacherName"  data-name="${rs.teacherName}">${rs.teacherName}</td>
+<td class="guestTeacher"  data-name="${rs.guestTeacher}">${rs.guestTeacher}</td>
 <td>
 <td class="notice"  data-name="${rs.notice}">${rs.notice}</td>
 <td>
@@ -137,7 +149,7 @@ id="regist_btn"name="regist_event">登録</button></td>
 <!-- room -->
 <datalist id="room">
 <c:forEach var="rs" items="${roomList }">
-<option style="color: black;" value="${rs.room}">${rs.room}</option>
+<option style="color: black;"  value="${rs.roomID}">${rs.roomName}</option>
 </c:forEach>
 </datalist>
 

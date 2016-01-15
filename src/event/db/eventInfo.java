@@ -1,30 +1,34 @@
 package event.db;
 import java.io.Serializable;
-import java.util.Date;
 
 public class eventInfo implements Serializable{
 
+		private int eventID;
 		private String eventName;
 		private int period;
-		private Date date;
+		private String date;
 		private String classID;
-		private String roomID;
 		private String guestTeacher;
 		private String notice;
+		private String endFlag;
+		private String roomName;
 
 
 		public eventInfo() {
 			super();
 			// TODO 自動生成されたコンストラクター・スタブ
 		}
-		public eventInfo(String eventName, int period, Date date, String classID, String roomID, String guestTeacher,
+		public eventInfo(int eventID,String eventName, int period, String date, String classID, String roomName, String endFlag,String guestTeacher,
 				String notice) {
 			super();
+
+			this.eventID = eventID;
 			this.eventName = eventName;
 			this.period = period;
 			this.date = date;
 			this.classID = classID;
-			this.roomID = roomID;
+			this.roomName = roomName;
+			this.endFlag = endFlag;
 			this.guestTeacher = guestTeacher;
 			this.notice = notice;
 		}
@@ -51,12 +55,12 @@ public class eventInfo implements Serializable{
 		}
 
 
-		public Date getDate() {
+		public String getDate() {
 			return date;
 		}
 
 
-		public void setDate(Date date) {
+		public void setDate(String date) {
 			this.date = date;
 		}
 
@@ -71,13 +75,13 @@ public class eventInfo implements Serializable{
 		}
 
 
-		public String getRoomID() {
-			return roomID;
+		public String getRoomName() {
+			return roomName;
 		}
 
 
-		public void setRoomID(String roomID) {
-			this.roomID = roomID;
+		public void setRoomName(String roomName) {
+			this.roomName = roomName;
 		}
 
 
@@ -98,6 +102,18 @@ public class eventInfo implements Serializable{
 
 		public void setNotice(String notice) {
 			this.notice = notice;
+		}
+		public int getEventID() {
+			return eventID;
+		}
+		public void setEventID(int eventID) {
+			this.eventID = eventID;
+		}
+		public String getEndFlag() {
+			return endFlag;
+		}
+		public void setEndFlag(String endFlag) {
+			this.endFlag = endFlag;
 		}
 
 }

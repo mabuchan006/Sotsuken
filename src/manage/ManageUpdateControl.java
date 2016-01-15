@@ -1,6 +1,7 @@
 package manage;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -15,6 +16,8 @@ import javax.servlet.http.HttpServletResponse;
 import DB.DBAccess;
 import Tools.layoutInclude;
 import Tools.layoutInclude.layoutIncludeInfo;
+import event.db.eventDBManage;
+import event.db.eventInfo;
 import manage.db.classDBManage;
 import manage.db.classInfo;
 import manage.db.subjectDBManage;
@@ -49,7 +52,7 @@ public class ManageUpdateControl extends HttpServlet {
 		//文字コードutf8
 		request.setCharacterEncoding("UTF-8");
 		//jspからのページ情報取得
-		String get_page = request.getParameter("page")==null?"class_manage"
+		String get_page = request.getParameter("page")==null?"event_manage"
 				:request.getParameter("page");
 
 		//使用するcss,jsファイルの適用
@@ -73,14 +76,22 @@ public class ManageUpdateControl extends HttpServlet {
 			classUpdate(request, cdm);
 		}//if
 
-		//講師管理画面処理
+		//subject管理画面処理
 		else if(get_page.equals("subject_manage") ||
 				request.getParameter("delete_subject") != null ||
 				request.getParameter("regist_subject") != null ){
-
+			//科目DB操作クラス取得
 			subjectUpdate(request);
-
 		}//if
+
+		//event管理画面処理
+				else if(get_page.equals("event_manage") ||
+						request.getParameter("delete_event") != null ||
+						request.getParameter("regist_event") != null ){
+					//科目DB操作クラス取得
+					eventDBManage edm = new eventDBManage();
+					eventUpdate(request,edm);
+				}//if
 
 		//ページデータセット
 		try {
@@ -317,6 +328,65 @@ public class ManageUpdateControl extends HttpServlet {
 				e.printStackTrace();
 			}
 		}//teacher
+
+	//イベント管理画面指定時の処理
+	private void eventUpdate(HttpServletRequest request, eventDBManage edm) {
+
+		//日付format
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd");
+		//送信されたevent情報取得
+		eventInfo ei = new eventInfo(
+				request.getParameter("event_id")==null?0
+						:Integer.parseInt(request.getParameter("event_id")),
+				request.getParameter("eventName"),
+				request.getParameter("period")==null?1
+						:Integer.parseInt(request.getParameter("period")),
+				request.getParameter("eventDate"),
+				request.getParameter("class_id")==null?""
+						:request.getParameter("class_id"),
+				request.getParameter("roomName")==null?""
+						:request.getParameter("roomName"),
+				request.getParameter("endFlag")==null?"0"
+						:request.getParameter("endFlag"),
+				request.getParameter("guestTeacher")==null?""
+						:request.getParameter("guestTeacher"),
+				request.getParameter("notice")==null?""
+						:request.getParameter("notice")
+				);
+
+		try {
+			//ページ情報指定
+			content_page = "/manage/event_manage.jsp";
+			page_title = "EventManage";
+
+			if(request.getParameter("regist_event") != null ){
+				edm.eventDBUpdate(ei, DBAccess.INSERT, "登録");
+			}//if
+
+			if(request.getParameter("delete_event") != null){
+				edm.eventDBUpdate(ei, DBAccess.DELETE, "削除");
+			}//if
+
+			//更新済み講師情報全件取得
+			List<eventInfo> eventList = edm.eventDBSelect();
+			request.setAttribute("eventList", eventList);
+			request.setAttribute("cnt", eventList.size());
+
+			if(edm.getMsg() != null){
+				if((edm.getMsg()).indexOf("入力情報に誤りがあります") != -1){
+					request.setAttribute("err_Msg", edm.getMsg());
+				}else{
+					request.setAttribute("Msg",edm.getMsg());
+				}//if
+			}
+
+		} catch (Exception e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
+
+	}//event
+
 
 	//css,js file import
 	private void getIncludeFile(HttpServletRequest request) {
