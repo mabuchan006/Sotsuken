@@ -845,39 +845,6 @@ $('.input-group.date').datepicker({
 <input type="hidden" name="page" value="${chooseClassID }" />
 </form>
 
-<!-- もーだる -->
-				<div id="modal1" class="modal fade ">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header back-color">
-								<h3 class="modal-title white text-center">info</h3>
-							</div>
-							<div class="modal-body text-center font1">
-								<h3>登録されていません</h3>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-primary" data-dismiss="modal">close</button>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div id="modal2" class="modal fade ">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header back-color">
-								<h3 class="modal-title white text-center">info</h3>
-							</div>
-							<div class="modal-body text-center font1">
-								<h3>登録されました</h3>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-primary" data-dismiss="modal">close</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- もーだる終了 -->
 
 
 

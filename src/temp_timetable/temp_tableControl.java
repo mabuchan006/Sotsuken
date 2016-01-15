@@ -34,6 +34,7 @@ public class temp_tableControl extends HttpServlet {
 	ArrayList<String> css = new ArrayList<String>(); // css用List
 	ArrayList<String> js = new ArrayList<String>(); // JavaScript用List
 
+	private List <tempInfo> regtiList = new ArrayList<>();
 	private List<tempInfo> tiList1 = new ArrayList<>(); //一時時間割情報用-1
 	private List<tempInfo> tiList2 = new ArrayList<>();; //一時時間割情報用-2
 	private List<tempInfo> tiList3 = new ArrayList<>();; //一時時間割情報用-3
@@ -210,6 +211,9 @@ public class temp_tableControl extends HttpServlet {
 			//tempDBM.tempDBInsert(tiList2);
 			//tempDBM.tempDBInsert(tiList3);
 			//tempDBM.tempDBInsert(tiList4);
+
+			//Select
+
 
 		}//Insert 終了
 
