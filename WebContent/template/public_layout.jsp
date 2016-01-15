@@ -22,11 +22,7 @@
 
 <!-- いんさつよう　CSS -->
 <!-- link rel="stylesheet" href="../css/print.css" type="text/css" media="print" / -->
-<script>
-$(function(e) {
-	countDate();
-});
-</script>
+
 <c:if test="${js != null}">
 <c:forEach var="itemjs" items="${js}">
 <script type="text/javascript" src="${itemjs}"></script>

@@ -8,6 +8,7 @@
 <script type="text/javascript">
     $(function () {
       $('[data-toggle="tooltip"]').tooltip();
+      countDate();
     })
   </script>
 <!-- 印刷時非表示 -->
@@ -76,11 +77,11 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr class="purple1">
+					<tr class="purple1 countDate"">
 
 						<th></th>
 						<c:forEach var="dateitem" items="${dList }">
-							<th nowrap class="countDate"><fmt:formatDate value="${dateitem.date}"
+							<th nowrap ><fmt:formatDate value="${dateitem.date}"
 									pattern="dd日(E)" /></th>
 						</c:forEach>
 
