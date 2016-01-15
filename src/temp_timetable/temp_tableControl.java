@@ -132,7 +132,7 @@ public class temp_tableControl extends HttpServlet {
 		//Insert 登録ボタン
 		if(request.getParameter("regist") != null){
 
-			String date = request.getParameter("start"); //始点の日付取得
+			String date = request.getParameter("start").toString(); //始点の日付取得
 
 			for(int week=0;week <= 3;week++){
 				for(int i=0; i <= 6; i++){

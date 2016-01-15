@@ -16,9 +16,9 @@
 <br />
 <br />
 <!-- button -->
-			<button type="submit" class="btn btn-warning btn-lg col-md-1   right1 center fonts" id="sBtn" name="confirm">マスタ確認</button>
-			<button type="submit" class="btn btn-success btn-lg col-md-1   right1 center fonts" id="sBtn" name="up">マスタアップ</button>
-			<button type="submit" class="btn btn-primary btn-lg col-md-1  right1 center fonts" id="sBtn" name="regist">登録</button>
+			<button type="submit" class="btn btn-warning btn-lg col-md-1   right1 center fonts" id="confBtn" name="confirm">マスタ確認</button>
+			<button type="submit" class="btn btn-success btn-lg col-md-1   right1 center fonts" id="masupBtn" name="up">マスタアップ</button>
+			<button type="submit" class="btn btn-primary btn-lg col-md-1  right1 center fonts" id="regBtn" name="regist">登録</button>
 
 <!--button End  -->
 <ul class="nav nav-tabs noprint ">
@@ -145,7 +145,7 @@
 
 
 
-<div class="input-group date col-md-2">
+ <div class="input-group date col-md-2">
 <span class="input-group-addon">
   <i class="fa fa-calendar green"></i>
   </span>
@@ -157,24 +157,10 @@ $('.input-group.date').datepicker({
     language: "ja",
     daysOfWeekDisabled: "0,2,3,4,5,6",
     autoclose: true,
-    format: 'yyyy-mm-dd',
+    format: 'yyyy/mm/dd',
 });
 </script>
 
-
-
-<!--     <input type="text" class="form-control datepicker"  name="start">
-
-
-<script type="text/javascript">
-        $( document ).ready(function() {
-           $('.datepicker').datepicker( {
-        	   language: 'ja',
- 			  daysOfWeekDisabled: [ '0', '2', '3', '4', '5', '6', ],
-
-            } );
-        });
-   </script> -->
 
 
 
