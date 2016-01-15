@@ -133,17 +133,18 @@
 
 
 
-<div class="form-group">
-    <input type="text" class="form-control datepicker" id="mydate" name="start">
-	</div>
 
-   <script>
-$(function(){
-	$('.datepicker').datepicker({
-		  language: 'ja'
-		})
-});
-</script>
+    <input type="text" class="form-control datepicker"  name="start">
+
+
+<script type="text/javascript">
+        $( document ).ready(function() {
+           $('.datepicker').datepicker( {
+                format: 'mm/dd/yyyy',
+                language: 'ja',
+            } );
+        });
+   </script>
 
 
 
