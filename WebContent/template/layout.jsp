@@ -87,6 +87,8 @@
 				<div class="logo text-left">
 					<h1>${page_title }</h1>
 
+					<br />
+
 				</div>
 				</div>
 				<jsp:include page="${content_page}" />

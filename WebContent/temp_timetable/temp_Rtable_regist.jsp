@@ -129,19 +129,19 @@
 <input type="date" name="start" style="text-align: center;" min="2016-01-04" max="2040-04-01" step="7" required  />
    calender End-->
 
-   <script>
-$(function(){
-	$('.datepicker').datepicker({
-	    format: 'yyyy/mm/dd',
-	    language: 'ja',
-	    autoclose: true
-	})
-});
-</script>
+
 
 <div class="form-group">
     <input type="text" class="form-control datepicker" id="mydate" name="start">
 	</div>
+
+   <script>
+$(function(){
+	$('.datepicker').datepicker({
+		  language: 'ja'
+		})
+});
+</script>
 
 
 
