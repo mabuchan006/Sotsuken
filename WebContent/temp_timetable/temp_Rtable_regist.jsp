@@ -84,6 +84,7 @@
 <div class="col-md-2 col-md-offset-10 fix">
 	<h3 class="font" style="background-color: #202020; color: white">
 		先生リスト</h3>
+		<div style="height:680px; width:300px; overflow-y:scroll;">
 	<table class="table table-border ">
 		<tbody>
 			<%
@@ -113,6 +114,7 @@
 			%>
 		</tbody>
 	</table>
+	</div>
 </div>
 
 
