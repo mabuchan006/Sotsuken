@@ -16,9 +16,9 @@
 <br />
 <br />
 <!-- button -->
-			<button type="submit" class="btn btn-primary btn-lg col-md-1  padding-left right center" id="sBtn" name="confirm">マスタ確認</button>
-			<button type="submit" class="btn btn-primary btn-lg col-md-1  padding-left right center" id="sBtn" name="up">マスタアップ</button>
-			<button type="submit" class="btn btn-primary btn-lg col-md-1  padding-left right center" id="sBtn" name="regist">登録</button>
+			<button type="submit" class="btn btn-warning btn-lg col-md-1   right1 center fonts" id="sBtn" name="confirm">マスタ確認</button>
+			<button type="submit" class="btn btn-success btn-lg col-md-1   right1 center fonts" id="sBtn" name="up">マスタアップ</button>
+			<button type="submit" class="btn btn-primary btn-lg col-md-1  right1 center fonts" id="sBtn" name="regist">登録</button>
 
 <!--button End  -->
 <ul class="nav nav-tabs noprint ">
