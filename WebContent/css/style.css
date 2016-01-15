@@ -581,7 +581,7 @@ margin0{
 
 }
 /**お気に入り,ホームボタン**/
-.favolite, .top,print {
+.favolite, .top,.print {
 	border-color:#202020;
    border-top: 1px solid #202020;
    background: #202020;
