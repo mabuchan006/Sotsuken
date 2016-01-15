@@ -4,7 +4,7 @@
 <%@ page pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-
+<form action="/Sotsuken/editView" method="post" >
 
 
 
@@ -15,7 +15,12 @@
 <br />
 <br />
 <br />
+<!-- button -->
+			<button type="submit" class="btn btn-primary btn-lg col-md-1  padding-left right center" id="sBtn" name="confirm">マスタ確認</button>
+			<button type="submit" class="btn btn-primary btn-lg col-md-1  padding-left right center" id="sBtn" name="up">マスタアップ</button>
+			<button type="submit" class="btn btn-primary btn-lg col-md-1  padding-left right center" id="sBtn" name="regist">登録</button>
 
+<!--button End  -->
 <ul class="nav nav-tabs noprint ">
 	<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">R4
 			<b class="caret"></b>
@@ -64,7 +69,8 @@
 
 <br />
 
-<form action="/Sotsuken/editView" method="post" >
+
+
 
 <!-- 科目リスト　先生リスト取得 -->
 
@@ -125,9 +131,7 @@
 
 
 
-<!-- button -->
-			<button type="submit" class="btn btn-primary btn-lg col-md-1 fix padding-left" id="sBtn" name="regist">登録</button>
-<!--button End  -->
+
 
 
 
@@ -139,11 +143,24 @@
 
 
 
+<div class="input-group date col-md-2">
+<span class="input-group-addon">
+  <i class="fa fa-calendar green"></i>
+  </span>
+  <input type="text" class="form-control "placeholder="始点の日付入力" name="start">
+</div>
+
+<script type="text/javascript">
+$('.input-group.date').datepicker({
+    language: "ja",
+    daysOfWeekDisabled: "0,2,3,4,5,6",
+    autoclose: true
+});
+</script>
 
 
 
-
-    <input type="text" class="form-control datepicker"  name="start">
+<!--     <input type="text" class="form-control datepicker"  name="start">
 
 
 <script type="text/javascript">
@@ -154,7 +171,7 @@
  			  format: 'yyyy/mm/dd',
             } );
         });
-   </script>
+   </script> -->
 
 
 
