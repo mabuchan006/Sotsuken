@@ -8,6 +8,7 @@ import DB.DBAccess;
 
 public class tempDBManage extends DBAccess {
 	private final static String DRIVER_NAME = "java:comp/env/jdbc/MySqlCon";
+	private String selectSQL;
 	private String insertSQL;
 	private String deleteSQL;
 	private String rooms1_SQL; //コマ割りから部屋情報取得
@@ -50,6 +51,8 @@ public class tempDBManage extends DBAccess {
 	            +"when '金' then 5 when '土' then 6 when '日' then 7 end");
 
 		insertSQL = String.format("replace into tbl_temp_timetable(period, subjectName, date, classID, roomName, teacherName) values(?,?,?,?,?,?)");
+
+		selectSQL =String.format("SELECT subjectName,teacherName FROM tbl_temp_timetable where period = ? ORDER BY date ASC");
 	}
 
 
@@ -132,6 +135,13 @@ public class tempDBManage extends DBAccess {
 			e.printStackTrace();
 		}
 
+
+	}
+
+	public List<tempInfo> regSelect(String period){
+		 List <tempInfo> regtiList = new ArrayList<>();
+
+		return tempinfo;
 
 	}
 

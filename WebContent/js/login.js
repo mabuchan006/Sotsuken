@@ -6,8 +6,27 @@ $(function login() {
 		$(function clkEvent() {
 			var pw = $("#enterPw").val();
 			var id = $("#enterId").val();
+			var login{};
 
-			if (  pw == "" || id == ""  ) {
+			login.doLogin = function doLogin(loginForm) {
+
+				//ID & PASS null check
+				if ( loginForm.id.value == '' ) {
+					return login.doError('IDを入力してください。');
+				}
+				if ( loginForm.pw.value == '' ) {
+					return login.doError('パスワードを入力してください。');
+				}
+				//NOT Error
+				return true;
+			}
+
+			login.doError = function doError(msg) {
+				alert(msg);
+				return false;
+			}
+
+			if (  pw == "" || id == "" || pw == 0 || id == 0 ) {
 
 				$("#msg").html("未入力があります、入力してください。");
 				$("#msg").css("color","red");
@@ -24,5 +43,6 @@ $(function login() {
 			clkEvent();
 		}
 	});//onkeypress()
+
 
 });//login()

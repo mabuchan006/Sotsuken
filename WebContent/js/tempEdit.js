@@ -41,11 +41,11 @@ function f_temp_drop(e) {
 }// f_drop
 
 function f_temp_formCheck(e) {
-	$("textarea").on({
+	$("textarea.teacher").on({
 		"focusin" : function(e) {
 			textVal = $(this).val();
 			console.log("focusin:"+ textVal);
-			fcEle = $(this).children("textarea").get(0);
+			//fcEle = $(this).children("textarea").get(0);
 		},
 		"keyup" : function(e) {
 			textVal = $(this).val();
@@ -66,5 +66,10 @@ function f_temp_formCheck(e) {
 			console.log("focusout insVal :" + insVal);
 			$(this).val(insVal);
 		}
+	})
+}
+function tempClickEvent(e){
+	$("#regBtn").click(function(e){
+		$("#").modal("show");
 	})
 }

@@ -28,8 +28,8 @@ public class loginControl extends HttpServlet {
     //クライアントに対して要求された内容を出力
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		String loginPath = "/Sotsuken/manage/";//変更予定のため未記述
-		String logoutPath = "/Sotsuken/top.jsp";//変更予定のため未記述
+		String loginPath = "";//変更予定のため未記述
+		String logoutPath = "";//変更予定のため未記述
 
 		//ログアウト処理
 		if( request.getParameter("state") != null &&
@@ -59,11 +59,13 @@ public class loginControl extends HttpServlet {
 	//ログイン処理
 	//doPost(クライアントからデータが送られてくる場合に呼び出し)
 	//クライアントから送られてきた情報を取得するような処理
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
 		//System.out.println("１");
+		//boolean check = authUser( "teacherID" , "password" );
 		//パス初期値
-		String path="test/login_test.jsp";//変更予定のため未記述
+		String path="";//変更予定のため未記述
 		String errPath="Sotsuken/top.jsp";//変更予定のため未記述
 
 		//セッション情報取得
@@ -85,7 +87,7 @@ public class loginControl extends HttpServlet {
 			teacherInfo tchinf = Ldb.userDBSearch( tchInf );
 
 			//teacherInfo内に情報がなかったら
-			if( tchinf != null ){
+			if( tchinf != null || !(tchinf.equals(null)) ){
 
 				//session start
 				session = request.getSession(true);
@@ -98,7 +100,10 @@ public class loginControl extends HttpServlet {
 				request.setAttribute( "login_Msg" , Ldb.getMsg() );
 
 				return;
-			}//if
+			} else {
+				request.setAttribute("errMsg", "ユーザ名かパスワードが違います。");
+				response.sendRedirect(errPath);
+			}//else if
 
 		//errManage
 		} catch (Exception e) {
