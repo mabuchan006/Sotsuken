@@ -11,17 +11,16 @@ public class tempDBManage extends DBAccess {
 	private String selectSQL;
 	private String insertSQL;
 	private String deleteSQL;
-	private String rooms1_SQL; //コマ割りから部屋情報取得
-	private String rooms2_SQL; //コマ割りから部屋情報取得
-	private String rooms3_SQL; //コマ割りから部屋情報取得
-	private String rooms4_SQL; //コマ割りから部屋情報取得
+	private String checkDB;
+	private String roomsSQL; //コマ割りから部屋情報取得
 	List<tempInfo> tempinfo = new ArrayList<tempInfo>();
 
 
 
-	public tempDBManage() {
+
+	public tempDBManage(String tblName) {
 		super(DRIVER_NAME);
-		rooms1_SQL = String.format("SELECT divide.period, divide.week, GROUP_CONCAT(DISTINCT room.roomName separator '/') AS roomName "
+		roomsSQL = String.format("SELECT divide.period, divide.week, GROUP_CONCAT(DISTINCT room.roomName separator '/') AS roomName "
 	            +"FROM tbl_room room "
 	            +"INNER JOIN tbl_timedivide divide on room.roomID = divide.roomID "
 	            +"GROUP BY divide.classID, divide.period, divide.week "
@@ -29,30 +28,14 @@ public class tempDBManage extends DBAccess {
 	            +"ORDER BY CASE divide.week when '月' then 1 when '火' then 2 when '水' then 3 when '木' then 4 "
 	            +"when '金' then 5 when '土' then 6 when '日' then 7 end");
 
-		rooms2_SQL = String.format("SELECT divide.period, divide.week, GROUP_CONCAT(DISTINCT room.roomName separator '/') AS roomName "
-	            +"FROM tbl_room room "
-	            +"INNER JOIN tbl_timedivide divide on room.roomID = divide.roomID "
-	            +"where divide.period = 2 && divide.classID = ? && divide.week = ? "
-	            +"order by case divide.week when '月' then 1 when '火' then 2 when '水' then 3 when '木' then 4 "
-	            +"when '金' then 5 when '土' then 6 when '日' then 7 end");
 
-		rooms3_SQL = String.format("SELECT divide.period, divide.week, GROUP_CONCAT(DISTINCT room.roomName separator '/') AS roomName "
-	            +"FROM tbl_room room "
-	            +"INNER JOIN tbl_timedivide divide on room.roomID = divide.roomID "
-	            +"where divide.period = 3 && divide.classID = ? && divide.week = ? "
-	            +"order by case divide.week when '月' then 1 when '火' then 2 when '水' then 3 when '木' then 4 "
-	            +"when '金' then 5 when '土' then 6 when '日' then 7 end");
+		insertSQL = String.format("replace into %s(period, subjectName, date, classID, roomName, teacherName) values(?,?,?,?,?,?)",tblName);
 
-		rooms4_SQL = String.format("SELECT divide.period, divide.week, GROUP_CONCAT(DISTINCT room.roomName separator '/') AS roomName "
-	            +"FROM tbl_room room "
-	            +"INNER JOIN tbl_timedivide divide on room.roomID = divide.roomID "
-	            +"where divide.period = 4 && divide.classID = ? && divide.week = ? "
-	            +"order by case divide.week when '月' then 1 when '火' then 2 when '水' then 3 when '木' then 4 "
-	            +"when '金' then 5 when '土' then 6 when '日' then 7 end");
+		selectSQL =String.format("SELECT subjectName,teacherName,date FROM %s where period = ? ORDER BY date ASC",tblName);
 
-		insertSQL = String.format("replace into tbl_temp_timetable(period, subjectName, date, classID, roomName, teacherName) values(?,?,?,?,?,?)");
+		deleteSQL = String.format("DELETE FROM %s",tblName);
 
-		selectSQL =String.format("SELECT subjectName,teacherName FROM tbl_temp_timetable where period = ? ORDER BY date ASC");
+		checkDB = String.format("SELECT COUNT(*) FROM %s",tblName);
 	}
 
 
@@ -61,33 +44,10 @@ public class tempDBManage extends DBAccess {
 				//DB接続
 				connect();
 
-				//SQL実行 switch(時限選択)
-				switch (periodNum) {
-				case 1:
-					createStstement(rooms1_SQL);
-					getPstmt().setString(1, classID);
-					getPstmt().setInt(2, periodNum);
-					break;
-				case 2:
-					createStstement(rooms2_SQL);
-					getPstmt().setString(1, classID);
-					getPstmt().setInt(2, periodNum);
-
-
-					break;
-				case 3:
-					createStstement(rooms3_SQL);
-					getPstmt().setString(1, classID);
-					getPstmt().setInt(2, periodNum);
-
-					break;
-				case 4:
-					createStstement(rooms4_SQL);
-					getPstmt().setString(1, classID);
-					getPstmt().setInt(2, periodNum);
-
-					break;
-				}
+				//SQL実行
+				createStstement(roomsSQL);
+				getPstmt().setString(1, classID);
+				getPstmt().setInt(2, periodNum);
 				selectExe();
 				ResultSet rs = getRsResult();
 				roomInfo roominfo = null;
@@ -97,13 +57,11 @@ public class tempDBManage extends DBAccess {
 										 rs.getString("week"),
 										 rs.getString("roomName")
 										 );
-
 								 roomsList.add(roominfo);
 					}
-
 					disConnection();
 					return roomsList;
-	}
+	} //コマ割り部屋情報　取得
 
 	public void tempDBInsert(List<tempInfo> tiList){
 
@@ -134,15 +92,39 @@ public class tempDBManage extends DBAccess {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
 		}
+	}//Post Data登録
 
-
-	}
-
-	public List<tempInfo> regSelect(String period){
+	public List<tempInfo> regSelect(String period) throws Exception{
 		 List <tempInfo> regtiList = new ArrayList<>();
+		 connect();
+		createStstement(selectSQL);
+		getPstmt().setString(1, period);
+		selectExe();
+		ResultSet rs = getRsResult();
+		tempInfo tempinfo;
 
-		return tempinfo;
+		while (rs.next()) {
+			tempinfo = new tempInfo("", rs.getString("subjectName"), rs.getString("date"), "", "",rs.getString("teacherName"));
+			regtiList.add(tempinfo);
+		}
+		disConnection();
+		return regtiList;
+	} //regist Data取得
 
+	public void tempDelete() throws Exception {
+		connect();
+		createStstement();
+		updateExe(deleteSQL);
+		disConnection();
+	}//tempDB Delete
+
+	public int existCheck() throws Exception{
+		connect();
+		createStstement();
+		selectExe(checkDB);
+		ResultSet rs = getRsResult();
+		rs.next();
+		int count = rs.getInt(1);
+		return count;
 	}
-
 }

@@ -149,7 +149,7 @@
 <span class="input-group-addon">
   <i class="fa fa-calendar green"></i>
   </span>
-  <input type="text" class="form-control "placeholder="始点の日付入力" name="start">
+  <input type="text" class="form-control "placeholder="始点の日付入力" name="start" required="required" value="${regtiList1[0].date }">
 </div>
 
 <script type="text/javascript">
@@ -157,7 +157,7 @@ $('.input-group.date').datepicker({
     language: "ja",
     daysOfWeekDisabled: "0,2,3,4,5,6",
     autoclose: true,
-    format: 'yyyy/mm/dd',
+    format: 'yyyy-mm-dd',
 });
 </script>
 
@@ -185,31 +185,31 @@ $('.input-group.date').datepicker({
 				<th rowspan=3>1</th>
 				<td ><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														 name="Su0_1" class="txtFontSize1 subject" >${subject1List[0].subjectName }</textarea>
+														 name="Su0_1" class="txtFontSize1 subject" placeholder="教科入力欄">${regtiList1[0].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Su1_1" class="txtFontSize1 subject" >${subject1List[1].subjectName }</textarea>
+														name="Su1_1" class="txtFontSize1 subject" >${regtiList1[1].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Su2_1" class="txtFontSize1 subject">${subject1List[2].subjectName }</textarea>
+														name="Su2_1" class="txtFontSize1 subject">${regtiList1[2].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Su3_1" class="txtFontSize1 subject">${subject1List[3].subjectName }</textarea>
+														name="Su3_1" class="txtFontSize1 subject">${regtiList1[3].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Su4_1" class="txtFontSize1 subject">${subject1List[4].subjectName }</textarea>
+														name="Su4_1" class="txtFontSize1 subject">${regtiList1[4].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Su5_1" class="txtFontSize1 subject">${subject1List[5].subjectName }</textarea>
+														name="Su5_1" class="txtFontSize1 subject">${regtiList1[5].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Su6_1" class="txtFontSize1 subject">${subject1List[6].subjectName }</textarea>
+														name="Su6_1" class="txtFontSize1 subject">${regtiList1[6].subjectName }</textarea>
 												</p></td>
 			</tr>
 
@@ -217,31 +217,31 @@ $('.input-group.date').datepicker({
 			<tr class="info">
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Te0_1" class="txtFontSize1 teacher"></textarea>
+														name="Te0_1" class="txtFontSize1 teacher" placeholder="先生入力欄">${regtiList1[0].teacherName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Te1_1"  class="txtFontSize1 teacher"></textarea>
+														name="Te1_1"  class="txtFontSize1 teacher">${regtiList1[1].teacherName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Te2_1"  class="txtFontSize1 teacher"></textarea>
+														name="Te2_1"  class="txtFontSize1 teacher">${regtiList1[2].teacherName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Te3_1"  class="txtFontSize1 teacher"></textarea>
+														name="Te3_1"  class="txtFontSize1 teacher">${regtiList1[3].teacherName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Te4_1"  class="txtFontSize1 teacher"></textarea>
+														name="Te4_1"  class="txtFontSize1 teacher">${regtiList1[4].teacherName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Te5_1"  class="txtFontSize1 teacher"></textarea>
+														name="Te5_1"  class="txtFontSize1 teacher">${regtiList1[5].teacherName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Te6_1"  class="txtFontSize1 teacher"></textarea>
+														name="Te6_1"  class="txtFontSize1 teacher">${regtiList1[6].teacherName }</textarea>
 												</p></td>
 			</tr>
 			<!-- １限目　先生 終わり -->
@@ -386,31 +386,31 @@ $('.input-group.date').datepicker({
 				<th rowspan=3>2</th>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														class="txtFontSize1 subject"></textarea>
+														name="Su0_2" class="txtFontSize1 subject">${regtiList2[0].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														class="txtFontSize1 subject"></textarea>
+														name="Su1_2" class="txtFontSize1 subject">${regtiList2[1].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														class="txtFontSize1 subject"></textarea>
+														name="Su2_2" class="txtFontSize1 subject">${regtiList2[2].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														class="txtFontSize1 subject"></textarea>
+														name="Su3_2" class="txtFontSize1 subject">${regtiList2[3].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														class="txtFontSize1 subject"></textarea>
+														name="Su4_2" class="txtFontSize1 subject">${regtiList2[4].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														class="txtFontSize1 subject"></textarea>
+														name="Su5_2" class="txtFontSize1 subject">${regtiList2[5].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														class="txtFontSize1 subject"></textarea>
+														name="Su6_2" class="txtFontSize1 subject">${regtiList2[6].subjectName }</textarea>
 												</p></td>
 
 			</tr>
@@ -418,31 +418,31 @@ $('.input-group.date').datepicker({
 			<tr class="danger">
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														class="txtFontSize1 teacher"></textarea>
+														name="Te0_2" class="txtFontSize1 teacher">${regtiList2[0].teacherName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														class="txtFontSize1 teacher"></textarea>
+														name="Te1_2" class="txtFontSize1 teacher">${regtiList2[1].teacherName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														class="txtFontSize1 teacher"></textarea>
+														name="Te2_2" class="txtFontSize1 teacher">${regtiList2[2].teacherName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														class="txtFontSize1 teacher"></textarea>
+														name="Te3_2" class="txtFontSize1 teacher">${regtiList2[3].teacherName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														class="txtFontSize1 teacher"></textarea>
+														name="Te4_2" class="txtFontSize1 teacher">${regtiList2[4].teacherName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														class="txtFontSize1 teacher"></textarea>
+														name="Te5_2" class="txtFontSize1 teacher">${regtiList2[5].teacherName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														class="txtFontSize1 teacher"></textarea>
+														name="Te6_2" class="txtFontSize1 teacher">${regtiList2[6].teacherName }</textarea>
 												</p></td>
 			</tr>
 
@@ -463,57 +463,98 @@ $('.input-group.date').datepicker({
 
 				<%if(week == 0){ %>
 					<c:if test="${rooms2List[index].week == '月'}" var="flg_0"/>
-						<c:if test="${flg_0 }"><td class="fonts">${ rooms2List[index].roomName}</td><%status++;%></c:if>
+						<c:if test="${flg_0 }"><td class="fonts">${ rooms2List[index].roomName}</td>
+						<input type="hidden" name="Ro0_2" value="${ rooms2List[index].roomName}" />
+						<%status++;%>
+						</c:if>
 						<% if(cnt == period_2 - 1 && status == 0){ %>
-						<c:if test="${!flg_0 }"><td></td></c:if>
+						<c:if test="${!flg_0 }">
+						<td></td>
+						<input type="hidden" name="Ro0_2" value="" />
+						</c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 1){ %>
 					<c:if test="${rooms2List[index].week == '火'}" var="flg_1"/>
-						<c:if test="${flg_1 }"><td class="fonts">${ rooms2List[index].roomName}</td><%status++;%></c:if>
+						<c:if test="${flg_1 }"><td class="fonts">${ rooms2List[index].roomName}</td>
+						<input type="hidden" name="Ro1_2" value="${ rooms2List[index].roomName}" />
+						<%status++;%>
+						</c:if>
 						<%if(cnt == period_2 - 1 && status == 0){ %>
-						<c:if test="${!flg_1 }"><td></td></c:if>
+						<c:if test="${!flg_1 }">
+						<td></td>
+						<input type="hidden" name="Ro1_2" value="" />
+						</c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 2){ %>
 					<c:if test="${rooms2List[index].week == '水'}" var="flg_2"/>
-						<c:if test="${flg_2 }"><td class="fonts">${ rooms2List[index].roomName}</td><%status++;%></c:if>
+						<c:if test="${flg_2 }"><td class="fonts">${ rooms2List[index].roomName}</td>
+						<input type="hidden" name="Ro2_2" value="${ rooms2List[index].roomName}" />
+						<%status++;%>
+						</c:if>
 						<%if(cnt == period_2 - 1 && status == 0){ %>
-						<c:if test="${!flg_2 }"><td></td></c:if>
+						<c:if test="${!flg_2 }">
+						<td></td>
+						<input type="hidden" name="Ro2_2" value="" />
+						</c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 3){ %>
 					<c:if test="${rooms2List[index].week == '木'}" var="flg_3"/>
-					<c:if test="${flg_3 }"><td class="fonts">${ rooms2List[index].roomName}</td><%status++;%></c:if>
+					<c:if test="${flg_3 }"><td class="fonts">${ rooms2List[index].roomName}</td>
+					<input type="hidden" name="Ro3_2" value="${ rooms2List[index].roomName}" />
+					<%status++;%>
+					</c:if>
 						<%if(cnt == period_2 - 1 && status == 0){ %>
-						<c:if test="${!flg_3 }"><td></td></c:if>
+						<c:if test="${!flg_3 }">
+						<td></td>
+						<input type="hidden" name="Ro3_2" value="" />
+						</c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 4){ %>
 					<c:if test="${rooms2List[index].week == '金'}" var="flg_4"/>
-					<c:if test="${flg_4}"><td class="fonts">${ rooms2List[index].roomName}</td><%status++;%></c:if>
+					<c:if test="${flg_4}"><td class="fonts">${ rooms2List[index].roomName}</td>
+					<input type="hidden" name="Ro4_2" value="${ rooms2List[index].roomName}" />
+					<%status++;%></c:if>
 						<%if(cnt == period_2 - 1 && status == 0){ %>
-						<c:if test="${!flg_4 }"><td></td></c:if>
+						<c:if test="${!flg_4 }">
+						<td></td>
+						<input type="hidden" name="Ro4_2" value="" />
+						</c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 5){ %>
 					<c:if test="${rooms2List[index].week == '土'}" var="flg_5"/>
-					<c:if test="${flg_5 }"><td class="fonts">${ rooms2List[index].roomName}</td><%status++;%></c:if>
+					<c:if test="${flg_5 }"><td class="fonts">${ rooms2List[index].roomName}</td>
+					<input type="hidden" name="Ro5_2" value="${ rooms2List[index].roomName}" />
+					<%status++;%>
+					</c:if>
 						<%if(cnt == period_2 - 1 && status == 0){ %>
-						<c:if test="${!flg_5 }"><td></td></c:if>
+						<c:if test="${!flg_5 }">
+						<td></td>
+						<input type="hidden" name="Ro5_2" value="" />
+						</c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 6){ %>
 					<c:if test="${rooms2List[index].week == '日'}" var="flg_6"/>
-					<c:if test="${flg_6 }"><td class="fonts">${ rooms2List[index].roomName}</td><%status++;%></c:if>
+					<c:if test="${flg_6 }"><td class="fonts">${ rooms2List[index].roomName}</td>
+					<input type="hidden" name="Ro6_2" value="${ rooms2List[index].roomName}" />
+					<%status++;%>
+					</c:if>
 						<%if(cnt == period_2 - 1 && status == 0){ %>
-						<c:if test="${!flg_6 }"><td></td></c:if>
+						<c:if test="${!flg_6 }">
+						<td></td>
+						<input type="hidden" name="Ro6_2" value="" />
+						</c:if>
 						<% } %>
 				<% } %>
 
@@ -524,13 +565,13 @@ $('.input-group.date').datepicker({
 
 			<c:if test="${!list_flg }">
 			<tr class="danger">
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td><input type="hidden" name="Ro0_2" value="" /></td>
+			<td><input type="hidden" name="Ro1_2" value="" /></td>
+			<td><input type="hidden" name="Ro2_2" value="" /></td>
+			<td><input type="hidden" name="Ro3_2" value="" /></td>
+			<td><input type="hidden" name="Ro4_2" value="" /></td>
+			<td><input type="hidden" name="Ro5_2" value="" /></td>
+			<td><input type="hidden" name="Ro6_2" value="" /></td>
 			</tr>
 			</c:if>
 
@@ -539,62 +580,62 @@ $('.input-group.date').datepicker({
 				<th rowspan=3>3</th>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														class="txtFontSize1 subject"></textarea>
+														name="Su0_3" class="txtFontSize1 subject">${regtiList3[0].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														class="txtFontSize1 subject"></textarea>
+														name="Su1_3" class="txtFontSize1 subject">${regtiList3[1].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														class="txtFontSize1 subject"></textarea>
+														name="Su2_3" class="txtFontSize1 subject">${regtiList3[2].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														class="txtFontSize1 subject"></textarea>
+														name="Su3_3" class="txtFontSize1 subject">${regtiList3[3].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														class="txtFontSize1 subject"></textarea>
+														name="Su4_3" class="txtFontSize1 subject">${regtiList3[4].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														class="txtFontSize1 subject"></textarea>
+														name="Su5_3" class="txtFontSize1 subject">${regtiList3[5].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														class="txtFontSize1 subject"></textarea>
+														name="Su6_3" class="txtFontSize1 subject">${regtiList3[6].subjectName }</textarea>
 												</p></td>
 			</tr>
 
 			<tr class="success">
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														class="txtFontSize1 teacher"></textarea>
+														name="Te0_3" class="txtFontSize1 teacher">${regtiList3[0].teacherName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														class="txtFontSize1 teacher"></textarea>
+														name="Te1_3" class="txtFontSize1 teacher">${regtiList3[1].teacherName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														class="txtFontSize1 teacher"></textarea>
+														name="Te2_3" class="txtFontSize1 teacher">${regtiList3[2].teacherName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														class="txtFontSize1 teacher"></textarea>
+														name="Te3_3" class="txtFontSize1 teacher">${regtiList3[3].teacherName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														class="txtFontSize1 teacher"></textarea>
+														name="Te4_3" class="txtFontSize1 teacher">${regtiList3[4].teacherName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														class="txtFontSize1 teacher"></textarea>
+														name="Te5_3" class="txtFontSize1 teacher">${regtiList3[5].teacherName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														class="txtFontSize1 teacher"></textarea>
+														name="Te6_3" class="txtFontSize1 teacher">${regtiList3[6].teacherName }</textarea>
 												</p></td>
 			</tr>
 
@@ -615,57 +656,99 @@ $('.input-group.date').datepicker({
 
 				<%if(week == 0){ %>
 					<c:if test="${rooms3List[index].week == '月'}" var="flg_0"/>
-						<c:if test="${flg_0 }"><td class="fonts">${ rooms3List[index].roomName}</td><%status++;%></c:if>
+						<c:if test="${flg_0 }"><td class="fonts">${ rooms3List[index].roomName}</td>
+						<input type="hidden" name="Ro0_3" value="${ rooms3List[index].roomName}" />
+						<%status++;%>
+						</c:if>
 						<% if(cnt == period_3 - 1 && status == 0){ %>
-						<c:if test="${!flg_0 }"><td></td></c:if>
+						<c:if test="${!flg_0 }">
+						<td></td>
+						<input type="hidden" name="Ro0_3" value="" />
+						</c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 1){ %>
 					<c:if test="${rooms3List[index].week == '火'}" var="flg_1"/>
-						<c:if test="${flg_1 }"><td class="fonts">${ rooms3List[index].roomName}</td><%status++;%></c:if>
+						<c:if test="${flg_1 }"><td class="fonts">${ rooms3List[index].roomName}</td>
+						<input type="hidden" name="Ro1_3" value="${ rooms3List[index].roomName}" />
+						<%status++;%>
+						</c:if>
 						<%if(cnt == period_3 - 1 && status == 0){ %>
-						<c:if test="${!flg_1 }"><td></td></c:if>
+						<c:if test="${!flg_1 }">
+						<td></td>
+						<input type="hidden" name="Ro1_3" value="" />
+						</c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 2){ %>
 					<c:if test="${rooms3List[index].week == '水'}" var="flg_2"/>
-						<c:if test="${flg_2 }"><td class="fonts">${ rooms3List[index].roomName}</td><%status++;%></c:if>
+						<c:if test="${flg_2 }"><td class="fonts">${ rooms3List[index].roomName}</td>
+						<input type="hidden" name="Ro2_3" value="${ rooms3List[index].roomName}" />
+						<%status++;%>
+						</c:if>
 						<%if(cnt == period_3 - 1 && status == 0){ %>
-						<c:if test="${!flg_2 }"><td></td></c:if>
+						<c:if test="${!flg_2 }">
+						<td></td>
+						<input type="hidden" name="Ro2_3" value="" />
+						</c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 3){ %>
 					<c:if test="${rooms3List[index].week == '木'}" var="flg_3"/>
-					<c:if test="${flg_3 }"><td class="fonts">${ rooms3List[index].roomName}</td><%status++;%></c:if>
+					<c:if test="${flg_3 }"><td class="fonts">${ rooms3List[index].roomName}</td>
+					<input type="hidden" name="Ro3_3" value="${ rooms3List[index].roomName}" />
+					<%status++;%>
+					</c:if>
 						<%if(cnt == period_3 - 1 && status == 0){ %>
-						<c:if test="${!flg_3 }"><td></td></c:if>
+						<c:if test="${!flg_3 }">
+						<td></td>
+						<input type="hidden" name="Ro3_3" value="" />
+						</c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 4){ %>
 					<c:if test="${rooms3List[index].week == '金'}" var="flg_4"/>
-					<c:if test="${flg_4}"><td class="fonts">${ rooms3List[index].roomName}</td><%status++;%></c:if>
+					<c:if test="${flg_4}"><td class="fonts">${ rooms3List[index].roomName}</td>
+					<input type="hidden" name="Ro4_3" value="${ rooms3List[index].roomName}" />
+					<%status++;%>
+					</c:if>
 						<%if(cnt == period_3 - 1 && status == 0){ %>
-						<c:if test="${!flg_4 }"><td></td></c:if>
+						<c:if test="${!flg_4 }">
+						<td></td>
+						<input type="hidden" name="Ro4_3" value="" />
+						</c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 5){ %>
 					<c:if test="${rooms3List[index].week == '土'}" var="flg_5"/>
-					<c:if test="${flg_5 }"><td class="fonts">${ rooms3List[index].roomName}</td><%status++;%></c:if>
+					<c:if test="${flg_5 }"><td class="fonts">${ rooms3List[index].roomName}</td>
+					<input type="hidden" name="Ro5_3" value="${ rooms3List[index].roomName}" />
+					<%status++;%>
+					</c:if>
 						<%if(cnt == period_3 - 1 && status == 0){ %>
-						<c:if test="${!flg_5 }"><td></td></c:if>
+						<c:if test="${!flg_5 }">
+						<td></td>
+						<input type="hidden" name="Ro5_3" value="" />
+						</c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 6){ %>
 					<c:if test="${rooms3List[index].week == '日'}" var="flg_6"/>
-					<c:if test="${flg_6 }"><td class="fonts">${ rooms3List[index].roomName}</td><%status++;%></c:if>
+					<c:if test="${flg_6 }"><td class="fonts">${ rooms3List[index].roomName}</td>
+					<input type="hidden" name="Ro6_3" value="${ rooms3List[index].roomName}" />
+					<%status++;%>
+					</c:if>
 						<%if(cnt == period_3 - 1 && status == 0){ %>
-						<c:if test="${!flg_6 }"><td></td></c:if>
+						<c:if test="${!flg_6 }">
+						<td></td>
+						<input type="hidden" name="Ro6_3" value="" />
+						</c:if>
 						<% } %>
 				<% } %>
 
@@ -676,13 +759,13 @@ $('.input-group.date').datepicker({
 
 			<c:if test="${!list_flg }">
 			<tr class="success">
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td><input type="hidden" name="Ro0_3" value="" /></td>
+			<td><input type="hidden" name="Ro1_3" value="" /></td>
+			<td><input type="hidden" name="Ro2_3" value="" /></td>
+			<td><input type="hidden" name="Ro3_3" value="" /></td>
+			<td><input type="hidden" name="Ro4_3" value="" /></td>
+			<td><input type="hidden" name="Ro5_3" value="" /></td>
+			<td><input type="hidden" name="Ro6_3" value="" /></td>
 			</tr>
 			</c:if>
 
@@ -692,62 +775,62 @@ $('.input-group.date').datepicker({
 				<th rowspan=3>4</th>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														class="txtFontSize1 subject"></textarea>
+														name="Su0_4" class="txtFontSize1 subject">${regtiList4[0].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														class="txtFontSize1 subject"></textarea>
+														name="Su1_4" class="txtFontSize1 subject">${regtiList4[1].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														class="txtFontSize1 subject"></textarea>
+														name="Su2_4" class="txtFontSize1 subject">${regtiList4[2].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														class="txtFontSize1 subject"></textarea>
+														name="Su3_4" class="txtFontSize1 subject">${regtiList4[3].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														class="txtFontSize1 subject"></textarea>
+														name="Su4_4" class="txtFontSize1 subject">${regtiList4[4].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														class="txtFontSize1 subject"></textarea>
+														name="Su5_4" class="txtFontSize1 subject">${regtiList4[5].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														class="txtFontSize1 subject"></textarea>
+														name="Su6_4" class="txtFontSize1 subject">${regtiList4[6].subjectName }</textarea>
 												</p></td>
 			</tr>
 
 			<tr class="warning">
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														class="txtFontSize1 teacher"></textarea>
+														name="Te0_4" class="txtFontSize1 teacher">${regtiList4[0].teacherName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														class="txtFontSize1  teacher"></textarea>
+														name="Te1_4" class="txtFontSize1  teacher">${regtiList4[1].teacherName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														class="txtFontSize1  teacher"></textarea>
+														name="Te2_4" class="txtFontSize1  teacher">${regtiList4[2].teacherName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														class="txtFontSize1  teacher"></textarea>
+														name="Te3_4" class="txtFontSize1  teacher">${regtiList4[3].teacherName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														class="txtFontSize1  teacher"></textarea>
+														name="Te4_4" class="txtFontSize1  teacher">${regtiList4[4].teacherName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														class="txtFontSize1  teacher"></textarea>
+														name="Te5_4" class="txtFontSize1  teacher">${regtiList4[5].teacherName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														class="txtFontSize1  teacher"></textarea>
+														name="Te6_4" class="txtFontSize1  teacher">${regtiList4[6].teacherName }</textarea>
 												</p></td>
 			</tr>
 
@@ -768,57 +851,98 @@ $('.input-group.date').datepicker({
 
 				<%if(week == 0){ %>
 					<c:if test="${rooms4List[index].week == '月'}" var="flg_0"/>
-						<c:if test="${flg_0 }"><td class="fonts">${ rooms4List[index].roomName}</td><%status++;%></c:if>
+						<c:if test="${flg_0 }"><td class="fonts">${ rooms4List[index].roomName}</td>
+						<input type="hidden" name="Ro0_4" value="${ rooms4List[index].roomName}" />
+						<%status++;%></c:if>
 						<% if(cnt == period_4 - 1 && status == 0){ %>
-						<c:if test="${!flg_0 }"><td></td></c:if>
+						<c:if test="${!flg_0 }">
+						<td></td>
+						<input type="hidden" name="Ro0_4" value="" />
+						</c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 1){ %>
 					<c:if test="${rooms4List[index].week == '火'}" var="flg_1"/>
-						<c:if test="${flg_1 }"><td class="fonts">${ rooms4List[index].roomName}</td><%status++;%></c:if>
+						<c:if test="${flg_1 }"><td class="fonts">${ rooms4List[index].roomName}</td>
+						<input type="hidden" name="Ro1_4" value="${ rooms4List[index].roomName}" />
+						<%status++;%>
+						</c:if>
 						<%if(cnt == period_4 - 1 && status == 0){ %>
-						<c:if test="${!flg_1 }"><td></td></c:if>
+						<c:if test="${!flg_1 }">
+						<td></td>
+						<input type="hidden" name="Ro1_4" value="" />
+						</c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 2){ %>
 					<c:if test="${rooms4List[index].week == '水'}" var="flg_2"/>
-						<c:if test="${flg_2 }"><td class="fonts">${ rooms4List[index].roomName}</td><%status++;%></c:if>
+						<c:if test="${flg_2 }"><td class="fonts">${ rooms4List[index].roomName}</td>
+						<input type="hidden" name="Ro2_4" value="${ rooms4List[index].roomName}" />
+						<%status++;%>
+						</c:if>
 						<%if(cnt == period_4 - 1 && status == 0){ %>
-						<c:if test="${!flg_2 }"><td></td></c:if>
+						<c:if test="${!flg_2 }">
+						<td></td>
+						<input type="hidden" name="Ro2_4" value="" />
+						</c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 3){ %>
 					<c:if test="${rooms4List[index].week == '木'}" var="flg_3"/>
-					<c:if test="${flg_3 }"><td class="fonts">${ rooms4List[index].roomName}</td><%status++;%></c:if>
+					<c:if test="${flg_3 }"><td class="fonts">${ rooms4List[index].roomName}</td>
+					<input type="hidden" name="Ro3_4" value="${ rooms4List[index].roomName}" />
+					<%status++;%>
+					</c:if>
 						<%if(cnt == period_4 - 1 && status == 0){ %>
-						<c:if test="${!flg_3 }"><td></td></c:if>
+						<c:if test="${!flg_3 }">
+						<td></td>
+						<input type="hidden" name="Ro3_4" value="" />
+						</c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 4){ %>
 					<c:if test="${rooms4List[index].week == '金'}" var="flg_4"/>
-					<c:if test="${flg_4}"><td class="fonts">${ rooms4List[index].roomName}</td><%status++;%></c:if>
+					<c:if test="${flg_4}"><td class="fonts">${ rooms4List[index].roomName}</td>
+					<input type="hidden" name="Ro4_4" value="${ rooms4List[index].roomName}" />
+					<%status++;%>
+					</c:if>
 						<%if(cnt == period_4 - 1 && status == 0){ %>
-						<c:if test="${!flg_4 }"><td></td></c:if>
+						<c:if test="${!flg_4 }">
+						<td></td>
+						<input type="hidden" name="Ro4_4" value="" />
+						</c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 5){ %>
 					<c:if test="${rooms4List[index].week == '土'}" var="flg_5"/>
-					<c:if test="${flg_5 }"><td class="fonts">${ rooms4List[index].roomName}</td><%status++;%></c:if>
+					<c:if test="${flg_5 }"><td class="fonts">${ rooms4List[index].roomName}</td>
+					<input type="hidden" name="Ro5_4" value="${ rooms4List[index].roomName}" />
+					<%status++;%>
+					</c:if>
 						<%if(cnt == period_4 - 1 && status == 0){ %>
-						<c:if test="${!flg_5 }"><td></td></c:if>
+						<c:if test="${!flg_5 }">
+						<td></td>
+						<input type="hidden" name="Ro5_4" value="" />
+						</c:if>
 						<% } %>
 				<% } %>
 
 				<%if(week == 6){ %>
 					<c:if test="${rooms4List[index].week == '日'}" var="flg_6"/>
-					<c:if test="${flg_6 }"><td class="fonts">${ rooms4List[index].roomName}</td><%status++;%></c:if>
+					<c:if test="${flg_6 }"><td class="fonts">${ rooms4List[index].roomName}</td>
+					<input type="hidden" name="Ro6_4" value="${ rooms4List[index].roomName}" />
+					<%status++;%>
+					</c:if>
 						<%if(cnt == period_4 - 1 && status == 0){ %>
-						<c:if test="${!flg_6 }"><td></td></c:if>
+						<c:if test="${!flg_6 }">
+						<td></td>
+						<input type="hidden" name="Ro6_4" value="" />
+						</c:if>
 						<% } %>
 				<% } %>
 
@@ -829,13 +953,13 @@ $('.input-group.date').datepicker({
 
 			<c:if test="${!list_flg }">
 			<tr class="warning">
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td><input type="hidden" name="Ro0_4" value="" /></td>
+			<td><input type="hidden" name="Ro1_4" value="" /></td>
+			<td><input type="hidden" name="Ro2_4" value="" /></td>
+			<td><input type="hidden" name="Ro3_4" value="" /></td>
+			<td><input type="hidden" name="Ro4_4" value="" /></td>
+			<td><input type="hidden" name="Ro5_4" value="" /></td>
+			<td><input type="hidden" name="Ro6_4" value="" /></td>
 			</tr>
 			</c:if>
 
