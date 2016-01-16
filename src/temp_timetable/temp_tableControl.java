@@ -156,14 +156,11 @@ public class temp_tableControl extends HttpServlet {
 
 		//Insert 登録ボタン
 		if(request.getParameter("regist") != null){
-
 			try {
 				//delete
 				tempDBM.tempDelete();
-
 			String date = request.getParameter("start").toString(); //始点の日付取得
 			System.out.println(date);
-
 
 			for(int week=0;week <= 3;week++){
 				for(int i=0; i <= 6; i++){
@@ -263,6 +260,14 @@ public class temp_tableControl extends HttpServlet {
 		} catch (Exception e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
+		}
+		//マスタアップ
+
+		//マスタ確認
+		if(request.getParameter("confirm") != null){
+			String url = "/Sotsuken/publicView?page="+ chooseClassID;
+			response.sendRedirect(url);
+			return;
 		}
 
 		// ディスパッチ準備

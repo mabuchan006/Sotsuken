@@ -6,8 +6,6 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <form action="/Sotsuken/editView" method="post" >
 
-
-
 <!-- タブ -->
 <br />
 <br />
@@ -139,17 +137,12 @@
 
 <div class="container">
 
-<!-- calender
-<input type="date" name="start" style="text-align: center;" min="2016-01-04" max="2040-04-01" step="7" required  />
-   calender End-->
-
-
-
+<!-- calender-->
  <div class="input-group date col-md-2">
 <span class="input-group-addon">
   <i class="fa fa-calendar green"></i>
   </span>
-  <input type="text" class="form-control "placeholder="始点の日付入力" name="start" required="required" value="${regtiList1[0].date }">
+  <input type="text" class="form-control "placeholder="始点の日付入力" name="start" required="required" value="${regtiList1[0].date }" />
 </div>
 
 <script type="text/javascript">
@@ -161,9 +154,7 @@ $('.input-group.date').datepicker({
 });
 </script>
 
-
-
-
+<!-- calender End-->
 
 	<table
 		class="table table-striped table-bordered text-center table-condensed">
