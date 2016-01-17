@@ -1,6 +1,8 @@
 package event.db;
 import java.io.Serializable;
 
+
+
 public class eventInfo implements Serializable{
 
 		private int eventID;
@@ -25,7 +27,7 @@ public class eventInfo implements Serializable{
 			this.eventID = eventID;
 			this.eventName = eventName;
 			this.period = period;
-			this.date = date;
+			this.setDate(date);
 			this.classID = classID;
 			this.roomName = roomName;
 			this.endFlag = endFlag;
@@ -55,14 +57,7 @@ public class eventInfo implements Serializable{
 		}
 
 
-		public String getDate() {
-			return date;
-		}
 
-
-		public void setDate(String date) {
-			this.date = date;
-		}
 
 
 		public String getClassID() {
@@ -115,5 +110,12 @@ public class eventInfo implements Serializable{
 		public void setEndFlag(String endFlag) {
 			this.endFlag = endFlag;
 		}
+		public String getDate() {
+			return date;
+		}
+		public void setDate(String date) {
+			this.date = date;
+		}
+
 
 }

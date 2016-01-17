@@ -1,20 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!-- BootstrapのCSS読み込み -->
-<link href="../bootstrap/css/style.css" rel="stylesheet">
-<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="../css/custom.css" rel="stylesheet">
-
-<link href="../css/font-awesome.min.css" rel="stylesheet">
-<link href="../css/pure-drawer.css" rel="stylesheet">
-
-
-<script src="../js/jquery-2.1.1.min.js"></script>
-<script src="../bootstrap/js/bootstrap.min.js"></script>
-<script src="../js/jquery.appear.js"></script>
-<script src="../js/teacher_regist.js"></script>
-
-
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 <c:if test= "${!empty Msg }">
 <script>
@@ -33,17 +19,17 @@ toastSelect("success","${Msg }")</script>
 <table class="col-md-9 col-md-offset-3" id="first_table">
 <tr>
 <td class="col-md-3"><label for="EventName" class="labels">イベント名</label>
-	<input type="text" class="form-control" name="eventName">
+	<input type="text" class="form-control" name="eventName" placeholder="イベント入力">
 </td>
 
 <td class="col-md-3">
 <label for="text" class="labels">コマ</label>
-<input type="text" autocomplete="on" list="period" class="form-control" name="period">
+<input type="text" autocomplete="on" list="period" class="form-control" name="period" placeholder="時限数入力">
 
 </td>
 
 <td class="col-md-3"><label for="text" class="labels">教室</label>
-<input type="text" class="form-control" name="roomName">
+<input type="text" class="form-control" name="roomName" placeholder="教室名入力" list="room">
 </td>
 <td></td>
 
@@ -51,18 +37,20 @@ toastSelect("success","${Msg }")</script>
 <tr>
 <td class="col-md-3">
 	<label for="Time" class="labels">日時</label>
-	 <input type="text" class="form-control datepicker"  name="eventDate">
+
+
+  <input type="text" class="form-control eventDate" placeholder="日付入力" name="eventDate">
+
 </td>
 
 <td class="col-md-3">
 
  <label for="text" class="labels">講師</label>
- <input type="text" class="form-control" name="guestTeacher"></td>
+ <input type="text" class="form-control" name="guestTeacher" placeholder="担当講師入力" list="teacher"></td>
 
 <td class="col-md-3">
 <label for="text" class="labels">クラス名</label>
- <input type="text" class="form-control" name="class_id"></td>
-
+ <input type="text" class="form-control" name="class_id" placeholder="クラス名入力" list="class"></td>
 
 
 <td class="col-md-3">
@@ -77,36 +65,56 @@ toastSelect("success","${Msg }")</script>
 
 <!-- クラス一覧表示 -->
 <div class="col-md-9 col-md-offset-3">
+
 <div class="back">
 <table class="table ">
 <thead>
-<tr class="info wide">
-<td colspan="3">イベント一覧   ( ${cnt } 件)</td></tr>
+<tr class="wide">
+
+
+<td colspan="3">イベント一覧   ( ${cnt }) 件</td>
+
+</tr>
 </thead>
 <tbody>
 <!-- イベント情報取得 -->
 <c:forEach var="rs" items="${eventList }">
 <tr class="select">
-<td class="eventname"  data-name="${rs.eventName}">${rs.eventName}</td>
+<td><div class="calendar">
+${rs.date }
+
+
+
+</div></td>
 <td>
-<td class="period"  data-name="${rs.period}">${rs.period}　時限目</td>
-<td>
-<td class="date"  data-name="${rs.date}">${rs.date}</td>
-<td>
-<td class="classID"  data-name="${rs.classID}">${rs.classID}</td>
-<td>
-<td class="roomID"  data-name="${rs.roomName}">${rs.roomName}</td>
-<td>
-<td class="guestTeacher"  data-name="${rs.guestTeacher}">${rs.guestTeacher}</td>
-<td>
-<td class="notice"  data-name="${rs.notice}">${rs.notice}</td>
+
+
+<ol class="eventpost">
+<li class=" col-md-12"><span class="eventName" data-name="${rs.eventName}">${rs.eventName}</span></li>
+
+<div class="col-md-12">
+
+<li><span class="period label label-pill label-default"
+data-name="${rs.period}">${rs.period}時限目</span></li>
+<li><span class="classID label label-pill label-primary"
+data-name="${rs.classID}">${rs.classID}</span></li>
+<li><span class="roomID label label-pill label-warning"
+data-name="${rs.roomName}">${rs.roomName}</span></li>
+<li><span class="guestTeacher label-pill label label-info"
+data-name="${rs.guestTeacher}">${rs.guestTeacher}</span>
+</li>
+
+</div>
+
+</ol>
+
 <td>
 <div style="display:inline-flex">
 <button type="button" class="btn btn-success edit_event "name="edit_event" ><i class="fa fa-pencil-square-o fa-2x"></i></button>
 
 <!-- 削除用フォーム -->
-<form action="/Sotsuken/ManageUpdate?page=event_manage" method="post">
-<input type="hidden" name = "eventID" value="${rs.eventID }" />
+<form action="/Sotsuken/ManageUpdate" method="post">
+<input type="hidden" name = "event_id" value="${rs.eventID }" />
 <input type="hidden" name = "eventName" value="${rs.eventName }" />
 <button type="submit" class="btn btn-danger"name="delete_event" ><i class="fa fa-trash-o fa-2x"></i></button>
 </form>
@@ -139,31 +147,31 @@ toastSelect("success","${Msg }")</script>
 </c:forEach>
 </datalist>
 
+
 <!-- teacher -->
 <datalist id="teacher">
 <c:forEach var="rs" items="${teacherList }">
-<option style="color: black;" value="${rs.teacherID}">${rs.teacherName}</option>
+<option style="color: black;" value="${rs.teacherName}">${rs.teacherName}</option>
 </c:forEach>
 </datalist>
 
 <!-- room -->
 <datalist id="room">
 <c:forEach var="rs" items="${roomList }">
-<option style="color: black;"  value="${rs.roomID}">${rs.roomName}</option>
+<option style="color: black;"  value="${rs}">${rs}</option>
 </c:forEach>
 </datalist>
 
 <!-- 日にち -->
 <script type="text/javascript">
-        $( document ).ready(function() {
-           $('.datepicker').datepicker( {
-        	   language: 'ja',
- 			  daysOfWeekDisabled: [ '0', '2', '3', '4', '5', '6', ],
- 			  format: 'yyyy/mm/dd',
-            } );
-        });
-   </script>
 
+$('.eventDate').datepicker({
+    language: "ja",
+    autoclose: true,
+    format: 'yyyy/mm/dd (DD)',
+});
+
+</script>
 
 
 

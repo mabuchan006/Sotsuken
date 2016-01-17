@@ -75,7 +75,7 @@ public class layoutInclude {
 		info.css.add("/Sotsuken/css/pure-drawer.css");
 		info.css.add("https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css");
 		info.css.add("//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css");
-
+		info.css.add("/Sotsuken/bootstrap/css/bootstrap-datepicker.min.css");
 
 		info.js.add("/Sotsuken/js/jquery-2.1.1.min.js");
 		info.js.add("http://code.jquery.com/jquery-1.9.1.min.js");

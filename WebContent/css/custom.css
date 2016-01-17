@@ -323,3 +323,76 @@ font-family:Tahoma;
 .nana{
 	width: 75%;
 }
+
+
+.line-header{
+	border-bottom: 1px solid #fff;
+}
+
+.eventpost{
+	list-style:none;
+	padding: 0;
+}
+li{
+	display:inline;
+	float: left;
+}
+li:first{
+	display:block;
+}
+
+.eventName {
+
+	float: left;
+}
+
+.date,.period,.classID,.roomID,.guestTeacher {
+
+	font-size:0.5em;
+	margin-right: 5px;
+}
+.calendar {
+    width: 56px;
+    height: 61px;
+
+    display: inline-block;
+}
+.calendar_month {
+    width: 50px;
+	border:solid #000 1px;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 12px;
+    text-shadow: -1px -1px 0 #AA3333;
+    background-color: #ff0000;
+
+}
+.calendar_day{
+    width: 50px;
+    border:solid #000 1px;
+    border-top-style:none;
+    margin:0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #FFFFFF;
+}
+.calendar_week{
+    width: 50px;
+	border:solid #000 1px;
+	border-top-style:none;
+	border-bottom-style:none;
+    margin-bottom:-5px;
+    padding:0;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    color:#f00;
+}
+
+
+
+
+
+
+

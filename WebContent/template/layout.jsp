@@ -61,7 +61,7 @@
 				<a href="/Sotsuken/divideUpdate">Create </a></h1></li>
 
 				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">
-				<a href="/Sotsuken/divideUpdate">Event</a></h1></li>
+				<a href="/Sotsuken/ManageUpdate?page=event_manage">Event</a></h1></li>
 
 
 				<li>
@@ -85,7 +85,7 @@
 			<div class="pure-pusher">
 			<div class="row col-md-9 col-md-offset-2">
 				<div class="logo text-left">
-					<h1>${page_title }</h1>
+					<h1 class="line-header">${page_title }</h1>
 
 					<br />
 

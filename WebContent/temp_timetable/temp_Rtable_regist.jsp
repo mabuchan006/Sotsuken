@@ -157,7 +157,7 @@ $('.input-group.date').datepicker({
     language: "ja",
     daysOfWeekDisabled: "0,2,3,4,5,6",
     autoclose: true,
-    format: 'yyyy/mm/dd',
+    format: 'yy/mm/dd ',
 });
 </script>
 

@@ -1,7 +1,6 @@
 package manage;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -90,7 +89,7 @@ public class ManageUpdateControl extends HttpServlet {
 						request.getParameter("regist_event") != null ){
 					//科目DB操作クラス取得
 					eventDBManage edm = new eventDBManage();
-					eventUpdate(request,edm);
+						eventUpdate(request,edm);
 				}//if
 
 		//ページデータセット
@@ -331,10 +330,8 @@ public class ManageUpdateControl extends HttpServlet {
 
 	//イベント管理画面指定時の処理
 	private void eventUpdate(HttpServletRequest request, eventDBManage edm) {
+		try {
 
-		//日付format
-		SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd");
-		//送信されたevent情報取得
 		eventInfo ei = new eventInfo(
 				request.getParameter("event_id")==null?0
 						:Integer.parseInt(request.getParameter("event_id")),
@@ -354,13 +351,16 @@ public class ManageUpdateControl extends HttpServlet {
 						:request.getParameter("notice")
 				);
 
-		try {
 			//ページ情報指定
 			content_page = "/manage/event_manage.jsp";
 			page_title = "EventManage";
 
 			if(request.getParameter("regist_event") != null ){
 				edm.eventDBUpdate(ei, DBAccess.INSERT, "登録");
+				if(ei.getDate()!=null){
+
+				}
+
 			}//if
 
 			if(request.getParameter("delete_event") != null){
@@ -369,6 +369,17 @@ public class ManageUpdateControl extends HttpServlet {
 
 			//更新済み講師情報全件取得
 			List<eventInfo> eventList = edm.eventDBSelect();
+			//更新済み講師情報全件取得
+			teacherDBManage tdm = new teacherDBManage();
+			List<teacherInfo> teacherList = tdm.teacherDBSelect();
+			//更新済み講師情報全件取得
+			classDBManage cdm = new classDBManage();
+ 			List<classInfo> classList = cdm.classDBSelect();
+ 			//部屋情報取得
+ 			List<String> roomList = edm.roomDBSelect();
+			request.setAttribute("classList", classList);
+			request.setAttribute("roomList", roomList);
+			request.setAttribute("teacherList", teacherList);
 			request.setAttribute("eventList", eventList);
 			request.setAttribute("cnt", eventList.size());
 

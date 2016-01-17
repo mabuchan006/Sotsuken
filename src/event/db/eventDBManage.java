@@ -31,17 +31,35 @@ public class eventDBManage extends DBAccess{
 
 	public eventDBManage() {
 		super(DRIVER_NAME);//DBAccessに接続
-		selectSql = String.format("select eventID,eventName,period,date,classID, e.roomName as roomName,"
+		selectSql = String.format("select eventID,eventName,period,date,classID, r.roomName as roomName,"
 				+ "endFlag,guestTeacher,notice"
-				+ " from tbl_event  e inner join tbl_room r "
-				+ "ON e.roomName = r.roomName");
+				+ " from tbl_event e inner join tbl_room r "
+				+ "ON e.roomID = r.roomID");
 		//クラスIDから削除からsql
-		deleteSql = String.format("delete  from tbl_event where eventID = ?");
+		deleteSql = String.format("delete from tbl_event where eventID = ?");
 		//クラス情報登録sql
 		//int eventID,String eventName, int period, Date date, String classID,
 		//String roomName, String guestTeacher,String notice
-		insertSql= String.format(" insert into tbl_event (eventName,period,date,classID, roomName,endFlag,guestTeacher,notice) values (?,?,?,?,?,?,?,?)");
+		insertSql= String.format(" insert into tbl_event (eventName,period,date,classID, roomID,endFlag,guestTeacher,notice) values (?,?,?,?,"
+				+ "(select roomID from tbl_room where roomName = ?)"//roomID検索
+				+ ",?,?,?)");
 		updateSql= String.format("update tbl_event set eventName = ? where eventID = ?");
+		selectRoom= String.format("select * from tbl_room;");
+	}
+
+	public List<String> roomDBSelect() throws Exception{
+		List<String> roomList = new ArrayList<String>();
+		connect();
+		createStstement();
+		selectExe(selectRoom);
+		ResultSet rs = getRsResult();
+		while(rs.next()){
+			roomList.add(
+			rs.getString("roomName")
+			);
+		}
+
+		return roomList;
 	}
 	/*
 	 * @param eventinfo イベント情報
@@ -108,6 +126,7 @@ public class eventDBManage extends DBAccess{
 			break;
 		case DELETE:
 			createStstement(deleteSql);
+			System.out.println("delete");
 
 			getPstmt().setInt(1, ei.getEventID());// 削除するIDをセット
 			updateExe();// 実行
