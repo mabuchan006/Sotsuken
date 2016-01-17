@@ -80,28 +80,32 @@ toastSelect("success","${Msg }")</script>
 <!-- イベント情報取得 -->
 <c:forEach var="rs" items="${eventList }">
 <tr class="select">
+<!-- カレンダー情報取得 -->
 <td><div class="calendar">
-${rs.date }
+<div class="calendar_month">
+${rs.date[1] }
+</div>
+<div class="calendar_week">
+${rs.date[3] }
+</div>
+<div class="calendar_day">
+${rs.date[2] }
+</div>
 
-
-
-</div></td>
+</div>
+</td>
 <td>
 
-
+<!-- 主要イベント情報 -->
 <ol class="eventpost">
-<li class=" col-md-12"><span class="eventName" data-name="${rs.eventName}">${rs.eventName}</span></li>
+<li class=" col-md-12"><span class="eventName" data-name="${rs.eventID}">${rs.eventName}</span></li>
 
 <div class="col-md-12">
 
-<li><span class="period label label-pill label-default"
-data-name="${rs.period}">${rs.period}時限目</span></li>
-<li><span class="classID label label-pill label-primary"
-data-name="${rs.classID}">${rs.classID}</span></li>
-<li><span class="roomID label label-pill label-warning"
-data-name="${rs.roomName}">${rs.roomName}</span></li>
-<li><span class="guestTeacher label-pill label label-info"
-data-name="${rs.guestTeacher}">${rs.guestTeacher}</span>
+<li><span class="period label label-pill label-default">${rs.period}時限目</span></li>
+<li><span class="classID label label-pill label-primary">${rs.classID}</span></li>
+<li><span class="roomID label label-pill label-warning">${rs.roomName}</span></li>
+<li><span class="guestTeacher label-pill label label-info">${rs.guestTeacher}</span>
 </li>
 
 </div>
@@ -115,6 +119,7 @@ data-name="${rs.guestTeacher}">${rs.guestTeacher}</span>
 <!-- 削除用フォーム -->
 <form action="/Sotsuken/ManageUpdate" method="post">
 <input type="hidden" name = "event_id" value="${rs.eventID }" />
+
 <input type="hidden" name = "eventName" value="${rs.eventName }" />
 <button type="submit" class="btn btn-danger"name="delete_event" ><i class="fa fa-trash-o fa-2x"></i></button>
 </form>
@@ -168,7 +173,7 @@ data-name="${rs.guestTeacher}">${rs.guestTeacher}</span>
 $('.eventDate').datepicker({
     language: "ja",
     autoclose: true,
-    format: 'yyyy/mm/dd (DD)',
+    format: 'yyyy/mm/dd/DD',
 });
 
 </script>

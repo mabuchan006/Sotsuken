@@ -2,6 +2,8 @@ package event.db;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 import DB.DBAccess;
@@ -74,13 +76,42 @@ public class eventDBManage extends DBAccess{
 			//要素取得用準備
 			ResultSet rs = getRsResult();
 			eventInfo eventinfo;
+			List<String> dateList = new ArrayList<String>();
+			String date="";
+			Calendar calendar;
 			//全件取得
 			while(rs.next()){
+				date=rs.getString("date");
+				if(date!=null){
+					String inputStr[];
+
+					inputStr=date.split("-");
+					for (String date1 : inputStr) {
+						System.out.println(date1);
+						dateList.add(date1);
+					}//for
+					}else{
+						dateList.add("date");
+					}//for
+				calendar = new GregorianCalendar(
+						Integer.parseInt(dateList.get(0)),
+						Integer.parseInt(dateList.get(1)),
+						Integer.parseInt(dateList.get(2)));
+				switch (calendar.get(Calendar.DAY_OF_WEEK)){
+				// 取得した曜日フィールドの値。
+				case Calendar.SUNDAY:dateList.add("日曜日");break;
+				case Calendar.MONDAY:dateList.add("月曜日");break;
+				case Calendar.TUESDAY:dateList.add("火曜日");break;
+				case Calendar.WEDNESDAY:dateList.add("水曜日");break;
+				case Calendar.THURSDAY:dateList.add("木曜日");break;
+				case Calendar.FRIDAY:dateList.add("金曜日");break;
+				case Calendar.SATURDAY:dateList.add("日曜日");break;
+				}//switch
 				eventinfo = new eventInfo(
 						rs.getInt("eventID"),
 						rs.getString("eventName"),
 						rs.getInt("period"),
-						rs.getString("date"),
+						dateList,
 						rs.getString("classID"),
 						rs.getString("roomName"),
 						rs.getString("endFlag"),
@@ -113,7 +144,8 @@ public class eventDBManage extends DBAccess{
 
 			getPstmt().setString(1,ei.getEventName());
 			getPstmt().setInt(2,ei.getPeriod());
-			getPstmt().setString(3,ei.getDate());
+			getPstmt().setString(3,ei.getDate().get(0)+"-"+ei.getDate().get(1)
+					+"-"+ei.getDate().get(2));
 			getPstmt().setString(4,ei.getClassID());
 			getPstmt().setString(5,ei.getRoomName());
 			getPstmt().setString(6,ei.getEndFlag());
@@ -140,6 +172,7 @@ public class eventDBManage extends DBAccess{
 
 			updateExe();//実行
 
+
 			break;
 		}
 
@@ -153,7 +186,7 @@ private String resultMsg(eventInfo ei,String msg){
 
 
 	if (getIntResult() != 0) {
-		return String.format("%sを%sしました。", ei.getEventID()+" : "+ei.getEventName()
+		return String.format("%sを%sしました。", ei.getEventName()
 		, msg);
 
 	}

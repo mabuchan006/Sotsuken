@@ -21,6 +21,12 @@ $(document).on("click",".edit_teacher",function(e){
 	$(targetable).trigger("click");
 });
 
+
+$(document).on("click",".edit_event",function(e){
+	var targetable = (($(this).parent().parent().parent()).find(".eventName"));
+	e.stopPropagation();
+	$(targetable).trigger("click");
+});
 			//input view
 			$.fn.editable.defaults.mode = 'inline';
 			$.fn.editableform.buttons =
@@ -82,9 +88,22 @@ $(document).on("click",".edit_teacher",function(e){
 			        }
 			});
 
+			//teacher pk3
+			$('.eventName').editable({
 
+				type:'text',
+			    pk: 4,
+			    url: '/Sotsuken/ManageEdit',
+			    title: 'Enter eventName',
 
-
-
+		        //responseキャッシュクリア
+		        beforeSend : function( xhr ){
+		            xhr.setRequestHeader("If-Modified-Since", "Thu, 01 Jun 1970 00:00:00 GMT");
+		        },
+			    	success: function(response, newValue) {
+			    		toastSelect("success",newValue+"に更新しました")
+			            if(response.status == 'error') alert( "error"+response.msg); //msg will be shown in editable form
+			        }
+			});
 
 });

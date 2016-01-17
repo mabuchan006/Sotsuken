@@ -331,14 +331,29 @@ public class ManageUpdateControl extends HttpServlet {
 	//イベント管理画面指定時の処理
 	private void eventUpdate(HttpServletRequest request, eventDBManage edm) {
 		try {
+		//日付情報分割格納
+		List<String> dateList = new ArrayList<String>();
+		if(request.getParameter("eventDate")!=null){
+		String inputStr[];
 
+		inputStr=request.getParameter("eventDate").split("/");
+		for (String date : inputStr) {
+			System.out.println(date);
+			dateList.add(date);
+		}//for
+		}else{
+			dateList.add("date");
+		}
+		//日付情報分割格納end
+
+		//イベント情報格納
 		eventInfo ei = new eventInfo(
 				request.getParameter("event_id")==null?0
 						:Integer.parseInt(request.getParameter("event_id")),
 				request.getParameter("eventName"),
 				request.getParameter("period")==null?1
 						:Integer.parseInt(request.getParameter("period")),
-				request.getParameter("eventDate"),
+				dateList,
 				request.getParameter("class_id")==null?""
 						:request.getParameter("class_id"),
 				request.getParameter("roomName")==null?""

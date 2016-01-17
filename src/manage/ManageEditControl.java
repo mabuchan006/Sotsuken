@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import DB.DBAccess;
+import event.db.eventDBManage;
+import event.db.eventInfo;
 import manage.db.classDBManage;
 import manage.db.classInfo;
 import manage.db.subjectDBManage;
@@ -53,6 +55,7 @@ public class ManageEditControl extends HttpServlet {
 		upName = map.get("name")[0];
 		upValue = map.get("value")[0];
 		upKey = map.get("pk")[0];
+		System.out.println(upKey);
 		}//if
 
 		//クラス
@@ -68,10 +71,16 @@ public class ManageEditControl extends HttpServlet {
 		}//if
 
 		//講師
-	if(upKey.equals("3")){
-		teacherDBManage tdm = new teacherDBManage();
-		teacherUpdate(request, tdm);
-	}//if
+		if(upKey.equals("3")){
+			teacherDBManage tdm = new teacherDBManage();
+			teacherUpdate(request, tdm);
+		}//if
+
+		//講師
+		if(upKey.equals("4")){
+			eventDBManage edm = new eventDBManage();
+			eventUpdate(request, edm);
+		}//if
 
 	}//doGet
 
@@ -131,6 +140,22 @@ public class ManageEditControl extends HttpServlet {
 						e.printStackTrace();
 					}
 		}//teacher
+
+	private void eventUpdate(HttpServletRequest request, eventDBManage edm) {
+		eventInfo ei = new eventInfo();
+		ei.setEventID(Integer.parseInt(upName));
+		ei.setEventName(upValue);
+		System.out.println(upName);
+		System.out.println(upValue);
+		try {
+			edm.eventDBUpdate(ei, DBAccess.UODATE, "更新");
+		} catch (Exception e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
+
+	}
+
 
 	}
 

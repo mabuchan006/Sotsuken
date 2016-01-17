@@ -1,5 +1,7 @@
 package event.db;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 
 
@@ -8,7 +10,7 @@ public class eventInfo implements Serializable{
 		private int eventID;
 		private String eventName;
 		private int period;
-		private String date;
+		private List<String> date=new ArrayList<String>();;
 		private String classID;
 		private String guestTeacher;
 		private String notice;
@@ -20,7 +22,7 @@ public class eventInfo implements Serializable{
 			super();
 			// TODO 自動生成されたコンストラクター・スタブ
 		}
-		public eventInfo(int eventID,String eventName, int period, String date, String classID, String roomName, String endFlag,String guestTeacher,
+		public eventInfo(int eventID,String eventName, int period, List<String> date, String classID, String roomName, String endFlag,String guestTeacher,
 				String notice) {
 			super();
 
@@ -110,12 +112,13 @@ public class eventInfo implements Serializable{
 		public void setEndFlag(String endFlag) {
 			this.endFlag = endFlag;
 		}
-		public String getDate() {
+		public List<String> getDate() {
 			return date;
 		}
-		public void setDate(String date) {
+		public void setDate(List<String> date) {
 			this.date = date;
 		}
+
 
 
 }
