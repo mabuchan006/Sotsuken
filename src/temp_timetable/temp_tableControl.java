@@ -34,25 +34,22 @@ public class temp_tableControl extends HttpServlet {
 	ArrayList<String> css = new ArrayList<String>(); // css用List
 	ArrayList<String> js = new ArrayList<String>(); // JavaScript用List
 
-	private List <tempInfo> regtiList = new ArrayList<>();
-	private List<tempInfo> tiList1 = new ArrayList<>(); //一時時間割情報用-1
-	private List<tempInfo> tiList2 = new ArrayList<>();; //一時時間割情報用-2
-	private List<tempInfo> tiList3 = new ArrayList<>();; //一時時間割情報用-3
-	private List<tempInfo> tiList4 = new ArrayList<>();; //一時時間割情報用-4
-
-	private List<subjectInfo> infoSubjectList; // 科目情報保持用
-	private List<teacherInfo> teacherList; // 先生情報保持用
-	private List<roomInfo> rooms1List; // 1限目部屋マスタ保持用
-	private List<roomInfo> rooms2List; // 2限目時間割マスタ保持用
-	private List<roomInfo> rooms3List; // 3限目時間割マスタ保持用
-	private List<roomInfo> rooms4List; // 4限目時間割マスタ保持用
+	private List<subjectInfo> infoSubjectList= new ArrayList<>(); // 科目情報保持用
+	private List<teacherInfo> teacherList= new ArrayList<>(); // 先生情報保持用
+	private List<roomInfo> rooms1List = new ArrayList<>(); // 1限目部屋マスタ保持用
+	private List<roomInfo> rooms2List= new ArrayList<>(); // 2限目時間割マスタ保持用
+	private List<roomInfo> rooms3List= new ArrayList<>(); // 3限目時間割マスタ保持用
+	private List<roomInfo> rooms4List= new ArrayList<>(); // 4限目時間割マスタ保持用
 
 	private String page_title = "";// ページ名
-	String content_page; // 遷移先jsp
 	private String chooseClassID ;// classID選択 TODO:DBSWitchテーブル変更を柔軟にする。
+	private String tblName;
+	String content_page; // 遷移先jsp
 
-	teacherDBManage teDBM = new teacherDBManage();
-	tempDBManage tempDBM = new tempDBManage();
+
+
+
+
 
 
 	/**
@@ -68,9 +65,24 @@ public class temp_tableControl extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		String page = request.getParameter("page");
+		//各List初期化
+		 List <tempInfo> regtiList1 = new ArrayList<>();
+		 List <tempInfo> regtiList2 = new ArrayList<>();
+		 List <tempInfo> regtiList3 = new ArrayList<>();
+		 List <tempInfo> regtiList4 = new ArrayList<>();
+
+		 List<tempInfo> tiList1 = new ArrayList<>(); //一時時間割情報用-1
+		 List<tempInfo> tiList2 = new ArrayList<>(); //一時時間割情報用-2
+		 List<tempInfo> tiList3 = new ArrayList<>(); //一時時間割情報用-3
+		 List<tempInfo> tiList4 = new ArrayList<>(); //一時時間割情報用-4
+
 		// 文字コードutf8
-		request.setCharacterEncoding("UTF-8");
+				request.setCharacterEncoding("UTF-8");
+
+		String page = request.getParameter("page");
+
+		System.out.println("page:"+page);
+
 
 		// 使用するcss,jsファイルの適用
 		layoutInclude tools = new layoutInclude();
@@ -83,19 +95,31 @@ public class temp_tableControl extends HttpServlet {
 			//DB切り替えClassへ（masteDBSwich.java）
 			 masterDBSwitch tblSW= new masterDBSwitch();
 			 masterDBSwitchInfo value = tblSW.switchTempDB(page);
-			chooseClassID = value.chooseClassID;
-			content_page = value.content_page;
+			chooseClassID = value.chooseClassID; //クラス情報取得
+			content_page = value.content_page; //遷移先
+			tblName = value.chooseTableName;
+
 			request.setAttribute("chooseClassID",chooseClassID); //Insert のクラス情報に使用するため
-			 page_title = "Temporary Edit" + " 　" +chooseClassID.toString();
+			page_title = "Temporary Edit" + " 　" +chooseClassID.toString();
 		} else{
 			chooseClassID = "R4A1";
 			content_page = "/temp_timetable/temp_Rtable_regist.jsp";
-			 page_title = "Temporary Edit" + " 　" +chooseClassID.toString();
+			page_title = "Temporary Edit" + " 　" +chooseClassID.toString();
+			tblName = "tbl_temp_R4A1timetable";  //Table名取得
 		}//if DB切り替え
+
+		System.out.println(chooseClassID);
+		System.out.println(content_page);
+		System.out.println(tblName);
+
+		//使用DBManage
+		tempDBManage tempDBM = new tempDBManage(tblName);
+		subjectDBManage suDBM = new subjectDBManage(chooseClassID);
+		teacherDBManage teDBM = new teacherDBManage();
 
 		//DivideUpdateからの情報取得
 		try {
-			subjectDBManage suDBM = new subjectDBManage(chooseClassID);
+
 			infoSubjectList = suDBM.choiceSubject(); // 科目取得
 			teacherList = teDBM.teacherDBSelect(); // 先生取得
 
@@ -126,14 +150,17 @@ public class temp_tableControl extends HttpServlet {
 		} catch (Exception e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
-		} //try Edit View 表示
+		}
 
 
 
 		//Insert 登録ボタン
 		if(request.getParameter("regist") != null){
-
+			try {
+				//delete
+				tempDBM.tempDelete();
 			String date = request.getParameter("start").toString(); //始点の日付取得
+			System.out.println(date);
 
 			for(int week=0;week <= 3;week++){
 				for(int i=0; i <= 6; i++){
@@ -154,7 +181,7 @@ public class temp_tableControl extends HttpServlet {
 						roomName1 = "";
 					}//null排除
 
-					/*//２限目
+					//２限目
 					String subjectName2 = request.getParameter("Su"+ num +"_2");
 					  if( subjectName2 == null || subjectName2.length() == 0 ){
 						subjectName2 = "";
@@ -195,12 +222,12 @@ public class temp_tableControl extends HttpServlet {
 					if( roomName4 == null || roomName4.length() == 0 ){
 						roomName4 = "";
 					}//null排除
-*/
+
 					//各日のコマをリストに追加
 					tiList1.add(new tempInfo("1", subjectName1,  date,  chooseClassID,  roomName1,  teacherName1));
-					//tiList2.add(new tempInfo( "2", subjectName2,  date, chooseClassID,  roomName2,  teacherName2));
-					//tiList3.add(new tempInfo( "3", subjectName3,  date,  chooseClassID,  roomName3,  teacherName3));
-					//tiList4.add(new tempInfo( "4", subjectName4,  date,  chooseClassID,  roomName4,  teacherName4));
+					tiList2.add(new tempInfo( "2", subjectName2,  date, chooseClassID,  roomName2,  teacherName2));
+					tiList3.add(new tempInfo( "3", subjectName3,  date,  chooseClassID,  roomName3,  teacherName3));
+					tiList4.add(new tempInfo( "4", subjectName4,  date,  chooseClassID,  roomName4,  teacherName4));
 
 					date = dateAdd(date); //日にち加算
 				}//for 7日分
@@ -208,15 +235,40 @@ public class temp_tableControl extends HttpServlet {
 
 			//Insert　２８日分
 			tempDBM.tempDBInsert(tiList1);
-			//tempDBM.tempDBInsert(tiList2);
-			//tempDBM.tempDBInsert(tiList3);
-			//tempDBM.tempDBInsert(tiList4);
+			tempDBM.tempDBInsert(tiList2);
+			tempDBM.tempDBInsert(tiList3);
+			tempDBM.tempDBInsert(tiList4);
 
-			//Select
-
+			} catch (Exception e) {
+				// TODO 自動生成された catch ブロック
+				e.printStackTrace();
+			}
 
 		}//Insert 終了
 
+
+		//Select 一時時間割から登録済み情報の取得
+		try {
+			regtiList1 = tempDBM.regSelect("1");
+			request.setAttribute("regtiList1", regtiList1);
+			regtiList2 = tempDBM.regSelect("2");
+			request.setAttribute("regtiList2", regtiList2);
+			regtiList3 = tempDBM.regSelect("3");
+			request.setAttribute("regtiList3", regtiList3);
+			regtiList4 = tempDBM.regSelect("4");
+			request.setAttribute("regtiList4", regtiList4);
+		} catch (Exception e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
+		//マスタアップ
+
+		//マスタ確認
+		if(request.getParameter("confirm") != null){
+			String url = "/Sotsuken/publicView?page="+ chooseClassID;
+			response.sendRedirect(url);
+			return;
+		}
 
 		// ディスパッチ準備
 		request.setAttribute("content_page", content_page);

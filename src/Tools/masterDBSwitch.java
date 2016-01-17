@@ -193,7 +193,7 @@ public class masterDBSwitch {
 		case "R3A2":
 			 value.chooseClassID = "R3A2";
 			 value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
-			 value.chooseTableName = "tbl_temp_R3A12timetable";
+			 value.chooseTableName = "tbl_temp_R3A2timetable";
 			break;
 		case "R3A3":
 			value.chooseClassID = "R3A3";
