@@ -72,8 +72,8 @@
 			<table
 				class="table table-striped table-bordered text-center ;">
 				<thead>
-					<tr class="purple2 ">
-						<th colspan="31">10月</th>
+					<tr class="purple2 month">
+
 					</tr>
 				</thead>
 				<tbody>

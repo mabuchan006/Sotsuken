@@ -34,12 +34,6 @@
 </c:forEach>
 </c:if>
 
-<script>
-$(function(e) {
-	countDate();
-});
-</script>
-
 </head>
 
 <body>
