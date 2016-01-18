@@ -6,7 +6,7 @@ $(function login() {
 		$(function clkEvent() {
 			var pw = $("#enterPw").val();
 			var id = $("#enterId").val();
-			var login{};
+/*			var login{};
 
 			login.doLogin = function doLogin(loginForm) {
 
@@ -24,7 +24,7 @@ $(function login() {
 			login.doError = function doError(msg) {
 				alert(msg);
 				return false;
-			}
+			} */
 
 			if (  pw == "" || id == "" || pw == 0 || id == 0 ) {
 

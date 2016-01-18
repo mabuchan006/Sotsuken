@@ -147,17 +147,14 @@
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<div class="modal-header back-color">
-								<button type="button" class="close" data-dismiss="modal"
-									aria-label="Close">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>
 								<h3 class="modal-title white">login</h3>
 							</div>
 							<div class="modal-body">
 								<form action="/Sotsuken/loginControl" method="POST">
-
 									<div id="msg"></div>
-
 									<label>username:</label> <input type="text"
 										placeholder="username" id="enterId" value="" name="teacherID"> <br>
 									<label>password:</label> <input type="password" placeholder="PASS"
