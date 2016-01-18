@@ -4,7 +4,7 @@ function countDate(e){
 	$.each($(".countDate th:gt(0)"),function(k,v){
 		dateArray.push($(v).text());
 	})
-	for(var i = 0; i < dateArray.length ; i++){
+	for(var i = 0; i < dateArray.length - 1 ; i++){
 		if(dateArray[i].substr(2) > dateArray[i+1].substr(2)){
 			lastDay = dateArray[i];
 			preMonth = $.inArray(lastDay,dateArray) + 2;
@@ -14,13 +14,9 @@ function countDate(e){
 			break;
 		}
 	}
-	if(flag){
-		$(".month").html("<th colspan=\""+ preMonth +"\">" + lastDay.substr(0,3) + "</th><th colspan=\""+ nextMonth +"\">" + firstDay.substr(0,3) + "</th>")
+	if(flag == false){
+		$(".month").html("<th colspan=\"31\">" + dateArray[0].substr(0,dateArray[0].indexOf("月") + 1) + "</th>");
 	} else {
-		$(".month").html("<th colspan=\"31\">" + dateArray[0].substr(0,3) + "</th>")
+		$(".month").html("<th colspan=\""+ preMonth +"\">" + lastDay.substr(0,3) + "</th><th colspan=\""+ nextMonth +"\">" + firstDay.substr(0,3) + "</th>");
 	}
-	console.log("lastDay : " + lastDay + " : indexNum : " + $.inArray(lastDay,dateArray));
-	console.log("firstDay : " + firstDay + " : indexNum : " + $.inArray(firstDay,dateArray));
-	console.log(flag);
-	//console.log(preMonth + 1 + ":" +nextMonth);
 }
