@@ -81,14 +81,14 @@ toastSelect("success","${Msg }")</script>
 <c:forEach var="rs" items="${eventList }">
 <tr class="select">
 <!-- カレンダー情報取得 -->
-<td><div class="calendar">
-<div class="calendar_month">
+<td><div class="Ecalendar">
+<div class="Ecalendar_month">
 ${rs.date[1] }
 </div>
-<div class="calendar_week">
+<div class="Ecalendar_week">
 ${rs.date[3] }
 </div>
-<div class="calendar_day">
+<div class="Ecalendar_day">
 ${rs.date[2] }
 </div>
 
@@ -98,14 +98,14 @@ ${rs.date[2] }
 
 <!-- 主要イベント情報 -->
 <ol class="eventpost">
-<li class=" col-md-12"><span class="eventName" data-name="${rs.eventID}">${rs.eventName}</span></li>
+<li class="event_li" class=" col-md-12"><span class="eventName" data-name="${rs.eventID}">${rs.eventName}</span></li>
 
 <div class="col-md-12">
 
-<li><span class="period label label-pill label-default">${rs.period}時限目</span></li>
-<li><span class="classID label label-pill label-primary">${rs.classID}</span></li>
-<li><span class="roomID label label-pill label-warning">${rs.roomName}</span></li>
-<li><span class="guestTeacher label-pill label label-info">${rs.guestTeacher}</span>
+<li class="event_li"><span class="period label label-pill label-default">${rs.period}時限目</span></li>
+<li class="event_li"><span class="classID label label-pill label-primary">${rs.classID}</span></li>
+<li class="event_li"><span class="roomID label label-pill label-warning">${rs.roomName}</span></li>
+<li class="event_li"><span class="guestTeacher label-pill label label-info">${rs.guestTeacher}</span>
 </li>
 
 </div>

@@ -333,11 +333,11 @@ font-family:Tahoma;
 	list-style:none;
 	padding: 0;
 }
-li{
+.event_li{
 	display:inline;
 	float: left;
 }
-li:first{
+.event_li:first{
 	display:block;
 }
 
@@ -347,18 +347,18 @@ li:first{
 
 }
 
-.date,.period,.classID,.roomID,.guestTeacher {
+.period,.classID,.roomID,.guestTeacher {
 
 	font-size:0.5em;
 	margin-right: 5px;
 }
-.calendar {
+.Ecalendar {
     width: 56px;
     height: 61px;
 
     display: inline-block;
 }
-.calendar_month {
+.Ecalendar_month {
     width: 50px;
 	border:solid #000 1px;
     text-align: center;
@@ -368,7 +368,7 @@ li:first{
     background-color: #ff0000;
 
 }
-.calendar_day{
+.Ecalendar_day{
     width: 50px;
     border:solid #000 1px;
     border-top-style:none;
@@ -378,7 +378,7 @@ li:first{
     font-weight: bold;
     text-shadow: 1px 1px 0 #FFFFFF;
 }
-.calendar_week{
+.Ecalendar_week{
     width: 50px;
 	border:solid #000 1px;
 	border-top-style:none;
