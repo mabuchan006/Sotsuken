@@ -13,7 +13,11 @@ function countDate(e){
 			break;
 		}
 	}
-	$(".month").html("<th colspan=\""+ preMonth +"\">" + lastDay.substr(0,3) + "</th><th colspan=\""+ nextMonth +"\">" + firstDay.substr(0,3) + "</th>")
+	if(firstDay != null && nextMonth != null){
+		$(".month").html("<th colspan=\""+ preMonth +"\">" + lastDay.substr(0,3) + "</th><th colspan=\""+ nextMonth +"\">" + firstDay.substr(0,3) + "</th>")
+	} else {
+		$(".month").html("<th colspan=\"31\">" + dateArray[0].substr(0,3) + "</th>")
+	}
 	console.log("lastDay : " + lastDay + " : indexNum : " + $.inArray(lastDay,dateArray));
 	console.log("firstDay : " + firstDay + " : indexNum : " + $.inArray(firstDay,dateArray));
 	//console.log(preMonth + 1 + ":" +nextMonth);
