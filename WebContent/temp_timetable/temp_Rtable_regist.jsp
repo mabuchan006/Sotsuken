@@ -99,8 +99,10 @@
 		<div style="height:600px; width:250px; overflow-y:scroll;">
 	<table class="table table-border ">
 		<tbody>
-			<%
-				int teacher_count =  Integer.parseInt(request.getAttribute("teacher_count").toString());
+			<%-- <%
+				Object count = request.getAttribute("teacher_count");
+				String countStr = count.toString();
+				int teacher_count = new Integer(countStr).intValue();
 				int cnt1 = 0;
 				for (; cnt1 < teacher_count; cnt1++) {
 					if(cnt1 != 0){
@@ -123,7 +125,7 @@
 			</tr>
 			<%
 				}
-			%>
+			%> --%>
 		</tbody>
 	</table>
 	</div>
@@ -176,31 +178,31 @@ $('.input-group.date').datepicker({
 				<th rowspan=3>1</th>
 				<td ><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														 name="Su0_1" class="txtFontSize1 subject" placeholder="教科入力欄">${regtiList1[0].subjectName }</textarea>
+														 name="Su0_1" class="txtFontSize2 subject" placeholder="教科入力欄">${regtiList1[0].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Su1_1" class="txtFontSize1 subject" >${regtiList1[1].subjectName }</textarea>
+														name="Su1_1" class="txtFontSize2 subject" >${regtiList1[1].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Su2_1" class="txtFontSize1 subject">${regtiList1[2].subjectName }</textarea>
+														name="Su2_1" class="txtFontSize2 subject">${regtiList1[2].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Su3_1" class="txtFontSize1 subject">${regtiList1[3].subjectName }</textarea>
+														name="Su3_1" class="txtFontSize2 subject">${regtiList1[3].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Su4_1" class="txtFontSize1 subject">${regtiList1[4].subjectName }</textarea>
+														name="Su4_1" class="txtFontSize2 subject">${regtiList1[4].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Su5_1" class="txtFontSize1 subject">${regtiList1[5].subjectName }</textarea>
+														name="Su5_1" class="txtFontSize2 subject">${regtiList1[5].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #d9edf7;"
-														name="Su6_1" class="txtFontSize1 subject">${regtiList1[6].subjectName }</textarea>
+														name="Su6_1" class="txtFontSize2 subject">${regtiList1[6].subjectName }</textarea>
 												</p></td>
 			</tr>
 
@@ -377,31 +379,31 @@ $('.input-group.date').datepicker({
 				<th rowspan=3>2</th>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														name="Su0_2" class="txtFontSize1 subject">${regtiList2[0].subjectName }</textarea>
+														name="Su0_2" class="txtFontSize2 subject">${regtiList2[0].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														name="Su1_2" class="txtFontSize1 subject">${regtiList2[1].subjectName }</textarea>
+														name="Su1_2" class="txtFontSize2 subject">${regtiList2[1].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														name="Su2_2" class="txtFontSize1 subject">${regtiList2[2].subjectName }</textarea>
+														name="Su2_2" class="txtFontSize2 subject">${regtiList2[2].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														name="Su3_2" class="txtFontSize1 subject">${regtiList2[3].subjectName }</textarea>
+														name="Su3_2" class="txtFontSize2 subject">${regtiList2[3].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														name="Su4_2" class="txtFontSize1 subject">${regtiList2[4].subjectName }</textarea>
+														name="Su4_2" class="txtFontSize2 subject">${regtiList2[4].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														name="Su5_2" class="txtFontSize1 subject">${regtiList2[5].subjectName }</textarea>
+														name="Su5_2" class="txtFontSize2 subject">${regtiList2[5].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #f2dede;"
-														name="Su6_2" class="txtFontSize1 subject">${regtiList2[6].subjectName }</textarea>
+														name="Su6_2" class="txtFontSize2 subject">${regtiList2[6].subjectName }</textarea>
 												</p></td>
 
 			</tr>
@@ -571,31 +573,31 @@ $('.input-group.date').datepicker({
 				<th rowspan=3>3</th>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														name="Su0_3" class="txtFontSize1 subject">${regtiList3[0].subjectName }</textarea>
+														name="Su0_3" class="txtFontSize2 subject">${regtiList3[0].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														name="Su1_3" class="txtFontSize1 subject">${regtiList3[1].subjectName }</textarea>
+														name="Su1_3" class="txtFontSize2 subject">${regtiList3[1].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														name="Su2_3" class="txtFontSize1 subject">${regtiList3[2].subjectName }</textarea>
+														name="Su2_3" class="txtFontSize2 subject">${regtiList3[2].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														name="Su3_3" class="txtFontSize1 subject">${regtiList3[3].subjectName }</textarea>
+														name="Su3_3" class="txtFontSize2 subject">${regtiList3[3].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														name="Su4_3" class="txtFontSize1 subject">${regtiList3[4].subjectName }</textarea>
+														name="Su4_3" class="txtFontSize2 subject">${regtiList3[4].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														name="Su5_3" class="txtFontSize1 subject">${regtiList3[5].subjectName }</textarea>
+														name="Su5_3" class="txtFontSize2 subject">${regtiList3[5].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #dff0d8;"
-														name="Su6_3" class="txtFontSize1 subject">${regtiList3[6].subjectName }</textarea>
+														name="Su6_3" class="txtFontSize2 subject">${regtiList3[6].subjectName }</textarea>
 												</p></td>
 			</tr>
 
@@ -766,31 +768,31 @@ $('.input-group.date').datepicker({
 				<th rowspan=3>4</th>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														name="Su0_4" class="txtFontSize1 subject">${regtiList4[0].subjectName }</textarea>
+														name="Su0_4" class="txtFontSize2 subject">${regtiList4[0].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														name="Su1_4" class="txtFontSize1 subject">${regtiList4[1].subjectName }</textarea>
+														name="Su1_4" class="txtFontSize2 subject">${regtiList4[1].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														name="Su2_4" class="txtFontSize1 subject">${regtiList4[2].subjectName }</textarea>
+														name="Su2_4" class="txtFontSize2 subject">${regtiList4[2].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														name="Su3_4" class="txtFontSize1 subject">${regtiList4[3].subjectName }</textarea>
+														name="Su3_4" class="txtFontSize2 subject">${regtiList4[3].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														name="Su4_4" class="txtFontSize1 subject">${regtiList4[4].subjectName }</textarea>
+														name="Su4_4" class="txtFontSize2 subject">${regtiList4[4].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														name="Su5_4" class="txtFontSize1 subject">${regtiList4[5].subjectName }</textarea>
+														name="Su5_4" class="txtFontSize2 subject">${regtiList4[5].subjectName }</textarea>
 												</p></td>
 				<td><p class="size drop-target ">
 													<textarea cols="5" rows="1" style="overflow: auto; background-color: #fcf8e3;"
-														name="Su6_4" class="txtFontSize1 subject">${regtiList4[6].subjectName }</textarea>
+														name="Su6_4" class="txtFontSize2 subject">${regtiList4[6].subjectName }</textarea>
 												</p></td>
 			</tr>
 
