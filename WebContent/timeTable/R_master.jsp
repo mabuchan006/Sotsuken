@@ -82,7 +82,7 @@
 						<th></th>
 						<c:forEach var="dateitem" items="${dList }">
 							<th nowrap ><fmt:formatDate value="${dateitem.date}"
-									pattern="dd日(E)" /></th>
+									pattern="MM月dd日(E)" /></th>
 						</c:forEach>
 
 						<%
