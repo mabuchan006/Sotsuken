@@ -85,7 +85,8 @@
 			<div class="pure-pusher">
 			<div class="row col-md-9 col-md-offset-2">
 				<div class="logo text-left">
-					<h1 class="${line-header }">${page_title }</h1>
+
+					<h1>${page_title }</h1>
 
 					<br />
 
