@@ -561,6 +561,15 @@ margin0{
 	resize:none;
 }
 
+.txtFontSize2{
+	font-weight: 900;
+	font-size : 100%;
+	width :140%;
+	height : 50px;
+	line-height : 140%;
+	resize:none;
+}
+
 /**一時登録機能の先生リスト　テーブル用 by mabuchan**/
 
 	.table-border>thead>tr>th, .table-border>tbody>tr>th,
