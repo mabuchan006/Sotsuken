@@ -62,8 +62,6 @@ public class loginControl extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		//System.out.println("１");
-		//boolean check = authUser( "teacherID" , "password" );
 		//パス初期値
 		String path="";//変更予定のため未記述
 		String errPath="Sotsuken/top.jsp";//変更予定のため未記述
@@ -86,8 +84,9 @@ public class loginControl extends HttpServlet {
 			loginDBManage Ldb = new loginDBManage();
 			teacherInfo tchinf = Ldb.userDBSearch( tchInf );
 
-			//teacherInfo内に情報がなかったら
-			if( tchinf != null || !(tchinf.equals(null)) ){
+			//入力値が未入力でない場合
+			//変更予定箇所→IDに英字が入っている場合など
+			if( tchinf != null ){
 
 				//session start
 				session = request.getSession(true);
