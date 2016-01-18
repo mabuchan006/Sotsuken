@@ -6,31 +6,23 @@ $(function login() {
 		$(function clkEvent() {
 			var pw = $("#enterPw").val();
 			var id = $("#enterId").val();
-/*			var login{};
 
-			login.doLogin = function doLogin(loginForm) {
-
-				//ID & PASS null check
-				if ( loginForm.id.value == '' ) {
-					return login.doError('IDを入力してください。');
-				}
-				if ( loginForm.pw.value == '' ) {
-					return login.doError('パスワードを入力してください。');
-				}
-				//NOT Error
-				return true;
+			//ID入力チェック
+			if ( id == ""  ) {
+				$("#msg").html("IDを入力してください。" );
+				$("#msg").css("color","red");
 			}
 
-			login.doError = function doError(msg) {
-				alert(msg);
-				return false;
-			} */
-
-			if (  pw == "" || id == "" || pw == 0 || id == 0 ) {
-
-				$("#msg").html("未入力があります、入力してください。");
+			//パスワード入力チェック
+			if (  pw == "" ) {
+				$("#msg").html("パスワードを入力してください。");
 				$("#msg").css("color","red");
+			}
 
+			//IDへの文字列チェック
+			if ( isNaN( id ) == false ) {
+				$("#msg").html("IDに入力された値が正しくありません。もう一度入力してください。");
+				$("#msg").css("color","red");
 			}
 
 		});
