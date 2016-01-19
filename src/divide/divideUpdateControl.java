@@ -29,6 +29,7 @@ public class divideUpdateControl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private String page_title;
+	private String content_page;
 	ArrayList<String> css = new ArrayList<String>(); // css用List
 	ArrayList<String> js = new ArrayList<String>(); // JavaScript用List
 
@@ -55,6 +56,7 @@ public class divideUpdateControl extends HttpServlet {
 		request.setAttribute("js", info.js);
 		// ページ情報指定
 		page_title = "Create Schedule";
+		content_page = "/manage/time_divide_manage.jsp";
 
 		String[] classIDArray;
 		int period = 0;
@@ -146,6 +148,7 @@ public class divideUpdateControl extends HttpServlet {
 			request.setAttribute("divideMap", divideMap);
 			request.setAttribute("viewMap", viewMap);
 			request.setAttribute("page_title", page_title);
+			request.setAttribute("content_page", content_page);
 
 		} catch (Exception e) {
 
@@ -155,7 +158,7 @@ public class divideUpdateControl extends HttpServlet {
 
 		// 画面遷移
 		if(ajaxWeek == null && map.isEmpty()){
-			RequestDispatcher disp = request.getRequestDispatcher("manage/time_divide_manage.jsp");
+			RequestDispatcher disp = request.getRequestDispatcher("/template/layout.jsp");
 			disp.forward(request, response);
 		}
 	}
