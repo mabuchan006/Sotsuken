@@ -44,7 +44,7 @@ public class subjectDBManage extends DBAccess {
 		// 参照制約用
 		selectTID = String.format("select subjectID from tbl_subject where subjectName = ?");
 		// selectbox表示用
-		selectBox = String.format("select classID from tbl_class");
+		selectBox = String.format("select classID from tbl_class order by classID asc");
 		// 科目IDから削除からsql
 		deleteSql = String.format("delete from tbl_subject where subjectID = ?");
 		// 科目IDから削除からsql
@@ -104,10 +104,10 @@ public class subjectDBManage extends DBAccess {
 		switch (state) {
 		// 登録
 		case INSERT:
-			System.out.println("insert２");
+
 			// 入力情報に誤りがなければ
 			if (!((si.getSubjectName()).equals("") || classID.length() > 4)) {
-				System.out.println("insert");
+
 
 				// 通常科目情報登録
 				createStstement(insertSql);
@@ -151,7 +151,7 @@ public class subjectDBManage extends DBAccess {
 
 			break;
 		case UODATE:
-			System.out.println("2");
+
 			createStstement(updateSql);
 			getPstmt().setInt(1, si.getSubjectID());
 			getPstmt().setString(2, si.getBringThings());
@@ -174,6 +174,7 @@ public class subjectDBManage extends DBAccess {
 		List<String> courceList = new ArrayList<String>();
 		connect();
 		createStstement(selectAll);
+		System.out.println(grade);;
 		getPstmt().setString(1, "%" + grade + "%");
 		selectExe();
 

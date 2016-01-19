@@ -32,7 +32,7 @@ public class teacherDBManage extends DBAccess{
 	public teacherDBManage() {
 		super(DRIVER_NAME);//DBAccessに接続
 		//ID,NAME,PASSを全件取得sql
-		selectSql = String.format("select teacherID,teacherName,password from tbl_teacher");
+		selectSql = String.format("select teacherID,teacherName,password from tbl_teacher order by teacherName asc");
 		//講師IDから削除からsql
 		deleteSql = String.format("delete  from tbl_teacher where teacherID = ?");
 		//講師情報登録sql

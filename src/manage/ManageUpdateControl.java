@@ -51,7 +51,7 @@ public class ManageUpdateControl extends HttpServlet {
 		//文字コードutf8
 		request.setCharacterEncoding("UTF-8");
 		//jspからのページ情報取得
-		String get_page = request.getParameter("page")==null?"event_manage"
+		String get_page = request.getParameter("page")==null?"subject_manage"
 				:request.getParameter("page");
 
 		//使用するcss,jsファイルの適用
@@ -152,6 +152,7 @@ public class ManageUpdateControl extends HttpServlet {
 
 					setSiArray[cnt] = rs.getValue()[0];
 
+
 					cnt++;
 					if(cnt == 4){
 
@@ -168,7 +169,8 @@ public class ManageUpdateControl extends HttpServlet {
 								);
 
 						//学科がAll指定されていたとき
-						if(setSiArray[3].equals("ALL")){
+						if(setSiArray[2].equals("ALL")){
+
 							courceList = sdm.classALLSelect(setSiArray[1]);
 							for (String classRs : courceList) {
 

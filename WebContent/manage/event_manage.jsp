@@ -146,6 +146,7 @@ ${rs.date[2] }
 
 <!-- class -->
 <datalist id="class">
+<option style="color: black;" value="ALL">ALL</option>
 <c:forEach var="rs" items="${classList }">
 <option style="color: black;" value="${rs.classID}">${rs.classID}</option>
 </c:forEach>

@@ -33,7 +33,7 @@ public class classDBManage extends DBAccess{
 	public classDBManage() {
 		super(DRIVER_NAME);//DBAccessに接続
 		//ID,NAME,PASSを全件取得sql
-		selectSql = String.format("select classID,className from tbl_class");
+		selectSql = String.format("select classID,className from tbl_class order by classID asc");
 		//クラスIDから削除からsql
 		deleteSql = String.format("delete  from tbl_class where classID = ?");
 		deleteClass = String.format("delete  from tbl_infosubject where classID = ?");

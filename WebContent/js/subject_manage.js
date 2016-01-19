@@ -1,6 +1,6 @@
 $(document).ready(
 		function() {
-			$("#periodid").slider({ min: 1, max: 4, value: [1, 4], focus: true });
+
 
 
 			if ($("#addTb-tbody > tr").size() < 2) {
