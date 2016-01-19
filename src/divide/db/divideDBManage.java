@@ -29,7 +29,7 @@ public class divideDBManage extends DBAccess {
 		insertSql = String.format("replace into tbl_timedivide ( period, roomID, week, classID ) values"
 				+ " ( ?, (select tbl_room.roomID from tbl_room where tbl_room.roomID = ?), ?, (select tbl_class.classID from tbl_class where tbl_class.classID = ?))");
 		deleteSql = String.format("delete from tbl_timedivide where week = ?");
-		classIDSelect = String.format("select classID from tbl_class");
+		classIDSelect = String.format("select classID from tbl_class order by classID asc");
 
 	}
 

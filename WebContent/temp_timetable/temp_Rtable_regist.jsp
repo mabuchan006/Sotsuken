@@ -148,7 +148,7 @@
 <span class="input-group-addon">
   <i class="fa fa-calendar green"></i>
   </span>
-  <input type="text" class="form-control "placeholder="始点の日付入力" name="start" required="required" value="${regtiList1[0].date }" />
+  <input type="text" class="form-control" id="aaaa" placeholder="始点の日付入力" name="start" required="required" value="${regtiList1[0].date }" />
 </div>
 
 <script type="text/javascript">

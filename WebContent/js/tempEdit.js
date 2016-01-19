@@ -68,8 +68,8 @@ function f_temp_formCheck(e) {
 		}
 	})
 }
-function tempClickEvent(e){
-	$("#regBtn").click(function(e){
-		$("#").modal("show");
+function tempClickEvent(){
+	$("#confBtn").click(function(){
+		$("#aaaa").removeAttr("required");
 	})
 }
