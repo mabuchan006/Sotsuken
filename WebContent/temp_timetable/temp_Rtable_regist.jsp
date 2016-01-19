@@ -99,6 +99,10 @@
 		<div style="height:600px; width:250px; overflow-y:scroll;">
 	<table class="table table-border ">
 		<tbody>
+
+		<c:forEach var="name" items="${teacherList }">
+<td class="text-center h5 select0 teacher">${name.teacherName}</td>
+		</c:forEach>
 			<%-- <%
 				Object count = request.getAttribute("teacher_count");
 				String countStr = count.toString();
