@@ -94,7 +94,7 @@ public class ManageUpdateControl extends HttpServlet {
 
 		//ページデータセット
 		try {
-			request.setAttribute("line-header", "line-header");
+			request.setAttribute("line_header", "line_header");
 			request.setAttribute("content_page", content_page);
 			request.setAttribute("page_title", page_title);
 

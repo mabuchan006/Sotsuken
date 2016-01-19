@@ -85,9 +85,12 @@
 			<div class="pure-pusher">
 			<div class="row col-md-9 col-md-offset-2">
 				<div class="logo text-left">
-
+					<c:if test="${!empty line_header }">
+					<h1 class="${line_header }">${page_title }</h1>
+					</c:if>
+					<c:if test="${empty line_header }">
 					<h1>${page_title }</h1>
-
+					</c:if>
 					<br />
 
 				</div>

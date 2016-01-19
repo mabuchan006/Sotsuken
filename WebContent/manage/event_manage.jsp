@@ -21,27 +21,26 @@ toastSelect("success","${Msg }")</script>
 <td class="col-md-3"><label for="EventName" class="labels">イベント名</label>
 	<input type="text" class="form-control" name="eventName" placeholder="イベント入力">
 </td>
+<td class="col-md-3">
+	<label for="Time" class="labels">日時</label>
+  <input type="text" class="form-control eventDate" placeholder="日付入力" name="eventDate">
 
+</td>
 <td class="col-md-3">
 <label for="text" class="labels">コマ</label>
-<input type="text" autocomplete="on" list="period" class="form-control" name="period" placeholder="時限数入力">
+<input type="text" class="form-control" name="period" list="period" placeholder="コマ入力" multiple>
 
 </td>
 
-<td class="col-md-3"><label for="text" class="labels">教室</label>
-<input type="text" class="form-control" name="roomName" placeholder="教室名入力" list="room">
-</td>
+
 <td></td>
 
 </tr>
 <tr>
-<td class="col-md-3">
-	<label for="Time" class="labels">日時</label>
-
-
-  <input type="text" class="form-control eventDate" placeholder="日付入力" name="eventDate">
-
+<td class="col-md-3"><label for="text" class="labels">教室</label>
+<input type="text" class="form-control" name="roomName" placeholder="教室名入力" list="room">
 </td>
+
 
 <td class="col-md-3">
 
