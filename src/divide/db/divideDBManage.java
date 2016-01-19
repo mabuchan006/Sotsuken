@@ -6,7 +6,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import DB.DBAccess;
+import manage.db.subjectDBManage;
 
 public class divideDBManage extends DBAccess {
 
@@ -15,7 +18,6 @@ public class divideDBManage extends DBAccess {
 	private String deleteSql;
 	private String msg;
 	private String viewSelect;
-	private String classIDSelect;
 
 	private final static String DRIVER_NAME = "java:comp/env/jdbc/MySqlCon";
 
@@ -29,8 +31,16 @@ public class divideDBManage extends DBAccess {
 		insertSql = String.format("replace into tbl_timedivide ( period, roomID, week, classID ) values"
 				+ " ( ?, (select tbl_room.roomID from tbl_room where tbl_room.roomID = ?), ?, (select tbl_class.classID from tbl_class where tbl_class.classID = ?))");
 		deleteSql = String.format("delete from tbl_timedivide where week = ?");
-		classIDSelect = String.format("select classID from tbl_class order by classID asc");
 
+	}
+
+	public String getMsg() {
+		return msg;
+	}
+
+	public String setMsg(String msg) {
+		this.msg = msg;
+		return msg;
 	}
 
 	public List<divideInfo> divideDBSelect() throws Exception {
@@ -112,9 +122,9 @@ public class divideDBManage extends DBAccess {
 			}
 			disConnection();
 		} catch (SQLException e) {
-			return msg = "登録できませんでした";
+			return setMsg("登録できませんでした");
 		}
-		return msg = "登録できました";
+		return setMsg("登録できました");
 	}// divideDBUpdate
 
 	public void divideDBDelete(String week) throws Exception {
@@ -125,8 +135,11 @@ public class divideDBManage extends DBAccess {
 		disConnection();
 	}//divideDBDelete
 
-	public List<divideInfo> classIDDBSelect() throws Exception {
-		return null;
-	}
+	public void classIDDBSelect(HttpServletRequest request) throws Exception {
+		subjectDBManage sdm = new subjectDBManage();
+		HashMap<String, List<String>> classMap = sdm.classDBSelect();
+		System.out.println(classMap);
+		request.setAttribute("classMap", classMap);
+	}//classIDDBSelect
 
 }// divideDBManage

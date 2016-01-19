@@ -30,6 +30,7 @@ public class divideUpdateControl extends HttpServlet {
 
 	private String page_title;
 	private String content_page;
+	private String msg;
 	ArrayList<String> css = new ArrayList<String>(); // css用List
 	ArrayList<String> js = new ArrayList<String>(); // JavaScript用List
 
@@ -116,7 +117,7 @@ public class divideUpdateControl extends HttpServlet {
 			} // for
 
 			// insert
-			ddm.divideDBInsert(diList);
+			msg = ddm.divideDBInsert(diList);
 
 			// select edit
 			HashMap<String, String[]> divideMap = ddm.editDivideDBSelect(week);
@@ -145,6 +146,7 @@ public class divideUpdateControl extends HttpServlet {
 				out.println(JSON.encode(viewMap));//返す
 			}
 
+			request.setAttribute("msg", msg);
 			request.setAttribute("divideMap", divideMap);
 			request.setAttribute("viewMap", viewMap);
 			request.setAttribute("page_title", page_title);

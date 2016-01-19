@@ -885,7 +885,7 @@ $(function(e) {
 
 		<h1 class="text-center">NMIC</h1>
 		<div class="container">
-			<div class="table col-md-6 ">
+			<div class="table col-md-6 margin">
 				<table class="table table-striped table-bordered text-center table-hover;">
 
 					<thead>
@@ -1434,7 +1434,7 @@ $(function(e) {
 				<h3 class="modal-title white text-center">info</h3>
 			</div>
 			<div class="modal-body text-center font1">
-				<h3>登録されました</h3>
+				<h3>${msg}</h3>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-primary" data-dismiss="modal">close</button>
