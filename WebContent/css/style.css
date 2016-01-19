@@ -636,3 +636,19 @@ margin0{
 .red1{
 	color:#ff0000;
 }
+
+.margin{
+	margin-left:-100px;
+}
+
+.margin2{
+	margin-left:5px;
+}
+
+.padding{
+	padding-left: 10px;
+}
+
+.wide9{
+	width: 150px;
+}
