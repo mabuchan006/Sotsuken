@@ -41,7 +41,13 @@ function selectInsert(selVal,num){
 function selectChange(num){
 	//選択されているvalue属性を取り出す
 	var val = $("#grade_id"+num).val();
-	selectInsert(val,num);
+	if(val != "ALL"){
+		selectInsert(val,num);
+	}else{
+		var select=$("#cource_id"+num);
+		 select.html("<option style=\"color: black;\" value=\"ALL\">ALL</option>");
+	}
+
 
 	}//selectChange
 </script>
@@ -137,6 +143,7 @@ toastSelect("success","${Msg }")</script>
 <!-- 科目情報取得 -->
 <c:forEach var="rs" items="${subjectList }">
 <tr class="select">
+<td class="subjectname" data-name="${rs.classID}">${rs.classID}</td>
 <td class="subjectname" data-name="${rs.subjectID}">${rs.subjectName}</td>
 <td class="bringthings" data-name="${rs.subjectID}">${rs.bringThings}</td>
 <td>

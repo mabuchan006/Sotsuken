@@ -8,6 +8,7 @@ public class subjectInfo implements Serializable {
 	private String subjectName;
 	private String bringThings;
 	private int showFlag;
+	private String classID;
 
 	public subjectInfo() {
 		super();
@@ -22,6 +23,14 @@ public class subjectInfo implements Serializable {
 		this.showFlag = showFlag;
 	}
 
+	public subjectInfo(int subjectID, String subjectName, String bringThings, int showFlag,String classID) {
+		super();
+		this.subjectID = subjectID;
+		this.subjectName = subjectName;
+		this.bringThings = bringThings;
+		this.showFlag = showFlag;
+		this.classID = classID;
+	}
 	public int getSubjectID() {
 		return subjectID;
 	}
@@ -52,6 +61,14 @@ public class subjectInfo implements Serializable {
 
 	public void setShowFlag(int showFlag) {
 		this.showFlag = showFlag;
+	}
+
+	public String getClassID() {
+		return classID;
+	}
+
+	public void setClassID(String classID) {
+		this.classID = classID;
 	}
 
 

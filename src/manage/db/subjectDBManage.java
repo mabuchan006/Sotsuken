@@ -21,9 +21,10 @@ public class subjectDBManage extends DBAccess {
 	private String selectAll;// 対象学科全部
 	private String selectTID;// 講師参照制約用
 	private String updateSql;//持ち物情報更新用
-
+	private String selectInfoSql;
 	// *******Msg*********
 	private String msg;
+
 
 	public String getMsg() {
 		return msg;
@@ -40,7 +41,12 @@ public class subjectDBManage extends DBAccess {
 	public subjectDBManage() {
 		super(DRIVER_NAME);// DBAccessに接続
 		// ID,NAME、持ち物、表示フラグを全件取得sql
-		selectSql = String.format("select subjectID,subjectName,bringThings,showFlag from tbl_subject");
+		selectSql = String.format("select subjectID,subjectName,bringThings,showFlag, from tbl_subject");
+		//class情報と関連付けた科目情報sql
+		selectInfoSql = String.format("select s.subjectID as subjectID,subjectName,bringThings,showFlag,i.classID as classID"
+				+ " from"
+				+ " tbl_subject s, tbl_infosubject i "
+				+ "where s.subjectID = i.subjectID");
 		// 参照制約用
 		selectTID = String.format("select subjectID from tbl_subject where subjectName = ?");
 		// selectbox表示用
@@ -79,6 +85,38 @@ public class subjectDBManage extends DBAccess {
 
 			subjectinfo = new subjectInfo(rs.getInt("subjectID"), rs.getString("subjectName"),
 					rs.getString("bringThings"), rs.getInt("showFlag"));
+
+			// 科目要素を1件ずつリストに追加
+			subjectList.add(subjectinfo);
+
+		}//while
+
+		disConnection();// 切断
+
+		return subjectList;
+
+	}// select
+
+	/*
+	 * @param subjectinfo 科目情報
+	 *
+	 * @return subjectList 全科目情報
+	 */
+	public List<subjectInfo> subjectInfoDBSelect() throws Exception {
+		List<subjectInfo> subjectList = new ArrayList<subjectInfo>();
+		// DB接続
+		connect();
+		createStstement();
+		selectExe(selectInfoSql);
+		// 要素取得用準備
+		ResultSet rs = getRsResult();
+		subjectInfo subjectinfo;
+
+		// 全件取得
+		while (rs.next()) {
+
+			subjectinfo = new subjectInfo(rs.getInt("subjectID"), rs.getString("subjectName"),
+					rs.getString("bringThings"), rs.getInt("showFlag"),rs.getString("classID"));
 
 			// 科目要素を1件ずつリストに追加
 			subjectList.add(subjectinfo);
@@ -174,8 +212,8 @@ public class subjectDBManage extends DBAccess {
 		List<String> courceList = new ArrayList<String>();
 		connect();
 		createStstement(selectAll);
-		System.out.println(grade);;
-		getPstmt().setString(1, "%" + grade + "%");
+		System.out.println(grade);
+		getPstmt().setString(1, grade + "%");
 		selectExe();
 
 		ResultSet rs = getRsResult();

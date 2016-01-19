@@ -125,6 +125,7 @@ public class ManageUpdateControl extends HttpServlet {
 		page_title = "SubjectManage";
 		//更新済み科目情報全件取得
 		subjectDBManage sdm = new subjectDBManage();
+		classDBManage cdm = new classDBManage();
 		int showFlag=0;
 		//送信された科目情報取得
 		subjectInfo si = new subjectInfo();
@@ -151,11 +152,9 @@ public class ManageUpdateControl extends HttpServlet {
 				if(cnt < 4){
 
 					setSiArray[cnt] = rs.getValue()[0];
-
-
 					cnt++;
-					if(cnt == 4){
 
+					if(cnt == 4){
 						//全学年を指定していた場合
 						if(setSiArray[1].equals("ALL")){
 							showFlag = 1;
@@ -170,8 +169,13 @@ public class ManageUpdateControl extends HttpServlet {
 
 						//学科がAll指定されていたとき
 						if(setSiArray[2].equals("ALL")){
+							//学年がAll指定されていなかったら
+							if(si.getShowFlag()==0){
+								courceList = sdm.classALLSelect(setSiArray[1]);
+							}else{//学年All
 
-							courceList = sdm.classALLSelect(setSiArray[1]);
+								courceList = cdm.classDBSelect_();
+							}
 							for (String classRs : courceList) {
 
 								sdm.subjectDBUpdate(si, classRs,DBAccess.INSERT, "登録");
@@ -214,7 +218,7 @@ public class ManageUpdateControl extends HttpServlet {
 		//学年ごとに対応したクラス情報
 		Map<String,List<String>> classMap = sdm.classDBSelect();
 		//更新済み科目情報全件取得
-		List<subjectInfo> subjectList = sdm.subjectDBSelect();
+		List<subjectInfo> subjectList = sdm.subjectInfoDBSelect();
 
 		//科目情報
 		request.setAttribute("subjectList", subjectList);

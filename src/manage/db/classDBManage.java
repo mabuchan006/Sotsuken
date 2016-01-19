@@ -72,6 +72,25 @@ public class classDBManage extends DBAccess{
 
 	}//select
 
+	public List<String> classDBSelect_() throws Exception{
+		List<String> classList = new ArrayList<String>();
+		//DB接続
+		connect();
+		createStstement();
+		selectExe(selectSql);
+		//要素取得用準備
+		ResultSet rs = getRsResult();
+		//全件取得
+		while(rs.next()){
+			classList.add(rs.getString("classID"));
+		}//while
+
+		disConnection();//切断
+
+	return classList;
+
+}//select
+
 	/*
 	 * @param クラス情報 classinfo
 	 * @see classControl
