@@ -53,7 +53,7 @@ function f_temp_formCheck(e) {
 		},
 		"focusout" : function(e){
 			var insVal = "";
-			$.each($(".drag-target td"), function(k,teacher){
+			$.each($(".drag-target li"), function(k,teacher){
 				if (textVal.indexOf($(teacher).text()) != -1) {
 					if(insVal.length > 0){
 						insVal = insVal + "/" + $(teacher).text();

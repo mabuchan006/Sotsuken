@@ -128,9 +128,6 @@ public class temp_tableControl extends HttpServlet {
 			int period_3 = rooms3List.size();
 			int period_4 = rooms4List.size();
 
-			int teacher_count = teacherList.size();
-
-			request.setAttribute("teacher_count",teacher_count);
 			request.setAttribute("period_1",period_1);
 			request.setAttribute("period_2",period_2);
 			request.setAttribute("period_3",period_3);
