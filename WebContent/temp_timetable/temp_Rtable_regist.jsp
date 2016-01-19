@@ -79,13 +79,7 @@
 	<div class="drag-target">
 		<ul class="panel">
 			<c:forEach var="subject" items="${infoSubjectList }">
-				<c:if test="${subject.subjectName != ''}" var="flg" />
-
-				<c:if test="${flg}">
-					<li class="panel-body select0 subject">${subject.subjectName}</li>
-				</c:if>
-
-
+					<li class="panel-body select0 subject">${subject.subjectID}:${subject.subjectName}</li>
 			</c:forEach>
 		</ul>
 	</div>
