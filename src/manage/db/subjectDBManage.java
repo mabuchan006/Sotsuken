@@ -104,6 +104,7 @@ public class subjectDBManage extends DBAccess {
 	 */
 	public List<subjectInfo> subjectInfoDBSelect() throws Exception {
 		List<subjectInfo> subjectList = new ArrayList<subjectInfo>();
+		List<String> classList = new ArrayList<String>();
 		// DB接続
 		connect();
 		createStstement();
@@ -111,15 +112,34 @@ public class subjectDBManage extends DBAccess {
 		// 要素取得用準備
 		ResultSet rs = getRsResult();
 		subjectInfo subjectinfo;
-
+		String classID="";
+		String SubjectName="";
+		String tempSubjectName="";
+		//最初のclassid
+		while (rs.next()) {
+			tempSubjectName = rs.getString("subjectName");
+			rs.beforeFirst();
+			break;
+		}
+		System.out.println(tempSubjectName);
 		// 全件取得
 		while (rs.next()) {
 
-			subjectinfo = new subjectInfo(rs.getInt("subjectID"), rs.getString("subjectName"),
-					rs.getString("bringThings"), rs.getInt("showFlag"),rs.getString("classID"));
+			classID=rs.getString("classID");
+			SubjectName=rs.getString("subjectName");
 
+			if(SubjectName.equals(tempSubjectName)){
+				classList.add(classID);
+			}else{
+
+			subjectinfo = new subjectInfo(rs.getInt("subjectID"), rs.getString("subjectName"),
+					rs.getString("bringThings"), rs.getInt("showFlag"),classList);
 			// 科目要素を1件ずつリストに追加
 			subjectList.add(subjectinfo);
+			classList=new ArrayList<String>();
+			classList.add(classID);
+			tempSubjectName=SubjectName;
+			}
 
 		}//while
 

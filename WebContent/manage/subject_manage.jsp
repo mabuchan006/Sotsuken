@@ -143,7 +143,7 @@ toastSelect("success","${Msg }")</script>
 <!-- 科目情報取得 -->
 <c:forEach var="rs" items="${subjectList }">
 <tr class="select">
-<td class="subjectname" data-name="${rs.classID}">${rs.classID}</td>
+<td class="subjectname" data-name="${rs.classList[0]}">${rs.classList[0]}</td>
 <td class="subjectname" data-name="${rs.subjectID}">${rs.subjectName}</td>
 <td class="bringthings" data-name="${rs.subjectID}">${rs.bringThings}</td>
 <td>
