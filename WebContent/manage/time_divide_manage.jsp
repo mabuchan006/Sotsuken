@@ -28,8 +28,8 @@ $(function(e) {
 
 		<!-- button -->
 		<input type="hidden" id="checkFlag" value="false">
-		<button type="button" class="btn btn-danger btn-lg col-md-1 fix  padding-left" id="cBtn">クリア</button>
-		<button type="submit" class="btn btn-primary btn-lg col-md-1 col-md-offset-10 fix" id="sBtn">登録</button>
+		<button type="button" class="btn btn-danger btn-lg col-md-1 fix col-md-offset-9 wide9" id="cBtn">クリア</button>
+		<button type="submit" class="btn btn-primary btn-lg col-md-1 col-md-offset-10 fix wide9" id="sBtn">登録</button>
 		<!-- button end -->
 
 		<div class="form-group col-md-1 col-md-offset-1"></div>
@@ -40,7 +40,7 @@ $(function(e) {
 	<!-- ドラッグ&ドロップ -->
 	<div class="col-md-2 ">
 
-	<div class="col-md-1  fix margin-top padding-left">
+	<div class="col-md-1  fix col-md-offset-9 margin-top ">
 		<h1>class</h1>
 		<div id="drag-target">
 			<div class="accordionJS">
@@ -226,7 +226,7 @@ $(function(e) {
 		</div><!-- class="col-md-1 fix margin-top" -->
 
 		<div class="container">
-			<div class="table  col-md-6 ">
+			<div class="table  col-md-6 margin">
 				<h1 class="text-center">NCS</h1>
 				<table class="table table-striped table-bordered text-center teble-headerfixed;">
 

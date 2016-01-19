@@ -97,12 +97,13 @@
 	<h3 class="font" style="background-color: #202020; color: white;width:250px;">
 		先生リスト</h3>
 		<div style="height:600px; width:250px; overflow-y:scroll;">
-	<table class="table table-border ">
-		<tbody>
-
-		<c:forEach var="name" items="${teacherList }">
-<td class="text-center h5 select0 teacher">${name.teacherName}</td>
-		</c:forEach>
+	<div class="drag-target">
+		<ul class="panel">
+					<c:forEach var="name" items="${teacherList }">
+					<li class="panel-body h5 select0 teacher">${name.teacherName}</li>
+					</c:forEach>
+		</ul>
+		</div>
 			<%-- <%
 				Object count = request.getAttribute("teacher_count");
 				String countStr = count.toString();
@@ -130,8 +131,7 @@
 			<%
 				}
 			%> --%>
-		</tbody>
-	</table>
+
 	</div>
 </div>
 
