@@ -44,6 +44,17 @@ $(function(e) {
 		<h1>class</h1>
 		<div id="drag-target">
 			<div class="accordionJS">
+				<c:forEach var="rs" items="${classIDMap}">
+					<h2 class="font">
+						<a draggable="false">${rs.key}</a>
+					</h2>
+					<ul class="font">
+					<c:forEach var="array" items="${rs.value }">
+						<li class="select0 size2">${array}</li>
+					</c:forEach>
+					</ul>
+				</c:forEach>
+				<!--
 				<h2 class="font">
 					<a href="#" draggable="false">R1</a>
 				</h2>
@@ -166,7 +177,7 @@ $(function(e) {
 						<li class="select0 size2">A1A1</li>
 						<li class="select0 size2">A1A2</li>
 					</ul>
-				</div>
+				</div> -->
 			</div><!-- class="accordionJS" -->
 		</div><!-- id="drag-target" -->
 	</div><!-- class="col-md-1 fix margin-top" -->

@@ -138,6 +138,8 @@ public class divideUpdateControl extends HttpServlet {
 			// select
 			divideMap = ddm.editDivideDBSelect(week);
 
+			ddm.classIDDBSelect(request);
+
 			//ajaxを返す
 			if (ajaxWeek != null) {
 				response.setHeader("Access-Control-Allow-Origin", "*");//dmain指定

@@ -5,19 +5,21 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.TreeMap;
 
 import javax.servlet.http.HttpServletRequest;
 
 import DB.DBAccess;
-import manage.db.subjectDBManage;
 
 public class divideDBManage extends DBAccess {
 
 	private String selectSql;
 	private String insertSql;
 	private String deleteSql;
-	private String msg;
 	private String viewSelect;
+	private String classIDSelect;
+	private String msg;
+
 
 	private final static String DRIVER_NAME = "java:comp/env/jdbc/MySqlCon";
 
@@ -31,6 +33,7 @@ public class divideDBManage extends DBAccess {
 		insertSql = String.format("replace into tbl_timedivide ( period, roomID, week, classID ) values"
 				+ " ( ?, (select tbl_room.roomID from tbl_room where tbl_room.roomID = ?), ?, (select tbl_class.classID from tbl_class where tbl_class.classID = ?))");
 		deleteSql = String.format("delete from tbl_timedivide where week = ?");
+		classIDSelect = String.format("select classID from tbl_class order by classID");
 
 	}
 
@@ -136,10 +139,29 @@ public class divideDBManage extends DBAccess {
 	}//divideDBDelete
 
 	public void classIDDBSelect(HttpServletRequest request) throws Exception {
-		subjectDBManage sdm = new subjectDBManage();
-		HashMap<String, List<String>> classMap = sdm.classDBSelect();
-		System.out.println(classMap);
-		request.setAttribute("classMap", classMap);
+		List<String> classIDList = new ArrayList<String>();
+		connect();
+		createStstement();
+		selectExe(classIDSelect);
+		ResultSet rs = getRsResult();
+		while (rs.next()) {
+			classIDList.add(rs.getString("classID"));
+		}
+		disConnection();
+		String temp = classIDList.get(0).substring(0,2);
+		List<String> tempList = new ArrayList<String>();
+		TreeMap<String, List<String>> classIDMap = new TreeMap<String, List<String>>();
+		for(String str : classIDList){
+			if(temp.equals(str.substring(0,2))){
+				tempList.add(str);
+			} else {
+				classIDMap.put(temp, tempList);
+				temp = str.substring(0,2);
+				tempList = new ArrayList<String>();
+				tempList.add(str);
+			}
+		}
+		request.setAttribute("classIDMap", classIDMap);
 	}//classIDDBSelect
 
 }// divideDBManage
