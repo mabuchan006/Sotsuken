@@ -87,7 +87,9 @@ public class subjectDBManage extends DBAccess {
 					rs.getString("bringThings"), rs.getInt("showFlag"));
 
 			// 科目要素を1件ずつリストに追加
+			if(!(subjectinfo.getSubjectName().equals(""))){
 			subjectList.add(subjectinfo);
+			}
 
 		}//while
 
