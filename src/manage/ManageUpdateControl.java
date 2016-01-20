@@ -2,6 +2,7 @@ package manage;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -218,12 +219,12 @@ public class ManageUpdateControl extends HttpServlet {
 		//学年ごとに対応したクラス情報
 		Map<String,List<String>> classMap = sdm.classDBSelect();
 		//更新済み科目情報全件取得
-		List<subjectInfo> subjectList = sdm.subjectInfoDBSelect();
+		HashMap<String,subjectInfo> subjectMap = sdm.subjectInfoDBSelect();
 
 		//科目情報
-		request.setAttribute("subjectList", subjectList);
+		request.setAttribute("subjectMap", subjectMap);
 		request.setAttribute("classMap", classMap);
-		request.setAttribute("cnt", subjectList.size());
+		request.setAttribute("cnt", subjectMap.size());
 
 		//メッセージ
 		if(sdm.getMsg() != null){

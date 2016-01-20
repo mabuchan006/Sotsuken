@@ -43,7 +43,8 @@ public class subjectDBManage extends DBAccess {
 		// ID,NAME、持ち物、表示フラグを全件取得sql
 		selectSql = String.format("select subjectID,subjectName,bringThings,showFlag, from tbl_subject");
 		//class情報と関連付けた科目情報sql
-		selectInfoSql = String.format("select s.subjectID as subjectID,subjectName,bringThings,showFlag,i.classID as classID"
+		selectInfoSql = String.format("select s.subjectID as subjectID,subjectName,bringThings,showFlag,"
+				+ "i.classID as classID"
 				+ " from"
 				+ " tbl_subject s, tbl_infosubject i "
 				+ "where s.subjectID = i.subjectID");
@@ -104,50 +105,36 @@ public class subjectDBManage extends DBAccess {
 	 *
 	 * @return subjectList 全科目情報
 	 */
-	public List<subjectInfo> subjectInfoDBSelect() throws Exception {
-		List<subjectInfo> subjectList = new ArrayList<subjectInfo>();
-		List<String> classList = new ArrayList<String>();
+	public HashMap<String,subjectInfo> subjectInfoDBSelect() throws Exception {
 		// DB接続
 		connect();
 		createStstement();
 		selectExe(selectInfoSql);
 		// 要素取得用準備
-		ResultSet rs = getRsResult();
+		HashMap<String, subjectInfo> subjectMap = new HashMap<String,subjectInfo>();
+		List<String> classList = new ArrayList<String>();
 		subjectInfo subjectinfo;
 		String classID="";
 		String SubjectName="";
-		String tempSubjectName="";
-		//最初のclassid
-		while (rs.next()) {
-			tempSubjectName = rs.getString("subjectName");
-			rs.beforeFirst();
-			break;
-		}
-		System.out.println(tempSubjectName);
+		ResultSet rs = getRsResult();
+
 		// 全件取得
 		while (rs.next()) {
-
-			classID=rs.getString("classID");
+			//あらかじめキー値活用のため科目名取得
 			SubjectName=rs.getString("subjectName");
-
-			if(SubjectName.equals(tempSubjectName)){
-				classList.add(classID);
-			}else{
-
+			//科目情報をセット
 			subjectinfo = new subjectInfo(rs.getInt("subjectID"), rs.getString("subjectName"),
 					rs.getString("bringThings"), rs.getInt("showFlag"),classList);
 			// 科目要素を1件ずつリストに追加
-			subjectList.add(subjectinfo);
-			classList=new ArrayList<String>();
-			classList.add(classID);
-			tempSubjectName=SubjectName;
-			}
-
+			subjectMap.put(SubjectName,subjectinfo);
+			//重複科目名がある場合は、classIDが追加される
+			classID=rs.getString("classID");
+			subjectMap.get(SubjectName).getClassList().add(classID);
+			System.out.println(SubjectName+":"+classID);
 		}//while
 
 		disConnection();// 切断
-
-		return subjectList;
+		return subjectMap;
 
 	}// select
 
