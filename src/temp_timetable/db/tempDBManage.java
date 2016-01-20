@@ -29,9 +29,11 @@ public class tempDBManage extends DBAccess {
 	            +"when '金' then 5 when '土' then 6 when '日' then 7 end");
 
 
-		insertSQL = String.format("replace into %s(period, subjectName, date, classID, roomName, teacherName) values(?,?,?,?,?,?)",tblName);
+		insertSQL = String.format("replace into %s(period, subjectID, date, classID, roomName, teacherName) values(?,?,?,?,?,?)",tblName);
 
-		selectSQL =String.format("SELECT subjectName,teacherName,date FROM %s where period = ? ORDER BY date ASC",tblName);
+		selectSQL =String.format("SELECT sub.subjectName,temp.teacherName,temp.date,temp.subjectID FROM %s temp "
+				+ "INNER JOIN tbl_subject sub on sub.subjectID = temp.subjectID "
+				+ "where period = ? ORDER BY date ASC",tblName);
 
 		deleteSQL = String.format("DELETE FROM %s",tblName);
 
@@ -74,7 +76,7 @@ public class tempDBManage extends DBAccess {
 
 				getPstmt().setString(1,ti.getPeriod());
 
-				getPstmt().setString(2, ti.getSubjectName());
+				getPstmt().setInt(2, ti.getSubjectID());
 
 				getPstmt().setString(3, ti.getDate());
 
@@ -104,7 +106,7 @@ public class tempDBManage extends DBAccess {
 		tempInfo tempinfo;
 
 		while (rs.next()) {
-			tempinfo = new tempInfo("", rs.getString("subjectName"), rs.getString("date"), "", "",rs.getString("teacherName"));
+			tempinfo = new tempInfo("", rs.getString("subjectName"), rs.getString("date"), "", "",rs.getString("teacherName"),rs.getInt("subjectID"));
 			regtiList.add(tempinfo);
 		}
 		disConnection();

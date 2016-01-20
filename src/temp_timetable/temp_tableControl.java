@@ -162,10 +162,14 @@ public class temp_tableControl extends HttpServlet {
 
 					//1限目の週間予定取得
 					//１限目
-					String subjectName1 = request.getParameter("Su"+ num +"_1");
-					if( subjectName1 == null || subjectName1.length() == 0 ){
-						subjectName1 = "";
-					}//null排除
+					String subject1 = request.getParameter("Su"+ num +"_1");
+					int subjectID1;
+					if( subject1 == null || subject1.length() == 0 ){
+						subjectID1 = 1;
+					}else {
+						 subjectID1 = Integer.parseInt(subject1.substring(0,1));
+						 System.out.println(subjectID1);
+					}
 					String teacherName1 = request.getParameter("Te"+ num +"_1");
 					if( teacherName1 == null || teacherName1.length() == 0 ){
 						teacherName1 = "";
@@ -175,7 +179,7 @@ public class temp_tableControl extends HttpServlet {
 						roomName1 = "";
 					}//null排除
 
-					//２限目
+					/*//２限目
 					String subjectName2 = request.getParameter("Su"+ num +"_2");
 					  if( subjectName2 == null || subjectName2.length() == 0 ){
 						subjectName2 = "";
@@ -216,12 +220,12 @@ public class temp_tableControl extends HttpServlet {
 					if( roomName4 == null || roomName4.length() == 0 ){
 						roomName4 = "";
 					}//null排除
-
+*/
 					//各日のコマをリストに追加
-					tiList1.add(new tempInfo("1", subjectName1,  date,  chooseClassID,  roomName1,  teacherName1));
-					tiList2.add(new tempInfo( "2", subjectName2,  date, chooseClassID,  roomName2,  teacherName2));
+					tiList1.add(new tempInfo("1", subjectID1,  date,  chooseClassID,  roomName1,  teacherName1));
+					/*tiList2.add(new tempInfo( "2", subjectName2,  date, chooseClassID,  roomName2,  teacherName2));
 					tiList3.add(new tempInfo( "3", subjectName3,  date,  chooseClassID,  roomName3,  teacherName3));
-					tiList4.add(new tempInfo( "4", subjectName4,  date,  chooseClassID,  roomName4,  teacherName4));
+					tiList4.add(new tempInfo( "4", subjectName4,  date,  chooseClassID,  roomName4,  teacherName4));*/
 
 					date = dateAdd(date); //日にち加算
 				}//for 7日分
@@ -229,9 +233,9 @@ public class temp_tableControl extends HttpServlet {
 
 			//Insert　２８日分
 			tempDBM.tempDBInsert(tiList1);
-			tempDBM.tempDBInsert(tiList2);
+		/*	tempDBM.tempDBInsert(tiList2);
 			tempDBM.tempDBInsert(tiList3);
-			tempDBM.tempDBInsert(tiList4);
+			tempDBM.tempDBInsert(tiList4);*/
 
 			} catch (Exception e) {
 				// TODO 自動生成された catch ブロック
@@ -245,12 +249,12 @@ public class temp_tableControl extends HttpServlet {
 		try {
 			regtiList1 = tempDBM.regSelect("1");
 			request.setAttribute("regtiList1", regtiList1);
-			regtiList2 = tempDBM.regSelect("2");
+			/*regtiList2 = tempDBM.regSelect("2");
 			request.setAttribute("regtiList2", regtiList2);
 			regtiList3 = tempDBM.regSelect("3");
 			request.setAttribute("regtiList3", regtiList3);
 			regtiList4 = tempDBM.regSelect("4");
-			request.setAttribute("regtiList4", regtiList4);
+			request.setAttribute("regtiList4", regtiList4);*/
 		} catch (Exception e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
