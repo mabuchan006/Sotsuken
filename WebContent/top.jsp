@@ -150,21 +150,21 @@
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>
-								<h3 class="modal-title white">login</h3>
+								<h3 class="modal-title white">ログイン</h3>
 							</div>
 							<div class="modal-body">
 								<form action="/Sotsuken/loginControl" method="POST">
 									<div id="msg"></div>
 									<label>username:</label> <input type="text"
-										placeholder="username" id="enterId" value="" name="teacherID"> <br>
-									<label>password:</label> <input type="password" placeholder="PASS"
+										placeholder="ユーザーネーム" id="enterId" value="" name="teacherID"> <br>
+									<label>password:</label> <input type="password" placeholder="パスワード"
 										id="enterPw" value="" name="password"><br> <br> <input
-										type="submit" value="login" id="login">
+										type="submit" value="ログイン" id="login">
 								</form>
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-primary"
-									data-dismiss="modal">close</button>
+									data-dismiss="modal">閉じる</button>
 							</div>
 						</div>
 					</div>
