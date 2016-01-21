@@ -15,6 +15,8 @@ public class masterDBManage extends DBAccess {
 	private String period3_SQL;
 	private String period4_SQL;
 
+	private String masterUpDate;
+
 	private String dateSQL; //日付取得用
 
 	public masterDBManage(String chooseTableName) {
@@ -41,9 +43,6 @@ public class masterDBManage extends DBAccess {
                              +"FROM %s timetable "
                              //+"INNER JOIN tbl_room room on timetable.roomName = room.roomName "
                              +"Where timetable.period = '4' ORDER BY date,period ASC",chooseTableName);
-
-
-
 
 		dateSQL =String.format("SELECT date FROM %s GROUP BY date order by date asc",chooseTableName);
 	}
@@ -125,4 +124,18 @@ public class masterDBManage extends DBAccess {
 		return timeTableDateList;
 
 	}
+
+	public void masterUpdate(String masterTableName,String tempTableName) throws Exception{
+
+		masterUpDate = String.format("REPLACE INTO "+ masterTableName +"(period, subjectName, date, classID, roomName, teacherName, bringThings) "
+			+ "SELECT temp.period, sub.subjectName, temp.date, temp.classID, temp.roomName, temp.teacherName, sub.bringThings "
+			+ "FROM"+ tempTableName +" temp "
+			+ "INNER JOIN tbl_subject sub on sub.subjectID = temp.subjectID "
+			+ "ORDER BY date,period");
+
+		connect();
+		createStstement();
+		updateExe(masterUpDate);
+		disConnection();
+	} //TempからMasterにUpdate
 }

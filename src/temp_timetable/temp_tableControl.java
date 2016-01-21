@@ -23,6 +23,7 @@ import temp_timetable.db.subjectDBManage;
 import temp_timetable.db.subjectInfo;
 import temp_timetable.db.tempDBManage;
 import temp_timetable.db.tempInfo;
+import timetable.db.masterDBManage;
 
 /**
  * Servlet implementation class temp_tableControl
@@ -43,7 +44,7 @@ public class temp_tableControl extends HttpServlet {
 
 	private String page_title = "";// ページ名
 	private String chooseClassID ;// classID選択 TODO:DBSWitchテーブル変更を柔軟にする。
-	private String tblName;
+	private String tempTableName;//一時テーブル名
 	String content_page; // 遷移先jsp
 
 
@@ -93,7 +94,7 @@ public class temp_tableControl extends HttpServlet {
 			 masterDBSwitchInfo value = tblSW.switchTempDB(page);
 			chooseClassID = value.chooseClassID; //クラス情報取得
 			content_page = value.content_page; //遷移先
-			tblName = value.chooseTableName;
+			tempTableName = value.chooseTableName;
 
 			request.setAttribute("chooseClassID",chooseClassID); //Insert のクラス情報に使用するため
 			page_title = "Temporary Edit" + " 　" +chooseClassID.toString();
@@ -101,17 +102,18 @@ public class temp_tableControl extends HttpServlet {
 			chooseClassID = "R4A1";
 			content_page = "/temp_timetable/temp_Rtable_regist.jsp";
 			page_title = "Temporary Edit" + " 　" +chooseClassID.toString();
-			tblName = "tbl_temp_R4A1timetable";  //Table名取得
+			tempTableName = "tbl_temp_R4A1timetable";  //Table名取得
 		}//if DB切り替え
 
 		System.out.println(chooseClassID);
 		System.out.println(content_page);
-		System.out.println(tblName);
+		System.out.println(tempTableName);
 
 		//使用DBManage
-		tempDBManage tempDBM = new tempDBManage(tblName);
+		tempDBManage tempDBM = new tempDBManage(tempTableName);
 		subjectDBManage suDBM = new subjectDBManage(chooseClassID);
 		teacherDBManage teDBM = new teacherDBManage();
+		masterDBManage masDBM = new masterDBManage("");
 
 		//DivideUpdateからの情報取得
 		try {
@@ -268,6 +270,20 @@ public class temp_tableControl extends HttpServlet {
 			e.printStackTrace();
 		}
 		//マスタアップ
+		if(request.getParameter("up") != null){
+
+			masterDBSwitch tblSW= new masterDBSwitch();
+			masterDBSwitchInfo master = tblSW.switchDB(page);
+			String masterTableName = master.chooseTableName;
+			System.out.println(masterTableName + ":" + tempTableName);
+			try {
+				masDBM.masterUpdate(masterTableName, tempTableName);
+				System.out.print("マスタアップ完了");
+			} catch (Exception e) {
+				// TODO 自動生成された catch ブロック
+				e.printStackTrace();
+			}
+		}
 
 		//マスタ確認
 		if(request.getParameter("confirm") != null){
