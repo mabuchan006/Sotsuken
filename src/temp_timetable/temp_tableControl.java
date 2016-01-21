@@ -168,7 +168,6 @@ public class temp_tableControl extends HttpServlet {
 						subjectID1 = 1;
 					}else {
 						 subjectID1 = Integer.parseInt(subject1.substring(0,1));
-						 System.out.println(subjectID1);
 					}
 					String teacherName1 = request.getParameter("Te"+ num +"_1");
 					if( teacherName1 == null || teacherName1.length() == 0 ){
@@ -179,11 +178,14 @@ public class temp_tableControl extends HttpServlet {
 						roomName1 = "";
 					}//null排除
 
-					/*//２限目
-					String subjectName2 = request.getParameter("Su"+ num +"_2");
-					  if( subjectName2 == null || subjectName2.length() == 0 ){
-						subjectName2 = "";
-					}//null排除
+					//２限目
+					String subject2 = request.getParameter("Su"+ num +"_2");
+					int subjectID2;
+					if( subject2 == null || subject2.length() == 0 ){
+						subjectID2 = 1;
+					}else {
+						 subjectID2 = Integer.parseInt(subject2.substring(0,1));
+					}
 					String teacherName2 = request.getParameter("Te"+ num +"_2");
 					if( teacherName2 == null || teacherName2.length() == 0 ){
 						teacherName2 = "";
@@ -194,10 +196,13 @@ public class temp_tableControl extends HttpServlet {
 					}//null排除
 
 					//３限目
-					String subjectName3 = request.getParameter("Su"+ num +"_3");
-					if( subjectName3 == null || subjectName3.length() == 0 ){
-						subjectName3 = "";
-					}//null排除
+					String subject3 = request.getParameter("Su"+ num +"_3");
+					int subjectID3;
+					if( subject3 == null || subject3.length() == 0 ){
+						subjectID3 = 1;
+					}else {
+						 subjectID3 = Integer.parseInt(subject3.substring(0,1));
+					}
 					String teacherName3 = request.getParameter("Te"+ num +"_3");
 					if( teacherName3 == null || teacherName3.length() == 0 ){
 						teacherName3 = "";
@@ -208,10 +213,13 @@ public class temp_tableControl extends HttpServlet {
 					}//null排除
 
 					//4限目
-					String subjectName4 = request.getParameter("Su"+ num +"_4");
-					if( subjectName4 == null || subjectName4.length() == 0 ){
-						subjectName4 = "";
-					}//null排除
+					String subject4 = request.getParameter("Su"+ num +"_4");
+					int subjectID4;
+					if( subject4 == null || subject4.length() == 0 ){
+						subjectID4 = 1;
+					}else {
+						 subjectID4 = Integer.parseInt(subject4.substring(0,1));
+					}
 					String teacherName4 = request.getParameter("Te"+ num +"_4");
 					if( teacherName4 == null || teacherName4.length() == 0 ){
 						teacherName4 = "";
@@ -220,12 +228,12 @@ public class temp_tableControl extends HttpServlet {
 					if( roomName4 == null || roomName4.length() == 0 ){
 						roomName4 = "";
 					}//null排除
-*/
+
 					//各日のコマをリストに追加
-					tiList1.add(new tempInfo("1", subjectID1,  date,  chooseClassID,  roomName1,  teacherName1));
-					/*tiList2.add(new tempInfo( "2", subjectName2,  date, chooseClassID,  roomName2,  teacherName2));
-					tiList3.add(new tempInfo( "3", subjectName3,  date,  chooseClassID,  roomName3,  teacherName3));
-					tiList4.add(new tempInfo( "4", subjectName4,  date,  chooseClassID,  roomName4,  teacherName4));*/
+					tiList1.add(new tempInfo("1",  subjectID1,  date,  chooseClassID,  roomName1,  teacherName1));
+					tiList2.add(new tempInfo( "2", subjectID2,  date, chooseClassID,  roomName2,  teacherName2));
+					tiList3.add(new tempInfo( "3", subjectID3,  date,  chooseClassID,  roomName3,  teacherName3));
+					tiList4.add(new tempInfo( "4", subjectID4,  date,  chooseClassID,  roomName4,  teacherName4));
 
 					date = dateAdd(date); //日にち加算
 				}//for 7日分
@@ -233,9 +241,9 @@ public class temp_tableControl extends HttpServlet {
 
 			//Insert　２８日分
 			tempDBM.tempDBInsert(tiList1);
-		/*	tempDBM.tempDBInsert(tiList2);
+			tempDBM.tempDBInsert(tiList2);
 			tempDBM.tempDBInsert(tiList3);
-			tempDBM.tempDBInsert(tiList4);*/
+			tempDBM.tempDBInsert(tiList4);
 
 			} catch (Exception e) {
 				// TODO 自動生成された catch ブロック
@@ -249,12 +257,12 @@ public class temp_tableControl extends HttpServlet {
 		try {
 			regtiList1 = tempDBM.regSelect("1");
 			request.setAttribute("regtiList1", regtiList1);
-			/*regtiList2 = tempDBM.regSelect("2");
+			regtiList2 = tempDBM.regSelect("2");
 			request.setAttribute("regtiList2", regtiList2);
 			regtiList3 = tempDBM.regSelect("3");
 			request.setAttribute("regtiList3", regtiList3);
 			regtiList4 = tempDBM.regSelect("4");
-			request.setAttribute("regtiList4", regtiList4);*/
+			request.setAttribute("regtiList4", regtiList4);
 		} catch (Exception e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
