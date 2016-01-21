@@ -61,10 +61,10 @@
 				<a href="/Sotsuken/ManageUpdate?page=class_manage">Class</a></h1></li>
 
 				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">
-				<a href="/Sotsuken/divideUpdate">Divide Table </a></h1></li>
+				<a href="/Sotsuken/ManageUpdate?page=event_manage">Event</a></h1></li>
 
 				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">
-				<a href="/Sotsuken/ManageUpdate?page=event_manage">Event</a></h1></li>
+				<a href="/Sotsuken/divideUpdate">DivideTable </a></h1></li>
 
 
 				<li>

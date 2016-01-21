@@ -76,48 +76,58 @@
                 <div class="row">
 
 
-                    <div class="col-md-12" style="cursor: pointer">
+                    <div class="col-md-6" style="cursor: pointer">
 
                         <div class="menu-item back-color2">
                             <a href="/Sotsuken/divideUpdate" data-toggle="modal">
-                                <i class="fa fa-mortar-board"></i>
+                                <i class="fa fa-building-o"></i>
                                 <p>コマ割り</p>
                             </a>
                         </div>
                         </div>
 
-                         <div class="col-md-12" style="cursor: pointer">
+                         <div class="col-md-6" style="cursor: pointer">
 
                         <div class="menu-item back-color2">
                             <a href="/Sotsuken/ManageUpdate?page=event_manage" data-toggle="modal">
-                                <i class="fa fa-mortar-board"></i>
+                                <i class="fa fa-exclamation-triangle"></i>
                                 <p>イベント</p>
                             </a>
                         </div>
                         </div>
 
-                        <div class="col-md-12" style="cursor: pointer">
+                        <div class="col-md-6" style="cursor: pointer">
                         <div class="menu-item back-color2">
                             <a href="/Sotsuken/ManageUpdate?page=teacher_manage" data-toggle="modal">
                                 <i class="fa fa-android"></i>
-                                <p>講師登録</p>
+                                <p>講師管理</p>
                             </a>
                         </div>
                         </div>
 
-                        <div class="col-md-12" style="cursor: pointer">
+                        <div class="col-md-6" style="cursor: pointer">
                         <div class="menu-item back-color2">
                             <a href="/Sotsuken/ManageUpdate?page=subject_manage" data-toggle="modal">
-                                <i class="fa fa-paint-brush"></i>
-                                <p>科目登録</p>
+                                <i class="fa fa-book"></i>
+                                <p>科目管理</p>
                             </a>
                         </div>
                         </div>
 
-                        <div class="col-md-12" style="cursor: pointer">
+                        <div class="col-md-6" style="cursor: pointer">
+
                         <div class="menu-item back-color2">
                             <a href="/Sotsuken/ManageUpdate?page=class_manage" data-toggle="modal">
-                                <i class="fa fa-book"></i>
+                                <i class="fa fa-mortar-board"></i>
+                                <p>クラス管理</p>
+                            </a>
+                        </div>
+                        </div>
+
+                        <div class="col-md-6" style="cursor: pointer">
+                        <div class="menu-item back-color2">
+                            <a href="/Sotsuken/editView?page=R" data-toggle="modal">
+                                <i class="fa fa-calendar"></i>
                                 <p>時間割作成</p>
                             </a>
                         </div>
