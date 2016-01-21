@@ -63,8 +63,8 @@ public class loginControl extends HttpServlet {
 			throws ServletException, IOException {
 
 		//パス初期値
-		String path="";//変更予定のため未記述
-		String errPath="Sotsuken/top.jsp";//変更予定のため未記述
+		String path="/Sotsuken/manage/manage_top.jsp";//変更予定のため未記述
+		String errPath="/Sotsuken/top.jsp";//変更予定のため未記述
 
 		//セッション情報取得
 		if(session == null){
@@ -74,7 +74,7 @@ public class loginControl extends HttpServlet {
 		teacherInfo tchInf = new teacherInfo();
 
 		//ユーザーが入力したIDとPASSWORDをteacherInfoで取得
-		tchInf.setTeacherID(Integer.parseInt( request.getParameter( "teacherID" ) ) );
+		tchInf.setTeacherName( request.getParameter( "teacherID" )  );
 		tchInf.setPassword( request.getParameter( "password" ) );
 
 		//セッション情報で振り分け

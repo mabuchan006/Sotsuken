@@ -99,7 +99,7 @@
                         <div class="col-md-6" style="cursor: pointer">
                         <div class="menu-item back-color2">
                             <a href="/Sotsuken/ManageUpdate?page=teacher_manage" data-toggle="modal">
-                                <i class="fa fa-android"></i>
+                                <i class="fa fa-user"></i>
                                 <p>講師管理</p>
                             </a>
                         </div>
