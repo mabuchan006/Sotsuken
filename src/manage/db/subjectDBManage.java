@@ -131,7 +131,7 @@ public class subjectDBManage extends DBAccess {
 			classID=rs.getString("classID");
 			SubjectID=rs.getInt("subjectID");
 			subjectMap.get(SubjectName).setInfosubject(classID, SubjectID);
-			System.out.println(SubjectName+":"+classID+" :" +SubjectID);
+
 		}//while
 
 		disConnection();// 切断
@@ -222,7 +222,6 @@ public class subjectDBManage extends DBAccess {
 		List<String> courceList = new ArrayList<String>();
 		connect();
 		createStstement(selectAll);
-		System.out.println(grade);
 		getPstmt().setString(1, grade + "%");
 		selectExe();
 

@@ -143,10 +143,24 @@ toastSelect("success","${Msg }")</script>
 <!-- 科目情報取得 -->
 <c:forEach var="rs" items="${subjectMap }">
 <tr class="select">
-<td class="subjectname" data-name="${rs.value.infosubject.subjectList[0]}">
-${rs.value.infosubject.classList[0]}
-${rs.value.infosubject.subjectList[0]}
-${rs.value.subjectName}</td>
+<td>
+<ol class="eventpost">
+<li class="event_li" class=" col-md-12">
+<span class="subjectname" data-name="${rs.value.infosubject.subjectList[0]}">${rs.value.subjectName}</span>
+</li>
+
+<div class="col-md-12">
+<c:forEach var="classID" items="${rs.value.infosubject.classList}">
+<li class="event_li">
+<span class="period label label-pill label-default">
+${classID }
+</span></li>
+</c:forEach>
+</div>
+</ol>
+
+
+</td>
 <td class="bringthings" data-name="${rs.value.infosubject.subjectList[0]}">${rs.value.bringThings}</td>
 <td>
 <div style="display:inline-flex">

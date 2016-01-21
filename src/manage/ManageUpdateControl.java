@@ -213,7 +213,6 @@ public class ManageUpdateControl extends HttpServlet {
 
 		if(request.getParameter("delete_subject") != null){
 			sdm.subjectDBUpdate(delsi, "",DBAccess.DELETE, "削除");
-			System.out.println("削除");
 		}//if
 
 		//学年ごとに対応したクラス情報
