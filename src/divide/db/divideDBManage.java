@@ -148,9 +148,12 @@ public class divideDBManage extends DBAccess {
 			classIDList.add(rs.getString("classID"));
 		}
 		disConnection();
+
 		String temp = classIDList.get(0).substring(0,2);
 		List<String> tempList = new ArrayList<String>();
 		TreeMap<String, List<String>> classIDMap = new TreeMap<String, List<String>>();
+		//LinkedHashMap<String, List<String>> classIDMap = new LinkedHashMap<String, List<String>>();
+
 		for(String str : classIDList){
 			if(temp.equals(str.substring(0,2))){
 				tempList.add(str);
@@ -161,7 +164,8 @@ public class divideDBManage extends DBAccess {
 				tempList.add(str);
 			}
 		}
+		classIDMap.put(temp, tempList);
+
 		request.setAttribute("classIDMap", classIDMap);
 	}//classIDDBSelect
-
 }// divideDBManage
