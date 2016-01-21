@@ -112,9 +112,9 @@ public class subjectDBManage extends DBAccess {
 		selectExe(selectInfoSql);
 		// 要素取得用準備
 		HashMap<String, subjectInfo> subjectMap = new HashMap<String,subjectInfo>();
-		List<String> classList = new ArrayList<String>();
 		subjectInfo subjectinfo;
 		String classID="";
+		int SubjectID;
 		String SubjectName="";
 		ResultSet rs = getRsResult();
 
@@ -123,14 +123,15 @@ public class subjectDBManage extends DBAccess {
 			//あらかじめキー値活用のため科目名取得
 			SubjectName=rs.getString("subjectName");
 			//科目情報をセット
-			subjectinfo = new subjectInfo(rs.getInt("subjectID"), rs.getString("subjectName"),
-					rs.getString("bringThings"), rs.getInt("showFlag"),classList);
+			subjectinfo = new subjectInfo(rs.getString("subjectName"),
+					rs.getString("bringThings"), rs.getInt("showFlag"));
 			// 科目要素を1件ずつリストに追加
 			subjectMap.put(SubjectName,subjectinfo);
 			//重複科目名がある場合は、classIDが追加される
 			classID=rs.getString("classID");
-			subjectMap.get(SubjectName).getClassList().add(classID);
-			System.out.println(SubjectName+":"+classID);
+			SubjectID=rs.getInt("subjectID");
+			subjectMap.get(SubjectName).setInfosubject(classID, SubjectID);
+			System.out.println(SubjectName+":"+classID+" :" +SubjectID);
 		}//while
 
 		disConnection();// 切断
