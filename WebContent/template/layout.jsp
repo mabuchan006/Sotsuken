@@ -47,7 +47,9 @@
 		<nav class="pure-drawer" data-position="left">
 
 
-			<h1 style="padding: 100px 20px 20px; margin: 0;">AdminMENU</h1>
+			<h1 style="padding: 100px 20px 20px; margin: 0;">
+			<a href="/Sotsuken/manage/manage_top.jsp">AdminMENU</a></h1>
+
 			<ul>
 				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">
 				<a href="/Sotsuken/ManageUpdate?page=teacher_manage">Teacher</a></h1></li>
@@ -59,7 +61,7 @@
 				<a href="/Sotsuken/ManageUpdate?page=class_manage">Class</a></h1></li>
 
 				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">
-				<a href="/Sotsuken/divideUpdate">Create </a></h1></li>
+				<a href="/Sotsuken/divideUpdate">Divide Table </a></h1></li>
 
 				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">
 				<a href="/Sotsuken/ManageUpdate?page=event_manage">Event</a></h1></li>

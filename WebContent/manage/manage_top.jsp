@@ -60,7 +60,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="logo text-center">
-                            <h1>管理者TOP</h1>
+                            <h1>Manage　TOP</h1>
 
                         </div>
                     </div>
@@ -79,16 +79,26 @@
                     <div class="col-md-12" style="cursor: pointer">
 
                         <div class="menu-item back-color2">
-                            <a href="../Sotsuken/publicView" data-toggle="modal">
+                            <a href="/Sotsuken/divideUpdate" data-toggle="modal">
                                 <i class="fa fa-mortar-board"></i>
                                 <p>コマ割り</p>
                             </a>
                         </div>
                         </div>
 
+                         <div class="col-md-12" style="cursor: pointer">
+
+                        <div class="menu-item back-color2">
+                            <a href="/Sotsuken/ManageUpdate?page=event_manage" data-toggle="modal">
+                                <i class="fa fa-mortar-board"></i>
+                                <p>イベント</p>
+                            </a>
+                        </div>
+                        </div>
+
                         <div class="col-md-12" style="cursor: pointer">
                         <div class="menu-item back-color2">
-                            <a href="http://localhost:8080/Sotsuken/timeTable/timeTable_master.jsp" data-toggle="modal">
+                            <a href="/Sotsuken/ManageUpdate?page=teacher_manage" data-toggle="modal">
                                 <i class="fa fa-android"></i>
                                 <p>講師登録</p>
                             </a>
@@ -97,7 +107,7 @@
 
                         <div class="col-md-12" style="cursor: pointer">
                         <div class="menu-item back-color2">
-                            <a href="http://localhost:8080/Sotsuken/timeTable/timeTable_master.jsp" data-toggle="modal">
+                            <a href="/Sotsuken/ManageUpdate?page=subject_manage" data-toggle="modal">
                                 <i class="fa fa-paint-brush"></i>
                                 <p>科目登録</p>
                             </a>
@@ -106,7 +116,7 @@
 
                         <div class="col-md-12" style="cursor: pointer">
                         <div class="menu-item back-color2">
-                            <a href="http://localhost:8080/Sotsuken/timeTable/timeTable_master.jsp" data-toggle="modal">
+                            <a href="/Sotsuken/ManageUpdate?page=class_manage" data-toggle="modal">
                                 <i class="fa fa-book"></i>
                                 <p>時間割作成</p>
                             </a>
