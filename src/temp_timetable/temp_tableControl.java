@@ -171,14 +171,6 @@ public class temp_tableControl extends HttpServlet {
 					}else {
 						subjectID1 = Integer.parseInt(subject1.substring(0,3));
 					}
-
-					/*else if(subjectID1 < 10 && subjectID1 > 0){
-						 subjectID1 = Integer.parseInt(subject1.substring(0,1));
-					} else if(subjectID1 >= 10 && subjectID1 < 100){
-						subjectID1 = Integer.parseInt(subject1.substring(1,2));
-					} else {
-						subjectID1 = Integer.parseInt(subject1.substring(0,2));
-					}*/
 					String teacherName1 = request.getParameter("Te"+ num +"_1");
 					if( teacherName1 == null || teacherName1.length() == 0 ){
 						teacherName1 = "";
