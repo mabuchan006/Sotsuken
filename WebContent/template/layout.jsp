@@ -44,6 +44,10 @@
 			for="pure-toggle-left" data-toggle-label="left"><span
 			class="pure-toggle-icon"></span></label>
 
+
+
+
+
 		<nav class="pure-drawer" data-position="left">
 
 
@@ -79,6 +83,9 @@
 							</ul></li>
 					</ul>
 				</li>
+
+				<li class="select2 moji"><h1 style="padding: 15px 40px; margin-top: 280px;">
+				<a href="/Sotsuken/top.jsp">LogOut </a></h1></li>
 			</ul>
 
 
@@ -91,10 +98,14 @@
 					<c:if test="${!empty line_header }">
 					<h1 class="${line_header }">${page_title }</h1>
 					</c:if>
+
+
 					<c:if test="${empty line_header }">
 					<h1>${page_title }</h1>
 					</c:if>
+
 					<br />
+
 
 				</div>
 				</div>
