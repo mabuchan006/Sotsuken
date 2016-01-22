@@ -51,7 +51,7 @@ public class subjectDBManage extends DBAccess {
 		// 参照制約用
 		selectTID = String.format("select subjectID from tbl_subject where subjectName = ?");
 		// selectbox表示用
-		selectBox = String.format("select classID from tbl_class order by classID asc");
+		selectBox = String.format("select classID from tbl_class order by classID");
 		// 科目IDから削除からsql
 		deleteSql = String.format("delete from tbl_subject where subjectID = ?");
 		// 科目IDから削除からsql
