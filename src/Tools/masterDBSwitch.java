@@ -102,7 +102,7 @@ public class masterDBSwitch {
 			break;
 		case "R2A4":
 			value.page_title = "R2A4";
-			value.chooseTableName = "tbl_master_R2A3timetable";
+			value.chooseTableName = "tbl_master_R2A4timetable";
 			value.content_page = "/timeTable/R_master.jsp";
 			break;
 		case "R2A5":
@@ -129,7 +129,7 @@ public class masterDBSwitch {
 				break;
 		case "R1A4":
 			value.page_title = "R1A4";
-			value.chooseTableName = "tbl_master_R1A3timetable";
+			value.chooseTableName = "tbl_master_R1A4timetable";
 			value.content_page = "/timeTable/R_master.jsp";
 			break;
 		case "R1A5":
@@ -416,7 +416,6 @@ public class masterDBSwitch {
 			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
 			value.chooseTableName = "tbl_temp_R2A1timetable";
 			break;
-
 		case "R2A2":
 			value.chooseClassID = "R2A2";
 			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
@@ -444,7 +443,6 @@ public class masterDBSwitch {
 			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
 			value.chooseTableName = "tbl_temp_R1A1timetable";
 			break;
-
 		case "R1A2":
 			value.chooseClassID = "R1A2";
 			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
