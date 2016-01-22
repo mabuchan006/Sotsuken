@@ -278,10 +278,12 @@ public class temp_tableControl extends HttpServlet {
 			System.out.println(masterTableName + ":" + tempTableName);
 			try {
 				masDBM.masterUpdate(masterTableName, tempTableName);
-				System.out.print("マスタアップ完了");
+				String Msg="マスタアップ完了";
+				request.setAttribute("Msg", Msg);
 			} catch (Exception e) {
 				// TODO 自動生成された catch ブロック
-				System.out.print("マスタアップ失敗");
+				String err_Msg = "マスタアップ失敗";
+				request.setAttribute("err_Msg", err_Msg);
 				e.printStackTrace();
 			}
 		}

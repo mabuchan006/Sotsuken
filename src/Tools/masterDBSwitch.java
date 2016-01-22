@@ -142,7 +142,14 @@ public class masterDBSwitch {
 			value.content_page = "/timeTable/R_master.jsp";
 			break;
 
+		case "event":
+			value.page_title ="Event Table";
+			value.chooseTableName = "";
+			value.content_page = "/eventTable/eventTable.jsp";
+			break;
+
 		}//switch end(tbl名切り替え)
+
 		return value;
 	}
 

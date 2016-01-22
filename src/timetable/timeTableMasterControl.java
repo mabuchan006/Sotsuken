@@ -73,6 +73,7 @@ public class timeTableMasterControl extends HttpServlet {
 			return;
 		}
 
+		if(page.equals("A") || page.equals("S") || page.equals("J") || page.equals("R")){
 		//●確定時間割情報表示機能
 			masterDBManage mDM = new masterDBManage(chooseTableName);//マスターDBマネージャの起動
 			try {
@@ -90,6 +91,7 @@ public class timeTableMasterControl extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 	}
+		}
 		//ディスパッチ準備
 			request.setAttribute("content_page", content_page);
 			request.setAttribute("page_title", page_title);
