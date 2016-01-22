@@ -4,6 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
@@ -153,22 +154,56 @@ public class divideDBManage extends DBAccess {
 		String temp = classIDList.get(0).substring(0,2);
 		List<String> tempList = new ArrayList<String>();
 		Map<String, List<String>> tempMap = new TreeMap<String, List<String>>();
-		//Map<String, List<String>> classIDMap = new LinkedHashMap<String, List<String>>();
-		//Map<String, Map<String, List<String>>> map = new TreeMap<String, Map<String, List<String>>>();
+		Map<String, List<String>> classIDMap = new LinkedHashMap<String, List<String>>();
+		Map<String, Map<String, List<String>>> map = new TreeMap<String, Map<String, List<String>>>();
 
+		String tempClass = classIDList.get(0).substring(0, 1);//R4A1 -> R
+		temp = classIDList.get(0).substring(0, 2);//R4A1 -> R4
 		for(String str : classIDList){
-			if(temp.equals(str.substring(0,2))){
-				tempList.add(str);
-			} else {
+			if(tempClass.equals(str.substring(0,1))){//学科ごとに分ける
+				if(temp.equals(str.substring(0,2))){//学科 + 学年ごとに分ける
+					tempList.add(str);//学年が同じならリストに追加
+				} else {//学科 + 学年が変わったら
+					tempMap.put(temp, tempList);//学科 + 学年, 学年リストをマップに追加
+					temp = str.substring(0,2);//次の学科 + 学年を入れる
+					tempList = new ArrayList<String>();
+					tempList.add(str);
+				}
+			} else {//学科が変わったら
 				tempMap.put(temp, tempList);
+				map.put(tempClass, tempMap);//学科,学科 + 学年,クラス
+				tempClass = str.substring(0,1);
 				temp = str.substring(0,2);
 				tempList = new ArrayList<String>();
+				tempMap = new TreeMap<String, List<String>>();
 				tempList.add(str);
 			}
 		}
 		tempMap.put(temp, tempList);
+		map.put(tempClass, tempMap);
 
+		tempList = new ArrayList<String>();
+		temp = classIDList.get(0).substring(0, 2);
+		for(String str : classIDList){
+			if(temp.equals(str.substring(0,2)) && tempList.indexOf(temp) == -1){
+				tempList.add(temp);
+			} else {
+				temp = str.substring(0,2);
+			}
+		}
+		int n = 4;
+		for(int i = 0; i < tempList.size() ; i++){
+			if(Integer.parseInt(tempList.get(i).substring(1, 2)) == n){
+				classIDMap.putAll(map.get(tempList.get(i).substring(0, 1)));
+				temp = tempList.get(i).substring(0, 1);
+				for(int j = 1; j <= n; j++){
+					tempList.remove(temp + j);
+				}
+				n--;
+				i = -1;
+			}
+		}
 
-		request.setAttribute("classIDMap", tempMap);
+		request.setAttribute("classIDMap", classIDMap);
 	}//classIDDBSelect
 }// divideDBManage
