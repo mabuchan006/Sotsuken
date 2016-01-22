@@ -10,15 +10,15 @@
 
 <!-- タブ -->
 <ul class="nav nav-tabs">
-<!-- R4 -->
+<!-- A1 -->
 	<li role="presentation" class="dropdown">
-		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+		<a class="dropdown-toggle" data-toggle="dropdown" href="/Sotsuken/publicView?page=A1A1" role="button" aria-expanded="false">
 			A1 <span class="caret"></span>
 		</a>
 	</li>
 
 <li role="presentation" class="dropdown">
-		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+		<a class="dropdown-toggle" data-toggle="dropdown" href="/Sotsuken/publicView?page=A1A2" role="button" aria-expanded="false">
 			A2 <span class="caret"></span>
 		</a>
 	</li>
