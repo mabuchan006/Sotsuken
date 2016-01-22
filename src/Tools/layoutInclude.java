@@ -24,6 +24,7 @@ public class layoutInclude {
 		info.css.add("http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css");
 		info.css.add("/Sotsuken/css/custom.css");
 		info.css.add("/Sotsuken/css/style.css");
+		info.css.add("https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css");
 		info.css.add("/Sotsuken/css/pure-drawer.css");
 		info.css.add("/Sotsuken/bootstrap/css/bootstrap-datepicker.min.css");
 
@@ -36,10 +37,13 @@ public class layoutInclude {
 		info.js.add("/Sotsuken/js/dragdrop.js");
 		info.js.add("/Sotsuken/js/clickEvent.js");
 		info.js.add("/Sotsuken/js/formCheck.js");
+		info.js.add("/Sotsuken/js/jquery.toaster.js");
+		info.js.add("https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js");
+		info.js.add("/Sotsuken/js/toastSelect.js");
 		info.js.add("/Sotsuken/bootstrap/js/bootstrap-datepicker.js");
 		info.js.add("/Sotsuken/bootstrap/js/bootstrap-datepicker.ja.min.js");
 		info.js.add("/Sotsuken/js/tempEdit.js");
-		info.js.add("/Sotsuken/js/toastSelect.js");
+
 
 
 

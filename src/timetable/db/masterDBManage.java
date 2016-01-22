@@ -19,6 +19,8 @@ public class masterDBManage extends DBAccess {
 
 	private String dateSQL; //日付取得用
 
+	private String deleteSQL;
+
 	public masterDBManage(String chooseTableName) {
 		super(DRIVER_NAME);
 		StringBuilder sb = new StringBuilder();
@@ -45,6 +47,8 @@ public class masterDBManage extends DBAccess {
                              +"Where timetable.period = '4' ORDER BY date,period ASC",chooseTableName);
 
 		dateSQL =String.format("SELECT date FROM %s GROUP BY date order by date asc",chooseTableName);
+
+
 	}
 	/**
 	 * @param
@@ -138,4 +142,12 @@ public class masterDBManage extends DBAccess {
 		updateExe(masterUpDate);
 		disConnection();
 	} //TempからMasterにUpdate
+
+	public void masterDelete(String masterTableName) throws Exception {
+		deleteSQL = String.format("DELETE FROM "+masterTableName);
+		connect();
+		createStstement();
+		updateExe(deleteSQL);
+		disConnection();
+	}//masterDB Delete
 }

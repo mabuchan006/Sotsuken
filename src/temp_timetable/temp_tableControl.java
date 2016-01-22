@@ -169,8 +169,16 @@ public class temp_tableControl extends HttpServlet {
 					if( subject1 == null || subject1.length() == 0 ){
 						subjectID1 = 1;
 					}else {
-						 subjectID1 = Integer.parseInt(subject1.substring(0,1));
+						subjectID1 = Integer.parseInt(subject1.substring(0,3));
 					}
+
+					/*else if(subjectID1 < 10 && subjectID1 > 0){
+						 subjectID1 = Integer.parseInt(subject1.substring(0,1));
+					} else if(subjectID1 >= 10 && subjectID1 < 100){
+						subjectID1 = Integer.parseInt(subject1.substring(1,2));
+					} else {
+						subjectID1 = Integer.parseInt(subject1.substring(0,2));
+					}*/
 					String teacherName1 = request.getParameter("Te"+ num +"_1");
 					if( teacherName1 == null || teacherName1.length() == 0 ){
 						teacherName1 = "";
@@ -186,7 +194,7 @@ public class temp_tableControl extends HttpServlet {
 					if( subject2 == null || subject2.length() == 0 ){
 						subjectID2 = 1;
 					}else {
-						 subjectID2 = Integer.parseInt(subject2.substring(0,1));
+						 subjectID2 = Integer.parseInt(subject2.substring(0,3));
 					}
 					String teacherName2 = request.getParameter("Te"+ num +"_2");
 					if( teacherName2 == null || teacherName2.length() == 0 ){
@@ -203,7 +211,7 @@ public class temp_tableControl extends HttpServlet {
 					if( subject3 == null || subject3.length() == 0 ){
 						subjectID3 = 1;
 					}else {
-						 subjectID3 = Integer.parseInt(subject3.substring(0,1));
+						 subjectID3 = Integer.parseInt(subject3.substring(0,3));
 					}
 					String teacherName3 = request.getParameter("Te"+ num +"_3");
 					if( teacherName3 == null || teacherName3.length() == 0 ){
@@ -220,7 +228,7 @@ public class temp_tableControl extends HttpServlet {
 					if( subject4 == null || subject4.length() == 0 ){
 						subjectID4 = 1;
 					}else {
-						 subjectID4 = Integer.parseInt(subject4.substring(0,1));
+						 subjectID4 = Integer.parseInt(subject4.substring(0,3));
 					}
 					String teacherName4 = request.getParameter("Te"+ num +"_4");
 					if( teacherName4 == null || teacherName4.length() == 0 ){
@@ -248,10 +256,12 @@ public class temp_tableControl extends HttpServlet {
 			tempDBM.tempDBInsert(tiList4);
 
 			} catch (Exception e) {
-				// TODO 自動生成された catch ブロック
+				String err_Msg = "一時時間割　登録失敗";
+				request.setAttribute("err_Msg", err_Msg);
 				e.printStackTrace();
 			}
-
+			String Msg="一時間割　 登録完了";
+			request.setAttribute("Msg", Msg);
 		}//Insert 終了
 
 
@@ -271,15 +281,15 @@ public class temp_tableControl extends HttpServlet {
 		}
 		//マスタアップ
 		if(request.getParameter("up") != null){
-
 			masterDBSwitch tblSW= new masterDBSwitch();
 			masterDBSwitchInfo master = tblSW.switchDB(page);
 			String masterTableName = master.chooseTableName;
-			System.out.println(masterTableName + ":" + tempTableName);
 			try {
+				masDBM.masterDelete(masterTableName);
 				masDBM.masterUpdate(masterTableName, tempTableName);
 				String Msg="マスタアップ完了";
 				request.setAttribute("Msg", Msg);
+
 			} catch (Exception e) {
 				// TODO 自動生成された catch ブロック
 				String err_Msg = "マスタアップ失敗";

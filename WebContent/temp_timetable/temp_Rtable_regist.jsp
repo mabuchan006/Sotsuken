@@ -1,13 +1,15 @@
 <%@page import="timetable.db.masterInfo"%>
 <%@page import="java.util.ArrayList"%>
+<%@page import ="java.util.Calendar" %>
 <%@page import="com.sun.xml.internal.bind.v2.schemagen.xmlschema.Import"%>
 <%@ page pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
+
 <c:if test= "${!empty Msg }">
 <script>
-toastSelect("success","${Msg }")</script>
+toastSelect("success","${Msg}")</script>
 </c:if>
 
 <c:if test=  "${!empty err_Msg }">
@@ -90,7 +92,7 @@ toastSelect("success","${Msg }")</script>
 		<div class="drag-target">
 			<ul class="panel">
 				<c:forEach var="subject" items="${infoSubjectList }">
-					<li class="panel-body select0 subject">${subject.subjectID} ${subject.subjectName}</li>
+					<li class="panel-body select0 subject"><fmt:formatNumber value="${subject.subjectID}" pattern="000" /> ${subject.subjectName}</li>
 				</c:forEach>
 			</ul>
 		</div>
@@ -150,7 +152,7 @@ toastSelect("success","${Msg }")</script>
 	<div class="container">
 
 		<!-- calender-->
-		<div class="input-group date col-md-2">
+		<div class="input-group date col-md-2 " >
 			<span class="input-group-addon"> <i
 				class="fa fa-calendar green"></i>
 			</span> <input type="text" class="form-control" id="aaaa"
