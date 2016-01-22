@@ -30,13 +30,11 @@ public class masterDBSwitch {
 			 value. chooseTableName = "tbl_master_R4A1timetable";
 			 value.content_page = "/timeTable/R_master.jsp";
 			break;
-
 		case "R4A1":
 			 value.page_title = "R4A1";
 			 value. chooseTableName = "tbl_master_R4A1timetable";
 			 value.content_page = "/timeTable/R_master.jsp";
 			break;
-
 		case "R4A2":
 			 value.page_title = "R4A2";
 			 value.chooseTableName = "tbl_master_R4A2timetable";
@@ -64,7 +62,6 @@ public class masterDBSwitch {
 			value.chooseTableName = "tbl_master_R3A1timetable";
 			value.content_page = "/timeTable/R_master.jsp";
 			break;
-
 		case "R3A2":
 			value.page_title = "R3A2";
 			value.chooseTableName = "tbl_master_R3A2timetable";
@@ -120,7 +117,6 @@ public class masterDBSwitch {
 			value.chooseTableName = "tbl_master_R1A1timetable";
 			value.content_page = "/timeTable/R_master.jsp";
 			break;
-
 		case "R1A2":
 			value.page_title = "R1A2";
 			value.chooseTableName = "tbl_master_R1A2timetable";
@@ -140,6 +136,183 @@ public class masterDBSwitch {
 			value.page_title = "R1A5";
 			value.chooseTableName = "tbl_master_R1A5timetable";
 			value.content_page = "/timeTable/R_master.jsp";
+			break;
+
+		//●S3
+		case "S3A1":
+			value.page_title = "S3A1";
+			value.chooseTableName = "tbl_master_S3A1timetable";
+			value.content_page = "/timeTable/S_master.jsp";
+			break;
+		case "S3A2":
+			value.page_title = "S3A2";
+			value.chooseTableName = "tbl_master_S3A2timetable";
+			value.content_page = "/timeTable/S_master.jsp";
+			break;
+		case "S3G1":
+			value.page_title = "S3G1";
+			value.chooseTableName = "tbl_master_S3G1timetable";
+			value.content_page = "/timeTable/S_master.jsp";
+			break;
+		case "S3M1":
+			value.page_title = "S3M1";
+			value.chooseTableName = "tbl_master_S3M1timetable";
+			value.content_page = "/timeTable/S_master.jsp";
+			break;
+		case "S3M2":
+			value.page_title = "S3M2";
+			value.chooseTableName = "tbl_master_S3M2timetable";
+			value.content_page = "/timeTable/S_master.jsp";
+			break;
+
+		//●S2
+		case "S2A1":
+			value.page_title = "S2A1";
+			value.chooseTableName = "tbl_master_S2A1timetable";
+			value.content_page = "/timeTable/S_master.jsp";
+			break;
+		case "S2A2":
+			value.page_title = "S2A2";
+			value.chooseTableName = "tbl_master_S2A2timetable";
+			value.content_page = "/timeTable/S_master.jsp";
+			break;
+		case "S2A3":
+			value.page_title = "S2A3";
+			value.chooseTableName = "tbl_master_S2A3timetable";
+			value.content_page = "/timeTable/S_master.jsp";
+			break;
+		case "S2A4":
+			value.page_title = "S2A4";
+			value.chooseTableName = "tbl_master_S2A4timetable";
+			value.content_page = "/timeTable/S_master.jsp";
+			break;
+		case "S2G1":
+			value.page_title = "S2G1";
+			value.chooseTableName = "tbl_master_S2G1timetable";
+			value.content_page = "/timeTable/S_master.jsp";
+			break;
+		case "S2G2":
+			value.page_title = "S2G2";
+			value.chooseTableName = "tbl_master_S2G2timetable";
+			value.content_page = "/timeTable/S_master.jsp";
+			break;
+		case "S2G3":
+			value.page_title = "S2G3";
+			value.chooseTableName = "tbl_master_S2G3timetable";
+			value.content_page = "/timeTable/S_master.jsp";
+			break;
+		case "S2M1":
+			value.page_title = "S2M1";
+			value.chooseTableName = "tbl_master_S2M1timetable";
+			value.content_page = "/timeTable/S_master.jsp";
+			break;
+		case "S2M2":
+			value.page_title = "S2M2";
+			value.chooseTableName = "tbl_master_S2M2timetable";
+			value.content_page = "/timeTable/S_master.jsp";
+			break;
+
+		//●S1
+		case "S1A1":
+			value.page_title = "S1A1";
+			value.chooseTableName = "tbl_master_S1A1timetable";
+			value.content_page = "/timeTable/S_master.jsp";
+			break;
+		case "S1A2":
+			value.page_title = "S1A2";
+			value.chooseTableName = "tbl_master_S1A2timetable";
+			value.content_page = "/timeTable/S_master.jsp";
+			break;
+		case "S1A3":
+			value.page_title = "S1A3";
+			value.chooseTableName = "tbl_master_S1A3timetable";
+			value.content_page = "/timeTable/S_master.jsp";
+			break;
+		case "S1A4":
+			value.page_title = "S1A4";
+			value.chooseTableName = "tbl_master_S1A4timetable";
+			value.content_page = "/timeTable/S_master.jsp";
+			break;
+		case "S1G1":
+			value.page_title = "S1G1";
+			value.chooseTableName = "tbl_master_S1G1timetable";
+			value.content_page = "/timeTable/S_master.jsp";
+			break;
+		case "S1G2":
+			value.page_title = "S1G2";
+			value.chooseTableName = "tbl_master_S1G2timetable";
+			value.content_page = "/timeTable/S_master.jsp";
+			break;
+		case "S1G3":
+			value.page_title = "S1G3";
+			value.chooseTableName = "tbl_master_S1G3timetable";
+			value.content_page = "/timeTable/S_master.jsp";
+			break;
+		case "S1M1":
+			value.page_title = "S1M1";
+			value.chooseTableName = "tbl_master_S1M1timetable";
+			value.content_page = "/timeTable/S_master.jsp";
+			break;
+		case "S1M2":
+			value.page_title = "S1M2";
+			value.chooseTableName = "tbl_master_S1M2timetable";
+			value.content_page = "/timeTable/S_master.jsp";
+			break;
+
+		//●J2
+		case "J2A1":
+			value.page_title = "J2A1";
+			value.chooseTableName = "tbl_master_J2A1timetable";
+			value.content_page = "/timeTable/J_master.jsp";
+			break;
+		case "J2A2":
+			value.page_title = "J2A2";
+			value.chooseTableName = "tbl_master_J2A2timetable";
+			value.content_page = "/timeTable/J_master.jsp";
+			break;
+		case "J2M1":
+			value.page_title = "J2M1";
+			value.chooseTableName = "tbl_master_J2M1timetable";
+			value.content_page = "/timeTable/J_master.jsp";
+			break;
+		case "J2M2":
+			value.page_title = "J2M2";
+			value.chooseTableName = "tbl_master_J2M2timetable";
+			value.content_page = "/timeTable/J_master.jsp";
+			break;
+
+		//●J1
+		case "J1A1":
+			value.page_title = "J1A1";
+			value.chooseTableName = "tbl_master_J1A1timetable";
+			value.content_page = "/timeTable/J_master.jsp";
+			break;
+		case "J1A2":
+			value.page_title = "J1A2";
+			value.chooseTableName = "tbl_master_J1A2timetable";
+			value.content_page = "/timeTable/J_master.jsp";
+			break;
+		case "J1M1":
+			value.page_title = "J1M1";
+			value.chooseTableName = "tbl_master_J1M1timetable";
+			value.content_page = "/timeTable/J_master.jsp";
+			break;
+		case "J1M2":
+			value.page_title = "J1M2";
+			value.chooseTableName = "tbl_master_J1M2timetable";
+			value.content_page = "/timeTable/J_master.jsp";
+			break;
+
+		//A1
+		case "A1A1":
+			value.page_title = "A1A1";
+			value.chooseTableName = "tbl_master_A1A1timetable";
+			value.content_page = "/timeTable/A_master.jsp";
+			break;
+		case "A1A2":
+			value.page_title = "A1A2";
+			value.chooseTableName = "tbl_master_A1A2timetable";
+			value.content_page = "/timeTable/A_master.jsp";
 			break;
 
 		case "event":
@@ -273,6 +446,184 @@ public class masterDBSwitch {
 			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
 			value.chooseTableName = "tbl_temp_R1A5timetable";
 			break;
+
+		//S3
+		case "S3A1":
+			value.chooseClassID = "S3A1";
+			value.content_page = "/temp_timetable/temp_Stable_regist.jsp";
+			value.chooseTableName = "tbl_temp_S3A1timetable";
+			break;
+		case "S3A2":
+			value.chooseClassID = "S3A2";
+			value.content_page = "/temp_timetable/temp_Stable_regist.jsp";
+			value.chooseTableName = "tbl_temp_S3A2timetable";
+			break;
+		case "S3G1":
+			value.chooseClassID = "S3G1";
+			value.content_page = "/temp_timetable/temp_Stable_regist.jsp";
+			value.chooseTableName = "tbl_temp_S3G1timetable";
+			break;
+		case "S3M1":
+			value.chooseClassID = "S3M1";
+			value.content_page = "/temp_timetable/temp_Stable_regist.jsp";
+			value.chooseTableName = "tbl_temp_S3M1timetable";
+			break;
+		case "S3M2":
+			value.chooseClassID = "S3M2";
+			value.content_page = "/temp_timetable/temp_Stable_regist.jsp";
+			value.chooseTableName = "tbl_temp_S3M2timetable";
+			break;
+
+		//●S2
+		case "S2A1":
+			value.chooseClassID = "S2A1";
+			value.content_page = "/temp_timetable/temp_Stable_regist.jsp";
+			value.chooseTableName = "tbl_temp_S2A1timetable";
+			break;
+		case "S2A2":
+			value.chooseClassID = "S2A2";
+			value.content_page = "/temp_timetable/temp_Stable_regist.jsp";
+			value.chooseTableName = "tbl_temp_S2A2timetable";
+			break;
+		case "S2A3":
+			value.chooseClassID = "S2A3";
+			value.content_page = "/temp_timetable/temp_Stable_regist.jsp";
+			value.chooseTableName = "tbl_temp_S2A3timetable";
+			break;
+		case "S2A4":
+			value.chooseClassID = "S2A4";
+			value.content_page = "/temp_timetable/temp_Stable_regist.jsp";
+			value.chooseTableName = "tbl_temp_S2A4timetable";
+			break;
+		case "S2G1":
+			value.chooseClassID = "S2G1";
+			value.content_page = "/temp_timetable/temp_Stable_regist.jsp";
+			value.chooseTableName = "tbl_temp_S2G1timetable";
+			break;
+		case "S2G2":
+			value.chooseClassID = "S2G2";
+			value.content_page = "/temp_timetable/temp_Stable_regist.jsp";
+			value.chooseTableName = "tbl_temp_S2G2timetable";
+			break;
+		case "S2G3":
+			value.chooseClassID = "S2G3";
+			value.content_page = "/temp_timetable/temp_Stable_regist.jsp";
+			value.chooseTableName = "tbl_temp_S2G3timetable";
+			break;
+		case "S2M1":
+			value.chooseClassID = "S2M1";
+			value.content_page = "/temp_timetable/temp_Stable_regist.jsp";
+			value.chooseTableName = "tbl_temp_S2M1timetable";
+			break;
+		case "S2M2":
+			value.chooseClassID = "S2M2";
+			value.content_page = "/temp_timetable/temp_Stable_regist.jsp";
+			value.chooseTableName = "tbl_temp_S2M2timetable";
+			break;
+
+		//S1
+		case "S1A1":
+			value.chooseClassID = "S1A1";
+			value.content_page = "/temp_timetable/temp_Stable_regist.jsp";
+			value.chooseTableName = "tbl_temp_S1A1timetable";
+			break;
+		case "S1A2":
+			value.chooseClassID = "S1A2";
+			value.content_page = "/temp_timetable/temp_Stable_regist.jsp";
+			value.chooseTableName = "tbl_temp_S1A2timetable";
+			break;
+		case "S1A3":
+			value.chooseClassID = "S1A3";
+			value.content_page = "/temp_timetable/temp_Stable_regist.jsp";
+			value.chooseTableName = "tbl_temp_S1A3timetable";
+			break;
+		case "S1A4":
+			value.chooseClassID = "S1A4";
+			value.content_page = "/temp_timetable/temp_Stable_regist.jsp";
+			value.chooseTableName = "tbl_temp_S1A4timetable";
+			break;
+		case "S1G1":
+			value.chooseClassID = "S1G1";
+			value.content_page = "/temp_timetable/temp_Stable_regist.jsp";
+			value.chooseTableName = "tbl_temp_S1G1timetable";
+			break;
+		case "S1G2":
+			value.chooseClassID = "S1G2";
+			value.content_page = "/temp_timetable/temp_Stable_regist.jsp";
+			value.chooseTableName = "tbl_temp_S1G2timetable";
+			break;
+		case "S1G3":
+			value.chooseClassID = "S1G3";
+			value.content_page = "/temp_timetable/temp_Stable_regist.jsp";
+			value.chooseTableName = "tbl_temp_S1G3timetable";
+			break;
+		case "S1M1":
+			value.chooseClassID = "S1M1";
+			value.content_page = "/temp_timetable/temp_Stable_regist.jsp";
+			value.chooseTableName = "tbl_temp_S1M1timetable";
+			break;
+		case "S1M2":
+			value.chooseClassID = "S1M2";
+			value.content_page = "/temp_timetable/temp_Stable_regist.jsp";
+			value.chooseTableName = "tbl_temp_S1M2timetable";
+			break;
+
+		//J2
+		case "J2A1":
+			value.chooseClassID = "J2A1";
+			value.content_page = "/temp_timetable/temp_Jtable_regist.jsp";
+			value.chooseTableName = "tbl_temp_J2A1timetable";
+			break;
+		case "J2A2":
+			value.chooseClassID = "J2A2";
+			value.content_page = "/temp_timetable/temp_Jtable_regist.jsp";
+			value.chooseTableName = "tbl_temp_J2A2timetable";
+			break;
+		case "J2M1":
+			value.chooseClassID = "J2M1";
+			value.content_page = "/temp_timetable/temp_Jtable_regist.jsp";
+			value.chooseTableName = "tbl_temp_J2M1timetable";
+			break;
+		case "J2M2":
+			value.chooseClassID = "J2M2";
+			value.content_page = "/temp_timetable/temp_Jtable_regist.jsp";
+			value.chooseTableName = "tbl_temp_J2M2timetable";
+			break;
+
+		//J1
+		case "J1A1":
+			value.chooseClassID = "J1A1";
+			value.content_page = "/temp_timetable/temp_Jtable_regist.jsp";
+			value.chooseTableName = "tbl_temp_J1A1timetable";
+			break;
+		case "J1A2":
+			value.chooseClassID = "J1A2";
+			value.content_page = "/temp_timetable/temp_Jtable_regist.jsp";
+			value.chooseTableName = "tbl_temp_J1A2timetable";
+			break;
+		case "J1M1":
+			value.chooseClassID = "J1M1";
+			value.content_page = "/temp_timetable/temp_Jtable_regist.jsp";
+			value.chooseTableName = "tbl_temp_J1M1timetable";
+			break;
+		case "J1M2":
+			value.chooseClassID = "J1M2";
+			value.content_page = "/temp_timetable/temp_Jtable_regist.jsp";
+			value.chooseTableName = "tbl_temp_J1M2timetable";
+			break;
+
+		//A1
+		case "A1A1":
+			value.chooseClassID = "A1A1";
+			value.content_page = "/temp_timetable/temp_Atable_regist.jsp";
+			value.chooseTableName = "tbl_temp_A1A1timetable";
+			break;
+		case "A1A2":
+			value.chooseClassID = "A1A2";
+			value.content_page = "/temp_timetable/temp_Atable_regist.jsp";
+			value.chooseTableName = "tbl_temp_A1A2timetable";
+			break;
+
 		}
 		return value;
 	}
