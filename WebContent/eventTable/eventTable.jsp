@@ -19,8 +19,6 @@
 <td class="classname" data-name="${rs.classID}">${rs.className}</td>
 <td>
 <div style="display:inline-flex">
-<button type="button" class="btn btn-success edit_class "name="edit_class" ><i class="fa fa-pencil-square-o fa-2x"></i></button>
-
 </div>
 </td>
 
