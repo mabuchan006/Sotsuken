@@ -80,7 +80,7 @@
 		<div class="drag-target">
 			<ul class="panel">
 				<c:forEach var="subject" items="${infoSubjectList }">
-					<li class="panel-body select0 subject">${subject.subjectID}:${subject.subjectName}</li>
+					<li class="panel-body select0 subject">${subject.subjectID} ${subject.subjectName}</li>
 				</c:forEach>
 			</ul>
 		</div>

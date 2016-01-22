@@ -127,11 +127,11 @@ public class masterDBManage extends DBAccess {
 
 	public void masterUpdate(String masterTableName,String tempTableName) throws Exception{
 
-		masterUpDate = String.format("REPLACE INTO "+ masterTableName +"(period, subjectName, date, classID, roomName, teacherName, bringThings) "
+		masterUpDate = String.format("INSERT INTO "+ masterTableName +" (period, subjectName, date, classID, roomName, teacherName, bringThings) "
 			+ "SELECT temp.period, sub.subjectName, temp.date, temp.classID, temp.roomName, temp.teacherName, sub.bringThings "
-			+ "FROM"+ tempTableName +" temp "
+			+ "FROM "+ tempTableName +" temp "
 			+ "INNER JOIN tbl_subject sub on sub.subjectID = temp.subjectID "
-			+ "ORDER BY date,period");
+			+ "ORDER BY temp.date,temp.period");
 
 		connect();
 		createStstement();

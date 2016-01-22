@@ -281,6 +281,7 @@ public class temp_tableControl extends HttpServlet {
 				System.out.print("マスタアップ完了");
 			} catch (Exception e) {
 				// TODO 自動生成された catch ブロック
+				System.out.print("マスタアップ失敗");
 				e.printStackTrace();
 			}
 		}
@@ -313,12 +314,14 @@ public class temp_tableControl extends HttpServlet {
 	//日付加算用メソッド
 	private String dateAdd(String date){
 		Calendar calendar = Calendar.getInstance();
-		calendar.set(Integer.parseInt(date.substring(0, 4)),Integer.parseInt(date.substring(5, 7)),Integer.parseInt(date.substring(8)));
+		 calendar.set(Integer.parseInt(date.substring(0, 4)),Integer.parseInt(date.substring(5, 7))-1,Integer.parseInt(date.substring(8,10)));
 		calendar.add(Calendar.DAY_OF_MONTH, 1);
-		 String year = String.valueOf(calendar.get(Calendar.YEAR));
-		 String month = String.format("%02d", calendar.get(Calendar.MONTH));
+		System.out.println(calendar.getActualMaximum(Calendar.DATE));
+		String year = String.valueOf(calendar.get(Calendar.YEAR));
+		 String month = String.format("%02d", calendar.get(Calendar.MONTH)+1);
 		 String day =String.format("%02d", calendar.get(Calendar.DATE));
-		 date = year+"-"+ month +"-"+ day;
+		date = year+"-"+ month +"-"+ day;
+		System.out.println(date);
 		return date;
 
 	}
