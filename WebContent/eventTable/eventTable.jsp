@@ -9,11 +9,11 @@
 <table class="table ">
 <thead>
 <tr class="info wide">
-<td colspan="3">イベント一覧 </td></tr>
+<td colspan="3"><h4>年間イベント一覧</h4> </td></tr>
 </thead>
 <tbody>
 <!-- イベント情報取得 -->
-<c:forEach var="rs" items="${classList }">
+<c:forEach var="rs" items="${eventList }">
 <tr class="select">
 <td class="classid">${rs.classID}</td>
 <td class="classname" data-name="${rs.classID}">${rs.className}</td>

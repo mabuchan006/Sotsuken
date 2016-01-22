@@ -35,7 +35,7 @@ public class EventViewControl extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		String content_page= "/eventeTable/eventTable.jsp";
+		String content_page= "/eventTable/eventTable.jsp";
 		String page_title= "EventTable";
 		getIncludeFile(request);
 		eventDBManage edm = new eventDBManage();
