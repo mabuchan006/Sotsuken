@@ -17,16 +17,3 @@
 <p>${tchinf.teacherName}さん、ようこそ
 	<a href="/login/loginControl?state=logout">ログアウト</a>
 </p>
-
-<%--
-
-<c:if test=  "${!empty Msg }">
-
-<div class="alert alert-success alert-dismissible col-md-6 col-md-offset-3" role="alert">
-	<button type="button" class="close" data-dismiss="alert" aria-label="閉じる"><span aria-hidden="true">×</span></button>
-	<strong>success:</strong>${logout_Msg }
-</div>
-
-</c:if>
-
- --%>
