@@ -119,7 +119,7 @@
 				<div class="row">
 					<div class="col-md-6" style="cursor: pointer">
 						<div class="menu-item color responsive">
-							<a href="../Sotsuken/publicView?page=event" data-toggle="modal">
+							<a href="../Sotsuken/eventView" data-toggle="modal">
 								<i class="fa fa-file-text"></i>
 								<p>event</p>
 							</a>
