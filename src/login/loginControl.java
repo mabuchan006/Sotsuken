@@ -24,18 +24,17 @@ public class loginControl extends HttpServlet {
         super();
     }
 
-    //doGet(クライアントからデータ要求がある場合に呼び出すメソッド)
-    //クライアントに対して要求された内容を出力
+    //GET受信
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		String loginPath = "";//変更予定のため未記述
-		String logoutPath = "";//変更予定のため未記述
+		String loginPath = "";	//ログインパス
+		String logoutPath = "";//ログアウトパス
 
 		//ログアウト処理
 		if( request.getParameter("state") != null &&
 				request.getParameter("state").equals("logout") ) {
 
-			//セッション情報の取得
+			//セッション準備
 			if( session == null ) {
 				session = request.getSession(true);
 			}//if
@@ -46,7 +45,10 @@ public class loginControl extends HttpServlet {
 			//JSPに渡す情報がないのでsendRedirectでログアウト
 			response.sendRedirect(logoutPath);
 
+			//インスタンス化
 			loginDBManage Ldb = new loginDBManage();
+
+			//パラメータ追加
 			request.setAttribute( "logout_Msg" , Ldb.getMsg() );
 
 			return;
@@ -56,25 +58,25 @@ public class loginControl extends HttpServlet {
 		response.sendRedirect(loginPath);
 	}//doGet
 
-	//ログイン処理
-	//doPost(クライアントからデータが送られてくる場合に呼び出し)
-	//クライアントから送られてきた情報を取得するような処理
+	//POST受信
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		//パス初期値
-		String path="/Sotsuken/manage/manage_top.jsp";//変更予定のため未記述
-		String errPath="/Sotsuken/top.jsp";//変更予定のため未記述
+		String path="/Sotsuken/manage/manage_top.jsp";
+		String errPath="/Sotsuken/top.jsp";
 
-		//セッション情報取得
+		//セッション準備
 		if(session == null){
 			session = request.getSession( true );
 		}
 
+		//インスタンス化
 		teacherInfo tchInf = new teacherInfo();
 
-		//ユーザーが入力したIDとPASSWORDをteacherInfoで取得
-		tchInf.setTeacherID(Integer.parseInt( request.getParameter( "teacherID" ))  );
+		//入力したIDを取得
+		tchInf.setTeacherID( Integer.parseInt( request.getParameter( "teacherID" ) ) );
+		//入力したパスワードを取得
 		tchInf.setPassword( request.getParameter( "password" ) );
 
 		//セッション情報で振り分け
