@@ -145,16 +145,16 @@ toastSelect("success","${Msg }")</script>
 </thead>
 <tbody>
 <!-- 科目情報取得 -->
-<c:forEach var="rs" items="${subjectMap }">
+<c:forEach var="rs" items="${subjectList }">
 <tr class="select">
 <td>
 <ol class="eventpost">
 <li class="event_li" class=" col-md-12">
-<span class="subjectname" data-name="${rs.value.infosubject.subjectList[0]}">${rs.value.subjectName}</span>
+<span class="subjectname" data-name="${rs.subjectID}">${rs.subjectName}</span>
 </li>
 
 <div class="col-md-12">
-<c:forEach var="classID" items="${rs.value.infosubject.classList}">
+<c:forEach var="classID" items="${rs.classList}">
 <li class="event_li">
 <span class="period label label-pill label-default">
 ${classID }
@@ -165,7 +165,7 @@ ${classID }
 
 
 </td>
-<td class="bringthings" data-name="${rs.value.infosubject.subjectList[0]}">${rs.value.bringThings}</td>
+<td class="bringthings" data-name="${rs.subjectID}">${rs.bringThings}</td>
 <td>
 <div style="display:inline-flex">
 <button type="button" class="btn btn-success edit_subject "name="edit_subject" ><i class="fa fa-pencil-square-o fa-2x"></i></button>
@@ -173,8 +173,8 @@ ${classID }
 <!-- 削除用フォーム -->
 <form action="/Sotsuken/ManageUpdate" method="post">
 <input type="hidden" name="page" value="subject_manage" />
-<input type="hidden" name="subjectID" value="${rs.value.infosubject.subjectList[0]}" />
-<input type="hidden" name="subjectName" value="${rs.value.subjectName }" />
+<input type="hidden" name="subjectID" value="${rs.subjectID}" />
+<input type="hidden" name="subjectName" value="${rs.subjectName }" />
 <button type="submit" class="btn btn-danger"name="delete_subject" ><i class="fa fa-trash-o fa-2x"></i></button>
 </form> <!-- 削除 -->
 </div>

@@ -10,7 +10,7 @@ public class eventInfo implements Serializable{
 		private int eventID;
 		private String eventName;
 		private int period;
-		private List<String> date=new ArrayList<String>();;
+		private List<String> date=new ArrayList<String>();
 		private String classID;
 		private String guestTeacher;
 		private String notice;

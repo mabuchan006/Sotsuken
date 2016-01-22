@@ -21,10 +21,11 @@ public class subjectDBManage extends DBAccess {
 	private String selectAll;// 対象学科全部
 	private String selectTID;// 講師参照制約用
 	private String updateSql;//持ち物情報更新用
-	private String selectInfoSql;
+	private String replaseSql;
+	private String selectInsert;
+	private String selectInfo;
 	// *******Msg*********
 	private String msg;
-
 
 	public String getMsg() {
 		return msg;
@@ -41,29 +42,28 @@ public class subjectDBManage extends DBAccess {
 	public subjectDBManage() {
 		super(DRIVER_NAME);// DBAccessに接続
 		// ID,NAME、持ち物、表示フラグを全件取得sql
-		selectSql = String.format("select subjectID,subjectName,bringThings,showFlag, from tbl_subject");
+		selectSql = String.format("select subjectID,subjectName,bringThings,showFlag from tbl_subject");
 		//class情報と関連付けた科目情報sql
-		selectInfoSql = String.format("select s.subjectID as subjectID,subjectName,bringThings,showFlag,"
-				+ "i.classID as classID"
-				+ " from"
-				+ " tbl_subject s, tbl_infosubject i "
-				+ "where s.subjectID = i.subjectID");
 		// 参照制約用
 		selectTID = String.format("select subjectID from tbl_subject where subjectName = ?");
 		// selectbox表示用
 		selectBox = String.format("select classID from tbl_class order by classID");
-		// 科目IDから削除からsql
-		deleteSql = String.format("delete from tbl_subject where subjectID = ?");
-		// 科目IDから削除からsql
-		deleteClass = String.format("delete from tbl_infosubject where subjectID = ?");
 		// ALL処理用
 		selectAll = String.format("select classID from tbl_class where classID LIKE ?");
 		// 科目情報登録sql
-		insertSql = String.format(" replace into tbl_subject " + "(subjectName,bringThings,showFlag) values (?,?,?)");
+		selectInsert=String.format("select subjectID from tbl_subject where subjectName = ?");
+		selectInfo=String.format("select classID from tbl_infoSubject where subjectID = ? ");
+		insertSql = String.format(" insert into tbl_subject " + "(subjectName,bringThings,showFlag) values (?,?,?)");
+		replaseSql = String.format(" update tbl_subject " +
+		" set subjectName=? , bringThings=? , showFlag = ? where subjectID = ?");
 		// クラス情報テーブル登録sql
 		ins_infoSubject = String.format("replace into tbl_infoSubject " + "(classID,subjectID) values (?,?)");
 		//持ち物更新sql
 		updateSql = String.format("update tbl_subject set bringThings = ? where subjectID = ?");
+		// 科目IDから削除からsql
+		deleteSql = String.format("delete from tbl_subject where subjectID = ?");
+		// 科目IDから削除からsql
+		deleteClass = String.format("delete from tbl_infosubject where subjectID = ?");
 	}
 
 	/*
@@ -73,12 +73,14 @@ public class subjectDBManage extends DBAccess {
 	 */
 	public List<subjectInfo> subjectDBSelect() throws Exception {
 		List<subjectInfo> subjectList = new ArrayList<subjectInfo>();
+		List<String> classList =new ArrayList<String>();
 		// DB接続
 		connect();
 		createStstement();
 		selectExe(selectSql);
 		// 要素取得用準備
 		ResultSet rs = getRsResult();
+		ResultSet classRs;
 		subjectInfo subjectinfo;
 
 		// 全件取得
@@ -87,11 +89,21 @@ public class subjectDBManage extends DBAccess {
 			subjectinfo = new subjectInfo(rs.getInt("subjectID"), rs.getString("subjectName"),
 					rs.getString("bringThings"), rs.getInt("showFlag"));
 
+			createStstement(selectInfo);
+
+			getPstmt().setInt(1, subjectinfo.getSubjectID());
+			selectExe();
+			// 要素取得用準備
+			classRs = getRsResult();
+			while(classRs.next()){
+				classList.add(classRs.getString("classID"));
+			}//while
+			subjectinfo.setClassList(classList);
 			// 科目要素を1件ずつリストに追加
 			if(!((subjectinfo.getSubjectName()).equals("　"))){
 			subjectList.add(subjectinfo);
 			}
-
+			classList=new ArrayList<String>();
 		}//while
 
 		disConnection();// 切断
@@ -100,44 +112,6 @@ public class subjectDBManage extends DBAccess {
 
 	}// select
 
-	/*
-	 * @param subjectinfo 科目情報
-	 *
-	 * @return subjectList 全科目情報
-	 */
-	public HashMap<String,subjectInfo> subjectInfoDBSelect() throws Exception {
-		// DB接続
-		connect();
-		createStstement();
-		selectExe(selectInfoSql);
-		// 要素取得用準備
-		HashMap<String, subjectInfo> subjectMap = new HashMap<String,subjectInfo>();
-		subjectInfo subjectinfo;
-		String classID="";
-		int SubjectID;
-		String SubjectName="";
-		ResultSet rs = getRsResult();
-
-		// 全件取得
-		while (rs.next()) {
-			//あらかじめキー値活用のため科目名取得
-			SubjectName=rs.getString("subjectName");
-			//科目情報をセット
-			subjectinfo = new subjectInfo(rs.getString("subjectName"),
-					rs.getString("bringThings"), rs.getInt("showFlag"));
-			// 科目要素を1件ずつリストに追加
-			subjectMap.put(SubjectName,subjectinfo);
-			//重複科目名がある場合は、classIDが追加される
-			classID=rs.getString("classID");
-			SubjectID=rs.getInt("subjectID");
-			subjectMap.get(SubjectName).setInfosubject(classID, SubjectID);
-
-		}//while
-
-		disConnection();// 切断
-		return subjectMap;
-
-	}// select
 
 	/*
 	 * @param 科目情報 subjectinfo
@@ -152,17 +126,32 @@ public class subjectDBManage extends DBAccess {
 		switch (state) {
 		// 登録
 		case INSERT:
+			//ALLの時にすべてのものがUPDATEされてしまう
 
 			// 入力情報に誤りがなければ
 			if (!((si.getSubjectName()).equals("") || classID.length() > 4)) {
 
-
-				// 通常科目情報登録
+				createStstement(selectInsert);
+				getPstmt().setString(1, si.getSubjectName());
+				selectExe();
+				// 要素取得用準備
+				ResultSet boolRs = getRsResult();
+				if(boolRs.next()){
+				// 重複科目情報登録
+				createStstement(replaseSql);
+				getPstmt().setInt(4, boolRs.getInt("subjectID"));
+				getPstmt().setString(1, si.getSubjectName());
+				getPstmt().setString(2, si.getBringThings()==""?"なし"
+						:si.getBringThings());
+				getPstmt().setInt(3, si.getShowFlag());
+				}else{
+				// 新規科目情報登録
 				createStstement(insertSql);
 				getPstmt().setString(1, si.getSubjectName());
-				getPstmt().setString(2, si.getBringThings());
+				getPstmt().setString(2, si.getBringThings()==""?"なし"
+						:si.getBringThings());
 				getPstmt().setInt(3, si.getShowFlag());
-
+				}//if
 				// クラス情報テーブルが外部キー参照するため一度実行
 				updateExe();// 実行
 

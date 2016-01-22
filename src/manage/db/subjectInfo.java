@@ -1,5 +1,7 @@
 package manage.db;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 //科目情報クラス
 public class subjectInfo implements Serializable {
@@ -8,7 +10,8 @@ public class subjectInfo implements Serializable {
 	private String subjectName;
 	private String bringThings;
 	private int showFlag;
-	private InfoSubjectBean infosubject=new InfoSubjectBean();
+	private List<String> classList=new ArrayList<String>();
+
 
 	public subjectInfo() {
 		super();
@@ -23,12 +26,7 @@ public class subjectInfo implements Serializable {
 		this.showFlag = showFlag;
 	}
 
-	public subjectInfo( String subjectName, String bringThings, int showFlag) {
-		super();
-		this.subjectName = subjectName;
-		this.bringThings = bringThings;
-		this.showFlag = showFlag;
-	}
+
 
 	public int getSubjectID() {
 		return subjectID;
@@ -62,14 +60,14 @@ public class subjectInfo implements Serializable {
 		this.showFlag = showFlag;
 	}
 
-	public InfoSubjectBean getInfosubject() {
-		return infosubject;
+	public List<String> getClassList() {
+		return classList;
 	}
 
-	public void setInfosubject(String classID,int SubjectID) {
-		this.infosubject.setClassList(classID);
-		this.infosubject.setSubjectList(SubjectID);
+	public void setClassList(List<String> classList) {
+		this.classList = classList;
 	}
+
 
 
 }
