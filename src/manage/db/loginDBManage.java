@@ -22,7 +22,7 @@ public class loginDBManage extends DBAccess{
 		//DBAccessに接続
 		super(DRIVER_NAME);
 		selectSql =
-				String.format( "select teacherName,teacherID,password from tbl_teacher where teacherName =? AND password=?");
+				String.format( "select teacherName,teacherID,password from tbl_teacher where teacherID =? AND password=?");
 	}//loginDBManage()
 
 	public teacherInfo userDBSearch(teacherInfo ti) throws Exception{
@@ -30,7 +30,7 @@ public class loginDBManage extends DBAccess{
 		connect();
 		//selectSqlをDBへ流す
 		createStstement(selectSql);
-		getPstmt().setString( 1 , ti.getTeacherName() );
+		getPstmt().setInt( 1 , ti.getTeacherID() );
 		getPstmt().setString( 2 , ti.getPassword() );
 		//PreparedStatement実行
 		selectExe();
@@ -44,7 +44,7 @@ System.out.print(ti.getTeacherName());
 					getRsResult().getString( "password" )
 					);
 		}//if
-
+System.out.println(teacher.getTeacherName());
 		//接続解除
 		disConnection();
 		return teacher;

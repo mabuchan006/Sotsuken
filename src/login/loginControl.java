@@ -74,7 +74,7 @@ public class loginControl extends HttpServlet {
 		teacherInfo tchInf = new teacherInfo();
 
 		//ユーザーが入力したIDとPASSWORDをteacherInfoで取得
-		tchInf.setTeacherName( request.getParameter( "teacherID" )  );
+		tchInf.setTeacherID(Integer.parseInt( request.getParameter( "teacherID" ))  );
 		tchInf.setPassword( request.getParameter( "password" ) );
 
 		//セッション情報で振り分け

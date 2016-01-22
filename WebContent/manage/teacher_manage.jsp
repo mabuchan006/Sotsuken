@@ -19,20 +19,25 @@ toastSelect("success","${Msg }")</script>
 
 <table class="col-md-9 col-md-offset-3" id="first_table">
 <tr>
+<td class="col-md-3">
+<!-- ID入力 -->
+<label for="teacher_id" class="labels">ID</label>
+<input type="number" size="20" class="form-control" id="teacherID" name="teacherID" autocomplete="off ">
+</td>
 
-<td class="col-md-4">
+<td class="col-md-3">
 <!-- 名前入力 -->
 <label for="teacherName" class="labels">名前</label>
 <input type="text" size="20" class="form-control" id="teacherName" name="teacherName" >
 </td>
 
-<td class="col-md-4">
+<td class="col-md-3">
 <!-- pass入力 -->
 <label for="password" class="labels">パスワード</label>
 <input type="password" size="20" class="form-control" name="password" >
 </td>
 
-<td class="col-md-4">
+<td class="col-md-3">
 <!-- 登録ボタン -->
 <label for="password" class="empty">________</label>
 <input type="submit" class="btn btn-primary" id="regist_btn" name="regist_teacher" value="登録"/>
@@ -54,7 +59,11 @@ toastSelect("success","${Msg }")</script>
 <!-- 講師情報取得 -->
 <c:forEach var="teacher" items="${teacherList}">
 <tr class="select">
-<td class = "teachername" data-name="${teacher.teacherID }">${ teacher.teacherName }</td>
+<td   class = "teachername" data-name="${teacher.teacherID }">
+${ teacher.teacherName }
+
+
+</td>
 <td>
 <div style="display:inline-flex">
 <button type="button" class="btn btn-success edit_teacher "name="edit_teacher" ><i class="fa fa-pencil-square-o fa-2x"></i></button>

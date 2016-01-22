@@ -36,7 +36,7 @@ public class teacherDBManage extends DBAccess{
 		//講師IDから削除からsql
 		deleteSql = String.format("delete  from tbl_teacher where teacherID = ?");
 		//講師情報登録sql
-		insertSql= String.format(" insert into tbl_teacher (teacherName, password) values ( ? , ? )");
+		insertSql= String.format(" insert into tbl_teacher (teacherName, password,teacherID) values ( ? , ?, ? )");
 
 		updateSql= String.format("update tbl_teacher set teacherName = ? where teacherID = ?");
 	}
@@ -84,6 +84,7 @@ public class teacherDBManage extends DBAccess{
 			createStstement(insertSql);
 			getPstmt().setString(1,ti.getTeacherName());
 			getPstmt().setString(2,ti.getPassword());
+			getPstmt().setInt(3,ti.getTeacherID());
 			updateExe();//実行
 			}
 			break;
@@ -111,7 +112,7 @@ public class teacherDBManage extends DBAccess{
 private String resultMsg(teacherInfo ti,String msg){
 
 	if (getIntResult() != 0) {
-		return String.format("%sを%sしました。", ti.getTeacherName(), msg);
+		return String.format("%sを%sしました。", ti.getTeacherID()+ti.getTeacherName(), msg);
 
 	}
 	return String.format("入力情報に誤りがあります");
