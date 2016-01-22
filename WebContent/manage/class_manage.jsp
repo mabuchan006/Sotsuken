@@ -10,8 +10,12 @@ toastSelect("success","${Msg }")</script>
 <script>toastSelect("error","${err_Msg }")</script>
 </c:if>
 
-<div class="row col-md-9">
+<div class="row col-md-9"id="top">
+<div class="col-md-1 col-md-offset-9 fix margin-top">
 
+		<a href="#top"><i class="fa fa-arrow-circle-up fa-4x i-color fix up-icon"></i></a>
+
+		</div>
 <!-- 登録処理 -->
 <form action="/Sotsuken/ManageUpdate" method="post">
 <input type="hidden"name="page" value="class_manage">
