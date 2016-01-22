@@ -656,3 +656,15 @@ margin0{
 .wide11{
 	width: 100px;
 }
+
+tab1{
+	z-index: 99;
+}
+
+.i-color{
+	color:#FB6648;
+}
+
+.up-icon{
+	margin-top:70px;
+}

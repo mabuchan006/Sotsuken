@@ -15,7 +15,7 @@ $(function(e) {
 
 <form action="/Sotsuken/divideUpdate" method="post">
 
-	<div class="container-fluid">
+	<div class="container-fluid" id="top">
 
 		<!-- タブ -->
 		<ul class="nav nav-pills nav-justified botom" id="weekTab">
@@ -234,7 +234,13 @@ $(function(e) {
 						</li>
 					</ul>
 			</div><!-- class="accordionJS" -->
+
 		</div><!-- class="col-md-1 fix margin-top" -->
+		<div class="col-md-1 col-md-offset-11 fix margin-top">
+
+		<a href="#top"><i class="fa fa-arrow-circle-up fa-4x i-color fix up-icon"></i></a>
+
+		</div>
 
 		<div class="container">
 			<div class="table  col-md-6 margin">
@@ -1417,6 +1423,8 @@ $(function(e) {
 				</table>
 
 			</div><!-- class="table col-md-6 " -->
+
+
 		</div><!-- class="container" -->
 
 </form>
