@@ -43,8 +43,9 @@ $(function login() {
 				$("#msg").css("color","red");
 			}
 
-		});//clkEvent
 
+		});//clkEvent
+		return false;
 	});//click()
 
 	//Enterキーを押したらclickに飛ぶ
