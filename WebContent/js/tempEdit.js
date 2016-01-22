@@ -21,7 +21,11 @@ function f_temp_drop(e) {
 			var ele = $(this).children("textarea").get(0);
 			dragEle = ui.draggable.get(0);
 			if (ele.classList.contains("subject") && dragEle.classList.contains("subject")) {
-				ele.value = ui.draggable.text();
+				var array = ui.draggable.text().split(":");
+				ele.value = array[1];
+				var eleInput = $(this).children("input:hidden").get(0);
+				eleInput.attr("name", "subID_" + array[0]);
+				eleInput.value = array[1];
 			} else
 			if (ele.classList.contains("teacher") && dragEle.classList.contains("teacher")) {
 				if (ele.value.length > 0) {

@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.TreeMap;
 
 import javax.servlet.http.HttpServletRequest;
@@ -151,21 +152,23 @@ public class divideDBManage extends DBAccess {
 
 		String temp = classIDList.get(0).substring(0,2);
 		List<String> tempList = new ArrayList<String>();
-		TreeMap<String, List<String>> classIDMap = new TreeMap<String, List<String>>();
-		//LinkedHashMap<String, List<String>> classIDMap = new LinkedHashMap<String, List<String>>();
+		Map<String, List<String>> tempMap = new TreeMap<String, List<String>>();
+		//Map<String, List<String>> classIDMap = new LinkedHashMap<String, List<String>>();
+		//Map<String, Map<String, List<String>>> map = new TreeMap<String, Map<String, List<String>>>();
 
 		for(String str : classIDList){
 			if(temp.equals(str.substring(0,2))){
 				tempList.add(str);
 			} else {
-				classIDMap.put(temp, tempList);
+				tempMap.put(temp, tempList);
 				temp = str.substring(0,2);
 				tempList = new ArrayList<String>();
 				tempList.add(str);
 			}
 		}
-		classIDMap.put(temp, tempList);
+		tempMap.put(temp, tempList);
 
-		request.setAttribute("classIDMap", classIDMap);
+
+		request.setAttribute("classIDMap", tempMap);
 	}//classIDDBSelect
 }// divideDBManage
