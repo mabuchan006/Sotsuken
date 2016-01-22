@@ -10,28 +10,28 @@
 
 <!-- タブ -->
 <ul class="nav nav-tabs">
-<!-- R4 -->
+<!-- J2 -->
 	<li role="presentation" class="dropdown">
 		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
 			J2 <span class="caret"></span>
 		</a>
 		<ul class="dropdown-menu" role="menu">
-			<li role="presentation"><a href="#">J2A1</a></li>
-			<li role="presentation"><a href="#">J2A2</a></li>
-			<li role="presentation"><a href="#">J2M1</a></li>
-			<li role="presentation"><a href="#">J2M2</a></li>
+			<li role="presentation"><a href="/Sotsuken/publicView?page=J2A1">J2A1</a></li>
+			<li role="presentation"><a href="/Sotsuken/publicView?page=J2A2">J2A2</a></li>
+			<li role="presentation"><a href="/Sotsuken/publicView?page=J2M1">J2M1</a></li>
+			<li role="presentation"><a href="/Sotsuken/publicView?page=J2M1">J2M2</a></li>
 		</ul>
 	</li>
-<!-- R3 -->
+<!-- J1 -->
 	<li role="presentation" class="dropdown">
 		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
 			J1 <span class="caret"></span>
 		</a>
 		<ul class="dropdown-menu" role="menu">
-			<li role="presentation"><a href="#">J1A1</a></li>
-			<li role="presentation"><a href="#">J1A2</a></li>
-			<li role="presentation"><a href="#">J1M1</a></li>
-			<li role="presentation"><a href="#">J1M2</a></li>
+			<li role="presentation"><a href="/Sotsuken/publicView?page=J1A1">J1A1</a></li>
+			<li role="presentation"><a href="/Sotsuken/publicView?page=J1A2">J1A2</a></li>
+			<li role="presentation"><a href="/Sotsuken/publicView?page=J1M1">J1M1</a></li>
+			<li role="presentation"><a href="/Sotsuken/publicView?page=J1M2">J1M2</a></li>
 		</ul>
 	</li>
 
