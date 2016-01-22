@@ -139,6 +139,12 @@ public class masterDBSwitch {
 			break;
 
 		//●S3
+		case "S":
+			 value.page_title = "S3A1";
+			 value. chooseTableName = "tbl_master_S3A1timetable";
+			 value.content_page = "/timeTable/S_master.jsp";
+			break;
+
 		case "S3A1":
 			value.page_title = "S3A1";
 			value.chooseTableName = "tbl_master_S3A1timetable";
@@ -260,6 +266,12 @@ public class masterDBSwitch {
 			break;
 
 		//●J2
+		case "J":
+			 value.page_title = "J2A1";
+			 value. chooseTableName = "tbl_master_J2A1timetable";
+			 value.content_page = "/timeTable/J_master.jsp";
+			break;
+
 		case "J2A1":
 			value.page_title = "J2A1";
 			value.chooseTableName = "tbl_master_J2A1timetable";
@@ -304,6 +316,12 @@ public class masterDBSwitch {
 			break;
 
 		//A1
+		case "A":
+			 value.page_title = "A1A1";
+			 value. chooseTableName = "tbl_master_A1A1timetable";
+			 value.content_page = "/timeTable/A_master.jsp";
+			break;
+
 		case "A1A1":
 			value.page_title = "A1A1";
 			value.chooseTableName = "tbl_master_A1A1timetable";
@@ -336,6 +354,7 @@ public class masterDBSwitch {
 			value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
 			value.chooseTableName = "tbl_temp_R4A1timetable";
 			break;
+
 		case "R4A1":
 			 value. chooseClassID = "R4A1";
 			 value.content_page = "/temp_timetable/temp_Rtable_regist.jsp";
@@ -448,6 +467,12 @@ public class masterDBSwitch {
 			break;
 
 		//S3
+		case "S":
+			value.chooseClassID= "S3A1";
+			value.content_page = "/temp_timetable/temp_Stable_regist.jsp";
+			value.chooseTableName = "tbl_temp_S3A1timetable";
+			break;
+
 		case "S3A1":
 			value.chooseClassID = "S3A1";
 			value.content_page = "/temp_timetable/temp_Stable_regist.jsp";
@@ -569,6 +594,12 @@ public class masterDBSwitch {
 			break;
 
 		//J2
+		case "J":
+			value.chooseClassID= "J2A1";
+			value.content_page = "/temp_timetable/temp_Jtable_regist.jsp";
+			value.chooseTableName = "tbl_temp_J2A1timetable";
+			break;
+
 		case "J2A1":
 			value.chooseClassID = "J2A1";
 			value.content_page = "/temp_timetable/temp_Jtable_regist.jsp";
@@ -613,6 +644,12 @@ public class masterDBSwitch {
 			break;
 
 		//A1
+		case "A":
+			value.chooseClassID= "A1A1";
+			value.content_page = "/temp_timetable/temp_Atable_regist.jsp";
+			value.chooseTableName = "tbl_temp_A1A1timetable";
+			break;
+
 		case "A1A1":
 			value.chooseClassID = "A1A1";
 			value.content_page = "/temp_timetable/temp_Atable_regist.jsp";
