@@ -4,7 +4,7 @@
 	 auth="Container"
 	 type="javax.sql.DataSource"
 	 driverClassName="com.mysql.jdbc.Driver"
-	 url="jdbc:mysql://localhost:3306/SOTSUKEN"
+	 url="jdbc:mysql://localhost:3306/sotsuken"
 	 username="ncs_sotsuken"
 	 password="TJVwVd9Q"
 	 maxActive="100"

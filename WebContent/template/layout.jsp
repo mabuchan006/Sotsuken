@@ -26,15 +26,6 @@
 
 </c:if>
 
-<script >
- 	$(function(e) {
- 		f_temp_drag();
- 		f_temp_drop(e);
- 		f_temp_formCheck();
- 		tempClickEvent();
- 	});
-</script>
-
 </head>
 
 <body>

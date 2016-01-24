@@ -6,7 +6,17 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
+<!--ドラッグアンドドロップ  -->
+<script >
+ 	$(function(e) {
+ 		f_temp_drag();
+ 		f_temp_drop(e);
+ 		f_temp_formCheck();
+ 		tempClickEvent();
+ 	});
+</script>
 
+<!-- トースト用 -->
 <c:if test= "${!empty Msg }">
 <script>
 toastSelect("success","${Msg}")</script>
