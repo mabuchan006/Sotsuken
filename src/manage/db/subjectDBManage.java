@@ -188,10 +188,9 @@ public class subjectDBManage extends DBAccess {
 
 			break;
 		case UODATE:
-
 			createStstement(updateSql);
-			getPstmt().setInt(1, si.getSubjectID());
-			getPstmt().setString(2, si.getBringThings());
+			getPstmt().setInt(2, si.getSubjectID());
+			getPstmt().setString(1, si.getBringThings());
 
 			updateExe();//実行
 

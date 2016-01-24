@@ -182,6 +182,19 @@ public class eventDBManage extends DBAccess{
 		}//if
 		disConnection();//切断
 	}//method
+	public void masterUpdate(String masterTableName,String tempTableName) throws Exception{
+
+		String masterUpDate = String.format("INSERT INTO "+ masterTableName +" (period, subjectName, date, classID, roomName, teacherName, bringThings) "
+			+ "SELECT temp.period, sub.subjectName, temp.date, temp.classID, temp.roomName, temp.teacherName, sub.bringThings "
+			+ "FROM "+ tempTableName +" temp "
+			+ "INNER JOIN tbl_subject sub on sub.subjectID = temp.subjectID "
+			+ "ORDER BY temp.date,temp.period");
+
+		connect();
+		createStstement();
+		updateExe(masterUpDate);
+		disConnection();
+	}
 
 private String resultMsg(eventInfo ei,String msg){
 

@@ -150,7 +150,7 @@ toastSelect("success","${Msg }")</script>
 <td>
 <ol class="eventpost">
 <li class="event_li" class=" col-md-12">
-<span class="subjectname" data-name="${rs.subjectID}">${rs.subjectName}</span>
+<span>${rs.subjectName}</span>
 </li>
 
 <div class="col-md-12">
