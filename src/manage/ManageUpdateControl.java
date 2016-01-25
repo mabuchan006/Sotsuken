@@ -216,6 +216,9 @@ public class ManageUpdateControl extends HttpServlet {
 
 		//学年ごとに対応したクラス情報
 		Map<String,List<String>> classMap = sdm.classDBSelect();
+		for(Map.Entry<String, List<String>> e : classMap.entrySet()) {
+		    System.out.println(e.getKey() + " : " + e.getValue());
+		}
 		//更新済み科目情報全件取得
 		List<subjectInfo> subjectList = new ArrayList<subjectInfo>();
 		subjectList = sdm.subjectDBSelect();

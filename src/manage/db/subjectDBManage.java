@@ -255,9 +255,12 @@ public class subjectDBManage extends DBAccess {
 		while (rs.next()) {
 
 			classID = rs.getString("classID");// クラスID取得
+			System.out.println(classID);
+			par_classList.add(classID.substring(2));
 
 			// クラスが切り替わっていたら
 			if (!(classID.substring(0, 2).equals(par_grade))) {
+				System.out.println(par_grade);
 				// ex ) classMap → R4: [A1,A2,A3]
 				// R3: [A1,A2]
 				classMap.put(par_grade, par_classList);
@@ -268,7 +271,6 @@ public class subjectDBManage extends DBAccess {
 
 			} // if
 				// クラス専攻情報追加
-			par_classList.add(classID.substring(2));
 
 		} // while
 

@@ -26,7 +26,7 @@ toastSelect("success","${Msg }")</script>
 <td class="col-md-3">
 <!-- ID入力 -->
 <label for="teacher_id" class="labels">ID</label>
-<input type="number" size="20" class="form-control" id="teacherID" name="teacherID" autocomplete="off ">
+<input type="number" size="20" class="form-control" id="teacherID" name="teacher_id" autocomplete="off ">
 </td>
 
 <td class="col-md-3">
@@ -63,6 +63,11 @@ toastSelect("success","${Msg }")</script>
 <!-- 講師情報取得 -->
 <c:forEach var="teacher" items="${teacherList}">
 <tr class="select">
+<td   class = "teacherid" data-name="${teacher.teacherID }">
+${ teacher.teacherID }
+
+
+</td>
 <td   class = "teachername" data-name="${teacher.teacherID }">
 ${ teacher.teacherName }
 
