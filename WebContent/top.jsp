@@ -155,9 +155,9 @@
 							<div class="modal-body">
 								<form action="/Sotsuken/loginControl" method="POST">
 									<div id="msg"></div>
-									<label>username:</label> <input type="text"
-										placeholder="ユーザーネーム" id="enterId" value="" name="teacherID"> <br>
-									<label>password:</label> <input type="password" placeholder="パスワード"
+									<label class="wide11">userID:</label> <input type="text"
+										placeholder="ユーザーID" id="enterId" value="" name="teacherID"> <br>
+									<label class="wide11">password:</label> <input type="password" placeholder="パスワード"
 										id="enterPw" value="" name="password"><br> <br> <input
 										type="submit" value="ログイン" id="login">
 								</form>
