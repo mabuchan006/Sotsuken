@@ -75,16 +75,16 @@
             <div class="container ">
                 <div class="row">
 
-
-                    <div class="col-md-6" style="cursor: pointer">
+   <div class="col-md-6" style="cursor: pointer">
 
                         <div class="menu-item back-color2">
-                            <a href="/Sotsuken/divideUpdate" data-toggle="modal">
-                                <i class="fa fa-building-o"></i>
-                                <p>コマ割り</p>
+                            <a href="/Sotsuken/ManageUpdate?page=class_manage" data-toggle="modal">
+                                <i class="fa fa-mortar-board"></i>
+                                <p>クラス管理</p>
                             </a>
                         </div>
                         </div>
+
 
                          <div class="col-md-6" style="cursor: pointer">
 
@@ -114,12 +114,12 @@
                         </div>
                         </div>
 
-                        <div class="col-md-6" style="cursor: pointer">
+                      <div class="col-md-6" style="cursor: pointer">
 
                         <div class="menu-item back-color2">
-                            <a href="/Sotsuken/ManageUpdate?page=class_manage" data-toggle="modal">
-                                <i class="fa fa-mortar-board"></i>
-                                <p>クラス管理</p>
+                            <a href="/Sotsuken/divideUpdate" data-toggle="modal">
+                                <i class="fa fa-building-o"></i>
+                                <p>コマ割り</p>
                             </a>
                         </div>
                         </div>
