@@ -165,7 +165,10 @@ ${classID }
 
 
 </td>
-<td class="bringthings" data-name="${rs.subjectID}">${rs.bringThings}</td>
+<td class="bringthings" data-name="${rs.subjectID}"><ol class="eventpost">
+<li class="event_li" class=" col-md-12">
+<span>${rs.bringThings}</span>
+</li></ol></td>
 <td>
 <div style="display:inline-flex">
 <button type="button" class="btn btn-success edit_subject "name="edit_subject" ><i class="fa fa-pencil-square-o fa-2x"></i></button>

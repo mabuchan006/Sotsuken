@@ -2,8 +2,8 @@ package manage.db;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
+import java.util.TreeMap;
 
 import DB.DBAccess;
 /*
@@ -230,10 +230,10 @@ public class subjectDBManage extends DBAccess {
 	 *
 	 * @return classMap 分割したクラス情報
 	 */
-	public HashMap<String, List<String>> classDBSelect() throws Exception {
+	public TreeMap<String, List<String>> classDBSelect() throws Exception {
 
 		// 分割クラス格納
-		HashMap<String, List<String>> classMap = new HashMap<String, List<String>>();
+		TreeMap<String, List<String>> classMap = new TreeMap<String, List<String>>();
 		List<String> par_classList = new ArrayList<String>();// 分割したクラス格納
 		// DB接続
 		connect();
@@ -255,12 +255,11 @@ public class subjectDBManage extends DBAccess {
 		while (rs.next()) {
 
 			classID = rs.getString("classID");// クラスID取得
-			System.out.println(classID);
+
 			par_classList.add(classID.substring(2));
 
 			// クラスが切り替わっていたら
 			if (!(classID.substring(0, 2).equals(par_grade))) {
-				System.out.println(par_grade);
 				// ex ) classMap → R4: [A1,A2,A3]
 				// R3: [A1,A2]
 				classMap.put(par_grade, par_classList);
@@ -270,6 +269,8 @@ public class subjectDBManage extends DBAccess {
 				par_classList = new ArrayList<String>();
 
 			} // if
+			//最後にもう一回
+			classMap.put(par_grade, par_classList);
 				// クラス専攻情報追加
 
 		} // while

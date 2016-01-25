@@ -57,19 +57,42 @@ toastSelect("success","${Msg }")</script>
 <table class="table ">
 <thead>
 <tr class="info wide">
-<td colspan="3">講師一覧   ( ${cnt } 件)</td></tr>
+<td colspan="4">講師一覧   ( ${cnt } 件)</td></tr>
 </thead>
+
+
 <tbody>
 <!-- 講師情報取得 -->
 <c:forEach var="teacher" items="${teacherList}">
 <tr class="select">
-<td   class = "teacherid" data-name="${teacher.teacherID }">
-${ teacher.teacherID }
+<td>
+<c:if test="${!empty teacher.password }">
+
+<!--  pass変更ボタン -->
+<button type="button" class="btn btn-info "name="edit_pass" id="#team-modal" data-toggle="modal"
+						data-target="#myModal" style="cursor: pointer">
+								 <i class="fa fa-users fa-2x"></i>
+</button>
+
+</c:if>
+<c:if test="${empty teacher.password }">
+
+<button type="button" class="btn btn-active "name="edit_pass" id="#team-modal" data-toggle="modal"
+						data-target="#myModal2" style="cursor: pointer">
+								 <i class="fa fa-users fa-2x"></i>
+</button>
+</c:if>
 
 
 </td>
+
 <td   class = "teachername" data-name="${teacher.teacherID }">
+
 ${ teacher.teacherName }
+
+</td>
+<td   class = "teacherid" data-name="${teacher.teacherID }">
+${ teacher.teacherID }
 
 
 </td>
@@ -78,13 +101,7 @@ ${ teacher.teacherName }
 <button type="button" class="btn btn-success edit_teacher "name="edit_teacher" ><i class="fa fa-pencil-square-o fa-2x"></i></button>
 
 
-<!--  pass変更ボタン -->
-<button type="button" class="btn btn-info "name="edit_pass" id="#team-modal" data-toggle="modal"
-						data-target="#myModal" style="cursor: pointer">
-								 <i class="fa fa-users fa-2x"></i>
-</button>
-
-<!-- モーダルウィンドウの中身 -->
+<!-- モーダルウィンドウ管理者 -->
 				<div class="modal fade" id="myModal">
 					<div class="modal-dialog">
 						<div class="modal-content">
@@ -110,6 +127,40 @@ ${ teacher.teacherName }
 									<input type="password" placeholder="再入力してください" id="enterPw" value="" name="password">
 									<br><input type="submit" value="変更" id="new_pass">
 								</form>
+
+							</div>
+						<div class="modal-footer">
+					<button type="button" class="btn btn-primary"
+				data-dismiss="modal">閉じる</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- モーダルウィンドウ一般講師 -->
+				<div class="modal fade" id="myModal2">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header back-color">
+								<button type="button" class="close right" data-dismiss="modal"
+									aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								<h3 class="modal-title white fonts">管理者権限付与</h3>
+							</div>
+							<div class="modal-body black">
+								<form action="/Sotsuken/ManageUpdate" method="POST">
+
+									<div id="msg"></div>
+
+
+									<label class="black md">New Pass:</label>
+									<input type="password" placeholder="新しいパスワード" id="enterPw" value="" name="password">
+									<br>
+									<label class="black md">Re Type:</label>
+									<input type="password" placeholder="再入力してください" id="enterPw" value="" name="password">
+									<br><input type="submit" value="登録" id="regist_pass" name="regist_pass">
+								</form>
+
 							</div>
 						<div class="modal-footer">
 					<button type="button" class="btn btn-primary"

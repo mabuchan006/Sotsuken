@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -51,7 +52,7 @@ public class ManageUpdateControl extends HttpServlet {
 		//文字コードutf8
 		request.setCharacterEncoding("UTF-8");
 		//jspからのページ情報取得
-		String get_page = request.getParameter("page")==null?"subject_manage"
+		String get_page = request.getParameter("page")==null?"teacher_manage"
 				:request.getParameter("page");
 
 		//使用するcss,jsファイルの適用
@@ -215,10 +216,8 @@ public class ManageUpdateControl extends HttpServlet {
 		}//if
 
 		//学年ごとに対応したクラス情報
-		Map<String,List<String>> classMap = sdm.classDBSelect();
-		for(Map.Entry<String, List<String>> e : classMap.entrySet()) {
-		    System.out.println(e.getKey() + " : " + e.getValue());
-		}
+		TreeMap<String,List<String>> classMap = sdm.classDBSelect();
+
 		//更新済み科目情報全件取得
 		List<subjectInfo> subjectList = new ArrayList<subjectInfo>();
 		subjectList = sdm.subjectDBSelect();
