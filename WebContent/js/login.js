@@ -7,6 +7,10 @@ $(function login() {
 			var pw = $("#enterPw").val();
 			var id = $("#enterId").val();
 
+			//toDO
+			//・ID、パスワードが登録テーブルになかった場合のエラー表示(loginControlへ実装)
+			//・パスワード、IDを間違えてる状態でのページ遷移処理(loginControlへ実装)
+
 			//半角、全角スペース削除処理
 			function spcTrim ( id , pw ) {
 				var sId = id;
@@ -26,23 +30,19 @@ $(function login() {
 			}//spcTrim
 
 			//ID入力チェック
-			if ( id == "" || id.length(0)  ) {
+			if ( id === "" || id.length(0) ) {
 				$("#msg").html("IDを入力してください。" );
 				$("#msg").css("color","red");
-			}
+			} else if ( !isNaN( id ) ) {
+				$("#msg").html("IDを入力し直してください。" );
+				$("#msg").css("color","red");
+			}//ID_check else if
 
 			//パスワード入力チェック
-			if (  pw == "" || pw.length(0) ) {
+			if (  pw === "" || pw.length(0) ) {
 				$("#msg").html("パスワードを入力してください。");
 				$("#msg").css("color","red");
-			}
-
-			//IDへの文字列チェック
-			if ( isNaN( id ) == false ) {
-				$("#msg").html("IDに入力された値が正しくありません。もう一度入力してください。");
-				$("#msg").css("color","red");
-			}
-
+			}//pasword check if
 
 		});//clkEvent
 		return false;
