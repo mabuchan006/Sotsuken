@@ -63,7 +63,7 @@ public class subjectDBManage extends DBAccess {
 		// 科目IDから削除からsql
 		deleteSql = String.format("delete from tbl_subject where subjectID = ?");
 		// 科目IDから削除からsql
-		deleteClass = String.format("delete from tbl_infosubject where subjectID = ?");
+		deleteClass = String.format("delete from tbl_infoSubject where subjectID = ?");
 	}
 
 	/*
