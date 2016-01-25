@@ -393,9 +393,12 @@ font-family:Tahoma;
 
 .wideb{
 	width: 70px;
+	padding: 0;
 }
 
-
+.widet{
+	width: 80px;
+}
 
 
 

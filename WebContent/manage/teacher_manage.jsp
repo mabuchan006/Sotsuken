@@ -57,7 +57,10 @@ toastSelect("success","${Msg }")</script>
 <table class="table ">
 <thead>
 <tr class="info wide">
-<td colspan="4">講師一覧   ( ${cnt } 件)</td></tr>
+<td class="widet"></td>
+<td class="center">名前</td>
+<td class="center">ID</td>
+<td class="center">講師一覧   ( ${cnt } 件)</td></tr>
 </thead>
 
 
@@ -69,7 +72,7 @@ toastSelect("success","${Msg }")</script>
 <c:if test="${!empty teacher.password }">
 
 <!--  pass変更ボタン -->
-<button type="button" class="btn btn-info "name="edit_pass" id="#team-modal" data-toggle="modal"
+<button type="button" class="btn btn-info wideb"name="edit_pass" id="#team-modal" data-toggle="modal"
 						data-target="#myModal" style="cursor: pointer">
 								 <i class="fa fa-users fa-2x"></i>
 </button>
@@ -77,7 +80,7 @@ toastSelect("success","${Msg }")</script>
 </c:if>
 <c:if test="${empty teacher.password }">
 
-<button type="button" class="btn btn-active "name="edit_pass" id="#team-modal" data-toggle="modal"
+<button type="button" class="btn btn-active wideb"name="edit_pass" id="#team-modal" data-toggle="modal"
 						data-target="#myModal2" style="cursor: pointer">
 								 <i class="fa fa-users fa-2x"></i>
 </button>
