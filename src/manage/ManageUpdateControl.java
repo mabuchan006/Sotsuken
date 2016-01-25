@@ -95,7 +95,7 @@ public class ManageUpdateControl extends HttpServlet {
 
 		//ページデータセット
 		try {
-			request.setAttribute("line_header", "line_header");
+
 			request.setAttribute("content_page", content_page);
 			request.setAttribute("page_title", page_title);
 
@@ -315,6 +315,8 @@ public class ManageUpdateControl extends HttpServlet {
 				if(request.getParameter("delete_teacher") != null){
 					tdm.teacherDBUpdate(ti, DBAccess.DELETE, "削除");
 				}//if
+
+
 
 				//更新済み講師情報全件取得
 				List<teacherInfo> teacherList = tdm.teacherDBSelect();

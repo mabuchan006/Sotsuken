@@ -116,10 +116,10 @@ ${ teacher.teacherID }
 								<h3 class="modal-title white fonts">パスワード変更</h3>
 							</div>
 							<div class="modal-body black">
-								<form action="/Sotsuken/ManageUpdate" method="POST">
+								<form action="/Sotsuken/ManageEdit" method="POST">
 
 									<div id="msg"></div>
-
+									<input type="hidden" name="teacher_manage" />
 									<label class="black md">Old Pass:</label>
 									<input type="password"placeholder="現在のパスワード" id="old_pass" value="" name="old_pass"> <br>
 
@@ -128,7 +128,7 @@ ${ teacher.teacherID }
 									<br>
 									<label class="black md">Re Type:</label>
 									<input type="password" placeholder="再入力してください" id="enterPw" value="" name="password">
-									<br><input type="submit" value="変更" id="new_pass">
+									<br><input type="submit" value="変更" id="edit_pass">
 								</form>
 
 							</div>
@@ -151,11 +151,11 @@ ${ teacher.teacherID }
 								<h3 class="modal-title white fonts">管理者権限付与</h3>
 							</div>
 							<div class="modal-body black">
-								<form action="/Sotsuken/ManageUpdate" method="POST">
+								<form action="/Sotsuken/ManageEdit" method="POST">
 
 									<div id="msg"></div>
 
-
+									<input type="hidden" name="teacher_manage" />
 									<label class="black md">New Pass:</label>
 									<input type="password" placeholder="新しいパスワード" id="enterPw" value="" name="password">
 									<br>
