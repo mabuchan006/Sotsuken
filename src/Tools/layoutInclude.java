@@ -43,6 +43,7 @@ public class layoutInclude {
 		info.js.add("/Sotsuken/bootstrap/js/bootstrap-datepicker.js");
 		info.js.add("/Sotsuken/bootstrap/js/bootstrap-datepicker.ja.min.js");
 		info.js.add("/Sotsuken/js/tempEdit.js");
+		info.js.add("/Sotsuken/js/to-top.js");
 
 
 
