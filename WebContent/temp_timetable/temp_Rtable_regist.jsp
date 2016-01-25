@@ -102,7 +102,7 @@ toastSelect("success","${Msg}")</script>
 		<div class="drag-target">
 			<ul class="panel">
 				<c:forEach var="subject" items="${infoSubjectList }">
-					<li class="panel-body select0 subject"><fmt:formatNumber value="${subject.subjectID}" pattern="000" />${subject.subjectName}</li>
+					<li class="panel-body select0 subject"><fmt:formatNumber value="${subject.subjectID}" pattern="000" />:${subject.subjectName}</li>
 				</c:forEach>
 			</ul>
 		</div>
@@ -212,6 +212,7 @@ toastSelect("success","${Msg}")</script>
 								<textarea cols="5" rows="1"
 									style="overflow: auto; background-color: #d9edf7;" name="Su0_1"
 									class="txtFontSize2 subject" placeholder="教科入力欄">${regtiList1[0].subjectID}${regtiList1[0].subjectName }</textarea>
+									<input type="hidden">
 							</p></td>
 					</c:if>
 

@@ -668,3 +668,9 @@ tab1{
 .up-icon{
 	margin-top:70px;
 }
+
+#to-top {
+	right: 16px;
+	bottom: 16px;
+	display: none;
+}

@@ -68,14 +68,14 @@ public class divideUpdateControl extends HttpServlet {
 		Map<String, String[]> map = request.getParameterMap();
 		String ajaxWeek = request.getParameter("ajaxWeek");//name value ajax
 
-		System.out.println(map + ":" + ajaxWeek);
+		//System.out.println(map + ":" + ajaxWeek);
 
 		// コマ割りDB操作クラス取得
 		divideDBManage ddm = new divideDBManage();
 
 		try {
 			for (String key : map.keySet()) {
-				System.out.println(key + ":" + map.get(key)[0]);
+				//System.out.println(key + ":" + map.get(key)[0]);
 				if (key.equals("mon") || key.equals("tue") || key.equals("wed") || key.equals("thu")
 						|| key.equals("fri") || key.equals("ajaxWeek")) {
 					switch (key) {

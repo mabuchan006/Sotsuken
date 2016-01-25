@@ -39,148 +39,23 @@ $(function(e) {
 
 	<!-- ドラッグ&ドロップ -->
 	<div class="col-md-2 ">
-
-	<div class="col-md-1  fix col-md-offset-9 margin-top ">
-		<h1>class</h1>
-		<div id="drag-target">
-			<div class="accordionJS">
-				<c:forEach var="rs" items="${classIDMap}">
-					<h2 class="font">
-						<a draggable="false">${rs.key}</a>
-					</h2>
-					<ul class="font">
-					<c:forEach var="array" items="${rs.value }">
-						<li class="select0 size2">${array}</li>
+		<div class="col-md-1  fix col-md-offset-9 margin-top ">
+			<h1>class</h1>
+			<div id="drag-target">
+				<div class="accordionJS">
+					<c:forEach var="rs" items="${classIDMap}">
+						<h2 class="font">
+							<a draggable="false">${rs.key}</a>
+						</h2>
+						<ul class="font">
+						<c:forEach var="array" items="${rs.value }">
+							<li class="select0 size2">${array}</li>
+						</c:forEach>
+						</ul>
 					</c:forEach>
-					</ul>
-				</c:forEach>
-				<!--
-				<h2 class="font">
-					<a href="#" draggable="false">R1</a>
-				</h2>
-				<div>
-					<ul class="font">
-						<li class="select0 size2">R1A1</li>
-						<li class="select0 size2">R1A2</li>
-						<li class="select0 size2">R1A3</li>
-					</ul>
-				</div>
-				<h2 class="font">
-					<a href="#" draggable="false">R2</a>
-				</h2>
-				<div>
-					<ul class="font">
-						<li class="select0 size2">R2A1</li>
-						<li class="select0 size2">R2A2</li>
-						<li class="select0 size2">R2A3</li>
-						<li class="select0 size2">R2A4</li>
-						<li class="select0 size2">R2A5</li>
-					</ul>
-				</div>
-				<h2 class="font">
-					<a href="#" draggable="false">R3</a>
-				</h2>
-				<div>
-					<ul class="font">
-						<li class="select0 size2">R3A1</li>
-						<li class="select0 size2">R3A2</li>
-						<li class="select0 size2">R3A3</li>
-						<li class="select0 size2">R3A4</li>
-						<li class="select0 size2">R3A5</li>
-					</ul>
-				</div>
-				<h2 class="font">
-					<a href="#" draggable="false">R4</a>
-				</h2>
-				<div>
-					<ul class="font">
-						<li class="select0 size2">R4A1</li>
-						<li class="select0 size2">R4A2</li>
-						<li class="select0 size2">R4A3</li>
-						<li class="select0 size2">R4A4</li>
-						<li class="select0 size2">R4A5</li>
-					</ul>
-				</div>
-				<h2 class="font">
-					<a href="#" draggable="false">S1</a>
-				</h2>
-				<div>
-					<ul class="font">
-						<li class="select0 size2">S1A1</li>
-						<li class="select0 size2">S1A2</li>
-						<li class="select0 size2">S1A3</li>
-						<li class="select0 size2">S1A4</li>
-						<li class="select0 size2">S1G1</li>
-						<li class="select0 size2">S1G2</li>
-						<li class="select0 size2">S1G3</li>
-						<li class="select0 size2">S1M1</li>
-						<li class="select0 size2">S1M2</li>
-					</ul>
-				</div>
-				<h2 class="font">
-					<a href="#" draggable="false">S2</a>
-				</h2>
-				<div>
-					<ul class="font">
-						<li class="select0 size2">S2A1</li>
-						<li class="select0 size2">S2A2</li>
-						<li class="select0 size2">S2A3</li>
-						<li class="select0 size2">S2A4</li>
-						<li class="select0 size2">S2G1</li>
-						<li class="select0 size2">S2G2</li>
-						<li class="select0 size2">S2G3</li>
-						<li class="select0 size2">S2M1</li>
-						<li class="select0 size2">S2M2</li>
-					</ul>
-				</div>
-				<h2 class="font">
-					<a href="#" draggable="false">S3</a>
-				</h2>
-				<div>
-					<ul class="font">
-						<li class="select0 size2">S3A1</li>
-						<li class="select0 size2">S3A2</li>
-						<li class="select0 size2">S3G1</li>
-						<li class="select0 size2">S3G2</li>
-						<li class="select0 size2">S3G3</li>
-						<li class="select0 size2">S3M1</li>
-						<li class="select0 size2">S3M2</li>
-					</ul>
-				</div>
-				<h2 class="font">
-					<a href="#" draggable="false">J1</a>
-				</h2>
-				<div>
-					<ul class="font">
-						<li class="select0 size2">J1A1</li>
-						<li class="select0 size2">J1A2</li>
-						<li class="select0 size2">J1M1</li>
-						<li class="select0 size2">J1M2</li>
-					</ul>
-				</div>
-				<h2 class="font">
-					<a href="#" draggable="false">J2</a>
-				</h2>
-				<div>
-					<ul class="font">
-						<li class="select0 size2">J2A1</li>
-						<li class="select0 size2">J2A2</li>
-						<li class="select0 size2">J2M1</li>
-						<li class="select0 size2">J2M2</li>
-					</ul>
-				</div>
-				<h2 class="font">
-					<a href="#" draggable="false">A1</a>
-				</h2>
-				<div>
-					<ul class="font">
-						<li class="select0 size2">A1A1</li>
-						<li class="select0 size2">A1A2</li>
-					</ul>
-				</div> -->
-			</div><!-- class="accordionJS" -->
-		</div><!-- id="drag-target" -->
-	</div><!-- class="col-md-1 fix margin-top" -->
+				</div><!-- class="accordionJS" -->
+			</div><!-- id="drag-target" -->
+		</div><!-- class="col-md-1 fix margin-top" -->
 	</div>
 
 		<div class="col-md-1 col-md-offset-10 fix margin-top ">
@@ -238,7 +113,12 @@ $(function(e) {
 		</div><!-- class="col-md-1 fix margin-top" -->
 		<div class="col-md-1 col-md-offset-11 fix margin-top">
 
-		<a href="#top"><i class="fa fa-arrow-circle-up fa-4x i-color fix up-icon"></i></a>
+		<a href="#top" id="to-top"><i class="fa fa-arrow-circle-up fa-4x i-color fix up-icon"></i></a>
+		<script>
+			$(function(e){
+				$("#to-top").fadeIn("slow");
+			});
+		</script>
 
 		</div>
 
