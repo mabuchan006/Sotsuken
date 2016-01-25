@@ -114,11 +114,6 @@ $(function(e) {
 		<div class="col-md-1 col-md-offset-11 fix margin-top">
 
 		<a href="#top" id="to-top"><i class="fa fa-arrow-circle-up fa-4x i-color fix up-icon"></i></a>
-		<script>
-			$(function(e){
-				$("#to-top").fadeIn("slow");
-			});
-		</script>
 
 		</div>
 

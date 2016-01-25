@@ -1,3 +1,4 @@
-function to-top( e ){
+$(function(){
+	$(window).scroll
 	$("#to-top").fadeIn("slow");
-}
+});
