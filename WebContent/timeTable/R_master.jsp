@@ -6,71 +6,70 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 <script type="text/javascript">
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip();
-      countDate();
-    })
-  </script>
+	$(function() {
+		$('[data-toggle="tooltip"]').tooltip();
+		countDate();
+	})
+</script>
 <!-- 印刷時非表示 -->
 <div class="noprint">
 
 
-<!-- タブ -->
+	<!-- タブ -->
 
-<ul class="nav nav-tabs noprint" >
-	<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">R4
-			<b class="caret"></b>
-	</a>
-		<ul class="dropdown-menu">
-			<li><a href="/Sotsuken/publicView?page=R4A1">R4A1</a></li>
-			<li><a href="/Sotsuken/publicView?page=R4A2">R4A2</a></li>
-			<li><a href="/Sotsuken/publicView?page=R4A3">R4A3</a></li>
-			<li><a href="/Sotsuken/publicView?page=R4A4">R4A4</a></li>
-			<li><a href="/Sotsuken/publicView?page=R4A5">R4A5</a></li>
-		</ul></li>
-	<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">R3
-			<b class="caret"></b>
-	</a>
-		<ul class="dropdown-menu">
-			<li><a href="/Sotsuken/publicView?page=R3A1">R3A1</a></li>
-			<li><a href="/Sotsuken/publicView?page=R3A2">R3A2</a></li>
-			<li><a href="/Sotsuken/publicView?page=R3A3">R3A3</a></li>
-			<li><a href="/Sotsuken/publicView?page=R3A4">R3A4</a></li>
-			<li><a href="/Sotsuken/publicView?page=R3A5">R3A5</a></li>
-		</ul></li>
-	<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">R2
-			<b class="caret"></b>
-	</a>
-		<ul class="dropdown-menu">
-			<li><a href="/Sotsuken/publicView?page=R2A1">R2A1</a></li>
-			<li><a href="/Sotsuken/publicView?page=R2A2">R2A2</a></li>
-			<li><a href="/Sotsuken/publicView?page=R2A3">R2A3</a></li>
-			<li><a href="/Sotsuken/publicView?page=R2A4">R2A4</a></li>
-			<li><a href="/Sotsuken/publicView?page=R2A5">R2A5</a></li>
-		</ul></li>
-	<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">R1
-			<b class="caret"></b>
-	</a>
-		<ul class="dropdown-menu">
-			<li><a href="/Sotsuken/publicView?page=R1A1">R1A1</a></li>
-			<li><a href="/Sotsuken/publicView?page=R1A2">R1A2</a></li>
-			<li><a href="/Sotsuken/publicView?page=R1A3">R1A3</a></li>
-			<li><a href="/Sotsuken/publicView?page=R1A4">R1A4</a></li>
-			<li><a href="/Sotsuken/publicView?page=R1A5">R1A5</a></li>
-		</ul></li>
+	<ul class="nav nav-tabs noprint">
+		<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">R4
+				<b class="caret"></b>
+		</a>
+			<ul class="dropdown-menu">
+				<li><a href="/Sotsuken/publicView?page=R4A1">R4A1</a></li>
+				<li><a href="/Sotsuken/publicView?page=R4A2">R4A2</a></li>
+				<li><a href="/Sotsuken/publicView?page=R4A3">R4A3</a></li>
+				<li><a href="/Sotsuken/publicView?page=R4A4">R4A4</a></li>
+				<li><a href="/Sotsuken/publicView?page=R4A5">R4A5</a></li>
+			</ul></li>
+		<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">R3
+				<b class="caret"></b>
+		</a>
+			<ul class="dropdown-menu">
+				<li><a href="/Sotsuken/publicView?page=R3A1">R3A1</a></li>
+				<li><a href="/Sotsuken/publicView?page=R3A2">R3A2</a></li>
+				<li><a href="/Sotsuken/publicView?page=R3A3">R3A3</a></li>
+				<li><a href="/Sotsuken/publicView?page=R3A4">R3A4</a></li>
+				<li><a href="/Sotsuken/publicView?page=R3A5">R3A5</a></li>
+			</ul></li>
+		<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">R2
+				<b class="caret"></b>
+		</a>
+			<ul class="dropdown-menu">
+				<li><a href="/Sotsuken/publicView?page=R2A1">R2A1</a></li>
+				<li><a href="/Sotsuken/publicView?page=R2A2">R2A2</a></li>
+				<li><a href="/Sotsuken/publicView?page=R2A3">R2A3</a></li>
+				<li><a href="/Sotsuken/publicView?page=R2A4">R2A4</a></li>
+				<li><a href="/Sotsuken/publicView?page=R2A5">R2A5</a></li>
+			</ul></li>
+		<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">R1
+				<b class="caret"></b>
+		</a>
+			<ul class="dropdown-menu">
+				<li><a href="/Sotsuken/publicView?page=R1A1">R1A1</a></li>
+				<li><a href="/Sotsuken/publicView?page=R1A2">R1A2</a></li>
+				<li><a href="/Sotsuken/publicView?page=R1A3">R1A3</a></li>
+				<li><a href="/Sotsuken/publicView?page=R1A4">R1A4</a></li>
+				<li><a href="/Sotsuken/publicView?page=R1A5">R1A5</a></li>
+			</ul></li>
 
-</ul>
+	</ul>
 
 </div>
 
 <br />
 
-	<!-- 印刷エリア指定id printareaで囲んだ範囲で可能 -->
-	<div class="printarea">
+<!-- 印刷エリア指定id printareaで囲んだ範囲で可能 -->
+<div class="printarea">
 	<div class="container">
 		<div class="table-responsive">
-			<table
-				class="table table-striped table-bordered text-center ;">
+			<table class="table table-striped table-bordered text-center ;">
 				<thead>
 					<tr class="purple2 month">
 
@@ -81,7 +80,7 @@
 
 						<th></th>
 						<c:forEach var="dateitem" items="${dList }">
-							<th nowrap ><fmt:formatDate value="${dateitem.date}"
+							<th nowrap><fmt:formatDate value="${dateitem.date}"
 									pattern="MM月dd日(E)" /></th>
 						</c:forEach>
 
@@ -148,8 +147,9 @@
 						<%
 							if (cnt2 == 0) {
 						%>
-						<td class="info cell1"nowrap>
-							<div data-toggle="tooltip" data-placement="right" data-original-title="持ち物">${period1List[index].subjectName}</div>
+						<td class="info cell1" nowrap>
+							<div data-toggle="tooltip" data-placement="right"
+								data-original-title="${period1List[index].bringThings}">${period1List[index].subjectName}</div>
 						</td>
 						<%
 							}
@@ -179,8 +179,9 @@
 							if (cnt2 == 0) {
 						%>
 
-						<td class="danger"nowrap>
-							<div data-toggle="tooltip" data-placement="right" data-original-title="持ち物">${period2List[index].subjectName}</div>
+						<td class="danger" nowrap>
+							<div data-toggle="tooltip" data-placement="right"
+								data-original-title="${period2List[index].bringThings}">${period2List[index].subjectName}</div>
 						</td>
 
 						<%
@@ -211,8 +212,9 @@
 							if (cnt2 == 0) {
 						%>
 
-						<td class="success"nowrap>
-							<div data-toggle="tooltip" data-placement="right" data-original-title="持ち物">${period3List[index].subjectName}</div>
+						<td class="success" nowrap>
+							<div data-toggle="tooltip" data-placement="right"
+								data-original-title="${period3List[index].bringThings}">${period3List[index].subjectName}</div>
 						</td>
 
 						<%
@@ -243,7 +245,8 @@
 							if (cnt2 == 0) {
 						%>
 						<td class="warning" id="cell" nowrap>
-							<div data-toggle="tooltip" data-placement="right" data-original-title="持ち物">${period4List[index].subjectName}</div>
+							<div data-toggle="tooltip" data-placement="right"
+								data-original-title="${period4List[index].bringThings}">${period4List[index].subjectName}</div>
 						</td>
 						<%
 							}

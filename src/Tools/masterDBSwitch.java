@@ -18,7 +18,7 @@ public class masterDBSwitch {
  * @param page_title
  * @param chooseTableName
  * @param content_page
- * @return DB切り替え用メソッド
+ * @return マスター時間割情報
  */
 	public masterDBSwitchInfo switchDB(String page){
 		masterDBSwitchInfo value = new masterDBSwitchInfo();
@@ -332,18 +332,15 @@ public class masterDBSwitch {
 			value.chooseTableName = "tbl_master_A1A2timetable";
 			value.content_page = "/timeTable/A_master.jsp";
 			break;
-
-		case "event":
-			value.page_title ="Event Table";
-			value.chooseTableName = "";
-			value.content_page = "/eventTable/eventTable.jsp";
-			break;
-
 		}//switch end(tbl名切り替え)
 
 		return value;
 	}
-
+/**
+ *  一時時間割情報
+ * @param page
+ * @return
+ */
 	public  masterDBSwitchInfo switchTempDB(String page){
 		masterDBSwitchInfo value = new masterDBSwitchInfo();
 		switch (page) {
