@@ -11,50 +11,15 @@ toastSelect("success","${Msg }")</script>
 <script>toastSelect("error","${err_Msg }")</script>
 </c:if>
 
+
+
 <div class="row col-md-9"id="top">
 <div class="col-md-1 col-md-offset-9 fix margin-top">
 
 		<a href="#top"><i class="fa fa-arrow-circle-up fa-4x i-color fix up-icon"></i></a>
 
 		</div>
-		<form id="identicalForm" class="form-horizontal">
-    <div class="form-group">
-        <label class="col-xs-3 control-label">Password</label>
-        <div class="col-xs-5">
-            <input type="password" class="form-control" name="password" />
-        </div>
-    </div>
 
-    <div class="form-group">
-        <label class="col-xs-3 control-label">Retype password</label>
-        <div class="col-xs-5">
-            <input type="password" class="form-control" name="confirmPassword" />
-        </div>
-    </div>
-</form>
-
-<script>
-$(document).ready(function() {
-    $('#identicalForm').formValidation({
-        framework: 'bootstrap',
-        icon: {
-            valid: 'glyphicon glyphicon-ok',
-            invalid: 'glyphicon glyphicon-remove',
-            validating: 'glyphicon glyphicon-refresh'
-        },
-        fields: {
-            confirmPassword: {
-                validators: {
-                    identical: {
-                        field: 'password',
-                        message: 'The password and its confirm are not the same'
-                    }
-                }
-            }
-        }
-    });
-});
-</script>
 <!-- 登録処理 -->
 <form action="/Sotsuken/ManageUpdate" method="post">
 <input type="hidden" name="page" value="subject_manage" />
@@ -64,7 +29,7 @@ $(document).ready(function() {
 <td class="col-md-3">
 <!-- ID入力 -->
 <label for="teacher_id" class="labels">ID</label>
-<input type="number" size="20" class="form-control" id="teacherID" name="teacher_id" value="" autocomplete="off ">
+<input type="number" size="20" class="form-control" id="teacherID" name="teacher_id" value="" autocomplete="off " >
 </td>
 
 <td class="col-md-3">
@@ -154,20 +119,31 @@ ${ teacher.teacherID }
 								<h3 class="modal-title white fonts">パスワード変更</h3>
 							</div>
 							<div class="modal-body black">
-								<form action="/Sotsuken/ManageEdit" method="POST">
+								<form id="identicalForm" class="form-horizontal">
+															    <div class="form-group">
+							        <label class="black md left">Old Pass:</label>
 
-									<div id="msg"></div>
-									<input type="hidden" name="teacher_manage" />
-									<label class="black md">Old Pass:</label>
-									<input type="password"placeholder="現在のパスワード" id="old_pass" value="" class="form-control" name="old_pass" /> <br>
+							            <input type="password" class="form-control" name="old_password" placeholder="新しいパスワード"/>
 
-									<label class="black md">New Pass:</label>
-									<input type="password" placeholder="新しいパスワード" id="enterPw" value="" class="form-control" name="password" />
-									<br>
-									<label class="black md">Re Type:</label>
-									<input type="password" placeholder="再入力してください" id="enterPw" value="" class="form-control" name="confirmPassword" />
-									<br><input type="submit" value="変更" id="edit_pass">
-								</form>
+							    </div>
+
+
+							    <div class="form-group left">
+							        <label class="black md">New Pass:</label>
+
+							            <input type="password" class="form-control" name="password" placeholder="新しいパスワード"/>
+
+							    </div>
+
+							    <div class="form-group left">
+							        <label class="black md">Re Type:</label>
+
+							            <input type="password" class="form-control" name="confirmPassword" placeholder="再入力"/>
+
+							    </div>
+
+							<br><input type="submit" value="変更" id="edit_pass" name="edit_pass">
+							</form>
 
 							</div>
 						<div class="modal-footer">

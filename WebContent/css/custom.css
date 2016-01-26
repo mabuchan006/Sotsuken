@@ -341,7 +341,7 @@ font-family:Tahoma;
 	display:block;
 }
 
-.eventName {
+.eventName ,.left{
 
 	float: left;
 
