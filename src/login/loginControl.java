@@ -2,6 +2,9 @@
 package login;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,6 +15,7 @@ import javax.servlet.http.HttpSession;
 
 import manage.db.loginDBManage;
 import manage.db.teacherInfo;
+import net.arnx.jsonic.web.WebServiceServlet.JSON;
 
 
 @WebServlet("/loginControl")
@@ -31,6 +35,48 @@ public class loginControl extends HttpServlet {
 		String loginPath = "";	//ログインパス
 		String logoutPath = "";//ログアウトパス
 
+		request.setCharacterEncoding("UTF-8");
+
+		Map<String, String[]> viewMap = request.getParameterMap();
+		Map<String, String> loginMap = new HashMap<String,String>();
+		teacherInfo tchInf = new teacherInfo();
+		loginDBManage Ldb = new loginDBManage();
+
+		for (Map.Entry<String, String[]> result : viewMap.entrySet()) {
+			if(result.getKey().equals("id")){
+				tchInf.setTeacherID(Integer.parseInt(result.getValue()[0]));
+
+			}else
+				if(result.getKey().equals("pw")){
+					tchInf.setPassword(result.getValue()[0]);
+
+				}
+		}//for
+
+
+			//loginDBManageを参照し、teacherInfoに格納された情報をuserDBSearchで検索
+
+			try {
+				teacherInfo tchinf = Ldb.userDBSearch( tchInf );
+
+				if(tchinf.getTeacherName() != null){
+					loginMap.put("status","true" );
+
+				}else{
+					loginMap.put("status","false" );
+
+				}
+				response.setHeader("Access-Control-Allow-Origin", "*");//dmain指定
+				response.setContentType("application/json; charset=utf-8");//json形式
+				PrintWriter out = response.getWriter();//書き込み
+				out.println(JSON.encode(loginMap));//返す
+
+			} catch (Exception e) {
+				// TODO 自動生成された catch ブロック
+				e.printStackTrace();
+			}
+
+
 		//ログアウト処理
 		if( request.getParameter("state") != null &&
 				request.getParameter("state").equals("logout") ) {
@@ -46,22 +92,21 @@ public class loginControl extends HttpServlet {
 			//JSPに渡す情報がないのでsendRedirectでログアウト
 			response.sendRedirect(logoutPath);
 
-			//インスタンス化
-			loginDBManage Ldb = new loginDBManage();
-
 			//パラメータ追加
 			request.setAttribute( "logout_Msg" , Ldb.getMsg() );
 
 			return;
 		}//if
 
-		//JSPに渡す情報がないのでsendRedirectでログイン
-		response.sendRedirect(loginPath);
 	}//doGet
 
 	//POST受信
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+
+		request.setCharacterEncoding("UTF-8");
+
+
 
 		//パス初期値
 		String path="/Sotsuken/manage/manage_top.jsp";

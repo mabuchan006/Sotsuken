@@ -34,7 +34,7 @@ public class loginDBManage extends DBAccess{
 		getPstmt().setString( 2 , ti.getPassword() );
 		//PreparedStatement実行
 		selectExe();
-System.out.print(ti.getTeacherName());
+
 		//格納ユーザーインスタンス
 		teacherInfo teacher = null;
 		if( getRsResult().next() ){
@@ -44,7 +44,7 @@ System.out.print(ti.getTeacherName());
 					getRsResult().getString( "password" )
 					);
 		}//if
-System.out.println(teacher.getTeacherName());
+
 		//接続解除
 		disConnection();
 		return teacher;

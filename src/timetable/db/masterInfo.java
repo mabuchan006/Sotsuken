@@ -11,9 +11,10 @@ public class masterInfo implements Serializable {
 	private String classID;
 	private String roomName;
 	private String teacherName;
+	private String bringThings;
 
 
-	public masterInfo(int period, String subjectName, Date date, String classID, String roomName, String teacherName) {
+	public masterInfo(int period, String subjectName, Date date, String classID, String roomName, String teacherName,String bringThings) {
 		super();
 		this.period = period;
 		this.subjectName = subjectName;
@@ -21,6 +22,7 @@ public class masterInfo implements Serializable {
 		this.classID = classID;
 		this.roomName = roomName;
 		this.teacherName = teacherName;
+		this.setBringThings(bringThings);
 	}
 
 
@@ -87,6 +89,16 @@ public class masterInfo implements Serializable {
 
 	public void setTeacherName(String teacherName) {
 		this.teacherName = teacherName;
+	}
+
+
+	public String getBringThings() {
+		return bringThings;
+	}
+
+
+	public void setBringThings(String bringThings) {
+		this.bringThings = bringThings;
 	}
 
 

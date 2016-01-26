@@ -15,9 +15,10 @@ public class teacherDBManage extends DBAccess{
 	private String deleteSql;//講師1件削除用
 	private String insertSql;//講師1件登録用
 	private String updateSql;
-
+	private String updatePass;
 	//*******Msg*********
 	private String msg;
+
 
 	public String getMsg() {
 		return msg;
@@ -39,6 +40,7 @@ public class teacherDBManage extends DBAccess{
 		insertSql= String.format(" insert into tbl_teacher (teacherName, password,teacherID) values ( ? , ?, ? )");
 
 		updateSql= String.format("update tbl_teacher set teacherName = ? where teacherID = ?");
+		updatePass= String.format("update tbl_teacher set password = ? where teacherID = ?");
 	}
 	/*
 	 * @param teacherinfo 講師情報
