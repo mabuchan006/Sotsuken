@@ -75,8 +75,13 @@ toastSelect("success","${Msg }")</script>
 <thead>
 <tr class="wide">
 
-
-<td colspan="3">イベント一覧   ( ${cnt }) 件</td>
+<td>イベント名</td>
+<td>日時</td>
+<td>教室</td>
+<td>講師</td>
+<td>コマ</td>
+<td>クラス</td>
+<td >イベント一覧   ( ${cnt }) 件</td>
 
 </tr>
 </thead>

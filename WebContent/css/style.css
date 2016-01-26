@@ -655,8 +655,13 @@ margin0{
 
 .wide11{
 	width: 100px;
+
 }
 
+.wide12{
+	width: :100px;
+	padding-right: 2px:
+}
 tab1{
 	z-index: 99;
 }
@@ -666,7 +671,8 @@ tab1{
 }
 
 .up-icon{
-	margin-top:70px;
+	margin-top:720px;
+	margin-left: 270px;
 }
 
 #to-top {

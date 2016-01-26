@@ -138,9 +138,11 @@ toastSelect("success","${Msg }")</script>
 <div class="col-md-9 col-md-offset-3">
 <div class="back">
 <table class="table ">
-<thead class="thead">
+<thead >
 <tr class="info wide">
-<td colspan="3">科目一覧   ( ${cnt } 件)</td></tr>
+<td ｃ>科目名</td>
+<td >クラス</td>
+<td >科目一覧   ( ${cnt } 件)</td></tr>
 
 </thead>
 <tbody>

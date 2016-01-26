@@ -16,7 +16,7 @@ function f_temp_drag() {
 function f_temp_drop(e) {
 	$(".drop-target").droppable({
 		drop : function(e, ui) {
-			
+
 			var array = new Array();
 			// 子要素の取得
 			var ele = $(this).children("textarea").get(0);
@@ -26,8 +26,7 @@ function f_temp_drop(e) {
 				ele.value = array[1];
 				var eleInput = $(this).children("input:hidden").get(0);
 				console.log(eleInput);
-				$(eleInput).attr("name", "subID_" + array[0]);
-				eleInput.value = array[1];
+				eleInput.value = ui.draggable.text();
 			} else
 			if (ele.classList.contains("teacher") && dragEle.classList.contains("teacher")) {
 				if (ele.value.length > 0) {
