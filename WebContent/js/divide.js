@@ -8,6 +8,9 @@ var repComma = "", str = "", ele = "";
 var elem = "", data = "";
 
 $(function(e){
+	//accordion
+	$(".accordionJS").accordion();
+
 	//formCheck
 	$("textarea").on({
 		//フォーカスしたときにテキストエリアの内容を取得
@@ -139,7 +142,7 @@ $(function(e){
 					data
 			);
 			//modal呼び出し
-			$("#modal2").modal("show");//modal 登録されました
+			toastSelect("success","登録しました。");
 			$("#checkFlag").get(0).value = "false";
 			$("#sBtn").prop("disabled", true);
 		});
@@ -147,10 +150,13 @@ $(function(e){
 
 	// 一括削除ボタンがクリックされた時
 	$("#cBtn").click(function( e ){
-		for(var i = 0; i < $("textarea").length; i++){
-			$("textarea").get(i).value = "";
+		if(confirm("削除してもよろしいですか？")){
+			for(var i = 0; i < $("textarea").length; i++){
+				$("textarea").get(i).value = "";
+			}
+			$("#checkFlag").get(0).value = "true";
+			$("#sBtn").prop("disabled", false);
 		}
-		$("#checkFlag").get(0).value = "true";
 	});
 
 	//f_active
@@ -158,7 +164,7 @@ $(function(e){
 	$('#weekTab li').click(function(e) {
 
 		if($("#checkFlag").val() === "true"){
-			$("#modal1").modal("show");//modal 登録されていません
+			toastSelect("error","登録されていません。");
 		} else {
 			// クリックされたタブの要素取得
 			elem = $(this).children("input").get(0)
