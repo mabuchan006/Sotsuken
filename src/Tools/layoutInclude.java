@@ -34,9 +34,7 @@ public class layoutInclude {
 		info.js.add("/Sotsuken/js/jquery-1.10.0.ui.js");
 		info.js.add("/Sotsuken/js/fixedTableHeader.js");
 		info.js.add("/Sotsuken/js/modal.js");
-		info.js.add("/Sotsuken/js/dragdrop.js");
-		info.js.add("/Sotsuken/js/clickEvent.js");
-		info.js.add("/Sotsuken/js/formCheck.js");
+		info.js.add("/Sotsuken/js/divide.js");
 		info.js.add("/Sotsuken/js/jquery.toaster.js");
 		info.js.add("https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js");
 		info.js.add("/Sotsuken/js/toastSelect.js");

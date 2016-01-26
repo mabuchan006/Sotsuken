@@ -5,11 +5,6 @@
 <script>
 $(function(e) {
 	$(".accordionJS").accordion();
-	f_drag();
-	f_drop( e );
-	f_active( e );
-	clickEvent( e );
-	formCheck( e );
 });
 </script>
 
@@ -29,7 +24,7 @@ $(function(e) {
 		<!-- button -->
 		<input type="hidden" id="checkFlag" value="false">
 		<button type="button" class="btn btn-danger btn-lg col-md-1 fix col-md-offset-9 wide9" id="cBtn">クリア</button>
-		<button type="submit" class="btn btn-primary btn-lg col-md-1 col-md-offset-10 fix wide9" id="sBtn">登録</button>
+		<button type="submit" class="btn btn-primary btn-lg col-md-1 col-md-offset-10 fix wide9" id="sBtn" disabled>登録</button>
 		<!-- button end -->
 
 		<div class="form-group col-md-1 col-md-offset-1"></div>
@@ -191,7 +186,7 @@ $(function(e) {
 							<td class="size">
 								<p class="size drop-target">
 									<textarea cols="24" rows="3" maxlength="24" style="overflow: auto; background-color: #9F615E;"
-										id="NCS803-4" name="019-4" class="txtFontSize">${divideMap.NCS802[3] }</textarea>
+										id="NCS802-4" name="019-4" class="txtFontSize">${divideMap.NCS802[3] }</textarea>
 								</p>
 							</td>
 						</tr>
