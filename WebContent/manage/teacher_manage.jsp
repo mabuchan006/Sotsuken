@@ -119,26 +119,26 @@ ${ teacher.teacherID }
 								<h3 class="modal-title white fonts">パスワード変更</h3>
 							</div>
 							<div class="modal-body black">
-								<form id="identicalForm" class="form-horizontal">
+								<form id="manageForm" class="form-horizontal">
 															    <div class="form-group">
 							        <label class="black md left">Old Pass:</label>
 
-							            <input type="password" class="form-control" name="old_password" placeholder="新しいパスワード"/>
+							            <input type="password" class="form-control col-md-6" name="old_password" id="old_pwd" placeholder="新しいパスワード"/>
 
 							    </div>
 
 
-							    <div class="form-group left">
-							        <label class="black md">New Pass:</label>
+							    <div class="form-group">
+							        <label class="black md left">New Pass:</label>
 
-							            <input type="password" class="form-control" name="password" placeholder="新しいパスワード"/>
+							            <input type="password" class="form-control col-md-6" name="password" id="new_ped" placeholder="新しいパスワード"/>
 
 							    </div>
 
-							    <div class="form-group left">
-							        <label class="black md">Re Type:</label>
+							    <div class="form-group">
+							        <label class="black md left">Re Type:</label>
 
-							            <input type="password" class="form-control" name="confirmPassword" placeholder="再入力"/>
+							            <input type="password" class="form-control col-md-6" name="confirmPassword" id="reType" placeholder="再入力"/>
 
 							    </div>
 
@@ -162,22 +162,27 @@ ${ teacher.teacherID }
 									aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>
-								<h3 class="modal-title white fonts">管理者権限付与</h3>
+								<h3 class="modal-title white fonts">管理者権限</h3>
 							</div>
 							<div class="modal-body black">
-								<form action="/Sotsuken/ManageEdit" method="POST">
+								<form id="newForm" class="form-horizontal">
 
-									<div id="msg"></div>
+							    <div class="form-group">
+							        <label class="black md left">New Pass:</label>
 
-									<input type="hidden" name="teacher_manage" />
-									<label class="black md">New Pass:</label>
-									<input type="password" placeholder="新しいパスワード" id="enterPw" value="" name="password">
-									<br>
-									<label class="black md">Re Type:</label>
-									<input type="password" placeholder="再入力してください" id="enterPw" value="" name="password">
-									<br><input type="submit" value="登録" id="regist_pass" name="regist_pass">
-								</form>
+							            <input type="password" class="form-control col-md-6" name="password" placeholder="新しいパスワード"/>
 
+							    </div>
+
+							    <div class="form-group">
+							        <label class="black md left">Re Type:</label>
+
+							            <input type="password" class="form-control col-md-6" name="confirmPassword" placeholder="再入力"/>
+
+							    </div>
+
+							<br><input type="submit" value="登録" id="regist_pass" name="regist_pass">
+							</form>
 							</div>
 						<div class="modal-footer">
 					<button type="button" class="btn btn-primary"

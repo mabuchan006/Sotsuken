@@ -45,7 +45,7 @@
 
 
 	$(document).ready(function() {
-	    $('#identicalForm').formValidation({
+	    $('#manageForm').formValidation({
 	        framework: 'bootstrap',
 	        icon: {
 	            valid: 'glyphicon glyphicon-ok',
@@ -63,4 +63,93 @@
 	            }
 	        }
 	    });
+	    $('#newForm').formValidation({
+	        framework: 'bootstrap',
+	        icon: {
+	            valid: 'glyphicon glyphicon-ok',
+	            invalid: 'glyphicon glyphicon-remove',
+	            validating: 'glyphicon glyphicon-refresh'
+	        },
+	        fields: {
+	            confirmPassword: {
+	                validators: {
+	                    identical: {
+	                        field: 'password',
+	                        message: 'パスワードが一致していません。'
+	                    }
+	                }
+	            }
+	        }
+	    });
+
+	    $("#modal").click(function(e){
+	    	$("#msg").html("");
+	    })
+	    $("#login").click(function(e){
+	    	$("#manageForm").submit(function(e){
+	    			//form送信キャンセル
+
+
+
+	    			var oldPw = $("#old_pwd").val();
+	    			var newPw = $("#new_pwd").val();
+	    			//error識別子
+	    			var code=dataCheck(oldPw, newPw);
+
+	    			//code毎のログイン処理
+	    			switch(code){
+
+
+	    			case "error_1":
+	    				$("#msg").html("入力したパスワードがアカウントと一致しません。");
+	    				$("#msg").css("color","red");
+	    				$("#oldPw").val("");
+	    				$("#newPw").val("");
+	    				$("#reType").val("");
+	    				return false;
+
+	    			case "success":
+
+	    				return true;
+
+	    			default:
+	    				return false;
+	    			}
+	    	});
+	    	});//submit()
+
+	    	function dataCheck(id,pw){
+	    		data = { id : id,pw : pw};
+	    		code= "error_2";
+
+	    		$.ajax({
+	    			type: "get",
+	    			url : "http://localhost:8080/Sotsuken/loginControl",
+	    			dataType:"json",
+	    			data : data,
+	    			async: false
+	    		}).done(function(res){//成功 res=out.print
+
+	    			if(res["status"]=="true"){
+	    			code= "success";
+	    		}//if
+	    		}).fail(function(jqXHR, textStatus, errorThrown ){//失敗
+	    			console.log("NG:" + jqXHR.status + ":" + textStatus.status + ":" + errorThrown);
+	    		})
+
+	    		return code;
+
+	    	}
+
+	    	//Enterキーを押したらclickに飛ぶ
+	    	$("body").keypress(function ( event ) {
+	    		if ( event.which === 13 ) {
+	    			$("#login").trigger("click");
+	    		}
+	    	});//onkeypress()
+
+
+
+
 	});
+
