@@ -655,8 +655,13 @@ margin0{
 
 .wide11{
 	width: 100px;
+
 }
 
+.wide12{
+	width: :100px;
+	padding-right: 2px:
+}
 tab1{
 	z-index: 99;
 }
