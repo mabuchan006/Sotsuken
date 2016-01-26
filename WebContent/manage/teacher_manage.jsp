@@ -26,7 +26,7 @@ toastSelect("success","${Msg }")</script>
 <td class="col-md-3">
 <!-- ID入力 -->
 <label for="teacher_id" class="labels">ID</label>
-<input type="number" size="20" class="form-control" id="teacherID" name="teacher_id" autocomplete="off ">
+<input type="number" size="20" class="form-control" id="teacherID" name="teacher_id" value="" autocomplete="off ">
 </td>
 
 <td class="col-md-3">

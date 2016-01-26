@@ -292,11 +292,13 @@ public class ManageUpdateControl extends HttpServlet {
 
 	//講師管理画面指定時の処理
 	private void teacherUpdate(HttpServletRequest request, teacherDBManage tdm) {
-
+		int id=0;
+		if(!(request.getParameter("teacher_id")==null || request.getParameter("teacher_id").equals(""))){
+			id=Integer.parseInt(request.getParameter("teacher_id"));
+		}
 			//送信された講師情報取得
 			teacherInfo ti = new teacherInfo(
-					request.getParameter("teacher_id")==null?0//true
-							:Integer.parseInt(request.getParameter("teacher_id"))//false
+					id
 					,request.getParameter("teacherName"),
 					request.getParameter("password")==null?""
 							:request.getParameter("password")
