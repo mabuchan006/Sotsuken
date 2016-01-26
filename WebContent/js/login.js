@@ -11,15 +11,14 @@ $("#login").click(function(e){
 			spcTrim ( id , pw )
 
 			//error識別子
-			var code = "success";
+			var code = "error_2";
 			//IDとPass入力チェック
 			if ( id==""|| pw==""){
 				code="error_1";
 
 				}
-			else if(dataCheck(id,pw)!="success"){
-				code="error_2";
-			}//if
+			else{code=dataCheck(id, pw)}
+
 
 			//code毎のログイン処理
 			switch(code){
@@ -62,15 +61,24 @@ $("#login").click(function(e){
 	}//spcTrim
 
 	function dataCheck(id,pw){
-		data = { "test" : "test" };
+		data = { id : id,pw : pw};
+
 
 		$.ajax({
-			type: $("form").attr("method"),
-			url : $("form").attr("action"),
+			type: "get",
+			url : "http://localhost:8080/Sotsuken/loginControl",
 			dataType:"json",
 			data : data
 		}).done(function(res){//成功 res=out.print
-			s
+			alert(res["status"])
+			if(res["status"]=="true"){
+			return "success"
+		}
+			else {
+				return "error_2"
+			}
+
+
 		}).fail(function(jqXHR, textStatus, errorThrown ){//失敗
 			console.log("NG:" + jqXHR.status + ":" + textStatus.status + ":" + errorThrown);
 		})
