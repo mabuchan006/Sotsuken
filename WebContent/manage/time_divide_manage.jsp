@@ -2,12 +2,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html >
 
-<script>
-$(function(e) {
-	$(".accordionJS").accordion();
-});
-</script>
-
 <form action="/Sotsuken/divideUpdate" method="post">
 
 	<div class="container-fluid" id="top">
@@ -1298,37 +1292,3 @@ $(function(e) {
 		</div><!-- class="container" -->
 
 </form>
-
-<!-- もーだる -->
-<div id="modal1" class="modal fade ">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header back-color">
-				<h3 class="modal-title white text-center">info</h3>
-			</div>
-			<div class="modal-body text-center font1">
-				<h3>登録されていません</h3>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-primary" data-dismiss="modal">close</button>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div id="modal2" class="modal fade ">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header back-color">
-				<h3 class="modal-title white text-center">info</h3>
-			</div>
-			<div class="modal-body text-center font1">
-				<h3>${msg}</h3>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-primary" data-dismiss="modal">close</button>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- もーだる終了 -->
