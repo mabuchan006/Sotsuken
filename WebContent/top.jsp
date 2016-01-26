@@ -153,7 +153,7 @@
 								<h3 class="modal-title white">ログイン</h3>
 							</div>
 							<div class="modal-body">
-								<form action="/Sotsuken/loginControl" method="POST">
+								<form action="/Sotsuken/loginControl" method="POST" id="loginForm">
 									<div id="msg"></div>
 									<label class="wide11">userID:</label> <input type="text"
 										placeholder="ユーザーID" id="enterId" value="" name="teacherID"> <br>
