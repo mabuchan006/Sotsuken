@@ -1,7 +1,7 @@
 function toastSelect(status,msg){
 
 	toastr.options = {
-		"closeButton" : true,
+		"closeButton" : false,
 		"debug" : true,
 		"newestOnTop" : true,
 		"progressBar" : true,
