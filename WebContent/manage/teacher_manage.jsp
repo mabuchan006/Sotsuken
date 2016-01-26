@@ -121,13 +121,13 @@ ${ teacher.teacherID }
 									<div id="msg"></div>
 									<input type="hidden" name="teacher_manage" />
 									<label class="black md">Old Pass:</label>
-									<input type="password"placeholder="現在のパスワード" id="old_pass" value="" name="old_pass"> <br>
+									<input type="password"placeholder="現在のパスワード" id="old_pass" value="" class="form-control" name="old_pass" /> <br>
 
 									<label class="black md">New Pass:</label>
-									<input type="password" placeholder="新しいパスワード" id="enterPw" value="" name="password">
+									<input type="password" placeholder="新しいパスワード" id="enterPw" value="" class="form-control" name="password" />
 									<br>
 									<label class="black md">Re Type:</label>
-									<input type="password" placeholder="再入力してください" id="enterPw" value="" name="password">
+									<input type="password" placeholder="再入力してください" id="enterPw" value="" class="form-control" name="confirmPassword" />
 									<br><input type="submit" value="変更" id="edit_pass">
 								</form>
 
