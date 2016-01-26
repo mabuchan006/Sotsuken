@@ -1,9 +1,14 @@
 /*! jQuery v2.1.1 | (c) 2005, 2014 jQuery Foundation, Inc. | jquery.org/license */
 
 $(function login() {
+
+$("#modal").click(function(e){
+	$("#msg").html("");
+})
 $("#login").click(function(e){
 	$("#loginForm").submit(function(e){
 			//form送信キャンセル
+
 
 
 			var pw = $("#enterPw").val();
@@ -23,11 +28,15 @@ $("#login").click(function(e){
 
 				$("#msg").html("IDまたはパスワードを正しく入力してください。");
 				$("#msg").css("color","red");
+				$("#enterPw").val("");
+				$("#enterId").val("");
 				return false;
 
 			case "error_2":
 				$("#msg").html("IDまたはパスワードがアカウントと一致しません。");
 				$("#msg").css("color","red");
+				$("#enterPw").val("");
+				$("#enterId").val("");
 				return false;
 
 			case "success":

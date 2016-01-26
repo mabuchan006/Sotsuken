@@ -132,7 +132,7 @@
 
 					<div class="col-md-6" id="#team-modal" data-toggle="modal"
 						data-target="#myModal" style="cursor: pointer">
-						<div class="menu-item light-orange responsive-2">
+						<div class="menu-item light-orange responsive-2" id="modal">
 							<a href="#team-modal"> <i class="fa fa-users"></i>
 								<p>login</p>
 							</a>
