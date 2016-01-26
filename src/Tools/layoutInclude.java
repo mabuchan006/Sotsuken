@@ -95,7 +95,7 @@ public class layoutInclude {
 		info.js.add("//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js");
 		info.js.add("/Sotsuken/bootstrap/js/bootstrap-datepicker.js");
 		info.js.add("/Sotsuken/bootstrap/js/bootstrap-datepicker.ja.min.js");
-		info.js.add("/Sotsuken/bootstrap/js/passwordEdit.js");
+		info.js.add("/Sotsuken/js/passwordEdit.js");
 
 		return info;
 	}
