@@ -15,7 +15,9 @@ function toastSelect(status,msg){
 		"showEasing" : "swing",
 		"hideEasing" : "linear",
 		"showMethod" : "fadeIn",
-		"hideMethod" : "fadeOut"
+		"hideMethod" : "fadeOut",
+		
+		
 
 	}
 Command: toastr[status](msg, status+"!!")
