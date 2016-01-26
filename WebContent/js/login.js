@@ -10,38 +10,35 @@ $("#login").click(function(e){
 			var id = $("#enterId").val();
 			spcTrim ( id , pw )
 
-			//error識別子
-			var code = "error_2";
 			//IDとPass入力チェック
 			if ( id==""|| pw==""){
-				code="error_1";
-
-				}
+				statusSwitch("error_1");}
 			else{code=dataCheck(id, pw)}
 
-
-			//code毎のログイン処理
-			switch(code){
-			case "error_1":
-
-				$("#msg").html("IDまたはパスワードを正しく入力してください。");
-				$("#msg").css("color","red");
-				return false;
-
-			case "error_2":
-				$("#msg").html("IDまたはパスワードがアカウントと一致しません。");
-				$("#msg").css("color","red");
-				return false;
-
-			case "success":
-				alert("test");
-				return true;
-
-			default:
-				return false;
-			}
 	});
 	});//submit()
+function statusSwitch(code){
+	//code毎のログイン処理
+	switch(code){
+	case "error_1":
+
+		$("#msg").html("IDまたはパスワードを正しく入力してください。");
+		$("#msg").css("color","red");
+		$("#loginForm").submit(false);
+		break;
+	case "error_2":
+		$("#msg").html("IDまたはパスワードがアカウントと一致しません。");
+		$("#msg").css("color","red");
+		$("#loginForm").submit(false);
+		break;
+	case "success":
+
+		$("#loginForm").submit(true);
+		break;
+	default:
+		$("#loginForm").submit(false);
+	}
+	}
 	//半角、全角スペース削除処理
 	function spcTrim ( id , pw ) {
 		var sId = id;
@@ -63,25 +60,23 @@ $("#login").click(function(e){
 	function dataCheck(id,pw){
 		data = { id : id,pw : pw};
 
-
 		$.ajax({
 			type: "get",
 			url : "http://localhost:8080/Sotsuken/loginControl",
 			dataType:"json",
 			data : data
 		}).done(function(res){//成功 res=out.print
-			alert(res["status"])
+
 			if(res["status"]=="true"){
-			return "success"
+			statusSwitch("success");
+		}else{
+			statusSwitch("error_2");
 		}
-			else {
-				return "error_2"
-			}
-
-
 		}).fail(function(jqXHR, textStatus, errorThrown ){//失敗
 			console.log("NG:" + jqXHR.status + ":" + textStatus.status + ":" + errorThrown);
 		})
+
+		return code;
 
 	}
 
