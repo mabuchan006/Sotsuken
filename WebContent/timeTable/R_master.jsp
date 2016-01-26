@@ -288,7 +288,7 @@
     <h3 class="panel-title">お知らせ</h3>
   </div>
   <div class="panel-body panel1">
-    デフォルトのパネル
+    2015/02/08(月) バレー大会　場所　愛知県体育館
   </div>
 </div>
 	</div>
