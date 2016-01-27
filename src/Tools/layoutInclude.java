@@ -32,9 +32,6 @@ public class layoutInclude {
 		info.js.add("/Sotsuken/js/jquery-2.1.1.min.js");
 		info.js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
 		info.js.add("/Sotsuken/js/jquery-1.10.0.ui.js");
-		info.js.add("/Sotsuken/js/fixedTableHeader.js");
-		info.js.add("/Sotsuken/js/modal.js");
-		info.js.add("/Sotsuken/js/divide.js");
 		info.js.add("/Sotsuken/js/jquery.toaster.js");
 		info.js.add("https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js");
 		info.js.add("/Sotsuken/js/toastSelect.js");
@@ -90,6 +87,30 @@ public class layoutInclude {
 		info.js.add("/Sotsuken/bootstrap/js/bootstrap-datepicker.ja.min.js");
 		info.js.add("/Sotsuken/js/passwordEdit.js");
 
+		return info;
+	}
+
+	public layoutIncludeInfo divideLayout()  {
+		layoutIncludeInfo info = new layoutIncludeInfo();
+
+		info.css.add("/Sotsuken/bootstrap/css/bootstrap.min.css");
+		info.css.add("/Sotsuken/css/font-awesome.min.css");
+		info.css.add("/Sotsuken/css/animate.css");
+		info.css.add("http://fonts.googleapis.com/css?family=Lobster");
+		info.css.add("http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css");
+		info.css.add("/Sotsuken/css/custom.css");
+		info.css.add("/Sotsuken/css/style.css");
+		info.css.add("https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css");
+		info.css.add("/Sotsuken/css/pure-drawer.css");
+
+
+		info.js.add("/Sotsuken/js/jquery-2.1.1.min.js");
+		info.js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
+		info.js.add("/Sotsuken/js/jquery-1.10.0.ui.js");
+		info.js.add("/Sotsuken/js/divide.js");
+		info.js.add("/Sotsuken/js/jquery.toaster.js");
+		info.js.add("https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js");
+		info.js.add("/Sotsuken/js/toastSelect.js");
 		return info;
 	}
 
