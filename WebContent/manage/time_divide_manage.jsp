@@ -50,7 +50,7 @@
 		<div class="col-md-1 col-md-offset-10 fix margin-top ">
 			<h1>room</h1>
 			<div>
-				<h2 class="font">
+				<h2 class="font white">
 					NCS
 				</h2>
 					<ul class="font ">
@@ -76,8 +76,8 @@
 							<a href="#2F" draggable="false">2F </a>
 						</li>
 					</ul>
-				<h2 class="font">
-					<a href="#" draggable="false">NMIC</a>
+				<h2 class="font white">
+					NMIC
 				</h2>
 
 					<ul class="font">
