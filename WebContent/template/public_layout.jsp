@@ -66,7 +66,7 @@
 						<i class="fa fa-print"></i>印刷
 					</button>
 
-                    <form action="top.jsp">
+                    <form action="/Sotsuken/top" method="post">
 						<button type="submit" class="top">
 							<i class="fa fa-home"></i>TOP
 						</button>
