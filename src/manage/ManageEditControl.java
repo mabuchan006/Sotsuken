@@ -57,9 +57,9 @@ public class ManageEditControl extends HttpServlet {
 		upKey = map.get("pk")[0];
 		System.out.println(upKey);
 		}//if
-		else if(map.get("teacher_manage")!=null){
-			for (Map.Entry<String, String[]> teacher : map.entrySet()) {
-				System.out.println(teacher);
+		else if(map.get("oldPw")!=null){
+			for (Map.Entry<String, String[]> password : map.entrySet()) {
+				System.out.println(password);
 
 			}
 		}

@@ -110,7 +110,8 @@
 
 	    			case "success":
 
-	    				return true;
+	    				toastSelect("success","パスワードを更新しました。");
+	    				return false;
 
 	    			default:
 	    				return false;
@@ -118,13 +119,13 @@
 	    	});
 	    	});//submit()
 
-	    	function dataCheck(id,pw){
-	    		data = { id : id,pw : pw};
+	    	function dataCheck(oldPw,newPw){
+	    		data = { oldPw : oldPw,newPw : newPw};
 	    		code= "error_2";
 
 	    		$.ajax({
 	    			type: "get",
-	    			url : "http://localhost:8080/Sotsuken/loginControl",
+	    			url : "http://localhost:8080/Sotsuken/ManageEdit",
 	    			dataType:"json",
 	    			data : data,
 	    			async: false
@@ -135,18 +136,13 @@
 	    		}//if
 	    		}).fail(function(jqXHR, textStatus, errorThrown ){//失敗
 	    			console.log("NG:" + jqXHR.status + ":" + textStatus.status + ":" + errorThrown);
+	    			tpastSelect("error","更新に失敗しました。");
 	    		})
 
 	    		return code;
 
 	    	}
 
-	    	//Enterキーを押したらclickに飛ぶ
-	    	$("body").keypress(function ( event ) {
-	    		if ( event.which === 13 ) {
-	    			$("#login").trigger("click");
-	    		}
-	    	});//onkeypress()
 
 
 
