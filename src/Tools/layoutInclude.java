@@ -97,6 +97,7 @@ public class layoutInclude {
 		info.css.add("/Sotsuken/css/font-awesome.min.css");
 		info.css.add("/Sotsuken/css/animate.css");
 		info.css.add("http://fonts.googleapis.com/css?family=Lobster");
+		info.css.add("http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css");
 		info.css.add("/Sotsuken/css/custom.css");
 		info.css.add("/Sotsuken/css/style.css");
 		info.css.add("https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css");
