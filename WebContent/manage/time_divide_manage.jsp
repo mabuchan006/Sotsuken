@@ -31,12 +31,12 @@
 		<div class="col-md-1  fix col-md-offset-9 margin-top ">
 			<h1>class</h1>
 			<div id="drag-target">
-				<div class="accordionJS">
+				<div class="accordionJS white">
 					<c:forEach var="rs" items="${classIDMap}">
 						<h2 class="font">
 							<a draggable="false">${rs.key}</a>
 						</h2>
-						<ul class="font">
+						<ul class="font ">
 						<c:forEach var="array" items="${rs.value }">
 							<li class="select0 size2">${array}</li>
 						</c:forEach>
