@@ -49,7 +49,7 @@
 
 		<div class="col-md-1 col-md-offset-10 fix margin-top ">
 			<h1>room</h1>
-			<div class="accordionJS ">
+			<div>
 				<h2 class="font">
 					<a href="#" draggable="false">NCS</a>
 				</h2>
