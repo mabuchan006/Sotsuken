@@ -677,8 +677,13 @@ tab1{
 
 .up-icon1{
 	margin-top:650px;
+	margin-left: 10px;
 }
 .panel1{
 	background-color: #202020;
 	color:#fff;
+}
+
+.hai{
+	height: 400px;
 }

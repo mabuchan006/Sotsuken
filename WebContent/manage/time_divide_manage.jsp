@@ -27,7 +27,7 @@
 	</div><!-- class="container-fluid" -->
 
 	<!-- ドラッグ&ドロップ -->
-	<div class="col-md-2 ">
+
 		<div class="col-md-1  fix col-md-offset-9 margin-top ">
 			<h1>class</h1>
 			<div id="drag-target">
@@ -45,11 +45,11 @@
 				</div><!-- class="accordionJS" -->
 			</div><!-- id="drag-target" -->
 		</div><!-- class="col-md-1 fix margin-top" -->
-	</div>
+
 
 		<div class="col-md-1 col-md-offset-10 fix margin-top ">
 			<h1>room</h1>
-			<div class="accordionJS">
+			<div class="accordionJS ">
 				<h2 class="font">
 					<a href="#" draggable="false">NCS</a>
 				</h2>
