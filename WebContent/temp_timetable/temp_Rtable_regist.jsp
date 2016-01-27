@@ -159,7 +159,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #d9edf7;"
+									style="overflow: auto; background-color: #d9edf7;"name="Sun0_1"
 									class="txtFontSize2 subject" placeholder="教科入力欄">${regtiList1[0].subjectName }</textarea>
 									<input type="hidden" name="Su0_1" value="001:">
 							</p></td>
@@ -167,7 +167,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${!flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #d9edf7;"
+									style="overflow: auto; background-color: #d9edf7;"name="Sun0_1"
 									class="txtFontSize2 subject" placeholder="教科入力欄">${regtiList1[0].subjectName }</textarea>
 									<input type="hidden" name="Su0_1" value="<fmt:formatNumber value="${regtiList1[0].subjectID}" pattern="000" />">
 							</p></td>
@@ -177,7 +177,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #d9edf7;"
+									style="overflow: auto; background-color: #d9edf7;"name="Sun1_1"
 									class="txtFontSize2 subject" >${regtiList1[1].subjectName }</textarea>
 									<input type="hidden" name="Su1_1" value="001:">
 							</p></td>
@@ -185,7 +185,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${!flg }">
 					<td><p class="size drop-target ">
 							<textarea cols="5" rows="1"
-								style="overflow: auto; background-color: #d9edf7;"
+								style="overflow: auto; background-color: #d9edf7;"name="Sun1_1"
 								class="txtFontSize2 subject">${regtiList1[1].subjectName }</textarea>
 								<input type="hidden" name="Su1_1" value="<fmt:formatNumber value="${regtiList1[1].subjectID}" pattern="000" />">
 						</p></td>
@@ -195,7 +195,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #d9edf7;"
+									style="overflow: auto; background-color: #d9edf7;"name="Sun2_1"
 									class="txtFontSize2 subject" >${regtiList1[2].subjectName }</textarea>
 									<input type="hidden" name="Su2_1" value="001:">
 							</p></td>
@@ -203,7 +203,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${!flg }">
 					<td><p class="size drop-target ">
 							<textarea cols="5" rows="1"
-								style="overflow: auto; background-color: #d9edf7;"
+								style="overflow: auto; background-color: #d9edf7;"name="Sun2_1"
 								class="txtFontSize2 subject">${regtiList1[2].subjectName }</textarea>
 								<input type="hidden" name="Su2_1" value="<fmt:formatNumber value="${regtiList1[2].subjectID}" pattern="000" />">
 						</p></td>
@@ -213,7 +213,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #d9edf7;"
+									style="overflow: auto; background-color: #d9edf7;" name="Sun3_1"
 									class="txtFontSize2 subject" >${regtiList1[3].subjectName }</textarea>
 									<input type="hidden" name="Su3_1" value="001:">
 							</p></td>
@@ -221,7 +221,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${!flg }">
 					<td><p class="size drop-target ">
 							<textarea cols="5" rows="1"
-								style="overflow: auto; background-color: #d9edf7;"
+								style="overflow: auto; background-color: #d9edf7;" name="Sun3_1"
 								class="txtFontSize2 subject">${regtiList1[3].subjectName }</textarea>
 								<input type="hidden" name="Su3_1" value="<fmt:formatNumber value="${regtiList1[3].subjectID}" pattern="000" />">
 						</p></td>
@@ -231,7 +231,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #d9edf7;"
+									style="overflow: auto; background-color: #d9edf7;"name="Sun4_1"
 									class="txtFontSize2 subject" >${regtiList1[4].subjectName }</textarea>
 									<input type="hidden" name="Su4_1" value="001:">
 							</p></td>
@@ -239,7 +239,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${!flg }">
 					<td><p class="size drop-target ">
 							<textarea cols="5" rows="1"
-								style="overflow: auto; background-color: #d9edf7;"
+								style="overflow: auto; background-color: #d9edf7;"name="Sun4_1"
 								class="txtFontSize2 subject">${regtiList1[4].subjectName }</textarea>
 								<input type="hidden" name="Su4_1" value="<fmt:formatNumber value="${regtiList1[4].subjectID}" pattern="000" />">
 						</p></td>
@@ -249,7 +249,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #d9edf7;"
+									style="overflow: auto; background-color: #d9edf7;"name="Sun5_1"
 									class="txtFontSize2 subject" >${regtiList1[5].subjectName }</textarea>
 									<input type="hidden" name="Su5_1" value="001:">
 							</p></td>
@@ -257,7 +257,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${!flg }">
 					<td><p class="size drop-target ">
 							<textarea cols="5" rows="1"
-								style="overflow: auto; background-color: #d9edf7;"
+								style="overflow: auto; background-color: #d9edf7;"name="Sun5_1"
 								class="txtFontSize2 subject">${regtiList1[5].subjectName }</textarea>
 								<input type="hidden" name="Su5_1" value="<fmt:formatNumber value="${regtiList1[5].subjectID}" pattern="000" />">
 						</p></td>
@@ -267,7 +267,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #d9edf7;"
+									style="overflow: auto; background-color: #d9edf7;"name="Sun6_1"
 									class="txtFontSize2 subject" >${regtiList1[6].subjectName }</textarea>
 									<input type="hidden" name="Su6_1" value="001:">
 							</p></td>
@@ -275,7 +275,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${!flg }">
 					<td><p class="size drop-target ">
 							<textarea cols="5" rows="1"
-								style="overflow: auto; background-color: #d9edf7;"
+								style="overflow: auto; background-color: #d9edf7;"name="Sun6_1"
 								class="txtFontSize2 subject">${regtiList1[6].subjectName }</textarea>
 								<input type="hidden" name="Su6_1" value="<fmt:formatNumber value="${regtiList1[6].subjectID}" pattern="000" />">
 						</p></td>
@@ -551,7 +551,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #f2dede;"
+									style="overflow: auto; background-color: #f2dede;" name="Sun0_2"
 									class="txtFontSize2 subject">${regtiList2[0].subjectName }</textarea>
 									<input type="hidden" name="Su0_2" value="001:">
 							</p></td>
@@ -559,7 +559,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${!flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #f2dede;"
+									style="overflow: auto; background-color: #f2dede;" name="Sun0_2"
 									class="txtFontSize2 subject">${regtiList2[0].subjectName }</textarea>
 									<input type="hidden" name="Su0_2" value="<fmt:formatNumber value="${ regtiList2[0].subjectID}" pattern="000" />">
 							</p></td>
@@ -569,7 +569,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #f2dede;"
+									style="overflow: auto; background-color: #f2dede;" name="Sun1_2"
 									class="txtFontSize2 subject">${regtiList2[1].subjectName }</textarea>
 									<input type="hidden" name="Su1_2" value="001:">
 							</p></td>
@@ -578,7 +578,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${!flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #f2dede;"
+									style="overflow: auto; background-color: #f2dede;" name="Sun1_2"
 									class="txtFontSize2 subject">${regtiList2[1].subjectName }</textarea>
 									<input type="hidden" name="Su1_2" value="<fmt:formatNumber value="${ regtiList2[1].subjectID}" pattern="000" />">
 							</p></td>
@@ -588,7 +588,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #f2dede;"
+									style="overflow: auto; background-color: #f2dede;" name="Sun2_2"
 									class="txtFontSize2 subject">${regtiList2[2].subjectName }</textarea>
 									<input type="hidden" name="Su2_2" value="001:">
 							</p></td>
@@ -596,7 +596,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${!flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #f2dede;"
+									style="overflow: auto; background-color: #f2dede;" name="Sun2_2"
 									class="txtFontSize2 subject">${regtiList2[2].subjectName }</textarea>
 									<input type="hidden" name="Su2_2" value="<fmt:formatNumber value="${ regtiList2[2].subjectID}" pattern="000" />">
 							</p></td>
@@ -606,7 +606,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #f2dede;"
+									style="overflow: auto; background-color: #f2dede;" name="Sun3_2"
 									class="txtFontSize2 subject">${regtiList2[3].subjectName }</textarea>
 									<input type="hidden" name="Su3_2" value="001:">
 							</p></td>
@@ -614,7 +614,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${!flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #f2dede;" name="Su3_2"
+									style="overflow: auto; background-color: #f2dede;" name="Sun3_2"
 									class="txtFontSize2 subject">${regtiList2[3].subjectName }</textarea>
 									<input type="hidden" name="Su3_2" value="<fmt:formatNumber value="${ regtiList2[3].subjectID}" pattern="000" />">
 							</p></td>
@@ -624,7 +624,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #f2dede;"
+									style="overflow: auto; background-color: #f2dede;" name="Sun4_2"
 									class="txtFontSize2 subject">${regtiList2[4].subjectName }</textarea>
 									<input type="hidden" name="Su4_2" value="001:">
 							</p></td>
@@ -632,7 +632,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${!flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #f2dede;"
+									style="overflow: auto; background-color: #f2dede;" name="Sun4_2"
 									class="txtFontSize2 subject">${regtiList2[4].subjectName }</textarea>
 									<input type="hidden" name="Su4_2" value="<fmt:formatNumber value="${ regtiList2[4].subjectID}" pattern="000" />">
 							</p></td>
@@ -642,7 +642,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #f2dede;"
+									style="overflow: auto; background-color: #f2dede;" name="Sun5_2"
 									class="txtFontSize2 subject">${regtiList2[5].subjectName }</textarea>
 									<input type="hidden" name="Su5_2" value="001:">
 							</p></td>
@@ -650,7 +650,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${!flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #f2dede;"
+									style="overflow: auto; background-color: #f2dede;" name="Sun5_2"
 									class="txtFontSize2 subject">${regtiList2[5].subjectName }</textarea>
 									<input type="hidden" name="Su5_2" value="<fmt:formatNumber value="${ regtiList2[5].subjectID}" pattern="000" />">
 
@@ -661,7 +661,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #f2dede;" name="Su6_2"
+									style="overflow: auto; background-color: #f2dede;" name="Sun6_2"
 									class="txtFontSize2 subject">${regtiList2[6].subjectName }</textarea>
 									<input type="hidden" name="Su6_2" value="001:">
 							</p></td>
@@ -669,7 +669,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${!flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #f2dede;"
+									style="overflow: auto; background-color: #f2dede;"name="Sun6_2"
 									class="txtFontSize2 subject">${regtiList2[6].subjectName }</textarea>
 									<input type="hidden" name="Su6_2" value="<fmt:formatNumber value="${ regtiList2[6].subjectID}" pattern="000" />">
 							</p></td>
@@ -941,7 +941,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #dff0d8;"
+									style="overflow: auto; background-color: #dff0d8;" name="Sun0_3"
 									class="txtFontSize2 subject" >${regtiList3[0].subjectName }</textarea>
 									<input type="hidden" name="Su0_3" value="001:">
 							</p></td>
@@ -949,7 +949,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${!flg }">
 					<td><p class="size drop-target ">
 							<textarea cols="5" rows="1"
-								style="overflow: auto; background-color: #dff0d8;"
+								style="overflow: auto; background-color: #dff0d8;" name="Sun0_3"
 								class="txtFontSize2 subject">${regtiList3[0].subjectName }</textarea>
 								<input type="hidden" name="Su0_3" value="<fmt:formatNumber value="${ regtiList3[0].subjectID}" pattern="000" />">
 						</p></td>
@@ -959,7 +959,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #dff0d8;"
+									style="overflow: auto; background-color: #dff0d8;" name="Sun1_3"
 									class="txtFontSize2 subject" >${regtiList3[1].subjectName }</textarea>
 									<input type="hidden" name="Su1_3" value="001:">
 							</p></td>
@@ -967,7 +967,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${!flg }">
 					<td><p class="size drop-target ">
 							<textarea cols="5" rows="1"
-								style="overflow: auto; background-color: #dff0d8;"
+								style="overflow: auto; background-color: #dff0d8;" name="Sun1_3"
 								class="txtFontSize2 subject">${regtiList3[1].subjectName }</textarea>
 								<input type="hidden" name="Su1_3" value="<fmt:formatNumber value="${ regtiList3[1].subjectID}" pattern="000" />">
 						</p></td>
@@ -977,7 +977,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #dff0d8;"
+									style="overflow: auto; background-color: #dff0d8;" name="Sun2_3"
 									class="txtFontSize2 subject" >${regtiList3[2].subjectName }</textarea>
 									<input type="hidden" name="Su2_3" value="001:">
 							</p></td>
@@ -985,7 +985,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${!flg }">
 					<td><p class="size drop-target ">
 							<textarea cols="5" rows="1"
-								style="overflow: auto; background-color: #dff0d8;"
+								style="overflow: auto; background-color: #dff0d8;" name="Sun2_3"
 								class="txtFontSize2 subject">${regtiList3[2].subjectName }</textarea>
 								<input type="hidden" name="Su2_3" value="<fmt:formatNumber value="${ regtiList3[3].subjectID}" pattern="000" />">
 						</p></td>
@@ -995,7 +995,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #dff0d8;"
+									style="overflow: auto; background-color: #dff0d8;" name="Sun3_3"
 									class="txtFontSize2 subject" >${regtiList3[3].subjectName }</textarea>
 									<input type="hidden" name="Su3_3" value="001:">
 							</p></td>
@@ -1003,7 +1003,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${!flg }">
 					<td><p class="size drop-target ">
 							<textarea cols="5" rows="1"
-								style="overflow: auto; background-color: #dff0d8;"
+								style="overflow: auto; background-color: #dff0d8;" name="Sun3_3"
 								class="txtFontSize2 subject">${regtiList3[3].subjectName }</textarea>
 								<input type="hidden" name="Su3_3" value="<fmt:formatNumber value="${ regtiList3[3].subjectID}" pattern="000" />">
 						</p></td>
@@ -1013,7 +1013,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #dff0d8;"
+									style="overflow: auto; background-color: #dff0d8;" name="Sun4_3"
 									class="txtFontSize2 subject" >${regtiList3[4].subjectName }</textarea>
 									<input type="hidden" name="Su4_3" value="001:">
 							</p></td>
@@ -1021,7 +1021,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${!flg }">
 					<td><p class="size drop-target ">
 							<textarea cols="5" rows="1"
-								style="overflow: auto; background-color: #dff0d8;"
+								style="overflow: auto; background-color: #dff0d8;" name="Sun4_3"
 								class="txtFontSize2 subject">${regtiList3[4].subjectName }</textarea>
 								<input type="hidden"  name="Su4_3" value="<fmt:formatNumber value="${ regtiList3[4].subjectID}" pattern="000" />">
 						</p></td>
@@ -1031,7 +1031,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #dff0d8;"
+									style="overflow: auto; background-color: #dff0d8;" name="Sun5_3"
 									class="txtFontSize2 subject" >${regtiList3[5].subjectName }</textarea>
 									<input type="hidden" name="Su5_3" value="001:">
 							</p></td>
@@ -1039,7 +1039,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${!flg }">
 					<td><p class="size drop-target ">
 							<textarea cols="5" rows="1"
-								style="overflow: auto; background-color: #dff0d8;"
+								style="overflow: auto; background-color: #dff0d8;" name="Sun5_3"
 								class="txtFontSize2 subject">${regtiList3[5].subjectName }</textarea>
 								<input type="hidden"  name="Su5_3" value="<fmt:formatNumber value="${ regtiList3[5].subjectID}" pattern="000" />">
 						</p></td>
@@ -1049,7 +1049,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #dff0d8;"
+									style="overflow: auto; background-color: #dff0d8;" name="Sun6_3"
 									class="txtFontSize2 subject" >${regtiList3[6].subjectName }</textarea>
 									<input type="hidden" name="Su6_3" value="001:">
 							</p></td>
@@ -1057,7 +1057,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${!flg }">
 					<td><p class="size drop-target ">
 							<textarea cols="5" rows="1"
-								style="overflow: auto; background-color: #dff0d8;"
+								style="overflow: auto; background-color: #dff0d8;" name="Sun6_3"
 								class="txtFontSize2 subject">${regtiList3[6].subjectName }</textarea>
 								<input type="hidden" name="Su6_3" value="<fmt:formatNumber value="${ regtiList3[6].subjectID}" pattern="000" />">
 						</p></td>
@@ -1330,7 +1330,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #fcf8e3;"
+									style="overflow: auto; background-color: #fcf8e3;" name="Sun0_4"
 									class="txtFontSize2 subject" >${regtiList4[0].subjectName }</textarea>
 									<input type="hidden" name="Su0_4" value="001:">
 
@@ -1339,7 +1339,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${!flg }">
 					<td><p class="size drop-target ">
 							<textarea cols="5" rows="1"
-								style="overflow: auto; background-color: #fcf8e3;"
+								style="overflow: auto; background-color: #fcf8e3;" name="Sun0_4"
 								class="txtFontSize2 subject">${regtiList4[0].subjectName }</textarea>
 								<input type="hidden" name="Su0_4" value="<fmt:formatNumber value="${ regtiList4[0].subjectID}" pattern="000" />">
 						</p></td>
@@ -1349,7 +1349,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #fcf8e3;"
+									style="overflow: auto; background-color: #fcf8e3;" name="Sun1_4"
 									class="txtFontSize2 subject" >${regtiList4[1].subjectName }</textarea>
 									<input type="hidden" name="Su1_4" value="001:">
 							</p></td>
@@ -1357,7 +1357,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${!flg }">
 					<td><p class="size drop-target ">
 							<textarea cols="5" rows="1"
-								style="overflow: auto; background-color: #fcf8e3;"
+								style="overflow: auto; background-color: #fcf8e3;" name="Sun1_4"
 								class="txtFontSize2 subject">${regtiList4[1].subjectName }</textarea>
 								<input type="hidden" name="Su1_4" value="<fmt:formatNumber value="${regtiList4[1].subjectID}" pattern="000" />">
 						</p></td>
@@ -1367,7 +1367,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #fcf8e3;"
+									style="overflow: auto; background-color: #fcf8e3;" name="Sun2_4"
 									class="txtFontSize2 subject" >${regtiList4[2].subjectName }</textarea>
 									<input type="hidden" name="Su2_4" value="001:">
 							</p></td>
@@ -1375,7 +1375,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${!flg }">
 					<td><p class="size drop-target ">
 							<textarea cols="5" rows="1"
-								style="overflow: auto; background-color: #fcf8e3;"
+								style="overflow: auto; background-color: #fcf8e3;" name="Sun2_4"
 								class="txtFontSize2 subject">${regtiList4[2].subjectName }</textarea>
 								<input type="hidden" name="Su2_4" value="<fmt:formatNumber value="${regtiList4[2].subjectID}" pattern="000" />">
 						</p></td>
@@ -1385,7 +1385,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #fcf8e3;"
+									style="overflow: auto; background-color: #fcf8e3;" name="Sun3_4"
 									class="txtFontSize2 subject" >${regtiList4[3].subjectName }</textarea>
 									<input type="hidden" name="Su3_4" value="001:">
 							</p></td>
@@ -1393,7 +1393,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${!flg }">
 					<td><p class="size drop-target ">
 							<textarea cols="5" rows="1"
-								style="overflow: auto; background-color: #fcf8e3;"
+								style="overflow: auto; background-color: #fcf8e3;" name="Sun3_4"
 								class="txtFontSize2 subject">${regtiList4[3].subjectName }</textarea>
 								<input type="hidden" name="Su3_4" value="<fmt:formatNumber value="${regtiList4[3].subjectID}" pattern="000" />">
 						</p></td>
@@ -1403,7 +1403,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #fcf8e3;"
+									style="overflow: auto; background-color: #fcf8e3;" name="Sun4_4"
 									class="txtFontSize2 subject" >${regtiList4[4].subjectName }</textarea>
 									<input type="hidden" name="Su4_4" value="001:">
 							</p></td>
@@ -1411,7 +1411,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${!flg }">
 					<td><p class="size drop-target ">
 							<textarea cols="5" rows="1"
-								style="overflow: auto; background-color: #fcf8e3;"
+								style="overflow: auto; background-color: #fcf8e3;" name="Sun4_4"
 								class="txtFontSize2 subject">${regtiList4[4].subjectName }</textarea>
 								<input type="hidden" name="Su4_4" value="<fmt:formatNumber value="${regtiList4[4].subjectID}" pattern="000" />">
 						</p></td>
@@ -1421,7 +1421,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #fcf8e3;"
+									style="overflow: auto; background-color: #fcf8e3;" name="Sun5_4"
 									class="txtFontSize2 subject" >${regtiList4[5].subjectName }</textarea>
 									<input type="hidden" name="Su5_4" value="001:">
 							</p></td>
@@ -1429,7 +1429,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${!flg }">
 					<td><p class="size drop-target ">
 							<textarea cols="5" rows="1"
-								style="overflow: auto; background-color: #fcf8e3;"
+								style="overflow: auto; background-color: #fcf8e3;" name="Sun5_4"
 								class="txtFontSize2 subject">${regtiList4[5].subjectName }</textarea>
 								<input type="hidden" name="Su5_4" value="<fmt:formatNumber value="${regtiList4[5].subjectID}" pattern="000" />">
 						</p></td>
@@ -1439,7 +1439,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${flg }">
 						<td><p class="size drop-target ">
 								<textarea cols="5" rows="1"
-									style="overflow: auto; background-color: #fcf8e3;"
+									style="overflow: auto; background-color: #fcf8e3;" name="Sun6_4"
 									class="txtFontSize2 subject" >${regtiList4[6].subjectName }</textarea>
 									<input type="hidden" name="Su6_4" value="001:">
 							</p></td>
@@ -1447,7 +1447,7 @@ toastSelect("success","${Msg}")</script>
 					<c:if test="${!flg }">
 					<td><p class="size drop-target ">
 							<textarea cols="5" rows="1"
-								style="overflow: auto; background-color: #fcf8e3;"
+								style="overflow: auto; background-color: #fcf8e3;" name="Sun6_4"
 								class="txtFontSize2 subject">${regtiList4[6].subjectName }</textarea>
 								<input type="hidden" name="Su6_4" value="<fmt:formatNumber value="${regtiList4[6].subjectID}" pattern="000" />">
 						</p></td>

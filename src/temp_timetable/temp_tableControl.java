@@ -166,10 +166,14 @@ public class temp_tableControl extends HttpServlet {
 					//1限目の週間予定取得
 					//１限目
 					String subject1 = request.getParameter("Su"+ num +"_1");
+					String subjectN1 = request.getParameter("Sun"+ num +"_1");
+					System.out.println(subjectN1+"_test値_" + num);
 					int subjectID1;
 					if( subject1 == null || subject1.length() == 0 ){
 						subjectID1 = 1;
-					}else{
+					}else if(subjectN1 ==null || subjectN1.length() == 0){
+						subjectID1 = 1;
+					} else {
 						subjectID1 =  Integer.parseInt(request.getParameter("Su"+ num +"_1").substring(0, 3));
 					}
 
@@ -184,10 +188,13 @@ public class temp_tableControl extends HttpServlet {
 
 					//２限目
 					String subject2 = request.getParameter("Su"+ num +"_2");
+					String subjectN2 = request.getParameter("Sun"+ num +"_2");
 					int subjectID2;
 					if( subject2 == null || subject2.length() == 0 ){
 						subjectID2 = 1;
-					}else{
+					}else if(subjectN2 ==null || subjectN2.length() == 0){
+						subjectID2 = 1;
+					} else {
 						subjectID2 =  Integer.parseInt(request.getParameter("Su"+ num +"_2").substring(0, 3));
 					}
 
@@ -203,11 +210,14 @@ public class temp_tableControl extends HttpServlet {
 
 					//３限目
 					String subject3 = request.getParameter("Su"+ num +"_3");
+					String subjectN3 = request.getParameter("Sun"+ num +"_3");
 					int subjectID3;
 					if( subject3 == null || subject3.length() == 0 ){
 						subjectID3 = 1;
-					}else{
-						subjectID3 =  Integer.parseInt(request.getParameter("Su"+ num +"_3").substring(0, 3));
+					}else if(subjectN3 ==null || subjectN3.length() == 0){
+						subjectID3 = 1;
+					} else {
+						subjectID3 =  Integer.parseInt(request.getParameter("Su"+ num +"_2").substring(0, 3));
 					}
 
 					String teacherName3 = request.getParameter("Te"+ num +"_3");
@@ -221,10 +231,13 @@ public class temp_tableControl extends HttpServlet {
 
 					//4限目
 					String subject4 = request.getParameter("Su"+ num +"_4");
+					String subjectN4 = request.getParameter("Sun"+ num +"_4");
 					int subjectID4;
 					if( subject4 == null || subject4.length() == 0 ){
 						subjectID4 = 1;
-					}else{
+					}else if(subjectN4 ==null || subjectN4.length() == 0){
+						subjectID4 = 1;
+					} else {
 						subjectID4 =  Integer.parseInt(request.getParameter("Su"+ num +"_4").substring(0, 3));
 					}
 
