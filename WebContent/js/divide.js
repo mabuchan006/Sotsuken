@@ -59,7 +59,7 @@ $(function(e){
 				$("#sBtn").prop("disabled", false);
 			}
 		}
-	});
+	});//formCheck
 
 	//f_drag
 	$("#drag-target li").draggable({

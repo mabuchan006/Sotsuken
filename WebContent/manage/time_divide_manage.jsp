@@ -100,10 +100,9 @@
 			</div><!-- class="accordionJS" -->
 
 		</div><!-- class="col-md-1 fix margin-top" -->
+
 		<div class="col-md-1 col-md-offset-11 fix margin-top">
-
-		<a href="#top" id="to-top"><i class="fa fa-arrow-circle-up fa-4x i-color fix up-icon"></i></a>
-
+			<a href="#top"><i class="fa fa-arrow-circle-up fa-4x i-color fix up-icon1"></i></a>
 		</div>
 
 		<div class="container">
