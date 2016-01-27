@@ -109,6 +109,7 @@ public class temp_tableControl extends HttpServlet {
 		System.out.println(content_page);
 		System.out.println(tempTableName);
 
+
 		//使用DBManage
 		tempDBManage tempDBM = new tempDBManage(tempTableName);
 		subjectDBManage suDBM = new subjectDBManage(chooseClassID);
@@ -164,9 +165,13 @@ public class temp_tableControl extends HttpServlet {
 
 					//1限目の週間予定取得
 					//１限目
-					int subjectID1 = Integer.parseInt( request.getParameter("Su"+ num +"_1").substring(0, 2));
-					System.out.println(subjectID1);
-
+					String subject1 = request.getParameter("Su"+ num +"_1");
+					int subjectID1;
+					if( subject1 == null || subject1.length() == 0 ){
+						subjectID1 = 1;
+					}else{
+						subjectID1 =  Integer.parseInt(request.getParameter("Su"+ num +"_1").substring(0, 3));
+					}
 
 					String teacherName1 = request.getParameter("Te"+ num +"_1");
 					if( teacherName1 == null || teacherName1.length() == 0 ){
@@ -178,7 +183,14 @@ public class temp_tableControl extends HttpServlet {
 					}//null排除
 
 					//２限目
-					int subjectID2 = Integer.parseInt(request.getParameter("Su"+ num +"_2").substring(0, 2));
+					String subject2 = request.getParameter("Su"+ num +"_2");
+					int subjectID2;
+					if( subject2 == null || subject2.length() == 0 ){
+						subjectID2 = 1;
+					}else{
+						subjectID2 =  Integer.parseInt(request.getParameter("Su"+ num +"_2").substring(0, 3));
+					}
+
 
 					String teacherName2 = request.getParameter("Te"+ num +"_2");
 					if( teacherName2 == null || teacherName2.length() == 0 ){
@@ -190,7 +202,13 @@ public class temp_tableControl extends HttpServlet {
 					}//null排除
 
 					//３限目
-					int subjectID3 = Integer.parseInt(request.getParameter("Su"+ num +"_3").substring(0, 2));
+					String subject3 = request.getParameter("Su"+ num +"_3");
+					int subjectID3;
+					if( subject3 == null || subject3.length() == 0 ){
+						subjectID3 = 1;
+					}else{
+						subjectID3 =  Integer.parseInt(request.getParameter("Su"+ num +"_3").substring(0, 3));
+					}
 
 					String teacherName3 = request.getParameter("Te"+ num +"_3");
 					if( teacherName3 == null || teacherName3.length() == 0 ){
@@ -202,7 +220,13 @@ public class temp_tableControl extends HttpServlet {
 					}//null排除
 
 					//4限目
-					int subjectID4 = Integer.parseInt(request.getParameter("Su"+ num +"_4").substring(0, 2));
+					String subject4 = request.getParameter("Su"+ num +"_4");
+					int subjectID4;
+					if( subject4 == null || subject4.length() == 0 ){
+						subjectID4 = 1;
+					}else{
+						subjectID4 =  Integer.parseInt(request.getParameter("Su"+ num +"_4").substring(0, 3));
+					}
 
 					String teacherName4 = request.getParameter("Te"+ num +"_4");
 					if( teacherName4 == null || teacherName4.length() == 0 ){
