@@ -36,7 +36,7 @@
 						<h2 class="font">
 							<a draggable="false">${rs.key}</a>
 						</h2>
-						<ul class="font ">
+						<ul class=" ">
 						<c:forEach var="array" items="${rs.value }">
 							<li class="select0 size2">${array}</li>
 						</c:forEach>
@@ -53,7 +53,7 @@
 				<h2 class="font white">
 					NCS
 				</h2>
-					<ul class="font ">
+					<ul >
 						<li class="select0 size2">
 							<a href="#8F" draggable="false">8F </a>
 						</li>
@@ -76,11 +76,11 @@
 							<a href="#2F" draggable="false">2F </a>
 						</li>
 					</ul>
-				<h2 class="font white">
+				<h2 class=" white">
 					NMIC
 				</h2>
 
-					<ul class="font">
+					<ul class="">
 						<li class="select0 size2">
 							<a href="#M5F" draggable="false">5F</a>
 						</li>
