@@ -85,7 +85,7 @@
 	    $("#modal").click(function(e){
 	    	$("#msg").html("");
 	    })
-	    $("#login").click(function(e){
+	    $("#edit_pass").click(function(e){
 	    	$("#manageForm").submit(function(e){
 	    			//form送信キャンセル
 

@@ -33,18 +33,17 @@ public class eventDBManage extends DBAccess{
 
 	public eventDBManage() {
 		super(DRIVER_NAME);//DBAccessに接続
-		selectSql = String.format("select eventID,eventName,period,date,classID, r.roomName as roomName,"
+		selectSql = String.format("select eventID,eventName,period,date,classID, roomName,"
 				+ " endFlag,guestTeacher,notice"
-				+ " from tbl_event e inner join tbl_room r "
-				+ "ON e.roomID = r.roomID "
-				+ " ORDER BY date,eventID,eventName,period,classID, r.roomName");
+				+ " from tbl_event"
+				+ " ORDER BY date,eventID,eventName,period,classID,roomName");
 		//クラスIDから削除からsql
 		deleteSql = String.format("delete from tbl_event where eventID = ?");
 		//クラス情報登録sql
 		//int eventID,String eventName, int period, Date date, String classID,
 		//String roomName, String guestTeacher,String notice
-		insertSql= String.format(" insert into tbl_event (eventName,period,date,classID, roomID,endFlag,guestTeacher,notice) values (?,?,?,?,"
-				+ "(select roomID from tbl_room where roomName = ?)"//roomID検索
+		insertSql= String.format(" insert into tbl_event (eventName,period,date,classID, roomName,endFlag,guestTeacher,notice) values (?,?,?,?,"
+				+ "?"//roomID検索
 				+ ",?,?,?)");
 		updateSql= String.format("update tbl_event set eventName = ? where eventID = ?");
 		selectRoom= String.format("select * from tbl_room;");

@@ -41,6 +41,7 @@ public class teacherDBManage extends DBAccess{
 
 		updateSql= String.format("update tbl_teacher set teacherName = ? where teacherID = ?");
 		updatePass= String.format("update tbl_teacher set password = ? where teacherID = ?");
+
 	}
 	/*
 	 * @param teacherinfo 講師情報
@@ -110,6 +111,15 @@ public class teacherDBManage extends DBAccess{
 		}//if
 		disConnection();//切断
 	}//method
+
+	public int passwordDBUpdate(teacherInfo ti) throws Exception{
+			connect();
+			createStstement(updatePass);
+			getPstmt().setString(1, ti.getPassword());
+			getPstmt().setInt(2, ti.getTeacherID());
+			updateExe();//実行
+			return getIntResult();//更新の有無
+		}
 
 private String resultMsg(teacherInfo ti,String msg){
 

@@ -131,7 +131,7 @@ ${ teacher.teacherID }
 							    <div class="form-group">
 							        <label class="black md left">New Pass:</label>
 
-							            <input type="password" class="form-control col-md-6" name="password" id="new_ped" placeholder="新しいパスワード"/>
+							            <input type="password" class="form-control col-md-6" name="password" id="new_pwd" placeholder="新しいパスワード"/>
 
 							    </div>
 
