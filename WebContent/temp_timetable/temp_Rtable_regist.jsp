@@ -6,16 +6,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
-<!--ドラッグアンドドロップ  -->
-<script >
- 	$(function(e) {
- 		f_temp_drag();
- 		f_temp_drop(e);
- 		f_temp_formCheck();
- 		tempClickEvent();
- 	});
-</script>
-
 <!-- トースト用 -->
 <c:if test= "${!empty Msg }">
 <script>
@@ -131,7 +121,7 @@ toastSelect("success","${Msg}")</script>
 		<div class="input-group date col-md-2 " >
 			<span class="input-group-addon"> <i
 				class="fa fa-calendar green"></i>
-			</span> <input type="text" class="form-control" id="aaaa"
+			</span> <input type="text" class="form-control" id="dateReq"
 				placeholder="始点の日付入力" name="start" required="required"
 				value="${regtiList1[0].date }" />
 		</div>

@@ -1,6 +1,7 @@
-var textVal = "" , fcEle = "";
-//一時マスタ用
-function f_temp_drag() {
+var textVal = "";
+
+$(function(e){
+	//f_temp_drag
 	$(".drag-target td , .drag-target li").draggable({
 		appendTo : "body",
 		revert : "invalid",
@@ -10,10 +11,8 @@ function f_temp_drag() {
 			$(this).trigger("focusout");
 		}
 	})// draggable
-}// f_drag
 
-//ドロップ
-function f_temp_drop(e) {
+	//f_temp_drop
 	$(".drop-target").droppable({
 		drop : function(e, ui) {
 
@@ -43,19 +42,17 @@ function f_temp_drop(e) {
 			}
 		}// drop
 	})// droppable
-}// f_drop
 
-function f_temp_formCheck(e) {
+	//f_temp_formCheck
 	$("textarea.teacher").on({
 		"focusin" : function(e) {
 			textVal = $(this).val();
 			console.log("focusin:"+ textVal);
-			//fcEle = $(this).children("textarea").get(0);
-		},
+		},//focusin
 		"keyup" : function(e) {
 			textVal = $(this).val();
 			console.log("keyup:"+ textVal);
-		},
+		},//keyup
 		"focusout" : function(e){
 			var insVal = "";
 			$.each($(".drag-target li"), function(k,teacher){
@@ -70,11 +67,11 @@ function f_temp_formCheck(e) {
 			console.log("focusout textVal :" + textVal);
 			console.log("focusout insVal :" + insVal);
 			$(this).val(insVal);
-		}
-	})
-}
-function tempClickEvent(){
+		}//focusout
+	});//f_temp_drag
+
+	//tempClickEvent
 	$("#confBtn").click(function(){
-		$("#aaaa").removeAttr("required");
-	})
-}
+		$("#dateReq").removeAttr("required");
+	});//tempClickEvent
+})
