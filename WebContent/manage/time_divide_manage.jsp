@@ -51,7 +51,7 @@
 			<h1>room</h1>
 			<div>
 				<h2 class="font">
-					<a href="#" draggable="false">NCS</a>
+					NCS
 				</h2>
 					<ul class="font ">
 						<li class="select0 size2">
