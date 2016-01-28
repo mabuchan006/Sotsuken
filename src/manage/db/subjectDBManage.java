@@ -2,6 +2,7 @@ package manage.db;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.TreeMap;
 
@@ -100,7 +101,7 @@ public class subjectDBManage extends DBAccess {
 			}//while
 			subjectinfo.setClassList(classList);
 			// 科目要素を1件ずつリストに追加
-			if(!((subjectinfo.getSubjectName()).equals("　"))){
+			if(!((subjectinfo.getSubjectName()).length()==0)){//空白排除
 			subjectList.add(subjectinfo);
 			}
 			classList=new ArrayList<String>();
@@ -262,6 +263,7 @@ public class subjectDBManage extends DBAccess {
 			if (!(classID.substring(0, 2).equals(par_grade))) {
 				// ex ) classMap → R4: [A1,A2,A3]
 				// R3: [A1,A2]
+				Collections.sort(par_classList);
 				classMap.put(par_grade, par_classList);
 
 				// 次のクラス

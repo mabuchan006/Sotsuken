@@ -4,6 +4,8 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
+
 import DB.DBAccess;
 /*
  * @author syam
@@ -111,6 +113,7 @@ public class classDBManage extends DBAccess{
 
 			break;
 		case DELETE:
+			try{
 			createStstement(deleteClass);
 
 			getPstmt().setString(1, ci.getClassID());// 削除するIDをセット
@@ -118,6 +121,9 @@ public class classDBManage extends DBAccess{
 			createStstement(deleteSql);
 			getPstmt().setString(1,ci.getClassID());//削除するIDをセット
 			updateExe();//実行
+			}catch (MySQLIntegrityConstraintViolationException e) {
+				System.out.println("既に存在しています");
+			}
 
 			break;
 		case UODATE:

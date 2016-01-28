@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
+
 import DB.DBAccess;
 import Tools.layoutInclude;
 import Tools.layoutInclude.layoutIncludeInfo;
@@ -284,6 +286,9 @@ public class ManageUpdateControl extends HttpServlet {
 						}//if
 					}
 
+				} catch (MySQLIntegrityConstraintViolationException e) {
+					// TODO 自動生成された catch ブロック
+					request.setAttribute("Msg","このクラスは使用されています。");
 				} catch (Exception e) {
 					// TODO 自動生成された catch ブロック
 					e.printStackTrace();
@@ -337,10 +342,10 @@ public class ManageUpdateControl extends HttpServlet {
 					}//if
 				}
 
-			} catch (Exception e) {
+			} catch (MySQLIntegrityConstraintViolationException e) {
 				// TODO 自動生成された catch ブロック
-				e.printStackTrace();
-			}
+				request.setAttribute("Msg","該当講師は使用されています。");
+			} catch (Exception e) {}
 		}//teacher
 
 	//イベント管理画面指定時の処理
