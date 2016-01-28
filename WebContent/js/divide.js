@@ -107,6 +107,8 @@ $(function(e){
 		$("form").submit(function(e){
 			//form送信キャンセル
 			e.preventDefault();
+			data = "";
+			elem = "";
 			//formの情報を配列化
 			data = $(this).serializeArray();
 			//delete実行のための情報
@@ -139,10 +141,9 @@ $(function(e){
 					$(this).attr("method"),
 					$(this).attr("action"),
 					"json",
-					data
+					data,
+					toastSelect("success","登録しました。")
 			);
-			//modal呼び出し
-			toastSelect("success","登録しました。");
 			$("#checkFlag").get(0).value = "false";
 			$("#sBtn").prop("disabled", true);
 		});
@@ -154,8 +155,45 @@ $(function(e){
 			for(var i = 0; i < $("textarea").length; i++){
 				$("textarea").get(i).value = "";
 			}
-			$("#checkFlag").get(0).value = "true";
-			$("#sBtn").prop("disabled", false);
+			data = "";
+			elem = "";
+			//formの情報を配列化
+			data = $(this).serializeArray();
+			//アクティブになっているタグの曜日を取得
+			elem = $(".active").children("input").get(0);
+			//曜日の情報をform情報に入れる
+			switch( elem.name ){
+				case "mon" :
+					data.push({ name : "ajaxWeek" , value : "月" });
+					break;
+				case "tue" :
+					data.push({ name : "ajaxWeek" , value : "火" });
+					break;
+				case "wed" :
+					data.push({ name : "ajaxWeek" , value : "水" });
+					break;
+				case "thu" :
+					data.push({ name : "ajaxWeek" , value : "木" });
+					break;
+				case "fri" :
+					data.push({ name : "ajaxWeek" , value : "金" });
+					break;
+				default :
+					data.push({ name : "ajaxWeek" , value : "月" });
+					break;
+			}
+			//delete実行のための情報
+			data.push({ name : "regist" , value : ""});
+			f_ajax(
+					//form
+					$(this).attr("method"),
+					$(this).attr("action"),
+					"json",
+					data,
+					toastSelect("success","全件削除しました。")
+			);
+//			$("#checkFlag").get(0).value = "true";
+//			$("#sBtn").prop("disabled", false);
 		}
 	});
 
@@ -209,7 +247,7 @@ $(function(e){
 })
 
 //method,action,json,
-function f_ajax(type, url, dataType,data){
+function f_ajax(type, url, dataType,data,msg){
 	$.ajax({
 		type : type,
 		url : url,
@@ -217,8 +255,14 @@ function f_ajax(type, url, dataType,data){
 		data : data
 	}).done(function(res){//成功 res=out.print
 		f_ajax_done(res);
+		if(msg != null){
+			msg;
+		}
 	}).fail(function(jqXHR, textStatus, errorThrown ){//失敗
 		console.log("NG:" + jqXHR.status + ":" + textStatus.status + ":" + errorThrown);
+		if(msg != null){
+			msg;
+		}
 	})
 }
 //成功処理
