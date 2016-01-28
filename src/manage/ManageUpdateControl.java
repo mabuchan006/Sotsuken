@@ -27,6 +27,7 @@ import manage.db.subjectInfo;
 import manage.db.teacherDBManage;
 import manage.db.teacherInfo;
 import temp_timetable.db.tempDBManage;
+import timetable.db.masterDBManage;
 
 /**
  * Servlet implementation class ManageUpdateControl
@@ -55,7 +56,7 @@ public class ManageUpdateControl extends HttpServlet {
 		//文字コードutf8
 		request.setCharacterEncoding("UTF-8");
 		//jspからのページ情報取得
-		String get_page = request.getParameter("page")==null?"teacher_manage"
+		String get_page = request.getParameter("page")==null?"class_manage"
 				:request.getParameter("page");
 
 		//使用するcss,jsファイルの適用
@@ -250,6 +251,7 @@ public class ManageUpdateControl extends HttpServlet {
 		private void classUpdate(HttpServletRequest request, classDBManage cdm) {
 
 				tempDBManage tempDBManage =new tempDBManage();
+				masterDBManage masterDBManage =new masterDBManage();
 				//送信されたクラス情報取得
 				classInfo ci = new classInfo(
 						request.getParameter("classID")==null?""//true
@@ -264,13 +266,16 @@ public class ManageUpdateControl extends HttpServlet {
 
 					//登録
 					if(request.getParameter("regist_class") != null ){
-						cdm.classDBUpdate(ci, DBAccess.INSERT, "登録");
-						
 
+						cdm.classDBUpdate(ci, DBAccess.INSERT, "登録");
+						tempDBManage.tblCreate(ci.getClassID());
+						masterDBManage.tblCreate(ci.getClassID());
 					}
 					//削除
 					if(request.getParameter("delete_class") != null){
 						cdm.classDBUpdate(ci, DBAccess.DELETE, "削除");
+						tempDBManage.tblDrop(ci.getClassID());
+						masterDBManage.tblDrop(ci.getClassID());
 
 					}//if
 					//更新

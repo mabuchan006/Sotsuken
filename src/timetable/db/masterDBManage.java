@@ -145,7 +145,7 @@ public class masterDBManage extends DBAccess {
 	}
 	//ClassTBL動的対応用
 	public void tblDrop(String classID) throws Exception {
-		dropDBSQL ="DROP TABLE if exists ?";
+		dropDBSQL ="DROP TABLE if exists ? ";
 		String tblName = "tbl_master_"+ classID +"timetable";
 		connect();
 		createStstement(dropDBSQL);

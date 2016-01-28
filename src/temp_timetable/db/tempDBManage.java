@@ -144,14 +144,14 @@ public class tempDBManage extends DBAccess {
 	}
 	//ClassTBL動的対応用
 	public void tblCreate(String classID) throws Exception{
-		createDBSQL = String.format("CREATE TABLE IF NOT EXISTS ?( "
-				+ "period CHAR(1) NOT NULL, "
+		createDBSQL = String.format("CREATE TABLE IF NOT EXISTS ?"
+				+ "(period CHAR(1) NOT NULL, "
 				+ "subjectID int NOT NULL auto_increment, "
 				+ "date DATE NOT NULL, "
 				+ "classID CHAR(4) NOT NULL, "
 				+ "roomName VARCHAR(20) NOT NULL, "
 				+ "teacherName VARCHAR(20) NOT NULL, "
-				+ "PRIMARY KEY(period,date,classID,subjectID), "
+				+ "PRIMARY KEY (period,date,classID,subjectID), "
 				+ "FOREIGN KEY (classID) "
 				+ "REFERENCES tbl_class(classID), "
 				+ "FOREIGN KEY (subjectID) "
@@ -166,8 +166,9 @@ public class tempDBManage extends DBAccess {
 	}
 	//ClassTBL動的対応用
 	public void tblDrop(String classID) throws Exception {
-		dropDBSQL ="DROP TABLE if exists ?";
+		dropDBSQL ="DROP TABLE if exists ? ";
 		String tblName = "tbl_temp_"+ classID +"timetable";
+		System.out.println(tblName);
 		connect();
 		createStstement(dropDBSQL);
 		getPstmt().setString(1, tblName);
