@@ -74,4 +74,15 @@ $(function(e){
 	$("#confBtn").click(function(){
 		$("#dateReq").removeAttr("required");
 	});//tempClickEvent
+
+	//Sun0_1
+	//Te0_1
+	//Ro0_1
+
+	$.each($("input.roomID"),function(k,v){
+		if($(v).val() === ""){
+			$("textarea[name=\"Sun" + $(v).attr("name").substr(-3) + "\"]").prop("disabled", true);
+			$("textarea[name=\"Te" + $(v).attr("name").substr(-3) + "\"]").prop("disabled", true);
+		}
+	})
 })

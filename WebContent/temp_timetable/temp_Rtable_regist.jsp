@@ -313,7 +313,7 @@ toastSelect("success","${Msg}")</script>
 						<c:if test="${rooms1List[index].week == '月'}" var="flg_0" />
 						<c:if test="${flg_0 }">
 							<td class="fonts">${ rooms1List[index].roomName}</td>
-							<input type="hidden" name="Ro0_1"
+							<input type="hidden" class="roomID" name="Ro0_1"
 								value="${ rooms1List[index].roomName}" />
 							<%
 								status++;
@@ -324,7 +324,7 @@ toastSelect("success","${Msg}")</script>
 						%>
 						<c:if test="${!flg_0 }">
 							<td></td>
-							<input type="hidden" name="Ro0_1" value="" />
+							<input type="hidden" class="roomID" name="Ro0_1" value="" />
 						</c:if>
 						<%
 							}
@@ -339,7 +339,7 @@ toastSelect("success","${Msg}")</script>
 						<c:if test="${rooms1List[index].week == '火'}" var="flg_1" />
 						<c:if test="${flg_1 }">
 							<td class="fonts">${ rooms1List[index].roomName}</td>
-							<input type="hidden" name="Ro1_1"
+							<input type="hidden" class="roomID" name="Ro1_1"
 								value="${ rooms1List[index].roomName}" />
 							<%
 								status++;
@@ -350,7 +350,7 @@ toastSelect("success","${Msg}")</script>
 						%>
 						<c:if test="${!flg_1 }">
 							<td></td>
-							<input type="hidden" name="Ro1_1" value="" />
+							<input type="hidden" class="roomID" name="Ro1_1" value="" />
 						</c:if>
 						<%
 							}
@@ -365,7 +365,7 @@ toastSelect("success","${Msg}")</script>
 						<c:if test="${rooms1List[index].week == '水'}" var="flg_2" />
 						<c:if test="${flg_2 }">
 							<td class="fonts">${ rooms1List[index].roomName}</td>
-							<input type="hidden" name="Ro2_1"
+							<input type="hidden" class="roomID" name="Ro2_1"
 								value="${ rooms1List[index].roomName}" />
 							<%
 								status++;
@@ -376,7 +376,7 @@ toastSelect("success","${Msg}")</script>
 						%>
 						<c:if test="${!flg_2 }">
 							<td></td>
-							<input type="hidden" name="Ro2_1" value="" />
+							<input type="hidden" class="roomID" name="Ro2_1" value="" />
 						</c:if>
 						<%
 							}
@@ -391,7 +391,7 @@ toastSelect("success","${Msg}")</script>
 						<c:if test="${rooms1List[index].week == '木'}" var="flg_3" />
 						<c:if test="${flg_3 }">
 							<td class="fonts">${ rooms1List[index].roomName}</td>
-							<input type="hidden" name="Ro3_1"
+							<input type="hidden" class="roomID" name="Ro3_1"
 								value="${ rooms1List[index].roomName}" />
 							<%
 								status++;
@@ -402,7 +402,7 @@ toastSelect("success","${Msg}")</script>
 						%>
 						<c:if test="${!flg_3 }">
 							<td></td>
-							<input type="hidden" name="Ro3_1" value="" />
+							<input type="hidden" class="roomID" name="Ro3_1" value="" />
 						</c:if>
 						<%
 							}
@@ -417,7 +417,7 @@ toastSelect("success","${Msg}")</script>
 						<c:if test="${rooms1List[index].week == '金'}" var="flg_4" />
 						<c:if test="${flg_4}">
 							<td class="fonts">${ rooms1List[index].roomName}</td>
-							<input type="hidden" name="Ro4_1"
+							<input type="hidden" class="roomID" name="Ro4_1"
 								value="${ rooms1List[index].roomName}" />
 							<%
 								status++;
@@ -428,7 +428,7 @@ toastSelect("success","${Msg}")</script>
 						%>
 						<c:if test="${!flg_4 }">
 							<td></td>
-							<input type="hidden" name="Ro4_1" value="" />
+							<input type="hidden" class="roomID" name="Ro4_1" value="" />
 						</c:if>
 						<%
 							}
@@ -443,7 +443,7 @@ toastSelect("success","${Msg}")</script>
 						<c:if test="${rooms1List[index].week == '土'}" var="flg_5" />
 						<c:if test="${flg_5 }">
 							<td class="fonts">${ rooms1List[index].roomName}</td>
-							<input type="hidden" name="Ro5_1"
+							<input type="hidden" class="roomID" name="Ro5_1"
 								value="${ rooms1List[index].roomName}" />
 							<%
 								status++;
@@ -454,7 +454,7 @@ toastSelect("success","${Msg}")</script>
 						%>
 						<c:if test="${!flg_5 }">
 							<td></td>
-							<input type="hidden" name="Ro5_1" value="" />
+							<input type="hidden" class="roomID" name="Ro5_1" value="" />
 						</c:if>
 						<%
 							}
@@ -469,7 +469,7 @@ toastSelect("success","${Msg}")</script>
 						<c:if test="${rooms1List[index].week == '日'}" var="flg_6" />
 						<c:if test="${flg_6 }">
 							<td class="fonts">${ rooms1List[index].roomName}</td>
-							<input type="hidden" name="Ro6_1"
+							<input type="hidden" class="roomID" name="Ro6_1"
 								value="${ rooms1List[index].roomName}" />
 							<%
 								status++;
@@ -480,7 +480,7 @@ toastSelect("success","${Msg}")</script>
 						%>
 						<c:if test="${!flg_6 }">
 							<td></td>
-							<input type="hidden" name="Ro6_1" value="" />
+							<input type="hidden" class="roomID" name="Ro6_1" value="" />
 						</c:if>
 						<%
 							}
@@ -500,13 +500,13 @@ toastSelect("success","${Msg}")</script>
 
 				<c:if test="${!list_flg }">
 					<tr class="info">
-						<td><input type="hidden" name="Ro0_1" value="" /></td>
-						<td><input type="hidden" name="Ro1_1" value="" /></td>
-						<td><input type="hidden" name="Ro2_1" value="" /></td>
-						<td><input type="hidden" name="Ro3_1" value="" /></td>
-						<td><input type="hidden" name="Ro4_1" value="" /></td>
-						<td><input type="hidden" name="Ro5_1" value="" /></td>
-						<td><input type="hidden" name="Ro6_1" value="" /></td>
+						<td><input type="hidden" class="roomID" name="Ro0_1" value="" /></td>
+						<td><input type="hidden" class="roomID" name="Ro1_1" value="" /></td>
+						<td><input type="hidden" class="roomID" name="Ro2_1" value="" /></td>
+						<td><input type="hidden" class="roomID" name="Ro3_1" value="" /></td>
+						<td><input type="hidden" class="roomID" name="Ro4_1" value="" /></td>
+						<td><input type="hidden" class="roomID" name="Ro5_1" value="" /></td>
+						<td><input type="hidden" class="roomID" name="Ro6_1" value="" /></td>
 					</tr>
 				</c:if>
 				<!-- １限目　教室 終わり -->
@@ -705,7 +705,7 @@ toastSelect("success","${Msg}")</script>
 						<c:if test="${rooms2List[index].week == '月'}" var="flg_0" />
 						<c:if test="${flg_0 }">
 							<td class="fonts">${ rooms2List[index].roomName}</td>
-							<input type="hidden" name="Ro0_2"
+							<input type="hidden" class="roomID" name="Ro0_2"
 								value="${ rooms2List[index].roomName}" />
 							<%
 								status++;
@@ -716,7 +716,7 @@ toastSelect("success","${Msg}")</script>
 						%>
 						<c:if test="${!flg_0 }">
 							<td></td>
-							<input type="hidden" name="Ro0_2" value="" />
+							<input type="hidden" class="roomID" name="Ro0_2" value="" />
 						</c:if>
 						<%
 							}
@@ -731,7 +731,7 @@ toastSelect("success","${Msg}")</script>
 						<c:if test="${rooms2List[index].week == '火'}" var="flg_1" />
 						<c:if test="${flg_1 }">
 							<td class="fonts">${ rooms2List[index].roomName}</td>
-							<input type="hidden" name="Ro1_2"
+							<input type="hidden" class="roomID" name="Ro1_2"
 								value="${ rooms2List[index].roomName}" />
 							<%
 								status++;
@@ -742,7 +742,7 @@ toastSelect("success","${Msg}")</script>
 						%>
 						<c:if test="${!flg_1 }">
 							<td></td>
-							<input type="hidden" name="Ro1_2" value="" />
+							<input type="hidden" class="roomID" name="Ro1_2" value="" />
 						</c:if>
 						<%
 							}
@@ -757,7 +757,7 @@ toastSelect("success","${Msg}")</script>
 						<c:if test="${rooms2List[index].week == '水'}" var="flg_2" />
 						<c:if test="${flg_2 }">
 							<td class="fonts">${ rooms2List[index].roomName}</td>
-							<input type="hidden" name="Ro2_2"
+							<input type="hidden" class="roomID" name="Ro2_2"
 								value="${ rooms2List[index].roomName}" />
 							<%
 								status++;
@@ -768,7 +768,7 @@ toastSelect("success","${Msg}")</script>
 						%>
 						<c:if test="${!flg_2 }">
 							<td></td>
-							<input type="hidden" name="Ro2_2" value="" />
+							<input type="hidden" class="roomID" name="Ro2_2" value="" />
 						</c:if>
 						<%
 							}
@@ -783,7 +783,7 @@ toastSelect("success","${Msg}")</script>
 						<c:if test="${rooms2List[index].week == '木'}" var="flg_3" />
 						<c:if test="${flg_3 }">
 							<td class="fonts">${ rooms2List[index].roomName}</td>
-							<input type="hidden" name="Ro3_2"
+							<input type="hidden" class="roomID" name="Ro3_2"
 								value="${ rooms2List[index].roomName}" />
 							<%
 								status++;
@@ -794,7 +794,7 @@ toastSelect("success","${Msg}")</script>
 						%>
 						<c:if test="${!flg_3 }">
 							<td></td>
-							<input type="hidden" name="Ro3_2" value="" />
+							<input type="hidden" class="roomID" name="Ro3_2" value="" />
 						</c:if>
 						<%
 							}
@@ -809,7 +809,7 @@ toastSelect("success","${Msg}")</script>
 						<c:if test="${rooms2List[index].week == '金'}" var="flg_4" />
 						<c:if test="${flg_4}">
 							<td class="fonts">${ rooms2List[index].roomName}</td>
-							<input type="hidden" name="Ro4_2"
+							<input type="hidden" class="roomID" name="Ro4_2"
 								value="${ rooms2List[index].roomName}" />
 							<%
 								status++;
@@ -820,7 +820,7 @@ toastSelect("success","${Msg}")</script>
 						%>
 						<c:if test="${!flg_4 }">
 							<td></td>
-							<input type="hidden" name="Ro4_2" value="" />
+							<input type="hidden" class="roomID" name="Ro4_2" value="" />
 						</c:if>
 						<%
 							}
@@ -835,7 +835,7 @@ toastSelect("success","${Msg}")</script>
 						<c:if test="${rooms2List[index].week == '土'}" var="flg_5" />
 						<c:if test="${flg_5 }">
 							<td class="fonts">${ rooms2List[index].roomName}</td>
-							<input type="hidden" name="Ro5_2"
+							<input type="hidden" class="roomID" name="Ro5_2"
 								value="${ rooms2List[index].roomName}" />
 							<%
 								status++;
@@ -846,7 +846,7 @@ toastSelect("success","${Msg}")</script>
 						%>
 						<c:if test="${!flg_5 }">
 							<td></td>
-							<input type="hidden" name="Ro5_2" value="" />
+							<input type="hidden" class="roomID" name="Ro5_2" value="" />
 						</c:if>
 						<%
 							}
@@ -861,7 +861,7 @@ toastSelect("success","${Msg}")</script>
 						<c:if test="${rooms2List[index].week == '日'}" var="flg_6" />
 						<c:if test="${flg_6 }">
 							<td class="fonts">${ rooms2List[index].roomName}</td>
-							<input type="hidden" name="Ro6_2"
+							<input type="hidden" class="roomID" name="Ro6_2"
 								value="${ rooms2List[index].roomName}" />
 							<%
 								status++;
@@ -872,7 +872,7 @@ toastSelect("success","${Msg}")</script>
 						%>
 						<c:if test="${!flg_6 }">
 							<td></td>
-							<input type="hidden" name="Ro6_2" value="" />
+							<input type="hidden" class="roomID" name="Ro6_2" value="" />
 						</c:if>
 						<%
 							}
@@ -892,13 +892,13 @@ toastSelect("success","${Msg}")</script>
 
 				<c:if test="${!list_flg }">
 					<tr class="danger">
-						<td><input type="hidden" name="Ro0_2" value="" /></td>
-						<td><input type="hidden" name="Ro1_2" value="" /></td>
-						<td><input type="hidden" name="Ro2_2" value="" /></td>
-						<td><input type="hidden" name="Ro3_2" value="" /></td>
-						<td><input type="hidden" name="Ro4_2" value="" /></td>
-						<td><input type="hidden" name="Ro5_2" value="" /></td>
-						<td><input type="hidden" name="Ro6_2" value="" /></td>
+						<td><input type="hidden" class="roomID" name="Ro0_2" value="" /></td>
+						<td><input type="hidden" class="roomID" name="Ro1_2" value="" /></td>
+						<td><input type="hidden" class="roomID" name="Ro2_2" value="" /></td>
+						<td><input type="hidden" class="roomID" name="Ro3_2" value="" /></td>
+						<td><input type="hidden" class="roomID" name="Ro4_2" value="" /></td>
+						<td><input type="hidden" class="roomID" name="Ro5_2" value="" /></td>
+						<td><input type="hidden" class="roomID" name="Ro6_2" value="" /></td>
 					</tr>
 				</c:if>
 
@@ -1093,7 +1093,7 @@ toastSelect("success","${Msg}")</script>
 						<c:if test="${rooms3List[index].week == '月'}" var="flg_0" />
 						<c:if test="${flg_0 }">
 							<td class="fonts">${ rooms3List[index].roomName}</td>
-							<input type="hidden" name="Ro0_3"
+							<input type="hidden" class="roomID" name="Ro0_3"
 								value="${ rooms3List[index].roomName}" />
 							<%
 								status++;
@@ -1104,7 +1104,7 @@ toastSelect("success","${Msg}")</script>
 						%>
 						<c:if test="${!flg_0 }">
 							<td></td>
-							<input type="hidden" name="Ro0_3" value="" />
+							<input type="hidden" class="roomID" name="Ro0_3" value="" />
 						</c:if>
 						<%
 							}
@@ -1119,7 +1119,7 @@ toastSelect("success","${Msg}")</script>
 						<c:if test="${rooms3List[index].week == '火'}" var="flg_1" />
 						<c:if test="${flg_1 }">
 							<td class="fonts">${ rooms3List[index].roomName}</td>
-							<input type="hidden" name="Ro1_3"
+							<input type="hidden" class="roomID" name="Ro1_3"
 								value="${ rooms3List[index].roomName}" />
 							<%
 								status++;
@@ -1130,7 +1130,7 @@ toastSelect("success","${Msg}")</script>
 						%>
 						<c:if test="${!flg_1 }">
 							<td></td>
-							<input type="hidden" name="Ro1_3" value="" />
+							<input type="hidden" class="roomID" name="Ro1_3" value="" />
 						</c:if>
 						<%
 							}
@@ -1145,7 +1145,7 @@ toastSelect("success","${Msg}")</script>
 						<c:if test="${rooms3List[index].week == '水'}" var="flg_2" />
 						<c:if test="${flg_2 }">
 							<td class="fonts">${ rooms3List[index].roomName}</td>
-							<input type="hidden" name="Ro2_3"
+							<input type="hidden" class="roomID" name="Ro2_3"
 								value="${ rooms3List[index].roomName}" />
 							<%
 								status++;
@@ -1156,7 +1156,7 @@ toastSelect("success","${Msg}")</script>
 						%>
 						<c:if test="${!flg_2 }">
 							<td></td>
-							<input type="hidden" name="Ro2_3" value="" />
+							<input type="hidden" class="roomID" name="Ro2_3" value="" />
 						</c:if>
 						<%
 							}
@@ -1171,7 +1171,7 @@ toastSelect("success","${Msg}")</script>
 						<c:if test="${rooms3List[index].week == '木'}" var="flg_3" />
 						<c:if test="${flg_3 }">
 							<td class="fonts">${ rooms3List[index].roomName}</td>
-							<input type="hidden" name="Ro3_3"
+							<input type="hidden" class="roomID" name="Ro3_3"
 								value="${ rooms3List[index].roomName}" />
 							<%
 								status++;
@@ -1182,7 +1182,7 @@ toastSelect("success","${Msg}")</script>
 						%>
 						<c:if test="${!flg_3 }">
 							<td></td>
-							<input type="hidden" name="Ro3_3" value="" />
+							<input type="hidden" class="roomID" name="Ro3_3" value="" />
 						</c:if>
 						<%
 							}
@@ -1197,7 +1197,7 @@ toastSelect("success","${Msg}")</script>
 						<c:if test="${rooms3List[index].week == '金'}" var="flg_4" />
 						<c:if test="${flg_4}">
 							<td class="fonts">${ rooms3List[index].roomName}</td>
-							<input type="hidden" name="Ro4_3"
+							<input type="hidden" class="roomID" name="Ro4_3"
 								value="${ rooms3List[index].roomName}" />
 							<%
 								status++;
@@ -1208,7 +1208,7 @@ toastSelect("success","${Msg}")</script>
 						%>
 						<c:if test="${!flg_4 }">
 							<td></td>
-							<input type="hidden" name="Ro4_3" value="" />
+							<input type="hidden" class="roomID" name="Ro4_3" value="" />
 						</c:if>
 						<%
 							}
@@ -1223,7 +1223,7 @@ toastSelect("success","${Msg}")</script>
 						<c:if test="${rooms3List[index].week == '土'}" var="flg_5" />
 						<c:if test="${flg_5 }">
 							<td class="fonts">${ rooms3List[index].roomName}</td>
-							<input type="hidden" name="Ro5_3"
+							<input type="hidden" class="roomID" name="Ro5_3"
 								value="${ rooms3List[index].roomName}" />
 							<%
 								status++;
@@ -1234,7 +1234,7 @@ toastSelect("success","${Msg}")</script>
 						%>
 						<c:if test="${!flg_5 }">
 							<td></td>
-							<input type="hidden" name="Ro5_3" value="" />
+							<input type="hidden" class="roomID" name="Ro5_3" value="" />
 						</c:if>
 						<%
 							}
@@ -1249,7 +1249,7 @@ toastSelect("success","${Msg}")</script>
 						<c:if test="${rooms3List[index].week == '日'}" var="flg_6" />
 						<c:if test="${flg_6 }">
 							<td class="fonts">${ rooms3List[index].roomName}</td>
-							<input type="hidden" name="Ro6_3"
+							<input type="hidden" class="roomID" name="Ro6_3"
 								value="${ rooms3List[index].roomName}" />
 							<%
 								status++;
@@ -1260,7 +1260,7 @@ toastSelect("success","${Msg}")</script>
 						%>
 						<c:if test="${!flg_6 }">
 							<td></td>
-							<input type="hidden" name="Ro6_3" value="" />
+							<input type="hidden" class="roomID" name="Ro6_3" value="" />
 						</c:if>
 						<%
 							}
@@ -1280,13 +1280,13 @@ toastSelect("success","${Msg}")</script>
 
 				<c:if test="${!list_flg }">
 					<tr class="success">
-						<td><input type="hidden" name="Ro0_3" value="" /></td>
-						<td><input type="hidden" name="Ro1_3" value="" /></td>
-						<td><input type="hidden" name="Ro2_3" value="" /></td>
-						<td><input type="hidden" name="Ro3_3" value="" /></td>
-						<td><input type="hidden" name="Ro4_3" value="" /></td>
-						<td><input type="hidden" name="Ro5_3" value="" /></td>
-						<td><input type="hidden" name="Ro6_3" value="" /></td>
+						<td><input type="hidden" class="roomID" name="Ro0_3" value="" /></td>
+						<td><input type="hidden" class="roomID" name="Ro1_3" value="" /></td>
+						<td><input type="hidden" class="roomID" name="Ro2_3" value="" /></td>
+						<td><input type="hidden" class="roomID" name="Ro3_3" value="" /></td>
+						<td><input type="hidden" class="roomID" name="Ro4_3" value="" /></td>
+						<td><input type="hidden" class="roomID" name="Ro5_3" value="" /></td>
+						<td><input type="hidden" class="roomID" name="Ro6_3" value="" /></td>
 					</tr>
 				</c:if>
 
@@ -1483,7 +1483,7 @@ toastSelect("success","${Msg}")</script>
 						<c:if test="${rooms4List[index].week == '月'}" var="flg_0" />
 						<c:if test="${flg_0 }">
 							<td class="fonts">${ rooms4List[index].roomName}</td>
-							<input type="hidden" name="Ro0_4"
+							<input type="hidden" class="roomID" name="Ro0_4"
 								value="${ rooms4List[index].roomName}" />
 							<%
 								status++;
@@ -1494,7 +1494,7 @@ toastSelect("success","${Msg}")</script>
 						%>
 						<c:if test="${!flg_0 }">
 							<td></td>
-							<input type="hidden" name="Ro0_4" value="" />
+							<input type="hidden" class="roomID" name="Ro0_4" value="" />
 						</c:if>
 						<%
 							}
@@ -1509,7 +1509,7 @@ toastSelect("success","${Msg}")</script>
 						<c:if test="${rooms4List[index].week == '火'}" var="flg_1" />
 						<c:if test="${flg_1 }">
 							<td class="fonts">${ rooms4List[index].roomName}</td>
-							<input type="hidden" name="Ro1_4"
+							<input type="hidden" class="roomID" name="Ro1_4"
 								value="${ rooms4List[index].roomName}" />
 							<%
 								status++;
@@ -1520,7 +1520,7 @@ toastSelect("success","${Msg}")</script>
 						%>
 						<c:if test="${!flg_1 }">
 							<td></td>
-							<input type="hidden" name="Ro1_4" value="" />
+							<input type="hidden" class="roomID" name="Ro1_4" value="" />
 						</c:if>
 						<%
 							}
@@ -1535,7 +1535,7 @@ toastSelect("success","${Msg}")</script>
 						<c:if test="${rooms4List[index].week == '水'}" var="flg_2" />
 						<c:if test="${flg_2 }">
 							<td class="fonts">${ rooms4List[index].roomName}</td>
-							<input type="hidden" name="Ro2_4"
+							<input type="hidden" class="roomID" name="Ro2_4"
 								value="${ rooms4List[index].roomName}" />
 							<%
 								status++;
@@ -1546,7 +1546,7 @@ toastSelect("success","${Msg}")</script>
 						%>
 						<c:if test="${!flg_2 }">
 							<td></td>
-							<input type="hidden" name="Ro2_4" value="" />
+							<input type="hidden" class="roomID" name="Ro2_4" value="" />
 						</c:if>
 						<%
 							}
@@ -1561,7 +1561,7 @@ toastSelect("success","${Msg}")</script>
 						<c:if test="${rooms4List[index].week == '木'}" var="flg_3" />
 						<c:if test="${flg_3 }">
 							<td class="fonts">${ rooms4List[index].roomName}</td>
-							<input type="hidden" name="Ro3_4"
+							<input type="hidden" class="roomID" name="Ro3_4"
 								value="${ rooms4List[index].roomName}" />
 							<%
 								status++;
@@ -1572,7 +1572,7 @@ toastSelect("success","${Msg}")</script>
 						%>
 						<c:if test="${!flg_3 }">
 							<td></td>
-							<input type="hidden" name="Ro3_4" value="" />
+							<input type="hidden" class="roomID" name="Ro3_4" value="" />
 						</c:if>
 						<%
 							}
@@ -1587,7 +1587,7 @@ toastSelect("success","${Msg}")</script>
 						<c:if test="${rooms4List[index].week == '金'}" var="flg_4" />
 						<c:if test="${flg_4}">
 							<td class="fonts">${ rooms4List[index].roomName}</td>
-							<input type="hidden" name="Ro4_4"
+							<input type="hidden" class="roomID" name="Ro4_4"
 								value="${ rooms4List[index].roomName}" />
 							<%
 								status++;
@@ -1598,7 +1598,7 @@ toastSelect("success","${Msg}")</script>
 						%>
 						<c:if test="${!flg_4 }">
 							<td></td>
-							<input type="hidden" name="Ro4_4" value="" />
+							<input type="hidden" class="roomID" name="Ro4_4" value="" />
 						</c:if>
 						<%
 							}
@@ -1613,7 +1613,7 @@ toastSelect("success","${Msg}")</script>
 						<c:if test="${rooms4List[index].week == '土'}" var="flg_5" />
 						<c:if test="${flg_5 }">
 							<td class="fonts">${ rooms4List[index].roomName}</td>
-							<input type="hidden" name="Ro5_4"
+							<input type="hidden" class="roomID" name="Ro5_4"
 								value="${ rooms4List[index].roomName}" />
 							<%
 								status++;
@@ -1624,7 +1624,7 @@ toastSelect("success","${Msg}")</script>
 						%>
 						<c:if test="${!flg_5 }">
 							<td></td>
-							<input type="hidden" name="Ro5_4" value="" />
+							<input type="hidden" class="roomID" name="Ro5_4" value="" />
 						</c:if>
 						<%
 							}
@@ -1639,7 +1639,7 @@ toastSelect("success","${Msg}")</script>
 						<c:if test="${rooms4List[index].week == '日'}" var="flg_6" />
 						<c:if test="${flg_6 }">
 							<td class="fonts">${ rooms4List[index].roomName}</td>
-							<input type="hidden" name="Ro6_4"
+							<input type="hidden" class="roomID" name="Ro6_4"
 								value="${ rooms4List[index].roomName}" />
 							<%
 								status++;
@@ -1650,7 +1650,7 @@ toastSelect("success","${Msg}")</script>
 						%>
 						<c:if test="${!flg_6 }">
 							<td></td>
-							<input type="hidden" name="Ro6_4" value="" />
+							<input type="hidden" class="roomID" name="Ro6_4" value="" />
 						</c:if>
 						<%
 							}
@@ -1670,13 +1670,13 @@ toastSelect("success","${Msg}")</script>
 
 				<c:if test="${!list_flg }">
 					<tr class="warning">
-						<td><input type="hidden" name="Ro0_4" value="" /></td>
-						<td><input type="hidden" name="Ro1_4" value="" /></td>
-						<td><input type="hidden" name="Ro2_4" value="" /></td>
-						<td><input type="hidden" name="Ro3_4" value="" /></td>
-						<td><input type="hidden" name="Ro4_4" value="" /></td>
-						<td><input type="hidden" name="Ro5_4" value="" /></td>
-						<td><input type="hidden" name="Ro6_4" value="" /></td>
+						<td><input type="hidden" class="roomID" name="Ro0_4" value="" /></td>
+						<td><input type="hidden" class="roomID" name="Ro1_4" value="" /></td>
+						<td><input type="hidden" class="roomID" name="Ro2_4" value="" /></td>
+						<td><input type="hidden" class="roomID" name="Ro3_4" value="" /></td>
+						<td><input type="hidden" class="roomID" name="Ro4_4" value="" /></td>
+						<td><input type="hidden" class="roomID" name="Ro5_4" value="" /></td>
+						<td><input type="hidden" class="roomID" name="Ro6_4" value="" /></td>
 					</tr>
 				</c:if>
 
