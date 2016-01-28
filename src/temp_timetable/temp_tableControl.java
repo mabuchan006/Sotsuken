@@ -263,6 +263,7 @@ public class temp_tableControl extends HttpServlet {
 			}//for ４週分
 
 			//Insert　２８日分
+			tempDBM.tempDelete(tempTableName);
 			tempDBM.tempDBInsert(tiList1);
 			tempDBM.tempDBInsert(tiList2);
 			tempDBM.tempDBInsert(tiList3);
@@ -275,7 +276,6 @@ public class temp_tableControl extends HttpServlet {
 				request.setAttribute("err_Msg", err_Msg);
 				e.printStackTrace();
 			}
-
 		}//Insert 終了
 
 
@@ -356,6 +356,10 @@ public class temp_tableControl extends HttpServlet {
 		date = year+"-"+ month +"-"+ day;
 		System.out.println(date);
 		return date;
+
+	}
+
+	private void tempAction(){
 
 	}
 

@@ -41,7 +41,7 @@ public class tempDBManage extends DBAccess {
 	            +"when '金' then 5 when '土' then 6 when '日' then 7 end");
 
 
-		insertSQL = String.format("replace into %s(period, subjectID, date, classID, roomName, teacherName) values(?,?,?,?,?,?)",tblName);
+		insertSQL = String.format("INSERT INTO %s(period, subjectID, date, classID, roomName, teacherName) values(?,?,?,?,?,?)",tblName);
 
 		selectSQL =String.format("SELECT sub.subjectName,temp.teacherName,temp.date,temp.subjectID FROM %s temp "
 				+ "INNER JOIN tbl_subject sub on sub.subjectID = temp.subjectID "
@@ -142,6 +142,15 @@ public class tempDBManage extends DBAccess {
 		int count = rs.getInt(1);
 		return count;
 	}
+
+	public void tempDelete(String tempTableName) throws Exception {
+		deleteSQL = String.format("DELETE FROM "+tempTableName);
+		connect();
+		createStstement();
+		updateExe(deleteSQL);
+		disConnection();
+	}//tempDB Delete
+
 	//ClassTBL動的対応用
 	public void tblCreate(String classID) throws Exception{
 		String tblName = "tbl_temp_"+ classID +"timetable";
