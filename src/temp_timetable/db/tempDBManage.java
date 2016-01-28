@@ -144,7 +144,8 @@ public class tempDBManage extends DBAccess {
 	}
 	//ClassTBL動的対応用
 	public void tblCreate(String classID) throws Exception{
-		createDBSQL = String.format("CREATE TABLE IF NOT EXISTS ?( "
+		String tblName = "tbl_temp_"+ classID +"timetable";
+		createDBSQL = String.format("CREATE TABLE IF NOT EXISTS %s( "
 				+ "period CHAR(1) NOT NULL, "
 				+ "subjectID int NOT NULL auto_increment, "
 				+ "date DATE NOT NULL, "
@@ -156,23 +157,19 @@ public class tempDBManage extends DBAccess {
 				+ "REFERENCES tbl_class(classID), "
 				+ "FOREIGN KEY (subjectID) "
 				+ "REFERENCES tbl_subject(subjectID) "
-				+ ")ENGINE=InnoDB DEFAULT CHARSET=utf8");
-		String tblName = "tbl_temp_"+ classID +"timetable";
+				+ ")ENGINE=InnoDB DEFAULT CHARSET=utf8",tblName);
 		connect();
-		createStstement(createDBSQL);
-		getPstmt().setString(1, tblName);
-		updateExe();
+		createStstement();
+		updateExe(createDBSQL);
 		disConnection();
 	}
 	//ClassTBL動的対応用
 	public void tblDrop(String classID) throws Exception {
-		dropDBSQL ="DROP TABLE if exists ? ";
 		String tblName = "tbl_temp_"+ classID +"timetable";
-		System.out.println(tblName);
+		dropDBSQL =String.format("DROP TABLE if exists %s", tblName);
 		connect();
-		createStstement(dropDBSQL);
-		getPstmt().setString(1, tblName);
-		updateExe();
+		createStstement();
+		updateExe(dropDBSQL);
 		disConnection();
-	}//tempDB Delete
+	}//tempDB Drop
 }

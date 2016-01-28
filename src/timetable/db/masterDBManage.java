@@ -123,7 +123,8 @@ public class masterDBManage extends DBAccess {
 
 	//ClassTBL動的対応用
 	public void tblCreate(String classID) throws Exception{
-		createDBSQL = String.format("CREATE TABLE IF NOT EXISTS ?( "
+		String tblName = "tbl_master_"+ classID +"timetable";
+		createDBSQL = String.format("CREATE TABLE IF NOT EXISTS %s( "
 				+ "period CHAR(1) NOT NULL, "
 				+ "subjectName VARCHAR(20) NOT NULL, "
 				+ "date DATE NOT NULL, "
@@ -134,23 +135,19 @@ public class masterDBManage extends DBAccess {
 				+ "PRIMARY KEY(period,date,classID), "
 				+ "FOREIGN KEY (classID) "
 				+ "REFERENCES tbl_class(classID) "
-				+ ")ENGINE=InnoDB DEFAULT CHARSET=utf8");
-
-		String tblName = "tbl_master_"+ classID +"timetable";
+				+ ")ENGINE=InnoDB DEFAULT CHARSET=utf8",tblName);
 		connect();
-		createStstement(createDBSQL);
-		getPstmt().setString(1, tblName);
-		updateExe();
+		createStstement();
+		updateExe(createDBSQL);
 		disConnection();
 	}
 	//ClassTBL動的対応用
 	public void tblDrop(String classID) throws Exception {
-		dropDBSQL ="DROP TABLE if exists ? ";
 		String tblName = "tbl_master_"+ classID +"timetable";
+		dropDBSQL =String.format("DROP TABLE if exists %s", tblName);
 		connect();
-		createStstement(dropDBSQL);
-		getPstmt().setString(1, tblName);
-		updateExe();
+		createStstement();
+		updateExe(dropDBSQL);
 		disConnection();
 	}//MasterDB Drop
 }
