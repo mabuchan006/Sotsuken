@@ -1,6 +1,4 @@
-
-
-	$(document).ready(function() {
+$(document).ready(function() {
 
 		var password = $("#password")
 		  , confirm_password = $("#confirm_password");
@@ -82,19 +80,30 @@
 	        }
 	    });
 
-	    $("#modal").click(function(e){
+	    $(".teacherID").click(function(e){
+
 	    	$("#msg").html("");
+	    	$(".Epass_id").val($(this).attr("name"));
+	    })
+
+	    $(".teacherID2").click(function(e){
+
+	    	$(".Rpass_id").val($(this).attr("name"));
 	    })
 	    $("#edit_pass").click(function(e){
 	    	$("#manageForm").submit(function(e){
-	    			//form送信キャンセル
 
 
 
 	    			var oldPw = $("#old_pwd").val();
 	    			var newPw = $("#new_pwd").val();
+	    			var teacherID = $(".Epass_id").val();
+	    			alert(oldPw)
+	    			alert(newPw)
+	    			alert(teacherID)
+
 	    			//error識別子
-	    			var code=dataCheck(oldPw, newPw);
+	    			var code=dataCheck(oldPw, newPw,teacherID);
 
 	    			//code毎のログイン処理
 	    			switch(code){
@@ -119,9 +128,9 @@
 	    	});
 	    	});//submit()
 
-	    	function dataCheck(oldPw,newPw){
-	    		data = { oldPw : oldPw,newPw : newPw};
-	    		code= "error_2";
+	    	function dataCheck(oldPw,newPw,teacher_id){
+	    		data = { oldPw : oldPw,newPw : newPw,teacher_id:teacher_id};
+	    		code= "error_1";
 
 	    		$.ajax({
 	    			type: "get",
@@ -136,16 +145,11 @@
 	    		}//if
 	    		}).fail(function(jqXHR, textStatus, errorThrown ){//失敗
 	    			console.log("NG:" + jqXHR.status + ":" + textStatus.status + ":" + errorThrown);
-	    			tpastSelect("error","更新に失敗しました。");
+	    			toastSelect("error","更新に失敗しました。");
 	    		})
 
 	    		return code;
 
 	    	}
-
-
-
-
-
 	});
 

@@ -16,7 +16,6 @@ import event.db.eventDBManage;
 import event.db.eventInfo;
 import manage.db.classDBManage;
 import manage.db.classInfo;
-import manage.db.loginDBManage;
 import manage.db.subjectDBManage;
 import manage.db.subjectInfo;
 import manage.db.teacherDBManage;
@@ -60,25 +59,24 @@ public class ManageEditControl extends HttpServlet {
 		upKey = map.get("pk")[0];
 		}//if
 		else if(map.get("oldPw")!=null){
-			String OldPass = map.get("OldPw")[0];
+
+
+			String OldPass = map.get("oldPw")[0];
 			String NewPass =map.get("newPw")[0];
 			int teacherID = Integer.parseInt(map.get("teacher_id")[0]);
-			loginDBManage ldm = new loginDBManage();
+
 			teacherDBManage tdm = new teacherDBManage();
 			teacherInfo ti = new teacherInfo();
 			Map<String, String> statusMap = new HashMap<String,String>();
 			ti.setTeacherID(teacherID);
 			ti.setPassword(OldPass);
 			try {
-
-				int status=tdm.passwordDBUpdate(ti);
+				int status=tdm.OldPasswordUpdate(ti,NewPass);
 				if(status != 0){
 					statusMap.put("status","true" );
 				}else{
 					statusMap.put("status","false" );
 				}
-
-
 
 				response.setHeader("Access-Control-Allow-Origin", "*");//dmain指定
 				response.setContentType("application/json; charset=utf-8");//json形式
@@ -89,7 +87,7 @@ public class ManageEditControl extends HttpServlet {
 				e.printStackTrace();
 			}
 
-		}
+		}//if
 
 		//クラス
 		if(upKey.equals("1")){

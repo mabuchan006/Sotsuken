@@ -310,6 +310,10 @@ public class ManageUpdateControl extends HttpServlet {
 				content_page = "/manage/teacher_manage.jsp";
 				page_title = "TeacherManage";
 
+				if(request.getParameter("regist_pass")!=null){
+					tdm.NewPasswordUpdate(ti);
+				}
+
 				if(request.getParameter("regist_teacher") != null ){
 					tdm.teacherDBUpdate(ti, DBAccess.INSERT, "登録");
 				}//if
