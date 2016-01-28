@@ -16,6 +16,7 @@ import Tools.layoutInclude;
 import Tools.layoutInclude.layoutIncludeInfo;
 import Tools.masterDBSwitch;
 import Tools.masterDBSwitch.masterDBSwitchInfo;
+import divide.db.divideDBManage;
 import manage.db.teacherDBManage;
 import manage.db.teacherInfo;
 import temp_timetable.db.roomInfo;
@@ -316,6 +317,13 @@ public class temp_tableControl extends HttpServlet {
 			String url = "/Sotsuken/publicView?page="+ chooseClassID;
 			response.sendRedirect(url);
 			return;
+		}
+
+		//classIDMap呼び出し
+		divideDBManage ddm = new divideDBManage();
+		try {
+			ddm.classIDDBSelect(request);
+		} catch (Exception e) {
 		}
 
 		// ディスパッチ準備
