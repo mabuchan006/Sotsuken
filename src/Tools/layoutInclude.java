@@ -87,6 +87,7 @@ public class layoutInclude {
 		info.js.add("/Sotsuken/bootstrap/js/bootstrap-datepicker.js");
 		info.js.add("/Sotsuken/bootstrap/js/bootstrap-datepicker.ja.min.js");
 		info.js.add("/Sotsuken/js/passwordEdit.js");
+		info.js.add("/Sotsuken/js/delete-manage.js");
 
 		return info;
 	}

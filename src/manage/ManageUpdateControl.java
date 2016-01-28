@@ -125,29 +125,32 @@ public class ManageUpdateControl extends HttpServlet {
 
 	private void subjectUpdate(HttpServletRequest request) {
 		try {
-		//ページ情報指定
+		//ページ情報設定
 		content_page = "/manage/subject_manage.jsp";
 		page_title = "SubjectManage";
-		//更新済み科目情報全件取得
+		//科目データベース操作クラス生成
 		subjectDBManage sdm = new subjectDBManage();
+		//クラスデータベース操作クラス生成
 		classDBManage cdm = new classDBManage();
+		//全体表示フラグ初期化
 		int showFlag=0;
-		//送信された科目情報取得
+		//科目情報クラス
 		subjectInfo si = new subjectInfo();
+		//科目のリクエスト情報管理配列
 		String[] setSiArray = new String[4];
+		//カウント、クラスID初期化
 		int cnt = 0;
 		String classID = "";
-
-		//全リクエスト情報取得
+		//insertのための全リクエスト情報取得
 		Map<String, String[]> getMap =request.getParameterMap();
 
-		//学年に対する学科を格納するためのリスト
+		//学年に対する学科を格納するためのリスト ex)R4:{A1,A2}
 		List<String> courceList = new ArrayList<String>();
 
 		//すべてのリクエスト情報をinsert処理する
 		for (Map.Entry<String, String[]> rs : getMap.entrySet()) {
 
-			//1つ目のリクエストはいらないので除外
+			//MAP１回目のリクエストは番兵用なので除外
 			if(!(rs.getKey().equals("grade_name1") || rs.getKey().equals("cource_name1") ||
 					rs.getKey().equals("subjectName1") || rs.getKey().equals("bringThings1")||
 					rs.getKey().equals("regist_subject") || rs.getKey().equals("page")||
@@ -155,14 +158,14 @@ public class ManageUpdateControl extends HttpServlet {
 
 				//リクエスト情報を科目情報配列に格納
 				if(cnt < 4){
-
+					//リクエストを１つ取得
 					setSiArray[cnt] = rs.getValue()[0];
 					cnt++;
-
+					//科目情報 （SubjectName,Bringthings,classGrade,classCourceの４つ）を格納したら
 					if(cnt == 4){
 						//全学年を指定していた場合
 						if(setSiArray[1].equals("ALL")){
-							showFlag = 1;
+							showFlag = 1;//全体表示フラグtrue
 						}//if
 
 						//科目情報を作成
@@ -176,22 +179,23 @@ public class ManageUpdateControl extends HttpServlet {
 						if(setSiArray[2].equals("ALL")){
 							//学年がAll指定されていなかったら
 							if(si.getShowFlag()==0){
+								//対象学年に対する全学科取得
 								courceList = sdm.classALLSelect(setSiArray[1]);
 							}else{//学年All
-
+								//全学年、全学科取得
 								courceList = cdm.classDBSelect_();
-							}
+							}//if
+
+							//指定クラスすべてに対してinsert
 							for (String classRs : courceList) {
-
+								//科目情報insert
 								sdm.subjectDBUpdate(si, classRs,DBAccess.INSERT, "登録");
-
 							}//for
-						}else{
 
+						}else{
 							//通常処理
 							//クラス情報作成
 							classID = setSiArray[1] + setSiArray[2];
-
 							//登録処理
 							sdm.subjectDBUpdate(si, classID,DBAccess.INSERT, "登録");
 						}//if
@@ -215,6 +219,7 @@ public class ManageUpdateControl extends HttpServlet {
 
 				);
 
+		//科目情報削除
 		if(request.getParameter("delete_subject") != null){
 			sdm.subjectDBUpdate(delsi, "",DBAccess.DELETE, "削除");
 		}//if
@@ -225,7 +230,7 @@ public class ManageUpdateControl extends HttpServlet {
 		//更新済み科目情報全件取得
 		List<subjectInfo> subjectList = new ArrayList<subjectInfo>();
 		subjectList = sdm.subjectDBSelect();
-		//科目情報
+		//表示用科目情報をセット
 		request.setAttribute("subjectList", subjectList);
 		request.setAttribute("classMap", classMap);
 		request.setAttribute("cnt", subjectList.size());
@@ -233,9 +238,9 @@ public class ManageUpdateControl extends HttpServlet {
 		//メッセージ
 		if(sdm.getMsg() != null){
 		if((sdm.getMsg()).indexOf("入力情報に誤りがあります") != -1){
-			request.setAttribute("err_Msg", sdm.getMsg());
+			request.setAttribute("err_Msg", sdm.getMsg());//error
 		}else{
-			request.setAttribute("Msg",sdm.getMsg());
+			request.setAttribute("Msg",sdm.getMsg());//success
 		}//if
 		}//if
 
