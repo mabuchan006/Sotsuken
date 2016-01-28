@@ -180,7 +180,7 @@ ${classID }
 <input type="hidden" name="page" value="subject_manage" />
 <input type="hidden" name="subjectID" value="${rs.subjectID}" />
 <input type="hidden" name="subjectName" value="${rs.subjectName }" />
-<button type="submit" class="btn btn-danger"name="delete_subject" ><i class="fa fa-trash-o fa-2x"></i></button>
+<button type="submit" class="btn btn-danger delete"name="delete_subject" ><i class="fa fa-trash-o fa-2x"></i></button>
 </form> <!-- 削除 -->
 </div>
 </td>

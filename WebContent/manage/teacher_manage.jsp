@@ -196,7 +196,7 @@ ${ teacher.teacherID }
 <input type="hidden" name="page" value="teacher_manage" />
 <input type="hidden" name = "teacher_id" value="${ teacher.teacherID }" />
 <input type="hidden" name = "teacherName" value="${ teacher.teacherName }" />
-<button type="submit" class="btn btn-danger"name="delete_teacher" ><i class="fa fa-trash-o fa-2x"></i></button>
+<button type="submit" class="btn btn-danger delete"name="delete_teacher" ><i class="fa fa-trash-o fa-2x"></i></button>
 </form>
 <!-- 削除 -->
 

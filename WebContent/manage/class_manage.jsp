@@ -69,7 +69,7 @@ toastSelect("success","${Msg }")</script>
 <form action="/Sotsuken/ManageUpdate?page=class_manage" method="post">
 <input type="hidden" name = "classID" value="${rs.classID }" />
 <input type="hidden" name = "className" value="${rs.className }" />
-<button type="submit" class="btn btn-danger"name="delete_class" ><i class="fa fa-trash-o fa-2x"></i></button>
+<button type="submit" class="btn btn-danger delete"name="delete_class" ><i class="fa fa-trash-o fa-2x"></i></button>
 </form>
 <!-- 削除 -->
 </div>
