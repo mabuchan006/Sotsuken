@@ -28,7 +28,7 @@
 
 	<!-- ドラッグ&ドロップ -->
 
-		<div class="col-md-1  fix col-md-offset-9 margin-top ">
+		<div class="col-md-1  fix col-md-offset-9 margin-top " id="classDrag">
 			<h1>class</h1>
 			<div id="drag-target">
 				<div class="accordionJS white">

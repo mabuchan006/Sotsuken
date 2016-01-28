@@ -11,6 +11,8 @@ $(function(e){
 	//accordion
 	$(".accordionJS").accordion();
 
+	$("#classDrag").draggable({stack: ".table"});
+
 	//formCheck
 	$("textarea").on({
 		//フォーカスしたときにテキストエリアの内容を取得
