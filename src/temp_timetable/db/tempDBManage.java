@@ -13,6 +13,15 @@ public class tempDBManage extends DBAccess {
 	private String deleteSQL;
 	private String checkDB;
 	private String roomsSQL; //コマ割りから部屋情報取得
+
+		//ClassManage用　動的生成　削除対応
+	private String createDBSQL;
+	private String dropDBSQL;
+
+
+
+
+
 	List<tempInfo> tempinfo = new ArrayList<tempInfo>();
 
 
@@ -129,4 +138,36 @@ public class tempDBManage extends DBAccess {
 		int count = rs.getInt(1);
 		return count;
 	}
+	//ClassTBL動的対応用
+	public void tblCreate(String classID) throws Exception{
+		createDBSQL = String.format("CREATE TABLE IF NOT EXISTS ?( "
+				+ "period CHAR(1) NOT NULL, "
+				+ "subjectID int NOT NULL auto_increment, "
+				+ "date DATE NOT NULL, "
+				+ "classID CHAR(4) NOT NULL, "
+				+ "roomName VARCHAR(20) NOT NULL, "
+				+ "teacherName VARCHAR(20) NOT NULL, "
+				+ "PRIMARY KEY(period,date,classID,subjectID), "
+				+ "FOREIGN KEY (classID) "
+				+ "REFERENCES tbl_class(classID), "
+				+ "FOREIGN KEY (subjectID) "
+				+ "REFERENCES tbl_subject(subjectID) "
+				+ ")ENGINE=InnoDB DEFAULT CHARSET=utf8");
+		String tblName = "tbl_temp_"+ classID +"timetable";
+		connect();
+		createStstement(createDBSQL);
+		getPstmt().setString(1, tblName);
+		updateExe();
+		disConnection();
+	}
+	//ClassTBL動的対応用
+	public void tblDrop(String classID) throws Exception {
+		dropDBSQL ="DROP TABLE if exists ?";
+		String tblName = "tbl_temp_"+ classID +"timetable";
+		connect();
+		createStstement(dropDBSQL);
+		getPstmt().setString(1, tblName);
+		updateExe();
+		disConnection();
+	}//tempDB Delete
 }
