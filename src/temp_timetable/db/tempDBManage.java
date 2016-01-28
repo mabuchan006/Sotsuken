@@ -144,8 +144,8 @@ public class tempDBManage extends DBAccess {
 	}
 	//ClassTBL動的対応用
 	public void tblCreate(String classID) throws Exception{
-		createDBSQL = String.format("CREATE TABLE IF NOT EXISTS ?"
-				+ "(period CHAR(1) NOT NULL, "
+		createDBSQL = String.format("CREATE TABLE IF NOT EXISTS ?( "
+				+ "period CHAR(1) NOT NULL, "
 				+ "subjectID int NOT NULL auto_increment, "
 				+ "date DATE NOT NULL, "
 				+ "classID CHAR(4) NOT NULL, "
