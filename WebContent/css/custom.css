@@ -336,6 +336,7 @@ font-family:Tahoma;
 }
 .event_li:first{
 	display:block;
+
 }
 
 .eventName ,.left{
@@ -343,6 +344,7 @@ font-family:Tahoma;
 	float: left;
 
 }
+
 
 .period,.classID,.roomID,.guestTeacher {
 
@@ -396,6 +398,10 @@ font-family:Tahoma;
 .widet{
 	width: 80px;
 }
+
+
+
+
 
 
 

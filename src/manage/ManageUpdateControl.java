@@ -370,7 +370,7 @@ public class ManageUpdateControl extends HttpServlet {
 
 		inputStr=request.getParameter("eventDate").split("/");
 		for (String date : inputStr) {
-			System.out.println(date);
+
 			dateList.add(date);
 		}//for
 		}else{

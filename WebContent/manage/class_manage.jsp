@@ -53,7 +53,10 @@ toastSelect("success","${Msg }")</script>
 <table class="table ">
 <thead>
 <tr class="info wide">
-<td colspan="3">クラス一覧   ( ${cnt } 件)</td></tr>
+<td>クラス</td>
+<td>専攻名</td>
+
+<td class="right">${cnt }　件</td></tr>
 </thead>
 <tbody>
 <!-- クラス情報取得 -->

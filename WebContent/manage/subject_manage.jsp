@@ -142,7 +142,7 @@ toastSelect("success","${Msg }")</script>
 <tr class="info wide">
 <td>科目名</td>
 <td >持ち物</td>
-<td >科目一覧   ( ${cnt } 件)</td></tr>
+<td class="right">${cnt }　件</td></tr>
 
 </thead>
 <tbody>
