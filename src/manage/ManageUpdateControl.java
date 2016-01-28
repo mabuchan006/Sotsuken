@@ -26,6 +26,7 @@ import manage.db.subjectDBManage;
 import manage.db.subjectInfo;
 import manage.db.teacherDBManage;
 import manage.db.teacherInfo;
+import temp_timetable.db.tempDBManage;
 
 /**
  * Servlet implementation class ManageUpdateControl
@@ -248,7 +249,7 @@ public class ManageUpdateControl extends HttpServlet {
 	//クラス管理画面指定時の処理
 		private void classUpdate(HttpServletRequest request, classDBManage cdm) {
 
-
+				tempDBManage tempDBManage =new tempDBManage();
 				//送信されたクラス情報取得
 				classInfo ci = new classInfo(
 						request.getParameter("classID")==null?""//true
@@ -264,6 +265,7 @@ public class ManageUpdateControl extends HttpServlet {
 					//登録
 					if(request.getParameter("regist_class") != null ){
 						cdm.classDBUpdate(ci, DBAccess.INSERT, "登録");
+						
 
 					}
 					//削除

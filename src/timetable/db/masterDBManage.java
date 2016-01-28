@@ -18,7 +18,9 @@ public class masterDBManage extends DBAccess {
 	private String dropDBSQL;
 	private String createDBSQL;
 
-
+	public masterDBManage() {
+		super(DRIVER_NAME);
+	}
 
 	public masterDBManage(String chooseTableName) {
 		super(DRIVER_NAME);

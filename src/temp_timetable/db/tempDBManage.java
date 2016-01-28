@@ -25,7 +25,10 @@ public class tempDBManage extends DBAccess {
 	List<tempInfo> tempinfo = new ArrayList<tempInfo>();
 
 
+	public tempDBManage() {
+		super(DRIVER_NAME);
 
+	}
 
 	public tempDBManage(String tblName) {
 		super(DRIVER_NAME);
@@ -48,6 +51,7 @@ public class tempDBManage extends DBAccess {
 
 		checkDB = String.format("SELECT COUNT(*) FROM %s",tblName);
 	}
+
 
 
 	public List<roomInfo> roomsSelect(int periodNum,String classID) throws Exception{
