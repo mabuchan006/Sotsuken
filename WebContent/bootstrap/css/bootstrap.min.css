@@ -2457,7 +2457,7 @@ table td[class*=col-], table th[class*=col-] {
 	.table>thead>tr.pink1>td, .table>tbody>tr.pink1>td, .table>tfoot>tr.pink1>td,
 	.table>thead>tr.pink1>th, .table>tbody>tr.pink1>th, .table>tfoot>tr.pink1>th
 	{
-	background-color: #9F615E;
+	background-color: #dcdcdc;
 }
 
 .table>thead>tr>td.pink2, .table>tbody>tr>td.pink2, .table>tfoot>tr>td.pink2,
@@ -2574,7 +2574,7 @@ table td[class*=col-], table th[class*=col-] {
 	.table>thead>tr.danger>td, .table>tbody>tr.danger>td, .table>tfoot>tr.danger>td,
 	.table>thead>tr.danger>th, .table>tbody>tr.danger>th, .table>tfoot>tr.danger>th
 	{
-	background-color: #f2dede
+	background-color: #f5f5f5
 }
 
 .table-hover>tbody>tr>td.danger:hover, .table-hover>tbody>tr>th.danger:hover,
