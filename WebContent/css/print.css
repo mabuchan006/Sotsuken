@@ -9,8 +9,10 @@
 		display: none;
 	}
 
-	table {
-		border-color: black;
+	table, th, td {
+		border: 1px solid #000;
+		border-collapse: collapse;
+		border-spacing: 0;
 	}
 
 }

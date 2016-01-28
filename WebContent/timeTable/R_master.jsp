@@ -17,6 +17,18 @@
 
 	<!-- タブ -->
 
+<!-- 	<ul class="nav nav-tabs noprint"> -->
+<%-- 		<c:forEach var="rs" items="${classIDMapR }"> --%>
+<%-- 			<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">${rs.key}<b class="caret"></b></a> --%>
+<!-- 				<ul class="dropdown-menu"> -->
+<%-- 					<c:forEach var="array" items="${rs.value }"> --%>
+<%-- 						<li><a href="/Sotsuken/publicView?page=${array }">${array }</a></li> --%>
+<%-- 					</c:forEach> --%>
+<!-- 				</ul> -->
+<!-- 			</li> -->
+<%-- 		</c:forEach> --%>
+<!-- 	</ul> -->
+
 	<ul class="nav nav-tabs noprint">
 		<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">R4
 				<b class="caret"></b>

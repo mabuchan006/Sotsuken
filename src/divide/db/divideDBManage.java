@@ -155,6 +155,10 @@ public class divideDBManage extends DBAccess {
 		List<String> tempList = new ArrayList<String>();
 		Map<String, List<String>> tempMap = new TreeMap<String, List<String>>();
 		Map<String, List<String>> classIDMap = new LinkedHashMap<String, List<String>>();
+		Map<String, List<String>> rMap = new LinkedHashMap<String, List<String>>();
+		Map<String, List<String>> sMap = new LinkedHashMap<String, List<String>>();
+		Map<String, List<String>> jMap = new LinkedHashMap<String, List<String>>();
+		Map<String, List<String>> aMap = new LinkedHashMap<String, List<String>>();
 		Map<String, Map<String, List<String>>> map = new TreeMap<String, Map<String, List<String>>>();
 
 		String tempClass = classIDList.get(0).substring(0, 1);//R4A1 -> R
@@ -203,6 +207,16 @@ public class divideDBManage extends DBAccess {
 				i = -1;
 			}
 		}
+
+		rMap.putAll(map.get("R"));
+		sMap.putAll(map.get("S"));
+		jMap.putAll(map.get("J"));
+		aMap.putAll(map.get("A"));
+
+		request.setAttribute("classIDMapR", rMap);
+		request.setAttribute("classIDMapS", sMap);
+		request.setAttribute("classIDMapJ", jMap);
+		request.setAttribute("classIDMapA", aMap);
 
 		request.setAttribute("classIDMap", classIDMap);
 	}//classIDDBSelect
