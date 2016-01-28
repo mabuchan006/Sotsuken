@@ -52,7 +52,7 @@ public class subjectDBManage extends DBAccess {
 		// ALL処理用
 		selectAll = String.format("select classID from tbl_class where classID LIKE ?");
 		// 科目情報登録sql
-		selectInsert=String.format("select subjectID from tbl_subject where subjectName = ?");
+		selectInsert=String.format("select subjectID,bringThings from tbl_subject where subjectName = ?");
 		selectInfo=String.format("select classID from tbl_infoSubject where subjectID = ? ");
 		insertSql = String.format(" insert into tbl_subject " + "(subjectName,bringThings,showFlag) values (?,?,?)");
 		replaseSql = String.format(" update tbl_subject " +
@@ -142,7 +142,7 @@ public class subjectDBManage extends DBAccess {
 				createStstement(replaseSql);
 				getPstmt().setInt(4, boolRs.getInt("subjectID"));
 				getPstmt().setString(1, si.getSubjectName());
-				getPstmt().setString(2, si.getBringThings()==""?"なし"
+				getPstmt().setString(2, si.getBringThings()==""?boolRs.getString("bringThings")
 						:si.getBringThings());
 				getPstmt().setInt(3, si.getShowFlag());
 				}else{
