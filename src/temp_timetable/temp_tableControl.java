@@ -210,6 +210,7 @@ public class temp_tableControl extends HttpServlet {
 
 					//３限目
 					String subject3 = request.getParameter("Su"+ num +"_3");
+					System.out.println( subject3+"_サブ3");
 					String subjectN3 = request.getParameter("Sun"+ num +"_3");
 					int subjectID3;
 					if( subject3 == null || subject3.length() == 0 ){
@@ -217,7 +218,7 @@ public class temp_tableControl extends HttpServlet {
 					}else if(subjectN3 ==null || subjectN3.length() == 0){
 						subjectID3 = 1;
 					} else {
-						subjectID3 =  Integer.parseInt(request.getParameter("Su"+ num +"_2").substring(0, 3));
+						subjectID3 =  Integer.parseInt(request.getParameter("Su"+ num +"_3").substring(0, 3));
 					}
 
 					String teacherName3 = request.getParameter("Te"+ num +"_3");
