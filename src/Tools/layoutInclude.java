@@ -50,6 +50,7 @@ public class layoutInclude {
     	info.css.add("/Sotsuken/css/animate.css");
     	info.css.add("/Sotsuken/css/font-awesome.min.css");
     	info.css.add("http://fonts.googleapis.com/css?family=Lobster");
+    	info.css.add("/Sotsuken/css/print.css");
 
     	info.js.add("/Sotsuken/bootstrap/js/bootstrap-dropdown.js");
     	info.js.add("/Sotsuken/js/jquery-2.1.1.min.js");

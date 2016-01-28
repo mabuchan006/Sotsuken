@@ -21,13 +21,9 @@
 </c:if>
 
 
-<!-- 印刷用CSS -->
-<link rel="stylesheet" href="../css/print.css" type="text/css" media="print" />
-
-
-<!-- いんさつよう　CSS -->
-<!-- link rel="stylesheet" href="../css/print.css" type="text/css" media="print" / -->
-
+<!-- 印刷用CSS
+<link rel="stylesheet" href="WebContent/css/print.css" type="text/css" media="print" />
+ -->
 <c:if test="${js != null}">
 <c:forEach var="itemjs" items="${js}">
 <script type="text/javascript" src="${itemjs}"></script>
@@ -38,51 +34,45 @@
 
 <body>
 <!-- Start Logo Section --><!-- ヘッダー部分 -->
-        <section id="logo-section" class="text-center">
-            <div class="container">
-                <div class="row">
+	<section id="logo-section" class="text-center">
+		<div class="container">
+			<div class="row"></div>
+		</div>
+	</section>
+	<!-- Start Logo Section -->
+	<!-- ヘッダー部分 -->
+	<section id="logo-section" class="text-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="logo text-center">
+						<h1>${page_title }</h1>
+						<div class="col-md-4 col-md-offset-8 text-right noprint">
+							<div style="display: inline-flex">
 
-                </div>
-            </div>
-        </section>
-        <!-- Start Logo Section -->
-<!-- ヘッダー部分 -->
-<section id="logo-section" class="text-center">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="logo text-center">
-					<h1>${page_title }</h1>
+								<button type="button" class="favolite" id="falseCookie">
+									<i class="fa fa-star"></i>お気に入り
+								</button>
 
-					<div class="col-md-4 col-md-offset-8 text-right">
-					<div style="display:inline-flex">
+								<!-- 印刷用アイコン -->
+								<button type="button" class="print" onclick="window.print()">
+									<i class="fa fa-print"></i>印刷
+								</button>
 
-					<button type="button" class="favolite" id="falseCookie" >
-						<i class="fa fa-star"></i>お気に入り
-					</button>
-
-					<!-- 印刷用アイコン -->
-					<button type="button" class="print" onclick="window.print()">
-						<i class="fa fa-print"></i>印刷
-					</button>
-
-                    <form action="/Sotsuken/top" method="get">
-						<button type="submit" class="top">
-							<i class="fa fa-home"></i>TOP
-						</button>
-						<input type = "hidden" name="top" value="top" />
-					</form>
-
-
-
-                    </div>
+								<form action="/Sotsuken/top" method="get">
+									<button type="submit" class="top">
+										<i class="fa fa-home"></i>TOP
+									</button>
+									<input type="hidden" name="top" value="top" />
+								</form>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
-<!-- End Logo Section -->
+	</section>
+	<!-- End Logo Section -->
 	<jsp:include page="${content_page}" />
 	<script>
 
