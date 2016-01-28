@@ -20,14 +20,14 @@ $(function(e){
 			// 子要素の取得
 			var ele = $(this).children("textarea").get(0);
 			dragEle = ui.draggable.get(0);
-			if (ele.classList.contains("subject") && dragEle.classList.contains("subject")) {
+			if (ele.classList.contains("subject") && dragEle.classList.contains("subject") && !$(ele).prop("disabled")) {
 				var array = ui.draggable.text().split(":");
 				ele.value = array[1];
 				var eleInput = $(this).children("input:hidden").get(0);
 				console.log(eleInput);
 				eleInput.value = ui.draggable.text();
 			} else
-			if (ele.classList.contains("teacher") && dragEle.classList.contains("teacher")) {
+			if (ele.classList.contains("teacher") && dragEle.classList.contains("teacher") && !$(ele).prop("disabled")) {
 				if (ele.value.length > 0) {
 					ele.value = ele.value + "/" + ui.draggable.text();
 					$(ele).trigger("focusin");
