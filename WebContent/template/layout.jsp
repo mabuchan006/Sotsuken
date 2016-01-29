@@ -43,22 +43,22 @@
 
 
 			<h1 style="padding: 100px 20px 20px; margin: 0;">
-			<a href="/Sotsuken/manage/manage_top.jsp">管理メニュー</a></h1>
+			<a href="/Sotsuken/manage/manage_top.jsp" class="manage-top">管理メニュー</a></h1>
 
-			<ul class="manage">
-				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">
+			<ul>
+				<li class="select2 moji manage"><h1 style="padding: 15px 40px; margin: 0;">
 				<a href="/Sotsuken/ManageUpdate?page=teacher_manage">講師管理</a></h1></li>
 
-				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">
+				<li class="select2 moji manage"><h1 style="padding: 15px 40px; margin: 0;">
 				<a href="/Sotsuken/ManageUpdate?page=subject_manage">科目管理</a></h1></li>
 
-				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">
+				<li class="select2 moji manage"><h1 style="padding: 15px 40px; margin: 0;">
 				<a href="/Sotsuken/ManageUpdate?page=class_manage">クラス管理</a></h1></li>
 
-				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">
+				<li class="select2 moji manage"><h1 style="padding: 15px 40px; margin: 0;">
 				<a href="/Sotsuken/ManageUpdate?page=event_manage">イベント管理</a></h1></li>
 
-				<li class="select2 moji"><h1 style="padding: 15px 40px; margin: 0;">
+				<li class="select2 moji manage"><h1 style="padding: 15px 40px; margin: 0;">
 				<a href="/Sotsuken/divideUpdate">コマ割り管理</a></h1></li>
 
 
@@ -66,11 +66,11 @@
 					<ul id="flip3" class="dropmenu select2 ">
 						<li class="select2 moji box" style="padding: 15px 40px; margin:  0 20px 0 0;">
 							<a>時間割作成</a>
-							<ul class="editView">
-								<li><a href="/Sotsuken/editView?page=R">R</a></li>
-								<li><a href="/Sotsuken/editView?page=S">S</a></li>
-								<li><a href="/Sotsuken/editView?page=J">J</a></li>
-								<li><a href="/Sotsuken/editView?page=A">A</a></li>
+							<ul>
+								<li class="editView"><a href="/Sotsuken/editView?page=R">R</a></li>
+								<li class="editView"><a href="/Sotsuken/editView?page=S">S</a></li>
+								<li class="editView"><a href="/Sotsuken/editView?page=J">J</a></li>
+								<li class="editView"><a href="/Sotsuken/editView?page=A">A</a></li>
 							</ul>
 						</li>
 					</ul>
