@@ -11,6 +11,8 @@ import DB.DBAccess;
  * @author syam
  * @see eventInfo
  */
+import manage.db.classDBManage;
+import manage.db.classInfo;
 
 public class eventDBManage extends DBAccess{
 	private String selectSql;//クラス全検索用
@@ -44,7 +46,7 @@ public class eventDBManage extends DBAccess{
 		//クラス情報登録sql
 		//int eventID,String eventName, int period, Date date, String classID,
 		//String roomName, String guestTeacher,String notice
-		insertSql= String.format(" insert into tbl_event (eventName,period,date,classID, roomName,endFlag,guestTeacher,notice) values (?,?,?,?,"
+		insertSql= String.format(" replace into tbl_event (eventName,period,date,classID, roomName,endFlag,guestTeacher,notice) values (?,?,?,?,"
 				+ "?"//roomID検索
 				+ ",?,?,?)");
 		updateSql= String.format("update tbl_event set eventName = ? where eventID = ?");
@@ -177,8 +179,18 @@ public class eventDBManage extends DBAccess{
 			getPstmt().setString(8,ei.getNotice());
 			updateExe();//実行
 
+			if(!(classID.equals("AAAA"))){
+			//マスタ更新
+				masterUpdate("tbl_master_"+classID+"timetable", ei,classID,eventDate);
+			}else{
+				classDBManage cdm = new classDBManage();
+				List<classInfo> classList = cdm.classDBSelect();
+				for (classInfo classIDs: classList) {
 
-
+					masterUpdate("tbl_master_"+classIDs.getClassID()
+					+"timetable", ei,classIDs.getClassID(),eventDate);
+				}//for
+			}
 			break;
 		case DELETE:
 			createStstement(deleteSql);
@@ -205,15 +217,22 @@ public class eventDBManage extends DBAccess{
 		}//if
 		disConnection();//切断
 	}//method
-	public void masterUpdate(String masterTableName,eventInfo ei) throws Exception{
+	public void masterUpdate(String masterTableName,eventInfo ei,String classID,String eventDate) throws Exception{
 
-		String masterUpDate = String.format("INSERT INTO "+ masterTableName +
+		String masterUpDate = String.format("replace INTO "+ masterTableName +
 				" (period, subjectName, date, classID, roomName, teacherName, bringThings) "
 				+ "values(?,?,?,?,?,?,?)");
 
 		connect();
 		createStstement(masterUpDate);
 		getPstmt().setString(1, ei.getPeriod());
+		getPstmt().setString(2, ei.getEventName());
+		getPstmt().setString(3,eventDate);
+		getPstmt().setString(4,classID);
+		getPstmt().setString(5,ei.getRoomName());
+		getPstmt().setString(6,ei.getGuestTeacher());
+		getPstmt().setString(7,ei.getNotice());
+
 		updateExe();
 		disConnection();
 	}
