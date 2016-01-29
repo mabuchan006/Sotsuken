@@ -61,12 +61,29 @@
 <!-- イベント情報取得 -->
 <c:forEach var="rs" items="${eventList }">
 <tr class="select">
-<td class="classid">${rs.classID}</td>
-<td class="classname" data-name="${rs.classID}">${rs.className}</td>
 <td>
-<div style="display:inline-flex">
-</div>
+${rs.date[1] }
+
+${rs.date[3] }
+
+${rs.date[2] }
 </td>
+<td>
+${rs.eventName}
+${rs.notice}
+
+
+${rs.period}時限目
+${rs.classID}
+${rs.roomName}
+${rs.guestTeacher}
+
+</td>
+
+
+
+
+
 
 </tr>
 </c:forEach>
