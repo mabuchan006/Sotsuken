@@ -56,7 +56,7 @@ public class ManageUpdateControl extends HttpServlet {
 		//文字コードutf8
 		request.setCharacterEncoding("UTF-8");
 		//jspからのページ情報取得
-		String get_page = request.getParameter("page")==null?"event_manage"
+		String get_page = request.getParameter("page")==null?"subject_manage"
 				:request.getParameter("page");
 
 		//使用するcss,jsファイルの適用

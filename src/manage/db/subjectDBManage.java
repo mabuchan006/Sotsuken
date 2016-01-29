@@ -245,7 +245,7 @@ public class subjectDBManage extends DBAccess {
 		// 要素取得用準備
 		ResultSet rs = getRsResult();
 		String classID = null;
-		String par_grade;//学年
+		String par_grade="";//学年
 		//初回比較用のクラスID取得
 		while (rs.next()) {
 			classID = rs.getString("classID");
@@ -253,9 +253,9 @@ public class subjectDBManage extends DBAccess {
 			rs.beforeFirst();
 			break;
 		}//while
-
+		if(classID!=null){
 		par_grade = classID.substring(0, 2);// ex)R4A1 → R4 学年抽出
-
+		}
 		// 全件取得 クラス情報分割処理
 		while (rs.next()) {
 

@@ -72,7 +72,7 @@ $("#login").click(function(e){
 
 		$.ajax({
 			type: "get",
-			url : "http://localhost:8080/Sotsuken/loginControl",
+			url : "/Sotsuken/loginControl",
 			dataType:"json",
 			data : data,
 			async: false
