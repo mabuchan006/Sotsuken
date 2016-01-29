@@ -138,9 +138,11 @@ toastSelect("success","${Msg }")</script>
 <div class="col-md-9 col-md-offset-3">
 <div class="back">
 <table class="table ">
-<thead class="thead">
+<thead >
 <tr class="info wide">
-<td colspan="3">科目一覧   ( ${cnt } 件)</td></tr>
+<td>科目名</td>
+<td >持ち物</td>
+<td class="right">${cnt }　件</td></tr>
 
 </thead>
 <tbody>
@@ -178,7 +180,7 @@ ${classID }
 <input type="hidden" name="page" value="subject_manage" />
 <input type="hidden" name="subjectID" value="${rs.subjectID}" />
 <input type="hidden" name="subjectName" value="${rs.subjectName }" />
-<button type="submit" class="btn btn-danger"name="delete_subject" ><i class="fa fa-trash-o fa-2x"></i></button>
+<button type="submit" class="btn btn-danger delete"name="delete_subject" ><i class="fa fa-trash-o fa-2x"></i></button>
 </form> <!-- 削除 -->
 </div>
 </td>

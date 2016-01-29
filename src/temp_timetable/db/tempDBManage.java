@@ -13,10 +13,22 @@ public class tempDBManage extends DBAccess {
 	private String deleteSQL;
 	private String checkDB;
 	private String roomsSQL; //コマ割りから部屋情報取得
+
+		//ClassManage用　動的生成　削除対応
+	private String createDBSQL;
+	private String dropDBSQL;
+
+
+
+
+
 	List<tempInfo> tempinfo = new ArrayList<tempInfo>();
 
 
+	public tempDBManage() {
+		super(DRIVER_NAME);
 
+	}
 
 	public tempDBManage(String tblName) {
 		super(DRIVER_NAME);
@@ -29,7 +41,7 @@ public class tempDBManage extends DBAccess {
 	            +"when '金' then 5 when '土' then 6 when '日' then 7 end");
 
 
-		insertSQL = String.format("replace into %s(period, subjectID, date, classID, roomName, teacherName) values(?,?,?,?,?,?)",tblName);
+		insertSQL = String.format("INSERT INTO %s(period, subjectID, date, classID, roomName, teacherName) values(?,?,?,?,?,?)",tblName);
 
 		selectSQL =String.format("SELECT sub.subjectName,temp.teacherName,temp.date,temp.subjectID FROM %s temp "
 				+ "INNER JOIN tbl_subject sub on sub.subjectID = temp.subjectID "
@@ -39,6 +51,7 @@ public class tempDBManage extends DBAccess {
 
 		checkDB = String.format("SELECT COUNT(*) FROM %s",tblName);
 	}
+
 
 
 	public List<roomInfo> roomsSelect(int periodNum,String classID) throws Exception{
@@ -129,4 +142,43 @@ public class tempDBManage extends DBAccess {
 		int count = rs.getInt(1);
 		return count;
 	}
+
+	public void tempDelete(String tempTableName) throws Exception {
+		deleteSQL = String.format("DELETE FROM "+tempTableName);
+		connect();
+		createStstement();
+		updateExe(deleteSQL);
+		disConnection();
+	}//tempDB Delete
+
+	//ClassTBL動的対応用
+	public void tblCreate(String classID) throws Exception{
+		String tblName = "tbl_temp_"+ classID +"timetable";
+		createDBSQL = String.format("CREATE TABLE IF NOT EXISTS %s( "
+				+ "period CHAR(1) NOT NULL, "
+				+ "subjectID int NOT NULL auto_increment, "
+				+ "date DATE NOT NULL, "
+				+ "classID CHAR(4) NOT NULL, "
+				+ "roomName VARCHAR(20) NOT NULL, "
+				+ "teacherName VARCHAR(20) NOT NULL, "
+				+ "PRIMARY KEY (period,date,classID,subjectID), "
+				+ "FOREIGN KEY (classID) "
+				+ "REFERENCES tbl_class(classID), "
+				+ "FOREIGN KEY (subjectID) "
+				+ "REFERENCES tbl_subject(subjectID) "
+				+ ")ENGINE=InnoDB DEFAULT CHARSET=utf8",tblName);
+		connect();
+		createStstement();
+		updateExe(createDBSQL);
+		disConnection();
+	}
+	//ClassTBL動的対応用
+	public void tblDrop(String classID) throws Exception {
+		String tblName = "tbl_temp_"+ classID +"timetable";
+		dropDBSQL =String.format("DROP TABLE if exists %s", tblName);
+		connect();
+		createStstement();
+		updateExe(dropDBSQL);
+		disConnection();
+	}//tempDB Drop
 }

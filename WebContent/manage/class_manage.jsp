@@ -53,7 +53,10 @@ toastSelect("success","${Msg }")</script>
 <table class="table ">
 <thead>
 <tr class="info wide">
-<td colspan="3">クラス一覧   ( ${cnt } 件)</td></tr>
+<td>クラス</td>
+<td>専攻名</td>
+
+<td class="right">${cnt }　件</td></tr>
 </thead>
 <tbody>
 <!-- クラス情報取得 -->
@@ -69,7 +72,7 @@ toastSelect("success","${Msg }")</script>
 <form action="/Sotsuken/ManageUpdate?page=class_manage" method="post">
 <input type="hidden" name = "classID" value="${rs.classID }" />
 <input type="hidden" name = "className" value="${rs.className }" />
-<button type="submit" class="btn btn-danger"name="delete_class" ><i class="fa fa-trash-o fa-2x"></i></button>
+<button type="submit" class="btn btn-danger delete"name="delete_class" ><i class="fa fa-trash-o fa-2x"></i></button>
 </form>
 <!-- 削除 -->
 </div>

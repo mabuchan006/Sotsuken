@@ -111,6 +111,7 @@ public class classDBManage extends DBAccess{
 
 			break;
 		case DELETE:
+
 			createStstement(deleteClass);
 
 			getPstmt().setString(1, ci.getClassID());// 削除するIDをセット
@@ -118,6 +119,7 @@ public class classDBManage extends DBAccess{
 			createStstement(deleteSql);
 			getPstmt().setString(1,ci.getClassID());//削除するIDをセット
 			updateExe();//実行
+
 
 			break;
 		case UODATE:

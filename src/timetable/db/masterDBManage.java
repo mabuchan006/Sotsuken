@@ -15,6 +15,13 @@ public class masterDBManage extends DBAccess {
 	private String dateSQL; //日付取得用
 	private String deleteSQL;
 
+	private String dropDBSQL;
+	private String createDBSQL;
+
+	public masterDBManage() {
+		super(DRIVER_NAME);
+	}
+
 	public masterDBManage(String chooseTableName) {
 		super(DRIVER_NAME);
 		masterDataSQL = String.format("SELECT period,subjectName,date,classID, roomName,teacherName,bringThings "
@@ -112,4 +119,35 @@ public class masterDBManage extends DBAccess {
 		updateExe(deleteSQL);
 		disConnection();
 	}//masterDB Delete
+
+
+	//ClassTBL動的対応用
+	public void tblCreate(String classID) throws Exception{
+		String tblName = "tbl_master_"+ classID +"timetable";
+		createDBSQL = String.format("CREATE TABLE IF NOT EXISTS %s( "
+				+ "period CHAR(1) NOT NULL, "
+				+ "subjectName VARCHAR(20) NOT NULL, "
+				+ "date DATE NOT NULL, "
+				+ "classID CHAR(4) NOT NULL, "
+				+ "roomName VARCHAR(20) NOT NULL, "
+				+ "teacherName VARCHAR(20) NOT NULL, "
+				+ "bringThings VARCHAR(50), "
+				+ "PRIMARY KEY(period,date,classID), "
+				+ "FOREIGN KEY (classID) "
+				+ "REFERENCES tbl_class(classID) "
+				+ ")ENGINE=InnoDB DEFAULT CHARSET=utf8",tblName);
+		connect();
+		createStstement();
+		updateExe(createDBSQL);
+		disConnection();
+	}
+	//ClassTBL動的対応用
+	public void tblDrop(String classID) throws Exception {
+		String tblName = "tbl_master_"+ classID +"timetable";
+		dropDBSQL =String.format("DROP TABLE if exists %s", tblName);
+		connect();
+		createStstement();
+		updateExe(dropDBSQL);
+		disConnection();
+	}//MasterDB Drop
 }

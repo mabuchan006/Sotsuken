@@ -52,7 +52,7 @@ public class divideUpdateControl extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		// 使用するcss,jsファイルの適用
 		layoutInclude tools = new layoutInclude();
-		layoutIncludeInfo info =  tools.layout();
+		layoutIncludeInfo info =  tools.divideLayout();
 		request.setAttribute("css", info.css);
 		request.setAttribute("js", info.js);
 		// ページ情報指定

@@ -2,6 +2,7 @@ package manage.db;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.TreeMap;
 
@@ -51,7 +52,7 @@ public class subjectDBManage extends DBAccess {
 		// ALL処理用
 		selectAll = String.format("select classID from tbl_class where classID LIKE ?");
 		// 科目情報登録sql
-		selectInsert=String.format("select subjectID from tbl_subject where subjectName = ?");
+		selectInsert=String.format("select subjectID,bringThings from tbl_subject where subjectName = ?");
 		selectInfo=String.format("select classID from tbl_infoSubject where subjectID = ? ");
 		insertSql = String.format(" insert into tbl_subject " + "(subjectName,bringThings,showFlag) values (?,?,?)");
 		replaseSql = String.format(" update tbl_subject " +
@@ -100,7 +101,7 @@ public class subjectDBManage extends DBAccess {
 			}//while
 			subjectinfo.setClassList(classList);
 			// 科目要素を1件ずつリストに追加
-			if(!((subjectinfo.getSubjectName()).equals("　"))){
+			if(!((subjectinfo.getSubjectName()).length()==0)){//空白排除
 			subjectList.add(subjectinfo);
 			}
 			classList=new ArrayList<String>();
@@ -141,7 +142,7 @@ public class subjectDBManage extends DBAccess {
 				createStstement(replaseSql);
 				getPstmt().setInt(4, boolRs.getInt("subjectID"));
 				getPstmt().setString(1, si.getSubjectName());
-				getPstmt().setString(2, si.getBringThings()==""?"なし"
+				getPstmt().setString(2, si.getBringThings()==""?boolRs.getString("bringThings")
 						:si.getBringThings());
 				getPstmt().setInt(3, si.getShowFlag());
 				}else{
@@ -234,47 +235,50 @@ public class subjectDBManage extends DBAccess {
 
 		// 分割クラス格納
 		TreeMap<String, List<String>> classMap = new TreeMap<String, List<String>>();
-		List<String> par_classList = new ArrayList<String>();// 分割したクラス格納
+		// 学科リスト
+		List<String> par_classList = new ArrayList<String>();
 		// DB接続
 		connect();
 		createStstement();
+		//全クラス取得
 		selectExe(selectBox);
 		// 要素取得用準備
 		ResultSet rs = getRsResult();
 		String classID = null;
-		String par_grade;
-
+		String par_grade;//学年
+		//初回比較用のクラスID取得
 		while (rs.next()) {
 			classID = rs.getString("classID");
+			//最初に戻す
 			rs.beforeFirst();
 			break;
-		}
-		par_grade = classID.substring(0, 2);// ex)R4A1 → R4 抽出
+		}//while
+
+		par_grade = classID.substring(0, 2);// ex)R4A1 → R4 学年抽出
 
 		// 全件取得 クラス情報分割処理
 		while (rs.next()) {
 
 			classID = rs.getString("classID");// クラスID取得
 
-			par_classList.add(classID.substring(2));
-
 			// クラスが切り替わっていたら
 			if (!(classID.substring(0, 2).equals(par_grade))) {
 				// ex ) classMap → R4: [A1,A2,A3]
 				// R3: [A1,A2]
+				Collections.sort(par_classList);
+				//学年学科情報追加
 				classMap.put(par_grade, par_classList);
-
-				// 次のクラス
+				// 次の学年
 				par_grade = classID.substring(0, 2);// ex)R3A1 → R3 抽出
 				par_classList = new ArrayList<String>();
 
 			} // if
-			//最後にもう一回
-			classMap.put(par_grade, par_classList);
-				// クラス専攻情報追加
+
+				par_classList.add(classID.substring(2));//学科リストに学科追加
 
 		} // while
-
+		//最後にもう一回
+		classMap.put(par_grade, par_classList);
 		disConnection();// 切断
 
 		return classMap;

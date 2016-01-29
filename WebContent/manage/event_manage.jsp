@@ -24,16 +24,16 @@ toastSelect("success","${Msg }")</script>
 <table class="col-md-9 col-md-offset-3" id="first_table">
 <tr>
 <td class="col-md-3"><label for="EventName" class="labels">イベント名</label>
-	<input type="text" class="form-control" name="eventName" placeholder="イベント入力">
+	<input type="text" class="form-control" name="eventName" placeholder="イベント ">
 </td>
 <td class="col-md-3">
 	<label for="Time" class="labels">日時</label>
-  <input type="text" class="form-control eventDate" placeholder="日付入力" name="eventDate">
+  <input type="text" class="form-control eventDate" placeholder="日付 " name="eventDate">
 
 </td>
 <td class="col-md-3">
 <label for="text" class="labels">コマ</label>
-<input type="text" class="form-control" name="period" list="period" placeholder="コマ入力" multiple>
+<input type="text" class="form-control" name="period" list="period" placeholder="コマ " multiple>
 
 </td>
 
@@ -43,23 +43,28 @@ toastSelect("success","${Msg }")</script>
 </tr>
 <tr>
 <td class="col-md-3"><label for="text" class="labels">教室</label>
-<input type="text" class="form-control" name="roomName" placeholder="教室名入力" list="room">
+<input type="text" class="form-control" name="roomName" placeholder="教室名 " list="room">
 </td>
 
 
 <td class="col-md-3">
 
  <label for="text" class="labels">講師</label>
- <input type="text" class="form-control" name="guestTeacher" placeholder="担当講師入力" list="teacher"></td>
+ <input type="text" class="form-control" name="guestTeacher" placeholder="担当講師 " list="teacher"></td>
 
 <td class="col-md-3">
 <label for="text" class="labels">クラス名</label>
- <input type="text" class="form-control" name="class_id" placeholder="クラス名入力" list="class"></td>
+ <input type="text" class="form-control" name="class_id" placeholder="クラス名 " list="class"></td>
 
 
 <td class="col-md-3">
 <label for="password" class="empty">________</label>
 <button type="submit" class="btn btn-primary col-md-2"id="regist_btn"name="regist_event">登録</button>
+</td>
+</tr>
+<tr>
+<td class="col-md-9" colspan="4"><label for="text" class="labels">概要</label>
+<input type="text" class="form-control" name="notice" placeholder="概要" >
 </td>
 </tr>
 </table>
@@ -75,8 +80,10 @@ toastSelect("success","${Msg }")</script>
 <thead>
 <tr class="wide">
 
+<td>日付</td>
+<td>イベント情報</td>
 
-<td colspan="3">イベント一覧   ( ${cnt }) 件</td>
+<td class="right">${cnt }　件</td>
 
 </tr>
 </thead>
@@ -102,8 +109,12 @@ ${rs.date[2] }
 
 <!-- 主要イベント情報 -->
 <ol class="eventpost">
-<li class="event_li" class=" col-md-12"><span class="eventName" data-name="${rs.eventID}">${rs.eventName}</span></li>
-
+<li class="event_li" class=" col-md-8">
+<span class="eventName" data-name="${rs.eventID}">${rs.eventName}</span>
+<span class="notice" data-name="${rs.eventID}">${rs.notice}</span>
+</li>
+<button class="notice-slide"><i class="col-md-1 col-md-offset-3 fa fa-arrow-circle-right notice-slide"></i>
+</button>
 <div class="col-md-12">
 
 <li class="event_li"><span class="period label label-pill label-default">${rs.period}時限目</span></li>
@@ -122,10 +133,10 @@ ${rs.date[2] }
 
 <!-- 削除用フォーム -->
 <form action="/Sotsuken/ManageUpdate" method="post">
+<input type="hidden"name="page" value="event_manage">
 <input type="hidden" name = "event_id" value="${rs.eventID }" />
-
 <input type="hidden" name = "eventName" value="${rs.eventName }" />
-<button type="submit" class="btn btn-danger"name="delete_event" ><i class="fa fa-trash-o fa-2x"></i></button>
+<button type="submit" class="btn btn-danger delete"name="delete_event" ><i class="fa fa-trash-o fa-2x"></i></button>
 </form>
 <!-- 削除 -->
 </div>

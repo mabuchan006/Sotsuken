@@ -1,6 +1,7 @@
-var textVal = "" , fcEle = "";
-//一時マスタ用
-function f_temp_drag() {
+var textVal = "";
+
+$(function(e){
+	//f_temp_drag
 	$(".drag-target td , .drag-target li").draggable({
 		appendTo : "body",
 		revert : "invalid",
@@ -10,26 +11,23 @@ function f_temp_drag() {
 			$(this).trigger("focusout");
 		}
 	})// draggable
-}// f_drag
 
-//ドロップ
-function f_temp_drop(e) {
+	//f_temp_drop
 	$(".drop-target").droppable({
 		drop : function(e, ui) {
-			
+
 			var array = new Array();
 			// 子要素の取得
 			var ele = $(this).children("textarea").get(0);
 			dragEle = ui.draggable.get(0);
-			if (ele.classList.contains("subject") && dragEle.classList.contains("subject")) {
+			if (ele.classList.contains("subject") && dragEle.classList.contains("subject") && !$(ele).prop("disabled")) {
 				var array = ui.draggable.text().split(":");
 				ele.value = array[1];
 				var eleInput = $(this).children("input:hidden").get(0);
 				console.log(eleInput);
-				$(eleInput).attr("name", "subID_" + array[0]);
-				eleInput.value = array[1];
+				eleInput.value = ui.draggable.text();
 			} else
-			if (ele.classList.contains("teacher") && dragEle.classList.contains("teacher")) {
+			if (ele.classList.contains("teacher") && dragEle.classList.contains("teacher") && !$(ele).prop("disabled")) {
 				if (ele.value.length > 0) {
 					ele.value = ele.value + "/" + ui.draggable.text();
 					$(ele).trigger("focusin");
@@ -44,19 +42,17 @@ function f_temp_drop(e) {
 			}
 		}// drop
 	})// droppable
-}// f_drop
 
-function f_temp_formCheck(e) {
+	//f_temp_formCheck
 	$("textarea.teacher").on({
 		"focusin" : function(e) {
 			textVal = $(this).val();
 			console.log("focusin:"+ textVal);
-			//fcEle = $(this).children("textarea").get(0);
-		},
+		},//focusin
 		"keyup" : function(e) {
 			textVal = $(this).val();
 			console.log("keyup:"+ textVal);
-		},
+		},//keyup
 		"focusout" : function(e){
 			var insVal = "";
 			$.each($(".drag-target li"), function(k,teacher){
@@ -71,11 +67,22 @@ function f_temp_formCheck(e) {
 			console.log("focusout textVal :" + textVal);
 			console.log("focusout insVal :" + insVal);
 			$(this).val(insVal);
+		}//focusout
+	});//f_temp_drag
+
+	//tempClickEvent
+	$("#confBtn").click(function(){
+		$("#dateReq").removeAttr("required");
+	});//tempClickEvent
+
+	//Sun0_1
+	//Te0_1
+	//Ro0_1
+
+	$.each($("input.roomID"),function(k,v){
+		if($(v).val() === ""){
+			$("textarea[name=\"Sun" + $(v).attr("name").substr(-3) + "\"]").prop("disabled", true);
+			$("textarea[name=\"Te" + $(v).attr("name").substr(-3) + "\"]").prop("disabled", true);
 		}
 	})
-}
-function tempClickEvent(){
-	$("#confBtn").click(function(){
-		$("#aaaa").removeAttr("required");
-	})
-}
+})

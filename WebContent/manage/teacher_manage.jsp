@@ -11,12 +11,15 @@ toastSelect("success","${Msg }")</script>
 <script>toastSelect("error","${err_Msg }")</script>
 </c:if>
 
+
+
 <div class="row col-md-9"id="top">
 <div class="col-md-1 col-md-offset-9 fix margin-top">
 
 		<a href="#top"><i class="fa fa-arrow-circle-up fa-4x i-color fix up-icon"></i></a>
 
 		</div>
+
 <!-- 登録処理 -->
 <form action="/Sotsuken/ManageUpdate" method="post">
 <input type="hidden" name="page" value="subject_manage" />
@@ -26,7 +29,7 @@ toastSelect("success","${Msg }")</script>
 <td class="col-md-3">
 <!-- ID入力 -->
 <label for="teacher_id" class="labels">ID</label>
-<input type="number" size="20" class="form-control" id="teacherID" name="teacher_id" autocomplete="off ">
+<input type="number" size="20" class="form-control" id="teacherID" name="teacher_id" value="" autocomplete="off " >
 </td>
 
 <td class="col-md-3">
@@ -60,7 +63,7 @@ toastSelect("success","${Msg }")</script>
 <td class="widet"></td>
 <td class="center">名前</td>
 <td class="center">ID</td>
-<td class="center">講師一覧   ( ${cnt } 件)</td></tr>
+<td class="right">${cnt }　件</td></tr>
 </thead>
 
 
@@ -116,20 +119,31 @@ ${ teacher.teacherID }
 								<h3 class="modal-title white fonts">パスワード変更</h3>
 							</div>
 							<div class="modal-body black">
-								<form action="/Sotsuken/ManageEdit" method="POST">
+								<form id="manageForm" class="form-horizontal">
+															    <div class="form-group">
+							        <label class="black md left">Old Pass:</label>
 
-									<div id="msg"></div>
-									<input type="hidden" name="teacher_manage" />
-									<label class="black md">Old Pass:</label>
-									<input type="password"placeholder="現在のパスワード" id="old_pass" value="" name="old_pass"> <br>
+							            <input type="password" class="form-control col-md-6" name="old_password" id="old_pwd" placeholder="新しいパスワード"/>
 
-									<label class="black md">New Pass:</label>
-									<input type="password" placeholder="新しいパスワード" id="enterPw" value="" name="password">
-									<br>
-									<label class="black md">Re Type:</label>
-									<input type="password" placeholder="再入力してください" id="enterPw" value="" name="password">
-									<br><input type="submit" value="変更" id="edit_pass">
-								</form>
+							    </div>
+
+
+							    <div class="form-group">
+							        <label class="black md left">New Pass:</label>
+
+							            <input type="password" class="form-control col-md-6" name="password" id="new_pwd" placeholder="新しいパスワード"/>
+
+							    </div>
+
+							    <div class="form-group">
+							        <label class="black md left">Re Type:</label>
+
+							            <input type="password" class="form-control col-md-6" name="confirmPassword" id="reType" placeholder="再入力"/>
+
+							    </div>
+
+							<br><input type="submit" value="変更" id="edit_pass" name="edit_pass">
+							</form>
 
 							</div>
 						<div class="modal-footer">
@@ -148,22 +162,27 @@ ${ teacher.teacherID }
 									aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>
-								<h3 class="modal-title white fonts">管理者権限付与</h3>
+								<h3 class="modal-title white fonts">管理者権限</h3>
 							</div>
 							<div class="modal-body black">
-								<form action="/Sotsuken/ManageEdit" method="POST">
+								<form id="newForm" class="form-horizontal">
 
-									<div id="msg"></div>
+							    <div class="form-group">
+							        <label class="black md left">New Pass:</label>
 
-									<input type="hidden" name="teacher_manage" />
-									<label class="black md">New Pass:</label>
-									<input type="password" placeholder="新しいパスワード" id="enterPw" value="" name="password">
-									<br>
-									<label class="black md">Re Type:</label>
-									<input type="password" placeholder="再入力してください" id="enterPw" value="" name="password">
-									<br><input type="submit" value="登録" id="regist_pass" name="regist_pass">
-								</form>
+							            <input type="password" class="form-control col-md-6" name="password" placeholder="新しいパスワード"/>
 
+							    </div>
+
+							    <div class="form-group">
+							        <label class="black md left">Re Type:</label>
+
+							            <input type="password" class="form-control col-md-6" name="confirmPassword" placeholder="再入力"/>
+
+							    </div>
+
+							<br><input type="submit" value="登録" id="regist_pass" name="regist_pass">
+							</form>
 							</div>
 						<div class="modal-footer">
 					<button type="button" class="btn btn-primary"
@@ -177,7 +196,7 @@ ${ teacher.teacherID }
 <input type="hidden" name="page" value="teacher_manage" />
 <input type="hidden" name = "teacher_id" value="${ teacher.teacherID }" />
 <input type="hidden" name = "teacherName" value="${ teacher.teacherName }" />
-<button type="submit" class="btn btn-danger"name="delete_teacher" ><i class="fa fa-trash-o fa-2x"></i></button>
+<button type="submit" class="btn btn-danger delete"name="delete_teacher" ><i class="fa fa-trash-o fa-2x"></i></button>
 </form>
 <!-- 削除 -->
 

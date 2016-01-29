@@ -1,7 +1,7 @@
 function toastSelect(status,msg){
 
 	toastr.options = {
-		"closeButton" : true,
+		"closeButton" : false,
 		"debug" : true,
 		"newestOnTop" : true,
 		"progressBar" : true,
@@ -15,7 +15,9 @@ function toastSelect(status,msg){
 		"showEasing" : "swing",
 		"hideEasing" : "linear",
 		"showMethod" : "fadeIn",
-		"hideMethod" : "fadeOut"
+		"hideMethod" : "fadeOut",
+		
+		
 
 	}
 Command: toastr[status](msg, status+"!!")

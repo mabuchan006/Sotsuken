@@ -181,9 +181,6 @@ body {
 	font-size: 1.7em;
 }
 
-.thead {
-	font-size: 2em;
-}
 
 .fontSize{
 	font-size: 1.7em;
@@ -339,13 +336,15 @@ font-family:Tahoma;
 }
 .event_li:first{
 	display:block;
+
 }
 
-.eventName {
+.eventName ,.left{
 
 	float: left;
 
 }
+
 
 .period,.classID,.roomID,.guestTeacher {
 
@@ -399,6 +398,10 @@ font-family:Tahoma;
 .widet{
 	width: 80px;
 }
+
+
+
+
 
 
 

@@ -132,7 +132,7 @@
 
 					<div class="col-md-6" id="#team-modal" data-toggle="modal"
 						data-target="#myModal" style="cursor: pointer">
-						<div class="menu-item light-orange responsive-2">
+						<div class="menu-item light-orange responsive-2" id="modal">
 							<a href="#team-modal"> <i class="fa fa-users"></i>
 								<p>login</p>
 							</a>
@@ -156,9 +156,9 @@
 								<form action="/Sotsuken/loginControl" method="POST" id="loginForm">
 									<div id="msg"></div>
 									<label class="wide11">userID:</label> <input type="text"
-										placeholder="ユーザーID" id="enterId" value="" name="teacherID"> <br>
+										placeholder="ユーザーID" id="enterId" value="" name="teacherID" class="wide9"> <br>
 									<label class="wide11">password:</label> <input type="password" placeholder="パスワード"
-										id="enterPw" value="" name="password"><br> <br> <input
+										id="enterPw" value="" name="password" class="wide9"><br> <br> <input
 										type="submit" value="ログイン" id="login">
 								</form>
 							</div>

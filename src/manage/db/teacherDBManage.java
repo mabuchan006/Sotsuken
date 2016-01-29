@@ -16,8 +16,10 @@ public class teacherDBManage extends DBAccess{
 	private String insertSql;//講師1件登録用
 	private String updateSql;
 	private String updatePass;
+	private String registPass;
 	//*******Msg*********
 	private String msg;
+
 
 
 	public String getMsg() {
@@ -40,7 +42,9 @@ public class teacherDBManage extends DBAccess{
 		insertSql= String.format(" insert into tbl_teacher (teacherName, password,teacherID) values ( ? , ?, ? )");
 
 		updateSql= String.format("update tbl_teacher set teacherName = ? where teacherID = ?");
-		updatePass= String.format("update tbl_teacher set password = ? where teacherID = ?");
+		registPass= String.format("update tbl_teacher set password = ? where teacherID = ?");
+		updatePass= String.format("update tbl_teacher set password = ? where teacherID = ? AND password = ?");
+
 	}
 	/*
 	 * @param teacherinfo 講師情報
@@ -110,6 +114,38 @@ public class teacherDBManage extends DBAccess{
 		}//if
 		disConnection();//切断
 	}//method
+
+	public int OldPasswordUpdate(teacherInfo ti,String newPwd) throws Exception{
+			connect();
+
+			createStstement(updatePass);
+
+			getPstmt().setString(1, newPwd);
+			getPstmt().setInt(2, ti.getTeacherID());
+			getPstmt().setString(3, ti.getPassword());
+
+			updateExe();//実行
+
+			return getIntResult();//更新の有無
+		}
+
+	public void NewPasswordUpdate(teacherInfo ti) throws Exception{
+		connect();
+
+		createStstement(registPass);
+
+		System.out.println(ti.getTeacherID());
+		System.out.println(ti.getPassword());
+		getPstmt().setInt(2, ti.getTeacherID());
+		getPstmt().setString(1, ti.getPassword());
+
+		updateExe();//実行
+		if (getIntResult() != 0) {
+		setMsg("パスワードを登録しました。");
+		}else{
+			setMsg("入力情報に誤りがあります。");
+		}
+	}
 
 private String resultMsg(teacherInfo ti,String msg){
 
