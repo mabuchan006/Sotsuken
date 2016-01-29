@@ -18,6 +18,8 @@ public class eventDBManage extends DBAccess{
 	private String insertSql;//クラス1件登録用
 	private String updateSql;
 	private String selectRoom;
+	private String eventSelectAll;
+	private String eventSelectClass;
 	//*******Msg*********
 	private String msg;
 
@@ -47,6 +49,22 @@ public class eventDBManage extends DBAccess{
 				+ ",?,?,?)");
 		updateSql= String.format("update tbl_event set eventName = ? where eventID = ?");
 		selectRoom= String.format("select * from tbl_room;");
+
+		/**
+		 * eventSelectSQL
+		 * creator: Mabuchi
+		 */
+
+		eventSelectAll = String.format("SELECT date, eventName,roomName,classID, "
+				+ "GROUP_CONCAT(DISTINCT period ORDER BY FIELD(period, 1,2,3,4) separator ' ') as doperiod "
+				+ "FROM tbl_event "
+				+ "GROUP BY date, eventName HAVING classID = 'AAAA'  ORDER BY date ASC");
+
+		eventSelectClass = String.format("SELECT date, eventName,roomName,classID, "
+				+ "GROUP_CONCAT(DISTINCT period ORDER BY FIELD(period, 1,2,3,4) separator ' ') as doperiod "
+				+ "FROM tbl_event "
+				+ "GROUP BY date, eventName HAVING classID LIKE '?__'  || classID = 'AAAA'  ORDER BY date ASC");
+
 	}
 
 	public List<String> roomDBSelect() throws Exception{
