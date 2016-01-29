@@ -8,10 +8,20 @@ var repComma = "", str = "", ele = "";
 var elem = "", data = "";
 
 $(function(e){
+	var pTop = $("#classDrag").position().top;
+	var pLeft = $("#classDrag").position().left;
+
 	//accordion
 	$(".accordionJS").accordion();
 
 	$("#classDrag").draggable({stack: ".table"});
+
+	$("body").keydown(function(e){
+		if(e.ctrlKey === true && e.shiftKey === true && e.which === 90){
+			console.log(pTop + ":" + pLeft);
+			$("#classDrag").css({"top" : pTop, "left" : pLeft});
+		}
+	})
 
 	//formCheck
 	$("textarea").on({
