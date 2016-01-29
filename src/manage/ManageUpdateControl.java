@@ -387,16 +387,16 @@ public class ManageUpdateControl extends HttpServlet {
 
 				if(request.getParameter("regist_event") != null ){
 					String[] periodArray = request.getParameter("period").split(",");
-					Integer period;
+
 
 					//イベント情報格納
-					for (String rs : periodArray) {
-						period=Integer.parseInt(rs);
+					for (String period: periodArray) {
+
 						ei = new eventInfo(
 								request.getParameter("event_id")==null?0
 										:Integer.parseInt(request.getParameter("event_id")),
 								request.getParameter("eventName"),
-								period==null?0:period,
+								period==null?"0":period,
 								dateList,
 								request.getParameter("class_id")=="ALL"?"AAAA"//ALL処理
 										:request.getParameter("class_id"),
@@ -419,8 +419,8 @@ public class ManageUpdateControl extends HttpServlet {
 							request.getParameter("event_id")==null?0
 									:Integer.parseInt(request.getParameter("event_id")),
 							request.getParameter("eventName"),
-							request.getParameter("period")==null?0
-									:Integer.parseInt(request.getParameter("period")),
+							request.getParameter("period")==null?""
+									:request.getParameter("period"),
 							dateList,
 							request.getParameter("class_id")=="ALL"?"AAAA"//ALL処理
 									:request.getParameter("class_id"),

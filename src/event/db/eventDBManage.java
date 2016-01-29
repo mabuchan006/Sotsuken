@@ -128,7 +128,7 @@ public class eventDBManage extends DBAccess{
 				eventinfo = new eventInfo(
 						rs.getInt("eventID"),
 						rs.getString("eventName"),
-						rs.getInt("period"),
+						rs.getString("period"),
 						dateList,
 						rs.getString("classID"),
 						rs.getString("roomName"),
@@ -168,7 +168,7 @@ public class eventDBManage extends DBAccess{
 			createStstement(insertSql);
 
 			getPstmt().setString(1,ei.getEventName());
-			getPstmt().setInt(2,ei.getPeriod());
+			getPstmt().setString(2,ei.getPeriod());
 			getPstmt().setString(3,eventDate);
 			getPstmt().setString(4,classID);
 			getPstmt().setString(5,ei.getRoomName());
@@ -213,7 +213,7 @@ public class eventDBManage extends DBAccess{
 
 		connect();
 		createStstement(masterUpDate);
-		getPstmt().setInt(1, ei.getPeriod());
+		getPstmt().setString(1, ei.getPeriod());
 		updateExe();
 		disConnection();
 	}

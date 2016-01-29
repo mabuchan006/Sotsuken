@@ -9,7 +9,7 @@ public class eventInfo implements Serializable{
 
 		private int eventID;
 		private String eventName;
-		private int period;
+		private String period;
 		private List<String> date=new ArrayList<String>();
 		private String classID;
 		private String guestTeacher;
@@ -22,7 +22,7 @@ public class eventInfo implements Serializable{
 			super();
 			// TODO 自動生成されたコンストラクター・スタブ
 		}
-		public eventInfo(int eventID,String eventName, int period, List<String> date, String classID, String roomName, String endFlag,String guestTeacher,
+		public eventInfo(int eventID,String eventName, String period, List<String> date, String classID, String roomName, String endFlag,String guestTeacher,
 				String notice) {
 			super();
 
@@ -49,12 +49,12 @@ public class eventInfo implements Serializable{
 		}
 
 
-		public int getPeriod() {
+		public String getPeriod() {
 			return period;
 		}
 
 
-		public void setPeriod(int period) {
+		public void setPeriod(String period) {
 			this.period = period;
 		}
 
