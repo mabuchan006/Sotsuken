@@ -51,7 +51,7 @@ public class EventViewControl extends HttpServlet {
 
 
 	//ディスパッチ処理 layout.jspに投げると中身をcontent_pageのjspに合わせて表示
-		RequestDispatcher disp = request.getRequestDispatcher(content_page);
+		RequestDispatcher disp = request.getRequestDispatcher("/template/public_layout.jsp");
 				disp.forward(request, response);
 	}
 
