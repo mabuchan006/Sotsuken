@@ -82,6 +82,7 @@
 	$("table tr:eq(2) td:eq(0)").css("width","1em");
 	$("table tr:eq(2) td:eq(0)").css("text-align","center");
 	$("table tr:eq(2) td:eq(0)").css("font-weight","900");
+	$("table tr:eq(2) td:eq(0)").css("pdding","1em");
 
 
 
