@@ -15,21 +15,6 @@
 <div class="noprint">
 
 
-<nav id="menu">
-
-    		<input type="checkbox" id="toggle-nav"/>
-    		<label id="toggle-nav-label" for="toggle-nav"><i class="icon-reorder"></i></label>
-
-    		<div class="box">
-	    		<ul>
-	    			<li><a href="#"><i class="icon-home"></i> home</a></li>
-	    			<li><a href="#"><i class="icon-file-alt"></i> about</a></li>
-	    			<li><a href="#"><i class="icon-copy"></i> works</a></li>
-	    			<li><a href="#"><i class="icon-envelope"></i> contacts</a></li>
-	    		</ul>
-    		</div>
-
-    	</nav>
 	<!-- タブ -->
 
 	<ul class="nav nav-tabs noprint">
