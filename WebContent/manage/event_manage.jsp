@@ -27,19 +27,23 @@ toastSelect("success","${Msg }")</script>
 	<input type="text" class="form-control" name="eventName" placeholder="イベント ">
 </td>
 <td class="col-md-3">
-	<label for="Time" class="labels">日時</label>
+	<label for="Time" class="labels">日付</label>
   <input type="text" class="form-control eventDate" placeholder="日付 " name="eventDate">
 
 </td>
 <td class="col-md-3">
-<label for="text" class="labels">コマ</label>
-<select class="form-control" name="period" class="form-control" multiple>
-    <option style="color: black;" value="1">1</option>
-    <option style="color: black;" value="2">2</option>
-    <option style="color: black;" value="3">3</option>
-    <option style="color: black;" value="4">4</option>
-</select>
 
+<label for="text" class="labels pireodC">コマ</label>
+
+<div class="col-md-12">
+<ol id="selectable">
+  <li class="ui-state-default" id="1">1</li>
+  <li class="ui-state-default" id="2">2</li>
+  <li class="ui-state-default" id="3">3</li>
+  <li class="ui-state-default" id="4">4</li>
+ </ol>
+</div>
+<input type="hidden" name="period" id="period" value="" />
 </td>
 
 
@@ -47,8 +51,8 @@ toastSelect("success","${Msg }")</script>
 
 </tr>
 <tr>
-<td class="col-md-3"><label for="text" class="labels">教室</label>
-<input type="text" class="form-control" name="roomName" placeholder="教室名 " list="room">
+<td class="col-md-3"><label for="text" class="labels">場所</label>
+<input type="text" class="form-control" name="roomName" placeholder="場所 " list="room">
 </td>
 
 
@@ -58,8 +62,8 @@ toastSelect("success","${Msg }")</script>
  <input type="text" class="form-control" name="guestTeacher" placeholder="担当講師 " list="teacher"></td>
 
 <td class="col-md-3">
-<label for="text" class="labels">クラス名</label>
- <input type="text" class="form-control" name="class_id" placeholder="クラス名 " list="class"></td>
+<label for="text" class="labels">クラス</label>
+ <input type="text" class="form-control" name="class_id" placeholder="クラス" list="class"></td>
 
 
 <td class="col-md-3">
@@ -116,13 +120,13 @@ ${rs.date[2] }
 <ol class="eventpost">
 <li class="event_li" class=" col-md-8">
 <span class="eventName" data-name="${rs.eventID}">${rs.eventName}</span>
-<span class="notice" data-name="${rs.eventID}">${rs.notice}</span>
+<!-- <span class="notice" id="noticeID" data-name="${rs.eventID}">${rs.notice}</span>-->
 </li>
-<button class="notice-slide"><i class="col-md-1 col-md-offset-3 fa fa-arrow-circle-right notice-slide"></i>
-</button>
+<!--<i class="col-md-1 col-md-offset-3 fa fa-arrow-circle-right " id="notice-slide"></i>-->
+
 <div class="col-md-12">
 
-<li class="event_li"><span class="period label label-pill label-default">${rs.period}時限目</span></li>
+<li class="event_li"><span class="period label label-pill label-default">${rs.period}限目</span></li>
 <li class="event_li"><span class="classID label label-pill label-primary">${rs.classID}</span></li>
 <li class="event_li"><span class="roomID label label-pill label-warning">${rs.roomName}</span></li>
 <li class="event_li"><span class="guestTeacher label-pill label label-info">${rs.guestTeacher}</span>

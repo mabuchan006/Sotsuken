@@ -54,12 +54,12 @@ public class eventDBManage extends DBAccess{
 		 * eventSelectSQL
 		 * creator: Mabuchi
 		 */
-
+		//ALL
 		eventSelectAll = String.format("SELECT date, eventName,roomName,classID, "
 				+ "GROUP_CONCAT(DISTINCT period ORDER BY FIELD(period, 1,2,3,4) separator ' ') as doperiod "
 				+ "FROM tbl_event "
 				+ "GROUP BY date, eventName HAVING classID = 'AAAA'  ORDER BY date ASC");
-
+		//選択クラスとALL
 		eventSelectClass = String.format("SELECT date, eventName,roomName,classID, "
 				+ "GROUP_CONCAT(DISTINCT period ORDER BY FIELD(period, 1,2,3,4) separator ' ') as doperiod "
 				+ "FROM tbl_event "
@@ -105,7 +105,7 @@ public class eventDBManage extends DBAccess{
 
 					inputStr=date.split("-");
 					for (String date1 : inputStr) {
-						System.out.println(date1);
+
 						dateList.add(date1);
 					}//for
 					}else{
@@ -156,15 +156,21 @@ public class eventDBManage extends DBAccess{
 		connect();
 		switch(state){
 		case INSERT:
+			//結合した日付情報
+			String eventDate=ei.getDate().get(0)+"-"+ei.getDate().get(1)
+					+"-"+ei.getDate().get(2);
+			String classID=ei.getClassID();
 
+			if(classID.equals("AAAA")){
+
+			}//ALL処理
 
 			createStstement(insertSql);
 
 			getPstmt().setString(1,ei.getEventName());
 			getPstmt().setInt(2,ei.getPeriod());
-			getPstmt().setString(3,ei.getDate().get(0)+"-"+ei.getDate().get(1)
-					+"-"+ei.getDate().get(2));
-			getPstmt().setString(4,ei.getClassID());
+			getPstmt().setString(3,eventDate);
+			getPstmt().setString(4,classID);
 			getPstmt().setString(5,ei.getRoomName());
 			getPstmt().setString(6,ei.getEndFlag());
 			getPstmt().setString(7,ei.getGuestTeacher());
@@ -199,17 +205,16 @@ public class eventDBManage extends DBAccess{
 		}//if
 		disConnection();//切断
 	}//method
-	public void masterUpdate(String masterTableName,String tempTableName) throws Exception{
+	public void masterUpdate(String masterTableName,eventInfo ei) throws Exception{
 
-		String masterUpDate = String.format("INSERT INTO "+ masterTableName +" (period, subjectName, date, classID, roomName, teacherName, bringThings) "
-			+ "SELECT temp.period, sub.subjectName, temp.date, temp.classID, temp.roomName, temp.teacherName, sub.bringThings "
-			+ "FROM "+ tempTableName +" temp "
-			+ "INNER JOIN tbl_subject sub on sub.subjectID = temp.subjectID "
-			+ "ORDER BY temp.date,temp.period");
+		String masterUpDate = String.format("INSERT INTO "+ masterTableName +
+				" (period, subjectName, date, classID, roomName, teacherName, bringThings) "
+				+ "values(?,?,?,?,?,?,?)");
 
 		connect();
-		createStstement();
-		updateExe(masterUpDate);
+		createStstement(masterUpDate);
+		getPstmt().setInt(1, ei.getPeriod());
+		updateExe();
 		disConnection();
 	}
 

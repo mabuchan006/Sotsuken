@@ -56,7 +56,7 @@ public class ManageUpdateControl extends HttpServlet {
 		//文字コードutf8
 		request.setCharacterEncoding("UTF-8");
 		//jspからのページ情報取得
-		String get_page = request.getParameter("page")==null?"class_manage"
+		String get_page = request.getParameter("page")==null?"event_manage"
 				:request.getParameter("page");
 
 		//使用するcss,jsファイルの適用
@@ -339,8 +339,6 @@ public class ManageUpdateControl extends HttpServlet {
 					tdm.teacherDBUpdate(ti, DBAccess.DELETE, "削除");
 				}//if
 
-
-
 				//更新済み講師情報全件取得
 				List<teacherInfo> teacherList = tdm.teacherDBSelect();
 				request.setAttribute("teacherList", teacherList);
@@ -356,94 +354,121 @@ public class ManageUpdateControl extends HttpServlet {
 
 			} catch (MySQLIntegrityConstraintViolationException e) {
 				// TODO 自動生成された catch ブロック
-				request.setAttribute("Msg","該当講師は使用されています。");
+				request.setAttribute("err_Msg","該当講師は使用されています。");
 			} catch (Exception e) {}
 		}//teacher
 
 	//イベント管理画面指定時の処理
-	private void eventUpdate(HttpServletRequest request, eventDBManage edm) {
-		try {
-		//日付情報分割格納
-		List<String> dateList = new ArrayList<String>();
-		if(request.getParameter("eventDate")!=null){
-		String inputStr[];
+		private void eventUpdate(HttpServletRequest request, eventDBManage edm) {
+			try {
+			//日付情報分割格納
+			List<String> dateList = new ArrayList<String>();
+			if(request.getParameter("eventDate")!=null){
+			String inputStr[];
 
-		inputStr=request.getParameter("eventDate").split("/");
-		for (String date : inputStr) {
+			inputStr=request.getParameter("eventDate").split("/");
+			for (String date : inputStr) {
 
-			dateList.add(date);
-		}//for
-		}else{
-			dateList.add("date");
-		}
-		//日付情報分割格納end
+				dateList.add(date);
+			}//for
+			}else{
+				dateList.add("date");
+			}
+			eventInfo ei = new eventInfo();
+			//日付情報分割格納end
+			//時限数取得
 
-		//イベント情報格納
-		eventInfo ei = new eventInfo(
-				request.getParameter("event_id")==null?0
-						:Integer.parseInt(request.getParameter("event_id")),
-				request.getParameter("eventName"),
-				request.getParameter("period")==null?1
-						:Integer.parseInt(request.getParameter("period")),
-				dateList,
-				request.getParameter("class_id")==null?""
-						:request.getParameter("class_id"),
-				request.getParameter("roomName")==null?""
-						:request.getParameter("roomName"),
-				request.getParameter("endFlag")==null?"0"
-						:request.getParameter("endFlag"),
-				request.getParameter("guestTeacher")==null?""
-						:request.getParameter("guestTeacher"),
-				request.getParameter("notice")==null?""
-						:request.getParameter("notice")
-				);
 
-			//ページ情報指定
-			content_page = "/manage/event_manage.jsp";
-			page_title = "EventManage";
 
-			if(request.getParameter("regist_event") != null ){
-				edm.eventDBUpdate(ei, DBAccess.INSERT, "登録");
-				if(ei.getDate()!=null){
 
+				//ページ情報指定
+				content_page = "/manage/event_manage.jsp";
+				page_title = "EventManage";
+
+				if(request.getParameter("regist_event") != null ){
+					String[] periodArray = request.getParameter("period").split(",");
+					Integer period;
+
+					//イベント情報格納
+					for (String rs : periodArray) {
+						period=Integer.parseInt(rs);
+						ei = new eventInfo(
+								request.getParameter("event_id")==null?0
+										:Integer.parseInt(request.getParameter("event_id")),
+								request.getParameter("eventName"),
+								period==null?0:period,
+								dateList,
+								request.getParameter("class_id")=="ALL"?"AAAA"//ALL処理
+										:request.getParameter("class_id"),
+								request.getParameter("roomName")==null?""
+										:request.getParameter("roomName"),
+								request.getParameter("endFlag")==null?"0"
+										:request.getParameter("endFlag"),
+								request.getParameter("guestTeacher")==null?""
+										:request.getParameter("guestTeacher"),
+								request.getParameter("notice")==null?""
+										:request.getParameter("notice")
+								);
+						edm.eventDBUpdate(ei, DBAccess.INSERT, "登録");
+					}//for
+
+				}//if
+
+				if(request.getParameter("delete_event") != null){
+					ei = new eventInfo(
+							request.getParameter("event_id")==null?0
+									:Integer.parseInt(request.getParameter("event_id")),
+							request.getParameter("eventName"),
+							request.getParameter("period")==null?0
+									:Integer.parseInt(request.getParameter("period")),
+							dateList,
+							request.getParameter("class_id")=="ALL"?"AAAA"//ALL処理
+									:request.getParameter("class_id"),
+							request.getParameter("roomName")==null?""
+									:request.getParameter("roomName"),
+							request.getParameter("endFlag")==null?"0"
+									:request.getParameter("endFlag"),
+							request.getParameter("guestTeacher")==null?""
+									:request.getParameter("guestTeacher"),
+							request.getParameter("notice")==null?""
+									:request.getParameter("notice")
+							);
+					edm.eventDBUpdate(ei, DBAccess.DELETE, "削除");
+				}//if
+
+				//更新済み講師情報全件取得
+				List<eventInfo> eventList = edm.eventDBSelect();
+				//更新済み講師情報全件取得
+				teacherDBManage tdm = new teacherDBManage();
+				List<teacherInfo> teacherList = tdm.teacherDBSelect();
+				//更新済み講師情報全件取得
+				classDBManage cdm = new classDBManage();
+				List<classInfo> classList = cdm.classDBSelect();
+				//部屋情報取得
+				List<String> roomList = edm.roomDBSelect();
+				request.setAttribute("classList", classList);
+				request.setAttribute("roomList", roomList);
+				request.setAttribute("teacherList", teacherList);
+				request.setAttribute("eventList", eventList);
+				request.setAttribute("cnt", eventList.size());
+
+				if(edm.getMsg() != null){
+					if((edm.getMsg()).indexOf("入力情報に誤りがあります") != -1){
+						request.setAttribute("err_Msg", edm.getMsg());
+					}else{
+						request.setAttribute("Msg",edm.getMsg());
+					}//if
 				}
 
-			}//if
-
-			if(request.getParameter("delete_event") != null){
-				edm.eventDBUpdate(ei, DBAccess.DELETE, "削除");
-			}//if
-
-			//更新済み講師情報全件取得
-			List<eventInfo> eventList = edm.eventDBSelect();
-			//更新済み講師情報全件取得
-			teacherDBManage tdm = new teacherDBManage();
-			List<teacherInfo> teacherList = tdm.teacherDBSelect();
-			//更新済み講師情報全件取得
-			classDBManage cdm = new classDBManage();
- 			List<classInfo> classList = cdm.classDBSelect();
- 			//部屋情報取得
- 			List<String> roomList = edm.roomDBSelect();
-			request.setAttribute("classList", classList);
-			request.setAttribute("roomList", roomList);
-			request.setAttribute("teacherList", teacherList);
-			request.setAttribute("eventList", eventList);
-			request.setAttribute("cnt", eventList.size());
-
-			if(edm.getMsg() != null){
-				if((edm.getMsg()).indexOf("入力情報に誤りがあります") != -1){
-					request.setAttribute("err_Msg", edm.getMsg());
-				}else{
-					request.setAttribute("Msg",edm.getMsg());
-				}//if
+			} catch (Exception e) {
+				// TODO 自動生成された catch ブロック
+				e.printStackTrace();
+				request.setAttribute("err_Msg","入力情報に誤りがあります");
 			}
 
-		} catch (Exception e) {
-			// TODO 自動生成された catch ブロック
-			e.printStackTrace();
-		}
+		}//event
 
-	}//event
+
 
 
 	//css,js file import
