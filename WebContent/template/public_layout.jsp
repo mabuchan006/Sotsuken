@@ -80,6 +80,7 @@
 	$("table tr:eq(2) td:eq(0)").attr("rowspan","12");
 	$("table tr:eq(2) td:eq(0)").css("background-color","#ffff66");
 	$("table tr:eq(2) td:eq(0)").css("writing-mode","vertical-rl");
+	$("table tr:eq(2) td:eq(0)").css("-webkit-writing-mode","vertical-rl");
 
 	for(var row = 3;row < 15;row++){
 	$("table tr:eq("+row+") td:eq(0)").remove();

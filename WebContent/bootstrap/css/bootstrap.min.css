@@ -2376,13 +2376,13 @@ th {
 }
 /*  table border  */
 .table-bordered {
-	border: 2px solid #202020
+	border: 2px solid #fff
 }
 
 .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th,
 	.table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td,
 	.table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
-	border: 2px solid #202020
+	border: 2px solid #fff
 }
 
 .table-bordered>thead>tr>th, .table-bordered>thead>tr>td {
