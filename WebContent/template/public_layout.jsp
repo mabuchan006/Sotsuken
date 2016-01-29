@@ -49,10 +49,11 @@
 						<h1>${page_title }</h1>
 						<div class="col-md-4 col-md-offset-8 text-right noprint">
 							<div style="display: inline-flex">
-
+								<c:if test="${eventFlag == null}">
 								<button type="button" class="favolite" id="falseCookie">
 									<i class="fa fa-star"></i>お気に入り
 								</button>
+								</c:if>
 
 								<!-- 印刷用アイコン -->
 								<button type="button" class="print" onclick="window.print()">

@@ -44,6 +44,7 @@ public class EventViewControl extends HttpServlet {
 			request.setAttribute("eventList", eventList);
 			request.setAttribute("content_page", content_page);
 			request.setAttribute("page_title", page_title);
+			request.setAttribute("eventFlag", "eventFlag");
 		} catch (Exception e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
