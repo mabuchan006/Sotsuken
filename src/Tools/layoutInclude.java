@@ -65,6 +65,7 @@ public class layoutInclude {
 
 	public layoutIncludeInfo manage_layout(){
 		layoutIncludeInfo info = new layoutIncludeInfo();
+		info.css.add("http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css");
 		info.css.add("/Sotsuken/bootstrap/css/bootstrap.min.css");
 		info.css.add("/Sotsuken/css/font-awesome.min.css");
 		info.css.add("/Sotsuken/css/custom.css");
@@ -76,6 +77,7 @@ public class layoutInclude {
 
 		info.js.add("/Sotsuken/js/jquery-2.1.1.min.js");
 		info.js.add("http://code.jquery.com/jquery-1.9.1.min.js");
+		info.js.add("/Sotsuken/js/jquery-1.10.0.ui.js");
 		info.js.add("/Sotsuken/bootstrap/js/bootstrap.min.js");
 		info.js.add("/Sotsuken/js/jquery.appear.js");
 		info.js.add("/Sotsuken/js/subject_manage.js");
