@@ -6,8 +6,8 @@
     <welcome-file>top.jsp</welcome-file>
   </welcome-file-list>
 
-   <error-page>
+	<error-page>
     <error-code>404</error-code>
     <location>/top.jsp</location>
-  </error-page>
+  	</error-page>
 </web-app>
