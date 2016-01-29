@@ -33,7 +33,12 @@ toastSelect("success","${Msg }")</script>
 </td>
 <td class="col-md-3">
 <label for="text" class="labels">コマ</label>
-<input type="text" class="form-control" name="period" list="period" placeholder="コマ " multiple>
+<select class="form-control" name="period" class="form-control" multiple>
+    <option style="color: black;" value="1">1</option>
+    <option style="color: black;" value="2">2</option>
+    <option style="color: black;" value="3">3</option>
+    <option style="color: black;" value="4">4</option>
+</select>
 
 </td>
 
@@ -152,13 +157,6 @@ ${rs.date[2] }
 </div>
 
 <!-- 表示用datalist -->
-<!-- コマ -->
-<datalist id="period">
-    <option value="1">
-    <option value="2">
-    <option value="3">
-    <option value="4">
-</datalist>
 
 <!-- class -->
 <datalist id="class">
