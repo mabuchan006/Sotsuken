@@ -13,7 +13,18 @@
 </thead>
 <tbody>
 <!-- イベント情報取得 -->
-<c:forEach var="rs" items="${eventList }">
+
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+
+
+
+<!-- <c:forEach var="rs" items="${eventList }">
 <tr class="select">
 <td>
 ${rs.date[1] }
@@ -35,21 +46,6 @@ ${rs.guestTeacher}
 </td>
 
 
-
-
-
-
 </tr>
 </c:forEach>
-
-</tbody>
-</table>
-</div>
-</div>
-</div>
-
-
-
-
-
-
+ -->
