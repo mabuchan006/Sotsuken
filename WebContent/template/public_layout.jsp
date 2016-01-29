@@ -76,11 +76,16 @@
 	<jsp:include page="${content_page}" />
 	<script>
 
-
+	$("table tr:eq(2) td:eq(0)").html("ソフトバレーボール大会");
 	$("table tr:eq(2) td:eq(0)").attr("rowspan","12");
 	$("table tr:eq(2) td:eq(0)").css("background-color","#ffff66");
-	$("table tr:eq(2) td:eq(0)").css("writing-mode","vertical-rl");
-	$("table tr:eq(2) td:eq(0)").css("-webkit-writing-mode","vertical-rl");
+	$("table tr:eq(2) td:eq(0)").css("width","1em");
+	$("table tr:eq(2) td:eq(0)").css("text-align","center");
+	$("table tr:eq(2) td:eq(0)").css("font-weight","900");
+
+
+
+
 
 	for(var row = 3;row < 15;row++){
 	$("table tr:eq("+row+") td:eq(0)").remove();
