@@ -38,6 +38,7 @@ public class layoutInclude {
 		info.js.add("/Sotsuken/bootstrap/js/bootstrap-datepicker.js");
 		info.js.add("/Sotsuken/bootstrap/js/bootstrap-datepicker.ja.min.js");
 		info.js.add("/Sotsuken/js/tempEdit.js");
+		info.js.add("/Sotsuken/js/sideLoad.js");
 
 		return info;
 	}
@@ -91,6 +92,7 @@ public class layoutInclude {
 		info.js.add("/Sotsuken/bootstrap/js/bootstrap-datepicker.ja.min.js");
 		info.js.add("/Sotsuken/js/passwordEdit.js");
 		info.js.add("/Sotsuken/js/delete-manage.js");
+		info.js.add("/Sotsuken/js/sideLoad.js");
 
 		return info;
 	}
@@ -116,6 +118,7 @@ public class layoutInclude {
 		info.js.add("/Sotsuken/js/jquery.toaster.js");
 		info.js.add("https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js");
 		info.js.add("/Sotsuken/js/toastSelect.js");
+		info.js.add("/Sotsuken/js/sideLoad.js");
 		return info;
 	}
 
