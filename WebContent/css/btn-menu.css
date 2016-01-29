@@ -4,7 +4,7 @@
 * { padding: 0px; margin: 0px; border: 0px; outline: 0px; }		/* fast reset */
 
 body {
-	font-family: 'Merriweather Sans', Arial, sans-serif;
+
 	font-size: 12px;
 }
 
@@ -73,7 +73,7 @@ li { list-style: none; }
 }
 
 #toggle-nav-label {
-	color: rgba(0,0,0,0.5);
+	color: #fff;
 	background: rgba(0,0,0,0.2);
 	text-align: center;
 	line-height: 30px;
