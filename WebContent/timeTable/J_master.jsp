@@ -6,47 +6,17 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 
-<!-- 	<ul class="nav nav-tabs noprint"> -->
-<%-- 		<c:forEach var="rs" items="${classIDMapJ }"> --%>
-<%-- 			<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">${rs.key}<b class="caret"></b></a> --%>
-<!-- 				<ul class="dropdown-menu"> -->
-<%-- 					<c:forEach var="array" items="${rs.value }"> --%>
-<%-- 						<li><a href="/Sotsuken/publicView?page=${array }">${array }</a></li> --%>
-<%-- 					</c:forEach> --%>
-<!-- 				</ul> -->
-<!-- 			</li> -->
-<%-- 		</c:forEach> --%>
-<!-- 	</ul> -->
-
-<!-- タブ -->
-<ul class="nav nav-tabs">
-<!-- J2 -->
-	<li role="presentation" class="dropdown">
-		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-			J2 <span class="caret"></span>
-		</a>
-		<ul class="dropdown-menu" role="menu">
-			<li role="presentation"><a href="/Sotsuken/publicView?page=J2A1">J2A1</a></li>
-			<li role="presentation"><a href="/Sotsuken/publicView?page=J2A2">J2A2</a></li>
-			<li role="presentation"><a href="/Sotsuken/publicView?page=J2M1">J2M1</a></li>
-			<li role="presentation"><a href="/Sotsuken/publicView?page=J2M1">J2M2</a></li>
-		</ul>
-	</li>
-<!-- J1 -->
-	<li role="presentation" class="dropdown">
-		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-			J1 <span class="caret"></span>
-		</a>
-		<ul class="dropdown-menu" role="menu">
-			<li role="presentation"><a href="/Sotsuken/publicView?page=J1A1">J1A1</a></li>
-			<li role="presentation"><a href="/Sotsuken/publicView?page=J1A2">J1A2</a></li>
-			<li role="presentation"><a href="/Sotsuken/publicView?page=J1M1">J1M1</a></li>
-			<li role="presentation"><a href="/Sotsuken/publicView?page=J1M2">J1M2</a></li>
-		</ul>
-	</li>
-
-
-</ul>
+	<ul class="nav nav-tabs noprint">
+		<c:forEach var="rs" items="${classIDMapJ }">
+			<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">${rs.key}<b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<c:forEach var="array" items="${rs.value }">
+						<li><a href="/Sotsuken/publicView?page=${array }">${array }</a></li>
+					</c:forEach>
+				</ul>
+			</li>
+		</c:forEach>
+	</ul>
 
 <div class="printarea">
   <div  class="container">

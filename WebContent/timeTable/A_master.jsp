@@ -6,35 +6,17 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 
-<!-- 	<ul class="nav nav-tabs noprint"> -->
-<%-- 		<c:forEach var="rs" items="${classIDMapA }"> --%>
-<%-- 			<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">${rs.key}<b class="caret"></b></a> --%>
-<!-- 				<ul class="dropdown-menu"> -->
-<%-- 					<c:forEach var="array" items="${rs.value }"> --%>
-<%-- 						<li><a href="/Sotsuken/publicView?page=${array }">${array }</a></li> --%>
-<%-- 					</c:forEach> --%>
-<!-- 				</ul> -->
-<!-- 			</li> -->
-<%-- 		</c:forEach> --%>
-<!-- 	</ul> -->
-
-<!-- タブ -->
-<ul class="nav nav-tabs">
-<!-- A1 -->
-	<li role="presentation" class="dropdown">
-		<a class="dropdown-toggle" data-toggle="dropdown" href="/Sotsuken/publicView?page=A1A1" role="button" aria-expanded="false">
-			A1 <span class="caret"></span>
-		</a>
-	</li>
-
-<li role="presentation" class="dropdown">
-		<a class="dropdown-toggle" data-toggle="dropdown" href="/Sotsuken/publicView?page=A1A2" role="button" aria-expanded="false">
-			A2 <span class="caret"></span>
-		</a>
-	</li>
-
-
-</ul>
+	<ul class="nav nav-tabs noprint">
+		<c:forEach var="rs" items="${classIDMapA }">
+			<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">${rs.key}<b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<c:forEach var="array" items="${rs.value }">
+						<li><a href="/Sotsuken/publicView?page=${array }">${array }</a></li>
+					</c:forEach>
+				</ul>
+			</li>
+		</c:forEach>
+	</ul>
 
 <!-- 印刷エリア指定id printareaで囲んだ範囲で可能 -->
 <div class="printarea">

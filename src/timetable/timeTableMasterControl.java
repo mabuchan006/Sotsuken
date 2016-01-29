@@ -15,6 +15,7 @@ import Tools.layoutInclude;
 import Tools.layoutInclude.layoutIncludeInfo;
 import Tools.masterDBSwitch;
 import Tools.masterDBSwitch.masterDBSwitchInfo;
+import divide.db.divideDBManage;
 import timetable.db.masterDBManage;
 import timetable.db.masterInfo;
 
@@ -91,6 +92,14 @@ public class timeTableMasterControl extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+
+			//classIDMap呼び出し
+			divideDBManage ddm = new divideDBManage();
+			try {
+				ddm.classIDDBSelect(request);
+			} catch (Exception e) {
+			}
+
 
 		//ディスパッチ準備
 			request.setAttribute("content_page", content_page);
