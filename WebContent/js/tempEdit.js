@@ -83,6 +83,8 @@ $(function(e){
 		if($(v).val() === ""){
 			$("textarea[name=\"Sun" + $(v).attr("name").substr(-3) + "\"]").prop("disabled", true);
 			$("textarea[name=\"Te" + $(v).attr("name").substr(-3) + "\"]").prop("disabled", true);
+			$("textarea[name=\"Sun" + $(v).attr("name").substr(-3) + "\"]").val("");
+			$("textarea[name=\"Te" + $(v).attr("name").substr(-3) + "\"]").val("");
 		}
 	})
 })
