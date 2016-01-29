@@ -2374,15 +2374,15 @@ th {
 	.table-condensed>tbody>tr>td, .table-condensed>tfoot>tr>td {
 	padding: 5px
 }
-
+/*  table border  */
 .table-bordered {
-	border: 1px solid #FFF
+	border: 2px solid #fff
 }
 
 .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th,
 	.table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td,
 	.table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
-	border: 1px solid #FFF
+	border: 2px solid #fff
 }
 
 .table-bordered>thead>tr>th, .table-bordered>thead>tr>td {
@@ -2573,6 +2573,15 @@ table td[class*=col-], table th[class*=col-] {
 	.table>thead>tr>th.danger, .table>tbody>tr>th.danger, .table>tfoot>tr>th.danger,
 	.table>thead>tr.danger>td, .table>tbody>tr.danger>td, .table>tfoot>tr.danger>td,
 	.table>thead>tr.danger>th, .table>tbody>tr.danger>th, .table>tfoot>tr.danger>th
+	{
+	background-color: #f2dede
+}
+
+
+.table>thead>tr>td.danger1, .table>tbody>tr>td.danger1, .table>tfoot>tr>td.danger1,
+	.table>thead>tr>th.danger1, .table>tbody>tr>th.danger1, .table>tfoot>tr>th.danger1,
+	.table>thead>tr.danger1>td, .table>tbody>tr.danger1>td, .table>tfoot>tr.danger1>td,
+	.table>thead>tr.danger1>th, .table>tbody>tr.danger1>th, .table>tfoot>tr.danger1>th
 	{
 	background-color: #f5f5f5
 }

@@ -121,7 +121,7 @@
 					</thead>
 
 					<tbody>
-						<tr class="danger">
+						<tr class="danger1">
 							<td class="view-size font2"id="8F">803</td>
 							<td class="size">
 								<p class="size drop-target">
@@ -184,7 +184,7 @@
 							</td>
 						</tr>
 
-						<tr class="danger">
+						<tr class="danger1">
 							<td class="view-size font2"id="7F">702</td>
 
 							<td class="size">
@@ -248,7 +248,7 @@
 							</td>
 						</tr>
 
-						<tr class="danger">
+						<tr class="danger1">
 							<td class="view-size font2"id="6F">604</td>
 
 							<td class="size">
@@ -312,7 +312,7 @@
 							</td>
 						</tr>
 
-						<tr class="danger">
+						<tr class="danger1">
 							<td class="view-size font2" >601</td>
 
 							<td class="size">
@@ -376,7 +376,7 @@
 							</td>
 						</tr>
 
-						<tr class="danger">
+						<tr class="danger1">
 							<td class="view-size font2">503</td>
 
 							<td class="size">
@@ -440,7 +440,7 @@
 							</td>
 						</tr>
 
-						<tr class="danger">
+						<tr class="danger1">
 							<td class="view-size font2" >501</td>
 
 							<td class="size">
@@ -504,7 +504,7 @@
 							</td>
 						</tr>
 
-						<tr class="danger">
+						<tr class="danger1">
 							<td class="view-size font2">403</td>
 
 							<td class="size">
@@ -568,7 +568,7 @@
 							</td>
 						</tr>
 
-						<tr class="danger">
+						<tr class="danger1">
 							<td class="view-size font2" >401</td>
 
 							<td class="size">
@@ -632,7 +632,7 @@
 							</td>
 						</tr>
 
-						<tr class="danger">
+						<tr class="danger1">
 							<td class="view-size font2">303</td>
 
 							<td class="size">
@@ -696,7 +696,7 @@
 							</td>
 						</tr>
 
-						<tr class="danger">
+						<tr class="danger1">
 							<td class="view-size font2">301</td>
 
 							<td class="size">
