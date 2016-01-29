@@ -6,6 +6,7 @@
 body {
 
 	font-size: 12px;
+	bold;
 }
 
 a { text-decoration: none; }
@@ -32,6 +33,7 @@ li { list-style: none; }
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
+	bold;
 }
 
 #menu ul {
@@ -45,17 +47,19 @@ li { list-style: none; }
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
+	bold;
 }
 
 #menu li {
 	display: inline-block;
-	margin: 20px;
+	margin: 10px;
+	bold;
 }
 
 #menu li a {
 	border-radius: 3px;
 	padding: 15px;
-	border: 1px solid transparent;
+	border: 2px solid transparent;
 	text-decoration: none;
 	font-size: 18px;
 	color: #fff;
@@ -63,13 +67,14 @@ li { list-style: none; }
 	-moz-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
+	font-weight: 900;
 }
 
 #menu li a:hover { border-color: #fff; }
 
 #menu li a i {
 	margin-right: 5px;
-	font-size: 24px;
+	font-size: 20px;
 }
 
 #toggle-nav-label {

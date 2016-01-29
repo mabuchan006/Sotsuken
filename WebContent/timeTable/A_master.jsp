@@ -6,17 +6,22 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 
-	<ul class="nav nav-tabs noprint">
-		<c:forEach var="rs" items="${classIDMapA }">
-			<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">${rs.key}<b class="caret"></b></a>
-				<ul class="dropdown-menu">
-					<c:forEach var="array" items="${rs.value }">
-						<li><a href="/Sotsuken/publicView?page=${array }">${array }</a></li>
-					</c:forEach>
-				</ul>
-			</li>
+	<!-- メニュー -->
+<nav id="menu">
+	<input type="checkbox" id="toggle-nav"/>
+    <label id="toggle-nav-label" for="toggle-nav"><i class="icon-reorder"></i></label>
+    <div class="box">
+	<ul>
+	<li><a href="#"><i class="icon-home"></i> </a></li>
+	    <c:forEach var="rs" items="${classIDMapA }">
+		<c:forEach var="array" items="${rs.value }">
+			<li><a href="/Sotsuken/publicView?page=${array }">${array }</a></li>
+		</c:forEach><br/>
 		</c:forEach>
-	</ul>
+</ul>
+</div>
+</nav>
+<!-- メニュー終了 -->
 
 <!-- 印刷エリア指定id printareaで囲んだ範囲で可能 -->
 <div class="printarea">
