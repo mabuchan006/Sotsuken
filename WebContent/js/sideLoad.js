@@ -17,9 +17,16 @@ $(function(e){
 })
 
 function pageLoad(url){
-	console.log("ok1");
-	$(".pure-pusher").load(url,function(){
-		history.pushState(null,null,url);
-		console.log("ok2");
-	});
+	$.ajax({
+		type : "GET",
+		url : url,
+		dataType : "html",
+		timeout : 10000
+	}).done(function(res){
+		$(".pure-pusher").html(res);
+		history.pushState(null, null, url);
+	}).fail(function(jqXHR, textStatus, errorThrown ){//失敗
+		console.log("NG:" + jqXHR.status + ":" + textStatus.status + ":" + errorThrown);
+		alert("エラーが発生しました\nサーバ管理者へ問い合わせてください");
+	})
 }
