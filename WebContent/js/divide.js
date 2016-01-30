@@ -8,8 +8,8 @@ var repComma = "", str = "", ele = "";
 var elem = "", data = "";
 
 $(function(e){
-	var pTop = $("#classDrag").position().top;
-	var pLeft = $("#classDrag").position().left;
+	var pTop = 187;//$("#classDrag").position().top;
+	var pLeft = 0;//$("#classDrag").position().left;
 
 	//accordion
 	$(".accordionJS").accordion();
@@ -18,8 +18,10 @@ $(function(e){
 
 	$("body").keydown(function(e){
 		if(e.ctrlKey === true && e.shiftKey === true && e.which === 90){
-			console.log(pTop + ":" + pLeft);
-			$("#classDrag").css({"top" : pTop, "left" : pLeft});
+			if($("#classDrag").position().top != pTop || $("#classDrag").position().left != pLeft){
+				//console.log("init top:" + pTop + "\nnow top:" + $("#classDrag").position().top + "\ninit left:" + pLeft +"\nnow left" + $("#classDrag").position().left);
+				$("#classDrag").animate({"top" : pTop, "left" : pLeft},500);
+			}
 		}
 	})
 
@@ -40,7 +42,7 @@ $(function(e){
 			valArray = txtVal.match(regex);
 			var thisVal = "";
 			var insVal = "";
-			console.log(valArray);
+			//console.log(valArray);
 			//matchで返された配列の内容を変数に代入
 			$.each(valArray, function(k,v){
 				thisVal += v;
@@ -271,7 +273,7 @@ function f_ajax(type, url, dataType,data,msg){
 			msg;
 		}
 	}).fail(function(jqXHR, textStatus, errorThrown ){//失敗
-		console.log("NG:" + jqXHR.status + ":" + textStatus.status + ":" + errorThrown);
+		//console.log("NG:" + jqXHR.status + ":" + textStatus.status + ":" + errorThrown);
 		if(msg != null){
 			msg;
 		}
