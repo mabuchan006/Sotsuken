@@ -14,10 +14,18 @@
 <!-- 印刷時非表示 -->
 <div class="noprint">
 
-<!-- メニュー -->
+
+</div>
+
+<br />
+
+<!-- 印刷エリア指定id printareaで囲んだ範囲で可能 -->
+<div class="printarea">
+	<div class="container">
+	<!-- メニュー -->
 <nav id="menu">
 	<input type="checkbox" id="toggle-nav"/>
-    <label id="toggle-nav-label" for="toggle-nav"><i class="fa fa-home"></i></label>
+    <label id="toggle-nav-label" for="toggle-nav">R</label>
     <div class="box">
 	<ul>
 	<li><a href="#"><i class="icon-home"></i> </a></li>
@@ -30,13 +38,6 @@
 </div>
 </nav>
 <!-- メニュー終了 -->
-</div>
-
-<br />
-
-<!-- 印刷エリア指定id printareaで囲んだ範囲で可能 -->
-<div class="printarea">
-	<div class="container">
 		<div class="table-responsive">
 			<table class="table table-striped table-bordered text-center ;">
 				<thead>
