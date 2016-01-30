@@ -17,7 +17,7 @@
 <!-- メニュー -->
 <nav id="menu">
 	<input type="checkbox" id="toggle-nav"/>
-    <label id="toggle-nav-label" for="toggle-nav"><i class="fa fa-file-text fa-2x"></i></label>
+    <label id="toggle-nav-label" for="toggle-nav"><i class="fa fa-home"></i></label>
     <div class="box">
 	<ul>
 	<li><a href="#"><i class="icon-home"></i> </a></li>

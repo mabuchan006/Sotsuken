@@ -46,26 +46,26 @@
 			<a href="/Sotsuken/manage/manage_top.jsp" class="manage-top">管理メニュー</a></h1>
 
 			<ul>
-				<li class="select2 moji manage"><h1 style="padding: 15px 40px; margin: 0;">
-				<a href="/Sotsuken/ManageUpdate?page=teacher_manage">講師管理</a></h1></li>
+				<li class="select2 moji manage"><h1 style="padding: 15px 20px 15px 0px; margin: 0;">
+				<a href="/Sotsuken/ManageUpdate?page=teacher_manage"><i class="fa fa-user fa-fw"></i>講師管理</a></h1></li>
 
-				<li class="select2 moji manage"><h1 style="padding: 15px 40px; margin: 0;">
-				<a href="/Sotsuken/ManageUpdate?page=subject_manage">科目管理</a></h1></li>
+				<li class="select2 moji manage"><h1 style="padding: 15px 20px 15px 0px; margin: 0;">
+				<a href="/Sotsuken/ManageUpdate?page=subject_manage"><i class="fa fa-book fa-fw"></i>科目管理</a></h1></li>
 
-				<li class="select2 moji manage"><h1 style="padding: 15px 40px; margin: 0;">
-				<a href="/Sotsuken/ManageUpdate?page=class_manage">クラス管理</a></h1></li>
+				<li class="select2 moji manage"><h1 style="padding: 15px 20px 15px 0px; margin: 0;">
+				<a href="/Sotsuken/ManageUpdate?page=class_manage"><i class="fa fa-mortar-board fa-fw"></i>クラス管理</a></h1></li>
 
-				<li class="select2 moji manage"><h1 style="padding: 15px 40px; margin: 0;">
-				<a href="/Sotsuken/ManageUpdate?page=event_manage">イベント管理</a></h1></li>
+				<li class="select2 moji manage"><h1 style="padding: 15px 20px 15px 0px; margin: 0;">
+				<a href="/Sotsuken/ManageUpdate?page=event_manage"><i class="fa fa-exclamation-triangle fa-fw"></i>イベント管理</a></h1></li>
 
-				<li class="select2 moji manage"><h1 style="padding: 15px 40px; margin: 0;">
-				<a href="/Sotsuken/divideUpdate">コマ割り管理</a></h1></li>
+				<li class="select2 moji manage"><h1 style="padding: 15px 40px 15px 0px; margin: 0;">
+				<a href="/Sotsuken/divideUpdate"><i class="fa fa-building-o fa-fw"></i>コマ割り管理</a></h1></li>
 
 
 				<li>
 					<ul id="flip3" class="dropmenu select2 ">
-						<li class="select2 moji box" style="padding: 15px 40px; margin:  0 20px 0 0;">
-							<a>時間割作成</a>
+						<li class="select2 moji box" style="padding: 15px 20px 15px 0px; margin:  0 20px 0 0;">
+							<a><i class="fa fa-calendar fa-fw"></i>時間割作成</a>
 							<ul>
 								<li class="editView"><a href="/Sotsuken/editView?page=R">R</a></li>
 								<li class="editView"><a href="/Sotsuken/editView?page=S">S</a></li>
