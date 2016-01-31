@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ page pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
+<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -78,7 +78,7 @@
 	<jsp:include page="${content_page}" />
 			<sql:query sql="SELECT eventID,date, eventName,roomName,classID,
 			GROUP_CONCAT(DISTINCT period ORDER BY FIELD(period, 1,2,3,4) separator ' ') as doperiod
-			FROM tbl_event GROUP BY date, eventName HAVING classID = ? ORDER BY date ASC"
+			FROM tbl_event GROUP BY date, eventName HAVING classID LIKE ? || classID = 'AAAA'  ORDER BY date ASC"
 				 var="rs" dataSource="jdbc/MySqlCon">
 				<sql:param value="${page_title}" />
 			</sql:query>
