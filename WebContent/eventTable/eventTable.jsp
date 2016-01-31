@@ -3,8 +3,7 @@
 
 
 <ul class="nav nav-tabs noprint">
-		<li><a class="dropdown-toggle" data-toggle="dropdown" href="/Sotsuken/eventView?page=AA">ALL
-				<b class="caret"></b>
+		<li><a href="/Sotsuken/eventView?page=ALL">ALL
 		</a></li>
 
 		<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">R
@@ -33,23 +32,22 @@
 
 			</ul></li>
 
-			<li><a class="dropdown-toggle" data-toggle="dropdown" href="/Sotsuken/eventView?page=A1">A
-				<b class="caret"></b></a></li>
+			<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">A
+				<b class="caret"></b></a>
+				<ul class="dropdown-menu">
+				<li><a href="/Sotsuken/eventView?page=A1">A1</a></li>
+
+
+			</ul></li>
 
 	</ul>
 
-<div class="row col-md-9 mtop">
-
-
-
-
-<!-- イベント一覧表示 -->
-<div class="col-md-9 col-md-offset-4">
+<div class="row col-md-9 mtop col-md-offset-3">
 <div class="back">
 <table class="table ">
 <thead>
 <tr class="warning wide">
-<td colspan="3"><h4 class="bold">年間イベント一覧</h4> </td></tr>
+<td colspan="4"><h4 class="bold">年間イベント一覧</h4> </td></tr>
 </thead>
 <tbody>
 <!-- イベント情報取得 -->
@@ -60,7 +58,8 @@
 ${rs.date[0] }/${rs.date[1] }/${rs.date[2] }/（${rs.date[3] }）
 
 </td>
-<td>${rs.eventName} 場所 ${rs.roomName}</td>
+<td>${rs.eventName}  </td>
+<td>場所:${rs.roomName}</td>
 <td>
 ${rs.period}
 </td>
@@ -69,7 +68,6 @@ ${rs.period}
 
 </tbody>
 </table>
-</div>
 </div>
 </div>
 

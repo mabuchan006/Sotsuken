@@ -56,7 +56,7 @@ public class ManageUpdateControl extends HttpServlet {
 		//文字コードutf8
 		request.setCharacterEncoding("UTF-8");
 		//jspからのページ情報取得
-		String get_page = request.getParameter("page")==null?"subject_manage"
+		String get_page = request.getParameter("page")==null?"event_manage"
 				:request.getParameter("page");
 
 		//使用するcss,jsファイルの適用
@@ -393,9 +393,8 @@ public class ManageUpdateControl extends HttpServlet {
 				page_title = "EventManage";
 
 				if(request.getParameter("regist_event") != null ){
+
 					String[] periodArray = request.getParameter("period").split(",");
-
-
 					//イベント情報格納
 					for (String period: periodArray) {
 
@@ -405,7 +404,7 @@ public class ManageUpdateControl extends HttpServlet {
 								request.getParameter("eventName"),
 								period==null?"0":period,
 								dateList,
-								request.getParameter("class_id")=="ALL"?"AAAA"//ALL処理
+								request.getParameter("class_id").equals("ALL")?"AAAA"//ALL処理
 										:request.getParameter("class_id"),
 								request.getParameter("roomName")==null?""
 										:request.getParameter("roomName"),
@@ -429,7 +428,7 @@ public class ManageUpdateControl extends HttpServlet {
 							request.getParameter("period")==null?""
 									:request.getParameter("period"),
 							dateList,
-							request.getParameter("class_id")=="ALL"?"AAAA"//ALL処理
+							request.getParameter("class_id").equals("ALL")?"AAAA"//ALL処理
 									:request.getParameter("class_id"),
 							request.getParameter("roomName")==null?""
 									:request.getParameter("roomName"),
@@ -445,7 +444,7 @@ public class ManageUpdateControl extends HttpServlet {
 
 				//更新済み講師情報全件取得
 				List<eventInfo> eventList = edm.eventDBSelect();
-				
+
 				//更新済み講師情報全件取得
 				teacherDBManage tdm = new teacherDBManage();
 				List<teacherInfo> teacherList = tdm.teacherDBSelect();
@@ -471,7 +470,7 @@ public class ManageUpdateControl extends HttpServlet {
 			} catch (Exception e) {
 				// TODO 自動生成された catch ブロック
 				e.printStackTrace();
-				request.setAttribute("err_Msg","入力情報に誤りがあります");
+
 			}
 
 		}//event

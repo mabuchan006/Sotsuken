@@ -48,6 +48,7 @@ public class layoutInclude {
 		//●R~A_master.jspで使用
     	info.css.add("/Sotsuken/bootstrap/css/bootstrap.min.css");
     	info.css.add("/Sotsuken/css/style.css");
+
     	info.css.add("/Sotsuken/css/btn-menu.css");
     	info.css.add("/Sotsuken/css/animate.css");
     	info.css.add("/Sotsuken/css/font-awesome.min.css");

@@ -218,6 +218,71 @@ public class eventDBManage extends DBAccess{
 
 }//select
 
+	public List<eventInfo> eventALLSelect() throws Exception{
+		List<eventInfo> eventList = new ArrayList<eventInfo>();
+		//DB接続
+		connect();
+		createStstement();
+		selectExe(eventSelectAll);
+		//要素取得用準備
+		ResultSet rs = getRsResult();
+
+		eventInfo eventinfo;
+		List<String> dateList = new ArrayList<String>();
+		String date="";
+		Calendar calendar;
+		//全件取得
+		while(rs.next()){
+			date=rs.getString("date");
+			if(date!=null){
+				String inputStr[];
+
+				inputStr=date.split("-");
+				for (String date1 : inputStr) {
+
+					dateList.add(date1);
+				}//for
+				}else{
+					dateList.add("date");
+				}//for
+			calendar = new GregorianCalendar(
+					Integer.parseInt(dateList.get(0)),
+					Integer.parseInt(dateList.get(1)),
+					Integer.parseInt(dateList.get(2)));
+			switch (calendar.get(Calendar.DAY_OF_WEEK)){
+			// 取得した曜日フィールドの値。
+			case Calendar.SUNDAY:dateList.add("日曜日");break;
+			case Calendar.MONDAY:dateList.add("月曜日");break;
+			case Calendar.TUESDAY:dateList.add("火曜日");break;
+			case Calendar.WEDNESDAY:dateList.add("水曜日");break;
+			case Calendar.THURSDAY:dateList.add("木曜日");break;
+			case Calendar.FRIDAY:dateList.add("金曜日");break;
+			case Calendar.SATURDAY:dateList.add("日曜日");break;
+			}//switch
+
+			eventinfo = new eventInfo(
+					0,
+					rs.getString("eventName"),
+					rs.getString("doperiod"),
+					dateList,
+					rs.getString("classID"),
+					rs.getString("roomName"),
+					"0",
+					"",
+					rs.getString("notice")
+					);
+			//クラス要素を1件ずつリストに追加
+			System.out.println(eventinfo.getEventName());
+			eventList.add(eventinfo);
+
+		}//while
+
+		disConnection();//切断
+
+	return eventList;
+
+}//select
+
 
 	/*
 	 * @param クラス情報 eventinfo
@@ -232,9 +297,7 @@ public class eventDBManage extends DBAccess{
 					+"-"+ei.getDate().get(2);
 			String classID=ei.getClassID();
 
-			if(classID.equals("AAAA")){
 
-			}//ALL処理
 
 			createStstement(insertSql);
 
@@ -248,6 +311,7 @@ public class eventDBManage extends DBAccess{
 			getPstmt().setString(8,ei.getNotice());
 			updateExe();//実行
 
+			System.out.println(classID);
 			if(!(classID.equals("AAAA"))){
 			//マスタ更新
 				masterUpdate("tbl_master_"+classID+"timetable", ei,classID,eventDate);

@@ -1,6 +1,7 @@
 package event;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -42,8 +43,14 @@ public class EventViewControl extends HttpServlet {
 		String page = request.getParameter("page")==null?"R4":
 			request.getParameter("page");
 		System.out.println(page);
+		List<eventInfo> eventList = new ArrayList<eventInfo>();
 		try {
-			List<eventInfo> eventList = edm.eventPageSelect(page);
+			if(page !="AA"){
+				eventList = edm.eventPageSelect(page);
+			}else{
+				eventList = edm.eventALLSelect();
+			}
+
 			request.setAttribute("eventList", eventList);
 			request.setAttribute("content_page", content_page);
 			request.setAttribute("page_title", page_title);
@@ -71,6 +78,7 @@ public class EventViewControl extends HttpServlet {
 		// 使用するcss,jsファイルの適用
 		layoutInclude tools = new layoutInclude();
 		layoutIncludeInfo info =  tools.public_layout();
+		info.css.add("/Sotsuken/css/event_custom.css");
 		request.setAttribute("css", info.css);
 		request.setAttribute("js", info.js);
 
