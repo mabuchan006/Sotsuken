@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import manage.db.loginDBManage;
 import manage.db.teacherInfo;
 import net.arnx.jsonic.web.WebServiceServlet.JSON;
 

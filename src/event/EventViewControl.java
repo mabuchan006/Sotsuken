@@ -39,8 +39,11 @@ public class EventViewControl extends HttpServlet {
 		String page_title= "EventTable";
 		getIncludeFile(request);
 		eventDBManage edm = new eventDBManage();
+		String page = request.getParameter("page")==null?"R4":
+			request.getParameter("page");
+		System.out.println(page);
 		try {
-			List<eventInfo> eventList = edm.eventDBSelect();
+			List<eventInfo> eventList = edm.eventPageSelect(page);
 			request.setAttribute("eventList", eventList);
 			request.setAttribute("content_page", content_page);
 			request.setAttribute("page_title", page_title);

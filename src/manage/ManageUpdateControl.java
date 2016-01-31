@@ -327,14 +327,7 @@ public class ManageUpdateControl extends HttpServlet {
 				content_page = "/manage/teacher_manage.jsp";
 				page_title = "TeacherManage";
 
-				if(request.getParameter("regist_pass")!=null){
-					tdm.NewPasswordUpdate(ti);
-				}
-
-				if(request.getParameter("regist_teacher") != null ){
-					tdm.teacherDBUpdate(ti, DBAccess.INSERT, "登録");
-				}//if
-
+				//削除
 				if(request.getParameter("delete_teacher") != null){
 					tdm.teacherDBUpdate(ti, DBAccess.DELETE, "削除");
 				}//if
@@ -343,6 +336,19 @@ public class ManageUpdateControl extends HttpServlet {
 				List<teacherInfo> teacherList = tdm.teacherDBSelect();
 				request.setAttribute("teacherList", teacherList);
 				request.setAttribute("cnt", teacherList.size());
+
+				//パスワード登録
+				if(request.getParameter("regist_pass")!=null){
+					tdm.NewPasswordUpdate(ti);
+				}
+
+				//登録
+				if(request.getParameter("regist_teacher") != null ){
+					tdm.teacherDBUpdate(ti, DBAccess.INSERT, "登録");
+				}//if
+
+
+
 
 				if(tdm.getMsg() != null){
 					if((tdm.getMsg()).indexOf("入力情報に誤りがあります") != -1){
@@ -355,6 +361,7 @@ public class ManageUpdateControl extends HttpServlet {
 			} catch (MySQLIntegrityConstraintViolationException e) {
 				// TODO 自動生成された catch ブロック
 				request.setAttribute("err_Msg","該当講師は使用されています。");
+
 			} catch (Exception e) {}
 		}//teacher
 
@@ -438,6 +445,7 @@ public class ManageUpdateControl extends HttpServlet {
 
 				//更新済み講師情報全件取得
 				List<eventInfo> eventList = edm.eventDBSelect();
+				
 				//更新済み講師情報全件取得
 				teacherDBManage tdm = new teacherDBManage();
 				List<teacherInfo> teacherList = tdm.teacherDBSelect();

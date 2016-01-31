@@ -1,6 +1,7 @@
-package manage.db;
+package login;
 
 import DB.DBAccess;
+import manage.db.teacherInfo;
 
 public class loginDBManage extends DBAccess{
 
