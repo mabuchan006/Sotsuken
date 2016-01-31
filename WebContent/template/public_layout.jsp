@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ page pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -75,22 +76,29 @@
 	</section>
 	<!-- End Logo Section -->
 	<jsp:include page="${content_page}" />
-	<div class="printarea">
-	<div class="container">
-	<div class="panel panel-warning">
-			<div class="panel-heading">
-				<h3 class="panel-title">お知らせ</h3>
-			</div>
-			<div class="panel-body panel1">
-				<ul>
-					<li class="line">2015/02/08(月) バレー大会 場所 愛知県体育館</li>
-					<li class="line">2015/03/04(木) 卒業式 場所 マリオットホテル</li>
-				</ul>
+			<sql:query sql="SELECT eventID,date, eventName,roomName,classID,
+			GROUP_CONCAT(DISTINCT period ORDER BY FIELD(period, 1,2,3,4) separator ' ') as doperiod
+			FROM tbl_event GROUP BY date, eventName HAVING classID = ? ORDER BY date ASC"
+				 var="rs" dataSource="jdbc/MySqlCon">
+				<sql:param value="${page_title}" />
+			</sql:query>
 
+	<div class="printarea">
+		<div class="container">
+			<div class="panel panel-warning">
+				<div class="panel-heading">
+					<h3 class="panel-title">お知らせ</h3>
+				</div>
+					<div class="panel-body panel1">
+						<ul>
+						<c:forEach var="event" items="${rs.rows }" >
+							<li class="line">${ event.date} ${ event.eventName} 場所 ${ event.roomName}</li>
+						</c:forEach>
+						</ul>
+					</div>
 			</div>
 		</div>
-		</div>
-		</div>
+	</div>
 	<script>
 
 	$("table tr:eq(2) td:eq(0)").html("ソフトバレーボール大会");
