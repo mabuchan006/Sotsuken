@@ -266,18 +266,6 @@
 			</table>
 		</div>
 
-		<div class="panel panel-warning">
-			<div class="panel-heading">
-				<h3 class="panel-title">お知らせ</h3>
-			</div>
-			<div class="panel-body panel1">
-				<ul>
-					<li class="line">2015/02/08(月) バレー大会 場所 愛知県体育館</li>
-					<li class="line">2015/03/04(木) 卒業式 場所 マリオットホテル</li>
-				</ul>
-
-			</div>
-		</div>
 	</div>
 </div>
 

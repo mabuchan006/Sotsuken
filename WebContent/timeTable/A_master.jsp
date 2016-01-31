@@ -126,14 +126,5 @@
 		</table>
 	</div>
 
-	<div class="panel panel-warning">
-  <div class="panel-heading">
-    <h3 class="panel-title">お知らせ</h3>
-  </div>
-  <div class="panel-body panel1">
-    デフォルトのパネル
-  </div>
-</div>
-
   </div>
 </div>
