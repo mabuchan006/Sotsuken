@@ -41,6 +41,7 @@ toastSelect("success","${Msg }")</script>
   <li class="ui-state-default" id="2">2</li>
   <li class="ui-state-default" id="3">3</li>
   <li class="ui-state-default" id="4">4</li>
+  <li class="ui-state-default" id="ALL">ALL</li>
  </ol>
 </div>
 <input type="hidden" name="period" id="period" value="" />
