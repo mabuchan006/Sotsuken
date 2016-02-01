@@ -164,52 +164,52 @@ $(function(e){
 	});
 
 	// 一括削除ボタンがクリックされた時
-	$("#cBtn").click(function( e ){
-		if(confirm("削除してもよろしいですか？")){
-			for(var i = 0; i < $("textarea").length; i++){
-				$("textarea").get(i).value = "";
-			}
-			data = "";
-			elem = "";
-			//formの情報を配列化
-			data = $(this).serializeArray();
-			//アクティブになっているタグの曜日を取得
-			elem = $(".active").children("input").get(0);
-			//曜日の情報をform情報に入れる
-			switch( elem.name ){
-				case "mon" :
-					data.push({ name : "ajaxWeek" , value : "月" });
-					break;
-				case "tue" :
-					data.push({ name : "ajaxWeek" , value : "火" });
-					break;
-				case "wed" :
-					data.push({ name : "ajaxWeek" , value : "水" });
-					break;
-				case "thu" :
-					data.push({ name : "ajaxWeek" , value : "木" });
-					break;
-				case "fri" :
-					data.push({ name : "ajaxWeek" , value : "金" });
-					break;
-				default :
-					data.push({ name : "ajaxWeek" , value : "月" });
-					break;
-			}
-			//delete実行のための情報
-			data.push({ name : "regist" , value : ""});
-			f_ajax(
-					//form
-					$(this).attr("method"),
-					$(this).attr("action"),
-					"json",
-					data,
-					toastSelect("success","全件削除しました。")
-			);
-//			$("#checkFlag").get(0).value = "true";
-//			$("#sBtn").prop("disabled", false);
-		}
-	});
+//	$("#cBtn").click(function( e ){
+//		if(confirm("削除してもよろしいですか？")){
+//			for(var i = 0; i < $("textarea").length; i++){
+//				$("textarea").get(i).value = "";
+//			}
+//			data = "";
+//			elem = "";
+//			//formの情報を配列化
+//			data = $(this).serializeArray();
+//			//アクティブになっているタグの曜日を取得
+//			elem = $(".active").children("input").get(0);
+//			//曜日の情報をform情報に入れる
+//			switch( elem.name ){
+//				case "mon" :
+//					data.push({ name : "ajaxWeek" , value : "月" });
+//					break;
+//				case "tue" :
+//					data.push({ name : "ajaxWeek" , value : "火" });
+//					break;
+//				case "wed" :
+//					data.push({ name : "ajaxWeek" , value : "水" });
+//					break;
+//				case "thu" :
+//					data.push({ name : "ajaxWeek" , value : "木" });
+//					break;
+//				case "fri" :
+//					data.push({ name : "ajaxWeek" , value : "金" });
+//					break;
+//				default :
+//					data.push({ name : "ajaxWeek" , value : "月" });
+//					break;
+//			}
+//			//delete実行のための情報
+//			data.push({ name : "regist" , value : ""});
+//			f_ajax(
+//					//form
+//					$(this).attr("method"),
+//					$(this).attr("action"),
+//					"json",
+//					data,
+//					toastSelect("success","全件削除しました。")
+//			);
+////			$("#checkFlag").get(0).value = "true";
+////			$("#sBtn").prop("disabled", false);
+//		}
+//	});
 
 	//f_active
 	// タブがクリックされた時
