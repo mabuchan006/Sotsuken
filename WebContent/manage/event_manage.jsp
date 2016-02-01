@@ -37,11 +37,11 @@ toastSelect("success","${Msg }")</script>
 
 <div class="col-md-12">
 <ol id="selectable">
-  <li class="ui-state-default" id="1">1</li>
-  <li class="ui-state-default" id="2">2</li>
-  <li class="ui-state-default" id="3">3</li>
-  <li class="ui-state-default" id="4">4</li>
-  <li class="ui-state-default all" id="ALL">ALL</li>
+  <li class="ui-state-default select4 bo" id="1">1</li>
+  <li class="ui-state-default select4 bo" id="2">2</li>
+  <li class="ui-state-default select4 bo" id="3">3</li>
+  <li class="ui-state-default select4 bo" id="4">4</li>
+  <li class="ui-state-default select4 bo" id="ALL">ALL</li>
  </ol>
 </div>
 <input type="hidden" name="period" id="period" value="" />
