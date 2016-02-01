@@ -46,7 +46,7 @@ public class eventDBManage extends DBAccess{
 		//クラス情報登録sql
 		//int eventID,String eventName, int period, Date date, String classID,
 		//String roomName, String guestTeacher,String notice
-		insertSql= String.format(" replace into tbl_event (eventName,period,date,classID, roomName,endFlag,guestTeacher,notice) values (?,?,?,?,"
+		insertSql= String.format(" insert into tbl_event (eventName,period,date,classID, roomName,endFlag,guestTeacher,notice) values (?,?,?,?,"
 				+ "?"//roomID検索
 				+ ",?,?,?)");
 		updateSql= String.format("update tbl_event set eventName = ? where eventID = ?");
