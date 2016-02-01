@@ -95,14 +95,6 @@ toastSelect("success","${Msg}")</script>
 				value="${regtiList1[0].date }" />
 		</div>
 
-		<script type="text/javascript">
-			$('.input-group.date').datepicker({
-				language : "ja",
-				daysOfWeekDisabled : "0,2,3,4,5,6",
-				autoclose : true,
-				format : 'yyyy-mm-dd',
-			});
-		</script>
 
 		<!-- calender End-->
 
