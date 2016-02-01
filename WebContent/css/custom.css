@@ -404,8 +404,7 @@ font-family:Tahoma;
   #selectable .ui-selecting { background: #FECA40; }
   #selectable .ui-selected { background: #F39814; color: white; }
   #selectable { display:block;list-style-type: none; margin: 0; padding: 0; float: left;}
-  #selectable li { display:inline;color:white; margin: 3px; padding: 1px; float: left; width: 25px; height:34px; font-size: 1.5em; text-align: center; }
-
+  #selectable li { display:inline;color:white; margin: 3px 1px 0px 1px;padding: 1px; float: left; width: 38px; height:34px; font-size: 1.5em; text-align: center; }
 
 
 
