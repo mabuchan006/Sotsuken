@@ -86,5 +86,14 @@ $(function(e){
 			$("textarea[name=\"Sun" + $(v).attr("name").substr(-3) + "\"]").val("");
 			$("textarea[name=\"Te" + $(v).attr("name").substr(-3) + "\"]").val("");
 		}
-	})
+	});
+
+	//DatePicker
+	$('.input-group.date').datepicker({
+	language : "ja",
+	daysOfWeekDisabled : "0,2,3,4,5,6",
+	autoclose : true,
+	format : 'yyyy-mm-dd',
+	});
+
 })
