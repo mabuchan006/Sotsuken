@@ -28,7 +28,6 @@
     <label id="toggle-nav-label" for="toggle-nav">R</label>
     <div class="box">
 	<ul>
-	<li><a href="#"><i class="icon-home"></i> </a></li>
 	    <c:forEach var="rs" items="${classIDMapR }">
 		<c:forEach var="array" items="${rs.value }">
 			<li><a href="/Sotsuken/publicView?page=${array }">${array }</a></li>
