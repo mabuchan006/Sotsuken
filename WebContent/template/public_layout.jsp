@@ -101,13 +101,24 @@
 	</div>
 	<script>
 
-	$("table tr:eq(2) td:eq(0)").html("ソフトバレーボール大会");
+	$("table tr:eq(2) td:eq(0)").html("<p class=\"tate\">ソフトバレーボール大会</p>");
 	$("table tr:eq(2) td:eq(0)").attr("rowspan","12");
 	$("table tr:eq(2) td:eq(0)").css("background-color","#ffff66");
-	$("table tr:eq(2) td:eq(0)").css("width","1em");
-	$("table tr:eq(2) td:eq(0)").css("text-align","center");
+	//$("table tr:eq(2) td:eq(0)").css("width","1em");
+	//$("table tr:eq(2) td:eq(0)").css("text-align","center");
 	$("table tr:eq(2) td:eq(0)").css("font-weight","900");
-	$("table tr:eq(2) td:eq(0)").css("pdding","1em");
+	//$("table tr:eq(2) td:eq(0)").css("pdding","1em");
+	$(".tate").css("padding","26px");
+	$(".tate").css("height", "150px");
+	$(".tate").css("font-size","27px");
+	$(".tate").css("writing-mode", "tb-rl");
+	$(".tate").css("-webkit-writing-mode", "vertical-rl");
+// 	$("table tr:eq(2) td:eq(0)").css("transform", "rotate(+90deg)");
+// 	$("table tr:eq(2) td:eq(0)").css("writing-mode", "tb-rl");
+// 	$("table tr:eq(2) td:eq(0)").css("writing-mode", "vertical-rl");
+// 	$("table tr:eq(2) td:eq(0)").css("-webkit-writing-mode", "vertical-rl");
+// 	$("table tr:eq(2) td:eq(0)").css("-webkit-transform", "rotate(+90deg)");
+
 
 
 
