@@ -119,42 +119,58 @@ ${ teacher.teacherID }
 								<h3 class="modal-title white fonts">パスワード変更</h3>
 							</div>
 							<div class="modal-body black">
-								<form id="manageForm" class="form-horizontal">
+
+							<div class="left1">
+									<table>
+									<tr>
+									<form id="manageForm" class="form-horizontal">
 															    <div class="form-group">
+									<td>
 							        <label class="black md left">Old Pass:</label>
-
-							            <input type="password" class="form-control col-md-6" name="old_password" id="old_pwd" placeholder="新しいパスワード"/>
+									</td>
+									<td>
+									<input type="password" class="form-control col-md-6" name="old_password" id="old_pwd" placeholder="新しいパスワード"/>
+							    </div>
+										</td>
+										<tr>
+										<td>
+									<div class="form-group">
+							        <label class="black md left">New Pass:</label> </td>
+									<td>
+									<input type="password" class="form-control col-md-6" name="password" id="new_pwd" placeholder="新しいパスワード"/>
 
 							    </div>
-
-
-							    <div class="form-group">
-							        <label class="black md left">New Pass:</label>
-
-							            <input type="password" class="form-control col-md-6" name="password" id="new_pwd" placeholder="新しいパスワード"/>
-
-							    </div>
-
-							    <div class="form-group">
-							        <label class="black md left">Re Type:</label>
-
-							            <input type="password" class="form-control col-md-6" name="confirmPassword" id="reType" placeholder="再入力"/>
+										</td>
+										<tr><td>
+										<div class="form-group">
+							        <label class="black md left">Re Type:</label></td>
+							        <td>
+							        <input type="password" class="form-control col-md-6" name="confirmPassword" id="reType" placeholder="再入力"/>
 
 							    </div>
-
-							<br><input type="submit" value="変更" id="edit_pass" name="edit_pass">
+							    </td>
+										</table>
+										</div>
+							<br><button type="submit"  id="edit_pass" name="edit_pass"
+							class="btn-default wi btn-lg select5"><div class="bo">変更</div></button>
 							</form>
 
 							</div>
-						<div class="modal-footer">
-					<button type="button" class="btn btn-primary"
+						<div class="modal-footer ">
+						<div class="mar">
+					<button type="button" class="btn btn-primary wi"
 				data-dismiss="modal">閉じる</button>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
+
+
 <!-- モーダルウィンドウ一般講師 -->
-				<div class="modal fade" id="myModal2">
+
+<div class="modal fade" id="myModal2">
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<div class="modal-header back-color">
@@ -165,32 +181,47 @@ ${ teacher.teacherID }
 								<h3 class="modal-title white fonts">管理者権限</h3>
 							</div>
 							<div class="modal-body black">
-								<form id="newForm" class="form-horizontal">
 
-							    <div class="form-group">
-							        <label class="black md left">New Pass:</label>
+							<div class="left1">
+									<table>
+									<tr>
+									<form id="newForm" class="form-horizontal">
+															    <div class="form-group">
 
-							            <input type="password" class="form-control col-md-6" name="password" placeholder="新しいパスワード"/>
+										<tr>
+										<td>
+									<div class="form-group">
+							        <label class="black md left">New Pass:</label> </td>
+									<td>
+									<input type="password" class="form-control col-md-6" name="password"  placeholder="新しいパスワード"/>
 
 							    </div>
-
-							    <div class="form-group">
-							        <label class="black md left">Re Type:</label>
-
-							            <input type="password" class="form-control col-md-6" name="confirmPassword" placeholder="再入力"/>
+										</td>
+										<tr><td>
+										<div class="form-group">
+							        <label class="black md left">Re Type:</label></td>
+							        <td>
+							        <input type="password" class="form-control col-md-6" name="confirmPassword" placeholder="再入力"/>
 
 							    </div>
-
-							<br><input type="submit" value="登録" id="regist_pass" name="regist_pass">
+							    </td>
+										</table>
+										</div>
+							<br><button type="submit"  id="regist_pass" name="regist_pass"
+							class="btn-default wi btn-lg select5"><div class="bo">変更</div></button>
 							</form>
+
 							</div>
-						<div class="modal-footer">
-					<button type="button" class="btn btn-primary"
+						<div class="modal-footer ">
+						<div class="mar">
+					<button type="button" class="btn btn-primary wi"
 				data-dismiss="modal">閉じる</button>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
 <!-- 削除用フォーム -->
 <form action="/Sotsuken/ManageUpdate" method="post">
 <input type="hidden" name="page" value="teacher_manage" />

@@ -415,3 +415,22 @@ font-family:Tahoma;
 .bo{
 font-weight: bold;
 }
+
+.right{
+	text-align: right;
+}
+
+.mar{
+	margin-left: 400px;
+	z-index: 400;
+}
+
+.wi{
+	width: 100px;
+}
+
+
+.select5:hover {
+	background: #8590CA;
+	color: #fff;
+}
