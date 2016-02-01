@@ -116,7 +116,7 @@ public class eventDBManage extends DBAccess{
 					}//for
 				calendar = new GregorianCalendar(
 						Integer.parseInt(dateList.get(0)),
-						Integer.parseInt(dateList.get(1)),
+						Integer.parseInt(dateList.get(1))-1,
 						Integer.parseInt(dateList.get(2)));
 				switch (calendar.get(Calendar.DAY_OF_WEEK)){
 				// 取得した曜日フィールドの値。
@@ -181,9 +181,9 @@ public class eventDBManage extends DBAccess{
 					dateList.add("date");
 				}//for
 			calendar = new GregorianCalendar(
-					Integer.parseInt(dateList.get(0)),
-					Integer.parseInt(dateList.get(1)),
-					Integer.parseInt(dateList.get(2)));
+					Integer.parseInt(dateList.get(0)),//年
+					Integer.parseInt(dateList.get(1))-1,//月
+					Integer.parseInt(dateList.get(2)));//日
 			switch (calendar.get(Calendar.DAY_OF_WEEK)){
 			// 取得した曜日フィールドの値。
 			case Calendar.SUNDAY:dateList.add("日曜日");break;
@@ -247,7 +247,7 @@ public class eventDBManage extends DBAccess{
 				}//for
 			calendar = new GregorianCalendar(
 					Integer.parseInt(dateList.get(0)),
-					Integer.parseInt(dateList.get(1)),
+					Integer.parseInt(dateList.get(1))-1,
 					Integer.parseInt(dateList.get(2)));
 			switch (calendar.get(Calendar.DAY_OF_WEEK)){
 			// 取得した曜日フィールドの値。

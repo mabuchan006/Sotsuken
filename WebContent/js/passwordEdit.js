@@ -98,9 +98,6 @@ $(document).ready(function() {
 	    			var oldPw = $("#old_pwd").val();
 	    			var newPw = $("#new_pwd").val();
 	    			var teacherID = $(".Epass_id").val();
-	    			alert(oldPw)
-	    			alert(newPw)
-	    			alert(teacherID)
 
 	    			//error識別子
 	    			var code=dataCheck(oldPw, newPw,teacherID);

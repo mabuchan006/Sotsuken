@@ -21,6 +21,7 @@ toastSelect("success","${Msg }")</script>
 <!-- 登録処理 -->
 <form action="/Sotsuken/ManageUpdate" method="post">
 <input type="hidden"name="page" value="event_manage">
+<input type="hidden"name="endFlag" id="endFlagid" value="0">
 <table class="col-md-9 col-md-offset-3" id="first_table">
 <tr>
 <td class="col-md-3"><label for="EventName" class="labels">イベント名</label>
