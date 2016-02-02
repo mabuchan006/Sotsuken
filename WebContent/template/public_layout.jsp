@@ -100,16 +100,12 @@
 
 							var rowCnt=$("#${ event.date}").attr("class")-1;
 
-
-							$("table tr:eq(2) td:eq("+rowCnt+")").html("<p class=\"tate\">${ event.eventName}</p>");
-							$("table tr:eq(2) td:eq("+rowCnt+")").attr("rowspan","12");
-							$("table tr:eq(2) td:eq("+rowCnt+")").css("background-color","#ffff66");
-							$("table tr:eq(2) td:eq("+rowCnt+")").css("font-weight","900");
 							for(var row = 3;row < 15;row++){
-								alert(rowCnt+":"+row)
-								$("table tr:eq("+row+") td:eq("+rowCnt+")").remove();
+								$("table tr:eq("+row+") td:eq("+rowCnt+")").addClass("remove");
 								}
 
+							$("table tr:eq(2) td:eq("+rowCnt+")").addClass("combine");
+							$("table tr:eq(2) td:eq("+rowCnt+")").html("<p class=\"tate\">${ event.eventName}</p>");
 
 							</script>
 							</c:if>
@@ -120,7 +116,10 @@
 		</div>
 	</div>
 	<script>
-
+	$(".remove").remove();
+	$(".combine").attr("rowspan","12");
+	$(".combine").css("background-color","#ffff66");
+	$(".combine").css("font-weight","900");
 	$(".tate").css("padding","26px");
 	$(".tate").css("height", "150px");
 	$(".tate").css("font-size","27px");

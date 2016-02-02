@@ -38,10 +38,13 @@
 
 			<tr class="purple1">
 
-				<th></th>
-				<c:forEach var="dateitem" items="${dList }">
-				<th nowrap><fmt:formatDate value="${dateitem.date}" pattern="dd日(E)"/></th>
-				</c:forEach>
+						<th></th>
+												<%int colCnt = 1;%>
+						<c:forEach var="dateitem" items="${dList }">
+							<th nowrap id="${dateitem.date}" class="<%=colCnt%>"><fmt:formatDate value="${dateitem.date}"
+									pattern="MM月dd日(E)" /></th>
+									<%colCnt++;%>
+						</c:forEach>
 
 <%for (int cnt1=1; cnt1<=4; cnt1++) {%>  <!-- 1限～4限 -->
 
