@@ -21,7 +21,7 @@
 
 <!-- 印刷エリア指定id printareaで囲んだ範囲で可能 -->
 <div class="printarea">
-	<div class="container">
+	<div class="container ">
 	<!-- メニュー -->
 <nav id="menu">
 	<input type="checkbox" id="toggle-nav"/>
@@ -38,7 +38,7 @@
 </nav>
 <!-- メニュー終了 -->
 		<div class="table-responsive">
-			<table class="table table-striped table-bordered text-center ;">
+			<table class="table table-striped table-bordered text-center ">
 				<thead>
 					<tr class="purple2 month">
 
