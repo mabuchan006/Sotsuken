@@ -1,19 +1,24 @@
+<%@page import="manage.db.classDBManage"%>
 <%@page import="timetable.db.masterInfo"%>
+<%@page import="java.util.*"%>
+<%@page import="manage.db.classInfo"%>
 <%@page import="com.sun.xml.internal.bind.v2.schemagen.xmlschema.Import"%>
 <%@ page pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%
+	classDBManage classDBManage = new classDBManage();
+	List<classInfo> classList = new ArrayList<classInfo>();
+	classList = classDBManage.classDBSelect();
+	request.setAttribute("DropList", classList);
+%>
+#masterDropSQL<br />
+<c:forEach var="dl" items="${DropList }">
+	DROP TABLE if exists tbl_master_${dl.classID }timetable;<br />
 
-<c:if test="${empty tchinf}">
-	<c:redirect url="/manage/manage_top.jsp" />
-	<div class="alert alert-success alert-dismissible col-md-6 col-md-offset-3" role="alert">
-	<button type="button" class="close" data-dismiss="alert" aria-label="閉じる">
-		<span aria-hidden="true">×</span>
-	</button>
-	<strong>success:</strong>${login_Msg }
-	</div>
-</c:if>
-
-<p>${tchinf.teacherName}さん、ようこそ
-	<a href="/login/loginControl?state=logout">ログアウト</a>
-</p>
+</c:forEach>
+<br />
+#tempDropSQL<br />
+<c:forEach var="dl" items="${DropList }">
+	DROP TABLE if exists tbl_temp_${dl.classID }timetable;<br />
+</c:forEach>
