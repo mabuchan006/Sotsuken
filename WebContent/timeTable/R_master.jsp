@@ -49,7 +49,7 @@
 
 						<th></th>
 						<c:forEach var="dateitem" items="${dList }">
-							<th nowrap><fmt:formatDate value="${dateitem.date}"
+							<th nowrap id="${dateitem.date}" class="dateHead"><fmt:formatDate value="${dateitem.date}"
 									pattern="MM月dd日(E)" /></th>
 						</c:forEach>
 
@@ -255,5 +255,12 @@
 
 	</div>
 </div>
+
+<script>
+
+
+
+
+</script>
 
 

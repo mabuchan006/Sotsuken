@@ -92,7 +92,8 @@
 					<div class="panel-body panel1">
 						<ul>
 						<c:forEach var="event" items="${rs.rows }" >
-							<li class="line">${ event.date} ${ event.eventName} 場所 ${ event.roomName}</li>
+							<li class="line">${ event.date} ${ event.eventName} 場所 ${ event.roomName}:${event.endFlag}</li>
+
 						</c:forEach>
 						</ul>
 					</div>
@@ -101,13 +102,15 @@
 	</div>
 	<script>
 
+
+
 	$("table tr:eq(2) td:eq(0)").html("<p class=\"tate\">ソフトバレーボール大会</p>");
 	$("table tr:eq(2) td:eq(0)").attr("rowspan","12");
 	$("table tr:eq(2) td:eq(0)").css("background-color","#ffff66");
 	//$("table tr:eq(2) td:eq(0)").css("width","1em");
 	//$("table tr:eq(2) td:eq(0)").css("text-align","center");
 	$("table tr:eq(2) td:eq(0)").css("font-weight","900");
-	//$("table tr:eq(2) td:eq(0)").css("pdding","1em");
+	//$("table tr:eq(2) td:eq(0)").css("padding","1em");
 	$(".tate").css("padding","26px");
 	$(".tate").css("height", "150px");
 	$(".tate").css("font-size","27px");

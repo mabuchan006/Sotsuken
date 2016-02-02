@@ -20,7 +20,6 @@ $(document).ready(function(){
 
 			if($(this).text()=="ALL"){
 			$("#period").val("1,2,3,4");
-			$("#1").removeClass();
 			  $("#endFlagid").val("1");
 			}else
 			if(flg == 0){
@@ -32,8 +31,8 @@ $(document).ready(function(){
          }
 
 		});
-		alert($("#endFlagid").val())
-		return false;
+
+
 
 	})
 });

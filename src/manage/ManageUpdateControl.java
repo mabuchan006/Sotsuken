@@ -332,11 +332,6 @@ public class ManageUpdateControl extends HttpServlet {
 					tdm.teacherDBUpdate(ti, DBAccess.DELETE, "削除");
 				}//if
 
-				//更新済み講師情報全件取得
-				List<teacherInfo> teacherList = tdm.teacherDBSelect();
-				request.setAttribute("teacherList", teacherList);
-				request.setAttribute("cnt", teacherList.size());
-
 				//パスワード登録
 				if(request.getParameter("regist_pass")!=null){
 					tdm.NewPasswordUpdate(ti);
@@ -348,7 +343,10 @@ public class ManageUpdateControl extends HttpServlet {
 				}//if
 
 
-
+				//更新済み講師情報全件取得
+				List<teacherInfo> teacherList = tdm.teacherDBSelect();
+				request.setAttribute("teacherList", teacherList);
+				request.setAttribute("cnt", teacherList.size());
 
 				if(tdm.getMsg() != null){
 					if((tdm.getMsg()).indexOf("入力情報に誤りがあります") != -1){

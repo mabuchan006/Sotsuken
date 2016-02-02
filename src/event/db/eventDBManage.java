@@ -293,6 +293,7 @@ public class eventDBManage extends DBAccess{
 		switch(state){
 		case INSERT:
 			//結合した日付情報
+			System.out.println(ei.getDate());
 			String eventDate=ei.getDate().get(0)+"-"+ei.getDate().get(1)
 					+"-"+ei.getDate().get(2);
 			String classID=ei.getClassID();

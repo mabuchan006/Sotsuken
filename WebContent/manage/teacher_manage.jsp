@@ -119,41 +119,36 @@ ${ teacher.teacherID }
 								<h3 class="modal-title white fonts">パスワード変更</h3>
 							</div>
 							<div class="modal-body black">
-
+							<form id="manageForm" class="form-horizontal">
 							<div class="left1">
+
 									<table>
 									<tr>
-									<form id="manageForm" class="form-horizontal">
-															    <div class="form-group">
-									<td>
-							        <label class="black md left">Old Pass:</label>
+
+									<td><div class="form-group">
+							        <label class="black md left">Old Pass:</label></div>
 									</td>
-									<td>
+									<td><div class="form-group">
 									<input type="password" class="form-control col-md-6" name="old_password" id="old_pwd" placeholder="新しいパスワード"/>
-							    </div>
-										</td>
-										<tr>
-										<td>
-									<div class="form-group">
-							        <label class="black md left">New Pass:</label> </td>
-									<td>
+									</div></td></tr>
+									<tr>
+
+									<td><div class="form-group">
+							        <label class="black md left">New Pass:</label> </div></td>
+									<td><div class="form-group">
 									<input type="password" class="form-control col-md-6" name="password" id="new_pwd" placeholder="新しいパスワード"/>
-
-							    </div>
-										</td>
-										<tr><td>
-										<div class="form-group">
-							        <label class="black md left">Re Type:</label></td>
-							        <td>
+									</div></td></tr>
+									<tr><td><div class="form-group">
+							        <label class="black md left">Re Type:</label></div></td>
+							        <td><div class="form-group">
 							        <input type="password" class="form-control col-md-6" name="confirmPassword" id="reType" placeholder="再入力"/>
-
-							    </div>
-							    </td>
-										</table>
-										</div>
+							   		</div></td>
+							    </tr>
+								</table>
+								</div>
 							<br><button type="submit"  id="edit_pass" name="edit_pass"
-							class="btn-default wi btn-lg select5"><div class="bo">変更</div></button>
-							</form>
+							class="btn-default wi btn-lg select5"><div class="bo">変更</div></button></form>
+
 
 							</div>
 						<div class="modal-footer ">
@@ -181,34 +176,30 @@ ${ teacher.teacherID }
 								<h3 class="modal-title white fonts">管理者権限</h3>
 							</div>
 							<div class="modal-body black">
-
+							<form id="newForm" class="form-horizontal">
 							<div class="left1">
 									<table>
 									<tr>
-									<form id="newForm" class="form-horizontal">
-															    <div class="form-group">
 
-										<tr>
-										<td>
-									<div class="form-group">
-							        <label class="black md left">New Pass:</label> </td>
+									<tr>
 									<td>
+							        <label class="black md left">New Pass:</label> </td>
+									<td><div class="form-group">
 									<input type="password" class="form-control col-md-6" name="password"  placeholder="新しいパスワード"/>
-
 							    </div>
-										</td>
+										</td></tr>
 										<tr><td>
-										<div class="form-group">
+
 							        <label class="black md left">Re Type:</label></td>
-							        <td>
+							        <td>	<div class="form-group">
 							        <input type="password" class="form-control col-md-6" name="confirmPassword" placeholder="再入力"/>
 
 							    </div>
-							    </td>
+							    </td></tr>
 										</table>
 										</div>
 							<br><button type="submit"  id="regist_pass" name="regist_pass"
-							class="btn-default wi btn-lg select5"><div class="bo">変更</div></button>
+							class="btn-default wi btn-lg select5"><div class="bo">登録</div></button>
 							</form>
 
 							</div>
