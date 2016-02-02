@@ -1,5 +1,7 @@
 package excel;
 
+import java.awt.FileDialog;
+import java.awt.Frame;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -173,8 +175,24 @@ public class ToExcel extends HttpServlet {
 			}
 		}
 
+		FileDialog fd =  new FileDialog(new Frame(), "名前をつけて保存", FileDialog.SAVE);
+		String path = null;
+		try{
+			fd.toFront();
+			fd.setFile(page + ".xlsx");
+			fd.setVisible(true);
+			if(fd.getFile() != null){
+				path = fd.getDirectory() + fd.getFile();
+			}
+		}finally{
+			fd.dispose();
+		}
+
+
+
+
 		FileOutputStream out = null;
-		out = new FileOutputStream("C:/Users/tetsuya/Desktop/" + page + ".xlsx");//file path
+		out = new FileOutputStream(path);//file path
 		wb.write(out);//file export
 		out.close();
 
