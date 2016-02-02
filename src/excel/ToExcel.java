@@ -5,6 +5,8 @@ import java.awt.Frame;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -155,10 +157,26 @@ public class ToExcel extends HttpServlet {
 		}
 
 		//date set
+		Calendar calendar;
+		String week = "";
 		row = sheet.createRow(2);
 		row.createCell(1).setCellStyle(style1);
 		for(int i = 0; i < dateArray.size(); i++){
-			row.createCell(i+2).setCellValue(dateArray.get(i).substring(5, 7) + "月" + dateArray.get(i).substring(8) + "日");
+			calendar = new GregorianCalendar(
+					Integer.parseInt(dateArray.get(i).substring(0, 4)),
+					Integer.parseInt(dateArray.get(i).substring(5, 7))-1,
+					Integer.parseInt(dateArray.get(i).substring(8))
+					);
+			switch(calendar.get(Calendar.DAY_OF_WEEK)){
+			case Calendar.SUNDAY:week = "(日)";break;
+			case Calendar.MONDAY:week = "(月)";break;
+			case Calendar.TUESDAY:week = "(火)";break;
+			case Calendar.WEDNESDAY:week = "(水)";break;
+			case Calendar.THURSDAY:week = "(木)";break;
+			case Calendar.FRIDAY:week = "(金)";break;
+			case Calendar.SATURDAY:week = "(土)";break;
+			}
+			row.createCell(i+2).setCellValue(dateArray.get(i).substring(8) + "日" + week);
 			row.getCell(i + 2).setCellStyle(style1);
 		}
 
@@ -166,82 +184,101 @@ public class ToExcel extends HttpServlet {
 		sheet.setColumnWidth(0, 2*256);
 		sheet.setColumnWidth(1, 2*256);
 
+		List<XSSFRow> rowList = new ArrayList<XSSFRow>();
 		//1限目
-		XSSFRow row1 = sheet.createRow(3);//subject
-		XSSFRow row2 = sheet.createRow(4);//teacher
-		XSSFRow row3 = sheet.createRow(5);//room
-		row1.createCell(1).setCellValue(1);
-		row1.getCell(1).setCellStyle(style1);
-		row2.createCell(1).setCellStyle(style2);
-		row3.createCell(1).setCellStyle(style2);
+		//row(3,6,9,12) subject
+		//row(4,7,10,13) teacher
+		//row(5,8,11,14) room
+		for(int i = 3; i <= 14;i++){
+			rowList.add(sheet.createRow(i));
+		}
+		rowList.get(0).createCell(1).setCellValue(1);
+		rowList.get(0).getCell(1).setCellStyle(style1);
+		rowList.get(1).createCell(1).setCellStyle(style2);
+		rowList.get(2).createCell(1).setCellStyle(style2);
 		sheet.addMergedRegion(new CellRangeAddress(3, 5, 1, 1));
 		if(period1List !=null){
 			for(int i = 0; i < period1List.size(); i++){
-				row1.createCell(i + 2).setCellValue(period1List.get(i).getSubjectName());
-				row1.getCell(i + 2).setCellStyle(style1);
-				row2.createCell(i + 2).setCellValue(period1List.get(i).getTeacherName());
-				row2.getCell(i + 2).setCellStyle(style1);
-				row3.createCell(i + 2).setCellValue(period1List.get(i).getRoomName());
-				row3.getCell(i + 2).setCellStyle(style1);
+				rowList.get(0).createCell(i + 2).setCellValue(period1List.get(i).getSubjectName());
+				rowList.get(0).getCell(i + 2).setCellStyle(style1);
+				rowList.get(1).createCell(i + 2).setCellValue(period1List.get(i).getTeacherName());
+				rowList.get(1).getCell(i + 2).setCellStyle(style1);
+				rowList.get(2).createCell(i + 2).setCellValue(period1List.get(i).getRoomName());
+				rowList.get(2).getCell(i + 2).setCellStyle(style1);
 			}
 		}
 		//2限目
-		row1 = sheet.createRow(6);
-		row2 = sheet.createRow(7);
-		row3 = sheet.createRow(8);
-		row1.createCell(1).setCellValue(2);
-		row1.getCell(1).setCellStyle(style1);
-		row2.createCell(1).setCellStyle(style2);
-		row3.createCell(1).setCellStyle(style2);
+		rowList.get(3).createCell(1).setCellValue(2);
+		rowList.get(3).getCell(1).setCellStyle(style1);
+		rowList.get(4).createCell(1).setCellStyle(style2);
+		rowList.get(5).createCell(1).setCellStyle(style2);
 		sheet.addMergedRegion(new CellRangeAddress(6, 8, 1, 1));
 		if(period2List !=null){
 			for(int i = 0; i < period2List.size(); i++){
-				row1.createCell(i + 2).setCellValue(period2List.get(i).getSubjectName());
-				row1.getCell(i + 2).setCellStyle(style1);
-				row2.createCell(i + 2).setCellValue(period2List.get(i).getTeacherName());
-				row2.getCell(i + 2).setCellStyle(style1);
-				row3.createCell(i + 2).setCellValue(period2List.get(i).getRoomName());
-				row3.getCell(i + 2).setCellStyle(style1);
+				rowList.get(3).createCell(i + 2).setCellValue(period2List.get(i).getSubjectName());
+				rowList.get(3).getCell(i + 2).setCellStyle(style1);
+				rowList.get(4).createCell(i + 2).setCellValue(period2List.get(i).getTeacherName());
+				rowList.get(4).getCell(i + 2).setCellStyle(style1);
+				rowList.get(5).createCell(i + 2).setCellValue(period2List.get(i).getRoomName());
+				rowList.get(5).getCell(i + 2).setCellStyle(style1);
 			}
 		}
 		//3限目
-		row1 = sheet.createRow(9);
-		row2 = sheet.createRow(10);
-		row3 = sheet.createRow(11);
-		row1.createCell(1).setCellValue(3);
-		row1.getCell(1).setCellStyle(style1);
-		row2.createCell(1).setCellStyle(style2);
-		row3.createCell(1).setCellStyle(style2);
+		rowList.get(6).createCell(1).setCellValue(3);
+		rowList.get(6).getCell(1).setCellStyle(style1);
+		rowList.get(7).createCell(1).setCellStyle(style2);
+		rowList.get(8).createCell(1).setCellStyle(style2);
 		sheet.addMergedRegion(new CellRangeAddress(9, 11, 1, 1));
 		if(period3List !=null){
 			for(int i = 0; i < period3List.size(); i++){
-				row1.createCell(i + 2).setCellValue(period3List.get(i).getSubjectName());
-				row1.getCell(i + 2).setCellStyle(style1);
-				row2.createCell(i + 2).setCellValue(period3List.get(i).getTeacherName());
-				row2.getCell(i + 2).setCellStyle(style1);
-				row3.createCell(i + 2).setCellValue(period3List.get(i).getRoomName());
-				row3.getCell(i + 2).setCellStyle(style1);
+				rowList.get(6).createCell(i + 2).setCellValue(period3List.get(i).getSubjectName());
+				rowList.get(6).getCell(i + 2).setCellStyle(style1);
+				rowList.get(7).createCell(i + 2).setCellValue(period3List.get(i).getTeacherName());
+				rowList.get(7).getCell(i + 2).setCellStyle(style1);
+				rowList.get(8).createCell(i + 2).setCellValue(period3List.get(i).getRoomName());
+				rowList.get(8).getCell(i + 2).setCellStyle(style1);
 			}
 		}
 		//4限目
-		row1 = sheet.createRow(12);
-		row2 = sheet.createRow(13);
-		row3 = sheet.createRow(14);
-		row1.createCell(1).setCellValue(4);
-		row1.getCell(1).setCellStyle(style1);
-		row2.createCell(1).setCellStyle(style2);
-		row3.createCell(1).setCellStyle(style2);
+		rowList.get(9).createCell(1).setCellValue(4);
+		rowList.get(9).getCell(1).setCellStyle(style1);
+		rowList.get(10).createCell(1).setCellStyle(style2);
+		rowList.get(11).createCell(1).setCellStyle(style2);
 		sheet.addMergedRegion(new CellRangeAddress(12, 14, 1, 1));
 		if(period4List !=null){
 			for(int i = 0; i < period4List.size(); i++){
-				row1.createCell(i + 2).setCellValue(period4List.get(i).getSubjectName());
-				row1.getCell(i + 2).setCellStyle(style1);
-				row2.createCell(i + 2).setCellValue(period4List.get(i).getTeacherName());
-				row2.getCell(i + 2).setCellStyle(style1);
-				row3.createCell(i + 2).setCellValue(period4List.get(i).getRoomName());
-				row3.getCell(i + 2).setCellStyle(style1);
+				rowList.get(9).createCell(i + 2).setCellValue(period4List.get(i).getSubjectName());
+				rowList.get(9).getCell(i + 2).setCellStyle(style1);
+				rowList.get(10).createCell(i + 2).setCellValue(period4List.get(i).getTeacherName());
+				rowList.get(10).getCell(i + 2).setCellStyle(style1);
+				rowList.get(11).createCell(i + 2).setCellValue(period4List.get(i).getRoomName());
+				rowList.get(11).getCell(i + 2).setCellStyle(style1);
 			}
 		}
+
+		//休日色変更
+		CellStyle holiday = wb.createCellStyle();
+		holiday.setFillForegroundColor(IndexedColors.LIGHT_YELLOW.getIndex());
+		holiday.setFillPattern(CellStyle.SOLID_FOREGROUND);
+		holiday.setBorderTop(CellStyle.BORDER_THIN);
+		holiday.setBorderBottom(CellStyle.BORDER_THIN);
+		holiday.setBorderLeft(CellStyle.BORDER_THIN);
+		holiday.setBorderRight(CellStyle.BORDER_THIN);
+		holiday.setTopBorderColor(IndexedColors.BLACK.getIndex());
+		holiday.setBottomBorderColor(IndexedColors.BLACK.getIndex());
+		holiday.setLeftBorderColor(IndexedColors.BLACK.getIndex());
+		holiday.setRightBorderColor(IndexedColors.BLACK.getIndex());
+		holiday.setAlignment(CellStyle.ALIGN_CENTER);
+		holiday.setVerticalAlignment(CellStyle.VERTICAL_CENTER);
+		for(int j = 2; j <= 29; j++){
+			if( ( row.getCell(j).getStringCellValue().substring(4,5).equals("土")
+					|| row.getCell(j).getStringCellValue().substring(4,5).equals("日") ) ){
+				for(int i = 0; i < rowList.size();i++){
+					System.out.println(rowList.get(i).getCell(j).getRowIndex() + ":" + rowList.get(i).getCell(j).getColumnIndex());
+					rowList.get(i).getCell(j).setCellStyle(holiday);
+				}//for
+			}//if
+		}//for
 
 		FileDialog fd =  new FileDialog(new Frame(), "名前をつけて保存", FileDialog.SAVE);
 		String path = null;
@@ -266,21 +303,3 @@ public class ToExcel extends HttpServlet {
 	}
 
 }
-
-////カレンダー
-//calendar = new GregorianCalendar(
-//		Integer.parseInt(dateList.get(0)),//年　16
-//		Integer.parseInt(dateList.get(1))-1,//月－１　2
-//		Integer.parseInt(dateList.get(2)));//日　10
-//
-//
-//switch (calendar.get(Calendar.DAY_OF_WEEK)){
-//// 取得した曜日フィールドの値。
-//case Calendar.SUNDAY:dateList.add("日曜日");break;
-//case Calendar.MONDAY:dateList.add("月曜日");break;
-//case Calendar.TUESDAY:dateList.add("火曜日");break;
-//case Calendar.WEDNESDAY:dateList.add("水曜日");break;
-//case Calendar.THURSDAY:dateList.add("木曜日");break;
-//case Calendar.FRIDAY:dateList.add("金曜日");break;
-//case Calendar.SATURDAY:dateList.add("日曜日");break;
-//}//switch
