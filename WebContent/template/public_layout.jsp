@@ -76,7 +76,7 @@
 	</section>
 	<!-- End Logo Section -->
 	<jsp:include page="${content_page}" />
-			<sql:query sql="SELECT eventID,date, eventName,roomName,classID,
+			<sql:query sql="SELECT eventID,date, eventName,roomName,classID,endFlag,
 			GROUP_CONCAT(DISTINCT period ORDER BY FIELD(period, 1,2,3,4) separator ' ') as doperiod
 			FROM tbl_event GROUP BY date, eventName HAVING classID LIKE ? || classID = 'AAAA'  ORDER BY date ASC"
 				 var="rs" dataSource="jdbc/MySqlCon">
@@ -92,8 +92,18 @@
 					<div class="panel-body panel1">
 						<ul>
 						<c:forEach var="event" items="${rs.rows }" >
-							<li class="line">${ event.date} ${ event.eventName} 場所 ${ event.roomName}:${event.endFlag}</li>
+							<li class="line">${ event.date} ${ event.eventName} 場所 :${ event.roomName}</li>
+							<c:if test="${event.endFlag == 1}">
+							<script>
+							$("${ event.date}").html("<p class=\"tate\">${ event.eventName}</p>");
+							$("${ event.date}").attr("rowspan","12");
+							$("${ event.date}").css("background-color","#ffff66");
+							$("${ event.date}").css("font-weight","900");
 
+
+
+							</script>
+							</c:if>
 						</c:forEach>
 						</ul>
 					</div>
@@ -101,21 +111,15 @@
 		</div>
 	</div>
 	<script>
-
-
-
-	$("table tr:eq(2) td:eq(0)").html("<p class=\"tate\">ソフトバレーボール大会</p>");
-	$("table tr:eq(2) td:eq(0)").attr("rowspan","12");
-	$("table tr:eq(2) td:eq(0)").css("background-color","#ffff66");
-	//$("table tr:eq(2) td:eq(0)").css("width","1em");
-	//$("table tr:eq(2) td:eq(0)").css("text-align","center");
-	$("table tr:eq(2) td:eq(0)").css("font-weight","900");
-	//$("table tr:eq(2) td:eq(0)").css("padding","1em");
 	$(".tate").css("padding","26px");
 	$(".tate").css("height", "150px");
 	$(".tate").css("font-size","27px");
 	$(".tate").css("writing-mode", "tb-rl");
 	$(".tate").css("-webkit-writing-mode", "vertical-rl");
+
+	//$("table tr:eq(2) td:eq(0)").css("padding","1em");
+	//$("table tr:eq(2) td:eq(0)").css("width","1em");
+	//$("table tr:eq(2) td:eq(0)").css("text-align","center");
 // 	$("table tr:eq(2) td:eq(0)").css("transform", "rotate(+90deg)");
 // 	$("table tr:eq(2) td:eq(0)").css("writing-mode", "tb-rl");
 // 	$("table tr:eq(2) td:eq(0)").css("writing-mode", "vertical-rl");
