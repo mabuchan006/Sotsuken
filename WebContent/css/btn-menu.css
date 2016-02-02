@@ -1,8 +1,6 @@
 @import url('http://fonts.googleapis.com/css?family=Merriweather+Sans:700,300');
 @import url('http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css');
 
-* { padding: 0px; margin: 0px; border: 0px; outline: 0px; }		/* fast reset */
-
 body {
 
 	font-size: 12px;
