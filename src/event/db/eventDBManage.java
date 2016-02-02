@@ -143,7 +143,7 @@ public class eventDBManage extends DBAccess{
 				//クラス要素を1件ずつリストに追加
 				eventList.add(eventinfo);
 
-
+				System.out.println("aaaa");
 			}//while
 
 			disConnection();//切断

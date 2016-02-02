@@ -43,8 +43,7 @@
 	</ul>
 
 <div class="row col-md-8 mtop ">
-<div class="back">
-<table class="table col-md-6 col-md-offset-3">
+<table class="table col-md-6 col-md-offset-3 back">
 <thead>
 <tr class="warning wide">
 <td colspan="4"><h4 class="bold">年間イベント一覧</h4> </td></tr>
@@ -69,6 +68,6 @@ ${rs.period}
 </tbody>
 </table>
 </div>
-</div>
+
 
 

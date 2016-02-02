@@ -14,3 +14,45 @@
 .back {
 	background-color: #fff;
 }
+
+.wide {
+	font-weight: 700;
+}
+.Ecalendar {
+    width: 112px;
+    height: 61px;
+
+    display: inline-block;
+}
+.Ecalendar_month {
+    width: 100px;
+	border:solid #000 1px;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 12px;
+    text-shadow: -1px -1px 0 #AA3333;
+    background-color: #ff0000;
+
+}
+.Ecalendar_day{
+    width: 100px;
+    border:solid #000 1px;
+    border-top-style:none;
+    margin:0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #FFFFFF;
+}
+.Ecalendar_week{
+    width: 100px;
+	border:solid #000 1px;
+	border-top-style:none;
+	border-bottom-style:none;
+    margin-bottom:-5px;
+    padding:0;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    color:#f00;
+}

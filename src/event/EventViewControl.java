@@ -37,17 +37,17 @@ public class EventViewControl extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String content_page= "/eventTable/eventTable.jsp";
-		String page_title= "EventTable";
 		getIncludeFile(request);
 		eventDBManage edm = new eventDBManage();
-		String page = request.getParameter("page")==null?"R4":
+		String page = request.getParameter("page")==null?"ALL":
 			request.getParameter("page");
-		System.out.println(page);
+		String page_title= "EventTable  -  "+page ;
 		List<eventInfo> eventList = new ArrayList<eventInfo>();
 		try {
-			if(page !="AA"){
+			if(page !="ALL"){
 				eventList = edm.eventPageSelect(page);
 			}else{
+				System.out.println("page");
 				eventList = edm.eventALLSelect();
 			}
 
