@@ -139,10 +139,10 @@ public class eventDBManage extends DBAccess{
 						rs.getString("guestTeacher"),
 						rs.getString("notice")
 						);
-
-				System.out.println(eventinfo);
+				dateList = new ArrayList<String>();
 				//クラス要素を1件ずつリストに追加
 				eventList.add(eventinfo);
+
 
 			}//while
 
@@ -209,6 +209,7 @@ public class eventDBManage extends DBAccess{
 			//クラス要素を1件ずつリストに追加
 			System.out.println(eventinfo.getEventName());
 			eventList.add(eventinfo);
+			dateList = new ArrayList<String>();
 
 		}//while
 
@@ -267,13 +268,13 @@ public class eventDBManage extends DBAccess{
 					dateList,
 					rs.getString("classID"),
 					rs.getString("roomName"),
-					"0",
+					rs.getString("endFlag"),
 					"",
 					rs.getString("notice")
 					);
 			//クラス要素を1件ずつリストに追加
-			System.out.println(eventinfo.getEventName());
 			eventList.add(eventinfo);
+			dateList = new ArrayList<String>();
 
 		}//while
 

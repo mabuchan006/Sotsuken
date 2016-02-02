@@ -74,8 +74,10 @@
 			</div>
 		</div>
 	</section>
+
 	<!-- End Logo Section -->
 	<jsp:include page="${content_page}" />
+		<c:if test="${eventFlag == null}">
 			<sql:query sql="SELECT eventID,date, eventName,roomName,classID,endFlag,
 			GROUP_CONCAT(DISTINCT period ORDER BY FIELD(period, 1,2,3,4) separator ' ') as doperiod
 			FROM tbl_event GROUP BY date, eventName HAVING classID LIKE ? || classID = 'AAAA'  ORDER BY date ASC"
@@ -119,25 +121,7 @@
 	$(".tate").css("writing-mode", "tb-rl");
 	$(".tate").css("-webkit-writing-mode", "vertical-rl");
 
-	//$("table tr:eq(2) td:eq(0)").css("padding","1em");
-	//$("table tr:eq(2) td:eq(0)").css("width","1em");
-	//$("table tr:eq(2) td:eq(0)").css("text-align","center");
-// 	$("table tr:eq(2) td:eq(0)").css("transform", "rotate(+90deg)");
-// 	$("table tr:eq(2) td:eq(0)").css("writing-mode", "tb-rl");
-// 	$("table tr:eq(2) td:eq(0)").css("writing-mode", "vertical-rl");
-// 	$("table tr:eq(2) td:eq(0)").css("-webkit-writing-mode", "vertical-rl");
-// 	$("table tr:eq(2) td:eq(0)").css("-webkit-transform", "rotate(+90deg)");
-
-
-
-
-
-
-
-
-
-
-
 </script>
+</c:if>
 </body>
 </html>
