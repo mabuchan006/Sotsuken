@@ -99,7 +99,9 @@
 							$("${ event.date}").attr("rowspan","12");
 							$("${ event.date}").css("background-color","#ffff66");
 							$("${ event.date}").css("font-weight","900");
-
+							for(var row = 3;row < 15;row++){
+								$("table tr:eq("+row+") td:eq(0)").remove();
+								}
 
 
 							</script>
@@ -131,9 +133,7 @@
 
 
 
-	for(var row = 3;row < 15;row++){
-	$("table tr:eq("+row+") td:eq(0)").remove();
-	}
+
 
 
 
