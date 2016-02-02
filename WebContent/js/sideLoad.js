@@ -25,7 +25,7 @@ function pageLoad(url){
 		async : false
 	}).done(function(res){
 		$(".pure-pusher").html(res);
-		//history.pushState(null, null, url);
+		history.pushState(null, null, url);
 		location.reload();
 	}).fail(function(jqXHR, textStatus, errorThrown ){//失敗
 		console.log("NG:" + jqXHR.status + ":" + textStatus.status + ":" + errorThrown);

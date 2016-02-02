@@ -10,6 +10,7 @@
 	classDBManage classDBManage = new classDBManage();
 	List<classInfo> classList = new ArrayList<classInfo>();
 	classList = classDBManage.classDBSelect();
+	System.out.println(classList.size());
 	request.setAttribute("DropList", classList);
 %>
 #masterDropSQL<br />
