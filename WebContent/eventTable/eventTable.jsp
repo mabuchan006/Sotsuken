@@ -42,9 +42,9 @@
 
 	</ul>
 
-<div class="row col-md-9 mtop col-md-offset-3">
+<div class="row col-md-8 mtop ">
 <div class="back">
-<table class="table ">
+<table class="table col-md-6 col-md-offset-3">
 <thead>
 <tr class="warning wide">
 <td colspan="4"><h4 class="bold">年間イベント一覧</h4> </td></tr>
