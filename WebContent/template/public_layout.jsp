@@ -115,7 +115,15 @@
 		</div>
 	</div>
 	<script>
-	$("${ event.date}1").attr("class");
+	//for(var row = 3;row < 15;row++){
+	//$("table tr:eq("+row+") td:eq(0)").remove();
+	//}
+
+	$("table tr:eq(2) th").each(function(){
+		alert($(this).attr("html"))
+	})
+}
+	$("${ event.date}").attr("class");
 	$(".tate").css("padding","26px");
 	$(".tate").css("height", "150px");
 	$(".tate").css("font-size","27px");
