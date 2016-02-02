@@ -426,11 +426,14 @@ font-weight: bold;
 }
 
 .wi{
-	width: 100px;
+	width: 110px;
 }
-
+.wi1{
+	width: 150px;
+}
 
 .select5:hover {
 	background: #8590CA;
 	color: #fff;
 }
+
