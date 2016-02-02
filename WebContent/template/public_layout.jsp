@@ -101,9 +101,9 @@
 							$("${ event.date}").attr("rowspan","12");
 							$("${ event.date}").css("background-color","#ffff66");
 							$("${ event.date}").css("font-weight","900");
-							for(var row = 3;row < 15;row++){
-								$("table tr:eq("+row+") td:eq(0)").remove();
-								}
+							//for(var row = 3;row < 15;row++){
+								//$("table tr:eq("+row+") td:eq(0)").remove();
+								//}
 
 
 							</script>
@@ -115,6 +115,7 @@
 		</div>
 	</div>
 	<script>
+	$("${ event.date}1").attr("class");
 	$(".tate").css("padding","26px");
 	$(".tate").css("height", "150px");
 	$(".tate").css("font-size","27px");
