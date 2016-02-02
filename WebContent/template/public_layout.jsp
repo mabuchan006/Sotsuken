@@ -97,13 +97,18 @@
 							<li class="line">${ event.date} ${ event.eventName} 場所 :${ event.roomName}</li>
 							<c:if test="${event.endFlag == 1}">
 							<script>
-							$("${ event.date}").html("<p class=\"tate\">${ event.eventName}</p>");
-							$("${ event.date}").attr("rowspan","12");
-							$("${ event.date}").css("background-color","#ffff66");
-							$("${ event.date}").css("font-weight","900");
-							//for(var row = 3;row < 15;row++){
-								//$("table tr:eq("+row+") td:eq(0)").remove();
-								//}
+
+							var rowCnt=$("#${ event.date}").attr("class")-1;
+
+
+							$("table tr:eq(2) td:eq("+rowCnt+")").html("<p class=\"tate\">${ event.eventName}</p>");
+							$("table tr:eq(2) td:eq("+rowCnt+")").attr("rowspan","12");
+							$("table tr:eq(2) td:eq("+rowCnt+")").css("background-color","#ffff66");
+							$("table tr:eq(2) td:eq("+rowCnt+")").css("font-weight","900");
+							for(var row = 3;row < 15;row++){
+								alert(rowCnt+":"+row)
+								$("table tr:eq("+row+") td:eq("+rowCnt+")").remove();
+								}
 
 
 							</script>
@@ -115,15 +120,7 @@
 		</div>
 	</div>
 	<script>
-	//for(var row = 3;row < 15;row++){
-	//$("table tr:eq("+row+") td:eq(0)").remove();
-	//}
 
-	$("table tr:eq(2) th").each(function(){
-		alert($(this).attr("html"))
-	})
-}
-	$("${ event.date}").attr("class");
 	$(".tate").css("padding","26px");
 	$(".tate").css("height", "150px");
 	$(".tate").css("font-size","27px");

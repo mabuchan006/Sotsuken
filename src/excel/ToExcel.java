@@ -201,3 +201,21 @@ public class ToExcel extends HttpServlet {
 	}
 
 }
+
+////カレンダー
+//calendar = new GregorianCalendar(
+//		Integer.parseInt(dateList.get(0)),//年　16
+//		Integer.parseInt(dateList.get(1))-1,//月－１　2
+//		Integer.parseInt(dateList.get(2)));//日　10
+//
+//
+//switch (calendar.get(Calendar.DAY_OF_WEEK)){
+//// 取得した曜日フィールドの値。
+//case Calendar.SUNDAY:dateList.add("日曜日");break;
+//case Calendar.MONDAY:dateList.add("月曜日");break;
+//case Calendar.TUESDAY:dateList.add("火曜日");break;
+//case Calendar.WEDNESDAY:dateList.add("水曜日");break;
+//case Calendar.THURSDAY:dateList.add("木曜日");break;
+//case Calendar.FRIDAY:dateList.add("金曜日");break;
+//case Calendar.SATURDAY:dateList.add("日曜日");break;
+//}//switch

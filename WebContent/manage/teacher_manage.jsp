@@ -22,7 +22,7 @@ toastSelect("success","${Msg }")</script>
 
 <!-- 登録処理 -->
 <form action="/Sotsuken/ManageUpdate" method="post">
-<input type="hidden" name="page" value="subject_manage" />
+<input type="hidden" name="page" value="teacher_manage" />
 
 <table class="col-md-9 col-md-offset-3" id="first_table">
 <tr>
@@ -121,7 +121,7 @@ ${ teacher.teacherID }
 							<div class="modal-body black">
 							<form id="manageForm" class="form-horizontal">
 							<div class="left1">
-
+							<input type="hidden" name="page" value="teacher_manage" />
 									<table>
 									<tr>
 
@@ -178,7 +178,7 @@ ${ teacher.teacherID }
 							<div class="modal-body black">
 							<form id="newForm" class="form-horizontal">
 							<div class="left1">
-
+							<input type="hidden" name="page" value="teacher_manage" />
 									<table>
 									<tr>
 

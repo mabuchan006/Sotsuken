@@ -2,6 +2,7 @@
 $(document).ready(
 		function() {
 
+
 			var getPage = getCookie();
 
 			var top = (document.location.search.substring(1)).indexOf("top");
