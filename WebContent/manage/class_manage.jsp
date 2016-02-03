@@ -66,15 +66,17 @@ toastSelect("success","${Msg }")</script>
 <td class="classname" data-name="${rs.classID}">${rs.className}</td>
 <td>
 <div style="display:inline-flex">
-<button type="button" class="btn btn-success edit_class "name="edit_class" ><i class="fa fa-pencil-square-o fa-2x"></i></button>
+<button type="button" class="btn btn-info edit_class "name="edit_class" ><i class="fa fa-pencil-square-o fa-2x fa-fw"></i></button>
 
 <!-- 削除用フォーム -->
 <form action="/Sotsuken/ManageUpdate?page=class_manage" method="post">
 <input type="hidden" name = "classID" value="${rs.classID }" />
 <input type="hidden" name = "className" value="${rs.className }" />
-<button type="submit" class="btn btn-danger delete"name="delete_class" ><i class="fa fa-trash-o fa-2x"></i></button>
+<button type="submit" class="btn btn-danger delete"name="delete_class" ><i class="fa fa-trash-o fa-2x fa-fw"></i></button>
 </form>
 <!-- 削除 -->
+
+<button type="button" class="btn btn-success delete excel ex"><i class="fa fa-file-excel-o fa-2x fa-fw"></i></button>
 </div>
 </td>
 
