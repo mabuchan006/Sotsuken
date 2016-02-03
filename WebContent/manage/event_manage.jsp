@@ -128,7 +128,14 @@ ${rs.date[2] }
 
 <div class="col-md-12">
 
-<li class="event_li"><span class="period label label-pill label-default">${rs.period}限目</span></li>
+<li class="event_li">
+<c:if test=  "${rs.endFlag==1 }">
+<span class="period label label-pill label-default">終日</span>
+
+</c:if>
+<c:if test=  "${rs.endFlag==0 }">
+<span class="period label label-pill label-default">${rs.period}限目</span>
+</c:if></li>
 <li class="event_li"><span class="classID label label-pill label-primary">${rs.classID}</span></li>
 <li class="event_li"><span class="roomID label label-pill label-warning">${rs.roomName}</span></li>
 <li class="event_li"><span class="guestTeacher label-pill label label-info">${rs.guestTeacher}</span>

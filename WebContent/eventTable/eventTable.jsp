@@ -60,7 +60,12 @@ ${rs.date[0] }/${rs.date[1] }/${rs.date[2] }/（${rs.date[3] }）
 <td>${rs.eventName}  </td>
 <td>場所:${rs.roomName}</td>
 <td>
-${rs.period}
+<c:if test=  "${rs.endFlag==1 }">
+終日
+</c:if>
+<c:if test=  "${rs.endFlag==0 }">
+${rs.period}限
+</c:if>
 </td>
 </tr>
 </c:forEach>

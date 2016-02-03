@@ -216,7 +216,6 @@ public class ManageUpdateControl extends HttpServlet {
 						:Integer.parseInt(request.getParameter("subjectID"))//false
 				,request.getParameter("subjectName")
 				,request.getParameter("bringThings"),showFlag
-
 				);
 
 		//科目情報削除
@@ -288,7 +287,6 @@ public class ManageUpdateControl extends HttpServlet {
 					//更新済み講師情報全件取得
 					List<classInfo> classList = cdm.classDBSelect();
 					request.setAttribute("cnt", classList.size());
-
 					request.setAttribute("classList", classList);
 					if(cdm.getMsg() != null){
 						if((cdm.getMsg()).indexOf("入力情報に誤りがあります") != -1){
@@ -296,7 +294,7 @@ public class ManageUpdateControl extends HttpServlet {
 						}else{
 							request.setAttribute("Msg",cdm.getMsg());
 						}//if
-					}
+					}//if
 
 				} catch (MySQLIntegrityConstraintViolationException e) {
 					// TODO 自動生成された catch ブロック
@@ -370,7 +368,7 @@ public class ManageUpdateControl extends HttpServlet {
 			List<String> dateList = new ArrayList<String>();
 			if(request.getParameter("eventDate")!=null){
 			String inputStr[];
-
+			//日付分割
 			inputStr=request.getParameter("eventDate").split("/");
 			for (String date : inputStr) {
 
@@ -382,14 +380,11 @@ public class ManageUpdateControl extends HttpServlet {
 			eventInfo ei = new eventInfo();
 			//日付情報分割格納end
 			//時限数取得
-
-
-
-
 				//ページ情報指定
 				content_page = "/manage/event_manage.jsp";
 				page_title = "EventManage";
 
+				//登録処理
 				if(request.getParameter("regist_event") != null ){
 
 					String[] periodArray = request.getParameter("period").split(",");
