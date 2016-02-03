@@ -76,7 +76,7 @@
 					</ul>
 				</li>
 
-				<li class="select2 moji"><h1 style="padding: 15px 40px; margin-top: 280px;">
+				<li class="select2 moji"><h1 style="padding: 15px 20px; margin-top: 280px;">
 				<a href="/Sotsuken/top.jsp"><i class="fa fa-reply ">logout</i></a></h1></li>
 			</ul>
 
