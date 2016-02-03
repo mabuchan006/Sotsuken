@@ -6,13 +6,16 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 
-	<!-- メニュー -->
+
+
+<div class="printarea">
+  <div  class="container">
+  <!-- メニュー -->
 <nav id="menu">
 	<input type="checkbox" id="toggle-nav"/>
-    <label id="toggle-nav-label" for="toggle-nav"><i class="fa fa-"></i></label>
+    <label id="toggle-nav-label" for="toggle-nav">J</label>
     <div class="box">
 	<ul>
-	<li><a href="#"><i class="icon-home"></i> </a></li>
 	    <c:forEach var="rs" items="${classIDMapJ }">
 		<c:forEach var="array" items="${rs.value }">
 			<li><a href="/Sotsuken/publicView?page=${array }">${array }</a></li>
@@ -22,21 +25,18 @@
 </div>
 </nav>
 <!-- メニュー終了 -->
-
-<div class="printarea">
-  <div  class="container">
     <div class="table-responsive">
     <table class="table table-striped table-bordered text-center table-hover;">
     <thead >
-	<tr class="purple2 ">
-				<th colspan="31">10月</th>
+	<tr class="purple2 month">
+
 			</tr>
       </thead>
 		<tbody>
 
 
 
-			<tr class="purple1">
+			<tr class="purple1 countDate">
 
 						<th></th>
 												<%int colCnt = 1;%>
