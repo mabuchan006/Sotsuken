@@ -4,6 +4,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<c:if test="${empty tchinf}">
+<jsp:forward page="/top.jsp" />
+</c:if>
+<c:if test="${!empty tchinf}">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,7 +29,7 @@
 	</c:forEach>
 
 </c:if>
-
+</c:if>
 </head>
 
 <body>
