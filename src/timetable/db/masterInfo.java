@@ -12,6 +12,7 @@ public class masterInfo implements Serializable {
 	private String roomName;
 	private String teacherName;
 	private String bringThings;
+	private String endFlag;
 
 
 	public masterInfo(int period, String subjectName, Date date, String classID, String roomName, String teacherName,String bringThings) {
@@ -25,6 +26,11 @@ public class masterInfo implements Serializable {
 		this.setBringThings(bringThings);
 	}
 
+	public masterInfo(Date date, String endFlag) {
+		super();
+		this.date = date;
+		this.endFlag = endFlag;
+	}
 
 	public masterInfo() {
 		super();
@@ -99,6 +105,16 @@ public class masterInfo implements Serializable {
 
 	public void setBringThings(String bringThings) {
 		this.bringThings = bringThings;
+	}
+
+
+	public String getEndFlag() {
+		return endFlag;
+	}
+
+
+	public void setEndFlag(String endFlag) {
+		this.endFlag = endFlag;
 	}
 
 

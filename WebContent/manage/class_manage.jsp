@@ -76,7 +76,7 @@ toastSelect("success","${Msg }")</script>
 </form>
 <!-- 削除 -->
 
-<button type="button" class="btn btn-success delete excel ex"><i class="fa fa-file-excel-o fa-2x fa-fw"></i></button>
+<button type="button" class="btn btn-success excel ex"><i class="fa fa-file-excel-o fa-2x fa-fw"></i></button>
 </div>
 </td>
 

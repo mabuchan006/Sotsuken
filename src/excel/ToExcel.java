@@ -35,11 +35,12 @@ public class ToExcel extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private String chooseTableName="";
-	private List<masterInfo> dList;
-	private List<masterInfo> period1List;
-	private List<masterInfo> period2List;
-	private List<masterInfo> period3List;
-	private List<masterInfo> period4List;
+	private List<masterInfo> dList = new ArrayList<masterInfo>();
+	private List<masterInfo> period1List = new ArrayList<masterInfo>();
+	private List<masterInfo> period2List = new ArrayList<masterInfo>();
+	private List<masterInfo> period3List = new ArrayList<masterInfo>();
+	private List<masterInfo> period4List = new ArrayList<masterInfo>();
+	private List<masterInfo> flagList = new ArrayList<masterInfo>();
 
 	/**
 	 * @see HttpServlet#HttpServlet()
@@ -54,27 +55,34 @@ public class ToExcel extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
-		String page = request.getParameter("page");
+		String classID = request.getParameter("classID");
 
-
-		if(page != null){
-			masterDBSwitch mdbSwitch = new masterDBSwitch();
-			masterDBSwitchInfo value = mdbSwitch.switchDB(page);
-			chooseTableName = value.chooseTableName;
-		}
-		masterDBManage mdb = new masterDBManage(chooseTableName);
 		try {
-			dList = mdb.dateSelect();//日付
-			period1List = mdb.selectTimeTable(1);//1限目
-			period2List = mdb.selectTimeTable(2);//2限目
-			period3List = mdb.selectTimeTable(3);//3限目
-			period4List = mdb.selectTimeTable(4);//4限目
+			if(classID != null){
+				masterDBSwitch mdbSwitch = new masterDBSwitch();
+				masterDBSwitchInfo value = mdbSwitch.switchDB(classID);
+				chooseTableName = value.chooseTableName;
+			} else {
+				return;
+			}
+			masterDBManage mdb = new masterDBManage(chooseTableName);
+			if(mdb.dateSelect() != null){
+				dList = mdb.dateSelect();//日付
+				period1List = mdb.selectTimeTable(1);//1限目
+				period2List = mdb.selectTimeTable(2);//2限目
+				period3List = mdb.selectTimeTable(3);//3限目
+				period4List = mdb.selectTimeTable(4);//4限目
+				flagList = mdb.excelExp();
+
+			} else {
+				return;
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
 		XSSFWorkbook wb = new XSSFWorkbook();//creat workbook
-		XSSFSheet sheet = wb.createSheet(page);//sheet name
+		XSSFSheet sheet = wb.createSheet(classID);//sheet name
 		sheet.createRow(0);//1行目
 
 		//垂直中央揃え
@@ -272,19 +280,29 @@ public class ToExcel extends HttpServlet {
 		holiday.setVerticalAlignment(CellStyle.VERTICAL_CENTER);
 		for(int j = 2; j <= 29; j++){
 			if( ( row.getCell(j).getStringCellValue().substring(4,5).equals("土")
-					|| row.getCell(j).getStringCellValue().substring(4,5).equals("日") ) ){
+					|| row.getCell(j).getStringCellValue().substring(4,5).equals("日") )
+					&& rowList.get(0).getCell(j).getStringCellValue().equals("")
+					&& rowList.get(3).getCell(j).getStringCellValue().equals("")
+					&& rowList.get(6).getCell(j).getStringCellValue().equals("")
+					&& rowList.get(9).getCell(j).getStringCellValue().equals("")
+					){
+				row.getCell(j).setCellStyle(holiday);
 				for(int i = 0; i < rowList.size();i++){
-					System.out.println(rowList.get(i).getCell(j).getRowIndex() + ":" + rowList.get(i).getCell(j).getColumnIndex());
 					rowList.get(i).getCell(j).setCellStyle(holiday);
 				}//for
 			}//if
 		}//for
 
+		System.out.println(flagList.size());
+		for(int i = 0; i < flagList.size();i++){
+			System.out.println(flagList.get(i).getDate() + ":" + flagList.get(i).getEndFlag());
+		}
+
 		FileDialog fd =  new FileDialog(new Frame(), "名前をつけて保存", FileDialog.SAVE);
 		String path = null;
 		try{
 			fd.toFront();
-			fd.setFile(page + ".xlsx");
+			fd.setFile(classID + ".xlsx");
 			fd.setVisible(true);
 			if(fd.getFile() != null){
 				path = fd.getDirectory() + fd.getFile();

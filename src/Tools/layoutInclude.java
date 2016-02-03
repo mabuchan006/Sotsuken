@@ -94,6 +94,7 @@ public class layoutInclude {
 		info.js.add("/Sotsuken/js/passwordEdit.js");
 		info.js.add("/Sotsuken/js/delete-manage.js");
 		info.js.add("/Sotsuken/js/sideLoad.js");
+		info.js.add("/Sotsuken/js/excelExport.js");
 
 		return info;
 	}
@@ -120,7 +121,6 @@ public class layoutInclude {
 		info.js.add("https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js");
 		info.js.add("/Sotsuken/js/toastSelect.js");
 		info.js.add("/Sotsuken/js/sideLoad.js");
-		info.js.add("/Sotsuken/js/excelExport.js");
 		return info;
 	}
 

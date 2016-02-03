@@ -18,6 +18,8 @@ public class masterDBManage extends DBAccess {
 	private String dropDBSQL;
 	private String createDBSQL;
 
+	private String excelSql;
+
 	public masterDBManage() {
 		super(DRIVER_NAME);
 	}
@@ -29,6 +31,10 @@ public class masterDBManage extends DBAccess {
                              +"WHERE period =? ORDER BY date,period ASC",chooseTableName);
 
 		dateSQL =String.format("SELECT date FROM %s GROUP BY date order by date asc",chooseTableName);
+
+		excelSql = String.format("SELECT m.date, e.endFlag "
+				+ "FROM %s m, tbl_event e "
+				+ "WHERE m.date = e.date ORDER BY m.date ASC", chooseTableName);
 	}
 	/**
 	 * @param
@@ -150,4 +156,26 @@ public class masterDBManage extends DBAccess {
 		updateExe(dropDBSQL);
 		disConnection();
 	}//MasterDB Drop
+
+	public List<masterInfo> excelExp() throws Exception{
+		List<masterInfo> timeTableMasterList = new ArrayList<masterInfo>();
+		//DB接続
+		connect();
+		//ステートメント作成
+		createStstement(excelSql);
+		//SQL実行
+		selectExe();
+		ResultSet rs = getRsResult();
+		masterInfo masterinfo = null;
+			while(rs.next()) {
+				masterinfo = new masterInfo(
+						rs.getDate("date"),
+						rs.getString("endFlag")
+						);
+				timeTableMasterList.add(masterinfo);
+			}
+			disConnection();
+		return timeTableMasterList;
+
+	}
 }
