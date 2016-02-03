@@ -376,41 +376,43 @@ public class ManageUpdateControl extends HttpServlet {
 			}//for
 			}else{
 				dateList.add("date");
-			}
+			}//日付情報分割格納end
+
+			//event情報生成
 			eventInfo ei = new eventInfo();
-			//日付情報分割格納end
-			//時限数取得
 				//ページ情報指定
-				content_page = "/manage/event_manage.jsp";
-				page_title = "EventManage";
+			content_page = "/manage/event_manage.jsp";
+			page_title = "EventManage";
 
-				//登録処理
-				if(request.getParameter("regist_event") != null ){
+			//登録処理
+			if(request.getParameter("regist_event") != null ){
+				//コマ情報格納用
+				List<String> periodList = new ArrayList<String>();
+				//コマ情報一時保管用
+				String[] periodArray = request.getParameter("period").split(",");
+				//イベント情報格納
+				for (String period: periodArray) {
+					periodList.add(period);
+				}//for
 
-					String[] periodArray = request.getParameter("period").split(",");
-					//イベント情報格納
-					for (String period: periodArray) {
-
-						ei = new eventInfo(
-								request.getParameter("event_id")==null?0
-										:Integer.parseInt(request.getParameter("event_id")),
-								request.getParameter("eventName"),
-								period==null?"0":period,
-								dateList,
-								request.getParameter("class_id").equals("ALL")?"AAAA"//ALL処理
-										:request.getParameter("class_id"),
-								request.getParameter("roomName")==null?""
-										:request.getParameter("roomName"),
-								request.getParameter("endFlag")==null?"0"
-										:request.getParameter("endFlag"),
-								request.getParameter("guestTeacher")==null?""
-										:request.getParameter("guestTeacher"),
-								request.getParameter("notice")==null?""
-										:request.getParameter("notice")
-								);
-						edm.eventDBUpdate(ei, DBAccess.INSERT, "登録");
-					}//for
-
+					ei = new eventInfo(
+							request.getParameter("event_id")==null?0
+									:Integer.parseInt(request.getParameter("event_id")),
+							request.getParameter("eventName"),
+							periodList,
+							dateList,
+							request.getParameter("class_id").equals("ALL")?"AAAA"//ALL処理
+									:request.getParameter("class_id"),
+							request.getParameter("roomName")==null?""
+									:request.getParameter("roomName"),
+							request.getParameter("endFlag")==null?"0"
+									:request.getParameter("endFlag"),
+							request.getParameter("guestTeacher")==null?""
+									:request.getParameter("guestTeacher"),
+							request.getParameter("notice")==null?""
+									:request.getParameter("notice")
+							);
+					edm.eventDBUpdate(ei, DBAccess.INSERT, "登録");
 				}//if
 
 				if(request.getParameter("delete_event") != null){

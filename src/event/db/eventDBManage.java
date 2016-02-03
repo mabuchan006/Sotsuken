@@ -143,7 +143,7 @@ public class eventDBManage extends DBAccess{
 				//クラス要素を1件ずつリストに追加
 				eventList.add(eventinfo);
 
-				System.out.println("aaaa");
+
 			}//while
 
 			disConnection();//切断
@@ -297,13 +297,14 @@ public class eventDBManage extends DBAccess{
 		switch(state){
 		case INSERT:
 			//結合した日付情報
-			System.out.println(ei.getDate());
 			String eventDate=ei.getDate().get(0)+"-"+ei.getDate().get(1)
 					+"-"+ei.getDate().get(2);
 			String classID=ei.getClassID();
-
-
-
+			//TODO コマループからのinsert処理実装
+			for (String period : ei.getPeriodList()) {
+				
+			}
+			
 			createStstement(insertSql);
 
 			getPstmt().setString(1,ei.getEventName());
