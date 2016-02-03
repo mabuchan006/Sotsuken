@@ -10,6 +10,7 @@ public class eventInfo implements Serializable{
 		private int eventID;
 		private String eventName;
 		private String period;
+		private List<String> periodList=new ArrayList<String>();
 		private List<String> date=new ArrayList<String>();
 		private String classID;
 		private String guestTeacher;
@@ -118,6 +119,26 @@ public class eventInfo implements Serializable{
 		public void setDate(List<String> date) {
 			this.date = date;
 		}
+		public List<String> getPeriodList() {
+			return periodList;
+		}
+		public eventInfo(int eventID, String eventName,  List<String> periodList, List<String> date,
+				String classID, String guestTeacher, String notice, String endFlag, String roomName) {
+			super();
+			this.eventID = eventID;
+			this.eventName = eventName;
+			this.periodList = periodList;
+			this.date = date;
+			this.classID = classID;
+			this.guestTeacher = guestTeacher;
+			this.notice = notice;
+			this.endFlag = endFlag;
+			this.roomName = roomName;
+		}
+		public void setPeriodList(List<String> periodList) {
+			this.periodList = periodList;
+		}
+
 
 
 
