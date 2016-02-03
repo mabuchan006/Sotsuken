@@ -7,7 +7,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 <!-- トースト用 -->
-<c:if test= "${!empty Msg }">
+<c:if test= "${!empty logout_Msg }">
 <script>
 toastSelect("success","${Msg}")</script>
 </c:if>

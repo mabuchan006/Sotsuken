@@ -23,6 +23,9 @@
 <!-- Custom CSS -->
 <link href="css/style.css" rel="stylesheet">
 
+<!-- toast -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+
 <!-- Custom Fonts -->
 <link href='http://fonts.googleapis.com/css?family=Lobster'
 	rel='stylesheet' type='text/css'>
@@ -33,6 +36,17 @@
 <script src="js/login.js"></script>
 
 <script src="js/cookie.js"></script>
+
+<!-- toast -->
+<script src="/js/jquery.toaster.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<script src="/js/toastSelect.js"></script>
+
+<!-- トースト用 -->
+<c:if test= "${!empty logout_Msg }">
+<script>
+toastSelect("success","${logout_Msg}")</script>
+</c:if>
 
 
 

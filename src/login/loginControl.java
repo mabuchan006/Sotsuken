@@ -32,15 +32,35 @@ public class loginControl extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String loginPath = "";	//ログインパス
-		String logoutPath = "";//ログアウトパス
+		String logoutPath = "/Sotsuken/top";//ログアウトパス
 
 		request.setCharacterEncoding("UTF-8");
+		//ログアウト処理
+				if( request.getParameter("state") != null &&
+						request.getParameter("state").equals("logout") ) {
+
+					//セッション準備
+					if( session == null ) {
+						session = request.getSession(true);
+					}//if
+
+					//セッション開放
+					session.removeAttribute("tchinf");
+
+					//JSPに渡す情報がないのでsendRedirectでログアウト
+					response.sendRedirect(logoutPath);
+
+					//パラメータ追加
+					//request.setAttribute( "logout_Msg" , "ログアウトしました。" );
+
+					return;
+				}//if
 
 		Map<String, String[]> viewMap = request.getParameterMap();
 		Map<String, String> loginMap = new HashMap<String,String>();
 		teacherInfo tchInf = new teacherInfo();
 		loginDBManage Ldb = new loginDBManage();
-
+		if(tchInf != null){
 		for (Map.Entry<String, String[]> result : viewMap.entrySet()) {
 			if(result.getKey().equals("id")){
 				tchInf.setTeacherID(Integer.parseInt(result.getValue()[0]));
@@ -74,28 +94,10 @@ public class loginControl extends HttpServlet {
 				// TODO 自動生成された catch ブロック
 				e.printStackTrace();
 			}
+			}
 
 
-		//ログアウト処理
-		if( request.getParameter("state") != null &&
-				request.getParameter("state").equals("logout") ) {
 
-			//セッション準備
-			if( session == null ) {
-				session = request.getSession(true);
-			}//if
-
-			//セッション開放
-			session.removeAttribute("loginControl");
-
-			//JSPに渡す情報がないのでsendRedirectでログアウト
-			response.sendRedirect(logoutPath);
-
-			//パラメータ追加
-			request.setAttribute( "logout_Msg" , Ldb.getMsg() );
-
-			return;
-		}//if
 
 	}//doGet
 
