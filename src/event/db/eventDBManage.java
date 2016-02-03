@@ -80,7 +80,7 @@ public class eventDBManage extends DBAccess{
 			rs.getString("roomName")
 			);
 		}
-
+		disConnection();
 		return roomList;
 	}
 	/*
@@ -302,9 +302,9 @@ public class eventDBManage extends DBAccess{
 			String classID=ei.getClassID();
 			//TODO コマループからのinsert処理実装
 			for (String period : ei.getPeriodList()) {
-				
+
 			}
-			
+
 			createStstement(insertSql);
 
 			getPstmt().setString(1,ei.getEventName());
