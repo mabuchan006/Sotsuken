@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 
@@ -169,13 +168,13 @@
 									<label class="wide11">password:</label> </td>
 									<td>
 									<input type="password" placeholder="パスワード"
-										id="enterPw" value="" name="password" class="wide9">
+										id="enterPw" value="" name="password" class="wide9" />
 										</td>
 										</table>
 										</div>
 										<br>
 										<input
-										type="submit" value="ログイン" id="login">
+										type="submit" value="ログイン" id="login" />
 
 								</form>
 							</div>
@@ -198,6 +197,6 @@
 
 
 
-
+<%request.getRequestURL(); %>
 </body>
 </html>

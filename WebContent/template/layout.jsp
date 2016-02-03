@@ -5,7 +5,7 @@
 <html>
 <head>
 <c:if test="${empty tchinf}">
-<jsp:forward page="/top.jsp" />
+<jsp:forward page="/Sotsuken/top" />
 </c:if>
 <c:if test="${!empty tchinf}">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -81,7 +81,7 @@
 				</li>
 
 				<li class="select2 moji"><h1 style="padding: 15px 20px; margin-top: 280px;">
-				<a href="/Sotsuken/top.jsp"><i class="fa fa-reply ">logout</i></a></h1></li>
+				<a href="/Sotsuken/loginControl?state=logout"><i class="fa fa-reply ">logout</i></a></h1></li>
 			</ul>
 
 
