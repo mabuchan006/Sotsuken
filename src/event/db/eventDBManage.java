@@ -271,7 +271,7 @@ public class eventDBManage extends DBAccess{
 					dateList,
 					rs.getString("classID"),
 					rs.getString("roomName"),
-					"",
+					rs.getString("endFlag"),
 					"",
 					""
 					);
