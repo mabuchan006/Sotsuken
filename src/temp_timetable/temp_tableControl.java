@@ -305,7 +305,6 @@ public class temp_tableControl extends HttpServlet {
 				request.setAttribute("Msg", Msg);
 
 			} catch (Exception e) {
-				// TODO 自動生成された catch ブロック
 				String err_Msg = "マスタアップ失敗";
 				request.setAttribute("err_Msg", err_Msg);
 				e.printStackTrace();
@@ -318,6 +317,21 @@ public class temp_tableControl extends HttpServlet {
 			response.sendRedirect(url);
 			return;
 		}
+
+		//temp 削除
+		if(request.getParameter("delete") != null){
+			try {
+				tempDBM.tempDelete(tempTableName);
+				String Msg="一時時間割削除完了";
+				request.setAttribute("Msg", Msg);
+			} catch (Exception e) {
+				String err_Msg = "一時時間割失敗";
+				request.setAttribute("err_Msg", err_Msg);
+				e.printStackTrace();
+
+			}
+		}
+
 
 		//classIDMap呼び出し
 		divideDBManage ddm = new divideDBManage();
@@ -359,8 +373,5 @@ public class temp_tableControl extends HttpServlet {
 
 	}
 
-	private void tempAction(){
-
-	}
 
 }

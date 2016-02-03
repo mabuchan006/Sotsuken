@@ -271,9 +271,9 @@ public class eventDBManage extends DBAccess{
 					dateList,
 					rs.getString("classID"),
 					rs.getString("roomName"),
-					rs.getString("endFlag"),
 					"",
-					rs.getString("notice")
+					"",
+					""
 					);
 			//クラス要素を1件ずつリストに追加
 			eventList.add(eventinfo);
@@ -337,8 +337,6 @@ public class eventDBManage extends DBAccess{
 
 			getPstmt().setInt(1, ei.getEventID());// 削除するIDをセット
 			updateExe();// 実行
-
-
 			break;
 		case UODATE:
 			createStstement(updateSql);
@@ -346,8 +344,6 @@ public class eventDBManage extends DBAccess{
 			getPstmt().setInt(2, ei.getEventID());
 
 			updateExe();//実行
-
-
 			break;
 		}
 
@@ -391,7 +387,6 @@ public class eventDBManage extends DBAccess{
 		updateExe();
 		System.out.println("create");
 		}//if
-
 		disConnection();
 	}
 
