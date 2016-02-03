@@ -19,7 +19,7 @@ $(document).ready(function(){
 		$(".ui-selected").each(function () {
 
 			if($(this).text()=="ALL"){
-			$("#period").val("1,2,3,4");
+			$("#period").val("1");
 			  $("#endFlagid").val("1");
 			}else
 			if(flg == 0){

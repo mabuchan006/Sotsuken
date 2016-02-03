@@ -357,12 +357,29 @@ public class eventDBManage extends DBAccess{
 	}//method
 	public void masterUpdate(String masterTableName,eventInfo ei,String classID,String eventDate) throws Exception{
 
-		String masterUpDate = String.format("replace INTO "+ masterTableName +
-				" (period, subjectName, date, classID, roomName, teacherName, bringThings) "
-				+ "values(?,?,?,?,?,?,?)");
+
+		String masterUpDate = String.format("update "+ masterTableName +
+				"  set  subjectName = ?, roomName=?, teacherName=?, bringThings=? "
+				+ " where classID = ? AND date=?  AND period = ?");
 
 		connect();
+
 		createStstement(masterUpDate);
+		getPstmt().setString(1, ei.getEventName());
+		getPstmt().setString(2,ei.getRoomName());
+		getPstmt().setString(3,ei.getGuestTeacher());
+		getPstmt().setString(4,ei.getNotice());
+		getPstmt().setString(5,classID);
+		getPstmt().setString(6,eventDate);
+		getPstmt().setString(7, ei.getPeriod());
+		updateExe();
+		System.out.println("update");
+		//masterに上書きデータが存在しなければ新規作成
+		if(getIntResult() == 0){
+			String masterInsert = String.format("insert INTO "+ masterTableName +
+					" (period, subjectName, date, classID, roomName, teacherName, bringThings) "
+					+ "values(?,?,?,?,?,?,?)");
+		createStstement(masterInsert);
 		getPstmt().setString(1, ei.getPeriod());
 		getPstmt().setString(2, ei.getEventName());
 		getPstmt().setString(3,eventDate);
@@ -370,8 +387,10 @@ public class eventDBManage extends DBAccess{
 		getPstmt().setString(5,ei.getRoomName());
 		getPstmt().setString(6,ei.getGuestTeacher());
 		getPstmt().setString(7,ei.getNotice());
-
 		updateExe();
+		System.out.println("create");
+		}//if
+
 		disConnection();
 	}
 
