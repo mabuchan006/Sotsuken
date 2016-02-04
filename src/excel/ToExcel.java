@@ -35,13 +35,13 @@ public class ToExcel extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private String chooseTableName="";
-	private List<masterInfo> dList = new ArrayList<masterInfo>();
-	private List<masterInfo> period1List = new ArrayList<masterInfo>();
-	private List<masterInfo> period2List = new ArrayList<masterInfo>();
-	private List<masterInfo> period3List = new ArrayList<masterInfo>();
-	private List<masterInfo> period4List = new ArrayList<masterInfo>();
-	private List<masterInfo> flagList = new ArrayList<masterInfo>();
-	private List<XSSFRow> rowList = new ArrayList<XSSFRow>();
+	private List<masterInfo> dList = new ArrayList<masterInfo>();//日付
+	private List<masterInfo> period1List = new ArrayList<masterInfo>();//1限
+	private List<masterInfo> period2List = new ArrayList<masterInfo>();//2限
+	private List<masterInfo> period3List = new ArrayList<masterInfo>();//3限
+	private List<masterInfo> period4List = new ArrayList<masterInfo>();//4限
+	private List<masterInfo> flagList = new ArrayList<masterInfo>();//endFlag用
+	private List<XSSFRow> rowList = new ArrayList<XSSFRow>();//作成済み行の管理用
 	private XSSFWorkbook wb = new XSSFWorkbook();//creat workbook
 
 	/**
@@ -83,11 +83,11 @@ public class ToExcel extends HttpServlet {
 			e.printStackTrace();
 		}
 
-		XSSFSheet sheet = wb.createSheet(classID);//sheet name
+		XSSFSheet sheet = wb.createSheet(classID);//シート作成 引数はシート名
 		sheet.createRow(0);//1行目
 
 		//垂直中央揃え
-		CellStyle style1 = wb.createCellStyle();
+		CellStyle style1 = wb.createCellStyle();//スタイルの作成
 		//罫線
 		style1.setBorderTop(CellStyle.BORDER_THIN);
 		style1.setBorderBottom(CellStyle.BORDER_THIN);
@@ -142,11 +142,11 @@ public class ToExcel extends HttpServlet {
 		}
 
 		//month cell merge
-		XSSFRow row = sheet.createRow(1);
+		XSSFRow row = sheet.createRow(1);//行の作成
 		if(flag){
 			row.createCell(1).setCellValue(lastDay.substring(5,7) + "月");
-			sheet.addMergedRegion(new CellRangeAddress(1, 1, 1, prevMonth));
-			row.getCell(1).setCellStyle(style1);
+			sheet.addMergedRegion(new CellRangeAddress(1, 1, 1, prevMonth));//セルの結合 引数で結合範囲の指定
+			row.getCell(1).setCellStyle(style1);//セルにスタイルの適用
 
 			row.createCell(prevMonth + 1).setCellValue(firstDay.substring(5,7) + "月");
 			sheet.addMergedRegion(new CellRangeAddress(1, 1, prevMonth + 1,29));
@@ -293,10 +293,8 @@ public class ToExcel extends HttpServlet {
 		rowList.get(index + 2).createCell(1).setCellStyle(style2);
 		if(periodList !=null){
 			for(int i = 0; i < periodList.size(); i++){
-				//セルを作成して値を入れる
-				rowList.get(index ).createCell(i + 2).setCellValue(periodList.get(i).getSubjectName());
-				//セルにスタイル適用
-				rowList.get(index).getCell(i + 2).setCellStyle(style1);
+				rowList.get(index ).createCell(i + 2).setCellValue(periodList.get(i).getSubjectName());//セルを作成して値を入れる
+				rowList.get(index).getCell(i + 2).setCellStyle(style1);//セルにスタイル適用
 
 				rowList.get(index + 1).createCell(i + 2).setCellValue(periodList.get(i).getTeacherName());
 				rowList.get(index + 1).getCell(i + 2).setCellStyle(style1);
