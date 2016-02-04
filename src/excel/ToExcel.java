@@ -104,6 +104,7 @@ public class ToExcel extends HttpServlet {
 
 		//罫線のみ
 		CellStyle style2 = wb.createCellStyle();
+		style2.setRotation((short)0xFF);
 		//罫線
 		style2.setBorderTop(CellStyle.BORDER_THIN);
 		style2.setBorderBottom(CellStyle.BORDER_THIN);
@@ -114,6 +115,9 @@ public class ToExcel extends HttpServlet {
 		style2.setBottomBorderColor(IndexedColors.BLACK.getIndex());
 		style2.setLeftBorderColor(IndexedColors.BLACK.getIndex());
 		style2.setRightBorderColor(IndexedColors.BLACK.getIndex());
+		//中央揃え
+		style2.setAlignment(CellStyle.ALIGN_CENTER);
+		style2.setVerticalAlignment(CellStyle.VERTICAL_CENTER);
 
 		//substring() 5,7 month / 8 day
 		ArrayList<String> dateArray = new ArrayList<String>();
@@ -157,10 +161,10 @@ public class ToExcel extends HttpServlet {
 		}
 
 		for(int i = 1; i < prevMonth; i++){
-			row.createCell(i + 1).setCellStyle(style2);
+			row.createCell(i + 1).setCellStyle(style1);
 		}
 		for(int i = prevMonth + 2; i <= 29; i++){
-			row.createCell(i).setCellStyle(style2);
+			row.createCell(i).setCellStyle(style1);
 		}
 
 		//date set
@@ -199,24 +203,24 @@ public class ToExcel extends HttpServlet {
 			rowList.add(sheet.createRow(i));
 		}
 		rowList.get(0).createCell(1).setCellValue(1);
-		periodCellCreate(period1List, 0, style1, style2);
+		periodCellCreate(period1List, 0, style1);
 		sheet.addMergedRegion(new CellRangeAddress(3, 5, 1, 1));
 
 		//2限目
 		rowList.get(3).createCell(1).setCellValue(2);
-		periodCellCreate(period2List, 3, style1,style2);
+		periodCellCreate(period2List, 3, style1);
 		sheet.addMergedRegion(new CellRangeAddress(6, 8, 1, 1));
 
 
 		//3限目
 		rowList.get(6).createCell(1).setCellValue(3);
-		periodCellCreate(period3List, 6, style1, style2);
+		periodCellCreate(period3List, 6, style1);
 		sheet.addMergedRegion(new CellRangeAddress(9, 11, 1, 1));
 
 
 		//4限目
 		rowList.get(9).createCell(1).setCellValue(4);
-		periodCellCreate(period4List, 9, style1,style2);
+		periodCellCreate(period4List, 9, style1);
 		sheet.addMergedRegion(new CellRangeAddress(12, 14, 1, 1));
 
 		//休日色変更
@@ -256,7 +260,8 @@ public class ToExcel extends HttpServlet {
 						&& rowList.get(0).getCell(i).getStringCellValue().equals(flagList.get(j).getEventName())
 						){
 					sheet.addMergedRegion(new CellRangeAddress(3, 14, i, i));
-					sheet.setColumnWidth(i, rowList.get(0).getCell(i).getStringCellValue().length() * 256 * 2);
+					rowList.get(0).getCell(i).setCellStyle(style2);
+					sheet.setColumnWidth(i, row.getCell(i).getStringCellValue().length() * 256 * 2);
 				}
 			}
 		}
@@ -284,13 +289,13 @@ public class ToExcel extends HttpServlet {
 
 	}
 
-	private void periodCellCreate(List<masterInfo> periodList, int index, CellStyle style1, CellStyle style2){
+	private void periodCellCreate(List<masterInfo> periodList, int index, CellStyle style1){
 		//作成済みシート取得
 		XSSFSheet sheet = wb.getSheetAt(0);
 		//時限のセルにスタイルを適用
 		rowList.get(index).getCell(1).setCellStyle(style1);
-		rowList.get(index + 1).createCell(1).setCellStyle(style2);
-		rowList.get(index + 2).createCell(1).setCellStyle(style2);
+		rowList.get(index + 1).createCell(1).setCellStyle(style1);
+		rowList.get(index + 2).createCell(1).setCellStyle(style1);
 		if(periodList !=null){
 			for(int i = 0; i < periodList.size(); i++){
 				rowList.get(index ).createCell(i + 2).setCellValue(periodList.get(i).getSubjectName());//セルを作成して値を入れる
