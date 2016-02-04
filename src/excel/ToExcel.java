@@ -100,6 +100,7 @@ public class ToExcel extends HttpServlet {
 			e.printStackTrace();
 		}
 
+		//
 		if(dList.size() == 0
 				&& period1List.size() == 0
 				&& period2List.size() == 0
@@ -107,6 +108,11 @@ public class ToExcel extends HttpServlet {
 				&& period4List.size() == 0
 				&& flagList.size() == 0
 				){
+			jsonMap.put("key", "error");
+			jsonMap.put("value", "時間割が作成されていません	");
+			jsonMap.put("flag", "false");
+			toastMsg(request, response, jsonMap);
+			paramInit(false);
 			return;
 		}
 
@@ -135,19 +141,17 @@ public class ToExcel extends HttpServlet {
 			style2.cloneStyleFrom(style1);//style1のクローンを作成
 			style2.setRotation((short)0xFF);
 
+			//月をまたいだ場合の処理
 			//substring() 5,7 month / 8 day
 			ArrayList<String> dateArray = new ArrayList<String>();
 			for(int i = 0; i < dList.size(); i++){
 				dateArray.add(dList.get(i).getDate().toString());
 			}
-
-
 			String lastDay = "";
 			String firstDay = "";
 			int prevMonth = 0;
 			//int nextMonth = 0;
 			Boolean flag = new Boolean(false);
-
 			for(int i = 0; i < dateArray.size(); i++){
 				if(Integer.parseInt(dateArray.get(i).substring(8))
 						> Integer.parseInt(dateArray.get(i + 1).substring(8))
@@ -161,7 +165,7 @@ public class ToExcel extends HttpServlet {
 				}
 			}
 
-			//month cell merge
+			//月結合
 			XSSFRow row = sheet.createRow(1);//行の作成
 			if(flag){
 				row.createCell(1).setCellValue(lastDay.substring(5,7) + "月");
@@ -176,6 +180,7 @@ public class ToExcel extends HttpServlet {
 				row.getCell(1).setCellStyle(style1);
 			}
 
+			//月の行にスタイル適用
 			for(int i = 1; i < prevMonth; i++){
 				row.createCell(i + 1).setCellStyle(style1);
 			}
@@ -183,7 +188,7 @@ public class ToExcel extends HttpServlet {
 				row.createCell(i).setCellStyle(style1);
 			}
 
-			//date set
+			//日付の挿入
 			Calendar calendar;
 			String week = "";
 			row = sheet.createRow(2);
@@ -245,6 +250,7 @@ public class ToExcel extends HttpServlet {
 			holiday.setFillForegroundColor(IndexedColors.LIGHT_YELLOW.getIndex());
 			holiday.setFillPattern(CellStyle.SOLID_FOREGROUND);
 
+			//休日処理
 			for(int j = 2; j <= 29; j++){
 				if( ( row.getCell(j).getStringCellValue().substring(4,5).equals("土")
 						|| row.getCell(j).getStringCellValue().substring(4,5).equals("日") )
@@ -261,6 +267,7 @@ public class ToExcel extends HttpServlet {
 				}//if
 			}//for
 
+			//終日イベント結合処理
 			for(int i = 2; i <= 29; i++){
 				for(int j = 0; j < flagList.size(); j++){
 					if(row.getCell(i).getStringCellValue().substring(0, 2).equals(flagList.get(j).getDate().toString().substring(8))
@@ -275,33 +282,28 @@ public class ToExcel extends HttpServlet {
 			}//for
 		}catch(Exception e){
 			e.printStackTrace();
-		}
+		}//try-catch
 
-		try {
-			response.setHeader("Access-Control-Allow-Origin", "*");//dmain指定
-			response.setContentType("application/json; charset=utf-8");//json形式
-			PrintWriter out = response.getWriter();//書き込み
-			jsonMap.put("key", "info");
-			jsonMap.put("value", "ダウンロードを開始します");
-			out.println(JSON.encode(jsonMap));//返す
-			jsonMap = new HashMap<String,String>();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		jsonMap.put("key", "info");
+		jsonMap.put("value", "ダウンロードを開始します");
+		jsonMap.put("flag", "true");
+		toastMsg(request, response, jsonMap);
 
 	}//createExcel
 
+	//ダウンロード
 	private void exportExcel(HttpServletRequest request, HttpServletResponse response){
 		response.setContentType("application/vnd.ms-excel");
 		response.setHeader("Content-Disposition", "attachement; filename=\""+classID +".xlsx\"");
 		try {
 			wb.write(response.getOutputStream());
-			paramInit();
+			paramInit(true);
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
-	}
+		}//try-catch
+	}//exportExcel
 
+	//時限行作成(時限リスト、行番号、セルスタイル)
 	private void periodCellCreate(List<masterInfo> periodList, int index, CellStyle style1){
 		//作成済みシート取得
 		XSSFSheet sheet = wb.getSheetAt(0);
@@ -333,18 +335,36 @@ public class ToExcel extends HttpServlet {
 		}//if
 	}//periodCellCreate
 
-	private void paramInit(){
-		chooseTableName="";
-		mdb = null;
-		dList = new ArrayList<masterInfo>();//日付
-		period1List = new ArrayList<masterInfo>();//1限
-		period2List = new ArrayList<masterInfo>();//2限
-		period3List = new ArrayList<masterInfo>();//3限
-		period4List = new ArrayList<masterInfo>();//4限
-		flagList = new ArrayList<masterInfo>();//endFlag用
-		rowList = new ArrayList<XSSFRow>();//作成済み行の管理用
-		wb.removeSheetAt(0);
-		classID = "";
-		jsonMap = new HashMap<String, String>();
+	//初期化処理
+	private void paramInit(Boolean flag){
+		try{
+			chooseTableName="";
+			mdb = null;
+			dList = new ArrayList<masterInfo>();//日付
+			period1List = new ArrayList<masterInfo>();//1限
+			period2List = new ArrayList<masterInfo>();//2限
+			period3List = new ArrayList<masterInfo>();//3限
+			period4List = new ArrayList<masterInfo>();//4限
+			flagList = new ArrayList<masterInfo>();//endFlag用
+			rowList = new ArrayList<XSSFRow>();//作成済み行の管理用
+			if(flag && wb.getSheetName(0).equals(classID)){
+				wb.removeSheetAt(0);//sheet削除
+			}
+			classID = "";
+			jsonMap = new HashMap<String, String>();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}//paramInit
+
+	private void toastMsg(HttpServletRequest request, HttpServletResponse response, Map<String, String> map) {
+		try {
+			response.setHeader("Access-Control-Allow-Origin", "*");//dmain指定
+			response.setContentType("application/json; charset=utf-8");//json形式
+			PrintWriter out = response.getWriter();//書き込み
+			out.println(JSON.encode(map));//返す toast用
+		} catch (IOException e) {
+			e.printStackTrace();
+		}//try-catch
 	}
 }

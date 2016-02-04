@@ -12,7 +12,9 @@ $(function(){
 			dataType : "json"
 		}).done(function(res){
 			toastSelect(res.key, res.value);
-			window.location = _DownloadUrl;
+			if(res.flag === "true"){
+				window.location = _DownloadUrl;
+			}
 			$(".excel").prop("disabled",false);
 		}).fail(function(){
 			toastSelect("error","エラーが発生しました");
