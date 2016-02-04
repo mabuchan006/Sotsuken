@@ -375,6 +375,7 @@ public class ManageUpdateControl extends HttpServlet {
 				dateList.add(date);
 			}//for
 			}else{
+				//日付データ空の場合
 				dateList.add("date");
 			}//日付情報分割格納end
 
@@ -390,11 +391,13 @@ public class ManageUpdateControl extends HttpServlet {
 				List<String> periodList = new ArrayList<String>();
 				//コマ情報一時保管用
 				String[] periodArray = request.getParameter("period").split(",");
-				//イベント情報格納
+
+				//コマ情報格納
 				for (String period: periodArray) {
 					periodList.add(period);
+					System.out.println(period);
 				}//for
-
+					//イベント情報格納
 					ei = new eventInfo(
 							request.getParameter("event_id")==null?0
 									:Integer.parseInt(request.getParameter("event_id")),
@@ -412,6 +415,8 @@ public class ManageUpdateControl extends HttpServlet {
 							request.getParameter("notice")==null?""
 									:request.getParameter("notice")
 							);
+					//更新処理
+					System.out.println(ei.getPeriodList());
 					edm.eventDBUpdate(ei, DBAccess.INSERT, "登録");
 				}//if
 

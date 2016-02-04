@@ -38,7 +38,19 @@ public class eventInfo implements Serializable{
 			this.notice = notice;
 		}
 
-
+		public eventInfo(int eventID,String eventName, List<String> periodList, List<String> date, String classID, String roomName, String endFlag,String guestTeacher,
+				String notice) {
+			super();
+			this.eventID = eventID;
+			this.eventName = eventName;
+			this.periodList = periodList;
+			this.date = date;
+			this.classID = classID;
+			this.guestTeacher = guestTeacher;
+			this.notice = notice;
+			this.endFlag = endFlag;
+			this.roomName = roomName;
+		}
 
 		public String getEventName() {
 			return eventName;
@@ -122,19 +134,7 @@ public class eventInfo implements Serializable{
 		public List<String> getPeriodList() {
 			return periodList;
 		}
-		public eventInfo(int eventID, String eventName,  List<String> periodList, List<String> date,
-				String classID, String guestTeacher, String notice, String endFlag, String roomName) {
-			super();
-			this.eventID = eventID;
-			this.eventName = eventName;
-			this.periodList = periodList;
-			this.date = date;
-			this.classID = classID;
-			this.guestTeacher = guestTeacher;
-			this.notice = notice;
-			this.endFlag = endFlag;
-			this.roomName = roomName;
-		}
+
 		public void setPeriodList(List<String> periodList) {
 			this.periodList = periodList;
 		}

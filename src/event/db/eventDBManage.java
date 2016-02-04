@@ -7,10 +7,6 @@ import java.util.GregorianCalendar;
 import java.util.List;
 
 import DB.DBAccess;
-/*
- * @author syam
- * @see eventInfo
- */
 import manage.db.classDBManage;
 import manage.db.classInfo;
 
@@ -47,7 +43,7 @@ public class eventDBManage extends DBAccess{
 		//int eventID,String eventName, int period, Date date, String classID,
 		//String roomName, String guestTeacher,String notice
 		insertSql= String.format(" insert into tbl_event (eventName,period,date,classID, roomName,endFlag,guestTeacher,notice) values (?,?,?,?,"
-				+ "?"//roomID検索
+				+ "?"
 				+ ",?,?,?)");
 		updateSql= String.format("update tbl_event set eventName = ? where eventID = ?");
 		selectRoom= String.format("select * from tbl_room;");
@@ -300,22 +296,22 @@ public class eventDBManage extends DBAccess{
 			String eventDate=ei.getDate().get(0)+"-"+ei.getDate().get(1)
 					+"-"+ei.getDate().get(2);
 			String classID=ei.getClassID();
+			System.out.println(ei.getPeriodList());
 			//TODO コマループからのinsert処理実装
 			for (String period : ei.getPeriodList()) {
-
-			}
-
-			createStstement(insertSql);
-
-			getPstmt().setString(1,ei.getEventName());
-			getPstmt().setString(2,ei.getPeriod());
-			getPstmt().setString(3,eventDate);
-			getPstmt().setString(4,classID);
-			getPstmt().setString(5,ei.getRoomName());
-			getPstmt().setString(6,ei.getEndFlag());
-			getPstmt().setString(7,ei.getGuestTeacher());
-			getPstmt().setString(8,ei.getNotice());
-			updateExe();//実行
+				System.out.println(period);
+				//eventName,period,date,classID, roomName,endFlag,guestTeacher,notice
+				createStstement(insertSql);
+				getPstmt().setString(1,ei.getEventName());
+				getPstmt().setString(2,period);
+				getPstmt().setString(3,eventDate);
+				getPstmt().setString(4,classID);
+				getPstmt().setString(5,ei.getRoomName());
+				getPstmt().setString(6,ei.getEndFlag());
+				getPstmt().setString(7,ei.getGuestTeacher());
+				getPstmt().setString(8,ei.getNotice());
+				updateExe();//実行
+			}//for
 
 			System.out.println(classID);
 			if(!(classID.equals("AAAA"))){
@@ -328,8 +324,8 @@ public class eventDBManage extends DBAccess{
 
 					masterUpdate("tbl_master_"+classIDs.getClassID()
 					+"timetable", ei,classIDs.getClassID(),eventDate);
-				}//for
-			}
+				}//if
+			}//for
 			break;
 		case DELETE:
 			createStstement(deleteSql);
@@ -361,32 +357,34 @@ public class eventDBManage extends DBAccess{
 
 		connect();
 
-		createStstement(masterUpDate);
-		getPstmt().setString(1, ei.getEventName());
-		getPstmt().setString(2,ei.getRoomName());
-		getPstmt().setString(3,ei.getGuestTeacher());
-		getPstmt().setString(4,ei.getNotice());
-		getPstmt().setString(5,classID);
-		getPstmt().setString(6,eventDate);
-		getPstmt().setString(7, ei.getPeriod());
-		updateExe();
-		System.out.println("update");
-		//masterに上書きデータが存在しなければ新規作成
-		if(getIntResult() == 0){
-			String masterInsert = String.format("insert INTO "+ masterTableName +
-					" (period, subjectName, date, classID, roomName, teacherName, bringThings) "
-					+ "values(?,?,?,?,?,?,?)");
-		createStstement(masterInsert);
-		getPstmt().setString(1, ei.getPeriod());
-		getPstmt().setString(2, ei.getEventName());
-		getPstmt().setString(3,eventDate);
-		getPstmt().setString(4,classID);
-		getPstmt().setString(5,ei.getRoomName());
-		getPstmt().setString(6,ei.getGuestTeacher());
-		getPstmt().setString(7,ei.getNotice());
-		updateExe();
-		System.out.println("create");
-		}//if
+		for (String period : ei.getPeriodList()) {
+			createStstement(masterUpDate);
+			getPstmt().setString(1, ei.getEventName());
+			getPstmt().setString(2,ei.getRoomName());
+			getPstmt().setString(3,ei.getGuestTeacher());
+			getPstmt().setString(4,ei.getNotice());
+			getPstmt().setString(5,classID);
+			getPstmt().setString(6,eventDate);
+			getPstmt().setString(7, period);
+			updateExe();
+
+			//masterに上書きデータが存在しなければ新規作成
+			if(getIntResult() == 0){
+				String masterInsert = String.format("insert INTO "+ masterTableName +
+						" (period, subjectName, date, classID, roomName, teacherName, bringThings) "
+						+ "values(?,?,?,?,?,?,?)");
+			createStstement(masterInsert);
+			getPstmt().setString(1, period);
+			getPstmt().setString(2, ei.getEventName());
+			getPstmt().setString(3,eventDate);
+			getPstmt().setString(4,classID);
+			getPstmt().setString(5,ei.getRoomName());
+			getPstmt().setString(6,ei.getGuestTeacher());
+			getPstmt().setString(7,ei.getNotice());
+			updateExe();
+			System.out.println("create");
+			}//if
+		}//for
 		disConnection();
 	}
 
