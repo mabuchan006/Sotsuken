@@ -47,6 +47,7 @@ function getCookie() {
 	var page = null
 
 	cookieName = document.cookie
+
 	var position = cookieName.indexOf("page=")
 	if (position != -1) {
 
