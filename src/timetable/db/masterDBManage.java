@@ -32,9 +32,9 @@ public class masterDBManage extends DBAccess {
 
 		dateSQL =String.format("SELECT date FROM %s GROUP BY date order by date asc",chooseTableName);
 
-		excelSql = String.format("SELECT m.date, e.endFlag "
+		excelSql = String.format("SELECT e.period, m.date, e.eventName, e.endFlag "
 				+ "FROM %s m, tbl_event e "
-				+ "WHERE m.date = e.date ORDER BY m.date ASC", chooseTableName);
+				+ "WHERE m.date = e.date AND m.period = 1 ORDER BY m.date ASC", chooseTableName);
 	}
 	/**
 	 * @param
@@ -169,7 +169,9 @@ public class masterDBManage extends DBAccess {
 		masterInfo masterinfo = null;
 			while(rs.next()) {
 				masterinfo = new masterInfo(
+						rs.getInt("period"),
 						rs.getDate("date"),
+						rs.getString("eventName"),
 						rs.getString("endFlag")
 						);
 				timeTableMasterList.add(masterinfo);

@@ -13,6 +13,7 @@ public class masterInfo implements Serializable {
 	private String teacherName;
 	private String bringThings;
 	private String endFlag;
+	private String eventName;
 
 
 	public masterInfo(int period, String subjectName, Date date, String classID, String roomName, String teacherName,String bringThings) {
@@ -26,9 +27,11 @@ public class masterInfo implements Serializable {
 		this.setBringThings(bringThings);
 	}
 
-	public masterInfo(Date date, String endFlag) {
+	public masterInfo(int period, Date date,String eventName, String endFlag) {
 		super();
+		this.period = period;
 		this.date = date;
+		this.eventName = eventName;
 		this.endFlag = endFlag;
 	}
 
@@ -115,6 +118,14 @@ public class masterInfo implements Serializable {
 
 	public void setEndFlag(String endFlag) {
 		this.endFlag = endFlag;
+	}
+
+	public String getEventName() {
+		return eventName;
+	}
+
+	public void setEventName(String eventName) {
+		this.eventName = eventName;
 	}
 
 

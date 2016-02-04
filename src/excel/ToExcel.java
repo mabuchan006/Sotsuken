@@ -41,6 +41,8 @@ public class ToExcel extends HttpServlet {
 	private List<masterInfo> period3List = new ArrayList<masterInfo>();
 	private List<masterInfo> period4List = new ArrayList<masterInfo>();
 	private List<masterInfo> flagList = new ArrayList<masterInfo>();
+	private List<XSSFRow> rowList = new ArrayList<XSSFRow>();
+	private XSSFWorkbook wb = new XSSFWorkbook();//creat workbook
 
 	/**
 	 * @see HttpServlet#HttpServlet()
@@ -81,7 +83,6 @@ public class ToExcel extends HttpServlet {
 			e.printStackTrace();
 		}
 
-		XSSFWorkbook wb = new XSSFWorkbook();//creat workbook
 		XSSFSheet sheet = wb.createSheet(classID);//sheet name
 		sheet.createRow(0);//1行目
 
@@ -129,7 +130,8 @@ public class ToExcel extends HttpServlet {
 
 		for(int i = 0; i < dateArray.size(); i++){
 			if(Integer.parseInt(dateArray.get(i).substring(8))
-					> Integer.parseInt(dateArray.get(i + 1).substring(8))){
+					> Integer.parseInt(dateArray.get(i + 1).substring(8))
+					){
 				lastDay = dateArray.get(i);
 				firstDay = dateArray.get(i + 1);
 				prevMonth = dateArray.indexOf(lastDay) + 2;
@@ -141,19 +143,16 @@ public class ToExcel extends HttpServlet {
 
 		//month cell merge
 		XSSFRow row = sheet.createRow(1);
-		CellRangeAddress range = new CellRangeAddress(1, 1, 1, 29);
 		if(flag){
 			row.createCell(1).setCellValue(lastDay.substring(5,7) + "月");
-			range = new CellRangeAddress(1, 1, 1, prevMonth);
-			sheet.addMergedRegion(range);
+			sheet.addMergedRegion(new CellRangeAddress(1, 1, 1, prevMonth));
 			row.getCell(1).setCellStyle(style1);
 
 			row.createCell(prevMonth + 1).setCellValue(firstDay.substring(5,7) + "月");
-			range = new CellRangeAddress(1, 1, prevMonth + 1,29);
-			sheet.addMergedRegion(range);
+			sheet.addMergedRegion(new CellRangeAddress(1, 1, prevMonth + 1,29));
 			row.getCell(prevMonth + 1).setCellStyle(style1);
 		} else {
-			sheet.addMergedRegion(range);
+			sheet.addMergedRegion(new CellRangeAddress(1, 1, 1, 29));
 			row.getCell(1).setCellStyle(style1);
 		}
 
@@ -192,7 +191,6 @@ public class ToExcel extends HttpServlet {
 		sheet.setColumnWidth(0, 2*256);
 		sheet.setColumnWidth(1, 2*256);
 
-		List<XSSFRow> rowList = new ArrayList<XSSFRow>();
 		//1限目
 		//row(3,6,9,12) subject
 		//row(4,7,10,13) teacher
@@ -201,68 +199,25 @@ public class ToExcel extends HttpServlet {
 			rowList.add(sheet.createRow(i));
 		}
 		rowList.get(0).createCell(1).setCellValue(1);
-		rowList.get(0).getCell(1).setCellStyle(style1);
-		rowList.get(1).createCell(1).setCellStyle(style2);
-		rowList.get(2).createCell(1).setCellStyle(style2);
+		periodCellCreate(period1List, 0, style1, style2);
 		sheet.addMergedRegion(new CellRangeAddress(3, 5, 1, 1));
-		if(period1List !=null){
-			for(int i = 0; i < period1List.size(); i++){
-				rowList.get(0).createCell(i + 2).setCellValue(period1List.get(i).getSubjectName());
-				rowList.get(0).getCell(i + 2).setCellStyle(style1);
-				rowList.get(1).createCell(i + 2).setCellValue(period1List.get(i).getTeacherName());
-				rowList.get(1).getCell(i + 2).setCellStyle(style1);
-				rowList.get(2).createCell(i + 2).setCellValue(period1List.get(i).getRoomName());
-				rowList.get(2).getCell(i + 2).setCellStyle(style1);
-			}
-		}
+
 		//2限目
 		rowList.get(3).createCell(1).setCellValue(2);
-		rowList.get(3).getCell(1).setCellStyle(style1);
-		rowList.get(4).createCell(1).setCellStyle(style2);
-		rowList.get(5).createCell(1).setCellStyle(style2);
+		periodCellCreate(period2List, 3, style1,style2);
 		sheet.addMergedRegion(new CellRangeAddress(6, 8, 1, 1));
-		if(period2List !=null){
-			for(int i = 0; i < period2List.size(); i++){
-				rowList.get(3).createCell(i + 2).setCellValue(period2List.get(i).getSubjectName());
-				rowList.get(3).getCell(i + 2).setCellStyle(style1);
-				rowList.get(4).createCell(i + 2).setCellValue(period2List.get(i).getTeacherName());
-				rowList.get(4).getCell(i + 2).setCellStyle(style1);
-				rowList.get(5).createCell(i + 2).setCellValue(period2List.get(i).getRoomName());
-				rowList.get(5).getCell(i + 2).setCellStyle(style1);
-			}
-		}
+
+
 		//3限目
 		rowList.get(6).createCell(1).setCellValue(3);
-		rowList.get(6).getCell(1).setCellStyle(style1);
-		rowList.get(7).createCell(1).setCellStyle(style2);
-		rowList.get(8).createCell(1).setCellStyle(style2);
+		periodCellCreate(period3List, 6, style1, style2);
 		sheet.addMergedRegion(new CellRangeAddress(9, 11, 1, 1));
-		if(period3List !=null){
-			for(int i = 0; i < period3List.size(); i++){
-				rowList.get(6).createCell(i + 2).setCellValue(period3List.get(i).getSubjectName());
-				rowList.get(6).getCell(i + 2).setCellStyle(style1);
-				rowList.get(7).createCell(i + 2).setCellValue(period3List.get(i).getTeacherName());
-				rowList.get(7).getCell(i + 2).setCellStyle(style1);
-				rowList.get(8).createCell(i + 2).setCellValue(period3List.get(i).getRoomName());
-				rowList.get(8).getCell(i + 2).setCellStyle(style1);
-			}
-		}
+
+
 		//4限目
 		rowList.get(9).createCell(1).setCellValue(4);
-		rowList.get(9).getCell(1).setCellStyle(style1);
-		rowList.get(10).createCell(1).setCellStyle(style2);
-		rowList.get(11).createCell(1).setCellStyle(style2);
+		periodCellCreate(period4List, 9, style1,style2);
 		sheet.addMergedRegion(new CellRangeAddress(12, 14, 1, 1));
-		if(period4List !=null){
-			for(int i = 0; i < period4List.size(); i++){
-				rowList.get(9).createCell(i + 2).setCellValue(period4List.get(i).getSubjectName());
-				rowList.get(9).getCell(i + 2).setCellStyle(style1);
-				rowList.get(10).createCell(i + 2).setCellValue(period4List.get(i).getTeacherName());
-				rowList.get(10).getCell(i + 2).setCellStyle(style1);
-				rowList.get(11).createCell(i + 2).setCellValue(period4List.get(i).getRoomName());
-				rowList.get(11).getCell(i + 2).setCellStyle(style1);
-			}
-		}
 
 		//休日色変更
 		CellStyle holiday = wb.createCellStyle();
@@ -287,16 +242,25 @@ public class ToExcel extends HttpServlet {
 					&& rowList.get(9).getCell(j).getStringCellValue().equals("")
 					){
 				row.getCell(j).setCellStyle(holiday);
+				sheet.setColumnWidth(j, row.getCell(j).getStringCellValue().length() * 256 * 2);
 				for(int i = 0; i < rowList.size();i++){
 					rowList.get(i).getCell(j).setCellStyle(holiday);
 				}//for
 			}//if
 		}//for
 
-		System.out.println(flagList.size());
-		for(int i = 0; i < flagList.size();i++){
-			System.out.println(flagList.get(i).getDate() + ":" + flagList.get(i).getEndFlag());
+		for(int i = 2; i <= 29; i++){
+			for(int j = 0; j < flagList.size(); j++){
+				if(row.getCell(i).getStringCellValue().substring(0, 2).equals(flagList.get(j).getDate().toString().substring(8))
+						&& flagList.get(j).getEndFlag().equals("1")
+						&& rowList.get(0).getCell(i).getStringCellValue().equals(flagList.get(j).getEventName())
+						){
+					sheet.addMergedRegion(new CellRangeAddress(3, 14, i, i));
+					sheet.setColumnWidth(i, rowList.get(0).getCell(i).getStringCellValue().length() * 256 * 2);
+				}
+			}
 		}
+
 
 		FileDialog fd =  new FileDialog(new Frame(), "名前をつけて保存", FileDialog.SAVE);
 		String path = null;
@@ -318,6 +282,39 @@ public class ToExcel extends HttpServlet {
 		wb.write(out);//file export
 		out.close();
 
+	}
+
+	private void periodCellCreate(List<masterInfo> periodList, int index, CellStyle style1, CellStyle style2){
+		//作成済みシート取得
+		XSSFSheet sheet = wb.getSheetAt(0);
+		//時限のセルにスタイルを適用
+		rowList.get(index).getCell(1).setCellStyle(style1);
+		rowList.get(index + 1).createCell(1).setCellStyle(style2);
+		rowList.get(index + 2).createCell(1).setCellStyle(style2);
+		if(periodList !=null){
+			for(int i = 0; i < periodList.size(); i++){
+				//セルを作成して値を入れる
+				rowList.get(index ).createCell(i + 2).setCellValue(periodList.get(i).getSubjectName());
+				//セルにスタイル適用
+				rowList.get(index).getCell(i + 2).setCellStyle(style1);
+
+				rowList.get(index + 1).createCell(i + 2).setCellValue(periodList.get(i).getTeacherName());
+				rowList.get(index + 1).getCell(i + 2).setCellStyle(style1);
+
+				rowList.get(index + 2).createCell(i + 2).setCellValue(periodList.get(i).getRoomName());
+				rowList.get(index + 2).getCell(i + 2).setCellStyle(style1);
+
+				//文字列に合わせてセル幅調整
+				if(rowList.get(index).getCell(i + 2).getStringCellValue().length() > 0
+						&& rowList.get(index + 1).getCell(i + 2).getStringCellValue().length() > 0
+						&& rowList.get(index + 2).getCell(i + 2).getStringCellValue().length() > 0
+						){
+					sheet.setColumnWidth(i + 2, rowList.get(index).getCell(i + 2).getStringCellValue().length() * 256 * 2);
+					sheet.setColumnWidth(i + 2, rowList.get(index + 1).getCell(i + 2).getStringCellValue().length() * 256 * 2);
+					sheet.setColumnWidth(i + 2, rowList.get(index + 2).getCell(i + 2).getStringCellValue().length() * 256 * 2);
+				}
+			}
+		}
 	}
 
 }
