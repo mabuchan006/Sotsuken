@@ -38,14 +38,14 @@
 <script src="js/cookie.js"></script>
 
 <!-- toast -->
-<script src="/js/jquery.toaster.js"></script>
+<script src="js/jquery.toaster.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-<script src="/js/toastSelect.js"></script>
+<script src="js/toastSelect.js"></script>
 
 <!-- トースト用 -->
 <c:if test= "${!empty logout_Msg }">
 <script>
-toastSelect("success","${logout_Msg}")</script>
+toastSelect("success","ログアウトしました。")</script>
 </c:if>
 
 

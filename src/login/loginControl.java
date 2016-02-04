@@ -31,9 +31,6 @@ public class loginControl extends HttpServlet {
     //GET受信
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		String loginPath = "";	//ログインパス
-		String logoutPath = "/Sotsuken/top";//ログアウトパス
-
 		request.setCharacterEncoding("UTF-8");
 		//ログアウト処理
 				if( request.getParameter("state") != null &&
@@ -46,12 +43,12 @@ public class loginControl extends HttpServlet {
 
 					//セッション開放
 					session.removeAttribute("tchinf");
-
-					//JSPに渡す情報がないのでsendRedirectでログアウト
-					response.sendRedirect(logoutPath);
-
 					//パラメータ追加
-					//request.setAttribute( "logout_Msg" , "ログアウトしました。" );
+					session.setAttribute( "logout_Msg" , "ログアウトしました。" );
+					//JSPに渡す情報がないのでsendRedirectでログアウト
+					response.sendRedirect("/top");
+
+
 
 					return;
 				}//if
@@ -145,7 +142,6 @@ public class loginControl extends HttpServlet {
 
 				//login
 				response.sendRedirect( path );
-				request.setAttribute( "login_Msg" , Ldb.getMsg() );
 
 				return;
 			} else {

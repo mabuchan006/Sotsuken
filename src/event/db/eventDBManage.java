@@ -53,12 +53,12 @@ public class eventDBManage extends DBAccess{
 		 * creator: Mabuchi
 		 */
 		//ALL
-		eventSelectAll = String.format("SELECT eventID,date, eventName,roomName,classID, "
+		eventSelectAll = String.format("SELECT eventID,date, eventName,roomName,classID, endFlag,"
 				+ "GROUP_CONCAT(DISTINCT period ORDER BY FIELD(period, 1,2,3,4) separator ' ') as doperiod "
 				+ "FROM tbl_event "
 				+ "GROUP BY date, eventName HAVING classID = 'AAAA'  ORDER BY date ASC");
 		//選択クラスとALL
-		eventSelectClass = String.format("SELECT eventID,date, eventName,roomName,classID,notice ,"
+		eventSelectClass = String.format("SELECT eventID,date, eventName,roomName,classID,notice ,endFlag,"
 				+ "GROUP_CONCAT(DISTINCT period ORDER BY FIELD(period, 1,2,3,4) separator ' ') as doperiod "
 				+ "FROM tbl_event "
 				+ "GROUP BY date, eventName HAVING classID LIKE ? || classID = 'AAAA'  ORDER BY date ASC");
