@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+
 		var password = $("#password")
 		  , confirm_password = $("#confirm_password");
 
