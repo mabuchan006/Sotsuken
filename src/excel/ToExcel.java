@@ -266,6 +266,9 @@ public class ToExcel extends HttpServlet {
 			}
 		}
 
+//		response.setContentType("application/msexcel");
+//		response.setHeader("Content-Disposition", "attachement; filename=\""+classID +".xlsx\"");
+//		wb.write(response.getOutputStream());
 
 		FileDialog fd =  new FileDialog(new Frame(), "名前をつけて保存", FileDialog.SAVE);
 		String path = null;
