@@ -75,7 +75,7 @@ toastSelect("success","${Msg }")</script>
 <c:if test="${!empty teacher.password }">
 
 <!--  pass変更ボタン -->
-<button type="button" class="btn btn-info wideb"name="edit_pass" id="#team-modal" data-toggle="modal"
+<button type="button" class="btn btn-info wideb teacherID"name="${teacher.teacherID }" id="#team-modal" data-toggle="modal"
 						data-target="#myModal" style="cursor: pointer">
 								 <i class="fa fa-users fa-2x"></i>
 </button>
@@ -83,7 +83,7 @@ toastSelect("success","${Msg }")</script>
 </c:if>
 <c:if test="${empty teacher.password }">
 
-<button type="button" class="btn btn-active wideb"name="edit_pass" id="#team-modal" data-toggle="modal"
+<button type="button" class="btn btn-active wideb teacherID2"name="${teacher.teacherID }" id="#team-modal" data-toggle="modal"
 						data-target="#myModal2" style="cursor: pointer">
 								 <i class="fa fa-users fa-2x"></i>
 </button>
@@ -122,6 +122,7 @@ ${ teacher.teacherID }
 							<form id="manageForm" class="form-horizontal">
 							<div class="left1">
 							<input type="hidden" name="page" value="teacher_manage" />
+							<input type="hidden" name="teacher_id" class="Epass_id" value=""/>
 									<table>
 									<tr>
 
@@ -176,9 +177,10 @@ ${ teacher.teacherID }
 								<h3 class="modal-title white fonts">管理者権限</h3>
 							</div>
 							<div class="modal-body black">
-							<form id="newForm" class="form-horizontal">
+							<form id="newForm" class="form-horizontal" action="/Sotsuken/ManageUpdate">
 							<div class="left1">
 							<input type="hidden" name="page" value="teacher_manage" />
+							<input type="hidden" name="teacher_id" class="Rpass_id" value=""/>
 									<table>
 									<tr>
 

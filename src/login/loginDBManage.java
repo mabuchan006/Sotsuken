@@ -45,7 +45,7 @@ public class loginDBManage extends DBAccess{
 					getRsResult().getString( "password" )
 					);
 		}//if
-		System.out.println("test");
+		System.out.println(getIntResult() );
 		//接続解除
 		disConnection();
 		return teacher;

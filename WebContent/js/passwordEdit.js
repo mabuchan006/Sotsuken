@@ -117,7 +117,10 @@ $(document).ready(function() {
 	    			case "success":
 
 	    				toastSelect("success","パスワードを更新しました。");
-	    				return false;
+	    				$("#oldPw").val("");
+	    				$("#newPw").val("");
+	    				$("#reType").val("");
+	    				return true;
 
 	    			default:
 	    				return false;

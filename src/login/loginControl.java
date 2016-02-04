@@ -46,7 +46,7 @@ public class loginControl extends HttpServlet {
 					//パラメータ追加
 					session.setAttribute( "logout_Msg" , "ログアウトしました。" );
 					//JSPに渡す情報がないのでsendRedirectでログアウト
-					response.sendRedirect("/top");
+					response.sendRedirect("/Sotsuken/top.jsp");
 
 
 
@@ -73,9 +73,10 @@ public class loginControl extends HttpServlet {
 			//loginDBManageを参照し、teacherInfoに格納された情報をuserDBSearchで検索
 
 			try {
-				teacherInfo tchinf = Ldb.userDBSearch( tchInf );
+				teacherInfo tchinf=new teacherInfo();
+				tchinf = Ldb.userDBSearch( tchInf );
 
-				if(tchinf.getTeacherName() != null){
+				if(tchinf != null){
 					loginMap.put("status","true" );
 
 				}else{
