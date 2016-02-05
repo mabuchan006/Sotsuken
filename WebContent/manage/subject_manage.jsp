@@ -146,6 +146,7 @@ toastSelect("success","${Msg }")</script>
 
 </thead>
 <tbody>
+
 <!-- 科目情報取得 -->
 <c:forEach var="rs" items="${subjectList }">
 <tr class="select">
@@ -156,12 +157,24 @@ toastSelect("success","${Msg }")</script>
 </li>
 
 <div class="col-md-12">
+
+<c:if test=  "${ALL==rs.classList.size() }">
+<li class="event_li">
+<span class="period label label-pill label-default">
+ALL
+</span></li>
+</c:if>
+<c:if test=  "${ALL!=rs.classList.size() }">
 <c:forEach var="classID" items="${rs.classList}">
 <li class="event_li">
 <span class="period label label-pill label-default">
 ${classID }
 </span></li>
 </c:forEach>
+</c:if>
+
+
+
 </div>
 </ol>
 
