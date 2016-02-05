@@ -101,12 +101,11 @@ public class ToExcel extends HttpServlet {
 		}
 
 		//
-		if(dList.size() == 0
-				&& period1List.size() == 0
-				&& period2List.size() == 0
-				&& period3List.size() == 0
-				&& period4List.size() == 0
-				&& flagList.size() == 0
+		if(dList.size() != 28
+				&& period1List.size() != 28
+				&& period2List.size() != 28
+				&& period3List.size() != 28
+				&& period4List.size() != 28
 				){
 			jsonMap.put("key", "error");
 			jsonMap.put("value", "時間割が作成されていません	");
@@ -152,7 +151,7 @@ public class ToExcel extends HttpServlet {
 			int prevMonth = 0;
 			//int nextMonth = 0;
 			Boolean flag = new Boolean(false);
-			for(int i = 0; i < dateArray.size(); i++){
+			for(int i = 0; i < dateArray.size() - 1; i++){
 				if(Integer.parseInt(dateArray.get(i).substring(8))
 						> Integer.parseInt(dateArray.get(i + 1).substring(8))
 						){
@@ -176,6 +175,7 @@ public class ToExcel extends HttpServlet {
 				sheet.addMergedRegion(new CellRangeAddress(1, 1, prevMonth + 1,29));
 				row.getCell(prevMonth + 1).setCellStyle(style1);
 			} else {
+				row.createCell(1).setCellValue(dateArray.get(0).substring(5, 7) + "月");
 				sheet.addMergedRegion(new CellRangeAddress(1, 1, 1, 29));
 				row.getCell(1).setCellStyle(style1);
 			}
