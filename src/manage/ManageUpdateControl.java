@@ -230,6 +230,8 @@ public class ManageUpdateControl extends HttpServlet {
 		List<subjectInfo> subjectList = new ArrayList<subjectInfo>();
 		subjectList = sdm.subjectDBSelect();
 		//表示用科目情報をセット
+		courceList = cdm.classDBSelect_();
+		request.setAttribute("ALL", courceList.size());
 		request.setAttribute("subjectList", subjectList);
 		request.setAttribute("classMap", classMap);
 		request.setAttribute("cnt", subjectList.size());
@@ -243,11 +245,36 @@ public class ManageUpdateControl extends HttpServlet {
 		}//if
 		}//if
 
+		} catch (MySQLIntegrityConstraintViolationException e) {
+			try {
+			//クラスデータベース操作クラス生成
+			classDBManage cdm = new classDBManage();
+			//学年ごとに対応したクラス情報
+			subjectDBManage sdm = new subjectDBManage();
+			TreeMap<String, List<String>> classMap;
+
+				classMap = sdm.classDBSelect();
+
+			//学年に対する学科を格納するためのリスト ex)R4:{A1,A2}
+			List<String> courceList = new ArrayList<String>();
+			//更新済み科目情報全件取得
+			List<subjectInfo> subjectList = new ArrayList<subjectInfo>();
+			subjectList = sdm.subjectDBSelect();
+			//表示用科目情報をセット
+			courceList = cdm.classDBSelect_();
+			request.setAttribute("ALL", courceList.size());
+			request.setAttribute("subjectList", subjectList);
+			request.setAttribute("classMap", classMap);
+			request.setAttribute("cnt", subjectList.size());
+			// TODO 自動生成された catch ブロック
+			request.setAttribute("Msg","この科目は使用されています。");
+			} catch (Exception e1) {
+				// TODO 自動生成された catch ブロック
+				e1.printStackTrace();
+			}
 		} catch (Exception e) {
 			// TODO 自動生成された catch ブロック
-
 			e.printStackTrace();
-
 		}
 	}
 
@@ -356,7 +383,18 @@ public class ManageUpdateControl extends HttpServlet {
 
 			} catch (MySQLIntegrityConstraintViolationException e) {
 				// TODO 自動生成された catch ブロック
-				request.setAttribute("err_Msg","該当講師は使用されています。");
+				//更新済み講師情報全件取得
+				List<teacherInfo> teacherList;
+				try {
+					teacherList = tdm.teacherDBSelect();
+					request.setAttribute("teacherList", teacherList);
+					request.setAttribute("cnt", teacherList.size());
+					request.setAttribute("err_Msg","該当講師は使用されています。");
+				} catch (Exception e1) {
+					// TODO 自動生成された catch ブロック
+					e1.printStackTrace();
+				}
+
 
 			} catch (Exception e) {}
 		}//teacher
