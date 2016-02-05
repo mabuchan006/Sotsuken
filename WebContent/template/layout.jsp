@@ -63,7 +63,7 @@
 				<a href="/Sotsuken/ManageUpdate?page=event_manage"><i class="fa fa-exclamation-triangle fa-fw"></i>イベント管理</a></h1></li>
 
 				<li class="select2 moji manage"><h1 style="padding: 15px 40px 15px 0px; margin: 0;">
-				<a href="/Sotsuken/divideUpdate"><i class="fa fa-building-o fa-fw"></i>コマ割り管理</a></h1></li>
+				<a href="/Sotsuken/divideUpdate"><i class="fa fa-building-o fa-fw"></i>コマ割管理</a></h1></li>
 
 
 				<li>
