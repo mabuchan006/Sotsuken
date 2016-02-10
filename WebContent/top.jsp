@@ -54,7 +54,7 @@ toastSelect("success","ログアウトしました。")</script>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-
+<link rel="apple-touch-icon" href="http://dotrio.ddns.net/apple-touch-icon.png" />
 <title>Time Table</title>
 </head>
 
