@@ -152,6 +152,7 @@ ${rs.date[2] }
 <!-- 削除用フォーム -->
 <form action="/Sotsuken/ManageUpdate" method="post">
 <input type="hidden"name="page" value="event_manage">
+<input type="hidden" name = "class_id" value="${rs.classID}" />
 <input type="hidden" name = "event_id" value="${rs.eventID }" />
 <input type="hidden" name = "eventName" value="${rs.eventName }" />
 <button type="submit" class="btn btn-danger delete"name="delete_event" ><i class="fa fa-trash-o fa-2x"></i></button>

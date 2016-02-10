@@ -466,7 +466,7 @@ public class ManageUpdateControl extends HttpServlet {
 							request.getParameter("period")==null?""
 									:request.getParameter("period"),
 							dateList,
-							request.getParameter("class_id")==null?""//ALL処理
+							request.getParameter("class_id")==null?""
 									:request.getParameter("class_id"),
 							request.getParameter("roomName")==null?""
 									:request.getParameter("roomName"),

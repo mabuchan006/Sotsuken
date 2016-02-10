@@ -14,10 +14,12 @@ public class eventDBManage extends DBAccess{
 	private String selectSql;//クラス全検索用
 	private String deleteSql;//クラス1件削除用
 	private String insertSql;//クラス1件登録用
+	private String deleteMaster_;
 	private String updateSql;
 	private String selectRoom;
 	private String eventSelectAll;
 	private String eventSelectClass;
+
 	//*******Msg*********
 	private String msg;
 
@@ -330,9 +332,11 @@ public class eventDBManage extends DBAccess{
 		case DELETE:
 			createStstement(deleteSql);
 			System.out.println("delete");
-
 			getPstmt().setInt(1, ei.getEventID());// 削除するIDをセット
 			updateExe();// 実行
+			//Master削除
+			deleteMaster("tbl_master_"+ei.getClassID()
+			+"timetable", ei.getEventID());
 			break;
 		case UODATE:
 			createStstement(updateSql);
@@ -356,7 +360,7 @@ public class eventDBManage extends DBAccess{
 				+ " where classID = ? AND date=?  AND period = ?");
 
 		connect();
-		
+
 		for (String period : ei.getPeriodList()) {
 			createStstement(masterUpDate);
 			getPstmt().setString(1, ei.getEventName());
@@ -386,6 +390,16 @@ public class eventDBManage extends DBAccess{
 			}//if
 		}//for
 		disConnection();
+	}
+
+	public void deleteMaster(String masterTableName,int eventID) throws Exception{
+		deleteMaster_=String.format("delete from "+masterTableName+" where (date,period) IN "
+				+ "(select date,period from tbl_event where eventID = "
+	+eventID+")");
+		System.out.println(deleteMaster_);
+//		connect();
+//		createStstement();
+//		updateExe(deleteMaster_);// 実行
 	}
 
 private String resultMsg(eventInfo ei,String msg){
