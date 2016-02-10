@@ -137,7 +137,8 @@ public class loginControl extends HttpServlet {
 
 				//session start
 				session = request.getSession(true);
-
+				//session有効期限設定 1日
+				session.setMaxInactiveInterval(3600*24);
 				//add teacherID & password
 				session.setAttribute( "tchinf" , tchinf );
 

@@ -356,7 +356,7 @@ public class eventDBManage extends DBAccess{
 				+ " where classID = ? AND date=?  AND period = ?");
 
 		connect();
-
+		
 		for (String period : ei.getPeriodList()) {
 			createStstement(masterUpDate);
 			getPstmt().setString(1, ei.getEventName());
