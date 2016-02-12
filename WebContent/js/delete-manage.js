@@ -18,7 +18,7 @@ $(document).ready(function(){
 		var flg=0;
 		$(".ui-selected").each(function () {
 
-			if($(this).text()=="ALL"){
+			if($(this).text()=="終"){
 			$("#period").val("1");
 			  $("#endFlagid").val("1");
 			}else

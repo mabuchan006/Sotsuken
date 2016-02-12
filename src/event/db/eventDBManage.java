@@ -397,7 +397,7 @@ public class eventDBManage extends DBAccess{
 				+ "(select date,period from tbl_event where eventID = "
 	+eventID+")");
 		System.out.println(deleteMaster_);
-//select * from tbl_master_r4a1timetable where (date,period) IN (select date,period from tbl_event where eventID = 5;
+//delete from tbl_master_r4a1timetable where (date,period) IN (select date,period from tbl_event where eventID = 5;
 		createStstement();
 		updateExe(deleteMaster_);// 実行
 	}
